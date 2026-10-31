@@ -1,0 +1,4 @@
+[
+  {"id":"mock-finance-a","name":"Synthetic appropriation A","is_mock":true,"publication_status":"test_only","verification_status":"unreviewed","availability":"available","source_ids":["mock-source"],"entity_id":"mock-entity","lgu_id":"mock-lgu-a","reporting_period":"2026","unit":"PHP","amount_type":"appropriation","category":"health","amount":100.25},
+  {"id":"mock-finance-b","name":"Synthetic appropriation B","is_mock":true,"publication_status":"test_only","verification_status":"unreviewed","availability":"available","source_ids":["mock-source"],"entity_id":"mock-entity","lgu_id":"mock-lgu-b","reporting_period":"2026","unit":"PHP","amount_type":"appropriation","category":"education","amount":200.50}
+]

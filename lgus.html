@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LGU Explorer | Better Pangasinan</title>
+<meta name="description" content="Find local government information and source availability across Pangasinan." />
+<link rel="icon" type="image/svg+xml" href="logo.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
+<meta name="data-mode" content="production">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="logo.svg" alt="Better Pangasinan logo" width="48" height="48" />
+      <span class="brand-text">
+        <span class="top">Better Pangasinan</span>
+        <span class="bottom">Independent civic technology</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="sr-only">Menu</span>
+      </button>
+      <ul class="nav-links" id="primary-navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lgus.html">LGU Explorer</a></li>
+        <li><a href="projects.html">Projects &amp; Tools</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="volunteer.html">Get Involved</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<main id="main-content" tabindex="-1">
+<section class="page-hero"><div class="wrap"><span class="eyebrow">Your community, closer</span><h1>Explore My LGU</h1><p class="lede">Find your local government. Follow its information, records, and public resources in one place.</p></div></section>
+<section class="section"><div class="wrap">
+<form class="search-panel" id="lgu-search" role="search" action="lgus.html"><div class="filter-grid"><div><label for="lgu-query">City or municipality</label><input type="search" id="lgu-query" name="q" placeholder="Search by place name"></div><div><label for="lgu-type">Government classification</label><select id="lgu-type" name="type"><option value="">All classifications</option><option value="city">City</option><option value="municipality">Municipality</option></select></div></div><div class="hero-actions"><button class="btn btn-primary" type="submit">Search LGUs</button><a class="btn btn-outline" href="lgus.html">Clear filters</a></div></form>
+<p id="lgu-result-count" role="status">Reviewed profiles will appear as their source information becomes available.</p>
+<div id="lgu-results" class="grid grid-3"></div>
+<div id="lgu-empty" class="empty-state"><span class="section-eyebrow">Good information starts with a source</span><h2>Local profiles are being prepared.</h2><p>No reviewed LGU profiles have been published yet. In the meantime, consult the official provincial directory for city and municipal information.</p><a class="btn btn-outline" href="https://www.pangasinan.gov.ph/city-municipalities/" target="_blank" rel="noopener noreferrer">Official provincial directory &nearr;</a></div>
+<noscript><p>Interactive filtering needs JavaScript. You can still use the official provincial directory linked above.</p></noscript>
+</div></section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand-col">
+        <div class="footer-brand">
+          <img src="logo.svg" alt="Better Pangasinan logo" width="48" height="48" />
+          <div>
+            <div class="name">Better Pangasinan</div>
+            <p>An independent, volunteer-led civic technology initiative for Pangasinan. Not an official government website; no government endorsement or formal affiliation is claimed.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h5>Site</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="lgus.html">LGU Explorer</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects &amp; Tools</a></li>
+          <li><a href="volunteer.html">Get Involved</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Official Sources</h5>
+        <ul>
+          <li><a href="https://www.dilg.gov.ph/" target="_blank" rel="noopener">Department of the Interior and Local Government</a></li>
+          <li><a href="https://pangasinan.gov.ph/" target="_blank" rel="noopener">Province of Pangasinan</a></li>
+          <li><a href="https://www.coa.gov.ph/" target="_blank" rel="noopener">Commission on Audit</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Our Policies</h5>
+        <ul>
+          <li><a href="methodology.html">Methodology &amp; Sources</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="corrections.html">Corrections</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Public records need context. Check the cited source and reporting period before relying on a record.</p>
+    </div>
+  </div>
+</footer>
+
+
+<script src="assets/script.js"></script>
+</body>
+</html>

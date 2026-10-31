@@ -1,0 +1,1 @@
+[{"id":"mock-geography","name":"Synthetic point (not a real project location)","is_mock":true,"publication_status":"test_only","verification_status":"unreviewed","availability":"available","source_ids":["mock-source"],"lgu_id":"mock-lgu-a","geometry":{"type":"Point","coordinates":[0,0]}}]

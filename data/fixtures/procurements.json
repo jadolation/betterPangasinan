@@ -1,0 +1,1 @@
+[{"id":"mock-procurement","name":"Synthetic procurement","is_mock":true,"publication_status":"test_only","verification_status":"unreviewed","availability":"available","source_ids":["mock-source"],"entity_id":"mock-entity","project_id":"mock-project"}]

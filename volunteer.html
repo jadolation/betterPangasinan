@@ -3,50 +3,52 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Get Involved — BetterBasista.org</title>
-<meta name="description" content="Join Better Basista — developers, designers, researchers, writers, and residents of Pangasinan are all welcome to help build an open-data portal for Basista." />
-<link rel="icon" href="assets/favicon.ico" />
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
-<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png" />
-<link rel="apple-touch-icon" href="assets/favicon-180.png" />
+<title>Get Involved | Better Pangasinan</title>
+<meta name="description" content="Help improve Better Pangasinan through accessible design, open-source development, and careful review of public records." />
+<link rel="icon" type="image/svg+xml" href="logo.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/style.css" />
+<meta name="data-mode" content="production">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="index.html">
-      <img src="assets/logo.png" alt="Better Basista seal" />
+      <img src="logo.svg" alt="Better Pangasinan logo" width="48" height="48" />
       <span class="brand-text">
-        <span class="top">Better Basista</span>
-        <span class="bottom">.org &mdash; Pangasinan</span>
+        <span class="top">Better Pangasinan</span>
+        <span class="bottom">Independent civic technology</span>
       </span>
     </a>
-    <nav class="nav">
-      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+    <nav class="nav" aria-label="Primary navigation">
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-navigation">
         <span class="sr-only">Menu</span>
       </button>
-      <ul class="nav-links">
+      <ul class="nav-links" id="primary-navigation">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="lgus.html">LGU Explorer</a></li>
         <li><a href="projects.html">Projects &amp; Tools</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="volunteer.html">Get Involved</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
+
+<main id="main-content" tabindex="-1">
 <section class="page-hero">
   <div class="wrap">
     <span class="eyebrow">Get Involved</span>
     <h1>Join the Movement</h1>
-    <p class="lede">Better Basista is powered and produced by volunteers under BetterGov.PH. Whether you are a developer, designer, researcher, writer, or passionate resident of Pangasinan, your skills can help make local governance more open and accessible to all.</p>
+    <p class="lede">Better Pangasinan is an independent volunteer-led project. Developers, designers, researchers, writers, and residents can help make public information clearer and more accessible.</p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="https://github.com/bettergovph" target="_blank" rel="noopener">Browse the GitHub org</a>
-      <a class="btn btn-ghost" href="https://bettergov.ph/" target="_blank" rel="noopener">Visit BetterGov.PH</a>
+      <a class="btn btn-primary" href="methodology.html">Read our methodology</a>
+      <a class="btn btn-ghost" href="corrections.html">Review corrections guidance</a>
     </div>
   </div>
   <div class="hero-divider" aria-hidden="true">
@@ -69,7 +71,7 @@
       </div>
       <div class="card card--gold">
         <h3>Designers &amp; Writers</h3>
-        <p>Shape how municipal data reads and looks &mdash; from page layouts to plain-language summaries.</p>
+        <p>Shape how provincial and local data reads and looks, from accessible layouts to source-based explanations.</p>
       </div>
       <div class="card card--brown">
         <h3>Researchers &amp; Residents</h3>
@@ -85,33 +87,34 @@
       <div class="section-eyebrow">How to Start</div>
       <h2>Getting involved</h2>
       <p>
-        Better Basista doesn't have a dedicated contact channel set up yet &mdash; as the project
-        grows, this page will list a direct way to reach the local team. For now, the
-        fastest way in is through the wider BetterGov.PH community.
+        Start with the methodology and the repository's README if you have access to
+        the project source. A dedicated public volunteer contact channel has not
+        been published. This site does not accept applications or personal submissions.
       </p>
     </div>
     <div class="grid grid-2">
       <div class="card">
-        <h3>Open an issue or pull request</h3>
-        <p>The site's source is public. If you can see something to fix or add, the GitHub repository is the place to start.</p>
+        <h3>Improve the tools</h3>
+        <p>Work from the source files, run the build and tests, and keep changes accessible. Do not publish test fixtures as public records.</p>
       </div>
       <div class="card">
-        <h3>Connect through BetterGov.PH</h3>
-        <p>BetterGov.PH coordinates volunteers across every Better LGU portal, Basista included &mdash; reach out through their community channels to get connected.</p>
+        <h3>Review the evidence</h3>
+        <p>Check official source documents, reporting periods, units, and responsible offices. Avoid private personal details and unsupported allegations.</p>
       </div>
     </div>
   </div>
 </section>
+</main>
 
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand-col">
         <div class="footer-brand">
-          <img src="assets/logo.png" alt="Better Basista seal" />
+          <img src="logo.svg" alt="Better Pangasinan logo" width="48" height="48" />
           <div>
-            <div class="name">Better Basista</div>
-            <p>An independent civic technology initiative for the Municipality of Basista, Pangasinan, built and maintained by volunteers under BetterGov.PH &mdash; not an official government website.</p>
+            <div class="name">Better Pangasinan</div>
+            <p>An independent, volunteer-led civic technology initiative for Pangasinan. Not an official government website; no government endorsement or formal affiliation is claimed.</p>
           </div>
         </div>
       </div>
@@ -119,6 +122,7 @@
         <h5>Site</h5>
         <ul>
           <li><a href="index.html">Home</a></li>
+          <li><a href="lgus.html">LGU Explorer</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="projects.html">Projects &amp; Tools</a></li>
           <li><a href="volunteer.html">Get Involved</a></li>
@@ -127,25 +131,26 @@
       <div>
         <h5>Official Sources</h5>
         <ul>
-          <li><a href="https://lgu201.dilg.gov.ph/view.php?r=01&amp;p=55&amp;m=09" target="_blank" rel="noopener">Municipality Profile (DILG)</a></li>
-          <li><a href="https://pangasinan.gov.ph/city-municipalities/basista" target="_blank" rel="noopener">Province of Pangasinan</a></li>
+          <li><a href="https://www.dilg.gov.ph/" target="_blank" rel="noopener">Department of the Interior and Local Government</a></li>
+          <li><a href="https://pangasinan.gov.ph/" target="_blank" rel="noopener">Province of Pangasinan</a></li>
           <li><a href="https://www.coa.gov.ph/" target="_blank" rel="noopener">Commission on Audit</a></li>
         </ul>
       </div>
       <div>
-        <h5>Community</h5>
+        <h5>Our Policies</h5>
         <ul>
-          <li><a href="https://github.com/bettergovph" target="_blank" rel="noopener">Source Code (GitHub)</a></li>
-          <li><a href="https://bettergov.ph/" target="_blank" rel="noopener">BetterGov.PH</a></li>
+          <li><a href="methodology.html">Methodology &amp; Sources</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="corrections.html">Corrections</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p><strong>Better Basista is powered and produced by volunteers under BetterGov.PH.</strong></p>
-      <span class="cost-chip">Cost to the People of Basista: ₱0</span>
+      <p>Public records need context. Check the cited source and reporting period before relying on a record.</p>
     </div>
   </div>
 </footer>
+
 
 <script src="assets/script.js"></script>
 </body>

@@ -1,0 +1,1 @@
+{"required":["source_ids","reporting_period","value","unit"],"properties":{"value":{"type":["number","null"]}}}

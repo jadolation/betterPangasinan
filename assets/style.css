@@ -1,7 +1,6 @@
 /* ==========================================================================
-   Better Basista — shared styles
-   Palette drawn from the municipal seal (sun, lyre & band instruments,
-   furrowed fields):
+   Better Pangasinan — shared civic design system
+   Existing Better LGU palette retained for provincial continuity:
      blue-deep    #01407F  (nav, headings, primary brand color)
      blue-bright  #1A6FD1  (links, interactive accents)
      gold         #FBC711  (highlights, CTAs)
@@ -14,8 +13,7 @@
      line         #DBE3EC  (hairline borders)
 
    Type: Space Grotesk (display, geometric sans) + Lora (body, serif) —
-   deliberately the inverse pairing of Better Mapandan's serif-display /
-   sans-body, so the two sites don't read as the same template.
+   preserving the original geometric display and editorial body pairing.
    ========================================================================== */
 
 :root {
@@ -177,7 +175,7 @@ p {
   color: var(--blue-deep);
 }
 
-.nav-links a[aria-current="page"] {
+.nav-links a[aria-current="page"], .nav-links a[aria-current="location"] {
   color: var(--blue-deep);
   background: var(--gold-soft);
   font-weight: 700;
@@ -621,10 +619,12 @@ p {
     flex-direction: column;
     gap: 0;
     padding: 6px 24px 14px;
-    display: none;
+    display: flex;
   }
 
-  .nav-links.open {
+  .js .nav-links { display: none; }
+
+  .js .nav-links.open {
     display: flex;
   }
 
@@ -635,8 +635,13 @@ p {
   }
 
   .nav-toggle {
-    display: block;
+    display: none;
   }
+
+  .js .nav-toggle { display: block; }
+  html:not(.js) .site-header .wrap { flex-wrap: wrap; }
+  html:not(.js) .nav { width: 100%; }
+  html:not(.js) .nav-links { position: static; width: 100%; padding: 12px 0 0; }
 
   .grid-2, .grid-3 { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
@@ -647,3 +652,75 @@ p {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+/* Provincial discovery: built on the shared civic palette and type system. */
+[hidden] { display: none !important; }
+.skip-link { position: absolute; top: -80px; left: 16px; padding: 12px 20px; background: var(--gold); color: var(--ink); z-index: 100; }
+.skip-link:focus { top: 8px; }
+input, select, textarea { width: 100%; min-width: 0; min-height: 48px; border: 1px solid #8193a5; border-radius: var(--radius); background: var(--paper); color: var(--ink); padding: 12px 14px; font: 16px var(--font-display); }
+input:focus-visible, select:focus-visible, textarea:focus-visible, summary:focus-visible { outline: 3px solid var(--blue-bright); outline-offset: 3px; }
+label, legend { display: block; margin-bottom: 8px; font: 600 14px var(--font-display); color: var(--blue-deep); }
+.search-panel { padding: 28px; border: 1px solid var(--line); border-top: 3px solid var(--gold); border-radius: var(--radius); background: var(--paper); margin-bottom: 32px; }
+.search-panel p { margin: 14px 0 0; color: var(--ink-soft); font-size: 14px; }
+.search-row { display: flex; gap: 12px; }
+.search-row .btn { flex-shrink: 0; }
+.filter-grid, .filters { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 18px; }
+.feature-number { display: block; font: 700 11px var(--font-display); letter-spacing: .08em; color: var(--ink-soft); margin: 8px 0 14px; }
+.card-link { display: block; font: 700 14px var(--font-display); margin-top: 22px; text-decoration: none; }
+.card--gold { border-top: 3px solid var(--gold); }
+.card--brown { border-top: 3px solid var(--brown-earth); }
+.editorial-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 72px; align-items: start; }
+.editorial-grid h2 { font-size: clamp(26px, 3vw, 36px); }
+.editorial-grid p { color: var(--ink-soft); }
+.resource-list { border-top: 1px solid var(--line); }
+.resource-list > a { display: flex; justify-content: space-between; align-items: center; gap: 18px; padding: 23px 0; border-bottom: 1px solid var(--line); text-decoration: none; }
+.resource-list strong { font: 700 18px var(--font-display); }
+.resource-list small { display: block; color: var(--ink-soft); font-size: 14px; margin-top: 5px; }
+.empty-state { padding: 32px; border: 1px dashed #9cabbc; border-radius: var(--radius); background: var(--bg); margin: 24px 0; }
+.empty-state h2, .empty-state h3 { font-size: 21px; }
+.empty-state p { max-width: 64ch; color: var(--ink-soft); }
+.community-band { background: var(--blue-deep); color: #e3ecf8; padding: 48px 0; }
+.community-band .wrap { display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+.community-band h2 { color: white; }
+.community-band .section-eyebrow { color: var(--gold); }
+.community-band p { margin-bottom: 0; }
+.community-band .btn { flex-shrink: 0; }
+.back-link { display: inline-block; color: white; margin-bottom: 20px; font-family: var(--font-display); }
+.badge, .status-chip { display: inline-block; font: 600 12px var(--font-display); padding: 5px 10px; background: var(--gold-soft); color: #624700; border-radius: 3px; }
+.table-wrap { overflow-x: auto; max-width: 100%; }
+table { width: 100%; border-collapse: collapse; background: var(--paper); font-size: 14px; }
+caption { text-align: left; padding: 12px 0; font-weight: 700; }
+th, td { text-align: left; padding: 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-family: var(--font-display); color: var(--blue-deep); }
+dt { font: 700 14px var(--font-display); color: var(--blue-deep); margin-top: 16px; }
+dd { margin: 4px 0 0; color: var(--ink-soft); }
+.map-shell, #province-map, #map { min-height: 350px; border: 1px solid var(--line); border-radius: var(--radius); background: #e8eef4; }
+.module-nav { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 30px; }
+[data-filters] { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); align-items: end; gap: 18px; background: var(--paper); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 24px; margin: 24px 0; }
+[data-filters] label { margin: 0; }
+[data-filters] input, [data-filters] select { margin-top: 8px; }
+[data-filters] .btn { justify-content: center; min-height: 48px; }
+[data-filters] .btn:not(.btn-outline) { background: var(--gold); color: #2b1f00; }
+[data-results] > .card { margin-bottom: 20px; }
+[data-status] { padding: 20px 24px; background: var(--paper); border-left: 3px solid var(--blue-deep); color: var(--ink-soft); }
+meter { display: block; width: 100%; height: 20px; accent-color: var(--blue-deep); }
+#project-map { height: 420px; max-height: 65vh; background: #e8eef4; }
+.brand img, .footer-brand img { object-fit: contain; border-radius: 0; flex-shrink: 0; }
+.brand-text { display: flex; flex-direction: column; gap: 4px; }
+.nav-links a { min-height: 44px; }
+.card, .wrap, .editorial-grid > *, .grid > * { min-width: 0; }
+h1, h2, h3, p, a { overflow-wrap: break-word; }
+@media (max-width: 980px) { .nav { gap: 8px; } .nav-links { gap: 0; } .nav-links a { padding-inline: 8px; font-size: 13px; } .brand-text .top { font-size: 16px; } }
+@media (max-width: 720px) {
+  .editorial-grid { grid-template-columns: 1fr; gap: 32px; }
+  .community-band .wrap { align-items: flex-start; flex-direction: column; }
+  .search-row { flex-direction: column; }
+  .search-row .btn { justify-content: center; }
+  .search-panel, .empty-state { padding: 22px 18px; }
+  .section { padding: 44px 0; }
+  .brand { gap: 8px; }
+  .brand img { width: 40px; height: 40px; }
+  .brand-text .top { font-size: 16px; }
+  .nav-links a { font-size: 15px; }
+}
+@media (max-width: 360px) { .wrap { padding-inline: 18px; } .brand-text .top { font-size: 14px; } .brand-text .bottom { font-size: 10px; } .hero .wrap { padding-inline: 18px; } }

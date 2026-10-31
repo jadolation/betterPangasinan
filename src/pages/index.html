@@ -1,15 +1,15 @@
 ---
-title: BetterBasista.org — A Civic Transparency Portal for Basista, Pangasinan
-description: Better Basista is a grassroots civic technology initiative bringing open data and transparency tools to the Municipality of Basista, Pangasinan, powered by volunteers under BetterGov.PH.
+title: Better Pangasinan | One Province. Open Information.
+description: Explore local government information, public spending, and projects across Pangasinan. An independent, source-driven civic transparency initiative.
 ---
 <section class="hero">
   <div class="wrap">
-    <span class="eyebrow">BetterGov.PH &middot; Basista, Pangasinan</span>
-    <h1>TRANSPARENCY IS NOT A FEATURE! IT'S A RIGHT.</h1>
-    <p class="lede">Better Basista is powered and produced by volunteers under BetterGov.PH.</p>
+    <span class="eyebrow">{{t:hero.eyebrow}}</span>
+    <h1>{{t:hero.title}}</h1>
+    <p class="lede">{{t:hero.description}}</p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="about.html">Learn About the Project</a>
-      <a class="btn btn-ghost" href="volunteer.html">Join the Movement</a>
+      <a class="btn btn-primary" href="lgus.html">{{t:hero.explore}} &rarr;</a>
+      <a class="btn btn-ghost" href="about.html">{{t:hero.about}}</a>
     </div>
   </div>
   <div class="hero-divider" aria-hidden="true">
@@ -22,24 +22,23 @@ description: Better Basista is a grassroots civic technology initiative bringing
 <section class="section">
   <div class="wrap">
     <div class="section-head">
-      <div class="section-eyebrow">Our Mission</div>
-      <h2>Open Data for a Better Basista</h2>
-      <p>
-        Better Basista is a grassroots civic technology initiative dedicated to bringing
-        data transparency, accessibility, and open public governance tools to the
-        municipality of Basista, Pangasinan. Driven entirely by community volunteers and
-        supported by BetterGov.PH, our initiative empowers local citizens with clear,
-        accessible, and actionable government data.
-      </p>
+      <div class="section-eyebrow">Start with your community</div>
+      <h2>A better-informed Pangasinan starts here.</h2>
+      <p>From our coastal communities to our agricultural heartland, public information should belong to everyone. Find your local government and explore the records behind the decisions.</p>
     </div>
+    <form class="search-panel" action="lgus.html" role="search">
+      <label for="home-search">{{t:search.label}}</label>
+      <div class="search-row"><input id="home-search" name="q" type="search" placeholder="{{t:search.placeholder}}" autocomplete="off"><button class="btn btn-primary" type="submit">{{t:search.submit}} &rarr;</button></div>
+      <p>Looking at the bigger picture? <a href="lgus.html">Browse the LGU explorer</a></p>
+    </form>
   </div>
 </section>
 
 <section class="section section-alt">
   <div class="wrap">
     <div class="section-head">
-      <div class="section-eyebrow">What We're Building</div>
-      <h2>Three pillars, one goal</h2>
+      <div class="section-eyebrow">Follow the information</div>
+      <h2>Your province, in perspective.</h2>
     </div>
     <div class="grid grid-3">
       <div class="card">
@@ -49,8 +48,10 @@ description: Better Basista is a grassroots civic technology initiative bringing
             <circle cx="12" cy="12" r="3"/>
           </svg>
         </div>
-        <h3>Open Access</h3>
-        <p>Making public records, municipal data, and local announcements easy to find and read for all residents.</p>
+        <span class="feature-number">01 / YOUR COMMUNITY</span>
+        <h3>Explore My LGU</h3>
+        <p>A single place for local government profiles, source documents, services, and public information.</p>
+        <a class="card-link" href="lgus.html">Find a local government &rarr;</a>
       </div>
       <div class="card card--gold">
         <div class="medallion" aria-hidden="true">
@@ -59,8 +60,10 @@ description: Better Basista is a grassroots civic technology initiative bringing
             <polyline points="15 7 20 12 15 17"/>
           </svg>
         </div>
-        <h3>Civic Tech Tools</h3>
-        <p>Developing open-source digital solutions tailored specifically to the needs of the Basista community.</p>
+        <span class="feature-number">02 / PUBLIC SPENDING</span>
+        <h3>Where Does Public Money Go?</h3>
+        <p>Understand budgets and spending with clear categories, reporting periods, and traceable sources.</p>
+        <a class="card-link" href="finances.html">Explore public finances &rarr;</a>
       </div>
       <div class="card card--brown">
         <div class="medallion" aria-hidden="true">
@@ -71,9 +74,26 @@ description: Better Basista is a grassroots civic technology initiative bringing
             <path d="M11.5 19c.8-3 3-4.6 4.5-4.6s3.7 1.6 4.5 4.6"/>
           </svg>
         </div>
-        <h3>Volunteer Driven</h3>
-        <p>Uniting developers, designers, researchers, and local advocates to build a more informed community.</p>
+        <span class="feature-number">03 / PLACES &amp; PROJECTS</span>
+        <h3>Pangasinan Project Map</h3>
+        <p>Connect public projects to places, responsible agencies, and the documents behind them.</p>
+        <a class="card-link" href="map.html">Open the GIS explorer &rarr;</a>
       </div>
     </div>
   </div>
 </section>
+
+<section class="section"><div class="wrap editorial-grid">
+  <div><div class="section-eyebrow">Public knowledge, open to all</div><h2>Useful information.<br>Without the runaround.</h2><p>For residents asking questions, students doing research, and communities working toward better governance.</p><a class="btn btn-outline" href="projects.html">All transparency tools &rarr;</a></div>
+  <div class="resource-list">
+    <a href="legislation.html"><span><strong>Legislation &amp; governance</strong><small>Policies, ordinances, and public documents</small></span><span aria-hidden="true">&rarr;</span></a>
+    <a href="services.html"><span><strong>Government services</strong><small>Responsible offices and official service resources</small></span><span aria-hidden="true">&rarr;</span></a>
+    <a href="statistics.html"><span><strong>Statistics &amp; comparisons</strong><small>Understand indicators and their methodology</small></span><span aria-hidden="true">&rarr;</span></a>
+    <a href="procurement.html"><span><strong>Procurement &amp; contracts</strong><small>Follow the links from procurement to projects</small></span><span aria-hidden="true">&rarr;</span></a>
+  </div>
+</div></section>
+<section class="section section-alt"><div class="wrap grid grid-2">
+  <div><div class="section-eyebrow">Latest records</div><h2>Sources before headlines.</h2><div class="empty-state"><h3>No reviewed records published yet</h3><p>New records will appear here after their sources and reporting periods have been reviewed.</p></div></div>
+  <div><div class="section-eyebrow">Coverage &amp; methodology</div><h2>Know what you are looking at.</h2><p>Coverage grows as records are collected and checked. Information not yet in this portal does not mean a local government has failed to publish it.</p><a class="card-link" href="methodology.html">How we handle public information &rarr;</a><a class="card-link" href="https://www.pangasinan.gov.ph/" target="_blank" rel="noopener noreferrer">Visit the official provincial website &nearr;</a></div>
+</div></section>
+<section class="community-band"><div class="wrap"><div><span class="section-eyebrow">Built in the public interest</span><h2>A better province is a shared effort.</h2><p>Bring your curiosity, local knowledge, or technical skills.</p></div><a class="btn btn-primary" href="volunteer.html">Join the Movement &rarr;</a></div></section>

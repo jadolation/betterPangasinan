@@ -1,0 +1,1 @@
+{"required":["source_ids","entity_id","reporting_period","unit","amount_type","category","amount"],"properties":{"unit":{"const":"PHP"}}}

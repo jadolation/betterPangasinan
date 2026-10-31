@@ -1,0 +1,3 @@
+[
+  {"id":"mock-entity","name":"Fictional Test Agency","is_mock":true,"publication_status":"test_only","verification_status":"unreviewed","availability":"available","source_ids":["mock-source"]}
+]

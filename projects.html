@@ -3,115 +3,66 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Projects & Tools — BetterBasista.org</title>
-<meta name="description" content="Open-source tools, public data dashboards, and community trackers for Basista, Pangasinan, built by volunteers under BetterGov.PH." />
-<link rel="icon" href="assets/favicon.ico" />
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
-<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png" />
-<link rel="apple-touch-icon" href="assets/favicon-180.png" />
+<title>Projects &amp; Tools | Better Pangasinan</title>
+<meta name="description" content="Explore sourced projects, procurement, finances, maps and public information for Pangasinan." />
+<link rel="icon" type="image/svg+xml" href="logo.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/style.css" />
+<meta name="data-mode" content="production">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="index.html">
-      <img src="assets/logo.png" alt="Better Basista seal" />
+      <img src="logo.svg" alt="Better Pangasinan logo" width="48" height="48" />
       <span class="brand-text">
-        <span class="top">Better Basista</span>
-        <span class="bottom">.org &mdash; Pangasinan</span>
+        <span class="top">Better Pangasinan</span>
+        <span class="bottom">Independent civic technology</span>
       </span>
     </a>
-    <nav class="nav">
-      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+    <nav class="nav" aria-label="Primary navigation">
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-navigation">
         <span class="sr-only">Menu</span>
       </button>
-      <ul class="nav-links">
+      <ul class="nav-links" id="primary-navigation">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="lgus.html">LGU Explorer</a></li>
         <li><a href="projects.html">Projects &amp; Tools</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="volunteer.html">Get Involved</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<section class="page-hero">
-  <div class="wrap">
-    <span class="eyebrow">Open Data &amp; Civic Projects</span>
-    <h1>Community-Built Transparency Tools</h1>
-    <p class="lede">Explore our open-source tools, public data dashboards, and community trackers designed to help residents access municipal updates, budget breakdowns, and public infrastructure projects effortlessly.</p>
-  </div>
-  <div class="hero-divider" aria-hidden="true">
-    <svg viewBox="0 0 1440 110" preserveAspectRatio="none">
-      <path fill="#F3F6FA" d="M0,110 L0,70 Q0,70 60.0,55 Q120,40 180.0,58 Q240,75 310.0,52 Q380,30 450.0,48 Q520,65 590.0,45 Q660,25 740.0,42 Q820,60 900.0,40 Q980,20 1060.0,38 Q1140,55 1220.0,42 Q1300,30 1370.0,45 L1440,60 L1440,110 Z" />
-    </svg>
-  </div>
-</section>
 
-<section class="section">
-  <div class="wrap">
-    <div class="notice">
-      <div class="medallion" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="9"/>
-          <path d="M12 8v5"/>
-          <circle cx="12" cy="16" r="0.5" fill="currentColor" stroke="none"/>
-        </svg>
-      </div>
-      <div>
-        <h3>Nothing published here yet &mdash; this project is just getting started</h3>
-        <p>
-          Better Basista is brand new. Rather than fill this page with placeholder
-          dashboards and numbers before any real data has been gathered, we're leaving it
-          honest: there's nothing to show yet, but there's a lot to build.
-        </p>
-        <p>
-          First on the list: an officials &amp; contacts directory, a services guide, and a
-          budget &amp; transparency tracker &mdash; the same kind of tools other Better LGU
-          portals already publish for their own municipalities.
-        </p>
-        <a class="btn btn-outline" href="volunteer.html">Help build the first one &rarr;</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section section-alt">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="section-eyebrow">What's Planned</div>
-      <h2>The kind of tools we're working toward</h2>
-    </div>
-    <div class="grid grid-3">
-      <div class="card">
-        <h3>Officials &amp; Contacts Directory</h3>
-        <p>A clear, sourced directory of Basista's elected and appointed officials, offices, and how to reach them.</p>
-      </div>
-      <div class="card card--gold">
-        <h3>Services Guide</h3>
-        <p>Permits, registrations, and frontline services, organized by office, with requirements and processing details.</p>
-      </div>
-      <div class="card card--brown">
-        <h3>Budget &amp; Transparency Tracker</h3>
-        <p>Income, expenditure, and infrastructure project data, sourced and dated, so every figure is traceable.</p>
-      </div>
-    </div>
-  </div>
-</section>
+<main id="main-content" tabindex="-1">
+<section class="page-hero"><div class="wrap"><span class="eyebrow">Public information, connected</span><h1>Projects &amp; Tools</h1><p class="lede">Follow records from public spending to projects and their sources. Missing records mean a gap in this portal's coverage, not evidence of noncompliance.</p></div><div class="hero-divider" aria-hidden="true"><svg viewBox="0 0 1440 110" preserveAspectRatio="none"><path fill="#F3F6FA" d="M0,110 L0,70 Q0,70 60,55 Q120,40 180,58 Q240,75 310,52 Q380,30 450,48 Q520,65 590,45 Q660,25 740,42 Q820,60 900,40 Q980,20 1060,38 Q1140,55 1220,42 Q1300,30 1370,45 L1440,60 L1440,110 Z" /></svg></div></section>
+<section class="section"><div class="wrap"><h2>Explore the modules</h2><div class="grid grid-3">
+<a class="card" href="finances.html"><h3>Public finances</h3><p>Appropriations, expenditure and other amount types, kept distinct.</p></a>
+<a class="card" href="procurement.html"><h3>Procurement &amp; contracts</h3><p>Linked purchasing records with original sources.</p></a>
+<a class="card" href="map.html"><h3>Project map</h3><p>Reviewed geographic records and an equivalent text view.</p></a>
+<a class="card" href="legislation.html"><h3>Legislation &amp; documents</h3><p>Search titles and publication metadata.</p></a>
+<a class="card" href="services.html"><h3>Services guide</h3><p>Find sourced requirements and responsible offices.</p></a>
+<a class="card" href="statistics.html"><h3>Statistics</h3><p>Indicators with periods, units and methodology.</p></a>
+</div></div></section>
+<section class="section"><div class="wrap" data-module="projects"><h2>Project registry</h2><form data-filters role="search"><label>Search projects <input name="q" type="search" placeholder="Title, identifier or metadata"></label> <label>Project status <select name="status"><option value="">All statuses</option></select></label> <button class="btn" type="submit">Search</button> <button class="btn btn-outline" type="reset">Clear filters</button></form><p data-status role="status" aria-live="polite">No reviewed project records have been published. Project locations do not establish which entity is responsible.</p><div data-results class="grid grid-3"></div><noscript><p>Interactive search requires JavaScript. Published records are also available in <a href="data/public.json">the public dataset</a>.</p></noscript></div></section>
+<script src="assets/modules.js" defer></script>
+</main>
 
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand-col">
         <div class="footer-brand">
-          <img src="assets/logo.png" alt="Better Basista seal" />
+          <img src="logo.svg" alt="Better Pangasinan logo" width="48" height="48" />
           <div>
-            <div class="name">Better Basista</div>
-            <p>An independent civic technology initiative for the Municipality of Basista, Pangasinan, built and maintained by volunteers under BetterGov.PH &mdash; not an official government website.</p>
+            <div class="name">Better Pangasinan</div>
+            <p>An independent, volunteer-led civic technology initiative for Pangasinan. Not an official government website; no government endorsement or formal affiliation is claimed.</p>
           </div>
         </div>
       </div>
@@ -119,6 +70,7 @@
         <h5>Site</h5>
         <ul>
           <li><a href="index.html">Home</a></li>
+          <li><a href="lgus.html">LGU Explorer</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="projects.html">Projects &amp; Tools</a></li>
           <li><a href="volunteer.html">Get Involved</a></li>
@@ -127,25 +79,26 @@
       <div>
         <h5>Official Sources</h5>
         <ul>
-          <li><a href="https://lgu201.dilg.gov.ph/view.php?r=01&amp;p=55&amp;m=09" target="_blank" rel="noopener">Municipality Profile (DILG)</a></li>
-          <li><a href="https://pangasinan.gov.ph/city-municipalities/basista" target="_blank" rel="noopener">Province of Pangasinan</a></li>
+          <li><a href="https://www.dilg.gov.ph/" target="_blank" rel="noopener">Department of the Interior and Local Government</a></li>
+          <li><a href="https://pangasinan.gov.ph/" target="_blank" rel="noopener">Province of Pangasinan</a></li>
           <li><a href="https://www.coa.gov.ph/" target="_blank" rel="noopener">Commission on Audit</a></li>
         </ul>
       </div>
       <div>
-        <h5>Community</h5>
+        <h5>Our Policies</h5>
         <ul>
-          <li><a href="https://github.com/bettergovph" target="_blank" rel="noopener">Source Code (GitHub)</a></li>
-          <li><a href="https://bettergov.ph/" target="_blank" rel="noopener">BetterGov.PH</a></li>
+          <li><a href="methodology.html">Methodology &amp; Sources</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="corrections.html">Corrections</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p><strong>Better Basista is powered and produced by volunteers under BetterGov.PH.</strong></p>
-      <span class="cost-chip">Cost to the People of Basista: ₱0</span>
+      <p>Public records need context. Check the cited source and reporting period before relying on a record.</p>
     </div>
   </div>
 </footer>
+
 
 <script src="assets/script.js"></script>
 </body>

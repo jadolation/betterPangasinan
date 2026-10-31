@@ -1,0 +1,1 @@
+[{"id":"mock-service","name":"Synthetic service","requirements":null,"processing_time":null,"fees":null,"is_mock":true,"publication_status":"test_only","verification_status":"unreviewed","availability":"not_yet_collected","source_ids":["mock-source"],"entity_id":"mock-entity","lgu_id":"mock-lgu-a"}]

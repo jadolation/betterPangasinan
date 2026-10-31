@@ -1,0 +1,1 @@
+[{"id":"mock-statistic","name":"Synthetic count","is_mock":true,"publication_status":"test_only","verification_status":"unreviewed","availability":"available","source_ids":["mock-source"],"lgu_id":"mock-lgu-a","reporting_period":"2026","unit":"count","value":4}]

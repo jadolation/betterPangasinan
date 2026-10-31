@@ -1,0 +1,12 @@
+---
+title: LGU Explorer | Better Pangasinan
+description: Find local government information and source availability across Pangasinan.
+---
+<section class="page-hero"><div class="wrap"><span class="eyebrow">Your community, closer</span><h1>Explore My LGU</h1><p class="lede">Find your local government. Follow its information, records, and public resources in one place.</p></div></section>
+<section class="section"><div class="wrap">
+<form class="search-panel" id="lgu-search" role="search" action="lgus.html"><div class="filter-grid"><div><label for="lgu-query">City or municipality</label><input type="search" id="lgu-query" name="q" placeholder="Search by place name"></div><div><label for="lgu-type">Government classification</label><select id="lgu-type" name="type"><option value="">All classifications</option><option value="city">City</option><option value="municipality">Municipality</option></select></div></div><div class="hero-actions"><button class="btn btn-primary" type="submit">Search LGUs</button><a class="btn btn-outline" href="lgus.html">Clear filters</a></div></form>
+<p id="lgu-result-count" role="status">Reviewed profiles will appear as their source information becomes available.</p>
+<div id="lgu-results" class="grid grid-3"></div>
+<div id="lgu-empty" class="empty-state"><span class="section-eyebrow">Good information starts with a source</span><h2>Local profiles are being prepared.</h2><p>No reviewed LGU profiles have been published yet. In the meantime, consult the official provincial directory for city and municipal information.</p><a class="btn btn-outline" href="https://www.pangasinan.gov.ph/city-municipalities/" target="_blank" rel="noopener noreferrer">Official provincial directory &nearr;</a></div>
+<noscript><p>Interactive filtering needs JavaScript. You can still use the official provincial directory linked above.</p></noscript>
+</div></section>

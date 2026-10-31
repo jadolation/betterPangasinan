@@ -1,114 +1,102 @@
-# Better Basista
+# Better Pangasinan
 
-A starting website for an independent transparency portal for the Municipality
-of Basista, Pangasinan, built under the [BetterGov.ph](https://bettergov.ph/)
-BetterLGU initiative.
+An independent, volunteer-led civic information portal for Pangasinan. This is
+not an official government website and does not claim government endorsement or
+formal organizational affiliation.
 
-This is a **starter**, not a finished site: it implements exactly the four
-pages (plus global footer) defined in the project's content guide — Home,
-About, Projects & Tools, Get Involved — using the Word-for-Word text verbatim
-and lightly adapting the Summarize-tagged sections for the web. It
-deliberately does **not** include a Statistics, Government, or Transparency
-page yet, because no sourced civic data (population, land area, officials,
-budget) was provided for Basista at build time, and the sources checked
-during setup disagreed with each other (land area alone is reported
-differently across the Province of Pangasinan's own current and archived
-profile pages). Publishing inconsistent numbers undermines the whole point of
-a transparency site — better to add that page once the data is verified, the
-same way Better Mapandan's Statistics page cites one source per figure.
+The site uses vanilla HTML, CSS, JavaScript, and a Python static build. Preserve
+the blue/gold design, Space Grotesk and Lora typography, and existing hero wave.
+The repository-root `logo.svg` supplies the shared brand and SVG favicon.
 
-Architecturally this follows the same pattern used for Better Mapandan: a
-small Python build script assembling shared partials, so the header and
-footer each live in exactly one file. Visually, it's deliberately distinct —
-different palette (drawn from this project's own seal: blue, gold, earth
-brown), different type pairing (Space Grotesk + Lora, the inverse of
-Mapandan's serif-display/sans-body), different motifs (a hill-silhouette
-divider instead of a sunburst, circular "seal" medallions instead of square
-icon boxes, no emergency hotline bar since no numbers were supplied).
+## Build and Test
 
-## Structure
+Run from the repository root with Python 3:
 
-```
-build.py                 Assembles src/pages/*.html + src/partials/*.html
-                          into the final static pages below.
-
-src/
-  partials/
-    base.html             <head> + <body> shell
-    header.html            Site nav (single source of truth)
-    footer.html             Site footer, incl. {{REPO_URL}}
-  pages/
-    index.html              Front matter (title/description) + body content
-    about.html               only — no repeated header/footer in these files.
-    projects.html
-    volunteer.html
-
-assets/
-  style.css              Design tokens + styles. Zero inline styles anywhere
-                          in the generated HTML.
-  script.js                Mobile nav toggle — the only JS on the site.
-  logo.png                 Municipal seal, source for the header/footer marks
-                            and every generated favicon.
-  favicon.ico, favicon-*.png
-
-index.html, about.html, projects.html, volunteer.html   <- BUILD OUTPUT.
-                                                             Edit src/, not these.
-README.md
+```sh
+python -m pip install -r requirements.txt
+python build.py
+python -m pytest
 ```
 
-## Editing content
+If your system exposes Python 3 as `python3` rather than `python`, substitute
+`python3` in these commands. An isolated synthetic build can be generated with:
 
-1. Edit `src/pages/*.html` for page copy, or `src/partials/` for nav/footer
-   changes.
-2. Run `python3 build.py` to regenerate the root `.html` files.
-3. Commit both the `src/` change and the regenerated output — the root files
-   are what actually gets served.
+```sh
+python build.py --mode test --output /tmp/kilo/provincial-test --no-root-compatibility
+```
 
-## What's deliberately left out, and why
+That directory is for local testing only and must not be deployed.
 
-- **No Statistics page.** The sources checked while setting this up
-  (pangasinan.gov.ph's current profile vs. its own archived page) disagree on
-  land area and show population figures from different census years. Rather
-  than pick one silently — the exact mistake flagged and fixed on Better
-  Mapandan's Statistics page — this starter leaves the numbers out and says
-  so on the About page, with a plan to add a sourced, dated version later.
-- **No emergency hotline bar.** No verified numbers for Basista's
-  MDRRMO/BFP/PNP were supplied; publishing invented ones would be worse than
-  publishing none.
-- **No fake "coming soon" project cards.** The Projects page says plainly
-  that nothing is published yet, rather than mocking up dashboards with no
-  real data behind them.
-- **No volunteer contact email.** None was provided; the Get Involved page
-  points to the GitHub org and BetterGov.PH's own channels instead of
-  guessing at an address.
+The default build is production. Deploy only the generated `public/` directory.
+Root HTML files are compatibility build output, not independent page sources.
+Never deploy the whole repository or use test fixtures as production input.
+Run the browser regression suite with Node.js 22 or later:
 
-## Before you deploy
+```sh
+npm ci
+npx playwright install chromium
+npm run test:browser
+```
 
-1. Rename this repository to `betterbasista` and set it up on GitHub, per
-   the [BetterLGU guide](https://directory.bettergov.ph/guide).
-2. Update `REPO_URL` in `build.py` (`SITE_CONFIG`) to the real repo URL, then
-   rebuild.
-3. Register `betterbasista.org` and point it at your host.
-4. Start gathering sourced municipal data (officials, budget, services) so
-   the Projects and (eventually) Statistics pages have real content behind
-   them.
-5. **Visual check before shipping:** the icons and the hill-silhouette hero
-   divider were hand-written SVG and could not be rendered/previewed in this
-   build environment (no browser or SVG rasterizer available) — give the
-   site a look in an actual browser before publishing, same as recommended
-   for Better Mapandan.
+The runner builds and serves `public/` automatically. It uses system Chrome if
+available, otherwise Playwright Chromium. Set `PLAYWRIGHT_CHROMIUM_EXECUTABLE`
+to override the browser path. Reports and screenshots are under
+`tests/browser/report/` and `tests/browser/artifacts/`.
 
-## Deploying
+For a local production preview:
 
-Any static host works — root `.html` files + `assets/` is the whole
-deployable site. `src/` and `build.py` are maintainer-only.
+```sh
+python3 -m http.server 8000 --directory public
+```
 
-- **GitHub Pages**: Settings → Pages → deploy from `main`, root folder.
-- **Netlify / Vercel**: no build command, `/` as the publish directory.
+## Source Layout
 
-## Once live
+- `src/pages/`: page content with title and description front matter.
+- `src/partials/`: shared base, header, and footer. Edit these, not generated HTML.
+- `assets/`: shared styles, browser scripts, and static resources.
+- `logo.svg`: provincial brand artwork; preserve its aspect ratio.
+- `build.py`: validation and static compilation entry point.
+- `data/` and `schemas/`: structured records, source references, and validation rules.
+- `tests/`: automated validation and synthetic test inputs.
+- `src/locales/`: English interface strings and additional-language foundations.
+- `public/`: generated deployment artifact.
 
-Register this LGU's entry in the
-[BetterLGU directory](https://directory.bettergov.ph/) as 🔵 Planned, then
-update it to 🟢 Active once deployed, per that repository's
-`CONTRIBUTING.md`.
+## Publication Rules
+
+Public records require traceable sources, review, explicit availability, and
+approval. Empty sections are intentional when no approved records are available.
+Do not invent budgets, population, officials, contracts, findings, or coordinates.
+Missing information is not zero and is not evidence of LGU noncompliance.
+Appropriations, expenditure, approved budgets, and contract values are distinct;
+never aggregate incompatible years, units, or amount types. Project location
+does not establish the funding or implementing entity.
+
+Synthetic records must remain marked `is_mock: true` and confined to tests or
+explicit test builds. Production must reject mock records, never substitute
+them for missing data, and exclude fixtures and internal materials from its
+artifact. Official identifiers, boundaries, records, and additional-language
+translations still require source review before publication.
+
+Read `methodology.html`, `privacy.html`, and `corrections.html` in the built site
+for public policy. No account system or personal-data submission service is
+provided. A dedicated volunteer or corrections contact channel is not yet
+published; do not invent contact details or affiliations.
+
+## Deployment
+
+Run the production build and tests before publishing. GitHub Pages should use
+the repository workflow's validated `public/` artifact, not branch-root hosting.
+For another static host, use `python build.py` as the build command and `public`
+as the publish directory. Relative asset and page links support project-subpath
+hosting. Do not upload source datasets, private test inputs, notes, credentials,
+or the repository itself.
+
+The English dictionary currently covers the homepage hero/search and shared
+dynamic states. The remaining editorial and module copy is English source
+content; dictionary extraction is incremental. Filipino and Pangasinan are
+unreviewed foundations only, so no language switcher is exposed.
+
+Before release, inspect desktop and mobile layouts, keyboard navigation, logo
+loading, no-JavaScript content, unavailable data states, source links, and the
+deployment artifact. Automated checks alone do not establish accessibility
+conformance or source accuracy. No live deployment is implied by a local build.

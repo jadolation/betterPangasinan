@@ -1,0 +1,1 @@
+{"required":["source_ids","entity_id","amount","amount_type","unit"],"properties":{"amount_type":{"const":"contract_value"},"unit":{"const":"PHP"}}}

@@ -1,0 +1,6 @@
+[
+  {"id":"mock-lgu-a","name":"Mapandan (Test Profile)","classification":"municipality","psgc":null,"is_mock":true,"publication_status":"test_only","verification_status":"unreviewed","availability":"available","source_ids":["mock-source"]},
+  {"id":"mock-lgu-b","name":"Dagupan (Test Profile)","classification":"city","psgc":null,"is_mock":true,"publication_status":"test_only","verification_status":"unreviewed","availability":"available","source_ids":["mock-source"]},
+  {"id":"mock-lgu-c","name":"Basista (Test Profile)","classification":"municipality","psgc":null,"is_mock":true,"publication_status":"test_only","verification_status":"unreviewed","availability":"not_yet_collected","source_ids":["mock-source"]},
+  {"id":"mock-lgu-d","name":"Lingayen (Test Profile)","classification":null,"psgc":null,"is_mock":true,"publication_status":"test_only","verification_status":"unreviewed","availability":"source_inaccessible","source_ids":["mock-source"]}
+]
