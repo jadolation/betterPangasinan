@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Phase 2 of 11-storey Government Center",
+    "reported_amount": 500000000,
+    "amount_unit": "PHP",
+    "publicly_reported_stage": "2026 SIP adopted/endorsed by PDC",
+    "source_id": "province-project-pdc",
+    "source_url": "https://www.pangasinan.gov.ph/pdc-outlines-development-agenda-for-2027-and-beyond/",
+    "note": "Reported through Land Bank loan proceeds; project identity and award/implementation need independent evidence",
+    "extraction_status": "narrative_lead_only_not_contract_verified"
+  },
+  {
+    "title": "School buildings under DepEd Basic Education Facilities Fund",
+    "reported_amount": 356640000,
+    "amount_unit": "PHP",
+    "publicly_reported_stage": "2026 SIP adopted/endorsed by PDC",
+    "source_id": "province-project-pdc",
+    "source_url": "https://www.pangasinan.gov.ph/pdc-outlines-development-agenda-for-2027-and-beyond/",
+    "note": "Program aggregate/plan figure; not individual school projects",
+    "extraction_status": "narrative_lead_only_not_contract_verified"
+  },
+  {
+    "title": "Agno River Basin flood master plan",
+    "reported_amount": null,
+    "amount_unit": "",
+    "publicly_reported_stage": "DPWH presented plans; priority works estimated around 2028",
+    "source_id": "province-project-pdc",
+    "source_url": "https://www.pangasinan.gov.ph/pdc-outlines-development-agenda-for-2027-and-beyond/",
+    "note": "A reported plan, not a procured/awarded project",
+    "extraction_status": "narrative_lead_only_not_contract_verified"
+  },
+  {
+    "title": "Pangasinan proposed electric bus system",
+    "reported_amount": null,
+    "amount_unit": "",
+    "publicly_reported_stage": "proposed",
+    "source_id": "province-project-pdc",
+    "source_url": "https://www.pangasinan.gov.ph/pdc-outlines-development-agenda-for-2027-and-beyond/",
+    "note": "Planning mention, not operational transport service",
+    "extraction_status": "narrative_lead_only_not_contract_verified"
+  }
+]

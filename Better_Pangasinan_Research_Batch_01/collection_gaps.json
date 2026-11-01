@@ -1,0 +1,106 @@
+[
+  {
+    "dataset": "sources",
+    "category": "Source documents",
+    "priority": "P0",
+    "required_collection": "Original link, publisher, publication date, reporting year; files as permitted",
+    "current_evidence": "Official source pages catalogued; attachments mostly unreviewed",
+    "recommended_owner": "Research lead"
+  },
+  {
+    "dataset": "entities",
+    "category": "Government entities",
+    "priority": "P0",
+    "required_collection": "Public office names, government hierarchy, responsible entities",
+    "current_evidence": "Provincial hospital directory located; 48 local office directories missing",
+    "recommended_owner": "Governance team"
+  },
+  {
+    "dataset": "lgus",
+    "category": "LGU profiles",
+    "priority": "P0",
+    "required_collection": "48 LGUs, PSGC, classification, 2024 POPCEN, official website, address",
+    "current_evidence": "PSGC and census acquired for all 48; websites/contacts not complete",
+    "recommended_owner": "Geography team"
+  },
+  {
+    "dataset": "finances",
+    "category": "Budgets and expenditure",
+    "priority": "P1",
+    "required_collection": "Annual/supplemental appropriation ordinances, quarterly actual expenditure, NTA, SEF, LDRRM",
+    "current_evidence": "2026 resolution-level budget amounts for sample LGUs; quarterly reports located not extracted",
+    "recommended_owner": "Finance team"
+  },
+  {
+    "dataset": "procurements",
+    "category": "Procurement",
+    "priority": "P1",
+    "required_collection": "APP lines, reference numbers, procurement method, notices, awards",
+    "current_evidence": "Provincial procurement directory and 2026 APP located; line items missing",
+    "recommended_owner": "Procurement team"
+  },
+  {
+    "dataset": "contracts",
+    "category": "Contracts",
+    "priority": "P1",
+    "required_collection": "Suppliers, award values, notice to proceed, contract docs",
+    "current_evidence": "No award/contract line-level records extracted",
+    "recommended_owner": "Procurement team"
+  },
+  {
+    "dataset": "projects",
+    "category": "Projects",
+    "priority": "P1",
+    "required_collection": "Implementing agency, funding, location, status, contract references",
+    "current_evidence": "AIP and planning narratives located; not yet verified project registry",
+    "recommended_owner": "Projects team"
+  },
+  {
+    "dataset": "legislation",
+    "category": "Ordinances/resolutions",
+    "priority": "P1",
+    "required_collection": "Document numbers, full text, dates, issuing body",
+    "current_evidence": "Provincial index and sample ordinance entries extracted",
+    "recommended_owner": "Governance team"
+  },
+  {
+    "dataset": "documents",
+    "category": "Public document library",
+    "priority": "P0",
+    "required_collection": "Document titles, source links, dates, license, checksum",
+    "current_evidence": "Official repositories catalogued; PDF attachments to review",
+    "recommended_owner": "Research lead"
+  },
+  {
+    "dataset": "services",
+    "category": "Citizen services",
+    "priority": "P2",
+    "required_collection": "Service title, fees, office, processing time, charter source",
+    "current_evidence": "Provincial Citizen Charter and PPDO services found; individual records not extracted",
+    "recommended_owner": "Services team"
+  },
+  {
+    "dataset": "statistics",
+    "category": "Demographic and development data",
+    "priority": "P1",
+    "required_collection": "2024 population, 2025 GDP, agricultural and fisheries indicators",
+    "current_evidence": "PSA numeric indicators acquired",
+    "recommended_owner": "Statistics team"
+  },
+  {
+    "dataset": "geography",
+    "category": "GIS layers",
+    "priority": "P1",
+    "required_collection": "Approved city/municipal boundary polygons, facilities, license",
+    "current_evidence": "NAMRIA Geoportal located; no geometry downloaded",
+    "recommended_owner": "GIS team"
+  },
+  {
+    "dataset": "audits (future)",
+    "category": "COA audit documents",
+    "priority": "P2",
+    "required_collection": "Annual COA/SEF compliance audit reports, findings after review",
+    "current_evidence": "Listings for Pangasinan, Dagupan, Basista, Sual found; findings not extracted",
+    "recommended_owner": "Audits team"
+  }
+]

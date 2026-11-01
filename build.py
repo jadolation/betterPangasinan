@@ -17,6 +17,8 @@ from pathlib import Path
 
 from jsonschema import Draft202012Validator, FormatChecker
 
+from scripts.national_budget.pipeline import publication_payload
+
 ROOT = Path(__file__).resolve().parent
 SRC_PAGES = ROOT / "src" / "pages"
 SRC_PARTIALS = ROOT / "src" / "partials"
@@ -174,6 +176,7 @@ def fill(template: str, values: dict) -> str:
 def build(mode: str = "production", output: Path | None = None, data_dir: Path | None = None,
           root_compatibility: bool = True) -> None:
     data = load_data(data_dir or ROOT / "data" / ("production" if mode == "production" else "fixtures"), mode)
+    national_budget = publication_payload(ROOT)
     output = (output or ROOT / ("public" if mode == "production" else "test-public")).resolve()
     if output == ROOT or ROOT in output.parents and output.parts[len(ROOT.parts)] in ("src", "data", "schemas", "tests", "assets", ".git", ".github", ".kilo") or output in ROOT.parents:
         raise ValueError("Unsafe build output directory")
@@ -238,9 +241,17 @@ def build(mode: str = "production", output: Path | None = None, data_dir: Path |
     for name, records in data.items():
         (output / "data" / f"{name}.json").write_text(json.dumps(records, ensure_ascii=True, sort_keys=True, indent=2, allow_nan=False) + "\n", encoding="utf-8")
     (output / "data" / "public.json").write_text(json.dumps(data, ensure_ascii=True, sort_keys=True, indent=2, allow_nan=False) + "\n", encoding="utf-8")
+    budget_output = output / "data" / "national-budget" / "2027"
+    budget_output.mkdir(parents=True)
+    for name, value in national_budget.items():
+        (budget_output / f"{name}.json").write_text(json.dumps(value, ensure_ascii=True, sort_keys=True, indent=2, allow_nan=False) + "\n", encoding="utf-8")
     if root_compatibility and mode == "production":
         for path in (output / "data").glob("*.json"):
             shutil.copy2(path, ROOT / "data" / path.name)
+        budget_root = ROOT / "data" / "national-budget" / "2027"
+        budget_root.mkdir(parents=True, exist_ok=True)
+        for name in ("manifest", "projects", "offices", "coverage", "sources"):
+            shutil.copy2(budget_output / f"{name}.json", budget_root / f"{name}.json")
     if dictionary:
         (output / "locales").mkdir()
         (output / "locales" / "en.json").write_text(json.dumps(dictionary, ensure_ascii=True, sort_keys=True, indent=2) + "\n", encoding="utf-8")

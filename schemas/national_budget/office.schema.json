@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object", "required": ["id", "name", "matched_label", "district_ids", "tier", "upstream"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1}, "name": {"type": "string", "minLength": 1},
+    "matched_label": {"type": "string", "minLength": 1}, "district_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "tier": {"enum": ["A", "B"]}, "upstream": {"type": "object"}
+  }
+}

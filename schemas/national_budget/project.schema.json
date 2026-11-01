@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "upstream_id", "dataset", "fiscal_year", "snapshot_id", "title", "house_stage", "upstream", "scope", "geographic_match_type", "lgu_associations", "inclusion_reasons", "geographic_review_status", "source_review_status", "publication_status", "record_sha256"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "upstream_id": {"type": "string", "minLength": 1},
+    "dataset": {"enum": ["dpwh", "fmr", "hfep", "nia"]},
+    "fiscal_year": {"const": 2027},
+    "snapshot_id": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1},
+    "house_stage": {"enum": ["hgab2", "hgab3"]},
+    "upstream": {"type": "object"},
+    "detail_evidence": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["dataset", "id", "response_id", "envelope"]}},
+    "scope": {"enum": ["geographic", "office", "shared", "uncertain"]},
+    "geographic_match_type": {"enum": ["province_title_explicit", "municipality_title_explicit", "barangay_title_manual_review", "office_scope_only", "ambiguous_or_region_missing", "out_of_scope"]},
+    "lgu_associations": {"type": "array"},
+    "inclusion_reasons": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["query_index", "category", "params", "response_ids"]}},
+    "geographic_review_status": {"enum": ["pending", "reviewed"]},
+    "source_review_status": {"enum": ["pending", "reviewed", "reviewed_with_warnings"]},
+    "publication_status": {"const": "candidate"},
+    "record_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "candidate_sha256": "9efcdb7bba7a4eca361140c76abb73e3acef9d4f017a4f90090f2143d5c97f28",
+  "disclaimers": [
+    {
+      "body": "An insertion, deletion, or amount-change candidate describes a provisional comparison between identified sources. That classification alone does not establish irregularity or wrongdoing by any office or official and should not be represented as such. Absence from an API snapshot likewise does not establish absence from the published NEP or concealment.",
+      "id": "disclaimer-no-allegations",
+      "title": "No allegations.",
+      "url": "https://budget.bettergov.ph/hgab/2027/methodology#disclaimer-no-allegations"
+    },
+    {
+      "body": "The DEO mapping associates offices with legislative districts; it does not establish that a representative requested, sponsored, or controlled a project, or that each project lies in every district associated with its office. Shared-office totals remain undivided and must not be split among the districts served. Office-based views must retain attribution tiers, co-served districts, unattributable residuals, and upstream uncertainty annotations. Historical or undated amounts retained as mapping evidence are separate from the FY2027 project ledger and must not be quoted as FY2027 allocations. See the DEO mapping restrictions.",
+      "id": "disclaimer-offices",
+      "restrictions_url": "https://budget.bettergov.ph/hgab/2027/methodology#deo-mapping-restrictions",
+      "title": "Office and legislative-district associations.",
+      "upstream_restrictions_url": "https://github.com/csiiiv/DPWH-NEP-HB-2027-ANALYSIS/blob/main/DEO2LEG/README.md#disclaimers",
+      "url": "https://budget.bettergov.ph/hgab/2027/methodology#disclaimer-offices"
+    }
+  ],
+  "files": {
+    "coverage.json": "c253500085d07e60d5a6843d2315ef530411807b6c8076c8a428f83ca2580aee",
+    "offices.json": "a3dc4249ab86092e7d49909ae4ff34aa1ab328c8eca19c98ed69c328f4105628",
+    "projects.json": "6f37f99f4547e3163aa72dd00263bb653a82d6311bd7d3b7210d18c383e84df6",
+    "sources.json": "68a61672bf820cc079644e9ebffed9a4bfe15099e003e12048a3e3a20d9e9ae9"
+  },
+  "fiscal_year": 2027,
+  "notice": "Independent and unofficial. This comparison is our own reading of the published documents, not an official record of the budget department, the agencies or the House. Figures are the amounts published in the documents, not spending. No allegations. An insertion, deletion, or amount-change candidate describes a provisional comparison between identified sources. That classification alone does not establish irregularity or wrongdoing by any office or official and should not be represented as such. Absence from an API snapshot likewise does not establish absence from the published NEP or concealment. Read the full notice: https://budget.bettergov.ph/hgab/2027/methodology#disclaimer.",
+  "retrieved_at": "2026-11-01T08:27:05.020579Z",
+  "review": {
+    "allow_incomplete_coverage": false,
+    "authorization": {
+      "authorized_at": "2026-11-01T08:12:01Z",
+      "kind": "explicit_user_publication",
+      "original_candidate_sha256": "0d062dc6294b1c5ec47bccff649ff3c7bb50812127f84866bbf5a43442065561",
+      "recorded_by": "Kilo",
+      "scope": "publication_only",
+      "source_values_sha256": "cd87336c16182b5698222e144476f4ba37265ed906213c68e3f5538a110d099a",
+      "statement": "all records are approved, kindly publish them in the UI"
+    },
+    "reviewed_at": "2026-11-01T08:29:54.965724Z",
+    "reviewer": "User publication approval of 2026-11-01T08:12:01Z, recorded by Kilo"
+  },
+  "snapshot_id": "2027:a0caa778442cdae5583f5a006ea7401dab00e5ac:2026-10-26T08:46:14.383Z",
+  "status": "approved"
+}

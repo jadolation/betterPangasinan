@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object", "additionalProperties": false,
+  "required": ["status", "fiscal_year", "snapshot_id", "retrieved_at", "notice", "disclaimers", "candidate_sha256", "review", "files"],
+  "properties": {
+    "status": {"const": "approved"}, "fiscal_year": {"const": 2027}, "snapshot_id": {"type": "string", "minLength": 1},
+    "retrieved_at": {"type": "string", "format": "date-time"}, "notice": {"type": "string", "minLength": 1}, "disclaimers": {"type": "array", "minItems": 1},
+    "candidate_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}, "review": {"type": "object"}, "files": {"type": "object", "required": ["projects.json", "offices.json", "coverage.json", "sources.json"], "propertyNames": {"enum": ["projects.json", "offices.json", "coverage.json", "sources.json"]}, "additionalProperties": {"type": "string", "pattern": "^[a-f0-9]{64}$"}}
+  }
+}

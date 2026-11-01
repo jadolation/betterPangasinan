@@ -1,0 +1,1194 @@
+{
+  "lgu_registry": [],
+  "overview": {
+    "data": {
+      "datasets": [
+        {
+          "agency": "Department of Public Works and Highways",
+          "bridge": {
+            "groups": {
+              "decreased": {
+                "group": "decreased",
+                "help": "Projects found in both documents where the House bill carries a smaller amount than the NEP.",
+                "house_php": 54666514000,
+                "label": "Lower in the House bill",
+                "nep_php": 141705872000,
+                "php": 87039358000,
+                "rows": 194,
+                "sub": "matched, amount reduced",
+                "unconfirmed_php": 0,
+                "unconfirmed_rows": 0
+              },
+              "house_only": {
+                "group": "house_only",
+                "help": "Projects listed in the House bill that we could not find in the NEP. Some may be new; others may be renamed or re-scoped lines. That is why they are called candidates.",
+                "house_php": 172149788000,
+                "label": "In the House bill only",
+                "nep_php": null,
+                "php": 172149788000,
+                "rows": 6193,
+                "sub": "insertion candidates",
+                "unconfirmed_php": 10517119000,
+                "unconfirmed_rows": 389
+              },
+              "increased": {
+                "group": "increased",
+                "help": "Projects found in both documents where the House bill carries a larger amount than the NEP.",
+                "house_php": 10329499000,
+                "label": "Higher in the House bill",
+                "nep_php": 5767547000,
+                "php": 4561952000,
+                "rows": 188,
+                "sub": "matched, amount raised",
+                "unconfirmed_php": 0,
+                "unconfirmed_rows": 0
+              },
+              "nep_only": {
+                "group": "nep_only",
+                "help": "Projects in the NEP that we could not find in the House bill. They may have been dropped, renamed or merged, so they are called candidates.",
+                "house_php": null,
+                "label": "In the NEP only",
+                "nep_php": 75670229000,
+                "php": 75670229000,
+                "rows": 1341,
+                "sub": "deletion candidates",
+                "unconfirmed_php": 0,
+                "unconfirmed_rows": 0
+              },
+              "scope_review": {
+                "group": "scope_review",
+                "help": "The same road appears in both documents, but each covers a different stretch of it. The amounts are not comparable, so they are left out of the increases and reductions.",
+                "house_php": 2476741000,
+                "label": "Different stretch of the same road",
+                "nep_php": 2327307000,
+                "php": 149434000,
+                "rows": 37,
+                "sub": "not counted as a change",
+                "unconfirmed_php": 0,
+                "unconfirmed_rows": 0
+              },
+              "unchanged": {
+                "group": "unchanged",
+                "help": "Projects found in both documents with the same amount.",
+                "house_php": 347453119000,
+                "label": "Same amount in both",
+                "nep_php": 347453119000,
+                "php": 347453119000,
+                "rows": 9660,
+                "sub": "matched, no change",
+                "unconfirmed_php": 0,
+                "unconfirmed_rows": 0
+              }
+            },
+            "house_stage": "hgab3",
+            "house_stage_label": "House bill, third reading",
+            "identity": "house_only \u2212 nep_only + increased \u2212 decreased + scope_review = net_php (unchanged adds nothing)",
+            "net_php": 14151587000,
+            "note": "Bridge figures are the stored ones the pages show: they include unconfirmed matches (fuzzy or ambiguous pairings, counted under 'In the House bill only'), so the six groups add up to net_php. Each group's unconfirmed_rows / unconfirmed_php is the unconfirmed part of it (non-zero only on DPWH house_only). php is the group's money basis: the House amount for house_only and unchanged, the NEP amount for nep_only, the size of the movement for increased and decreased, and the signed net for scope_review."
+          },
+          "caveats": [
+            "Only the project lists are compared. DPWH's staff costs, office running costs and a few non-project items are not included.",
+            "Foreign-assisted projects are compared as one group."
+          ],
+          "controls_label": "Program totals",
+          "counts": {
+            "api": 11372,
+            "hgab2": 16270,
+            "hgab3": 16275,
+            "nep": 11420
+          },
+          "dept_id": "18",
+          "documents": {
+            "controls": {
+              "hgab2": {
+                "key": "hb10858-2r-vol-ic",
+                "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-2r-vol-ic.pdf"
+              },
+              "hgab3": {
+                "key": "hb10858-3r-vol-ic",
+                "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-3r-vol-ic.pdf"
+              }
+            },
+            "controls_note": "The House document each reading's program totals are published in: Volume I-C for DPWH (with its project list), Volume I-B for farm-to-market roads, health facilities and irrigation (with their lists).",
+            "house": [
+              {
+                "key": "hb10858-3r-vol-ic",
+                "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-3r-vol-ic.pdf"
+              },
+              {
+                "key": "hb10858-2r-vol-ic",
+                "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-2r-vol-ic.pdf"
+              },
+              {
+                "key": "hb10858-3r-vol-ib",
+                "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-3r-vol-ib.pdf"
+              },
+              {
+                "key": "hb10858-2r-vol-ib",
+                "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-2r-vol-ib.pdf"
+              }
+            ],
+            "nep": [
+              {
+                "key": "nep2027-vol-iib",
+                "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/nep2027-vol-iib.pdf"
+              }
+            ],
+            "same_pages": null
+          },
+          "grain": "Named project allocation with chainage, region and implementing office (grouped repeated House keys stay one row and count their members)",
+          "has_map": true,
+          "has_readings": true,
+          "house_stage": "hgab3",
+          "house_stage_label": "House bill, third reading",
+          "key": "dpwh",
+          "label": "DPWH national infrastructure",
+          "links": {
+            "nep_department": "/api/v1/nep/2027/departments/18",
+            "projects": "/api/v1/hgab/2027/datasets/dpwh/projects",
+            "projects_page": "https://budget.bettergov.ph/hgab/2027/dpwh?view=projects",
+            "regions": "/api/v1/hgab/2027/datasets/dpwh/regions",
+            "self": "/api/v1/hgab/2027/datasets/dpwh"
+          },
+          "one_row": "One named project, as each document lists it.",
+          "placeable": true,
+          "printed": {
+            "house_new_appropriations_php": 654102015000,
+            "nep_new_appropriations_php": 642612015000
+          },
+          "scope": "DPWH operations allocations published in NEP Volume II-B and House Bill 10858 Volume I-C, local and foreign-assisted, compared at the third reading; GAS, support to operations (personnel services and MOOE) and automatic appropriations sit outside the compared population, so agency new appropriations are broader. Foreign-assisted projects are carried under a single PAP control and program group.",
+          "short": "DPWH",
+          "summary": "Roads, bridges, flood control and public buildings that DPWH would build or repair in 2027, listed project by project in the NEP and in the House bill.",
+          "totals": {
+            "api_php": 445378063000,
+            "hgab2_php": 586941661000,
+            "hgab3_php": 587075661000,
+            "nep_php": 572924074000,
+            "not_additive_across_versions": true
+          },
+          "unconfirmed_rows": 389,
+          "url": "https://budget.bettergov.ph/hgab/2027/dpwh"
+        },
+        {
+          "agency": "Department of Agriculture",
+          "bridge": {
+            "groups": {
+              "decreased": {
+                "group": "decreased",
+                "help": "Projects found in both documents where the House bill carries a smaller amount than the NEP.",
+                "house_php": 45000000,
+                "label": "Lower in the House bill",
+                "nep_php": 105000000,
+                "php": 60000000,
+                "rows": 3,
+                "sub": "matched, amount reduced",
+                "unconfirmed_php": 0,
+                "unconfirmed_rows": 0
+              },
+              "house_only": {
+                "group": "house_only",
+                "help": "Projects listed in the House bill that we could not find in the NEP. Some may be new; others may be renamed or re-scoped lines. That is why they are called candidates.",
+                "house_php": 5969005000,
+                "label": "In the House bill only",
+                "nep_php": null,
+                "php": 5969005000,
+                "rows": 355,
+                "sub": "insertion candidates",
+                "unconfirmed_php": 0,
+                "unconfirmed_rows": 0
+              },
+              "increased": {
+                "group": "increased",
+                "help": "Projects found in both documents where the House bill carries a larger amount than the NEP.",
+                "house_php": 30000000,
+                "label": "Higher in the House bill",
+                "nep_php": 15000000,
+                "php": 15000000,
+                "rows": 1,
+                "sub": "matched, amount raised",
+                "unconfirmed_php": 0,
+                "unconfirmed_rows": 0
+              },
+              "nep_only": {
+                "group": "nep_only",
+                "help": "Projects in the NEP that we could not find in the House bill. They may have been dropped, renamed or merged, so they are called candidates.",
+                "house_php": null,
+                "label": "In the NEP only",
+                "nep_php": 2295905000,
+                "php": 2295905000,
+                "rows": 95,
+                "sub": "deletion candidates",
+                "unconfirmed_php": 0,
+                "unconfirmed_rows": 0
+              },
+              "scope_review": {
+                "group": "scope_review",
+                "help": "The same road appears in both documents, but each covers a different stretch of it. The amounts are not comparable, so they are left out of the increases and reductions.",
+                "house_php": 0,
+                "label": "Different stretch of the same road",
+                "nep_php": 0,
+                "php": 0,
+                "rows": 0,
+                "sub": "not counted as a change",
+                "unconfirmed_php": 0,
+                "unconfirmed_rows": 0
+              },
+              "unchanged": {
+                "group": "unchanged",
+                "help": "Projects found in both documents with the same amount.",
+                "house_php": 13584095000,
+                "label": "Same amount in both",
+                "nep_php": 13584095000,
+                "php": 13584095000,
+                "rows": 605,
+                "sub": "matched, no change",
+                "unconfirmed_php": 0,
+                "unconfirmed_rows": 0
+              }
+            },
+            "house_stage": "hgab2",
+            "house_stage_label": "House bill, second reading",
+            "identity": "house_only \u2212 nep_only + increased \u2212 decreased + scope_review = net_php (unchanged adds nothing)",
+            "net_php": 3628100000,
+            "note": "Bridge figures are the stored ones the pages show: they include unconfirmed matches (fuzzy or ambiguous pairings, counted under 'In the House bill only'), so the six groups add up to net_php. Each group's unconfirmed_rows / unconfirmed_php is the unconfirmed part of it (non-zero only on DPWH house_only). php is the group's money basis: the House amount for house_only and unchanged, the NEP amount for nep_only, the size of the movement for increased and decreased, and the signed net for scope_review."
+          },
+          "caveats": [
+            "Road planning and the bridges program are listed elsewhere in the budget and are not included here.",
+            "The House list is identical at second and third reading."
+          ],
+          "controls_label": "Regions",
+          "counts": {
+            "api": null,
+            "hgab2": 964,
+            "hgab3": 964,
+            "nep": 704
+          },
+          "dept_id": "05",
+          "documents": {
+            "controls": {
+              "hgab2": {
+                "key": "hb10858-2r-vol-ib",
+                "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-2r-vol-ib.pdf"
+              },
+              "hgab3": {
+                "key": "hb10858-3r-vol-ib",
+                "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-3r-vol-ib.pdf"
+              }
+            },
+            "controls_note": "The House document each reading's program totals are published in: Volume I-C for DPWH (with its project list), Volume I-B for farm-to-market roads, health facilities and irrigation (with their lists).",
+            "house": [
+              {
+                "key": "hb10858-3r-vol-ib",
+                "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-3r-vol-ib.pdf"
+              },
+              {
+                "key": "hb10858-2r-vol-ib",
+                "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-2r-vol-ib.pdf"
+              }
+            ],
+            "nep": [
+              {
+                "key": "nep2027-fmr",
+                "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/nep2027-fmr.pdf"
+              }
+            ],
+            "same_pages": {
+              "extracted": {
+                "key": "hb10858-2r-vol-ib",
+                "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-2r-vol-ib.pdf"
+              },
+              "note": "The House list was read from the second-reading copy (extracted). The source compared all 60 list pages with the third-reading copy (third, as published on the Senate Budget Transparency Portal) and found them identical, so rows and totals cite the third-reading copy at the same page: pdf_url.hgab3 opens it, pdf_url.hgab2 opens the copy the line was read from.",
+              "pages": 60,
+              "third": {
+                "key": "hb10858-3r-vol-ib",
+                "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-3r-vol-ib.pdf"
+              }
+            }
+          },
+          "grain": "One FMR project allocation as published, counted once across its coordinate segments",
+          "has_map": true,
+          "has_readings": false,
+          "house_stage": "hgab2",
+          "house_stage_label": "House bill, second reading",
+          "key": "fmr",
+          "label": "DA farm-to-market roads",
+          "links": {
+            "nep_department": "/api/v1/nep/2027/departments/05",
+            "projects": "/api/v1/hgab/2027/datasets/fmr/projects",
+            "projects_page": "https://budget.bettergov.ph/hgab/2027/fmr?view=projects",
+            "regions": "/api/v1/hgab/2027/datasets/fmr/regions",
+            "self": "/api/v1/hgab/2027/datasets/fmr"
+          },
+          "one_row": "One farm-to-market road project.",
+          "placeable": true,
+          "printed": null,
+          "scope": "Locally funded farm-to-market road annex (DA activity 310203206315000) as published in the NEP schedule and House Bill 10858 Volume I-B; excludes FMR planning and monitoring and the bridges activities. The House side is the second-reading Volume I-B annex (PDF pages 667\u2013726), verified text-identical to the third-reading copy across all 60 pages, so the second- and third-reading versions of the House bill carry the same amounts. Rows and totals link to the third-reading copy, as published on the Senate Budget Transparency Portal, at the same PDF page; the second-reading copy stays cited as the copy read.",
+          "short": "FMR",
+          "summary": "Farm-to-market roads that the Department of Agriculture would fund in 2027, listed road by road in both documents.",
+          "totals": {
+            "api_php": null,
+            "hgab2_php": 19628100000,
+            "hgab3_php": 19628100000,
+            "nep_php": 16000000000,
+            "not_additive_across_versions": true
+          },
+          "unconfirmed_rows": 0,
+          "url": "https://budget.bettergov.ph/hgab/2027/fmr"
+        },
+        {
+          "agency": "Department of Health",
+          "bridge": {
+            "groups": {
+              "decreased": {
+                "group": "decreased",
+                "help": "Projects found in both documents where the House bill carries a smaller amount than the NEP.",
+                "house_php": 1434003000,
+                "label": "Lower in the House bill",
+                "nep_php": 4026950000,
+                "php": 2592947000,
+                "rows": 64,
+                "sub": "matched, amount reduced",
+                "unconfirmed_php": 0,
+                "unconfirmed_rows": 0
+              },
+              "house_only": {
+                "group": "house_only",
+                "help": "Projects listed in the House bill that we could not find in the NEP. Some may be new; others may be renamed or re-scoped lines. That is why they are called candidates.",
+                "house_php": 2402002000,
+                "label": "In the House bill only",
+                "nep_php": null,
+                "php": 2402002000,
+                "rows": 184,
+                "sub": "insertion candidates",
+                "unconfirmed_php": 0,
+                "unconfirmed_rows": 0
+              },
+              "increased": {
+                "group": "increased",
+                "help": "Projects found in both documents where the House bill carries a larger amount than the NEP.",
+                "house_php": 3092905000,
+                "label": "Higher in the House bill",
+                "nep_php": 680080000,
+                "php": 2412825000,
+                "rows": 54,
+                "sub": "matched, amount raised",
+                "unconfirmed_php": 0,
+                "unconfirmed_rows": 0
+              },
+              "nep_only": {
+                "group": "nep_only",
+                "help": "Projects in the NEP that we could not find in the House bill. They may have been dropped, renamed or merged, so they are called candidates.",
+                "house_php": null,
+                "label": "In the NEP only",
+                "nep_php": 6672740000,
+                "php": 6672740000,
+                "rows": 163,
+                "sub": "deletion candidates",
+                "unconfirmed_php": 0,
+                "unconfirmed_rows": 0
+              },
+              "scope_review": {
+                "group": "scope_review",
+                "help": "The same road appears in both documents, but each covers a different stretch of it. The amounts are not comparable, so they are left out of the increases and reductions.",
+                "house_php": 0,
+                "label": "Different stretch of the same road",
+                "nep_php": 0,
+                "php": 0,
+                "rows": 0,
+                "sub": "not counted as a change",
+                "unconfirmed_php": 0,
+                "unconfirmed_rows": 0
+              },
+              "unchanged": {
+                "group": "unchanged",
+                "help": "Projects found in both documents with the same amount.",
+                "house_php": 3092749000,
+                "label": "Same amount in both",
+                "nep_php": 3092749000,
+                "php": 3092749000,
+                "rows": 281,
+                "sub": "matched, no change",
+                "unconfirmed_php": 0,
+                "unconfirmed_rows": 0
+              }
+            },
+            "house_stage": "hgab2",
+            "house_stage_label": "House bill, second reading",
+            "identity": "house_only \u2212 nep_only + increased \u2212 decreased + scope_review = net_php (unchanged adds nothing)",
+            "net_php": -4450860000,
+            "note": "Bridge figures are the stored ones the pages show: they include unconfirmed matches (fuzzy or ambiguous pairings, counted under 'In the House bill only'), so the six groups add up to net_php. Each group's unconfirmed_rows / unconfirmed_php is the unconfirmed part of it (non-zero only on DPWH house_only). php is the group's money basis: the House amount for house_only and unchanged, the NEP amount for nep_only, the size of the movement for increased and decreased, and the signed net for scope_review."
+          },
+          "caveats": [
+            "Only construction, equipment and vehicle budgets are listed. \u20b167.2M for running costs is not included.",
+            "The NEP list adds up to \u20b1140,000 less than the total published on it, an error in the published list noted by the source. These pages use the sum of the lines.",
+            "The House list is identical at second and third reading."
+          ],
+          "controls_label": "Categories",
+          "counts": {
+            "api": null,
+            "hgab2": 564,
+            "hgab3": 564,
+            "nep": 545
+          },
+          "dept_id": "13",
+          "documents": {
+            "controls": {
+              "hgab2": {
+                "key": "hb10858-2r-vol-ib",
+                "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-2r-vol-ib.pdf"
+              },
+              "hgab3": {
+                "key": "hb10858-3r-vol-ib",
+                "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-3r-vol-ib.pdf"
+              }
+            },
+            "controls_note": "The House document each reading's program totals are published in: Volume I-C for DPWH (with its project list), Volume I-B for farm-to-market roads, health facilities and irrigation (with their lists).",
+            "house": [
+              {
+                "key": "hb10858-3r-vol-ib",
+                "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-3r-vol-ib.pdf"
+              },
+              {
+                "key": "hb10858-2r-vol-ib",
+                "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-2r-vol-ib.pdf"
+              }
+            ],
+            "nep": [
+              {
+                "key": "nep2027-hfep",
+                "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/nep2027-hfep.pdf"
+              }
+            ],
+            "same_pages": {
+              "extracted": {
+                "key": "hb10858-2r-vol-ib",
+                "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-2r-vol-ib.pdf"
+              },
+              "note": "The House list was read from the second-reading copy (extracted). The source compared all 17 list pages with the third-reading copy (third, as published on the Senate Budget Transparency Portal) and found them identical, so rows and totals cite the third-reading copy at the same page: pdf_url.hgab3 opens it, pdf_url.hgab2 opens the copy the line was read from.",
+              "pages": 17,
+              "third": {
+                "key": "hb10858-3r-vol-ib",
+                "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-3r-vol-ib.pdf"
+              }
+            }
+          },
+          "grain": "One funding-column cell (Infrastructure, Medical equipment or Motor vehicle) of one facility, as published; facility totals are controls, so a facility can appear as up to three rows",
+          "has_map": true,
+          "has_readings": false,
+          "house_stage": "hgab2",
+          "house_stage_label": "House bill, second reading",
+          "key": "hfep",
+          "label": "DOH Health Facilities Enhancement Program",
+          "links": {
+            "nep_department": "/api/v1/nep/2027/departments/13",
+            "projects": "/api/v1/hgab/2027/datasets/hfep/projects",
+            "projects_page": "https://budget.bettergov.ph/hgab/2027/hfep?view=projects",
+            "regions": "/api/v1/hgab/2027/datasets/hfep/regions",
+            "self": "/api/v1/hgab/2027/datasets/hfep"
+          },
+          "one_row": "One facility's budget line for building works, medical equipment or vehicles. A facility can have up to three lines.",
+          "placeable": true,
+          "printed": {
+            "house_new_appropriations_php": 10088832000,
+            "nep_new_appropriations_php": 14539832000
+          },
+          "scope": "HFEP capital outlays (DOH activity 350202100002000) as published in the NEP Volume II-A annex and House Bill 10858 Volume I-B; both schedules include national and LGU facilities, and the \u20b167,173,000 MOOE of the activity sits outside the annex. Totals are the facility ledgers the bridge is measured on: the NEP ledger is \u20b114,472,519,000 while the NEP annex control as published is \u20b114,472,659,000, \u20b1140,000 higher because of a documented error in a Metro Manila medical-equipment line of the published list (the published control is kept in the controls table); the House ledger and published control agree at \u20b110,021,659,000. The House side is the second-reading Volume I-B annex (PDF pages 877\u2013893), verified text-identical to the third-reading copy across all 17 pages. Rows and totals link to the third-reading copy, as published on the Senate Budget Transparency Portal, at the same PDF page; the second-reading copy stays cited as the copy read.",
+          "short": "HFEP",
+          "summary": "Hospitals, health centres and other facilities that the Department of Health would build, repair or equip in 2027 under its Health Facilities Enhancement Program.",
+          "totals": {
+            "api_php": null,
+            "hgab2_php": 10021659000,
+            "hgab3_php": 10021659000,
+            "nep_php": 14472519000,
+            "not_additive_across_versions": true
+          },
+          "unconfirmed_rows": 0,
+          "url": "https://budget.bettergov.ph/hgab/2027/hfep"
+        },
+        {
+          "agency": "National Irrigation Administration",
+          "bridge": {
+            "groups": {
+              "decreased": {
+                "group": "decreased",
+                "help": "Projects found in both documents where the House bill carries a smaller amount than the NEP.",
+                "house_php": 570000000,
+                "label": "Lower in the House bill",
+                "nep_php": 1400000000,
+                "php": 830000000,
+                "rows": 4,
+                "sub": "matched, amount reduced",
+                "unconfirmed_php": 0,
+                "unconfirmed_rows": 0
+              },
+              "house_only": {
+                "group": "house_only",
+                "help": "Projects listed in the House bill that we could not find in the NEP. Some may be new; others may be renamed or re-scoped lines. That is why they are called candidates.",
+                "house_php": 7381700000,
+                "label": "In the House bill only",
+                "nep_php": null,
+                "php": 7381700000,
+                "rows": 222,
+                "sub": "insertion candidates",
+                "unconfirmed_php": 0,
+                "unconfirmed_rows": 0
+              },
+              "increased": {
+                "group": "increased",
+                "help": "Projects found in both documents where the House bill carries a larger amount than the NEP.",
+                "house_php": 0,
+                "label": "Higher in the House bill",
+                "nep_php": 0,
+                "php": 0,
+                "rows": 0,
+                "sub": "matched, amount raised",
+                "unconfirmed_php": 0,
+                "unconfirmed_rows": 0
+              },
+              "nep_only": {
+                "group": "nep_only",
+                "help": "Projects in the NEP that we could not find in the House bill. They may have been dropped, renamed or merged, so they are called candidates.",
+                "house_php": null,
+                "label": "In the NEP only",
+                "nep_php": 6150576000,
+                "php": 6150576000,
+                "rows": 185,
+                "sub": "deletion candidates",
+                "unconfirmed_php": 0,
+                "unconfirmed_rows": 0
+              },
+              "scope_review": {
+                "group": "scope_review",
+                "help": "The same road appears in both documents, but each covers a different stretch of it. The amounts are not comparable, so they are left out of the increases and reductions.",
+                "house_php": 0,
+                "label": "Different stretch of the same road",
+                "nep_php": 0,
+                "php": 0,
+                "rows": 0,
+                "sub": "not counted as a change",
+                "unconfirmed_php": 0,
+                "unconfirmed_rows": 0
+              },
+              "unchanged": {
+                "group": "unchanged",
+                "help": "Projects found in both documents with the same amount.",
+                "house_php": 10047605000,
+                "label": "Same amount in both",
+                "nep_php": 10047605000,
+                "php": 10047605000,
+                "rows": 602,
+                "sub": "matched, no change",
+                "unconfirmed_php": 0,
+                "unconfirmed_rows": 0
+              }
+            },
+            "house_stage": "hgab2",
+            "house_stage_label": "House bill, second reading",
+            "identity": "house_only \u2212 nep_only + increased \u2212 decreased + scope_review = net_php (unchanged adds nothing)",
+            "net_php": 401124000,
+            "note": "Bridge figures are the stored ones the pages show: they include unconfirmed matches (fuzzy or ambiguous pairings, counted under 'In the House bill only'), so the six groups add up to net_php. Each group's unconfirmed_rows / unconfirmed_php is the unconfirmed part of it (non-zero only on DPWH house_only). php is the group's money basis: the House amount for house_only and unchanged, the NEP amount for nep_only, the size of the movement for increased and decreased, and the signed net for scope_review."
+          },
+          "caveats": [
+            "Only the six project programs are listed; NIA's wider budget is not included.",
+            "The House list is identical at second and third reading."
+          ],
+          "controls_label": "Sub-programs",
+          "counts": {
+            "api": null,
+            "hgab2": 828,
+            "hgab3": 828,
+            "nep": 791
+          },
+          "dept_id": "35",
+          "documents": {
+            "controls": {
+              "hgab2": {
+                "key": "hb10858-2r-vol-ib",
+                "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-2r-vol-ib.pdf"
+              },
+              "hgab3": {
+                "key": "hb10858-3r-vol-ib",
+                "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-3r-vol-ib.pdf"
+              }
+            },
+            "controls_note": "The House document each reading's program totals are published in: Volume I-C for DPWH (with its project list), Volume I-B for farm-to-market roads, health facilities and irrigation (with their lists).",
+            "house": [
+              {
+                "key": "hb10858-3r-vol-ib",
+                "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-3r-vol-ib.pdf"
+              },
+              {
+                "key": "hb10858-2r-vol-ib",
+                "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-2r-vol-ib.pdf"
+              }
+            ],
+            "nep": [
+              {
+                "key": "nep2027-nia",
+                "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/nep2027-nia.pdf"
+              }
+            ],
+            "same_pages": {
+              "extracted": {
+                "key": "hb10858-2r-vol-ib",
+                "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-2r-vol-ib.pdf"
+              },
+              "note": "The House list was read from the second-reading copy (extracted). The source compared all 46 list pages with the third-reading copy (third, as published on the Senate Budget Transparency Portal) and found them identical, so rows and totals cite the third-reading copy at the same page: pdf_url.hgab3 opens it, pdf_url.hgab2 opens the copy the line was read from.",
+              "pages": 46,
+              "third": {
+                "key": "hb10858-3r-vol-ib",
+                "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-3r-vol-ib.pdf"
+              }
+            }
+          },
+          "grain": "One irrigation project allocation as published, under one of six sub-programs",
+          "has_map": false,
+          "has_readings": false,
+          "house_stage": "hgab2",
+          "house_stage_label": "House bill, second reading",
+          "key": "nia",
+          "label": "NIA irrigation",
+          "links": {
+            "nep_department": "/api/v1/nep/2027/departments/35",
+            "projects": "/api/v1/hgab/2027/datasets/nia/projects",
+            "projects_page": "https://budget.bettergov.ph/hgab/2027/nia?view=projects",
+            "regions": "/api/v1/hgab/2027/datasets/nia/regions",
+            "self": "/api/v1/hgab/2027/datasets/nia"
+          },
+          "one_row": "One irrigation project.",
+          "placeable": false,
+          "printed": null,
+          "scope": "The six detailed irrigation sub-programs of the NIA annex (agency 35-005) in the NEP schedule and House Bill 10858 Volume I-B; excludes the agency-only CARP row and the wider NIA appropriation. The House side is the second-reading Volume I-B annex (PDF pages 896\u2013941), verified text-identical to the third-reading copy across all 46 pages, so the second- and third-reading versions of the House bill carry the same amounts. Rows and totals link to the third-reading copy, as published on the Senate Budget Transparency Portal, at the same PDF page; the second-reading copy stays cited as the copy read.",
+          "short": "NIA",
+          "summary": "Irrigation projects that the National Irrigation Administration would build or repair in 2027, listed under six programs in both documents.",
+          "totals": {
+            "api_php": null,
+            "hgab2_php": 17999305000,
+            "hgab3_php": 17999305000,
+            "nep_php": 17598181000,
+            "not_additive_across_versions": true
+          },
+          "unconfirmed_rows": 0,
+          "url": "https://budget.bettergov.ph/hgab/2027/nia"
+        }
+      ],
+      "districts": {
+        "link": "/api/v1/hgab/2027/districts",
+        "note": "DPWH money by district engineering office, with the congressional districts each office serves.",
+        "url": "https://budget.bettergov.ph/hgab/2027/districts"
+      },
+      "documents": [
+        {
+          "bytes": 17521465,
+          "key": "hb10858-2r-vol-ib",
+          "notes": "Page numbers are positions in this file, not the page numbers shown on the pages. It lists farm-to-market roads (pages 667\u2013726), health facilities (877\u2013893) and irrigation projects (896\u2013941), each with its totals. It also carries DPWH's section of the bill, with the department's total new appropriations. The DPWH project list and its program totals are in Volume I-C. The three lists were read from this copy. The third-reading copy publishes the same pages word for word, so rows and totals link there.",
+          "pages": {
+            "from": 667,
+            "to": 941
+          },
+          "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-2r-vol-ib.pdf",
+          "reading": 2,
+          "sha256": "a82800c4cc2684566a37f7780d8f9131d2e7b2c97444d335d94df012dec065b6",
+          "source_name": null,
+          "source_url": "https://www.congress.gov.ph/cso",
+          "stage": "house",
+          "stage_label": "House bill (House Bill 10858)",
+          "title": "House Bill 10858, Volume I-B: the three project lists, second reading",
+          "used_by": [
+            "dpwh",
+            "fmr",
+            "hfep",
+            "nia"
+          ],
+          "volume": "I-B"
+        },
+        {
+          "bytes": 11491139,
+          "key": "hb10858-2r-vol-ic",
+          "notes": "The DPWH project list and its program totals, as published for second reading. Page numbers are positions in this file. Second-reading project rows and program totals link here.",
+          "pages": {
+            "from": 110,
+            "to": 942
+          },
+          "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-2r-vol-ic.pdf",
+          "reading": 2,
+          "sha256": "0b790d6018db59abab648486c5068108a42ff20a33facc8e21ace0bbedf2d15f",
+          "source_name": null,
+          "source_url": "https://www.congress.gov.ph/cso",
+          "stage": "house",
+          "stage_label": "House bill (House Bill 10858)",
+          "title": "House Bill 10858, Volume I-C: DPWH project list and program totals, second reading",
+          "used_by": [
+            "dpwh"
+          ],
+          "volume": "I-C"
+        },
+        {
+          "bytes": 15663076,
+          "key": "hb10858-3r-vol-ib",
+          "notes": "Page numbers are positions in this file, not the page numbers shown on the pages. It lists farm-to-market roads (pages 667\u2013726), health facilities (877\u2013893) and irrigation projects (896\u2013941), each with its totals. It also carries DPWH's section of the bill, with the department's total new appropriations. The DPWH project list and its program totals are in Volume I-C. Identical to the copy published on the Senate Budget Transparency Portal (same SHA-256 fingerprint). Its list pages match the second-reading copy word for word, page for page, so rows and totals link here.",
+          "pages": {
+            "from": 667,
+            "to": 941
+          },
+          "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-3r-vol-ib.pdf",
+          "reading": 3,
+          "sha256": "4cc0f17e472d1af380ea6d3972561f6bb241137826fd85ed7e7e70bcd92986b9",
+          "source_name": "Senate Budget Transparency Portal",
+          "source_url": "https://budget-transparency-portal.senate.gov.ph/public/Documents?gaa_year=2027",
+          "stage": "house",
+          "stage_label": "House bill (House Bill 10858)",
+          "title": "House Bill 10858, Volume I-B: the three project lists, third reading",
+          "used_by": [
+            "dpwh",
+            "fmr",
+            "hfep",
+            "nia"
+          ],
+          "volume": "I-B"
+        },
+        {
+          "bytes": 9600816,
+          "key": "hb10858-3r-vol-ic",
+          "notes": "The DPWH project list and its program totals, as published for third reading. Page numbers are positions in this file. Third-reading project rows and program totals link here. Identical to the copy published on the Senate Budget Transparency Portal (same SHA-256 fingerprint).",
+          "pages": {
+            "from": 110,
+            "to": 942
+          },
+          "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/hb10858-3r-vol-ic.pdf",
+          "reading": 3,
+          "sha256": "48cb7a11e391bd4da89d4f47cf39a2eba8fe9bfe636dba101c8284b224ac1b1b",
+          "source_name": "Senate Budget Transparency Portal",
+          "source_url": "https://budget-transparency-portal.senate.gov.ph/public/Documents?gaa_year=2027",
+          "stage": "house",
+          "stage_label": "House bill (House Bill 10858)",
+          "title": "House Bill 10858, Volume I-C: DPWH project list and program totals, third reading",
+          "used_by": [
+            "dpwh"
+          ],
+          "volume": "I-C"
+        },
+        {
+          "bytes": 76156550,
+          "key": "nep2027-vol-iib",
+          "notes": "A 722-page scanned copy with machine-read text, the copy the source analysis worked from. Page numbers are positions in this file and do not match the DBM-published extract linked under Original.",
+          "pages": {
+            "from": 195,
+            "to": 690
+          },
+          "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/nep2027-vol-iib.pdf",
+          "reading": null,
+          "sha256": "bfc8282de8e3603f347f82aa2be34c25a38147e30aa34c12b11413766b7e7523",
+          "source_name": null,
+          "source_url": "https://www.dbm.gov.ph/wp-content/uploads/NEP2027/DPWH/DPWH.pdf",
+          "stage": "nep",
+          "stage_label": "NEP",
+          "title": "NEP 2027, Volume II-B: DPWH",
+          "used_by": [
+            "dpwh"
+          ],
+          "volume": "II-B"
+        },
+        {
+          "bytes": 4271595,
+          "key": "nep2027-fmr",
+          "notes": "A 47-page list supplied with the source analysis. Page numbers are positions in this file.",
+          "pages": {
+            "from": 1,
+            "to": 47
+          },
+          "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/nep2027-fmr.pdf",
+          "reading": null,
+          "sha256": "07355c115f45a84771b8a8ac22711992ea695ea28f0c9c1b2c71879d4a6dc4ba",
+          "source_name": null,
+          "source_url": null,
+          "stage": "nep",
+          "stage_label": "NEP",
+          "title": "NEP 2027: farm-to-market roads list, Department of Agriculture",
+          "used_by": [
+            "fmr"
+          ],
+          "volume": "Annex (NEP Volume I, page numbers 1511\u20131557 as shown on the pages)"
+        },
+        {
+          "bytes": 4700166,
+          "key": "nep2027-nia",
+          "notes": "A 30-page scanned list with machine-read text. Page numbers are positions in this file.",
+          "pages": {
+            "from": 1,
+            "to": 30
+          },
+          "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/nep2027-nia.pdf",
+          "reading": null,
+          "sha256": "eadad324df8539fcc398650da81170b821f83ddb99342c4347f472169b09b632",
+          "source_name": null,
+          "source_url": null,
+          "stage": "nep",
+          "stage_label": "NEP",
+          "title": "NEP 2027: irrigation projects list, National Irrigation Administration",
+          "used_by": [
+            "nia"
+          ],
+          "volume": "Annex"
+        },
+        {
+          "bytes": 2659774,
+          "key": "nep2027-hfep",
+          "notes": "A 13-page extract of Volume II-A: its pages 1\u201313 are pages 727\u2013739 of the full volume (the page numbers shown on the pages: 719\u2013731). Health-facility rows link to this extract's pages.",
+          "pages": {
+            "from": 1,
+            "to": 13
+          },
+          "pdf_url": "https://budget-assets.bettergov.ph/hgab/2027/pdf/nep2027-hfep.pdf",
+          "reading": null,
+          "sha256": "da27367228af63a68a3e26ef617cf538a9f31705403a559da756ce59046c267d",
+          "source_name": null,
+          "source_url": null,
+          "stage": "nep",
+          "stage_label": "NEP",
+          "title": "NEP 2027, Volume II-A: health facilities list, Department of Health",
+          "used_by": [
+            "hfep"
+          ],
+          "volume": "II-A (PDF pages 727\u2013739)"
+        }
+      ],
+      "links": {
+        "datasets": "/api/v1/hgab/2027/datasets",
+        "districts": "/api/v1/hgab/2027/districts",
+        "documents": "/api/v1/hgab/2027/documents",
+        "methodology": "https://budget.bettergov.ph/hgab/2027/methodology",
+        "reconciliation": "/api/v1/hgab/2027/reconciliation",
+        "sources": "https://budget.bettergov.ph/hgab/2027/sources"
+      },
+      "reconciliation": {
+        "by_dataset": {
+          "dpwh": {
+            "exact": 33,
+            "explained": 24,
+            "info": 1
+          },
+          "fmr": {
+            "exact": 1
+          },
+          "hfep": {
+            "exact": 1,
+            "explained": 2
+          },
+          "nia": {
+            "exact": 7
+          }
+        },
+        "by_status": {
+          "exact": 42,
+          "explained": 26,
+          "info": 1
+        },
+        "checks": 69,
+        "link": "/api/v1/hgab/2027/reconciliation",
+        "note": "Checks of the source's figures against this portal's own FY2027 NEP data (DBM CSV).",
+        "status_labels": {
+          "exact": "Exact",
+          "explained": "Explained",
+          "info": "Info",
+          "mismatch": "Mismatch"
+        }
+      },
+      "record_versions": [
+        {
+          "key": "nep",
+          "label": "NEP",
+          "plain": "the NEP",
+          "short": "NEP"
+        },
+        {
+          "key": "hgab2",
+          "label": "House bill, second reading",
+          "plain": "the House bill at second reading",
+          "short": "House 2R"
+        },
+        {
+          "key": "hgab3",
+          "label": "House bill, third reading",
+          "plain": "the House bill at third reading",
+          "short": "House 3R"
+        },
+        {
+          "key": "api",
+          "label": "DPWH transparency website listing",
+          "plain": "the DPWH transparency website's list",
+          "short": "DPWH site"
+        }
+      ],
+      "rules": [
+        "Amounts are integer pesos. null means the version has no such line, never zero.",
+        "The NEP and the House bill are two versions of one budget: compare them, never add them. Sums over a filtered set are given per version and marked not_additive_across_versions.",
+        "Pairings are candidates: leads for checking, not confirmed changes. A line found in one version only is an insertion candidate (House bill only) or a deletion candidate (NEP only), never a confirmed insertion or deletion.",
+        "Unconfirmed matches (held: fuzzy or ambiguous pairings) are flagged on every row. Bridge figures are the stored ones the pages show: they include unconfirmed matches (fuzzy or ambiguous pairings, counted under 'In the House bill only'), so the six groups add up to net_php. Each group's unconfirmed_rows / unconfirmed_php is the unconfirmed part of it (non-zero only on DPWH house_only). php is the group's money basis: the House amount for house_only and unchanged, the NEP amount for nep_only, the size of the movement for increased and decreased, and the signed net for scope_review. The largest-rows lists leave unconfirmed matches out.",
+        "District figures carry their tier. A shared (Tier B) office's money is never divided between the districts it serves, and money under the DPWH Central Office and regional offices, which is on no district card, is returned as the residual.",
+        "Rows with a page on the site carry url; document page references carry pdf_url, which opens the source PDF at that page.",
+        "Every response carries disclaimers (id, title, body, url): the no-allegations paragraph everywhere, and the office-and-district paragraph as well on office-based views (the district routes and DPWH project lists filtered to one office). Keep them with any figure you republish."
+      ],
+      "stage_order": [
+        {
+          "in_this_dataset": true,
+          "label": "NEP",
+          "note": "The NEP: the budget the President submits to Congress each August.",
+          "stage": "nep",
+          "versions": [
+            "nep"
+          ]
+        },
+        {
+          "in_this_dataset": true,
+          "label": "House bill (House Bill 10858)",
+          "note": "Published at second and third reading. DPWH is compared at third reading; the other three programs publish one list, identical at both readings, and are compared at second.",
+          "stage": "house",
+          "versions": [
+            "hgab2",
+            "hgab3"
+          ]
+        },
+        {
+          "in_this_dataset": false,
+          "label": "Senate version",
+          "note": "Not in this dataset.",
+          "stage": "senate",
+          "versions": []
+        },
+        {
+          "in_this_dataset": false,
+          "label": "General Appropriations Act (the enacted budget)",
+          "note": "Not in this dataset. Enacted budgets for FY2020\u20132026 are under /api/v1/gaa.",
+          "stage": "gaa",
+          "versions": []
+        }
+      ],
+      "summary": "For the four programs where the House bill lists projects one by one (DPWH infrastructure, farm-to-market roads, health facilities and irrigation), every project line in the House bill set against the NEP (the budget the President submits to Congress each August): what was added, dropped, raised, reduced or left unchanged.",
+      "terms": {
+        "candidate": {
+          "meaning": "A match or a gap found by comparing project names, places and amounts. It is a lead for checking, not a confirmed change.",
+          "term": "Candidate"
+        },
+        "deo": {
+          "meaning": "The DPWH field office that carries out projects in an area. One office can serve more than one congressional district.",
+          "term": "District engineering office"
+        },
+        "fap": {
+          "meaning": "A project paid for partly with a loan or grant from abroad.",
+          "term": "Foreign-assisted project"
+        },
+        "hgab": {
+          "meaning": "The House of Representatives' version of the budget, House Bill 10858 for 2027. It goes to the Senate next.",
+          "term": "House bill"
+        },
+        "nep": {
+          "meaning": "National Expenditure Program: the budget the President submits to Congress each August.",
+          "term": "NEP"
+        },
+        "pap": {
+          "meaning": "A heading in the budget under which projects are listed, for example 'Preventive Maintenance - Primary Roads'.",
+          "term": "Program line"
+        },
+        "reading": {
+          "meaning": "The House votes on a bill twice. The third-reading text is the version it sends to the Senate.",
+          "term": "Second and third reading"
+        },
+        "residual": {
+          "meaning": "Money listed under the DPWH Central Office or a regional office. It does not appear on any district card.",
+          "term": "Not assigned to a district"
+        },
+        "stages": {
+          "meaning": "The NEP and the House bill are two versions of the same budget. Compare them; never add them together.",
+          "term": "Two versions, not two budgets"
+        },
+        "tier": {
+          "meaning": "Tier A: the office serves one district, so its figure can be read as that district\u2019s. Tier B: the office serves several districts, so the figure is shared and is not split between them.",
+          "term": "Tier A and Tier B"
+        }
+      },
+      "title": "FY2027 House bill (House Bill 10858) against the NEP",
+      "url": "https://budget.bettergov.ph/hgab/2027/overview"
+    },
+    "disclaimers": [
+      {
+        "body": "An insertion, deletion, or amount-change candidate describes a provisional comparison between identified sources. That classification alone does not establish irregularity or wrongdoing by any office or official and should not be represented as such. Absence from an API snapshot likewise does not establish absence from the published NEP or concealment.",
+        "id": "disclaimer-no-allegations",
+        "title": "No allegations.",
+        "url": "https://budget.bettergov.ph/hgab/2027/methodology#disclaimer-no-allegations"
+      }
+    ],
+    "meta": {
+      "built_at": "2026-10-26T08:46:14.383Z",
+      "currency": "PHP",
+      "dataset": "hgab",
+      "fiscal_year": 2027,
+      "notice": "Independent and unofficial. This comparison is our own reading of the published documents, not an official record of the budget department, the agencies or the House. Figures are the amounts published in the documents, not spending. No allegations. An insertion, deletion, or amount-change candidate describes a provisional comparison between identified sources. That classification alone does not establish irregularity or wrongdoing by any office or official and should not be represented as such. Absence from an API snapshot likewise does not establish absence from the published NEP or concealment. Read the full notice: https://budget.bettergov.ph/hgab/2027/methodology#disclaimer.",
+      "scale": "pesos",
+      "source_commit": "a0caa778442cdae5583f5a006ea7401dab00e5ac",
+      "source_repo": "https://github.com/csiiiv/DPWH-NEP-HB-2027-ANALYSIS"
+    }
+  },
+  "query_notices": [
+    {
+      "disclaimers": [
+        {
+          "body": "The DEO mapping associates offices with legislative districts; it does not establish that a representative requested, sponsored, or controlled a project, or that each project lies in every district associated with its office. Shared-office totals remain undivided and must not be split among the districts served. Office-based views must retain attribution tiers, co-served districts, unattributable residuals, and upstream uncertainty annotations. Historical or undated amounts retained as mapping evidence are separate from the FY2027 project ledger and must not be quoted as FY2027 allocations. See the DEO mapping restrictions.",
+          "id": "disclaimer-offices",
+          "restrictions_url": "https://budget.bettergov.ph/hgab/2027/methodology#deo-mapping-restrictions",
+          "title": "Office and legislative-district associations.",
+          "upstream_restrictions_url": "https://github.com/csiiiv/DPWH-NEP-HB-2027-ANALYSIS/blob/main/DEO2LEG/README.md#disclaimers",
+          "url": "https://budget.bettergov.ph/hgab/2027/methodology#disclaimer-offices"
+        },
+        {
+          "body": "An insertion, deletion, or amount-change candidate describes a provisional comparison between identified sources. That classification alone does not establish irregularity or wrongdoing by any office or official and should not be represented as such. Absence from an API snapshot likewise does not establish absence from the published NEP or concealment.",
+          "id": "disclaimer-no-allegations",
+          "title": "No allegations.",
+          "url": "https://budget.bettergov.ph/hgab/2027/methodology#disclaimer-no-allegations"
+        }
+      ],
+      "notice": "Independent and unofficial. This comparison is our own reading of the published documents, not an official record of the budget department, the agencies or the House. Figures are the amounts published in the documents, not spending. No allegations. An insertion, deletion, or amount-change candidate describes a provisional comparison between identified sources. That classification alone does not establish irregularity or wrongdoing by any office or official and should not be represented as such. Absence from an API snapshot likewise does not establish absence from the published NEP or concealment. Read the full notice: https://budget.bettergov.ph/hgab/2027/methodology#disclaimer.",
+      "query_index": 0
+    },
+    {
+      "disclaimers": [
+        {
+          "body": "An insertion, deletion, or amount-change candidate describes a provisional comparison between identified sources. That classification alone does not establish irregularity or wrongdoing by any office or official and should not be represented as such. Absence from an API snapshot likewise does not establish absence from the published NEP or concealment.",
+          "id": "disclaimer-no-allegations",
+          "title": "No allegations.",
+          "url": "https://budget.bettergov.ph/hgab/2027/methodology#disclaimer-no-allegations"
+        }
+      ],
+      "notice": "Independent and unofficial. This comparison is our own reading of the published documents, not an official record of the budget department, the agencies or the House. Figures are the amounts published in the documents, not spending. No allegations. An insertion, deletion, or amount-change candidate describes a provisional comparison between identified sources. That classification alone does not establish irregularity or wrongdoing by any office or official and should not be represented as such. Absence from an API snapshot likewise does not establish absence from the published NEP or concealment. Read the full notice: https://budget.bettergov.ph/hgab/2027/methodology#disclaimer.",
+      "query_index": 1
+    },
+    {
+      "disclaimers": [
+        {
+          "body": "An insertion, deletion, or amount-change candidate describes a provisional comparison between identified sources. That classification alone does not establish irregularity or wrongdoing by any office or official and should not be represented as such. Absence from an API snapshot likewise does not establish absence from the published NEP or concealment.",
+          "id": "disclaimer-no-allegations",
+          "title": "No allegations.",
+          "url": "https://budget.bettergov.ph/hgab/2027/methodology#disclaimer-no-allegations"
+        }
+      ],
+      "notice": "Independent and unofficial. This comparison is our own reading of the published documents, not an official record of the budget department, the agencies or the House. Figures are the amounts published in the documents, not spending. No allegations. An insertion, deletion, or amount-change candidate describes a provisional comparison between identified sources. That classification alone does not establish irregularity or wrongdoing by any office or official and should not be represented as such. Absence from an API snapshot likewise does not establish absence from the published NEP or concealment. Read the full notice: https://budget.bettergov.ph/hgab/2027/methodology#disclaimer.",
+      "query_index": 2
+    },
+    {
+      "disclaimers": [
+        {
+          "body": "An insertion, deletion, or amount-change candidate describes a provisional comparison between identified sources. That classification alone does not establish irregularity or wrongdoing by any office or official and should not be represented as such. Absence from an API snapshot likewise does not establish absence from the published NEP or concealment.",
+          "id": "disclaimer-no-allegations",
+          "title": "No allegations.",
+          "url": "https://budget.bettergov.ph/hgab/2027/methodology#disclaimer-no-allegations"
+        }
+      ],
+      "notice": "Independent and unofficial. This comparison is our own reading of the published documents, not an official record of the budget department, the agencies or the House. Figures are the amounts published in the documents, not spending. No allegations. An insertion, deletion, or amount-change candidate describes a provisional comparison between identified sources. That classification alone does not establish irregularity or wrongdoing by any office or official and should not be represented as such. Absence from an API snapshot likewise does not establish absence from the published NEP or concealment. Read the full notice: https://budget.bettergov.ph/hgab/2027/methodology#disclaimer.",
+      "query_index": 3
+    },
+    {
+      "disclaimers": [
+        {
+          "body": "An insertion, deletion, or amount-change candidate describes a provisional comparison between identified sources. That classification alone does not establish irregularity or wrongdoing by any office or official and should not be represented as such. Absence from an API snapshot likewise does not establish absence from the published NEP or concealment.",
+          "id": "disclaimer-no-allegations",
+          "title": "No allegations.",
+          "url": "https://budget.bettergov.ph/hgab/2027/methodology#disclaimer-no-allegations"
+        }
+      ],
+      "notice": "Independent and unofficial. This comparison is our own reading of the published documents, not an official record of the budget department, the agencies or the House. Figures are the amounts published in the documents, not spending. No allegations. An insertion, deletion, or amount-change candidate describes a provisional comparison between identified sources. That classification alone does not establish irregularity or wrongdoing by any office or official and should not be represented as such. Absence from an API snapshot likewise does not establish absence from the published NEP or concealment. Read the full notice: https://budget.bettergov.ph/hgab/2027/methodology#disclaimer.",
+      "query_index": 4
+    },
+    {
+      "disclaimers": [
+        {
+          "body": "An insertion, deletion, or amount-change candidate describes a provisional comparison between identified sources. That classification alone does not establish irregularity or wrongdoing by any office or official and should not be represented as such. Absence from an API snapshot likewise does not establish absence from the published NEP or concealment.",
+          "id": "disclaimer-no-allegations",
+          "title": "No allegations.",
+          "url": "https://budget.bettergov.ph/hgab/2027/methodology#disclaimer-no-allegations"
+        }
+      ],
+      "notice": "Independent and unofficial. This comparison is our own reading of the published documents, not an official record of the budget department, the agencies or the House. Figures are the amounts published in the documents, not spending. No allegations. An insertion, deletion, or amount-change candidate describes a provisional comparison between identified sources. That classification alone does not establish irregularity or wrongdoing by any office or official and should not be represented as such. Absence from an API snapshot likewise does not establish absence from the published NEP or concealment. Read the full notice: https://budget.bettergov.ph/hgab/2027/methodology#disclaimer.",
+      "query_index": 5
+    },
+    {
+      "disclaimers": [
+        {
+          "body": "The DEO mapping associates offices with legislative districts; it does not establish that a representative requested, sponsored, or controlled a project, or that each project lies in every district associated with its office. Shared-office totals remain undivided and must not be split among the districts served. Office-based views must retain attribution tiers, co-served districts, unattributable residuals, and upstream uncertainty annotations. Historical or undated amounts retained as mapping evidence are separate from the FY2027 project ledger and must not be quoted as FY2027 allocations. See the DEO mapping restrictions.",
+          "id": "disclaimer-offices",
+          "restrictions_url": "https://budget.bettergov.ph/hgab/2027/methodology#deo-mapping-restrictions",
+          "title": "Office and legislative-district associations.",
+          "upstream_restrictions_url": "https://github.com/csiiiv/DPWH-NEP-HB-2027-ANALYSIS/blob/main/DEO2LEG/README.md#disclaimers",
+          "url": "https://budget.bettergov.ph/hgab/2027/methodology#disclaimer-offices"
+        },
+        {
+          "body": "An insertion, deletion, or amount-change candidate describes a provisional comparison between identified sources. That classification alone does not establish irregularity or wrongdoing by any office or official and should not be represented as such. Absence from an API snapshot likewise does not establish absence from the published NEP or concealment.",
+          "id": "disclaimer-no-allegations",
+          "title": "No allegations.",
+          "url": "https://budget.bettergov.ph/hgab/2027/methodology#disclaimer-no-allegations"
+        }
+      ],
+      "notice": "Independent and unofficial. This comparison is our own reading of the published documents, not an official record of the budget department, the agencies or the House. Figures are the amounts published in the documents, not spending. No allegations. An insertion, deletion, or amount-change candidate describes a provisional comparison between identified sources. That classification alone does not establish irregularity or wrongdoing by any office or official and should not be represented as such. Absence from an API snapshot likewise does not establish absence from the published NEP or concealment. Read the full notice: https://budget.bettergov.ph/hgab/2027/methodology#disclaimer.",
+      "query_index": 6
+    },
+    {
+      "disclaimers": [
+        {
+          "body": "The DEO mapping associates offices with legislative districts; it does not establish that a representative requested, sponsored, or controlled a project, or that each project lies in every district associated with its office. Shared-office totals remain undivided and must not be split among the districts served. Office-based views must retain attribution tiers, co-served districts, unattributable residuals, and upstream uncertainty annotations. Historical or undated amounts retained as mapping evidence are separate from the FY2027 project ledger and must not be quoted as FY2027 allocations. See the DEO mapping restrictions.",
+          "id": "disclaimer-offices",
+          "restrictions_url": "https://budget.bettergov.ph/hgab/2027/methodology#deo-mapping-restrictions",
+          "title": "Office and legislative-district associations.",
+          "upstream_restrictions_url": "https://github.com/csiiiv/DPWH-NEP-HB-2027-ANALYSIS/blob/main/DEO2LEG/README.md#disclaimers",
+          "url": "https://budget.bettergov.ph/hgab/2027/methodology#disclaimer-offices"
+        },
+        {
+          "body": "An insertion, deletion, or amount-change candidate describes a provisional comparison between identified sources. That classification alone does not establish irregularity or wrongdoing by any office or official and should not be represented as such. Absence from an API snapshot likewise does not establish absence from the published NEP or concealment.",
+          "id": "disclaimer-no-allegations",
+          "title": "No allegations.",
+          "url": "https://budget.bettergov.ph/hgab/2027/methodology#disclaimer-no-allegations"
+        }
+      ],
+      "notice": "Independent and unofficial. This comparison is our own reading of the published documents, not an official record of the budget department, the agencies or the House. Figures are the amounts published in the documents, not spending. No allegations. An insertion, deletion, or amount-change candidate describes a provisional comparison between identified sources. That classification alone does not establish irregularity or wrongdoing by any office or official and should not be represented as such. Absence from an API snapshot likewise does not establish absence from the published NEP or concealment. Read the full notice: https://budget.bettergov.ph/hgab/2027/methodology#disclaimer.",
+      "query_index": 7
+    },
+    {
+      "disclaimers": [
+        {
+          "body": "The DEO mapping associates offices with legislative districts; it does not establish that a representative requested, sponsored, or controlled a project, or that each project lies in every district associated with its office. Shared-office totals remain undivided and must not be split among the districts served. Office-based views must retain attribution tiers, co-served districts, unattributable residuals, and upstream uncertainty annotations. Historical or undated amounts retained as mapping evidence are separate from the FY2027 project ledger and must not be quoted as FY2027 allocations. See the DEO mapping restrictions.",
+          "id": "disclaimer-offices",
+          "restrictions_url": "https://budget.bettergov.ph/hgab/2027/methodology#deo-mapping-restrictions",
+          "title": "Office and legislative-district associations.",
+          "upstream_restrictions_url": "https://github.com/csiiiv/DPWH-NEP-HB-2027-ANALYSIS/blob/main/DEO2LEG/README.md#disclaimers",
+          "url": "https://budget.bettergov.ph/hgab/2027/methodology#disclaimer-offices"
+        },
+        {
+          "body": "An insertion, deletion, or amount-change candidate describes a provisional comparison between identified sources. That classification alone does not establish irregularity or wrongdoing by any office or official and should not be represented as such. Absence from an API snapshot likewise does not establish absence from the published NEP or concealment.",
+          "id": "disclaimer-no-allegations",
+          "title": "No allegations.",
+          "url": "https://budget.bettergov.ph/hgab/2027/methodology#disclaimer-no-allegations"
+        }
+      ],
+      "notice": "Independent and unofficial. This comparison is our own reading of the published documents, not an official record of the budget department, the agencies or the House. Figures are the amounts published in the documents, not spending. No allegations. An insertion, deletion, or amount-change candidate describes a provisional comparison between identified sources. That classification alone does not establish irregularity or wrongdoing by any office or official and should not be represented as such. Absence from an API snapshot likewise does not establish absence from the published NEP or concealment. Read the full notice: https://budget.bettergov.ph/hgab/2027/methodology#disclaimer.",
+      "query_index": 8
+    },
+    {
+      "disclaimers": [
+        {
+          "body": "The DEO mapping associates offices with legislative districts; it does not establish that a representative requested, sponsored, or controlled a project, or that each project lies in every district associated with its office. Shared-office totals remain undivided and must not be split among the districts served. Office-based views must retain attribution tiers, co-served districts, unattributable residuals, and upstream uncertainty annotations. Historical or undated amounts retained as mapping evidence are separate from the FY2027 project ledger and must not be quoted as FY2027 allocations. See the DEO mapping restrictions.",
+          "id": "disclaimer-offices",
+          "restrictions_url": "https://budget.bettergov.ph/hgab/2027/methodology#deo-mapping-restrictions",
+          "title": "Office and legislative-district associations.",
+          "upstream_restrictions_url": "https://github.com/csiiiv/DPWH-NEP-HB-2027-ANALYSIS/blob/main/DEO2LEG/README.md#disclaimers",
+          "url": "https://budget.bettergov.ph/hgab/2027/methodology#disclaimer-offices"
+        },
+        {
+          "body": "An insertion, deletion, or amount-change candidate describes a provisional comparison between identified sources. That classification alone does not establish irregularity or wrongdoing by any office or official and should not be represented as such. Absence from an API snapshot likewise does not establish absence from the published NEP or concealment.",
+          "id": "disclaimer-no-allegations",
+          "title": "No allegations.",
+          "url": "https://budget.bettergov.ph/hgab/2027/methodology#disclaimer-no-allegations"
+        }
+      ],
+      "notice": "Independent and unofficial. This comparison is our own reading of the published documents, not an official record of the budget department, the agencies or the House. Figures are the amounts published in the documents, not spending. No allegations. An insertion, deletion, or amount-change candidate describes a provisional comparison between identified sources. That classification alone does not establish irregularity or wrongdoing by any office or official and should not be represented as such. Absence from an API snapshot likewise does not establish absence from the published NEP or concealment. Read the full notice: https://budget.bettergov.ph/hgab/2027/methodology#disclaimer.",
+      "query_index": 9
+    }
+  ]
+}

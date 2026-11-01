@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>National Budget 2027 | Better Pangasinan</title>
+<meta name="description" content="Explore reviewed national budget proposal comparisons, scope and source evidence for Pangasinan." />
+<link rel="icon" type="image/svg+xml" href="logo.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
+<meta name="data-mode" content="production">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="logo.svg" alt="Better Pangasinan logo" width="48" height="48" />
+      <span class="brand-text">
+        <span class="top">Better Pangasinan</span>
+        <span class="bottom">Independent civic technology</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="sr-only">Menu</span>
+      </button>
+      <ul class="nav-links" id="primary-navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lgus.html">LGU Explorer</a></li>
+        <li><a href="projects.html">Projects &amp; Tools</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="volunteer.html">Get Involved</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<main id="main-content" tabindex="-1">
+<link rel="stylesheet" href="assets/national-budget.css">
+<section class="page-hero"><div class="wrap"><span class="eyebrow">2027 · Follow the proposal, check the evidence</span><h1>National Budget Projects in Pangasinan</h1><p class="lede">Budget proposals, not actual spending. These are not contracts, completed projects or enacted appropriations.</p></div></section>
+<section class="section national-budget"><div class="wrap" id="national-budget">
+  <aside class="card nb-notice" aria-label="Important limitations"><h2>Read the scope first</h2><p>These are proposed budget allocations, not money already spent. Search results may not include every project physically located in Pangasinan.</p><p>This is an unofficial civic presentation of source records, not an official budget publication. Inclusion does not establish an allegation or implementation status.</p><p>Geographic matches and office allocations are different views. Multi-LGU records overlap and must not be added across municipalities. Shared national allocations are not Pangasinan-attributable amounts.</p></aside>
+  <p id="nb-status" role="status" aria-live="polite">No approved national budget snapshot is available. No provincial or municipal totals are inferred.</p>
+  <div id="nb-meta"></div>
+  <noscript><div class="card"><h2>JavaScript is disabled</h2><p>No approved snapshot is assumed. Interactive filtering and CSV export require JavaScript. Check the <a href="data/national-budget/2027/manifest.json">publication manifest</a> for availability before interpreting any data.</p></div></noscript>
+  <div id="nb-content" hidden>
+    <aside id="nb-coverage-summary" class="card nb-notice" aria-label="Coverage limitations"></aside>
+    <form id="nb-filters" role="search" aria-label="Filter national budget records">
+      <label>Search records<input type="search" name="q" placeholder="Title or original identifier"></label>
+      <label>Scope lens<select name="scope"><option value="all">All scopes (not a geographic total)</option><option value="geographic">Reviewed geographic matches</option><option value="office">Office allocations</option><option value="shared">Shared allocations (not attributable)</option><option value="uncertain">Uncertain geography</option></select></label>
+      <label>LGU<select name="lgu"><option value="">All reviewed LGU associations</option></select></label>
+      <label>Program<select name="dataset"><option value="">All programs</option></select></label>
+      <label>Office<select name="office"><option value="">All offices</option></select></label>
+      <label>Source review status<select name="status"><option value="">All source review statuses</option></select></label>
+      <label>Comparison status<select name="comparison"><option value="">All comparison statuses</option></select></label>
+      <label>Geographic review status<select name="geographic"><option value="">All geographic review statuses</option></select></label>
+      <label>House stage<select name="stage"><option value="">All stages (separate totals)</option><option value="hgab2">House second reading (hgab2)</option><option value="hgab3">House third reading (hgab3)</option></select></label>
+      <label>Sort<select name="sort"><option value="title">Title A-Z</option><option value="amount">House amount, highest first</option><option value="id">Original identifier</option></select></label>
+      <div class="nb-actions"><button class="btn" type="reset">Reset filters</button><button class="btn btn-outline" id="nb-export" type="button">Download filtered CSV</button></div>
+    </form>
+    <section id="nb-offices" hidden aria-label="Approved office context"></section>
+    <h2>Selected comparison records</h2><p id="nb-count" role="status" aria-live="polite"></p>
+    <p class="nb-warning">Search matches can include similarly named places outside Pangasinan. Publication approval does not verify project location.</p>
+    <p>Unknown amounts are not zero. Each sum shows its known-amount count. Comparable change uses only records with both versions known, excluding held and scope-review comparisons; it is not the difference of incomplete version sums. Source-supplied changes remain visible on each card.</p>
+    <div id="nb-totals" class="nb-totals"></div>
+    <nav id="nb-pagination" class="nb-actions" aria-label="Comparison record pages" hidden><button class="btn btn-outline" id="nb-previous" type="button">Previous page</button><span id="nb-page-status" role="status" aria-live="polite"></span><button class="btn btn-outline" id="nb-next" type="button">Next page</button></nav>
+    <div id="nb-results" class="nb-results"></div>
+    <details class="card"><summary>Coverage and source metadata</summary><p>Publication approval does not imply exhaustive coverage or clear source warnings.</p><h3>Coverage</h3><pre id="nb-coverage"></pre><h3>Source overview and metadata</h3><pre id="nb-sources"></pre><div id="nb-source-links"></div><p><a href="data/national-budget/2027/projects.json">Published records JSON</a> · <a href="data/national-budget/2027/offices.json">Office metadata JSON</a> · <a href="data/national-budget/2027/manifest.json">Snapshot manifest</a> · <a href="data/national-budget/2027/coverage.json">Download coverage JSON</a> · <a href="data/national-budget/2027/sources.json">Download sources JSON</a></p></details>
+  </div>
+</div></section>
+<script src="assets/national-budget.js" defer></script>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand-col">
+        <div class="footer-brand">
+          <img src="logo.svg" alt="Better Pangasinan logo" width="48" height="48" />
+          <div>
+            <div class="name">Better Pangasinan</div>
+            <p>An independent, volunteer-led civic technology initiative for Pangasinan. Not an official government website; no government endorsement or formal affiliation is claimed.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h5>Site</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="lgus.html">LGU Explorer</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects &amp; Tools</a></li>
+          <li><a href="volunteer.html">Get Involved</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Official Sources</h5>
+        <ul>
+          <li><a href="https://www.dilg.gov.ph/" target="_blank" rel="noopener">Department of the Interior and Local Government</a></li>
+          <li><a href="https://pangasinan.gov.ph/" target="_blank" rel="noopener">Province of Pangasinan</a></li>
+          <li><a href="https://www.coa.gov.ph/" target="_blank" rel="noopener">Commission on Audit</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Our Policies</h5>
+        <ul>
+          <li><a href="methodology.html">Methodology &amp; Sources</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="corrections.html">Corrections</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Public records need context. Check the cited source and reporting period before relying on a record.</p>
+    </div>
+  </div>
+</footer>
+
+
+<script src="assets/script.js"></script>
+</body>
+</html>

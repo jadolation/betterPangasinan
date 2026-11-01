@@ -1,0 +1,14 @@
+﻿dataset,category,priority,required_collection,current_evidence,recommended_owner
+sources,Source documents,P0,"Original link, publisher, publication date, reporting year; files as permitted",Official source pages catalogued; attachments mostly unreviewed,Research lead
+entities,Government entities,P0,"Public office names, government hierarchy, responsible entities",Provincial hospital directory located; 48 local office directories missing,Governance team
+lgus,LGU profiles,P0,"48 LGUs, PSGC, classification, 2024 POPCEN, official website, address",PSGC and census acquired for all 48; websites/contacts not complete,Geography team
+finances,Budgets and expenditure,P1,"Annual/supplemental appropriation ordinances, quarterly actual expenditure, NTA, SEF, LDRRM",2026 resolution-level budget amounts for sample LGUs; quarterly reports located not extracted,Finance team
+procurements,Procurement,P1,"APP lines, reference numbers, procurement method, notices, awards",Provincial procurement directory and 2026 APP located; line items missing,Procurement team
+contracts,Contracts,P1,"Suppliers, award values, notice to proceed, contract docs",No award/contract line-level records extracted,Procurement team
+projects,Projects,P1,"Implementing agency, funding, location, status, contract references",AIP and planning narratives located; not yet verified project registry,Projects team
+legislation,Ordinances/resolutions,P1,"Document numbers, full text, dates, issuing body",Provincial index and sample ordinance entries extracted,Governance team
+documents,Public document library,P0,"Document titles, source links, dates, license, checksum",Official repositories catalogued; PDF attachments to review,Research lead
+services,Citizen services,P2,"Service title, fees, office, processing time, charter source",Provincial Citizen Charter and PPDO services found; individual records not extracted,Services team
+statistics,Demographic and development data,P1,"2024 population, 2025 GDP, agricultural and fisheries indicators",PSA numeric indicators acquired,Statistics team
+geography,GIS layers,P1,"Approved city/municipal boundary polygons, facilities, license",NAMRIA Geoportal located; no geometry downloaded,GIS team
+audits (future),COA audit documents,P2,"Annual COA/SEF compliance audit reports, findings after review","Listings for Pangasinan, Dagupan, Basista, Sual found; findings not extracted",Audits team

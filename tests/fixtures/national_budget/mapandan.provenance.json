@@ -1,0 +1,11 @@
+{
+  "url": "https://budget.bettergov.ph/api/v1/hgab/2027/datasets/dpwh/projects?q=Mapandan&limit=200&offset=0",
+  "retrieved_at": "2026-11-01T07:15:03.957533+00:00",
+  "http_status": 200,
+  "sha256": "35385c099afc9a1130948b4bf87886dd64e800d7089288d9358087004c24b5c6",
+  "source_commit": "a0caa778442cdae5583f5a006ea7401dab00e5ac",
+  "built_at": "2026-10-26T08:46:14.383Z",
+  "fixture_kind": "real_captured_api_envelope",
+  "publication_status": "unreviewed",
+  "note": "Original response bytes copied unchanged from the internal content-addressed collection. This fixture does not constitute publication approval or verified geographic coverage."
+}

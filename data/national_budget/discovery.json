@@ -1,0 +1,47 @@
+{
+  "status": "user_authorized_publication_summary",
+  "fiscal_year": 2027,
+  "retrieved_at": "2026-11-01T08:27:05.020579Z",
+  "publication_authorized_at": "2026-11-01T08:12:01Z",
+  "authorization_scope": "publication_only",
+  "source_commit": "a0caa778442cdae5583f5a006ea7401dab00e5ac",
+  "source_built_at": "2026-10-26T08:46:14.383Z",
+  "batch_id": "2026-11-01-default",
+  "collection_complete_for_requested_queries": true,
+  "exhaustive_geographic_coverage": false,
+  "district_directory_records": 254,
+  "pangasinan_districts": 6,
+  "unique_offices": 4,
+  "province_query": "Pangasinan",
+  "province_query_ledgers": [
+    {"dataset": "dpwh", "records": 696, "house_stage": "hgab3", "nep_php": 11949131000, "house_php": 16405914000, "nep_known_rows": 410, "house_known_rows": 675},
+    {"dataset": "fmr", "records": 32, "house_stage": "hgab2", "nep_php": 250000000, "house_php": 340000000, "nep_known_rows": 21, "house_known_rows": 32},
+    {"dataset": "hfep", "records": 4, "house_stage": "hgab2", "nep_php": 363000000, "house_php": 63000000, "nep_known_rows": 4, "house_known_rows": 2},
+    {"dataset": "nia", "records": 0, "house_stage": "hgab2", "nep_php": null, "house_php": null, "nep_known_rows": 0, "house_known_rows": 0}
+  ],
+  "office_query_ledgers": [
+    {"office": "Pangasinan 1st District Engineering Office", "districts": [1], "tier": "A", "records": 91, "nep_php": 317200000, "hgab3_php": 859200000},
+    {"office": "Pangasinan 2nd District Engineering Office", "districts": [2, 4], "tier": "B", "records": 162, "nep_php": 935200000, "hgab3_php": 1381115000},
+    {"office": "Pangasinan 3rd District Engineering Office", "districts": [5, 6], "tier": "B", "records": 204, "nep_php": 921200000, "hgab3_php": 1483700000},
+    {"office": "Pangasinan 4th District Engineering Office", "districts": [3], "tier": "A", "records": 85, "nep_php": 625600000, "hgab3_php": 997748000}
+  ],
+  "project_rows_across_overlapping_queries": 1276,
+  "unique_normalized_records": 732,
+  "project_detail_records": 732,
+  "all_project_details_collected": true,
+  "approved_records": 732,
+  "requiring_geographic_review": 732,
+  "reviewed_exclusions": [],
+  "normalization_errors": [],
+  "normalization_conflicts": [],
+  "limitations": [
+    "Published after explicit user approval; publication does not independently verify geographic assignments or resolve upstream source warnings.",
+    "Query-ledger amounts include shared multi-region allocations and uncertain matches; they are not Pangasinan-attributable funding totals.",
+    "Name matches can refer to similarly named places outside the province, such as New Pangasinan in Koronadal, South Cotabato; no location is verified by inclusion or publication approval.",
+    "Office, province and regression queries overlap; never sum their counts or amounts as unique coverage.",
+    "No municipality attribution has been approved; the research PSGC registry still requires human review.",
+    "NIA zero name matches does not establish absence of irrigation funding.",
+    "All 732 project details were collected and checked against the approved source values; no source warnings or original budget-document references were removed.",
+    "NEP and House versions must never be added together. These are proposals, not expenditure."
+  ]
+}

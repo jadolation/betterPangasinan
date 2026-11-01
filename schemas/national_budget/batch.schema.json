@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object", "required": ["overview", "queries", "offices", "retrieved_at", "complete"],
+  "properties": {
+    "overview": {"type": "object", "required": ["meta", "data", "disclaimers"]},
+    "retrieved_at": {"type": "string", "format": "date-time"}, "complete": {"type": "boolean"},
+    "offices": {"type": "array"}, "queries": {"type": "array", "items": {"type": "object", "required": ["category", "dataset", "rows", "complete", "params", "meta", "disclaimers", "response_ids"], "properties": {
+      "category": {"type": "string"}, "dataset": {"enum": ["dpwh", "fmr", "hfep", "nia", null]}, "rows": {"type": "array"}, "complete": {"type": "boolean"}
+    }}}
+  }
+}

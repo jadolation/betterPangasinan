@@ -1,0 +1,397 @@
+{
+  "all_project_details_collected": true,
+  "approved_records": 732,
+  "complete": true,
+  "conflicts": [],
+  "errors": [],
+  "excluded_records": 0,
+  "exclusions": [],
+  "exhaustive_geographic_coverage": false,
+  "limitations": [
+    "Query matches do not establish physical location or exhaustive coverage.",
+    "Office and multi-LGU views overlap and must not be added together.",
+    "Shared umbrella amounts are not wholly attributable to Pangasinan.",
+    "NIA records may lack region; zero name matches do not establish absence of funding."
+  ],
+  "project_detail_records": 732,
+  "queries": [
+    {
+      "category": "districts",
+      "complete": true,
+      "dataset": null,
+      "downloaded": 254,
+      "error": null,
+      "params": {},
+      "response_ids": [
+        "df266f4eb6ab1ecda56a6a30b48130d7597fa2d59a455a4abf36e925222fe808",
+        "95f660d853867c809a24eaf719820e7e0e14084817ebdd32f27e4973fb11672b"
+      ],
+      "sums": null,
+      "total": 254,
+      "unique": 254
+    },
+    {
+      "category": "province",
+      "complete": true,
+      "dataset": "dpwh",
+      "downloaded": 696,
+      "error": null,
+      "params": {
+        "q": "Pangasinan"
+      },
+      "reconciled_sums": {
+        "api_php": 10949131000,
+        "hgab2_php": 16405914000,
+        "hgab3_php": 16405914000,
+        "nep_php": 11949131000
+      },
+      "response_ids": [
+        "228e6896e17cbb0ae81711e7b5a26c47300abb774867e27410bd31940856cf15",
+        "191ca620aacbf6495eaeda28d959a1b66d69a5a97e1cff566e3f765800e1b00a",
+        "e439f58f13131b81c7be90450e1b877900497cbea4feaf2765439fc0e96e6fbe",
+        "f9f0d493586750d91f3a5ede829f9c6ea3559f1832e47020fe6913c0e6b7abe2"
+      ],
+      "sums": {
+        "api_php": 10949131000,
+        "hgab2_php": 16405914000,
+        "hgab3_php": 16405914000,
+        "nep_php": 11949131000,
+        "not_additive_across_versions": true,
+        "rows_with_amount": {
+          "api": 409,
+          "hgab2": 675,
+          "hgab3": 675,
+          "nep": 410
+        },
+        "unconfirmed_rows": 15
+      },
+      "total": 696,
+      "unique": 696
+    },
+    {
+      "category": "province",
+      "complete": true,
+      "dataset": "fmr",
+      "downloaded": 32,
+      "error": null,
+      "params": {
+        "q": "Pangasinan"
+      },
+      "reconciled_sums": {
+        "api_php": null,
+        "hgab2_php": 340000000,
+        "hgab3_php": 340000000,
+        "nep_php": 250000000
+      },
+      "response_ids": [
+        "02b5bd33cafe1969055e158f323f453b1702cba525256ffe6788d7c700e76138"
+      ],
+      "sums": {
+        "api_php": null,
+        "hgab2_php": 340000000,
+        "hgab3_php": 340000000,
+        "nep_php": 250000000,
+        "not_additive_across_versions": true,
+        "rows_with_amount": {
+          "api": 0,
+          "hgab2": 32,
+          "hgab3": 32,
+          "nep": 21
+        },
+        "unconfirmed_rows": 0
+      },
+      "total": 32,
+      "unique": 32
+    },
+    {
+      "category": "province",
+      "complete": true,
+      "dataset": "hfep",
+      "downloaded": 4,
+      "error": null,
+      "params": {
+        "q": "Pangasinan"
+      },
+      "reconciled_sums": {
+        "api_php": null,
+        "hgab2_php": 63000000,
+        "hgab3_php": 63000000,
+        "nep_php": 363000000
+      },
+      "response_ids": [
+        "59c8a1b5763c6ffd86932ecd68e44bcb4ac3c953cae29fece4276706ed3c5b14"
+      ],
+      "sums": {
+        "api_php": null,
+        "hgab2_php": 63000000,
+        "hgab3_php": 63000000,
+        "nep_php": 363000000,
+        "not_additive_across_versions": true,
+        "rows_with_amount": {
+          "api": 0,
+          "hgab2": 2,
+          "hgab3": 2,
+          "nep": 4
+        },
+        "unconfirmed_rows": 0
+      },
+      "total": 4,
+      "unique": 4
+    },
+    {
+      "category": "province",
+      "complete": true,
+      "dataset": "nia",
+      "downloaded": 0,
+      "error": null,
+      "params": {
+        "q": "Pangasinan"
+      },
+      "reconciled_sums": {
+        "api_php": null,
+        "hgab2_php": null,
+        "hgab3_php": null,
+        "nep_php": null
+      },
+      "response_ids": [
+        "b14659707047f96a12673d6bca58b6caf00848250bb9e0faafc79dd39f6256ea"
+      ],
+      "sums": {
+        "api_php": null,
+        "hgab2_php": null,
+        "hgab3_php": null,
+        "nep_php": null,
+        "not_additive_across_versions": true,
+        "rows_with_amount": {
+          "api": 0,
+          "hgab2": 0,
+          "hgab3": 0,
+          "nep": 0
+        },
+        "unconfirmed_rows": 0
+      },
+      "total": 0,
+      "unique": 0
+    },
+    {
+      "category": "regression",
+      "complete": true,
+      "dataset": "dpwh",
+      "downloaded": 2,
+      "error": null,
+      "params": {
+        "q": "Mapandan"
+      },
+      "reconciled_sums": {
+        "api_php": 49000000,
+        "hgab2_php": 49000000,
+        "hgab3_php": 49000000,
+        "nep_php": 49000000
+      },
+      "response_ids": [
+        "35385c099afc9a1130948b4bf87886dd64e800d7089288d9358087004c24b5c6"
+      ],
+      "sums": {
+        "api_php": 49000000,
+        "hgab2_php": 49000000,
+        "hgab3_php": 49000000,
+        "nep_php": 49000000,
+        "not_additive_across_versions": true,
+        "rows_with_amount": {
+          "api": 2,
+          "hgab2": 2,
+          "hgab3": 2,
+          "nep": 2
+        },
+        "unconfirmed_rows": 0
+      },
+      "total": 2,
+      "unique": 2
+    },
+    {
+      "category": "office",
+      "complete": true,
+      "dataset": "dpwh",
+      "downloaded": 204,
+      "error": null,
+      "params": {
+        "office": "Pangasinan 3rd District Engineering Office"
+      },
+      "reconciled_sums": {
+        "api_php": 921200000,
+        "hgab2_php": 1483700000,
+        "hgab3_php": 1483700000,
+        "nep_php": 921200000
+      },
+      "response_ids": [
+        "7c0e30477ab9f5cfad2500850a6bdd55b4fed5e77964becaeace5a6ba2fc25d1",
+        "9fa151c364e10873f751a5dfa6988a453ac90c8406cc48f1cf2b60da168448ce"
+      ],
+      "sums": {
+        "api_php": 921200000,
+        "hgab2_php": 1483700000,
+        "hgab3_php": 1483700000,
+        "nep_php": 921200000,
+        "not_additive_across_versions": true,
+        "rows_with_amount": {
+          "api": 102,
+          "hgab2": 203,
+          "hgab3": 203,
+          "nep": 102
+        },
+        "unconfirmed_rows": 7
+      },
+      "total": 204,
+      "unique": 204
+    },
+    {
+      "category": "office",
+      "complete": true,
+      "dataset": "dpwh",
+      "downloaded": 162,
+      "error": null,
+      "params": {
+        "office": "Pangasinan 2nd District Engineering Office"
+      },
+      "reconciled_sums": {
+        "api_php": 935200000,
+        "hgab2_php": 1381115000,
+        "hgab3_php": 1381115000,
+        "nep_php": 935200000
+      },
+      "response_ids": [
+        "cd8b8da1e54afd228af5f89b242c641d97cf0ffc3cbf20a09ccccfab7da729d4"
+      ],
+      "sums": {
+        "api_php": 935200000,
+        "hgab2_php": 1381115000,
+        "hgab3_php": 1381115000,
+        "nep_php": 935200000,
+        "not_additive_across_versions": true,
+        "rows_with_amount": {
+          "api": 111,
+          "hgab2": 154,
+          "hgab3": 154,
+          "nep": 111
+        },
+        "unconfirmed_rows": 4
+      },
+      "total": 162,
+      "unique": 162
+    },
+    {
+      "category": "office",
+      "complete": true,
+      "dataset": "dpwh",
+      "downloaded": 85,
+      "error": null,
+      "params": {
+        "office": "Pangasinan 4th District Engineering Office"
+      },
+      "reconciled_sums": {
+        "api_php": 625600000,
+        "hgab2_php": 997748000,
+        "hgab3_php": 997748000,
+        "nep_php": 625600000
+      },
+      "response_ids": [
+        "df0d452b4fa0c3f3700cd5df1ad4148b9aae885a40fcb8d6771bc079d9f43e6f"
+      ],
+      "sums": {
+        "api_php": 625600000,
+        "hgab2_php": 997748000,
+        "hgab3_php": 997748000,
+        "nep_php": 625600000,
+        "not_additive_across_versions": true,
+        "rows_with_amount": {
+          "api": 50,
+          "hgab2": 83,
+          "hgab3": 83,
+          "nep": 50
+        },
+        "unconfirmed_rows": 2
+      },
+      "total": 85,
+      "unique": 85
+    },
+    {
+      "category": "office",
+      "complete": true,
+      "dataset": "dpwh",
+      "downloaded": 91,
+      "error": null,
+      "params": {
+        "office": "Pangasinan 1st District Engineering Office"
+      },
+      "reconciled_sums": {
+        "api_php": 317200000,
+        "hgab2_php": 859200000,
+        "hgab3_php": 859200000,
+        "nep_php": 317200000
+      },
+      "response_ids": [
+        "0440f519c3e10d9c752c47fd3bce64c1b50386d2741992b5e4abe886e4a33fbc"
+      ],
+      "sums": {
+        "api_php": 317200000,
+        "hgab2_php": 859200000,
+        "hgab3_php": 859200000,
+        "nep_php": 317200000,
+        "not_additive_across_versions": true,
+        "rows_with_amount": {
+          "api": 35,
+          "hgab2": 90,
+          "hgab3": 90,
+          "nep": 35
+        },
+        "unconfirmed_rows": 1
+      },
+      "total": 91,
+      "unique": 91
+    }
+  ],
+  "requiring_geographic_review": 732,
+  "snapshot_id": "2027:a0caa778442cdae5583f5a006ea7401dab00e5ac:2026-10-26T08:46:14.383Z",
+  "stage_totals_by_scope": {
+    "geographic": {},
+    "office": {},
+    "shared": {
+      "hgab3": {
+        "comparable_delta_php": -14101000,
+        "comparable_rows": 94,
+        "house_php": 11352668000,
+        "house_php_known_rows": 125,
+        "house_php_missing_rows": 9,
+        "nep_php": 9012430000,
+        "nep_php_known_rows": 104,
+        "nep_php_missing_rows": 30,
+        "records": 134
+      }
+    },
+    "uncertain": {
+      "hgab2": {
+        "comparable_delta_php": -20000000,
+        "comparable_rows": 23,
+        "house_php": 403000000,
+        "house_php_known_rows": 34,
+        "house_php_missing_rows": 2,
+        "nep_php": 613000000,
+        "nep_php_known_rows": 25,
+        "nep_php_missing_rows": 11,
+        "records": 36
+      },
+      "hgab3": {
+        "comparable_delta_php": 10756000,
+        "comparable_rows": 293,
+        "house_php": 5053246000,
+        "house_php_known_rows": 550,
+        "house_php_missing_rows": 12,
+        "nep_php": 2936701000,
+        "nep_php_known_rows": 306,
+        "nep_php_missing_rows": 256,
+        "records": 562
+      }
+    }
+  },
+  "unique_records": 732
+}

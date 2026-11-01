@@ -1,0 +1,942 @@
+[
+  {
+    "district_ids": [
+      "leg:pangasinan:5th",
+      "leg:pangasinan:6th"
+    ],
+    "id": "office:pangasinan-3rd-deo",
+    "matched_label": "Pangasinan 3rd District Engineering Office",
+    "name": "Pangasinan 3rd DEO",
+    "review": {
+      "id": "office:pangasinan-3rd-deo",
+      "reviewed_at": "2026-11-01T08:29:54.965724Z",
+      "reviewer": "User publication approval of 2026-11-01T08:12:01Z, recorded by Kilo",
+      "sha256": "c298f3b7072659548078ed99da881717796264459d54245d2dad0220000ef79d"
+    },
+    "tier": "B",
+    "upstream": {
+      "aliases_used": [],
+      "by_congress": [
+        {
+          "congress": 18,
+          "gaa_php": 6968592000,
+          "years_counted": [
+            2020,
+            2021,
+            2022
+          ]
+        },
+        {
+          "congress": 19,
+          "gaa_php": 9733553000,
+          "years_counted": [
+            2023,
+            2024,
+            2025
+          ]
+        },
+        {
+          "congress": 20,
+          "gaa_php": 2013814000,
+          "years_counted": [
+            2026
+          ]
+        }
+      ],
+      "by_congress_note": "Enacted (GAA) totals per Congress term; the FY2027 NEP and House bill are never part of a subtotal.",
+      "co_served_districts": [
+        {
+          "id": "leg:pangasinan:6th",
+          "label": "Pangasinan, 6th District",
+          "url": "https://budget.bettergov.ph/hgab/2027/districts/leg%3Apangasinan%3A6th"
+        }
+      ],
+      "district_ids": [
+        "leg:pangasinan:5th",
+        "leg:pangasinan:6th"
+      ],
+      "fy2027": {
+        "annotations": {
+          "note": "The source's own uncertainty markers on this office's 2027 rows, kept apart rather than folded into the totals' reading. unconfirmed_rows / unconfirmed_php: unconfirmed (fuzzy or ambiguous) matches, counted under 'In the House bill only' and included in hgab3_php. scope_review_rows: a different stretch of the same road, not counted as a change. reading_markers: rows by their second-to-third-reading status. List them via projects_api. office_change and no_office, when present, list the lines held out of this office's figures altogether.",
+          "reading_markers": [],
+          "scope_review_rows": 0,
+          "unconfirmed_php": 55000000,
+          "unconfirmed_rows": 7
+        },
+        "bridge": {
+          "groups": {
+            "decreased": {
+              "group": "decreased",
+              "house_php": 0,
+              "label": "Lower in the House bill",
+              "nep_php": 0,
+              "php": 0,
+              "rows": 0,
+              "sub": "matched, amount reduced",
+              "unconfirmed_php": 0,
+              "unconfirmed_rows": 0
+            },
+            "house_only": {
+              "group": "house_only",
+              "house_php": 602500000,
+              "label": "In the House bill only",
+              "nep_php": null,
+              "php": 602500000,
+              "rows": 102,
+              "sub": "insertion candidates",
+              "unconfirmed_php": 55000000,
+              "unconfirmed_rows": 7
+            },
+            "increased": {
+              "group": "increased",
+              "house_php": 0,
+              "label": "Higher in the House bill",
+              "nep_php": 0,
+              "php": 0,
+              "rows": 0,
+              "sub": "matched, amount raised",
+              "unconfirmed_php": 0,
+              "unconfirmed_rows": 0
+            },
+            "nep_only": {
+              "group": "nep_only",
+              "house_php": null,
+              "label": "In the NEP only",
+              "nep_php": 40000000,
+              "php": 40000000,
+              "rows": 1,
+              "sub": "deletion candidates",
+              "unconfirmed_php": 0,
+              "unconfirmed_rows": 0
+            },
+            "scope_review": {
+              "group": "scope_review",
+              "house_php": 0,
+              "label": "Different stretch of the same road",
+              "nep_php": 0,
+              "php": 0,
+              "rows": 0,
+              "sub": "not counted as a change",
+              "unconfirmed_php": 0,
+              "unconfirmed_rows": 0
+            },
+            "unchanged": {
+              "group": "unchanged",
+              "house_php": 881200000,
+              "label": "Same amount in both",
+              "nep_php": 881200000,
+              "php": 881200000,
+              "rows": 101,
+              "sub": "matched, no change",
+              "unconfirmed_php": 0,
+              "unconfirmed_rows": 0
+            }
+          },
+          "house_stage": "hgab3",
+          "net_php": 562500000,
+          "note": "This office's 2027 project rows in the six groups, as the office ledger stores them; the groups add up to net_php."
+        },
+        "hgab2_php": 1483700000,
+        "hgab3_php": 1483700000,
+        "hgab3_records": 203,
+        "nep_php": 921200000,
+        "nep_records": 102,
+        "not_additive_across_versions": true,
+        "office_change": {
+          "hgab3_php": 0,
+          "lines": [],
+          "nep_php": 0,
+          "not_additive_across_versions": true,
+          "note": "Paired lines held out of this office's figures because the NEP and House bill sides name different office groups, or one side names no district office. None of these amounts is in any figure above or on any district card; they are in the FY2027 House bill residual (office_change_php). A line naming two offices is listed under both.",
+          "rows": 0
+        }
+      },
+      "id": "office:pangasinan-3rd-deo",
+      "kind": "district_engineering_office",
+      "kind_label": "District engineering office (DEO)",
+      "name": "Pangasinan 3rd DEO",
+      "notes": [],
+      "projects_api": "/api/v1/hgab/2027/datasets/dpwh/projects?office=Pangasinan%203rd%20District%20Engineering%20Office",
+      "projects_url": "https://budget.bettergov.ph/hgab/2027/dpwh?view=projects&deo=Pangasinan%203rd%20District%20Engineering%20Office",
+      "region": "Region I",
+      "tier": "B",
+      "tier_text": "Tier B \u00b7 shared with 1 other district, not split",
+      "years": [
+        {
+          "fy": 2020,
+          "matched_label": "Pangasinan 3rd District Engineering Office",
+          "php": 1805382000,
+          "scope": "the whole office",
+          "stage": "gaa",
+          "stage_label": "Enacted (GAA)"
+        },
+        {
+          "fy": 2021,
+          "matched_label": "Pangasinan 3rd District Engineering Office",
+          "php": 1995278000,
+          "scope": "the whole office",
+          "stage": "gaa",
+          "stage_label": "Enacted (GAA)"
+        },
+        {
+          "fy": 2022,
+          "matched_label": "Pangasinan 3rd District Engineering Office",
+          "php": 3167932000,
+          "scope": "the whole office",
+          "stage": "gaa",
+          "stage_label": "Enacted (GAA)"
+        },
+        {
+          "fy": 2023,
+          "matched_label": "Pangasinan 3rd District Engineering Office",
+          "php": 2546348000,
+          "scope": "the whole office",
+          "stage": "gaa",
+          "stage_label": "Enacted (GAA)"
+        },
+        {
+          "fy": 2024,
+          "matched_label": "Pangasinan 3rd District Engineering Office",
+          "php": 3253368000,
+          "scope": "the whole office",
+          "stage": "gaa",
+          "stage_label": "Enacted (GAA)"
+        },
+        {
+          "fy": 2025,
+          "matched_label": "Pangasinan 3rd District Engineering Office",
+          "php": 3933837000,
+          "scope": "the whole office",
+          "stage": "gaa",
+          "stage_label": "Enacted (GAA)"
+        },
+        {
+          "fy": 2026,
+          "matched_label": "Pangasinan 3rd District Engineering Office",
+          "php": 2013814000,
+          "scope": "the whole office",
+          "stage": "gaa",
+          "stage_label": "Enacted (GAA)"
+        },
+        {
+          "fy": 2027,
+          "matched_label": "Pangasinan 3rd District Engineering Office",
+          "php": 972320000,
+          "scope": "the whole office",
+          "stage": "nep",
+          "stage_label": "NEP"
+        },
+        {
+          "fy": 2027,
+          "matched_label": "Pangasinan 3rd District Engineering Office",
+          "php": 1483700000,
+          "scope": "named projects only",
+          "stage": "hgab3",
+          "stage_label": "House bill"
+        }
+      ],
+      "years_note": "FY2020\u20132026 enacted budgets and the FY2027 NEP cover the whole office; the FY2027 House bill covers named projects only. null = the office was not found in that year's data, never zero. Versions are compared, never added."
+    }
+  },
+  {
+    "district_ids": [
+      "leg:pangasinan:2nd",
+      "leg:pangasinan:4th"
+    ],
+    "id": "office:pangasinan-2nd-deo",
+    "matched_label": "Pangasinan 2nd District Engineering Office",
+    "name": "Pangasinan 2nd DEO",
+    "review": {
+      "id": "office:pangasinan-2nd-deo",
+      "reviewed_at": "2026-11-01T08:29:54.965724Z",
+      "reviewer": "User publication approval of 2026-11-01T08:12:01Z, recorded by Kilo",
+      "sha256": "ac8baf7c9d21a914b14cd4452847fa452df1e591c3a0cf9b9f830d702f46d0d8"
+    },
+    "tier": "B",
+    "upstream": {
+      "aliases_used": [],
+      "by_congress": [
+        {
+          "congress": 18,
+          "gaa_php": 4493202000,
+          "years_counted": [
+            2020,
+            2021,
+            2022
+          ]
+        },
+        {
+          "congress": 19,
+          "gaa_php": 4174225000,
+          "years_counted": [
+            2023,
+            2024,
+            2025
+          ]
+        },
+        {
+          "congress": 20,
+          "gaa_php": 945810000,
+          "years_counted": [
+            2026
+          ]
+        }
+      ],
+      "by_congress_note": "Enacted (GAA) totals per Congress term; the FY2027 NEP and House bill are never part of a subtotal.",
+      "co_served_districts": [
+        {
+          "id": "leg:pangasinan:4th",
+          "label": "Pangasinan, 4th District",
+          "url": "https://budget.bettergov.ph/hgab/2027/districts/leg%3Apangasinan%3A4th"
+        }
+      ],
+      "district_ids": [
+        "leg:pangasinan:2nd",
+        "leg:pangasinan:4th"
+      ],
+      "fy2027": {
+        "annotations": {
+          "note": "The source's own uncertainty markers on this office's 2027 rows, kept apart rather than folded into the totals' reading. unconfirmed_rows / unconfirmed_php: unconfirmed (fuzzy or ambiguous) matches, counted under 'In the House bill only' and included in hgab3_php. scope_review_rows: a different stretch of the same road, not counted as a change. reading_markers: rows by their second-to-third-reading status. List them via projects_api. office_change and no_office, when present, list the lines held out of this office's figures altogether.",
+          "reading_markers": [],
+          "scope_review_rows": 0,
+          "unconfirmed_php": 57000000,
+          "unconfirmed_rows": 4
+        },
+        "bridge": {
+          "groups": {
+            "decreased": {
+              "group": "decreased",
+              "house_php": 9000000,
+              "label": "Lower in the House bill",
+              "nep_php": 16500000,
+              "php": 7500000,
+              "rows": 3,
+              "sub": "matched, amount reduced",
+              "unconfirmed_php": 0,
+              "unconfirmed_rows": 0
+            },
+            "house_only": {
+              "group": "house_only",
+              "house_php": 557415000,
+              "label": "In the House bill only",
+              "nep_php": null,
+              "php": 557415000,
+              "rows": 51,
+              "sub": "insertion candidates",
+              "unconfirmed_php": 57000000,
+              "unconfirmed_rows": 4
+            },
+            "increased": {
+              "group": "increased",
+              "house_php": 10000000,
+              "label": "Higher in the House bill",
+              "nep_php": 5000000,
+              "php": 5000000,
+              "rows": 1,
+              "sub": "matched, amount raised",
+              "unconfirmed_php": 0,
+              "unconfirmed_rows": 0
+            },
+            "nep_only": {
+              "group": "nep_only",
+              "house_php": null,
+              "label": "In the NEP only",
+              "nep_php": 109000000,
+              "php": 109000000,
+              "rows": 8,
+              "sub": "deletion candidates",
+              "unconfirmed_php": 0,
+              "unconfirmed_rows": 0
+            },
+            "scope_review": {
+              "group": "scope_review",
+              "house_php": 0,
+              "label": "Different stretch of the same road",
+              "nep_php": 0,
+              "php": 0,
+              "rows": 0,
+              "sub": "not counted as a change",
+              "unconfirmed_php": 0,
+              "unconfirmed_rows": 0
+            },
+            "unchanged": {
+              "group": "unchanged",
+              "house_php": 804700000,
+              "label": "Same amount in both",
+              "nep_php": 804700000,
+              "php": 804700000,
+              "rows": 99,
+              "sub": "matched, no change",
+              "unconfirmed_php": 0,
+              "unconfirmed_rows": 0
+            }
+          },
+          "house_stage": "hgab3",
+          "net_php": 445915000,
+          "note": "This office's 2027 project rows in the six groups, as the office ledger stores them; the groups add up to net_php."
+        },
+        "hgab2_php": 1381115000,
+        "hgab3_php": 1381115000,
+        "hgab3_records": 154,
+        "nep_php": 935200000,
+        "nep_records": 111,
+        "not_additive_across_versions": true,
+        "office_change": {
+          "hgab3_php": 0,
+          "lines": [],
+          "nep_php": 0,
+          "not_additive_across_versions": true,
+          "note": "Paired lines held out of this office's figures because the NEP and House bill sides name different office groups, or one side names no district office. None of these amounts is in any figure above or on any district card; they are in the FY2027 House bill residual (office_change_php). A line naming two offices is listed under both.",
+          "rows": 0
+        }
+      },
+      "id": "office:pangasinan-2nd-deo",
+      "kind": "district_engineering_office",
+      "kind_label": "District engineering office (DEO)",
+      "name": "Pangasinan 2nd DEO",
+      "notes": [],
+      "projects_api": "/api/v1/hgab/2027/datasets/dpwh/projects?office=Pangasinan%202nd%20District%20Engineering%20Office",
+      "projects_url": "https://budget.bettergov.ph/hgab/2027/dpwh?view=projects&deo=Pangasinan%202nd%20District%20Engineering%20Office",
+      "region": "Region I",
+      "tier": "B",
+      "tier_text": "Tier B \u00b7 shared with 1 other district, not split",
+      "years": [
+        {
+          "fy": 2020,
+          "matched_label": "Pangasinan 2nd District Engineering Office",
+          "php": 1690154000,
+          "scope": "the whole office",
+          "stage": "gaa",
+          "stage_label": "Enacted (GAA)"
+        },
+        {
+          "fy": 2021,
+          "matched_label": "Pangasinan 2nd District Engineering Office",
+          "php": 1049516000,
+          "scope": "the whole office",
+          "stage": "gaa",
+          "stage_label": "Enacted (GAA)"
+        },
+        {
+          "fy": 2022,
+          "matched_label": "Pangasinan 2nd District Engineering Office",
+          "php": 1753532000,
+          "scope": "the whole office",
+          "stage": "gaa",
+          "stage_label": "Enacted (GAA)"
+        },
+        {
+          "fy": 2023,
+          "matched_label": "Pangasinan 2nd District Engineering Office",
+          "php": 1500738000,
+          "scope": "the whole office",
+          "stage": "gaa",
+          "stage_label": "Enacted (GAA)"
+        },
+        {
+          "fy": 2024,
+          "matched_label": "Pangasinan 2nd District Engineering Office",
+          "php": 1205084000,
+          "scope": "the whole office",
+          "stage": "gaa",
+          "stage_label": "Enacted (GAA)"
+        },
+        {
+          "fy": 2025,
+          "matched_label": "Pangasinan 2nd District Engineering Office",
+          "php": 1468403000,
+          "scope": "the whole office",
+          "stage": "gaa",
+          "stage_label": "Enacted (GAA)"
+        },
+        {
+          "fy": 2026,
+          "matched_label": "Pangasinan 2nd District Engineering Office",
+          "php": 945810000,
+          "scope": "the whole office",
+          "stage": "gaa",
+          "stage_label": "Enacted (GAA)"
+        },
+        {
+          "fy": 2027,
+          "matched_label": "Pangasinan 2nd District Engineering Office",
+          "php": 983871000,
+          "scope": "the whole office",
+          "stage": "nep",
+          "stage_label": "NEP"
+        },
+        {
+          "fy": 2027,
+          "matched_label": "Pangasinan 2nd District Engineering Office",
+          "php": 1381115000,
+          "scope": "named projects only",
+          "stage": "hgab3",
+          "stage_label": "House bill"
+        }
+      ],
+      "years_note": "FY2020\u20132026 enacted budgets and the FY2027 NEP cover the whole office; the FY2027 House bill covers named projects only. null = the office was not found in that year's data, never zero. Versions are compared, never added."
+    }
+  },
+  {
+    "district_ids": [
+      "leg:pangasinan:3rd"
+    ],
+    "id": "office:pangasinan-4th-deo",
+    "matched_label": "Pangasinan 4th District Engineering Office",
+    "name": "Pangasinan 4th DEO",
+    "review": {
+      "id": "office:pangasinan-4th-deo",
+      "reviewed_at": "2026-11-01T08:29:54.965724Z",
+      "reviewer": "User publication approval of 2026-11-01T08:12:01Z, recorded by Kilo",
+      "sha256": "b7f80e3b2e3e644c672d73bc21a93bcae4e6942b42f95f223c62743ef97ac2f6"
+    },
+    "tier": "A",
+    "upstream": {
+      "aliases_used": [],
+      "by_congress": [
+        {
+          "congress": 18,
+          "gaa_php": 3279403000,
+          "years_counted": [
+            2020,
+            2021,
+            2022
+          ]
+        },
+        {
+          "congress": 19,
+          "gaa_php": 6059507000,
+          "years_counted": [
+            2023,
+            2024,
+            2025
+          ]
+        },
+        {
+          "congress": 20,
+          "gaa_php": 866125000,
+          "years_counted": [
+            2026
+          ]
+        }
+      ],
+      "by_congress_note": "Enacted (GAA) totals per Congress term; the FY2027 NEP and House bill are never part of a subtotal.",
+      "co_served_districts": [],
+      "district_ids": [
+        "leg:pangasinan:3rd"
+      ],
+      "fy2027": {
+        "annotations": {
+          "note": "The source's own uncertainty markers on this office's 2027 rows, kept apart rather than folded into the totals' reading. unconfirmed_rows / unconfirmed_php: unconfirmed (fuzzy or ambiguous) matches, counted under 'In the House bill only' and included in hgab3_php. scope_review_rows: a different stretch of the same road, not counted as a change. reading_markers: rows by their second-to-third-reading status. List them via projects_api. office_change and no_office, when present, list the lines held out of this office's figures altogether.",
+          "reading_markers": [],
+          "scope_review_rows": 0,
+          "unconfirmed_php": 10000000,
+          "unconfirmed_rows": 2
+        },
+        "bridge": {
+          "groups": {
+            "decreased": {
+              "group": "decreased",
+              "house_php": 0,
+              "label": "Lower in the House bill",
+              "nep_php": 0,
+              "php": 0,
+              "rows": 0,
+              "sub": "matched, amount reduced",
+              "unconfirmed_php": 0,
+              "unconfirmed_rows": 0
+            },
+            "house_only": {
+              "group": "house_only",
+              "house_php": 387148000,
+              "label": "In the House bill only",
+              "nep_php": null,
+              "php": 387148000,
+              "rows": 35,
+              "sub": "insertion candidates",
+              "unconfirmed_php": 10000000,
+              "unconfirmed_rows": 2
+            },
+            "increased": {
+              "group": "increased",
+              "house_php": 10000000,
+              "label": "Higher in the House bill",
+              "nep_php": 5000000,
+              "php": 5000000,
+              "rows": 1,
+              "sub": "matched, amount raised",
+              "unconfirmed_php": 0,
+              "unconfirmed_rows": 0
+            },
+            "nep_only": {
+              "group": "nep_only",
+              "house_php": null,
+              "label": "In the NEP only",
+              "nep_php": 20000000,
+              "php": 20000000,
+              "rows": 2,
+              "sub": "deletion candidates",
+              "unconfirmed_php": 0,
+              "unconfirmed_rows": 0
+            },
+            "scope_review": {
+              "group": "scope_review",
+              "house_php": 0,
+              "label": "Different stretch of the same road",
+              "nep_php": 0,
+              "php": 0,
+              "rows": 0,
+              "sub": "not counted as a change",
+              "unconfirmed_php": 0,
+              "unconfirmed_rows": 0
+            },
+            "unchanged": {
+              "group": "unchanged",
+              "house_php": 600600000,
+              "label": "Same amount in both",
+              "nep_php": 600600000,
+              "php": 600600000,
+              "rows": 47,
+              "sub": "matched, no change",
+              "unconfirmed_php": 0,
+              "unconfirmed_rows": 0
+            }
+          },
+          "house_stage": "hgab3",
+          "net_php": 372148000,
+          "note": "This office's 2027 project rows in the six groups, as the office ledger stores them; the groups add up to net_php."
+        },
+        "hgab2_php": 997748000,
+        "hgab3_php": 997748000,
+        "hgab3_records": 83,
+        "nep_php": 625600000,
+        "nep_records": 50,
+        "not_additive_across_versions": true,
+        "office_change": {
+          "hgab3_php": 0,
+          "lines": [],
+          "nep_php": 0,
+          "not_additive_across_versions": true,
+          "note": "Paired lines held out of this office's figures because the NEP and House bill sides name different office groups, or one side names no district office. None of these amounts is in any figure above or on any district card; they are in the FY2027 House bill residual (office_change_php). A line naming two offices is listed under both.",
+          "rows": 0
+        }
+      },
+      "id": "office:pangasinan-4th-deo",
+      "kind": "district_engineering_office",
+      "kind_label": "District engineering office (DEO)",
+      "name": "Pangasinan 4th DEO",
+      "notes": [],
+      "projects_api": "/api/v1/hgab/2027/datasets/dpwh/projects?office=Pangasinan%204th%20District%20Engineering%20Office",
+      "projects_url": "https://budget.bettergov.ph/hgab/2027/dpwh?view=projects&deo=Pangasinan%204th%20District%20Engineering%20Office",
+      "region": "Region I",
+      "tier": "A",
+      "tier_text": "Tier A \u00b7 serves only this district",
+      "years": [
+        {
+          "fy": 2020,
+          "matched_label": "Pangasinan 4th District Engineering Office",
+          "php": 1140883000,
+          "scope": "the whole office",
+          "stage": "gaa",
+          "stage_label": "Enacted (GAA)"
+        },
+        {
+          "fy": 2021,
+          "matched_label": "Pangasinan 4th District Engineering Office",
+          "php": 1183210000,
+          "scope": "the whole office",
+          "stage": "gaa",
+          "stage_label": "Enacted (GAA)"
+        },
+        {
+          "fy": 2022,
+          "matched_label": "Pangasinan 4th District Engineering Office",
+          "php": 955310000,
+          "scope": "the whole office",
+          "stage": "gaa",
+          "stage_label": "Enacted (GAA)"
+        },
+        {
+          "fy": 2023,
+          "matched_label": "Pangasinan 4th District Engineering Office",
+          "php": 2034404000,
+          "scope": "the whole office",
+          "stage": "gaa",
+          "stage_label": "Enacted (GAA)"
+        },
+        {
+          "fy": 2024,
+          "matched_label": "Pangasinan 4th District Engineering Office",
+          "php": 1513448000,
+          "scope": "the whole office",
+          "stage": "gaa",
+          "stage_label": "Enacted (GAA)"
+        },
+        {
+          "fy": 2025,
+          "matched_label": "Pangasinan 4th District Engineering Office",
+          "php": 2511655000,
+          "scope": "the whole office",
+          "stage": "gaa",
+          "stage_label": "Enacted (GAA)"
+        },
+        {
+          "fy": 2026,
+          "matched_label": "Pangasinan 4th District Engineering Office",
+          "php": 866125000,
+          "scope": "the whole office",
+          "stage": "gaa",
+          "stage_label": "Enacted (GAA)"
+        },
+        {
+          "fy": 2027,
+          "matched_label": "Pangasinan 4th District Engineering Office",
+          "php": 663798000,
+          "scope": "the whole office",
+          "stage": "nep",
+          "stage_label": "NEP"
+        },
+        {
+          "fy": 2027,
+          "matched_label": "Pangasinan 4th District Engineering Office",
+          "php": 997748000,
+          "scope": "named projects only",
+          "stage": "hgab3",
+          "stage_label": "House bill"
+        }
+      ],
+      "years_note": "FY2020\u20132026 enacted budgets and the FY2027 NEP cover the whole office; the FY2027 House bill covers named projects only. null = the office was not found in that year's data, never zero. Versions are compared, never added."
+    }
+  },
+  {
+    "district_ids": [
+      "leg:pangasinan:1st"
+    ],
+    "id": "office:pangasinan-1st-deo",
+    "matched_label": "Pangasinan 1st District Engineering Office",
+    "name": "Pangasinan 1st DEO",
+    "review": {
+      "id": "office:pangasinan-1st-deo",
+      "reviewed_at": "2026-11-01T08:29:54.965724Z",
+      "reviewer": "User publication approval of 2026-11-01T08:12:01Z, recorded by Kilo",
+      "sha256": "cae68d8b49359a0dde6039b04f39c9527bc94d88dd7d484d890df456fe1d5a67"
+    },
+    "tier": "A",
+    "upstream": {
+      "aliases_used": [],
+      "by_congress": [
+        {
+          "congress": 18,
+          "gaa_php": 3596156000,
+          "years_counted": [
+            2020,
+            2021,
+            2022
+          ]
+        },
+        {
+          "congress": 19,
+          "gaa_php": 3606410000,
+          "years_counted": [
+            2023,
+            2024,
+            2025
+          ]
+        },
+        {
+          "congress": 20,
+          "gaa_php": 894133000,
+          "years_counted": [
+            2026
+          ]
+        }
+      ],
+      "by_congress_note": "Enacted (GAA) totals per Congress term; the FY2027 NEP and House bill are never part of a subtotal.",
+      "co_served_districts": [],
+      "district_ids": [
+        "leg:pangasinan:1st"
+      ],
+      "fy2027": {
+        "annotations": {
+          "note": "The source's own uncertainty markers on this office's 2027 rows, kept apart rather than folded into the totals' reading. unconfirmed_rows / unconfirmed_php: unconfirmed (fuzzy or ambiguous) matches, counted under 'In the House bill only' and included in hgab3_php. scope_review_rows: a different stretch of the same road, not counted as a change. reading_markers: rows by their second-to-third-reading status. List them via projects_api. office_change and no_office, when present, list the lines held out of this office's figures altogether.",
+          "reading_markers": [],
+          "scope_review_rows": 0,
+          "unconfirmed_php": 5000000,
+          "unconfirmed_rows": 1
+        },
+        "bridge": {
+          "groups": {
+            "decreased": {
+              "group": "decreased",
+              "house_php": 0,
+              "label": "Lower in the House bill",
+              "nep_php": 0,
+              "php": 0,
+              "rows": 0,
+              "sub": "matched, amount reduced",
+              "unconfirmed_php": 0,
+              "unconfirmed_rows": 0
+            },
+            "house_only": {
+              "group": "house_only",
+              "house_php": 547000000,
+              "label": "In the House bill only",
+              "nep_php": null,
+              "php": 547000000,
+              "rows": 56,
+              "sub": "insertion candidates",
+              "unconfirmed_php": 5000000,
+              "unconfirmed_rows": 1
+            },
+            "increased": {
+              "group": "increased",
+              "house_php": 0,
+              "label": "Higher in the House bill",
+              "nep_php": 0,
+              "php": 0,
+              "rows": 0,
+              "sub": "matched, amount raised",
+              "unconfirmed_php": 0,
+              "unconfirmed_rows": 0
+            },
+            "nep_only": {
+              "group": "nep_only",
+              "house_php": null,
+              "label": "In the NEP only",
+              "nep_php": 5000000,
+              "php": 5000000,
+              "rows": 1,
+              "sub": "deletion candidates",
+              "unconfirmed_php": 0,
+              "unconfirmed_rows": 0
+            },
+            "scope_review": {
+              "group": "scope_review",
+              "house_php": 0,
+              "label": "Different stretch of the same road",
+              "nep_php": 0,
+              "php": 0,
+              "rows": 0,
+              "sub": "not counted as a change",
+              "unconfirmed_php": 0,
+              "unconfirmed_rows": 0
+            },
+            "unchanged": {
+              "group": "unchanged",
+              "house_php": 312200000,
+              "label": "Same amount in both",
+              "nep_php": 312200000,
+              "php": 312200000,
+              "rows": 34,
+              "sub": "matched, no change",
+              "unconfirmed_php": 0,
+              "unconfirmed_rows": 0
+            }
+          },
+          "house_stage": "hgab3",
+          "net_php": 542000000,
+          "note": "This office's 2027 project rows in the six groups, as the office ledger stores them; the groups add up to net_php."
+        },
+        "hgab2_php": 859200000,
+        "hgab3_php": 859200000,
+        "hgab3_records": 90,
+        "nep_php": 317200000,
+        "nep_records": 35,
+        "not_additive_across_versions": true,
+        "office_change": {
+          "hgab3_php": 0,
+          "lines": [],
+          "nep_php": 0,
+          "not_additive_across_versions": true,
+          "note": "Paired lines held out of this office's figures because the NEP and House bill sides name different office groups, or one side names no district office. None of these amounts is in any figure above or on any district card; they are in the FY2027 House bill residual (office_change_php). A line naming two offices is listed under both.",
+          "rows": 0
+        }
+      },
+      "id": "office:pangasinan-1st-deo",
+      "kind": "district_engineering_office",
+      "kind_label": "District engineering office (DEO)",
+      "name": "Pangasinan 1st DEO",
+      "notes": [],
+      "projects_api": "/api/v1/hgab/2027/datasets/dpwh/projects?office=Pangasinan%201st%20District%20Engineering%20Office",
+      "projects_url": "https://budget.bettergov.ph/hgab/2027/dpwh?view=projects&deo=Pangasinan%201st%20District%20Engineering%20Office",
+      "region": "Region I",
+      "tier": "A",
+      "tier_text": "Tier A \u00b7 serves only this district",
+      "years": [
+        {
+          "fy": 2020,
+          "matched_label": "Pangasinan 1st District Engineering Office",
+          "php": 1005741000,
+          "scope": "the whole office",
+          "stage": "gaa",
+          "stage_label": "Enacted (GAA)"
+        },
+        {
+          "fy": 2021,
+          "matched_label": "Pangasinan 1st District Engineering Office",
+          "php": 1342157000,
+          "scope": "the whole office",
+          "stage": "gaa",
+          "stage_label": "Enacted (GAA)"
+        },
+        {
+          "fy": 2022,
+          "matched_label": "Pangasinan 1st District Engineering Office",
+          "php": 1248258000,
+          "scope": "the whole office",
+          "stage": "gaa",
+          "stage_label": "Enacted (GAA)"
+        },
+        {
+          "fy": 2023,
+          "matched_label": "Pangasinan 1st District Engineering Office",
+          "php": 1143241000,
+          "scope": "the whole office",
+          "stage": "gaa",
+          "stage_label": "Enacted (GAA)"
+        },
+        {
+          "fy": 2024,
+          "matched_label": "Pangasinan 1st District Engineering Office",
+          "php": 1244491000,
+          "scope": "the whole office",
+          "stage": "gaa",
+          "stage_label": "Enacted (GAA)"
+        },
+        {
+          "fy": 2025,
+          "matched_label": "Pangasinan 1st District Engineering Office",
+          "php": 1218678000,
+          "scope": "the whole office",
+          "stage": "gaa",
+          "stage_label": "Enacted (GAA)"
+        },
+        {
+          "fy": 2026,
+          "matched_label": "Pangasinan 1st District Engineering Office",
+          "php": 894133000,
+          "scope": "the whole office",
+          "stage": "gaa",
+          "stage_label": "Enacted (GAA)"
+        },
+        {
+          "fy": 2027,
+          "matched_label": "Pangasinan 1st District Engineering Office",
+          "php": 355715000,
+          "scope": "the whole office",
+          "stage": "nep",
+          "stage_label": "NEP"
+        },
+        {
+          "fy": 2027,
+          "matched_label": "Pangasinan 1st District Engineering Office",
+          "php": 859200000,
+          "scope": "named projects only",
+          "stage": "hgab3",
+          "stage_label": "House bill"
+        }
+      ],
+      "years_note": "FY2020\u20132026 enacted budgets and the FY2027 NEP cover the whole office; the FY2027 House bill covers named projects only. null = the office was not found in that year's data, never zero. Versions are compared, never added."
+    }
+  }
+]

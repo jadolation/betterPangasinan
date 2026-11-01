@@ -1,0 +1,12 @@
+{
+  "fiscal_year": 2027,
+  "api_base": "https://budget.bettergov.ph/api/v1/hgab/2027",
+  "allowed_api_hosts": ["budget.bettergov.ph"],
+  "datasets": ["dpwh", "fmr", "hfep", "nia"],
+  "province_query": "Pangasinan",
+  "regression_query": "Mapandan",
+  "page_size": 200,
+  "timeout_seconds": 25,
+  "attempts": 3,
+  "lgu_batch_limit": 5
+}
