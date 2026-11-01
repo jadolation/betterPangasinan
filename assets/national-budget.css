@@ -1,1 +1,122 @@
-.national-budget .wrap{max-width:1180px}.national-budget [hidden]{display:none!important}.nb-notice{border-left:4px solid var(--accent,#d4a441);margin-bottom:1.5rem}.national-budget h2{font-size:1.5rem}.national-budget p{max-width:85ch}.national-budget form{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;padding:1.25rem 0 2rem}.national-budget label{display:flex;flex-direction:column;gap:.4rem;font-weight:600;min-width:0}.national-budget input,.national-budget select{width:100%;min-width:0;min-height:44px;border:1px solid #63758b;border-radius:6px;padding:.6rem;background:#fff;color:#172b45;font:inherit}.national-budget :focus-visible{outline:3px solid #9a6610;outline-offset:3px}.nb-actions{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:.75rem}.nb-totals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-bottom:1.5rem}.nb-results{display:grid;gap:1rem;margin-bottom:2rem}.national-budget .card{min-width:0}.national-budget h3,.national-budget a,.national-budget dd{overflow-wrap:anywhere}.national-budget dl{display:grid;grid-template-columns:minmax(100px,1fr) 2fr;gap:.4rem 1rem}.national-budget dt{font-weight:600}.national-budget dd{margin:0}.national-budget summary{cursor:pointer;font-weight:700;min-height:44px;padding:.5rem 0}.national-budget pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:.85rem;max-height:24rem;overflow:auto}.nb-badge{font-size:.85rem;font-weight:700;color:#46566b}.nb-warning{border-left:3px solid #9a6610;padding-left:.75rem}.nb-empty{padding:1rem;background:#fff;border:1px solid #ced8e4}@media(max-width:800px){.national-budget form{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:480px){.national-budget form,.nb-totals{grid-template-columns:1fr}.national-budget dl{grid-template-columns:1fr;gap:.25rem}.national-budget dd{margin-bottom:.65rem}.nb-actions .btn{width:100%}}
+/* Dashboard presentation; shared brand tokens are defined in style.css. */
+html { scroll-behavior: auto; }
+.national-budget { padding: 28px 0 56px; }
+.nb-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.nb-header h1 { font-size: clamp(28px, 3.2vw, 42px); max-width: 23ch; margin: 10px 0; }
+.national-budget .nb-header h1 { font-size: clamp(28px, 2.5vw, 40px); max-width: none; }
+.nb-header p { margin-bottom: 0; }
+.nb-asof { max-width: 230px; color: var(--ink-soft); font-size: 13px; }
+#nb-status { font-size: 13px; color: var(--ink-soft); margin: 14px 0; }
+.nb-essential { font-size: 14px; margin-bottom: 24px; }
+.national-budget .tp-kpis { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.national-budget .tp-kpi > span { display: block; font-size: 13px; color: var(--ink-soft); }
+.national-budget .tp-kpi strong { font-size: clamp(28px, 3vw, 38px); line-height: 1.3; margin: 8px 0; font-variant-numeric: tabular-nums; }
+.national-budget .tp-kpi small { display: block; color: var(--ink-soft); font-size: 12px; line-height: 1.45; }
+.national-budget .tp-nav a { display: inline-flex; align-items: center; min-height: 44px; }
+[data-budget-view] { scroll-margin-top: 100px; }
+.nb-caption { color: var(--ink-soft); font-size: 13px; line-height: 1.6; }
+.nb-section-heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; margin-bottom: 16px; }
+.nb-section-heading h2 { font-size: 25px; margin-bottom: 5px; }
+.nb-section-heading p { margin: 0; font-size: 14px; color: var(--ink-soft); }
+.nb-section-heading a { font-size: 13px; }
+.nb-comparisons { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.nb-comparison-stage { border: 1px solid var(--line); background: var(--paper); padding: 16px; border-radius: var(--radius); }
+.nb-comparison-stage h3 { font-size: 16px; margin-bottom: 12px; }
+.nb-category-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+.nb-category { display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; min-height: 74px; border: 1px solid transparent; border-radius: 3px; background: var(--bg); color: var(--ink); padding: 10px; text-align: left; cursor: pointer; font: inherit; font-size: 12px; line-height: 1.35; }
+.nb-category strong { font-size: 24px; line-height: 1.2; color: var(--blue-deep); margin-top: 4px; font-variant-numeric: tabular-nums; }
+.nb-category:hover, .nb-category[aria-pressed="true"] { border-color: var(--blue-deep); background: #edf4fc; }
+.nb-primary-filters { display: grid; grid-template-columns: 2fr 1fr 1.3fr 1fr; gap: 12px; }
+#nb-filters label { display: flex; flex-direction: column; gap: 6px; font-size: 13px; min-width: 0; }
+#nb-filters input, #nb-filters select { width: 100%; min-width: 0; min-height: 44px; border: 1px solid var(--line); background: var(--paper); border-radius: var(--radius); padding: 10px; color: var(--ink); font: inherit; font-size: 14px; }
+.national-budget :is(a, button, input, select, summary):focus-visible { outline: 3px solid var(--gold-ink); outline-offset: 3px; }
+.nb-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 14px 0 10px; }
+.national-budget .btn { font-family: var(--font-display); min-height: 44px; font-size: 13px; padding: 10px 16px; }
+.nb-advanced { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; padding: 16px; margin: 14px 0; background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); }
+.national-budget [hidden] { display: none !important; }
+#nb-active-filters { margin: 12px 0 20px; overflow-wrap: anywhere; }
+.nb-result-heading { margin-top: 24px; margin-bottom: 6px; }
+.nb-result-heading h3 { font-size: 18px; margin: 0; }
+.nb-result-heading p { font-size: 13px; }
+.nb-financial-details { margin: 16px 0; padding: 12px 0; border-block: 1px solid var(--line); }
+.national-budget summary { cursor: pointer; font-family: var(--font-display); color: var(--blue-deep); min-height: 44px; padding: 10px 0; font-size: 14px; font-weight: 600; }
+.nb-totals { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.nb-totals section { background: var(--paper); border: 1px solid var(--line); padding: 16px; border-radius: var(--radius); }
+.nb-totals h3 { font-size: 16px; }
+.nb-totals p { font-size: 13px; margin: 5px 0; overflow-wrap: anywhere; }
+.nb-pagination { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin: 18px 0; font-size: 13px; }
+.nb-table-wrap { width: 100%; border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper); }
+.nb-table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 14px; line-height: 1.5; }
+.nb-table th { text-align: left; padding: 14px 10px; background: var(--bg); font-weight: 600; border-bottom: 1px solid var(--line); color: var(--ink-soft); }
+.nb-table th:first-child { width: 29%; }
+.nb-table th:nth-child(2) { width: 17%; }
+.nb-table th:nth-child(3) { width: 15%; }
+.nb-table td { padding: 14px 10px; vertical-align: top; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; }
+.nb-table tr:last-child td { border-bottom: 0; }
+.nb-table td small { display: block; margin-top: 5px; color: var(--ink-soft); font-size: 12px; }
+.nb-project-button { display: block; width: 100%; border: 0; padding: 0; background: transparent; text-align: left; font: inherit; color: var(--blue-deep); cursor: pointer; min-height: 44px; }
+.nb-record-name { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; font-size: 14px; line-height: 1.5; font-weight: 600; }
+.nb-detail-hint { display: block; font-size: 12px; margin-top: 6px; text-decoration: underline; text-underline-offset: 3px; }
+.nb-scope-label { display: inline-block; font-size: 12px; font-weight: 500; padding: 3px 6px; margin-top: 8px; background: var(--bg); color: var(--ink-soft); border-radius: 3px; }
+.nb-comparison-label { font-weight: 600; color: var(--blue-deep); }
+.nb-table td .nb-inline-warning { color: var(--gold-ink); }
+.nb-number { font-variant-numeric: tabular-nums; }
+.nb-mobile-label { display: none; }
+.nb-empty { padding: 24px; border: 1px solid var(--line); margin: 16px 0; background: var(--paper); }
+.nb-footer-link { padding: 20px 0; font-size: 14px; }
+.nb-office-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.nb-office-card { padding: 22px; }
+.nb-office-card h3 { margin-top: 12px; font-size: 20px; }
+.nb-office-card p { font-size: 14px; }
+.nb-office-card .nb-definition-list { display: block; }
+.nb-office-card .nb-definition-list dd { margin: 4px 0 16px; }
+.nb-office-projects { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; font-weight: 600; }
+.nb-warning { border-left: 3px solid var(--gold-ink); padding: 8px 12px; background: var(--gold-soft); color: var(--ink); font-size: 13px; }
+.nb-editorial { max-width: 82ch; }
+.nb-editorial h2 { font-size: 28px; }
+.nb-editorial p { font-family: var(--font-body); font-size: 15px; line-height: 1.75; }
+.nb-faq > details, .nb-disclosure { border-bottom: 1px solid var(--line); padding: 8px 0; }
+.nb-faq summary { font-size: 16px; }
+.nb-downloads { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-bottom: 16px; }
+.nb-downloads a { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; }
+.national-budget pre { max-width: 100%; max-height: 26rem; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; padding: 14px; background: var(--bg); border: 1px solid var(--line); font: 12px/1.6 ui-monospace, SFMono-Regular, Consolas, monospace; }
+.national-budget dialog { width: min(850px, calc(100% - 32px)); max-height: calc(100dvh - 32px); overflow: auto; padding: 24px; border: 1px solid var(--line); border-radius: 6px; color: var(--ink); background: var(--paper); font-family: var(--font-display); }
+.national-budget dialog::backdrop { background: rgb(19 32 44 / 65%); }
+.nb-dialog-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 20px; color: var(--ink-soft); font-size: 13px; position: sticky; top: -24px; z-index: 1; background: var(--paper); padding-block: 6px; }
+#nb-dialog-heading { font-size: clamp(22px, 3vw, 30px); overflow-wrap: anywhere; }
+.nb-detail-section { border-top: 1px solid var(--line); padding-top: 20px; margin-top: 20px; }
+.nb-detail-section h3 { font-size: 18px; }
+.nb-detail-section p { font-size: 14px; }
+.nb-detail-section small { display: block; margin-top: 5px; font-size: 12px; color: var(--ink-soft); overflow-wrap: anywhere; }
+.nb-definition-list { display: grid; grid-template-columns: minmax(130px, 1fr) minmax(0, 2fr); gap: 8px 20px; font-size: 14px; }
+.nb-definition-list dt { color: var(--ink-soft); }
+.nb-definition-list dd { margin: 0; overflow-wrap: anywhere; }
+@media (max-width: 900px) { .nb-primary-filters { grid-template-columns: repeat(3, minmax(0, 1fr)); } .nb-primary-filters > label:first-child { grid-column: 1 / -1; } }
+@media (max-width: 767px) {
+  .national-budget { padding-top: 20px; }
+  .nb-header { display: block; }
+  .nb-asof { max-width: none; margin-top: 12px !important; }
+  .national-budget .tp-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .nb-comparisons, .nb-office-grid { grid-template-columns: 1fr; }
+  .nb-advanced { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .nb-table, .nb-table tbody { display: block; }
+  .nb-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .nb-table tr { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 16px; border-bottom: 1px solid var(--line); gap: 12px; }
+  .nb-table td { display: block; padding: 0; border: 0; }
+  .nb-table td:first-child, .nb-table td:nth-child(2) { grid-column: 1 / -1; }
+  .nb-mobile-label { display: block; color: var(--ink-soft); font-size: 12px; margin-bottom: 4px; }
+  .nb-table td:first-child > .nb-mobile-label { display: none; }
+  .nb-table td small { margin-top: 2px; }
+  .nb-scope-label { margin-top: 5px; }
+}
+@media (max-width: 480px) {
+  .nb-primary-filters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .nb-primary-filters > label:nth-child(3) { grid-column: 1 / -1; grid-row: 2; }
+  .nb-advanced, .nb-totals { grid-template-columns: 1fr; }
+  .nb-toolbar .btn { flex: 1 1 auto; }
+  .nb-pagination .btn { padding-inline: 12px; }
+  .national-budget dialog { width: calc(100% - 20px); max-height: calc(100dvh - 20px); padding: 18px; }
+  .nb-dialog-toolbar { top: -18px; }
+  .nb-definition-list { grid-template-columns: 1fr; gap: 4px; }
+  .nb-definition-list dd { margin-bottom: 12px; }
+}

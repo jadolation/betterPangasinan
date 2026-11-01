@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var target = a.getAttribute("href");
     if (target === here || (here === "" && target === "index.html")) {
       a.setAttribute("aria-current", "page");
-    } else if ((here === "lgu.html" && target === "lgus.html") || (["finances.html", "procurement.html", "project.html", "map.html", "legislation.html", "services.html", "statistics.html"].includes(here) && target === "projects.html")) {
+    } else if ((here === "lgu.html" && target === "lgus.html") || (["national-budget.html", "projects.html", "finances.html", "procurement.html", "project.html", "map.html", "legislation.html", "services.html", "statistics.html"].includes(here) && target === "transparency.html")) {
       a.setAttribute("aria-current", "location");
     }
   });

@@ -1,37 +1,90 @@
 ---
-title: National Budget 2027 | Better Pangasinan
-description: Explore reviewed national budget proposal comparisons, scope and source evidence for Pangasinan.
+title: FY2027 National Budget Explorer | Better Pangasinan
+description: Browse published NEP and House proposal comparisons, office associations, and original budget evidence.
 ---
+<link rel="stylesheet" href="assets/transparency.css">
 <link rel="stylesheet" href="assets/national-budget.css">
-<section class="page-hero"><div class="wrap"><span class="eyebrow">2027 · Follow the proposal, check the evidence</span><h1>National Budget Projects in Pangasinan</h1><p class="lede">Budget proposals, not actual spending. These are not contracts, completed projects or enacted appropriations.</p></div></section>
-<section class="section national-budget"><div class="wrap" id="national-budget">
-  <aside class="card nb-notice" aria-label="Important limitations"><h2>Read the scope first</h2><p>These are proposed budget allocations, not money already spent. Search results may not include every project physically located in Pangasinan.</p><p>This is an unofficial civic presentation of source records, not an official budget publication. Inclusion does not establish an allegation or implementation status.</p><p>Geographic matches and office allocations are different views. Multi-LGU records overlap and must not be added across municipalities. Shared national allocations are not Pangasinan-attributable amounts.</p></aside>
-  <p id="nb-status" role="status" aria-live="polite">No approved national budget snapshot is available. No provincial or municipal totals are inferred.</p>
-  <div id="nb-meta"></div>
-  <noscript><div class="card"><h2>JavaScript is disabled</h2><p>No approved snapshot is assumed. Interactive filtering and CSV export require JavaScript. Check the <a href="data/national-budget/2027/manifest.json">publication manifest</a> for availability before interpreting any data.</p></div></noscript>
-  <div id="nb-content" hidden>
-    <aside id="nb-coverage-summary" class="card nb-notice" aria-label="Coverage limitations"></aside>
-    <form id="nb-filters" role="search" aria-label="Filter national budget records">
-      <label>Search records<input type="search" name="q" placeholder="Title or original identifier"></label>
-      <label>Scope lens<select name="scope"><option value="all">All scopes (not a geographic total)</option><option value="geographic">Reviewed geographic matches</option><option value="office">Office allocations</option><option value="shared">Shared allocations (not attributable)</option><option value="uncertain">Uncertain geography</option></select></label>
-      <label>LGU<select name="lgu"><option value="">All reviewed LGU associations</option></select></label>
-      <label>Program<select name="dataset"><option value="">All programs</option></select></label>
-      <label>Office<select name="office"><option value="">All offices</option></select></label>
-      <label>Source review status<select name="status"><option value="">All source review statuses</option></select></label>
-      <label>Comparison status<select name="comparison"><option value="">All comparison statuses</option></select></label>
-      <label>Geographic review status<select name="geographic"><option value="">All geographic review statuses</option></select></label>
-      <label>House stage<select name="stage"><option value="">All stages (separate totals)</option><option value="hgab2">House second reading (hgab2)</option><option value="hgab3">House third reading (hgab3)</option></select></label>
-      <label>Sort<select name="sort"><option value="title">Title A-Z</option><option value="amount">House amount, highest first</option><option value="id">Original identifier</option></select></label>
-      <div class="nb-actions"><button class="btn" type="reset">Reset filters</button><button class="btn btn-outline" id="nb-export" type="button">Download filtered CSV</button></div>
-    </form>
-    <section id="nb-offices" hidden aria-label="Approved office context"></section>
-    <h2>Selected comparison records</h2><p id="nb-count" role="status" aria-live="polite"></p>
-    <p class="nb-warning">Search matches can include similarly named places outside Pangasinan. Publication approval does not verify project location.</p>
-    <p>Unknown amounts are not zero. Each sum shows its known-amount count. Comparable change uses only records with both versions known, excluding held and scope-review comparisons; it is not the difference of incomplete version sums. Source-supplied changes remain visible on each card.</p>
-    <div id="nb-totals" class="nb-totals"></div>
-    <nav id="nb-pagination" class="nb-actions" aria-label="Comparison record pages" hidden><button class="btn btn-outline" id="nb-previous" type="button">Previous page</button><span id="nb-page-status" role="status" aria-live="polite"></span><button class="btn btn-outline" id="nb-next" type="button">Next page</button></nav>
-    <div id="nb-results" class="nb-results"></div>
-    <details class="card"><summary>Coverage and source metadata</summary><p>Publication approval does not imply exhaustive coverage or clear source warnings.</p><h3>Coverage</h3><pre id="nb-coverage"></pre><h3>Source overview and metadata</h3><pre id="nb-sources"></pre><div id="nb-source-links"></div><p><a href="data/national-budget/2027/projects.json">Published records JSON</a> · <a href="data/national-budget/2027/offices.json">Office metadata JSON</a> · <a href="data/national-budget/2027/manifest.json">Snapshot manifest</a> · <a href="data/national-budget/2027/coverage.json">Download coverage JSON</a> · <a href="data/national-budget/2027/sources.json">Download sources JSON</a></p></details>
-  </div>
-</div></section>
+<div class="transparency national-budget"><div class="wrap" id="national-budget">
+  <header class="tp-header nb-header">
+    <div><a class="tp-eyebrow" href="transparency.html">Transparency / FY2027</a><h1>FY2027 National Budget Explorer</h1><p>Published proposals, comparisons, and original sources. Not actual spending.</p></div>
+    <p id="nb-asof" class="nb-asof">Snapshot availability is being checked.</p>
+  </header>
+  <nav class="tp-nav" aria-label="National budget sections">
+    <a href="#projects" aria-current="page">2027 Projects</a><a href="#offices">Offices &amp; Districts</a><a href="#about-data">About the Data</a>
+  </nav>
+  <p id="nb-status" role="status" aria-live="polite">Loading publication manifest. No approved figures are assumed.</p>
+
+  <section id="projects" data-budget-view="projects" aria-label="2027 project comparisons">
+    <div id="nb-content" hidden>
+      <section aria-label="Published snapshot summary"><div id="nb-summary" class="tp-kpis"></div><p class="nb-caption">Counts describe published comparison records, not funded or completed construction projects.</p></section>
+      <p class="tp-note nb-essential">These are budget proposals, not actual spending. Some records have uncertain locations or cover multiple areas. <a href="#about-data">Understand the data</a>.</p>
+      <p id="nb-collection-warning" class="nb-warning" role="status" hidden></p>
+      <section class="tp-section" aria-labelledby="nb-comparison-heading">
+        <div class="nb-section-heading"><div><h2 id="nb-comparison-heading">Comparison overview</h2><p>Source comparison categories, not confirmed legislative actions. Select a category to explore it.</p></div><a href="#about-data">What do these categories mean?</a></div>
+        <div id="nb-comparisons" class="nb-comparisons"></div>
+      </section>
+      <section class="tp-section" aria-labelledby="nb-explorer-heading">
+        <div class="nb-section-heading"><h2 id="nb-explorer-heading">Search and browse projects</h2><a href="#offices">Explore offices and districts</a></div>
+        <form id="nb-filters" role="search" aria-label="Filter national budget records">
+          <div class="nb-primary-filters">
+            <label for="nb-search">Search records<input id="nb-search" type="search" name="q" placeholder="Project name, program or office"></label>
+            <label for="nb-program">Program<select id="nb-program" name="dataset"><option value="">All programs</option></select></label>
+            <label for="nb-comparison">Comparison status<select id="nb-comparison" name="comparison"><option value="">All comparisons</option><optgroup label="Comparison categories"><option value="group:house_only">House bill only</option><option value="group:nep_only">NEP only</option><option value="group:unchanged">Unchanged</option><option value="group:increased">Increased</option><option value="group:decreased">Decreased</option><option value="group:other">Other or uncertain</option></optgroup><optgroup id="nb-source-comparisons" label="Exact source classifications"></optgroup></select></label>
+            <label for="nb-sort">Sort order<select id="nb-sort" name="sort"><option value="title">Title A-Z</option><option value="amount">House amount, highest first</option><option value="id">Original identifier</option></select></label>
+          </div>
+          <div class="nb-toolbar"><button class="btn btn-outline" id="nb-advanced-toggle" type="button" aria-expanded="false" aria-controls="nb-advanced">Advanced filters</button><button class="btn btn-outline" type="reset">Reset filters</button><button class="btn" id="nb-export" type="button" disabled>Download filtered CSV</button></div>
+          <div id="nb-advanced" class="nb-advanced" hidden>
+            <label for="nb-scope">Scope lens<select id="nb-scope" name="scope"><option value="all">All scopes (not a geographic total)</option><option value="geographic">Reviewed geographic matches</option><option value="office">Office allocations</option><option value="shared">Shared allocations (not attributable)</option><option value="uncertain">Uncertain geography</option></select></label>
+            <label for="nb-lgu">LGU<select id="nb-lgu" name="lgu"><option value="">All reviewed LGU associations</option></select></label>
+            <label for="nb-office">Office<select id="nb-office" name="office"><option value="">All offices</option></select></label>
+            <label for="nb-source-status">Source review status<select id="nb-source-status" name="status"><option value="">All source review statuses</option></select></label>
+            <label for="nb-geographic">Geographic review status<select id="nb-geographic" name="geographic"><option value="">All geographic review statuses</option></select></label>
+            <label for="nb-stage">House stage<select id="nb-stage" name="stage"><option value="">All stages (separate totals)</option><option value="hgab2">House second reading (hgab2)</option><option value="hgab3">House third reading (hgab3)</option></select></label>
+          </div>
+          <p id="nb-active-filters" class="nb-caption" role="status" aria-live="polite">No active filters.</p>
+        </form>
+        <div class="nb-section-heading nb-result-heading"><h3>Selected comparison records</h3><p id="nb-count" role="status" aria-live="polite"></p></div>
+        <p class="nb-caption">Search matches can include similarly named places outside Pangasinan. Publication approval does not verify project location.</p>
+        <details class="nb-financial-details"><summary>Financial comparisons for the selected records</summary><p class="nb-caption">Unknown amounts are not zero. Each sum shows its known-amount count. Comparable change requires both versions and excludes held and scope-review comparisons. It is not the difference of incomplete version sums.</p><div id="nb-totals" class="nb-totals"></div></details>
+        <nav id="nb-pagination" class="nb-pagination" aria-label="Comparison record pages" hidden><button class="btn btn-outline" id="nb-previous" type="button">Previous page</button><span id="nb-page-status" role="status" aria-live="polite"></span><button class="btn btn-outline" id="nb-next" type="button">Next page</button></nav>
+        <div id="nb-empty" class="nb-empty" role="status" hidden></div>
+        <div id="nb-results" class="nb-table-wrap"><table class="nb-table" role="table"><caption class="sr-only">Budget proposal comparison records. Amounts in PHP; House reading is identified for each record.</caption><thead><tr><th scope="col">Project</th><th scope="col">Office / Program</th><th scope="col">Comparison</th><th scope="col">NEP</th><th scope="col">House</th><th scope="col">Change</th></tr></thead><tbody></tbody></table></div>
+      </section>
+      <p class="nb-footer-link"><a href="#about-data">Methodology, coverage and original downloadable data</a></p>
+    </div>
+    <noscript><div class="card"><h2>JavaScript is disabled</h2><p>Interactive search requires JavaScript. No approved snapshot or figures are assumed. Check the <a href="data/national-budget/2027/manifest.json">publication manifest</a> and <a href="data/national-budget/2027/projects.json">published records JSON</a>. <a href="#about-data">Read the methodology</a> without JavaScript.</p></div></noscript>
+  </section>
+
+  <section id="offices" class="tp-section" data-budget-view="offices" aria-labelledby="nb-office-heading">
+    <h2 id="nb-office-heading" tabindex="-1">Offices &amp; Districts</h2>
+    <p>Engineering offices can serve more than one legislative district. A mapping does not show that a representative requested, sponsored, controlled or received a project. Whole-office amounts are never divided between districts.</p>
+    <p class="tp-note">Do not subtract district headlines. Whole-office NEP and named-project House figures cover different scopes. Source-ledger aggregates below are not recomputed from filtered project records.</p>
+    <div id="nb-offices" class="nb-office-grid" hidden></div>
+    <p><a href="data/national-budget/2027/offices.json">Office metadata JSON</a> / <a href="#about-data">Office attribution methodology</a></p>
+  </section>
+
+  <section id="about-data" class="tp-section nb-editorial" data-budget-view="about-data" aria-labelledby="nb-about-heading">
+    <h2 id="nb-about-heading" tabindex="-1">About the Data</h2>
+    <p class="nb-intro">The explorer presents a dated, independently compiled comparison of national budget proposals. It is not an official budget publication or a record of spending.</p>
+    <div class="nb-faq">
+      <details><summary>What is the NEP?</summary><p>The National Expenditure Program is the executive branch's proposed national budget. It is a proposal, not enacted appropriations, an expenditure report or a construction contract.</p></details>
+      <details><summary>What is the House bill?</summary><p>The House proposal is another budget version. DPWH comparisons use the third reading; farm-to-market roads, health facilities and irrigation use the second reading. These readings remain separate. Never add NEP and House amounts together.</p></details>
+      <details><summary>What do House bill only and NEP only mean?</summary><p>These are upstream comparison candidates: a matching line was not found in the other version. They do not independently prove a legislative insertion or deletion, concealment or wrongdoing. Unchanged, increased and decreased categories also retain upstream pairing warnings.</p></details>
+      <details><summary>Why do changes differ from the difference between totals?</summary><p>Each version's sum includes its known amounts only. Missing values remain unknown, not zero. Comparable-row change uses records with both amounts and excludes held and different-scope comparisons. Every aggregate reports known-row counts, and House readings are never combined into one financial total.</p></details>
+      <details><summary>What is a shared allocation?</summary><p>Some lines fund several areas or belong to broader office scopes. Their entire amount cannot be assigned to Pangasinan or one municipality. Office, shared, uncertain and reviewed geographic lenses are different, potentially overlapping views, not amounts to add together.</p></details>
+      <details><summary>What does geographic verification establish?</summary><p>Only separately reviewed evidence can support an LGU association. Name searches may include places outside Pangasinan, such as New Pangasinan in South Cotabato. An office jurisdiction is not a verified project location. A reviewed status does not establish exhaustive coverage of a province or LGU.</p></details>
+      <details><summary>How were the records collected and approved?</summary><p>A Python pipeline paginated province-name and exact engineering-office searches in the BetterGov.ph Budget API, preserved source responses and project details, and deduplicated dataset/project identifiers. Publication decisions bind the snapshot and record hashes. Publication approval, source warnings and geographic review remain independent; this interface does not change those decisions.</p></details>
+      <details><summary>How should offices and districts be interpreted?</summary><p>Some offices serve several districts. Shared-office budgets remain undivided and must not be counted once for each district. Whole-office NEP and named-project comparisons are different scopes. Historical or undated amounts retained as office-mapping evidence are not FY2027 project allocations or a published historical-budget dataset.</p></details>
+      <details><summary>What does this dataset not prove?</summary><p>It does not establish actual spending, an enacted appropriation, a contractor, construction progress, completion, corruption or which elected official controlled a project. No match does not prove no funding. Historical GAA records and local-government finances are separate datasets; they are not added to these proposals.</p></details>
+      <details open><summary>Which sources were used, and when was the snapshot collected?</summary><p id="nb-snapshot-description">See the publication manifest for the source revision and retrieval date. No live API response is assumed.</p><p>Source links lead to the original NEP and House documents wherever provided. The <a href="https://budget.bettergov.ph/docs" rel="noopener noreferrer">BetterGov.ph API documentation</a> explains the upstream service. SHA-256 checks establish consistency with the publication manifest, not independent source authenticity.</p></details>
+    </div>
+    <details class="nb-disclosure" open><summary>Collection coverage and limitations</summary><div id="nb-coverage-summary"><p>Coverage will be shown only after publication files are validated.</p></div></details>
+    <details class="nb-disclosure"><summary>Original source notices and disclaimers</summary><div id="nb-meta"></div></details>
+    <section class="tp-section"><h3>Download the source-backed snapshot</h3><div class="nb-downloads"><a href="data/national-budget/2027/projects.json">Published records JSON</a><a href="data/national-budget/2027/offices.json">Office metadata JSON</a><a href="data/national-budget/2027/coverage.json">Download coverage JSON</a><a href="data/national-budget/2027/sources.json">Download sources JSON</a><a href="data/national-budget/2027/manifest.json">Snapshot manifest</a></div><p>CSV export on the Projects view includes every filtered record, not just the current page.</p></section>
+    <details class="nb-disclosure"><summary>Coverage and source metadata</summary><h3>Coverage</h3><pre id="nb-coverage" class="tp-mono"></pre><h3>Source overview</h3><pre id="nb-sources" class="tp-mono"></pre><div id="nb-source-links"></div></details>
+  </section>
+
+  <dialog id="nb-record-dialog" aria-labelledby="nb-dialog-heading"><div class="nb-dialog-toolbar"><span>Record details &amp; evidence</span><button class="btn btn-outline" id="nb-close-dialog" type="button">Close details</button></div><div id="nb-record-detail"></div></dialog>
+</div></div>
+<script src="assets/national-budget-view.js" defer></script>
 <script src="assets/national-budget.js" defer></script>

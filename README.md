@@ -101,6 +101,28 @@ loading, no-JavaScript content, unavailable data states, source links, and the
 deployment artifact. Automated checks alone do not establish accessibility
 conformance or source accuracy. No live deployment is implied by a local build.
 
+## Transparency Interface
+
+`transparency.html` is the public entry point for budget and local disclosure
+tools. Availability and counts come from actual published files; missing or
+invalid data is not shown as zero funding. Existing routes remain available,
+including `projects.html` and the Government directory at `lgus.html`.
+
+The budget route supports links to `national-budget.html#projects`, `#offices`
+and `#about-data`. Search, program, comparison and sort are visible by default;
+advanced filters retain selected values while closed. Filters are shareable in
+the query string. Results render 25 records at a time, with responsive mobile
+rows and a keyboard-operable evidence dialog. Totals and CSV include the entire
+filtered selection, not only the visible page. Financial summaries remain
+separated by House reading under their own disclosure.
+
+`assets/transparency.css` supplies scoped shared components. The existing
+budget entry script retains validation, checksums, calculations and CSV;
+`assets/national-budget-view.js` handles table rows, office cards and structured
+evidence. Technical fields and original disclaimers remain available through
+progressive disclosure. This presentation layer does not modify approval,
+geographic attribution or source data, and does not load live budget API results.
+
 ## National Budget Pipeline
 
 `national-budget.html` is a separate FY2027 proposal explorer. It does not insert

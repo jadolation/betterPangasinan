@@ -45,6 +45,9 @@ test('mobile navigation opens with keyboard, exposes links, and closes on Escape
   await toggle.focus();
   await page.keyboard.press('Enter');
   await expect(toggle).toHaveAttribute('aria-expanded', 'true');
+  await expect(page.locator('#primary-navigation a')).toHaveText(['Home', 'Transparency', 'Government', 'About', 'Get Involved']);
+  await expect(page.locator('#primary-navigation a').nth(1)).toHaveAttribute('href', 'transparency.html');
+  await expect(page.locator('#primary-navigation a').nth(2)).toHaveAttribute('href', 'lgus.html');
   await page.keyboard.press('Tab');
   await expect(page.locator('#primary-navigation a').first()).toBeFocused();
   await page.keyboard.press('Escape');
