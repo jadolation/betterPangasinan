@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/style.css" />
+<link rel="stylesheet" href="assets/transparency.css" />
 <meta name="data-mode" content="production">
 </head>
 <body>
@@ -39,6 +40,19 @@
   </div>
 </header>
 
+<nav class="section-nav" data-section-nav aria-label="Transparency sections">
+  <div class="wrap section-nav-links">
+<a href="transparency.html" data-section-item="overview">Overview</a>
+<a href="national-budget.html" data-section-item="projects" aria-current="page">2027 Projects</a>
+<a href="historical-budget.html" data-section-item="historical">Historical Budgets</a>
+<a href="national-budget.html#offices" data-section-item="offices">Offices &amp; Districts</a>
+<a href="budget-context.html" data-section-item="context">Context</a>
+<a href="budget-hearings.html" data-section-item="hearings">Hearings</a>
+<a href="finances.html" data-section-item="finances">Local Finances</a>
+<a href="methodology.html#national-budget-methodology" data-section-item="about">About</a>
+  </div>
+</nav>
+
 
 <main id="main-content" tabindex="-1">
 <link rel="stylesheet" href="assets/transparency.css">
@@ -48,9 +62,6 @@
     <div><a class="tp-eyebrow" href="transparency.html">Transparency / FY2027</a><h1>FY2027 National Budget Explorer</h1><p>Published proposals, comparisons, and original sources. Not actual spending.</p></div>
     <p id="nb-asof" class="nb-asof">Snapshot availability is being checked.</p>
   </header>
-  <nav class="tp-nav" aria-label="National budget sections">
-    <a href="#projects" aria-current="page">2027 Projects</a><a href="#offices">Offices &amp; Districts</a><a href="#about-data">About the Data</a>
-  </nav>
   <p id="nb-status" role="status" aria-live="polite">Loading publication manifest. No approved figures are assumed.</p>
 
   <section id="projects" data-budget-view="projects" aria-label="2027 project comparisons">
@@ -78,7 +89,7 @@
             <label for="nb-office">Office<select id="nb-office" name="office"><option value="">All offices</option></select></label>
             <label for="nb-source-status">Source review status<select id="nb-source-status" name="status"><option value="">All source review statuses</option></select></label>
             <label for="nb-geographic">Geographic review status<select id="nb-geographic" name="geographic"><option value="">All geographic review statuses</option></select></label>
-            <label for="nb-stage">House stage<select id="nb-stage" name="stage"><option value="">All stages (separate totals)</option><option value="hgab2">House second reading (hgab2)</option><option value="hgab3">House third reading (hgab3)</option></select></label>
+            <label for="nb-stage">House reading<select id="nb-stage" name="stage"><option value="">All readings (separate totals)</option><option value="hgab2">House bill: second reading</option><option value="hgab3">House bill: third reading</option></select></label>
           </div>
           <p id="nb-active-filters" class="nb-caption" role="status" aria-live="polite">No active filters.</p>
         </form>
@@ -181,5 +192,7 @@
 
 
 <script src="assets/script.js"></script>
+<script src="assets/section-nav.js"></script>
+<script src="assets/lgu-links.js" defer></script>
 </body>
 </html>

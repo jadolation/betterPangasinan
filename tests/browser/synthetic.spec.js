@@ -30,7 +30,7 @@ async function openData(page, url) {
 test('synthetic directory renders four profiles and filters query and classification', async ({ page }) => {
   await intercept(page);
   await openData(page, '/lgus.html');
-  await expect(page.locator('#lgu-result-count')).toHaveText('4 published profiles found');
+  await expect(page.locator('#lgu-result-count')).toHaveText('4 published profiles found. Showing 4.');
   await expect(page.locator('#lgu-results article')).toHaveCount(4);
   for (const record of fixtures().lgus) await expect(page.locator('#lgu-results')).toContainText(record.name);
   await page.locator('#lgu-query').fill('mapandan');
@@ -54,25 +54,29 @@ test('every synthetic LGU identifier renders its own profile and source', async 
     await openData(page, `/lgu.html?id=${record.id}`);
     await expect(page.locator('#profile-name')).toHaveText(record.name);
     await expect(page.locator('#profile-content')).toBeVisible();
-    await expect(page.locator('#profile-content')).toContainText('Not yet collected');
-    await expect(page.locator('#profile-content a[href="https://example.invalid/synthetic"]')).toBeVisible();
-    await expect(page.locator(`#profile-content a[href="finances.html?lgu=${record.id}"]`)).toBeVisible();
+    await expect(page.locator('#profile-content')).toContainText('not yet collected');
+    await page.locator('#profile-sources > details').first().locator('summary').first().click();
+    await expect(page.locator('#profile-sources a[href="https://example.invalid/synthetic"]')).toBeVisible();
+    await expect(page.locator('#profile-content a[href="#finances"]')).toBeVisible();
+    const local = fixtures().finances.filter(row => row.lgu_id === record.id);
+    if (local.length) for (const row of local) await expect(page.locator('#profile-finances')).toContainText(row.amount.toLocaleString('en-PH'));
+    else await expect(page.locator('#profile-finances')).toContainText('No local finance records are available');
   }
 });
 
 test('synthetic finance selects 2026 appropriation and totals exactly 300.75', async ({ page }) => {
   await intercept(page);
   await openData(page, '/finances.html');
-  await expect(page.locator('tbody tr')).toHaveCount(2);
+  await expect(page.locator('[data-module] tbody tr')).toHaveCount(2);
   await expect(page.locator('[data-module] [data-results]')).toContainText('No combined total');
-  await page.locator('select[name="year"]').selectOption('2026');
-  await page.locator('select[name="amount_type"]').selectOption('appropriation');
+  await page.locator('[data-module] select[name="year"]').selectOption('2026');
+  await page.locator('[data-module] select[name="amount_type"]').selectOption('appropriation');
   await expect(page.locator('[data-module] [data-results]')).toContainText('Total for this selection: 300.75 PHP (PHP).');
-  await expect(page.locator('tbody tr')).toHaveCount(2);
+  await expect(page.locator('[data-module] tbody tr')).toHaveCount(2);
   await expect(page.locator('meter')).toHaveCount(2);
   await openData(page, '/finances.html?lgu=mock-lgu-a');
-  await expect(page.locator('tbody tr')).toHaveCount(1);
-  await expect(page.locator('tbody')).toContainText('100.25');
+  await expect(page.locator('[data-module] tbody tr')).toHaveCount(1);
+  await expect(page.locator('[data-module] tbody')).toContainText('100.25');
 });
 
 test('project registry links to detail, procurement and contract records', async ({ page }) => {
@@ -125,7 +129,7 @@ test('malformed identifiers remain inert and show missing-record states', async 
 test('production mode rejects every private synthetic collection and profile', async ({ page }) => {
   await intercept(page, { mode: 'production' });
   await openData(page, '/lgus.html');
-  await expect(page.locator('#lgu-result-count')).toHaveText('0 published profiles found');
+  await expect(page.locator('#lgu-result-count')).toHaveText('0 published profiles found. Showing 0.');
   await expect(page.locator('#lgu-results article')).toHaveCount(0);
   await openData(page, '/lgu.html?id=mock-lgu-a');
   await expect(page.locator('#profile-content')).toBeHidden();

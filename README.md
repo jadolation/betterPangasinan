@@ -179,7 +179,16 @@ unchanged.
 `transparency.html` is the public entry point for budget and local disclosure
 tools. Availability and counts come from actual published files; missing or
 invalid data is not shown as zero funding. Existing routes remain available,
-including `projects.html` and the Government directory at `lgus.html`.
+including `projects.html`, the LGU Explorer at `lgus.html`, and the Government
+directory at `government.html`.
+
+Transparency pages use one canonical navigation list (`SECTION_NAV_ITEMS` in
+`build.py`) and `src/partials/transparency-nav.html`. Frontmatter explicitly sets
+`section_nav: transparency` and the active `section_item`; page titles do not
+determine section membership. `assets/section-nav.js` measures the actual header
+and navigation border boxes, handles anchor-aware current states and preserves
+same-page budget filters. Mobile navigation stays in a single scrollable row;
+without JavaScript it remains an ordinary set of links.
 
 The budget route supports links to `national-budget.html#projects`, `#offices`
 and `#about-data`. Search, program, comparison and sort are visible by default;
@@ -195,6 +204,50 @@ budget entry script retains validation, checksums, calculations and CSV;
 evidence. Technical fields and original disclaimers remain available through
 progressive disclosure. This presentation layer does not modify approval,
 geographic attribution or source data, and does not load live budget API results.
+
+## Maps And Unified LGU Profiles
+
+The homepage places its municipality explorer immediately after the provincial
+statistics. `assets/lgu-map.js` shares one data/projection promise and one
+implementation across `home`, `explorer` and `profile` modes. Blue polygons turn
+gold on hover, focus and selection. Preview and persistent selection are
+independent; no municipality is randomly selected. Every map retains source
+attribution and a text alternative.
+
+```js
+const map = window.createMunicipalityMap({
+  container,
+  mode: 'profile',
+  selectedPsgc: '0105518000',
+  onSelect(record) { /* Navigate only on an explicit selection. */ },
+  onPreview(recordOrNull) { /* A preview does not change profile identity. */ }
+});
+await map.ready;
+```
+
+`lgu.html?id=lgu-0105518000#statistics` is the canonical local destination.
+`assets/lgu-profile.js` resolves identity once and embeds statistics, barangays,
+finances, projects, applicable services and sources. Query IDs and section
+anchors remain bookmarkable. Missing optional data does not replace the LGU or
+its population with another locality's information.
+
+`scripts/lgu_profiles.py` generates small optional views at
+`data/lgu-profiles/<lgu-id>.json` during the static build. These ignored root
+mirrors and generated public files are not independently maintained datasets.
+Statistics use the same published observations as the province-wide views.
+Generic relationships require explicit LGU IDs/codes; provincial reference
+records use exact unique LGU labels. A hospital name alone is insufficient to
+establish its location. National title matches appear only as discovery leads,
+without becoming local finance records or assigning an office's funding to a
+municipality. The complete national/historical datasets remain in their
+specialist explorers rather than being copied into every profile.
+
+The LGU directory initially renders 12 cards, with full-registry search and
+Show More. Province-wide pages remain available for comparisons; existing
+`?lgu=` bookmarks provide a prominent link to the corresponding profile section.
+Plain-language summaries come first, original records and technical identifiers
+remain in source disclosures, and ledger amounts are never combined with
+reported local-budget observations or national proposals.
 
 ## National Budget Pipeline
 

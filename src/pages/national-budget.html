@@ -1,5 +1,7 @@
 ---
 title: FY2027 National Budget Explorer | Better Pangasinan
+section_nav: transparency
+section_item: projects
 description: Browse published NEP and House proposal comparisons, office associations, and original budget evidence.
 ---
 <link rel="stylesheet" href="assets/transparency.css">
@@ -9,9 +11,6 @@ description: Browse published NEP and House proposal comparisons, office associa
     <div><a class="tp-eyebrow" href="transparency.html">Transparency / FY2027</a><h1>FY2027 National Budget Explorer</h1><p>Published proposals, comparisons, and original sources. Not actual spending.</p></div>
     <p id="nb-asof" class="nb-asof">Snapshot availability is being checked.</p>
   </header>
-  <nav class="tp-nav" aria-label="National budget sections">
-    <a href="#projects" aria-current="page">2027 Projects</a><a href="#offices">Offices &amp; Districts</a><a href="#about-data">About the Data</a>
-  </nav>
   <p id="nb-status" role="status" aria-live="polite">Loading publication manifest. No approved figures are assumed.</p>
 
   <section id="projects" data-budget-view="projects" aria-label="2027 project comparisons">
@@ -39,7 +38,7 @@ description: Browse published NEP and House proposal comparisons, office associa
             <label for="nb-office">Office<select id="nb-office" name="office"><option value="">All offices</option></select></label>
             <label for="nb-source-status">Source review status<select id="nb-source-status" name="status"><option value="">All source review statuses</option></select></label>
             <label for="nb-geographic">Geographic review status<select id="nb-geographic" name="geographic"><option value="">All geographic review statuses</option></select></label>
-            <label for="nb-stage">House stage<select id="nb-stage" name="stage"><option value="">All stages (separate totals)</option><option value="hgab2">House second reading (hgab2)</option><option value="hgab3">House third reading (hgab3)</option></select></label>
+            <label for="nb-stage">House reading<select id="nb-stage" name="stage"><option value="">All readings (separate totals)</option><option value="hgab2">House bill: second reading</option><option value="hgab3">House bill: third reading</option></select></label>
           </div>
           <p id="nb-active-filters" class="nb-caption" role="status" aria-live="polite">No active filters.</p>
         </form>

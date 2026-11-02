@@ -1,6 +1,24 @@
 ---
-title: Local Government Profile | Better Pangasinan
-description: Explore local government records, services, sources, and data availability.
+title: Your LGU | Better Pangasinan
+description: Find a municipality's population, barangays, local records and public services in one place.
 ---
-<section class="page-hero"><div class="wrap"><a class="back-link" href="lgus.html">&larr; All local governments</a><h1 id="profile-name">Local government profile</h1><p class="lede" id="profile-intro">Source-driven information about your community.</p></div></section>
-<section class="section"><div class="wrap"><div id="profile-status" class="empty-state"><h2>Profile not available</h2><p>Select a published profile from the LGU Explorer. Unknown identifiers are not substituted with another community's information.</p><a class="btn btn-outline" href="lgus.html">Explore LGUs &rarr;</a></div><div id="profile-content" hidden></div></div></section>
+<link rel="stylesheet" href="assets/lgu-profile.css">
+<link rel="stylesheet" href="assets/lgu-map.css">
+<div class="lgu-profile wrap">
+  <header class="lgu-profile-header"><div><a href="lgus.html" class="back-link">Back to LGU Explorer</a><h1 id="profile-name">Your local government</h1><p id="profile-intro">Population, local records and useful public information in one place.</p></div><label for="profile-selector">Change city or municipality<select id="profile-selector" disabled><option value="">Choose an LGU</option></select></label></header>
+  <div id="profile-status" role="status"><p>Loading the selected community.</p><a href="lgus.html">Choose a city or municipality</a></div>
+  <div id="profile-content" hidden>
+    <div id="profile-kpis" class="lgu-kpis" aria-label="Local information at a glance"></div>
+    <nav class="lgu-section-nav" data-local-section-nav aria-label="LGU profile sections"><a href="#overview" aria-current="location">Overview</a><a href="#statistics">Statistics</a><a href="#barangays">Barangays</a><a href="#finances">Finances</a><a href="#projects">Projects</a><a href="#government">Government &amp; Services</a><a href="#sources">Sources</a></nav>
+    <section id="overview" class="lgu-section"><h2>Overview</h2><div class="lgu-overview-grid"><div id="profile-overview"></div><div id="profile-map" class="lgu-focused-map"></div></div><p id="profile-optional-status" class="lgu-caption" role="status">Loading related records.</p></section>
+    <section id="statistics" class="lgu-section"><div class="lgu-section-heading"><h2>Statistics</h2><a href="statistics.html">Compare across LGUs</a></div><p class="lgu-caption">Figures keep their original year and unit. Missing data is not zero.</p><div id="profile-statistics"></div></section>
+    <section id="barangays" class="lgu-section profile-barangays"><h2>Barangays</h2><p id="profile-barangay-status" role="status">Loading the linked registry.</p><label for="profile-barangay-search">Search barangays<input id="profile-barangay-search" type="search" placeholder="Barangay name"></label><ul id="profile-barangay-list" class="lgu-barangays"></ul><button id="profile-more-barangays" class="btn btn-outline" type="button" hidden>Show more barangays</button><p class="lgu-caption">Reference-use mirror; not a confirmed current official release. <a href="#sources">View source dates</a>.</p></section>
+    <section id="finances" class="lgu-section"><div class="lgu-section-heading"><h2>Finances</h2><a href="finances.html">Compare local finance collections</a></div><div id="profile-finances"></div></section>
+    <section id="projects" class="lgu-section"><h2>Projects &amp; Infrastructure</h2><div id="profile-projects"></div></section>
+    <section id="government" class="lgu-section"><h2>Government &amp; Services</h2><div id="profile-government"></div></section>
+    <section id="sources" class="lgu-section"><h2>Sources</h2><p class="lgu-caption">Dates describe the source collection, not necessarily current conditions.</p><div id="profile-sources"></div></section>
+  </div>
+  <noscript><p>Select a profile from the <a href="lgus.html">LGU directory</a>. Interactive profiles need JavaScript; the <a href="data/lgus.json">published LGU registry</a> remains available to read.</p></noscript>
+</div>
+<script src="assets/lgu-map.js" defer></script>
+<script src="assets/lgu-profile.js" defer></script>

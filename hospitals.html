@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/style.css" />
+<link rel="stylesheet" href="assets/transparency.css" />
 <meta name="data-mode" content="production">
 </head>
 <body>
@@ -40,12 +41,14 @@
 </header>
 
 
+
 <main id="main-content" tabindex="-1">
 <link rel="stylesheet" href="assets/provincial-reference.css">
-<section class="page-hero"><div class="wrap"><span class="eyebrow">Public contacts with provenance</span><h1>Hospitals and emergency</h1><p class="lede">Directory-listed hospital heads and contacts, alongside the official DRRMO service descriptions.</p></div></section>
+<section class="page-hero"><div class="wrap"><span class="eyebrow">Public contacts with provenance</span><h1>Hospitals and emergency</h1><p class="lede">Find hospital contacts, directory-listed heads and provincial emergency service information. Each listing links to its original source so you can check the published details before calling or visiting.</p></div></section>
 <section class="section provincial-reference" data-reference="hospitals"><div class="wrap">
 <nav class="pr-nav" aria-label="Provincial reference"><a href="government.html">Government</a><a href="statistics.html">Statistics</a><a href="history.html">History and culture</a></nav>
-<aside class="pr-note">Hospital heads are Directory-listed, not verified current officeholders. The source does not establish an as-of date. Contact numbers are transcribed from actual official HTML, not test-called; collection does not guarantee availability. No unlisted phone numbers, hospital capabilities or operating hours are inferred.</aside>
+<aside class="pr-note">Directory-listed heads are not verified current officeholders, and published contact numbers have not been test-called.</aside>
+<details class="pr-details"><summary>Directory scope and source limitations</summary><p>The source does not establish an as-of date. Contact numbers are transcribed from actual official HTML; collection does not guarantee availability. No unlisted phone numbers, hospital capabilities or operating hours are inferred. Head listings and contact listings are separate source observations, not inferred matches.</p></details>
 <div data-emergency></div>
 <p><a href="https://www.pangasinan.gov.ph/directory/">Official contact directory</a> · <a href="https://www.pangasinan.gov.ph/department/provincial-disaster-risk-reduction-and-management-office/services/">Official DRRMO services</a></p>
 <form role="search"><label>Search hospitals or services<input type="search" name="q" placeholder="Hospital, listed head, rescue or service"></label><label>Collection<select name="collection"><option value="">All collections</option></select></label><button class="btn" type="submit">Search</button><button class="btn btn-outline" type="reset">Clear</button></form>
@@ -106,5 +109,7 @@
 
 
 <script src="assets/script.js"></script>
+<script src="assets/section-nav.js"></script>
+<script src="assets/lgu-links.js" defer></script>
 </body>
 </html>

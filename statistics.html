@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/style.css" />
+<link rel="stylesheet" href="assets/transparency.css" />
 <meta name="data-mode" content="production">
 </head>
 <body>
@@ -40,12 +41,14 @@
 </header>
 
 
+
 <main id="main-content" tabindex="-1">
 <link rel="stylesheet" href="assets/provincial-reference.css">
-<section class="page-hero"><div class="wrap"><span class="eyebrow">Read the period, not just the number</span><h1>Statistics</h1><p class="lede">Population, economy, agriculture and fisheries with original units, reporting periods and sources.</p></div></section>
+<section class="page-hero"><div class="wrap"><span class="eyebrow">Read the period, not just the number</span><h1>Statistics</h1><p class="lede">Compare provincial population, economy, agriculture and fisheries observations with their original units and reporting periods. Explore the census trend or compare all 48 LGUs, with source notes available for every value.</p></div></section>
 <section class="section provincial-reference" data-reference="statistics"><div class="wrap">
 <nav class="pr-nav" aria-label="Provincial reference"><a href="government.html">Government</a><a href="hospitals.html">Hospitals and emergency</a><a href="history.html">History and culture</a></nav>
-<aside class="pr-note">Supplied research collected 2026-10-31, reviewed for publication by the user. Publication review is not independent verification of every underlying source. Census dates and original notes are retained. GDP is not government revenue; missing values are not zero.</aside>
+<aside class="pr-note">Read each observation's period and unit: GDP is not government revenue, and missing values are not zero.</aside>
+<details class="pr-details"><summary>Research dates and publication review</summary><p>Supplied research was collected 2026-10-31 and reviewed for publication by the user, not independently verified against every underlying source. Census dates and original notes are retained. Collection dates are not census dates or a current-year estimate.</p></details>
 <div data-trend></div>
 <div data-lgu-scope role="status"></div>
 <form role="search"><label>Search statistics<input type="search" name="q" placeholder="Indicator, unit, period or source"></label><label>Collection<select name="collection"><option value="">All collections</option></select></label><button class="btn" type="submit">Search</button><button class="btn btn-outline" type="reset">Clear</button></form>
@@ -106,5 +109,7 @@
 
 
 <script src="assets/script.js"></script>
+<script src="assets/section-nav.js"></script>
+<script src="assets/lgu-links.js" defer></script>
 </body>
 </html>

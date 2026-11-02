@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/style.css" />
+<link rel="stylesheet" href="assets/transparency.css" />
 <meta name="data-mode" content="production">
 </head>
 <body>
@@ -39,6 +40,19 @@
   </div>
 </header>
 
+<nav class="section-nav" data-section-nav aria-label="Transparency sections">
+  <div class="wrap section-nav-links">
+<a href="transparency.html" data-section-item="overview">Overview</a>
+<a href="national-budget.html" data-section-item="projects">2027 Projects</a>
+<a href="historical-budget.html" data-section-item="historical">Historical Budgets</a>
+<a href="national-budget.html#offices" data-section-item="offices">Offices &amp; Districts</a>
+<a href="budget-context.html" data-section-item="context">Context</a>
+<a href="budget-hearings.html" data-section-item="hearings">Hearings</a>
+<a href="finances.html" data-section-item="finances">Local Finances</a>
+<a href="methodology.html#national-budget-methodology" data-section-item="about" aria-current="page">About</a>
+  </div>
+</nav>
+
 
 <main id="main-content" tabindex="-1">
 <section class="page-hero">
@@ -58,7 +72,7 @@
       <p>Not collected means the portal has not yet gathered a reviewed record. Source unavailable means a needed source could not be accessed. Neither means zero, no activity, or LGU noncompliance. Place names used for navigation do not verify population, classification, boundaries, or identifiers.</p>
       <h2>Comparing money and projects</h2>
       <p>Appropriations, actual expenditure, approved budgets, and contract values describe different things. Compare only compatible reporting years, units, and amount types. Unknown amounts remain unknown, not zero. Project geography alone does not identify its funding or implementing office.</p>
-      <h2>National budget proposals</h2>
+      <h2 id="national-budget-methodology">National budget proposals</h2>
       <p>The <a href="national-budget.html">national budget explorer</a> uses separately reviewed snapshots of the independent, unofficial <a href="https://budget.bettergov.ph/docs" rel="noopener noreferrer">BetterGov.ph Budget API</a>. FY2027 NEP and House figures are two versions of a proposed budget, never money to add together and never proof of spending, a contract award, or completed work. DPWH uses the House third reading; farm-to-market roads, health facilities and irrigation use the second reading. Amounts missing from a version remain unknown.</p>
       <p>Name-search matches are collection leads, not verified physical locations. Central and regional office lines may cover several provinces. Engineering-office totals remain separate from reviewed geographic matches; shared offices are counted once, never once per district served. Municipal views may overlap. Whole-office NEP figures are not directly comparable to House named-project figures. Coverage and comparable-row changes are labeled separately.</p>
       <p>Source comparison warnings and geographic review are independent of publication approval. Candidate pairings, insertions and deletions do not establish wrongdoing. Every public snapshot must retain the upstream notices, original source-document links and its retrieval date. A failed refresh does not replace an approved snapshot; no approved data means unavailable, not zero funding. <a href="historical-budget.html">Historical enacted GAA program families</a> are published separately by fiscal year, are not proof of spending, and are not mixed with proposals.</p>
@@ -125,5 +139,7 @@
 
 
 <script src="assets/script.js"></script>
+<script src="assets/section-nav.js"></script>
+<script src="assets/lgu-links.js" defer></script>
 </body>
 </html>

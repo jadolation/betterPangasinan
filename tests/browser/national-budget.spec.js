@@ -53,7 +53,8 @@ async function details(page, title = 'Synthetic comparison one') {
   return page.locator('#nb-record-dialog');
 }
 async function view(page, hash) {
-  await page.locator(`.tp-nav a[href="#${hash}"]`).click();
+  if (hash === 'about-data') await page.locator('a[href="#about-data"]:visible').first().click();
+  else await page.locator(`[data-section-nav] [data-section-item="${hash}"]`).click();
   await expect(page.locator(`#${hash}`)).toBeVisible();
 }
 
@@ -171,12 +172,12 @@ test('synthetic filters, source evidence, no matches and safe filtered CSV', asy
   await page.locator('select[name="office"]').selectOption('Synthetic office');
   await expect(page.locator('#nb-empty')).toContainText('No filter matches');
   await page.getByRole('button', { name: 'Reset filters' }).click();
-  await page.getByLabel('House stage').selectOption('hgab3');
+  await page.getByLabel('House reading').selectOption('hgab3');
   await page.getByLabel('Source review status').selectOption('reviewed_with_warnings');
   await page.locator('select[name="sort"]').selectOption('amount');
   const dialog = await details(page);
   await expect(dialog.getByRole('link', { name: 'Original NEP PDF', exact: true })).toHaveAttribute('href', 'https://example.invalid/synthetic.pdf');
-  await expect(dialog).toContainText('nep_evidence_review');
+   await expect(dialog).toContainText('nep evidence review');
   await page.getByRole('button', { name: 'Close details' }).click();
   await page.getByLabel('Scope lens').selectOption('uncertain');
   await page.getByLabel('Search records').fill('HYPERLINK');
@@ -237,9 +238,9 @@ test('opened record evidence shows warnings, comparison, original PDFs and reada
   await page.getByLabel('Scope lens').selectOption('geographic');
   const card = await details(page);
   await expect(card.getByRole('link', { name: 'Original NEP PDF', exact: true })).toBeVisible();
-  await expect(card.getByRole('link', { name: 'Original House PDF (hgab3)', exact: true })).toBeVisible();
+  await expect(card.getByRole('link', { name: 'Original House PDF (third reading)', exact: true })).toBeVisible();
   await expect(card.getByText(/NEP evidence needs review:/)).toBeVisible();
-  await expect(card).toContainText('unchanged / Unchanged candidate');
+  await expect(card).toContainText('Unchanged / Unchanged candidate');
   await expect(card.locator('dt').filter({ hasText: 'Source-supplied change' }).locator('+ dd')).toHaveText('PHP 0');
   await page.getByRole('button', { name: 'Close details' }).click();
   await view(page, 'about-data');
@@ -388,15 +389,15 @@ test('incomplete collection warning remains beside project controls and figures'
 test('Back restores query filters results and CSV after filters change between views', async ({ page }) => {
   await mock(page); await open(page);
   await page.locator('select[name="dataset"]').selectOption('dpwh');
-  await page.getByRole('navigation', { name: 'National budget sections' }).getByRole('link', { name: 'Offices & Districts' }).click();
-  await page.getByRole('navigation', { name: 'National budget sections' }).getByRole('link', { name: '2027 Projects' }).click();
+  await page.getByRole('navigation', { name: 'Transparency sections' }).getByRole('link', { name: 'Offices & Districts' }).click();
+  await page.getByRole('navigation', { name: 'Transparency sections' }).getByRole('link', { name: '2027 Projects' }).click();
   await page.locator('select[name="dataset"]').selectOption('fmr');
   await expect(page.locator('#nb-results tbody tr[data-record-id]')).toHaveCount(1);
   await page.goBack();
   await page.goBack();
   await expect(page.locator('select[name="dataset"]')).toHaveValue('dpwh');
   await expect(page.locator('#nb-results tbody tr[data-record-id]')).toHaveCount(5);
-  await expect(page.locator('#nb-active-filters')).toContainText('Program: dpwh');
+  await expect(page.locator('#nb-active-filters')).toContainText('Program: DPWH infrastructure');
   const downloading = page.waitForEvent('download');
   await page.getByRole('button', { name: 'Download filtered CSV' }).click();
   const csv = await readFile(await (await downloading).path(), 'utf8');
@@ -493,7 +494,7 @@ test('four primary controls and hidden advanced selections persist through reloa
   await expect(page.locator('#nb-advanced-toggle')).toHaveAttribute('aria-expanded', 'false');
   await advanced(page);
   await page.getByLabel('Scope lens').selectOption('geographic');
-  await page.getByLabel('House stage').selectOption('hgab3');
+  await page.getByLabel('House reading').selectOption('hgab3');
   await page.getByRole('combobox', { name: 'Office', exact: true }).selectOption('Synthetic office');
   await page.getByLabel('Search records').fill('two');
   await page.locator('#nb-advanced-toggle').click();
@@ -508,11 +509,31 @@ test('four primary controls and hidden advanced selections persist through reloa
   await expect(page.locator('#nb-advanced')).toBeHidden();
   await advanced(page);
   await expect(page.getByLabel('Scope lens')).toHaveValue('geographic');
-  await expect(page.getByLabel('House stage')).toHaveValue('hgab3');
+  await expect(page.getByLabel('House reading')).toHaveValue('hgab3');
   await expect(page.getByRole('combobox', { name: 'Office', exact: true })).toHaveValue('Synthetic office');
   await page.getByRole('button', { name: 'Reset filters' }).click();
   await expect(rows(page)).toHaveCount(6);
   await expect(page).not.toHaveURL(/\?/);
+});
+
+test('plain-language review and comparison labels preserve exact upstream filter values', async ({ page }) => {
+  const data = synthetic();
+  data.projects[0].geographic_review_status = 'pending';
+  await mock(page, data); await open(page); await advanced(page);
+  await expect(page.locator('select[name="status"] option[value="reviewed_with_warnings"]')).toHaveText('Published with source warnings');
+  await expect(page.locator('select[name="geographic"] option[value="pending"]')).toHaveText('Location not yet verified');
+  await expect(page.locator('select[name="dataset"] option[value="dpwh"]')).toHaveText('DPWH infrastructure');
+  await expect(page.locator('select[name="comparison"] option[value="unchanged / Unchanged candidate"]')).toHaveText('Unchanged / Unchanged candidate');
+  await page.locator('select[name="geographic"]').selectOption('pending');
+  await page.locator('select[name="status"]').selectOption('reviewed_with_warnings');
+  await expect(rows(page)).toHaveCount(1);
+  const dialog = await details(page);
+  await expect(dialog).toContainText('Published with source warnings');
+  await expect(dialog).toContainText('Location not yet verified');
+  await expect(dialog.locator('pre')).toHaveCount(0);
+  await dialog.getByText('Advanced technical metadata', { exact: true }).click();
+  await expect(dialog.locator('pre')).toContainText('"source_review_status": "reviewed_with_warnings"');
+  await expect(dialog.locator('pre')).toContainText('"geographic_review_status": "pending"');
 });
 
 test('hash views support Back and Forward without refetching five publication assets', async ({ page }) => {
@@ -524,7 +545,7 @@ test('hash views support Back and Forward without refetching five publication as
   await page.getByLabel('Search records').fill('two');
   await view(page, 'offices');
   await expect(page.locator('#projects')).toBeHidden();
-  await expect(page.locator('.tp-nav a[href="#offices"]')).toHaveAttribute('aria-current', 'page');
+  await expect(page.locator('[data-section-nav] [data-section-item="offices"]')).toHaveAttribute('aria-current', 'location');
   await view(page, 'about-data');
   await expect(page.locator('#offices')).toBeHidden();
   await expect(page.locator('#nb-coverage-summary')).toBeVisible();
@@ -536,7 +557,7 @@ test('hash views support Back and Forward without refetching five publication as
   await expect(page.getByLabel('Search records')).toHaveValue('two');
   await page.goForward();
   await expect(page.locator('#offices')).toBeVisible();
-  await expect(page.locator('.tp-nav [aria-current="page"]')).toHaveCount(1);
+  await expect(page.locator('[data-section-nav] [aria-current="location"]')).toHaveCount(1);
   expect(requests.sort()).toEqual(['coverage.json', 'manifest.json', 'offices.json', 'projects.json', 'sources.json']);
 });
 

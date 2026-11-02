@@ -38,8 +38,14 @@
     function render() {
       const filtered = rows.filter(r => (!year.value || String(r.hearing.fiscal_year) === year.value) && JSON.stringify(r).toLowerCase().includes(search.value.toLowerCase())); results.replaceChildren(); count.textContent = `${filtered.length} matching topics`;
       for (const row of filtered) {
-        const h = row.hearing, t = row.topic, article = node('article'); article.append(node('h2', t.topic), node('p', `FY${h.fiscal_year} hearing / ${h.hearing_date} / ${h.agency || 'Agency unspecified'} / Source topic status: ${t.status}`), node('p', t.summary), node('p', `Reported outcome, not funding approval: ${t.outcome}`), link(t.url || h.page_url, `${h.title} / topic video`));
-        for (const m of row.matching_moments || []) { const p = node('p', `${m.speaker || 'Speaker uncertain'}: ${m.said} `); p.append(link(m.url, `Verify at ${m.timestamp}`)); article.append(p); }
+        const h = row.hearing, t = row.topic, article = node('article');
+        const meta = node('p', `FY${h.fiscal_year} / ${h.hearing_date} / ${h.agency || 'Agency unspecified'}`); meta.className = 'hb-hearing-meta';
+        const sentences = t.summary.split(/(?<!Rep\.)(?<!Sen\.)(?<!Dr\.)(?<=[.!?])\s+(?=[A-Z])/);
+        article.append(node('h2', t.topic), meta, node('p', sentences.slice(0, 3).join(' ')), link(t.url || h.page_url, 'Open hearing topic and video'));
+        const moments = node('details'); moments.append(node('summary', `Transcript moments and reported outcome (${(row.matching_moments || []).length})`));
+        moments.append(node('p', t.summary), node('p', `Reported outcome, not funding approval: ${t.outcome}`), node('p', `Source topic status: ${t.status}`));
+        for (const m of row.matching_moments || []) { const p = node('p', `${m.speaker || 'Speaker uncertain'}: ${m.said} `); p.append(link(m.url, `Verify at ${m.timestamp}`)); moments.append(p); }
+        const raw = node('details'); raw.append(node('summary', 'Original topic record (JSON)'), node('pre', JSON.stringify(row, null, 2))); article.append(moments, raw);
         results.append(article);
       }
     }

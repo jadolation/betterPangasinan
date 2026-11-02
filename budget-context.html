@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/style.css" />
+<link rel="stylesheet" href="assets/transparency.css" />
 <meta name="data-mode" content="production">
 </head>
 <body>
@@ -39,13 +40,26 @@
   </div>
 </header>
 
+<nav class="section-nav" data-section-nav aria-label="Transparency sections">
+  <div class="wrap section-nav-links">
+<a href="transparency.html" data-section-item="overview">Overview</a>
+<a href="national-budget.html" data-section-item="projects">2027 Projects</a>
+<a href="historical-budget.html" data-section-item="historical">Historical Budgets</a>
+<a href="national-budget.html#offices" data-section-item="offices">Offices &amp; Districts</a>
+<a href="budget-context.html" data-section-item="context" aria-current="page">Context</a>
+<a href="budget-hearings.html" data-section-item="hearings">Hearings</a>
+<a href="finances.html" data-section-item="finances">Local Finances</a>
+<a href="methodology.html#national-budget-methodology" data-section-item="about">About</a>
+  </div>
+</nav>
+
 
 <main id="main-content" tabindex="-1">
 <link rel="stylesheet" href="assets/historical-budget.css">
 <section class="hb" id="budget-context" data-context="context">
   <header><p class="hb-kicker">Budget evidence / Context</p><h1>Proposals, appropriations, execution</h1><p>Different fiscal years, stages and scopes. Never one combined budget total.</p></header>
-  <nav aria-label="Budget evidence"><a href="national-budget.html">FY2027 project comparisons</a><a href="historical-budget.html">Historical GAA</a><a href="budget-context.html" aria-current="page">Budget context</a><a href="budget-hearings.html">Hearings</a></nav>
-  <p class="hb-note">FY2027 NEP is an executive proposal, not enacted appropriations or actual spending. National, department-wide and Region I amounts are <strong>not Pangasinan allocations</strong>. FY2026 baselines and FY2027 proposals are compared, never added.</p>
+  <p class="hb-note">NEP proposals are not spending. National and regional figures are <strong>not Pangasinan allocations</strong>.</p>
+  <details><summary>Budget stages and scope</summary><p>FY2027 NEP is an executive proposal, not enacted appropriations or actual spending. National, department-wide and Region I amounts are <strong>not Pangasinan allocations</strong>. FY2026 baselines and FY2027 proposals are compared, never added.</p></details>
   <p id="bc-status" role="status">Loading reviewed local context. Missing data is not zero.</p>
   <div id="bc-content"></div>
   <noscript><a href="data/budget-context.json">Download context JSON with source dates and API errors</a></noscript>
@@ -105,5 +119,7 @@
 
 
 <script src="assets/script.js"></script>
+<script src="assets/section-nav.js"></script>
+<script src="assets/lgu-links.js" defer></script>
 </body>
 </html>

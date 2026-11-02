@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/style.css" />
+<link rel="stylesheet" href="assets/transparency.css" />
 <meta name="data-mode" content="production">
 </head>
 <body>
@@ -40,6 +41,7 @@
 </header>
 
 
+
 <main id="main-content" tabindex="-1">
 <section class="page-hero"><div class="wrap"><span class="eyebrow">Your community, closer</span><h1>Explore My LGU</h1><p class="lede">Find your local government. Follow its information, records, and public resources in one place.</p></div></section>
 <section class="section"><div class="wrap">
@@ -47,7 +49,8 @@
 <form class="search-panel" id="lgu-search" role="search" action="lgus.html"><div class="filter-grid"><div><label for="lgu-query">City or municipality</label><input type="search" id="lgu-query" name="q" placeholder="Search by place name"></div><div><label for="lgu-type">Government classification</label><select id="lgu-type" name="type"><option value="">All classifications</option><option value="city">City</option><option value="municipality">Municipality</option></select></div></div><div class="hero-actions"><button class="btn btn-primary" type="submit">Search LGUs</button><a class="btn btn-outline" href="lgus.html">Clear filters</a></div></form>
 <p id="lgu-result-count" role="status">Loading the published LGU registry.</p>
 <div id="lgu-results" class="grid grid-3"></div>
-<div id="lgu-empty" class="empty-state"><span class="section-eyebrow">Good information starts with a source</span><h2>Local profiles are being prepared.</h2><p>No reviewed LGU profiles have been published yet. In the meantime, consult the official provincial directory for city and municipal information.</p><a class="btn btn-outline" href="https://www.pangasinan.gov.ph/city-municipalities/" target="_blank" rel="noopener noreferrer">Official provincial directory &nearr;</a></div>
+<button class="btn btn-outline" id="lgu-show-more" type="button" hidden>Show more LGUs</button>
+<div id="lgu-empty" class="empty-state" hidden><h2>No matching profiles</h2><p>Try another name or clear your filters. You can also check the official directory.</p><a class="btn btn-outline" href="https://www.pangasinan.gov.ph/city-municipalities/" target="_blank" rel="noopener noreferrer">Official provincial directory &nearr;</a></div>
 <noscript><p>Interactive filtering needs JavaScript. Read the <a href="data/lgus.json">published LGU registry</a> or use the official provincial directory linked above.</p></noscript>
 </div></section>
 </main>
@@ -104,5 +107,7 @@
 
 
 <script src="assets/script.js"></script>
+<script src="assets/section-nav.js"></script>
+<script src="assets/lgu-links.js" defer></script>
 </body>
 </html>

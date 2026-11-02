@@ -19,7 +19,15 @@ description: Explore local government information, public spending, and projects
   </div>
 </section>
 
-<section class="section section-alt" id="province-summary"><div class="wrap"><div class="section-head"><div class="section-eyebrow">Pangasinan, by the source</div><h2>One province. Every community.</h2></div><p data-province-status role="status">Loading the published provincial reference summary.</p><div class="province-kpis" data-province-kpis></div><p class="source-line" data-province-sources></p><div class="hero-actions"><a class="btn btn-primary" href="lgus.html">Explore the LGU registry</a><a class="btn btn-outline" href="municipality-map.html">Open the municipality map</a><a class="btn btn-outline" href="transparency.html">Explore transparency data</a></div><noscript><p>Read the <a href="data/province-profile.json">provincial reference dataset</a> and <a href="data/lgus.json">LGU registry</a>.</p></noscript></div></section>
+<section class="section section-alt" id="province-summary"><div class="wrap"><div class="section-head"><div class="section-eyebrow">Pangasinan, by the source</div><h2>One province. Every community.</h2></div><p data-province-status role="status">Loading the provincial overview.</p><div class="province-kpis" data-province-kpis></div><details class="province-source-details"><summary>Sources and reference dates</summary><p class="source-line" data-province-sources></p><a href="data/province-profile.json">Download the provincial reference data</a></details><div class="hero-actions"><a class="btn btn-primary" href="lgus.html">Explore LGU profiles</a><a class="btn btn-outline" href="municipality-map.html">Open the full map</a><a class="btn btn-outline" href="transparency.html">Follow the budget</a></div><noscript><p>Read the <a href="data/province-profile.json">provincial reference dataset</a> and <a href="data/lgus.json">LGU registry</a>.</p></noscript></div></section>
+
+<section class="section home-municipality-map" id="community-map"><div class="wrap">
+  <div class="section-head"><div class="section-eyebrow">Explore Pangasinan</div><h2>Find your city or municipality.</h2><p>Select a community to see its population, barangays and local information.</p></div>
+  <link rel="stylesheet" href="assets/lgu-map.css">
+  <div data-lgu-map data-map-mode="home"></div>
+  <noscript><p><a href="lgus.html">Browse all city and municipality profiles</a> or <a href="data/geography/municipalities.geojson">download the published boundaries and population attributes</a>.</p></noscript>
+  <script src="assets/lgu-map.js" defer></script>
+</div></section>
 
 <section class="section">
   <div class="wrap">

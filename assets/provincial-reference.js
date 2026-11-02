@@ -1,7 +1,7 @@
 /* Dedicated source-preserving reference explorer. No generic record publication rules. */
 (() => {
   'use strict';
-  document.querySelectorAll('[data-reference]').forEach(root => {
+  document.querySelectorAll('[data-reference]').forEach((root, rootIndex) => {
   const results = root.querySelector('[data-results]');
   const status = root.querySelector('[data-status]');
   const form = root.querySelector('form');
@@ -15,7 +15,6 @@
     if (!/^https:\/\//.test(url)) return;
     const a = node('a', label, parent); a.href = url;
   };
-  const label = key => key.replaceAll('_', ' ');
   const showValue = value => value === null ? 'Not established by source' : typeof value === 'object' ? JSON.stringify(value) : String(value);
   const contactLinks = (raw, parent) => {
     node('span', raw, parent);
@@ -26,6 +25,15 @@
       const a = node('a', `Call ${number}`, parent); a.href = `tel:${number}`;
     });
   };
+  const sourceDetails = (row, parent) => {
+    const details = node('details', undefined, parent);
+    details.className = 'pr-details';
+    node('summary', 'Source, dates and original record', details);
+    node('p', `Source collected: ${row.collected_at || row.collected_date || 'Unknown'}. Source as-of date: ${row.as_of_date || 'Not established by source'}.`, details);
+    if (row.notes) node('p', row.notes, details);
+    node('pre', JSON.stringify(row, null, 2), details);
+  };
+  const evidenceLink = (row, parent) => link(row.source_url || row.url || '', 'Original source', parent);
   fetch(new URL('data/provincial-reference.json', document.baseURI))
     .then(response => { if (!response.ok) throw new Error('Unavailable'); return response.json(); })
     .then(data => {
@@ -80,6 +88,21 @@
       }
       const select = form.elements.collection;
       sections.forEach(([title])=>{ const o=node('option',title,select); o.value=title; });
+      const collectionLabel = select.closest('label');
+      if (sections.length === 1 && collectionLabel) collectionLabel.hidden = true;
+      const budgetFilters = sections.some(([title]) => title === 'Budget observations') ? node('div', undefined, form) : null;
+      if (budgetFilters) {
+        budgetFilters.className = 'pr-budget-filters';
+        [['year', 'Budget year', [...new Set(data.budget_observations.map(r => String(r.year)))].sort()], ['type', 'Budget type', [...new Set(data.budget_observations.map(r => r.budget_type))].sort()]].forEach(([name, title, values]) => {
+          const wrapper = node('div', undefined, budgetFilters); wrapper.className = 'pr-budget-filter';
+          const label = node('label', title, wrapper);
+          const field = node('select', undefined, wrapper); field.name = name;
+          field.id = `pr-budget-${rootIndex}-${name}`; label.htmlFor = field.id;
+          const all = node('option', `All ${name === 'year' ? 'years' : 'types'}`, field); all.value = '';
+          values.forEach(value => { const option = node('option', value, field); option.value = value; });
+          field.addEventListener('change', () => { currentPage = 1; render(); });
+        });
+      }
       const aliases = {budgets:'Budget observations', legislation:'Legislation discovery index', projects:'Planning project leads, not awards', sources:'Source inventory', gaps:'Collection gaps', offices:'Directory-listed offices'};
       let currentPage = 1;
       let selectedLGU = '';
@@ -92,11 +115,13 @@
         selectedLGU=mode==='statistics' ? params.get('lgu') || '' : '';
         const value=params.get('collection') || (selectedLGU ? lguCollection : '') || aliases[location.hash.slice(1)] || '';
         select.value=sections.some(([title])=>title===value) ? value : aliases[value] || '';
+        if (budgetFilters) ['year','type'].forEach(key => { form.elements[key].value = params.get(key) || ''; });
         currentPage=Math.max(1,Number.parseInt(params.get('page'),10) || 1);
       };
       const writeURL = () => {
         const url=new URL(location.href);
         [['q',form.elements.q.value.trim()],['collection',select.value],['page',currentPage>1 ? String(currentPage) : '']].forEach(([key,value])=>{ if(value) url.searchParams.set(key,value); else url.searchParams.delete(key); });
+        if (budgetFilters) ['year','type'].forEach(key => { const value = form.elements[key].value; if (value) url.searchParams.set(key, value); else url.searchParams.delete(key); });
         // A collection fragment is a one-time deep-link; filters own subsequent state.
         if(aliases[url.hash.slice(1)]) url.hash='';
         history.replaceState(null,'',url);
@@ -105,7 +130,8 @@
         results.replaceChildren();
         pagination.replaceChildren();
         const query=form.elements.q.value.toLowerCase().trim();
-        const matches=sections.flatMap(([title,rows])=>select.value && select.value!==title ? [] : rows.filter(r=>(!selectedLGU || (title===lguCollection && `lgu-${r.psgc_10}`===selectedLGU)) && JSON.stringify(r).toLowerCase().includes(query)).map(row=>({title,row})));
+        if (budgetFilters) budgetFilters.hidden = Boolean(select.value && select.value !== 'Budget observations');
+        const matches=sections.flatMap(([title,rows])=>select.value && select.value!==title ? [] : rows.filter(r=>(!selectedLGU || (title===lguCollection && `lgu-${r.psgc_10}`===selectedLGU)) && (!budgetFilters || budgetFilters.hidden || (!form.elements.year.value && !form.elements.type.value) || (title === 'Budget observations' && (!form.elements.year.value || String(r.year) === form.elements.year.value) && (!form.elements.type.value || r.budget_type === form.elements.type.value))) && JSON.stringify(r).toLowerCase().includes(query)).map(row=>({title,row})));
         if(mode==='statistics') {
           const region=root.querySelector('[data-trend]');
           region.hidden=Boolean(selectedLGU);
@@ -114,6 +140,11 @@
           if(selectedLGU) {
             const selected=data.lgu_registry_2024.find(r=>`lgu-${r.psgc_10}`===selectedLGU);
             node('p',selected ? `${selected.name}: one 2024 population observation, not an LGU time series. Provincial trend hidden for this LGU view.` : 'No registry LGU matches this identifier. No population or trend is inferred.',scope);
+            if (selected) {
+              const profile = node('a', `Open ${selected.name}'s local statistics and profile`, scope);
+              profile.className = 'btn pr-profile-link';
+              profile.href = `lgu.html?id=${encodeURIComponent(selectedLGU)}#statistics`;
+            }
             const a=node('a','View all LGUs and provincial context',scope);
             const url=new URL(location.href); ['lgu','page','q','collection'].forEach(key=>url.searchParams.delete(key)); a.href=url.href;
           }
@@ -122,10 +153,19 @@
         const totalPages=Math.max(1,Math.ceil(count/25));
         currentPage=Math.min(currentPage,totalPages);
         const start=(currentPage-1)*25;
-        let section, lastTitle, comparisonBody;
+        let section, lastTitle, comparisonBody, budgetBody;
         matches.slice(start,start+25).forEach(({title,row})=>{
             if(title!==lastTitle) {
               section=node('section',undefined,results); node('h2',title,section); lastTitle=title;
+              section.className = 'pr-collection';
+              if (title === 'Budget observations') {
+                const wrap = node('div', undefined, section); wrap.className = 'pr-table-scroll'; wrap.tabIndex = 0; wrap.setAttribute('role', 'region'); wrap.setAttribute('aria-label', 'Budget evidence table');
+                const table = node('table', undefined, wrap);
+                node('caption', 'Budget evidence: amounts are not actual spending', table);
+                const head = node('tr', undefined, node('thead', undefined, table));
+                ['Government / year', 'Source budget type', 'Amount (PHP)', 'Qualification / evidence'].forEach(text => { node('th', text, head).scope = 'col'; });
+                budgetBody = node('tbody', undefined, table);
+              }
               if(title===lguCollection) {
                 const total=data.lgu_registry_2024.reduce((sum,r)=>sum+r.population_2024,0);
                 node('p',`${data.lgu_registry_2024.length} LGUs in the full registry; population total ${total.toLocaleString('en-US')} persons. Census reference dates and source-snapshot notes are retained below; collection is not the census date.`,section);
@@ -148,20 +188,49 @@
               const source=node('td',undefined,tr);
               node('p',`Census reference: ${row.population_reference_date || 'Unknown'}. Source collected: ${row.collected_date || 'Unknown'}.`,source);
               link(row.source_url,'PSA source',source);
-              node('p',row.psgc_snapshot_note,source);
-              return;
-            }
-            const article=node('article',undefined,section); article.className='pr-record';
-            node('h3',row.indicator || row.institution || row.name_and_office || row.title || row.category || row.id || row.source_id,article);
-            const dl=node('dl',undefined,article);
-            Object.entries(row).forEach(([key,value])=>{
-              if(key==='id') return;
-              node('dt',key==='chief_listed'?'Directory-listed head':label(key),dl);
-              const dd=node('dd',undefined,dl);
-              if((key==='source_url'||key==='url') && typeof value==='string') link(value,value,dd);
-              else if(key==='public_contact' && typeof value==='string') contactLinks(value,dd);
-              else dd.textContent=showValue(value);
-            });
+               const details = node('details', undefined, source); node('summary', 'Census and source notes', details); node('p',row.psgc_snapshot_note,details);
+               return;
+             }
+             if (title === 'Budget observations') {
+               const tr = node('tr', undefined, budgetBody); tr.className = 'pr-record pr-budget-row';
+               const name = node('th', row.lgu, tr); name.scope = 'row'; node('small', String(row.year), name);
+               node('td', row.budget_type, tr);
+               node('td', row.amount_php === null ? 'Unknown' : Number(row.amount_php).toLocaleString('en-PH', { maximumFractionDigits: 2 }), tr).className = 'pr-number';
+               const evidence = node('td', undefined, tr);
+               if (row.provincial_review_disposition) node('strong', row.provincial_review_disposition, evidence);
+               if (row.notes) node('p', row.notes, evidence);
+               evidenceLink(row, evidence); sourceDetails(row, evidence);
+               return;
+             }
+             const article=node('article',undefined,section); article.className='pr-record';
+             if (row.indicator) {
+               article.classList.add('pr-statistic');
+               node('h3', row.indicator, article);
+               const value = node('p', undefined, article); value.className = 'pr-stat-value';
+               node('strong', typeof row.value === 'number' ? row.value.toLocaleString('en-US') : showValue(row.value), value);
+               node('span', row.unit, value);
+               node('p', `${row.reference_period} / ${row.geography}`, article).className = 'pr-period';
+             } else if (row.institution) {
+               node('h3', row.institution, article);
+               node('p', 'Directory-listed; currentness not established', article).className = 'pr-label';
+               if (row.chief_listed) node('p', `Directory-listed head: ${row.chief_listed}`, article);
+               if (row.public_contact) contactLinks(row.public_contact, node('p', undefined, article));
+             } else if (row.name_and_office) {
+               const split = row.name_and_office.match(/^(.*?)\s+(Provincial Governor|Provincial Administrator|Chief Administrative Officer|Provincial Legal Officer)(.*)$/);
+               node('h3', split ? split[2] : row.name_and_office, article);
+               if (split) node('p', split[1], article);
+               node('p', 'Directory-listed; current term unknown', article).className = 'pr-label';
+               contactLinks(row.public_contact, node('p', undefined, article));
+               node('p', `Email as displayed: ${row.email_as_displayed}`, article);
+             } else if (row.text) {
+               node('p', row.text, article).className = 'pr-excerpt';
+             } else {
+               node('h3', row.title || row.name || row.indicator || row.source_id || row.id || row.category, article);
+               const description = row.summary || row.description || row.gap || row.notes;
+               if (description) node('p', showValue(description), article);
+             }
+             evidenceLink(row, article);
+             sourceDetails(row, article);
         });
         status.textContent=`${count} source-backed observations match. Showing ${count ? start+1 : 0}-${Math.min(start+25,count)}. Original source and period notes retained.`;
         if(!count) node('p','No observations match these filters.',results);

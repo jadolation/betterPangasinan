@@ -21,6 +21,7 @@ from jsonschema import Draft202012Validator, FormatChecker
 
 from scripts.national_budget.pipeline import publication_payload
 from scripts.site_data import publication_payloads
+from scripts.lgu_profiles import publication_payloads as profile_payloads
 
 ROOT = Path(__file__).resolve().parent
 SRC_PAGES = ROOT / "src" / "pages"
@@ -172,6 +173,34 @@ def financial_summary(records: list) -> dict:
     return {"total": None if None in values else sum(values, Decimal(0)), "values": values}
 
 
+SECTION_NAV_ITEMS = (
+    ("overview", "Overview", "transparency.html"),
+    ("projects", "2027 Projects", "national-budget.html"),
+    ("historical", "Historical Budgets", "historical-budget.html"),
+    ("offices", "Offices & Districts", "national-budget.html#offices"),
+    ("context", "Context", "budget-context.html"),
+    ("hearings", "Hearings", "budget-hearings.html"),
+    ("finances", "Local Finances", "finances.html"),
+    ("about", "About", "methodology.html#national-budget-methodology"),
+)
+
+
+def render_section_nav(meta: dict) -> str:
+    if not meta.get("section_nav"):
+        return ""
+    if meta["section_nav"] != "transparency":
+        raise ValueError("Unknown section navigation")
+    selected = meta.get("section_item", "")
+    if selected and selected not in {key for key, _, _ in SECTION_NAV_ITEMS}:
+        raise ValueError("Unknown transparency section item")
+    links = []
+    for key, label, href in SECTION_NAV_ITEMS:
+        current = ' aria-current="page"' if key == selected else ""
+        links.append(f'<a href="{html.escape(href, quote=True)}" data-section-item="{key}"{current}>{html.escape(label)}</a>')
+    return fill((SRC_PARTIALS / "transparency-nav.html").read_text(),
+                {"SECTION_LINKS": "\n".join(links)})
+
+
 def parse_page(text: str) -> tuple[dict, str]:
     match = FRONT_MATTER_RE.match(text)
     if not match:
@@ -198,6 +227,7 @@ def build(mode: str = "production", output: Path | None = None, data_dir: Path |
     data = load_data(data_dir or ROOT / "data" / ("fixtures" if mode == "test" else "production"), mode)
     national_budget = publication_payload(ROOT)
     supplemental = publication_payloads(ROOT, data, mode, data_dir)
+    supplemental.update(profile_payloads(data, supplemental, national_budget))
     output = (output or ROOT / {"production": "public", "test": "test-public", "preview": "preview-public"}[mode]).resolve()
     if output == ROOT or ROOT in output.parents and output.parts[len(ROOT.parts)] in ("src", "data", "schemas", "tests", "assets", ".git", ".github", ".kilo") or output in ROOT.parents:
         raise ValueError("Unsafe build output directory")
@@ -231,6 +261,7 @@ def build(mode: str = "production", output: Path | None = None, data_dir: Path |
                 "TITLE": html.escape(meta["title"], quote=True),
                 "DESCRIPTION": html.escape(meta["description"], quote=True),
                 "HEADER": header,
+                "SECTION_NAV": render_section_nav(meta),
                 "BODY": body,
                 "FOOTER": footer,
             },

@@ -4,12 +4,13 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Public Finances | Better Pangasinan</title>
-<meta name="description" content="Explore sourced financial records by year, category and distinct amount type." />
+<meta name="description" content="Explore reported local budgets and financial records with their original sources." />
 <link rel="icon" type="image/svg+xml" href="logo.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/style.css" />
+<link rel="stylesheet" href="assets/transparency.css" />
 <meta name="data-mode" content="production">
 </head>
 <body>
@@ -39,13 +40,34 @@
   </div>
 </header>
 
+<nav class="section-nav" data-section-nav aria-label="Transparency sections">
+  <div class="wrap section-nav-links">
+<a href="transparency.html" data-section-item="overview">Overview</a>
+<a href="national-budget.html" data-section-item="projects">2027 Projects</a>
+<a href="historical-budget.html" data-section-item="historical">Historical Budgets</a>
+<a href="national-budget.html#offices" data-section-item="offices">Offices &amp; Districts</a>
+<a href="budget-context.html" data-section-item="context">Context</a>
+<a href="budget-hearings.html" data-section-item="hearings">Hearings</a>
+<a href="finances.html" data-section-item="finances" aria-current="page">Local Finances</a>
+<a href="methodology.html#national-budget-methodology" data-section-item="about">About</a>
+  </div>
+</nav>
+
 
 <main id="main-content" tabindex="-1">
-<section class="page-hero"><div class="wrap"><span class="eyebrow">Where does public money go?</span><h1>Public finances</h1><p class="lede">Trace financial amounts to their sources. An appropriation is not actual expenditure; an approved budget is not a contract value.</p></div></section>
-<section class="section"><div class="wrap" data-module="finances"><h2>Financial records</h2><form data-filters role="search"><label>Year <select name="year"><option value="">Select a year</option></select></label> <label>Category <select name="category"><option value="">All categories</option></select></label> <label>Amount type <select name="amount_type"><option value="">Select an amount type</option></select></label> <button class="btn" type="submit">Apply filters</button> <button class="btn btn-outline" type="reset">Clear filters</button></form><p data-status role="status" aria-live="polite">No reviewed financial records have been published. Unknown amounts are not zero, and no totals are inferred.</p><div data-results></div><noscript><p>Filters and charts require JavaScript. Read <a href="data/public.json">the public dataset</a> for published records.</p></noscript><div class="card"><h3>How to read these records</h3><p>Choose one reporting year and amount type to compare records. Totals are shown only for a single currency and unit with known amounts. Each chart uses the same values as its accessible table.</p><a href="methodology.html">Sources and methodology</a></div></div></section>
-<script src="assets/modules.js" defer></script>
 <link rel="stylesheet" href="assets/provincial-reference.css">
-<section class="section provincial-reference" data-reference="budgets"><div class="wrap"><h2>Reported local budget observations</h2><p>Reviewed source observations are shown as reported, separately from the structured financial ledger above. Annual budgets, supplemental budgets, provincial proposals and operative-in-PART reviews are not interchangeable. These amounts are not actual spending and are not summed.</p><form role="search"><label>Search budget observations<input type="search" name="q" placeholder="LGU, year or source note"></label><label>Collection<select name="collection"><option value="">All collections</option></select></label><button class="btn" type="submit">Search observations</button><button class="btn btn-outline" type="reset">Clear observations</button></form><p data-status role="status">Loading source-backed budget observations.</p><div data-results></div><noscript><a href="data/provincial-reference.json">Read the source observations JSON</a></noscript></div></section>
+<section class="page-hero finance-hero"><div class="wrap"><span class="eyebrow">Follow public money</span><h1>Public finances</h1><p class="lede">Explore reported local budgets and financial records. Allocations and proposals are not proof of spending.</p></div></section>
+<section class="section provincial-reference finance-observations" data-reference="budgets"><div class="wrap">
+  <h2>Reported local budgets</h2><p>Annual, supplemental and proposed budgets are different; these observations are not added together.</p>
+  <form role="search"><label>Search budgets<input type="search" name="q" placeholder="LGU, year or source note"></label><label>Collection<select name="collection"><option value="">All collections</option></select></label><button class="btn" type="submit">Search observations</button><button class="btn btn-outline" type="reset">Clear observations</button></form>
+  <p data-status role="status">Loading reported budgets.</p><div data-results></div>
+  <noscript><a href="data/provincial-reference.json">Read the source observations JSON</a></noscript>
+</div></section>
+<section class="section finance-ledger"><div class="wrap"><details data-ledger-disclosure><summary>Structured financial ledger</summary>
+  <div data-module="finances"><h2>Financial records</h2><form data-filters role="search"><label>Year <select name="year"><option value="">Select a year</option></select></label> <label>Category <select name="category"><option value="">All categories</option></select></label> <label>Amount type <select name="amount_type"><option value="">Select an amount type</option></select></label> <button class="btn" type="submit">Apply filters</button> <button class="btn btn-outline" type="reset">Clear filters</button></form><p data-status role="status" aria-live="polite">This ledger is separate from reported budget observations.</p><div data-results></div><noscript><p>Read <a href="data/public.json">the structured public dataset</a>.</p></noscript>
+  <details><summary>How to compare ledger records</summary><p>Compare one reporting year, amount type, currency and unit at a time. Unknown amounts are not zero. An appropriation, expenditure and contract value describe different things.</p><a href="methodology.html#national-budget-methodology">Sources and methodology</a></details></div>
+</details></div></section>
+<script src="assets/modules.js" defer></script>
 <script src="assets/provincial-reference.js" defer></script>
 </main>
 
@@ -101,5 +123,7 @@
 
 
 <script src="assets/script.js"></script>
+<script src="assets/section-nav.js"></script>
+<script src="assets/lgu-links.js" defer></script>
 </body>
 </html>

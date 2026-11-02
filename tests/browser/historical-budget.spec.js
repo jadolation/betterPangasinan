@@ -25,6 +25,8 @@ test('real reviewed GAA, year and department filters, chart table and CSV', asyn
   await page.goto('/historical-budget.html');
   await expect(page.locator('#hb-content')).toBeVisible();
   await expect(page.locator('#hb-coverage tr')).toHaveCount(38);
+  await expect(page.locator('#hb-coverage')).toBeHidden();
+  await expect(page.locator('#hb-coverage-summary')).toContainText('38 department/query attempts');
   await expect(page.locator('#hb-annual tr')).toHaveCount(7);
   await expect(page.getByRole('img', { name: /Annual appropriations/ })).toBeVisible();
   await page.locator('#hb-department').selectOption('05');
@@ -56,7 +58,23 @@ test('context retains distinct scopes and DPWH 404; hearing links are timestampe
   await expect(page.locator('#bc-content')).toContainText('Current New Appropriations');
   await page.goto('/budget-hearings.html');
   await expect(page.locator('#bc-content article')).toHaveCount(3);
-  await expect(page.locator('#bc-content a[href*="?t="]').first()).toBeVisible();
+  const first = page.locator('#bc-content article').first();
+  await expect(first.locator('details')).toHaveCount(2);
+  await expect(first.locator('details a[href*="?t="]').first()).toBeHidden();
+  await first.getByText(/Transcript moments and reported outcome/).click();
+  await expect(first.locator('details a[href*="?t="]').first()).toBeVisible();
+  const hearingData = await (await page.request.get('/data/budget-hearings.json')).json();
+  for (const [index, row] of hearingData.response.data.entries()) {
+    const article = page.locator('#bc-content article').nth(index);
+    await expect(article).toContainText(row.topic.summary);
+    await expect(article).toContainText(row.topic.outcome);
+    for (const moment of row.matching_moments || []) {
+      await expect(article).toContainText(moment.said);
+      await expect(article.getByRole('link', { name: `Verify at ${moment.timestamp}`, includeHidden: true })).toHaveAttribute('href', moment.url);
+    }
+  }
+  await first.getByText('Original topic record (JSON)', { exact: true }).click();
+  expect(JSON.parse(await first.locator('pre').textContent())).toEqual(hearingData.response.data[0]);
   await expect(page.locator('.hb-note')).toContainText('not');
 });
 

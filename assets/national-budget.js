@@ -209,7 +209,7 @@
       const group = selected.filter(row => row.house_stage === stage);
       if (!group.length) continue;
       const card = element('section', undefined, 'card');
-      card.append(element('h3', `${stage === 'hgab2' ? 'House second reading' : 'House third reading'} (${stage})`));
+      card.append(element('h3', `${stage === 'hgab2' ? 'House second reading' : 'House third reading'}`));
       card.append(element('p', `${group.length} records; ${filters.scope === 'geographic' ? 'geographic-match amounts' : 'selected scope amounts, not attributable provincial funding'}.`));
       const pairs = group.map(versions);
       card.append(element('p', summary('NEP proposal', pairs.map(pair => pair[0]))));
@@ -293,7 +293,7 @@
       coverageSummary.append(element('p', `${rows.length} approved comparison records. ${coverage.complete === true ? 'Configured collection queries are complete.' : 'Some collection work is incomplete or deferred; these figures are not a complete provincial inventory.'} ${coverage.exhaustive_geographic_coverage === true ? 'See the exact approved coverage below.' : 'Exhaustive geographic coverage has not been established.'}`));
       for (const limitation of coverage.limitations || []) if (typeof limitation === 'string') coverageSummary.append(element('p', limitation));
       if (coverage.complete !== true) {
-        byId('collection-warning').textContent = 'Collection is incomplete or not established. Some collection work may be missing or deferred; these records are not a complete provincial inventory. See About the Data for coverage details.';
+        byId('collection-warning').textContent = 'Collection is incomplete or not established; these records are not a complete provincial inventory.';
         byId('collection-warning').hidden = false;
       }
       byId('snapshot-description').textContent = `Snapshot: ${manifest.snapshot_id}. Retrieved: ${manifest.retrieved_at}. This is a dated snapshot, not a live budget feed.`;
@@ -301,11 +301,11 @@
       byId('coverage').textContent = JSON.stringify(coverage, null, 2);
       byId('sources').textContent = JSON.stringify(sources, null, 2);
       sourceLinks(sources, byId('source-links'));
-      const populate = (name, values) => [...new Set(values.filter(Boolean))].sort().forEach(value => form.elements[name].append(new Option(value, value)));
+      const populate = (name, values) => [...new Set(values.filter(Boolean))].sort().forEach(value => form.elements[name].append(new Option(name === 'office' ? value : presentation.human(value), value)));
       populate('dataset', ['dpwh', 'fmr', 'hfep', 'nia']);
       populate('office', [...rows.map(office), ...offices.map(item => item.matched_label)]);
       populate('status', rows.map(row => row.source_review_status));
-      for (const value of [...new Set(rows.map(comparison))].sort()) byId('source-comparisons').append(new Option(value, value));
+      for (const value of [...new Set(rows.map(comparison))].sort()) byId('source-comparisons').append(new Option(presentation.comparisonLabel(value), value));
       populate('geographic', rows.map(row => row.geographic_review_status));
       const registry = sources.lgu_registry || [];
       if (!Array.isArray(registry) || registry.some(lgu => typeof lgu.psgc !== 'string' || typeof lgu.name !== 'string')) throw new Error('Invalid reviewed registry');

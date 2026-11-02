@@ -200,6 +200,13 @@
     const testMode = document.querySelector('meta[name="data-mode"]')?.content === 'test';
     const previewMode = document.querySelector('meta[name="data-mode"]')?.content === 'preview';
     for (const name of datasets) data[name] = Array.isArray(data[name]) ? data[name].filter(record => testMode || (record.is_mock === false && (previewMode || record.publication_status === 'approved'))) : [];
+    // Empty structured ledgers should not bury the published reference views
+    // below a toolbar whose options cannot return any records.
+    if (form && ['finances', 'projects', 'legislation'].includes(kind)) {
+      form.hidden = !(kind === 'legislation' ? [...data.legislation, ...data.documents] : data[kind]).length;
+      const ledger = root.closest('[data-ledger-disclosure]');
+      if (ledger && data.finances.length) ledger.open = true;
+    }
     // The registry uses reporting_period for years and PHP as the monetary unit.
     for (const name of datasets) data[name] = data[name].map(record => ({
       ...record,
@@ -230,7 +237,10 @@
       const id = kind === 'procurements' ? new URLSearchParams(location.search).get('id') : null;
       const filtered = records.filter(record => (!id || record.id === id) && [...filters].every(([key, value]) => !value || (key === 'q' ? JSON.stringify(record).toLowerCase().includes(value.toLowerCase().trim()) : String(record[key]) === value)));
       results.replaceChildren();
-      if (!records.length) return;
+      if (!records.length) {
+        status.textContent = selectedLgu ? 'No directly linked records are available in this structured collection.' : 'No records are available in this structured collection.';
+        return;
+      }
       status.textContent = filtered.length ? `${filtered.length} published record${filtered.length === 1 ? '' : 's'} match your selection.` : t('no_matches', 'No published records match this selection. Clear filters to browse the collection.');
       if (kind === 'finances') finance(filtered); else filtered.forEach(card);
     };

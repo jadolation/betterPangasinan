@@ -6,7 +6,9 @@ test('homepage derives provincial KPIs and preserves the original hero', async (
   await expect(page.locator('.province-kpi')).toHaveCount(6);
   await expect(page.locator('.province-kpis')).toContainText('3,188,540');
   await expect(page.locator('.province-kpis')).toContainText('1,364');
-  await expect(page.locator('.province-kpis')).toContainText('0105500000');
+  await expect(page.locator('.province-kpis')).not.toContainText('0105500000');
+  await page.getByText('Sources and reference dates', { exact: true }).click();
+  await expect(page.locator('[data-province-sources]')).toContainText('0105500000');
   await expect(page.locator('[data-province-sources]')).toContainText('2024-07-01');
   await expect(page.locator('.hero-divider svg')).toBeVisible();
 });
@@ -16,13 +18,18 @@ test('directory displays the 48 imported records and classification filters', as
   expect(records).toHaveLength(48);
   expect(records.reduce((sum, row) => sum + row.population, 0)).toBe(3188540);
   await page.goto('/lgus.html');
-  await expect(page.locator('#lgu-results article')).toHaveCount(48);
+  await expect(page.locator('#lgu-results article')).toHaveCount(12);
+  for (let count of [24, 36, 48]) {
+    await page.getByRole('button', { name: 'Show more LGUs' }).click();
+    await expect(page.locator('#lgu-results article')).toHaveCount(count);
+  }
   await expect(page.locator('#lgu-results')).toContainText('2024-07-01');
   await expect(page.locator('#lgu-results')).toContainText('2025-07-31');
   await page.locator('#lgu-type').selectOption('city');
   await expect(page.locator('#lgu-results article')).toHaveCount(4);
   await page.locator('#lgu-type').selectOption('municipality');
-  await expect(page.locator('#lgu-results article')).toHaveCount(44);
+  await expect(page.locator('#lgu-results article')).toHaveCount(12);
+  await expect(page.locator('#lgu-result-count')).toContainText('44 published profiles');
   await page.locator('#lgu-query').fill('Mapandan');
   await expect(page.locator('#lgu-results article')).toHaveCount(1);
   const record = records.find(row => row.name === 'Mapandan');
@@ -38,12 +45,14 @@ test('LGU profile joins population barangays and source links using PSGC', async
   await page.goto(`/lgu.html?id=${encodeURIComponent(record.id)}`);
   await expect(page.locator('#profile-name')).toHaveText(record.name);
   await expect(page.locator('#profile-content')).toContainText(record.population.toLocaleString('en-PH'));
+  await expect(page.locator('.profile-barangays ul li')).toHaveCount(8);
+  await page.getByRole('button', { name: 'Show more barangays' }).click();
   await expect(page.locator('.profile-barangays ul li')).toHaveCount(expected.length);
-  await expect(page.locator('.profile-barangays')).toContainText('unofficial mirror');
+  await expect(page.locator('.profile-barangays')).toContainText('not a confirmed current official release');
   await page.getByLabel('Search barangays').fill(expected[0].name);
   await expect(page.locator('.profile-barangays ul')).toContainText(expected[0].name);
   await expect(page.locator(`a[href="municipality-map.html?psgc=${record.psgc}"]`)).toBeVisible();
-  await expect(page.getByRole('link', { name: 'Search national proposal titles (not a verified allocation)' })).toHaveAttribute('href', /national-budget\.html\?q=Mapandan#projects/);
+  await expect(page.getByRole('link', { name: 'Search FY2027 proposals' })).toHaveAttribute('href', /national-budget\.html\?q=Mapandan#projects/);
 });
 
 test('all production identifiers have profile routes without a synthetic fallback', async ({ page, request }) => {
@@ -69,7 +78,7 @@ for (const width of [320, 375, 430, 768, 1024, 1440]) {
     for (const route of ['index.html', 'lgus.html']) {
       await page.goto('/' + route);
       if (route === 'index.html') await expect(page.locator('.province-kpi')).toHaveCount(6);
-      else await expect(page.locator('#lgu-results article')).toHaveCount(48);
+      else { await expect(page.locator('#lgu-results article')).toHaveCount(12); await expect(page.locator('#lgu-result-count')).toContainText('48 published profiles'); }
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBeTruthy();
       if (width === 375 || width === 1440) await page.screenshot({ path: testInfo.outputPath(`${route}-${width}.png`), fullPage: false });
     }

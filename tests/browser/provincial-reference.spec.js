@@ -41,6 +41,7 @@ test('Mapandan profile URL selects only its actual dated population and hides pr
   await expect(page.locator('[data-status]')).toContainText('1 source-backed');
   await expect(page.locator('[data-trend]')).toBeHidden();
   await expect(page.locator('[data-lgu-scope]')).toContainText('Mapandan: one 2024 population observation, not an LGU time series');
+  await expect(page.getByRole('link', { name: "Open Mapandan's local statistics and profile" })).toHaveAttribute('href', 'lgu.html?id=lgu-0105528000#statistics');
   const table=page.getByRole('table',{name:'2024 LGU population comparison: accessible chart data'});
   await expect(table.locator('tbody tr')).toHaveCount(1);
   await expect(table).toContainText('38,228');
@@ -121,7 +122,7 @@ test('contact links retain source digits and raw contact string', async ({ page 
   await expect(page.locator('[data-results] a[href="tel:0755313263"]')).toHaveCount(1);
   await expect(page.locator('[data-results] a[href="tel:0755314249"]')).toHaveCount(1);
   await expect(page.locator('[data-results] a[href^="tel:+"]')).toHaveCount(0);
-  await expect(page.locator('[data-results]')).toContainText('collected at');
+  await expect(page.locator('[data-results]')).toContainText('Source collected:');
   await expect(page.locator('[data-results]')).toContainText('Not established by source');
 });
 
@@ -135,3 +136,51 @@ for (const [mode,count] of [['budgets',15],['legislation',15],['projects',4]]) {
     await expect(page.locator('[data-results]')).not.toContainText('Directory-listed offices');
   });
 }
+
+test('statistics put values, units and periods first and retain all 30 original records in disclosures', async ({ page }) => {
+  await page.goto('/statistics.html?collection=Statistics');
+  await expect(page.locator('[data-status]')).toContainText('30 source-backed');
+  const first = page.locator('.pr-statistic').first();
+  await expect(first.locator('.pr-stat-value')).toHaveText('3,188,540persons');
+  await expect(first.locator('.pr-period')).toHaveText('2024 / Pangasinan');
+  await expect(first.locator('dl')).toHaveCount(0);
+  await expect(first.locator('details')).not.toHaveAttribute('open', '');
+  await first.getByText('Source, dates and original record', { exact: true }).click();
+  await expect(first.locator('pre')).toContainText('"value": 3188540');
+  await expect(first.locator('pre')).toContainText('"reference_period": "2024"');
+  await expect(page.locator('.pr-statistic')).toHaveCount(25);
+  await page.getByRole('button', { name: 'Next', exact: true }).click();
+  await expect(page.locator('.pr-statistic')).toHaveCount(5);
+});
+
+test('budget evidence filters retain proposal and partial-operative qualifications without a financial calculator', async ({ page }) => {
+  await page.goto('/government.html?collection=Budget+observations');
+  await expect(page.getByRole('table', { name: 'Budget evidence: amounts are not actual spending' })).toBeVisible();
+  await expect(page.locator('.pr-budget-row')).toHaveCount(15);
+  await page.getByLabel('Budget year', { exact: true }).selectOption('2027');
+  await expect(page.locator('.pr-budget-row')).toHaveCount(1);
+  await expect(page.locator('.pr-budget-row')).toContainText('PROPOSED annual');
+  await expect(page.locator('.pr-budget-row')).toContainText('not an approved appropriation');
+  await expect(page).toHaveURL(/year=2027/);
+  await page.reload();
+  await expect(page.getByLabel('Budget year', { exact: true })).toHaveValue('2027');
+  await page.getByRole('button', { name: 'Clear', exact: true }).click();
+  await page.locator('select[name=collection]').selectOption('Budget observations');
+  await page.getByLabel('Budget type', { exact: true }).selectOption('annual');
+  await page.locator('input[name=q]').fill('Sual');
+  await expect(page.locator('.pr-budget-row')).toHaveCount(1);
+  await expect(page.locator('.pr-budget-row')).toContainText('operative in PART');
+  await page.locator('.pr-budget-row summary').click();
+  await expect(page.locator('.pr-budget-row pre')).toContainText('"provincial_resolution_number": "305-2026"');
+});
+
+test('hospital records prioritize directory-listed identity and keep raw evidence closed', async ({ page }) => {
+  await page.goto('/hospitals.html?collection=Hospital+heads%3A+Directory-listed');
+  const first = page.locator('article.pr-record').first();
+  await expect(first.getByRole('heading', { name: 'Pangasinan Provincial Hospital' })).toBeVisible();
+  await expect(first).toContainText('Directory-listed; currentness not established');
+  await expect(first).toContainText('Directory-listed head: Dr. Cipriano C. Fernandez');
+  await expect(first.locator('pre')).toBeHidden();
+  await first.locator('summary').click();
+  await expect(first.locator('pre')).toContainText('"as_of_date": null');
+});

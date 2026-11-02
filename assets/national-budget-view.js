@@ -1,10 +1,11 @@
 // Presentation only. Validation, filtering, calculations and CSV stay in the entry point.
 (() => {
   'use strict';
-  const scopeLabels = { geographic: 'Reviewed geographic match', office: 'Office-associated', shared: 'Shared allocation', uncertain: 'Location unverified' };
+  const scopeLabels = { geographic: 'Reviewed geographic match', office: 'Office-associated', shared: 'Shared allocation', uncertain: 'Location not yet verified' };
   const groupLabels = { house_only: 'House bill only', nep_only: 'NEP only', unchanged: 'Unchanged', increased: 'Increased', decreased: 'Decreased', scope_review: 'Other or uncertain' };
   const programLabels = { dpwh: 'DPWH infrastructure', fmr: 'Farm-to-market roads', hfep: 'Health facilities', nia: 'Irrigation' };
-  const human = value => typeof value === 'string' ? value.replace(/_/g, ' ') : 'Not supplied';
+  const human = value => ({ reviewed_with_warnings: 'Published with source warnings', pending: 'Location not yet verified', pending_geographic_review: 'Location not yet verified', unverified: 'Location not yet verified', reviewed: 'Reviewed', dpwh: 'DPWH infrastructure', fmr: 'Farm-to-market roads', hfep: 'Health facilities', nia: 'Irrigation' })[value] || (typeof value === 'string' ? value.replace(/_/g, ' ') : 'Not supplied');
+  const comparisonLabel = value => value.split(' / ').map(part => groupLabels[part] || human(part)).join(' / ');
 
   window.BudgetViews = function (context) {
     const { element, money, amount, office, versions, comparable, comparison, link, sourceLinks } = context;
@@ -60,12 +61,12 @@
       const overview = section('Overview');
       overview.append(list([
         ['Program', row.upstream.program || programLabels[row.dataset]], ['Office', office(row) || 'Not supplied'],
-        ['Comparison', comparison(row)], ['Scope', scopeLabels[row.scope]],
+        ['Comparison', comparisonLabel(comparison(row))], ['Scope', scopeLabels[row.scope]],
       ]));
       content.append(overview);
       const financial = section('Financial comparison');
       const [nep, house] = versions(row);
-      financial.append(list([['NEP proposal', money(nep)], [`House proposal (${row.house_stage})`, money(house)], ['Source-supplied change', money(row.upstream.delta_php)]]));
+      financial.append(list([['NEP proposal', money(nep)], [`House proposal (${row.house_stage === 'hgab3' ? 'third reading' : 'second reading'})`, money(house)], ['Source-supplied change', money(row.upstream.delta_php)]]));
       financial.append(element('p', comparable(row) && nep !== null && house !== null
         ? 'Both amounts are known and this pairing is eligible for comparable-row totals. Publication does not independently verify its source evidence.'
         : 'Excluded from comparable-row change totals. One version is unknown, the pairing is held, or the source compares different scopes.', 'nb-caption'));
@@ -82,17 +83,17 @@
       if (row.scope === 'office') location.append(element('p', 'An office association does not prove location in any city, municipality or legislative district.', 'nb-warning'));
       content.append(location);
       const sources = section('Source evidence');
-      sources.append(element('p', `Source review warning/status: ${row.source_review_status}. Publication approval does not clear upstream evidence flags.`, 'nb-warning'));
+      sources.append(element('p', `${human(row.source_review_status)}. Publication approval does not clear upstream evidence flags.`, 'nb-warning'));
       if ((row.upstream.flags || []).includes('nep_evidence_review')) sources.append(element('p', 'NEP evidence needs review: the source has flagged the proposal-side evidence for checking. The displayed comparison is not independently verified.', 'nb-warning'));
       for (const version of ['nep', row.house_stage]) {
         const p = element('p');
-        const anchor = link(row.upstream.pdf_url?.[version], version === 'nep' ? 'Original NEP PDF' : `Original House PDF (${version})`);
+        const anchor = link(row.upstream.pdf_url?.[version], version === 'nep' ? 'Original NEP PDF' : `Original House PDF (${version === 'hgab3' ? 'third reading' : 'second reading'})`);
         if (anchor) p.append(anchor);
-        else p.textContent = `${version === 'nep' ? 'NEP' : `House (${version})`} PDF: no valid HTTPS source link supplied.`;
+        else p.textContent = `${version === 'nep' ? 'NEP' : 'House'} PDF: no valid HTTPS source link supplied.`;
         p.append(element('small', `Document: ${row.upstream[`${version}_doc`] || 'Not supplied'} / Page: ${row.upstream[`${version}_page`] ?? 'Not supplied'}`));
         sources.append(p);
       }
-      sources.append(list([['Original identifier', row.upstream_id], ['Snapshot', manifest.snapshot_id], ['Source flags', (row.upstream.flags || []).join('; ') || 'None supplied']]));
+      sources.append(list([['Original identifier', row.upstream_id], ['Snapshot', manifest.snapshot_id], ['Source flags', (row.upstream.flags || []).map(human).join('; ') || 'None supplied']]));
       content.append(sources);
       const advanced = element('details', undefined, 'nb-disclosure');
       advanced.append(element('summary', 'Advanced technical metadata'));
@@ -120,7 +121,7 @@
       card.append(list([
         ['Whole-office NEP (context only)', money(amount(whole?.php))],
         ['FY2027 named-project NEP', money(amount(fy.nep_php))],
-        ['House third reading (hgab3)', money(amount(fy.hgab3_php))],
+        ['House third reading', money(amount(fy.hgab3_php))],
       ]));
       card.append(element('p', 'Whole-office and named-project scopes differ. Versions are compared, never added.', 'nb-warning'));
       const related = rows.filter(row => matchesScope(row, 'office') && office(row) === item.matched_label).length;
@@ -134,6 +135,6 @@
       card.append(details);
       return card;
     }
-    return { projectRow, evidence, officeCard, scopeLabels, groupLabels, programLabels };
+    return { projectRow, evidence, officeCard, scopeLabels, groupLabels, programLabels, human, comparisonLabel };
   };
 })();

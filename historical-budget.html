@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/style.css" />
+<link rel="stylesheet" href="assets/transparency.css" />
 <meta name="data-mode" content="production">
 </head>
 <body>
@@ -39,13 +40,26 @@
   </div>
 </header>
 
+<nav class="section-nav" data-section-nav aria-label="Transparency sections">
+  <div class="wrap section-nav-links">
+<a href="transparency.html" data-section-item="overview">Overview</a>
+<a href="national-budget.html" data-section-item="projects">2027 Projects</a>
+<a href="historical-budget.html" data-section-item="historical" aria-current="page">Historical Budgets</a>
+<a href="national-budget.html#offices" data-section-item="offices">Offices &amp; Districts</a>
+<a href="budget-context.html" data-section-item="context">Context</a>
+<a href="budget-hearings.html" data-section-item="hearings">Hearings</a>
+<a href="finances.html" data-section-item="finances">Local Finances</a>
+<a href="methodology.html#national-budget-methodology" data-section-item="about">About</a>
+  </div>
+</nav>
+
 
 <main id="main-content" tabindex="-1">
 <link rel="stylesheet" href="assets/historical-budget.css">
 <section class="hb" id="historical-budget">
   <header><p class="hb-kicker">Budget evidence / GAA FY2020-2026</p><h1>Historical appropriations</h1><p>Seven enacted budgets, viewed one fiscal year at a time. Appropriations are authority to spend, <strong>not actual spending</strong>.</p></header>
-  <nav aria-label="Budget evidence"><a href="national-budget.html">FY2027 project comparisons</a><a href="historical-budget.html" aria-current="page">Historical GAA</a><a href="budget-context.html">Budget context</a><a href="budget-hearings.html">Hearings</a></nav>
-  <p class="hb-note">These are program-name search matches, not verified Pangasinan locations or a provincial budget total. Shared allocations and similarly named places outside the province may appear. No match does not mean no funding. FY2027 proposals are never added to this series.</p>
+  <p class="hb-note">Program-name matches, not verified locations or a provincial total. No match does not mean no funding.</p>
+  <details><summary>How to read these matches</summary><p>These are program-name search matches, not verified Pangasinan locations or a provincial budget total. Shared allocations and similarly named places outside the province may appear. No match does not mean no funding. FY2027 proposals are never added to this series.</p></details>
   <p id="hb-status" role="status" aria-live="polite">Loading locally reviewed snapshot. Missing data is not zero.</p>
   <div id="hb-content" hidden>
     <form id="hb-filters" role="search" aria-label="Filter historical appropriations">
@@ -58,7 +72,7 @@
     <section aria-labelledby="hb-annual-heading"><h2 id="hb-annual-heading">Annual appropriations for selected families</h2><p>Department, collected query and text filters apply to each year independently. Known zero remains zero; unknown remains unknown. Positive amounts, not source line counts, identify funded family-years. These name-match sums are not geographic totals.</p><div id="hb-chart" class="hb-chart" role="img" aria-label="Annual appropriations bar chart. Exact values and unknown counts are in the following table."></div><div class="hb-scroll"><table><caption>Annual PHP, not added across years</caption><thead><tr><th scope="col">Fiscal year</th><th scope="col">Known PHP</th><th scope="col">Positive families</th><th scope="col">Known / selected</th><th scope="col">Unknown</th></tr></thead><tbody id="hb-annual"></tbody></table></div></section>
     <h2>Program families</h2><p id="hb-count" role="status" aria-live="polite"></p><div class="hb-pager"><button id="hb-prev" type="button">Previous</button><span id="hb-page"></span><button id="hb-next" type="button">Next</button></div>
     <div class="hb-scroll"><table><caption id="hb-caption">Enacted GAA appropriations</caption><thead><tr><th scope="col">Program / family</th><th scope="col">Department / agency</th><th scope="col">Annual PHP</th><th scope="col">Query / evidence</th></tr></thead><tbody id="hb-rows"></tbody></table></div>
-    <section><h2>Coverage and sources</h2><p id="hb-coverage-summary"></p><p>Amounts retain the source's integer pesos, without multiplying by thousands. The API zero-fills absent source years; source counts can also carry a family forward at zero. Renamed programs remain separate families. Family identifiers are namespaced by department, with overlapping queries reconciled once.</p><div class="hb-scroll"><table><caption>Every attempted department and query, including no matches and errors</caption><thead><tr><th>Department</th><th>Query</th><th>Matched</th><th>Fetched</th><th>Coverage</th></tr></thead><tbody id="hb-coverage"></tbody></table></div><details><summary>Retrieval dates, checksums and review metadata</summary><pre id="hb-sources"></pre></details></section>
+    <section><h2>Coverage and sources</h2><p id="hb-coverage-summary"></p><details><summary>Collection coverage and source qualifications</summary><p>Amounts retain the source's integer pesos, without multiplying by thousands. The API zero-fills absent source years; source counts can also carry a family forward at zero. Renamed programs remain separate families. Family identifiers are namespaced by department, with overlapping queries reconciled once.</p><div class="hb-scroll"><table><caption>Every attempted department and query, including no matches and errors</caption><thead><tr><th>Department</th><th>Query</th><th>Matched</th><th>Fetched</th><th>Coverage</th></tr></thead><tbody id="hb-coverage"></tbody></table></div></details><details><summary>Retrieval dates, checksums and review metadata</summary><pre id="hb-sources"></pre></details></section>
   </div>
   <noscript><p>JavaScript is needed for filtering. Download the <a href="data/historical-budget/programs.json">programs JSON</a>, <a href="data/historical-budget/coverage.json">coverage</a> and <a href="data/historical-budget/manifest.json">source manifest</a>.</p></noscript>
 </section>
@@ -117,5 +131,7 @@
 
 
 <script src="assets/script.js"></script>
+<script src="assets/section-nav.js"></script>
+<script src="assets/lgu-links.js" defer></script>
 </body>
 </html>

@@ -49,6 +49,15 @@
 .profile-barangays input { max-width: 100%; width: 400px; min-height: 44px; padding: 10px; border: 1px solid var(--line); font: inherit; }
 .profile-barangays li { padding-block: 5px; }
 .preview-banner { padding: 14px 24px; border-block: 2px solid var(--gold-ink); background: var(--gold-soft); font: 14px/1.6 var(--font-display); color: var(--ink); }
+.lgu-directory-card h2 { font-size: 22px; }
+.lgu-directory-card > p { font: 15px/1.6 var(--font-display); }
+.province-source-details { margin-block: 16px; font: 14px/1.6 var(--font-display); }
+.province-source-details summary { min-height: 44px; padding-block: 10px; cursor: pointer; color: var(--blue-deep); }
+.lgu-directory-card details { margin-top: 14px; }
+.lgu-directory-card summary { cursor: pointer; color: var(--blue-deep); font: 13px var(--font-display); min-height: 44px; padding-block: 10px; }
+#lgu-show-more { margin-block: 24px; }
+[data-filters][hidden] { display: none !important; }
+.lgu-profile-shortcut { padding: 16px 24px; border-left: 3px solid var(--blue-deep); background: var(--paper); margin-block: 16px; font: 15px/1.6 var(--font-display); }
 @media (max-width: 700px) { .province-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 380px) { .province-kpi { padding: 14px; } .province-kpi small { font-size: 12px; } }
 

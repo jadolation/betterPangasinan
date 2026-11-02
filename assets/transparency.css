@@ -1,3 +1,52 @@
+:root {
+  --site-header-height: 0px;
+  --section-nav-height: 0px;
+}
+/* Use target margins only: adding scroll padding would count the sticky bars twice. */
+:root :target {
+  scroll-margin-top: calc(var(--site-header-height) + var(--section-nav-height) + 16px);
+}
+.section-nav,
+[data-local-section-nav] {
+  top: var(--site-header-height);
+  z-index: 30;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+.section-nav-ready .section-nav,
+.section-nav-ready [data-local-section-nav] { position: sticky; }
+.section-nav-links {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 4px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  padding-block: 4px;
+}
+.section-nav-links a {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 12px;
+  font-family: var(--font-display);
+  font-size: .85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+}
+.section-nav-links a[aria-current] {
+  color: var(--blue-deep);
+  border-bottom-color: var(--blue-deep);
+  background: var(--blue-soft, #e9eff7);
+}
+.section-nav-links a:focus-visible {
+  outline: 3px solid var(--gold-ink);
+  outline-offset: -3px;
+}
+html:not(.js) :is(.section-nav, [data-local-section-nav]) { position: static; }
 .transparency {
   font-family: var(--font-display);
   padding-bottom: 48px;

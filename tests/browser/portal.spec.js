@@ -68,20 +68,21 @@ test('skip link moves keyboard focus to the main landmark', async ({ page }) => 
 
 test('homepage internal links resolve and search returns to the populated LGU directory', async ({ page, request }) => {
   await page.goto('/');
-  const links = await page.locator('a[href]').evaluateAll(items => [...new Set(items.map(a => a.href))].filter(url => url.startsWith(location.origin)));
+  const links = await page.locator('a[href]').evaluateAll(items => [...new Set(items.map(a => new URL(a.getAttribute('href'), location.href).href))].filter(url => url.startsWith(location.origin)));
   for (const url of links) expect((await request.get(url)).status(), url).toBe(200);
   await page.locator('#home-search').fill('NoSuchMunicipality');
   await page.locator('#home-search').press('Enter');
   await expect(page).toHaveURL(/lgus\.html\?q=NoSuchMunicipality/);
   await expect(page.locator('#lgu-query')).toHaveValue('NoSuchMunicipality');
-  await expect(page.locator('#lgu-result-count')).toHaveText('0 published profiles found');
+  await expect(page.locator('#lgu-result-count')).toHaveText('0 published profiles found. Showing 0.');
   await expect(page.locator('#lgu-empty')).toBeVisible();
   await expect(page.locator('#lgu-results').locator('article')).toHaveCount(0);
   await page.locator('#lgu-query').fill('');
   await page.getByRole('button', { name: 'Search LGUs' }).click();
   await expect(page).toHaveURL(/\/lgus\.html$/);
   await expect(page.locator('#lgu-empty')).toBeHidden();
-  await expect(page.locator('#lgu-results article')).toHaveCount(48);
+  await expect(page.locator('#lgu-results article')).toHaveCount(12);
+  await expect(page.locator('#lgu-result-count')).toContainText('48 published profiles');
 });
 
 for (const name of ['finances', 'projects', 'procurement', 'legislation', 'services', 'map', 'project']) {
@@ -91,6 +92,7 @@ for (const name of ['finances', 'projects', 'procurement', 'legislation', 'servi
     const loaded = page.waitForResponse(response => response.url().endsWith('/data/public.json') && response.ok());
     await page.goto(`/${name}.html`);
     const root = page.locator('[data-module]');
+    if (name === 'finances') await page.locator('[data-ledger-disclosure] > summary').click();
     await expect(root).toBeVisible();
     await (await loaded).finished();
     await page.waitForLoadState('networkidle');

@@ -40,9 +40,12 @@
     el('rows').replaceChildren();
     for (const r of selected.slice(page * size, (page + 1) * size)) {
       const tr = node('tr'), name = node('td', r.name); name.className = 'hb-name';
-      name.append(node('small', r.key));
+      const identity = node('details'); identity.append(node('summary', 'Family identifier'), node('small', r.key)); name.append(identity);
       const amount = node('td', money(r.years[year]?.amount)); amount.className = 'hb-amount';
-      const source = node('td', r.queries.join('; ')); source.append(node('br'), sourceLink(r.sources[0]));
+      const source = node('td'); source.append(sourceLink(r.sources[0]));
+      const evidence = node('details'); evidence.append(node('summary', 'Collected queries and source links'), node('p', r.queries.join('; ')));
+      for (const url of r.sources) evidence.append(sourceLink(url), node('br'));
+      source.append(evidence);
       tr.append(name, node('td', `${departments.get(r.department_id)} / ${r.agency_id}`), amount, source); el('rows').append(tr);
     }
   }
