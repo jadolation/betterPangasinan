@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Historical Appropriations 2020-2026 | Better Pangasinan</title>
+<meta name="description" content="Source-backed GAA program-name matches, annual appropriations and honest collection coverage." />
+<link rel="icon" type="image/svg+xml" href="logo.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
+<meta name="data-mode" content="production">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="logo.svg" alt="Better Pangasinan logo" width="48" height="48" />
+      <span class="brand-text">
+        <span class="top">Better Pangasinan</span>
+        <span class="bottom">Independent civic technology</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="sr-only">Menu</span>
+      </button>
+      <ul class="nav-links" id="primary-navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="transparency.html">Transparency</a></li>
+        <li><a href="lgus.html">Explore Pangasinan</a></li>
+        <li><a href="government.html">Government</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<main id="main-content" tabindex="-1">
+<link rel="stylesheet" href="assets/historical-budget.css">
+<section class="hb" id="historical-budget">
+  <header><p class="hb-kicker">Budget evidence / GAA FY2020-2026</p><h1>Historical appropriations</h1><p>Seven enacted budgets, viewed one fiscal year at a time. Appropriations are authority to spend, <strong>not actual spending</strong>.</p></header>
+  <nav aria-label="Budget evidence"><a href="national-budget.html">FY2027 project comparisons</a><a href="historical-budget.html" aria-current="page">Historical GAA</a><a href="budget-context.html">Budget context</a><a href="budget-hearings.html">Hearings</a></nav>
+  <p class="hb-note">These are program-name search matches, not verified Pangasinan locations or a provincial budget total. Shared allocations and similarly named places outside the province may appear. No match does not mean no funding. FY2027 proposals are never added to this series.</p>
+  <p id="hb-status" role="status" aria-live="polite">Loading locally reviewed snapshot. Missing data is not zero.</p>
+  <div id="hb-content" hidden>
+    <form id="hb-filters" role="search" aria-label="Filter historical appropriations">
+      <label>Fiscal year<select id="hb-year"></select></label>
+      <label>Department<select id="hb-department"><option value="">All departments</option></select></label>
+      <label>Collected query<select id="hb-query"><option value="">All collected queries</option></select></label>
+      <label>Search program names<input id="hb-search" type="search"></label>
+      <button type="reset">Reset</button><button type="button" id="hb-csv">Download filtered CSV</button>
+    </form>
+    <section aria-labelledby="hb-annual-heading"><h2 id="hb-annual-heading">Annual appropriations for selected families</h2><p>Department, collected query and text filters apply to each year independently. Known zero remains zero; unknown remains unknown. Positive amounts, not source line counts, identify funded family-years. These name-match sums are not geographic totals.</p><div id="hb-chart" class="hb-chart" role="img" aria-label="Annual appropriations bar chart. Exact values and unknown counts are in the following table."></div><div class="hb-scroll"><table><caption>Annual PHP, not added across years</caption><thead><tr><th scope="col">Fiscal year</th><th scope="col">Known PHP</th><th scope="col">Positive families</th><th scope="col">Known / selected</th><th scope="col">Unknown</th></tr></thead><tbody id="hb-annual"></tbody></table></div></section>
+    <h2>Program families</h2><p id="hb-count" role="status" aria-live="polite"></p><div class="hb-pager"><button id="hb-prev" type="button">Previous</button><span id="hb-page"></span><button id="hb-next" type="button">Next</button></div>
+    <div class="hb-scroll"><table><caption id="hb-caption">Enacted GAA appropriations</caption><thead><tr><th scope="col">Program / family</th><th scope="col">Department / agency</th><th scope="col">Annual PHP</th><th scope="col">Query / evidence</th></tr></thead><tbody id="hb-rows"></tbody></table></div>
+    <section><h2>Coverage and sources</h2><p id="hb-coverage-summary"></p><p>Amounts retain the source's integer pesos, without multiplying by thousands. The API zero-fills absent source years; source counts can also carry a family forward at zero. Renamed programs remain separate families. Family identifiers are namespaced by department, with overlapping queries reconciled once.</p><div class="hb-scroll"><table><caption>Every attempted department and query, including no matches and errors</caption><thead><tr><th>Department</th><th>Query</th><th>Matched</th><th>Fetched</th><th>Coverage</th></tr></thead><tbody id="hb-coverage"></tbody></table></div><details><summary>Retrieval dates, checksums and review metadata</summary><pre id="hb-sources"></pre></details></section>
+  </div>
+  <noscript><p>JavaScript is needed for filtering. Download the <a href="data/historical-budget/programs.json">programs JSON</a>, <a href="data/historical-budget/coverage.json">coverage</a> and <a href="data/historical-budget/manifest.json">source manifest</a>.</p></noscript>
+</section>
+<script src="assets/historical-budget.js" defer></script>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand-col">
+        <div class="footer-brand">
+          <img src="logo.svg" alt="Better Pangasinan logo" width="48" height="48" />
+          <div>
+            <div class="name">Better Pangasinan</div>
+            <p>An independent, volunteer-led civic technology initiative for Pangasinan. Not an official government website; no government endorsement or formal affiliation is claimed.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h5>Site</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="transparency.html">Transparency</a></li>
+          <li><a href="lgus.html">Explore Pangasinan</a></li>
+          <li><a href="government.html">Government</a></li>
+          <li><a href="municipality-map.html">Municipality map</a></li>
+          <li><a href="hospitals.html">Hospitals &amp; hotlines</a></li>
+          <li><a href="history.html">History &amp; culture</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects &amp; Tools</a></li>
+          <li><a href="volunteer.html">Get Involved</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Official Sources</h5>
+        <ul>
+          <li><a href="https://www.dilg.gov.ph/" target="_blank" rel="noopener">Department of the Interior and Local Government</a></li>
+          <li><a href="https://pangasinan.gov.ph/" target="_blank" rel="noopener">Province of Pangasinan</a></li>
+          <li><a href="https://www.coa.gov.ph/" target="_blank" rel="noopener">Commission on Audit</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Our Policies</h5>
+        <ul>
+          <li><a href="methodology.html">Methodology &amp; Sources</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="corrections.html">Corrections</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Public records need context. Check the cited source and reporting period before relying on a record.</p>
+    </div>
+  </div>
+</footer>
+
+
+<script src="assets/script.js"></script>
+</body>
+</html>

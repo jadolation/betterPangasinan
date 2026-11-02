@@ -1,0 +1,1349 @@
+{
+  "data": [
+    {
+      "description": "Automatic Appropriations",
+      "id": "04",
+      "slug": "automatic-appropriations",
+      "years": {
+        "2020": {
+          "amount": 1197545664000,
+          "count": 17324
+        },
+        "2021": {
+          "amount": 1350773044000,
+          "count": 14714
+        },
+        "2022": {
+          "amount": 1592227769000,
+          "count": 15110
+        },
+        "2023": {
+          "amount": 1521859080000,
+          "count": 15261
+        },
+        "2024": {
+          "amount": 1664138910000,
+          "count": 15517
+        },
+        "2025": {
+          "amount": 2020358496000,
+          "count": 15821
+        },
+        "2026": {
+          "amount": 2295852725000,
+          "count": 15630
+        }
+      }
+    },
+    {
+      "description": "Department of Education (DepEd)",
+      "id": "07",
+      "slug": "department-of-education-deped",
+      "years": {
+        "2020": {
+          "amount": 554206444000,
+          "count": 283749
+        },
+        "2021": {
+          "amount": 595069421000,
+          "count": 280315
+        },
+        "2022": {
+          "amount": 633323678000,
+          "count": 308586
+        },
+        "2023": {
+          "amount": 721794529000,
+          "count": 306570
+        },
+        "2024": {
+          "amount": 762095206000,
+          "count": 312017
+        },
+        "2025": {
+          "amount": 782171034000,
+          "count": 323523
+        },
+        "2026": {
+          "amount": 1015309677000,
+          "count": 336228
+        }
+      }
+    },
+    {
+      "description": "Department of Public Works and Highways (DPWH)",
+      "id": "18",
+      "slug": "department-of-public-works-and-highways-dpwh",
+      "years": {
+        "2020": {
+          "amount": 581674912000,
+          "count": 68900
+        },
+        "2021": {
+          "amount": 695672672000,
+          "count": 35388
+        },
+        "2022": {
+          "amount": 786600136000,
+          "count": 112076
+        },
+        "2023": {
+          "amount": 894165876000,
+          "count": 134280
+        },
+        "2024": {
+          "amount": 997884938000,
+          "count": 158430
+        },
+        "2025": {
+          "amount": 1088800308000,
+          "count": 183594
+        },
+        "2026": {
+          "amount": 530898861000,
+          "count": 201782
+        }
+      }
+    },
+    {
+      "description": "Congress of the Philippines (CONGRESS)",
+      "id": "01",
+      "slug": "congress-of-the-philippines-congress",
+      "years": {
+        "2020": {
+          "amount": 294486116000,
+          "count": 648
+        },
+        "2021": {
+          "amount": 316870750000,
+          "count": 552
+        },
+        "2022": {
+          "amount": 322628979000,
+          "count": 583
+        },
+        "2023": {
+          "amount": 364579212000,
+          "count": 614
+        },
+        "2024": {
+          "amount": 354059846000,
+          "count": 580
+        },
+        "2025": {
+          "amount": 441503446000,
+          "count": 620
+        },
+        "2026": {
+          "amount": 476440976000,
+          "count": 589
+        }
+      }
+    },
+    {
+      "description": "Department of the Interior and Local Government (DILG)",
+      "id": "14",
+      "slug": "department-of-the-interior-and-local-government-dilg",
+      "years": {
+        "2020": {
+          "amount": 241572570000,
+          "count": 8237
+        },
+        "2021": {
+          "amount": 249306994000,
+          "count": 7167
+        },
+        "2022": {
+          "amount": 251274945000,
+          "count": 7334
+        },
+        "2023": {
+          "amount": 255269148000,
+          "count": 7318
+        },
+        "2024": {
+          "amount": 265510783000,
+          "count": 7516
+        },
+        "2025": {
+          "amount": 281964450000,
+          "count": 8162
+        },
+        "2026": {
+          "amount": 310472131000,
+          "count": 8765
+        }
+      }
+    },
+    {
+      "description": "Department of National Defense (DND)",
+      "id": "17",
+      "slug": "department-of-national-defense-dnd",
+      "years": {
+        "2020": {
+          "amount": 192056583000,
+          "count": 3000
+        },
+        "2021": {
+          "amount": 205817505000,
+          "count": 2629
+        },
+        "2022": {
+          "amount": 220861650000,
+          "count": 2801
+        },
+        "2023": {
+          "amount": 204974445000,
+          "count": 2877
+        },
+        "2024": {
+          "amount": 242394606000,
+          "count": 2973
+        },
+        "2025": {
+          "amount": 275973823000,
+          "count": 3002
+        },
+        "2026": {
+          "amount": 309996299000,
+          "count": 3185
+        }
+      }
+    },
+    {
+      "description": "Department of Health (DOH)",
+      "id": "13",
+      "slug": "department-of-health-doh",
+      "years": {
+        "2020": {
+          "amount": 104493263000,
+          "count": 7710
+        },
+        "2021": {
+          "amount": 138887917000,
+          "count": 6263
+        },
+        "2022": {
+          "amount": 188361592000,
+          "count": 6889
+        },
+        "2023": {
+          "amount": 214456345000,
+          "count": 7489
+        },
+        "2024": {
+          "amount": 246746830000,
+          "count": 8174
+        },
+        "2025": {
+          "amount": 253360769000,
+          "count": 8945
+        },
+        "2026": {
+          "amount": 304586458000,
+          "count": 9821
+        }
+      }
+    },
+    {
+      "description": "Budgetary Support to Government Corporations (BSGC)",
+      "id": "35",
+      "slug": "budgetary-support-to-government-corporations-bsgc",
+      "years": {
+        "2020": {
+          "amount": 197635767000,
+          "count": 700
+        },
+        "2021": {
+          "amount": 158335597000,
+          "count": 572
+        },
+        "2022": {
+          "amount": 180513979000,
+          "count": 1017
+        },
+        "2023": {
+          "amount": 193148096000,
+          "count": 1128
+        },
+        "2024": {
+          "amount": 198025653000,
+          "count": 989
+        },
+        "2025": {
+          "amount": 137278174000,
+          "count": 1021
+        },
+        "2026": {
+          "amount": 274696984000,
+          "count": 1177
+        }
+      }
+    },
+    {
+      "description": "Department of Social Welfare and Development (DSWD)",
+      "id": "20",
+      "slug": "department-of-social-welfare-and-development-dswd",
+      "years": {
+        "2020": {
+          "amount": 164022505000,
+          "count": 9507
+        },
+        "2021": {
+          "amount": 176890261000,
+          "count": 7513
+        },
+        "2022": {
+          "amount": 205001435000,
+          "count": 8087
+        },
+        "2023": {
+          "amount": 199511168000,
+          "count": 8151
+        },
+        "2024": {
+          "amount": 248108908000,
+          "count": 8065
+        },
+        "2025": {
+          "amount": 217537017000,
+          "count": 4552
+        },
+        "2026": {
+          "amount": 270189401000,
+          "count": 4781
+        }
+      }
+    },
+    {
+      "description": "Department of Agriculture (DA)",
+      "id": "05",
+      "slug": "department-of-agriculture-da",
+      "years": {
+        "2020": {
+          "amount": 64676405000,
+          "count": 28558
+        },
+        "2021": {
+          "amount": 71039875000,
+          "count": 16576
+        },
+        "2022": {
+          "amount": 71012278000,
+          "count": 24495
+        },
+        "2023": {
+          "amount": 101210953000,
+          "count": 26595
+        },
+        "2024": {
+          "amount": 114277479000,
+          "count": 27790
+        },
+        "2025": {
+          "amount": 125442603000,
+          "count": 30071
+        },
+        "2026": {
+          "amount": 186513434000,
+          "count": 30289
+        }
+      }
+    },
+    {
+      "description": "State Universities and Colleges (SUCs)",
+      "id": "08",
+      "slug": "state-universities-and-colleges-sucs",
+      "years": {
+        "2020": {
+          "amount": 77351897000,
+          "count": 35359
+        },
+        "2021": {
+          "amount": 90107578000,
+          "count": 20822
+        },
+        "2022": {
+          "amount": 108427183000,
+          "count": 27962
+        },
+        "2023": {
+          "amount": 111458563000,
+          "count": 27743
+        },
+        "2024": {
+          "amount": 132929339000,
+          "count": 28488
+        },
+        "2025": {
+          "amount": 127227504000,
+          "count": 29145
+        },
+        "2026": {
+          "amount": 144069532000,
+          "count": 29935
+        }
+      }
+    },
+    {
+      "description": "Department of Transportation (DOTr)",
+      "id": "38",
+      "slug": "department-of-transportation-dotr",
+      "years": {
+        "2020": {
+          "amount": 100645703000,
+          "count": 6176
+        },
+        "2021": {
+          "amount": 87897530000,
+          "count": 4725
+        },
+        "2022": {
+          "amount": 75827546000,
+          "count": 5501
+        },
+        "2023": {
+          "amount": 105955609000,
+          "count": 6046
+        },
+        "2024": {
+          "amount": 73892056000,
+          "count": 6053
+        },
+        "2025": {
+          "amount": 87998098000,
+          "count": 6238
+        },
+        "2026": {
+          "amount": 137846388000,
+          "count": 6347
+        }
+      }
+    },
+    {
+      "description": "Other Executive Offices (OEOs)",
+      "id": "26",
+      "slug": "other-executive-offices-oeos",
+      "years": {
+        "2020": {
+          "amount": 61762823000,
+          "count": 7647
+        },
+        "2021": {
+          "amount": 67130828000,
+          "count": 5686
+        },
+        "2022": {
+          "amount": 47437703000,
+          "count": 6788
+        },
+        "2023": {
+          "amount": 50596066000,
+          "count": 7378
+        },
+        "2024": {
+          "amount": 64950823000,
+          "count": 7123
+        },
+        "2025": {
+          "amount": 65270027000,
+          "count": 9359
+        },
+        "2026": {
+          "amount": 82391203000,
+          "count": 9572
+        }
+      }
+    },
+    {
+      "description": "The Judiciary (JUD)",
+      "id": "29",
+      "slug": "the-judiciary-jud",
+      "years": {
+        "2020": {
+          "amount": 41233143000,
+          "count": 1095
+        },
+        "2021": {
+          "amount": 45310160000,
+          "count": 936
+        },
+        "2022": {
+          "amount": 46983010000,
+          "count": 935
+        },
+        "2023": {
+          "amount": 54905121000,
+          "count": 1005
+        },
+        "2024": {
+          "amount": 60176180000,
+          "count": 1034
+        },
+        "2025": {
+          "amount": 64012900000,
+          "count": 1092
+        },
+        "2026": {
+          "amount": 70610869000,
+          "count": 1112
+        }
+      }
+    },
+    {
+      "description": "Department of Labor and Employment (DOLE)",
+      "id": "16",
+      "slug": "department-of-labor-and-employment-dole",
+      "years": {
+        "2020": {
+          "amount": 17907698000,
+          "count": 9920
+        },
+        "2021": {
+          "amount": 37127753000,
+          "count": 7752
+        },
+        "2022": {
+          "amount": 51296621000,
+          "count": 7979
+        },
+        "2023": {
+          "amount": 47200584000,
+          "count": 9771
+        },
+        "2024": {
+          "amount": 61823078000,
+          "count": 9427
+        },
+        "2025": {
+          "amount": 51754094000,
+          "count": 8934
+        },
+        "2026": {
+          "amount": 61810699000,
+          "count": 9432
+        }
+      }
+    },
+    {
+      "description": "Department of Justice (DOJ)",
+      "id": "15",
+      "slug": "department-of-justice-doj",
+      "years": {
+        "2020": {
+          "amount": 23465112000,
+          "count": 2958
+        },
+        "2021": {
+          "amount": 24606851000,
+          "count": 2492
+        },
+        "2022": {
+          "amount": 26682044000,
+          "count": 2670
+        },
+        "2023": {
+          "amount": 30109609000,
+          "count": 2680
+        },
+        "2024": {
+          "amount": 38238947000,
+          "count": 2694
+        },
+        "2025": {
+          "amount": 42188372000,
+          "count": 2819
+        },
+        "2026": {
+          "amount": 45524890000,
+          "count": 2915
+        }
+      }
+    },
+    {
+      "description": "Department of Finance (DOF)",
+      "id": "11",
+      "slug": "department-of-finance-dof",
+      "years": {
+        "2020": {
+          "amount": 19974461000,
+          "count": 7999
+        },
+        "2021": {
+          "amount": 17475911000,
+          "count": 5871
+        },
+        "2022": {
+          "amount": 21930975000,
+          "count": 6196
+        },
+        "2023": {
+          "amount": 24770075000,
+          "count": 5887
+        },
+        "2024": {
+          "amount": 26844446000,
+          "count": 6252
+        },
+        "2025": {
+          "amount": 32490098000,
+          "count": 6232
+        },
+        "2026": {
+          "amount": 33192864000,
+          "count": 6382
+        }
+      }
+    },
+    {
+      "description": "Department of Science and Technology (DOST)",
+      "id": "19",
+      "slug": "department-of-science-and-technology-dost",
+      "years": {
+        "2020": {
+          "amount": 20523615000,
+          "count": 7305
+        },
+        "2021": {
+          "amount": 25187979000,
+          "count": 5478
+        },
+        "2022": {
+          "amount": 24268189000,
+          "count": 5959
+        },
+        "2023": {
+          "amount": 24834334000,
+          "count": 5924
+        },
+        "2024": {
+          "amount": 27217199000,
+          "count": 6076
+        },
+        "2025": {
+          "amount": 28994673000,
+          "count": 6253
+        },
+        "2026": {
+          "amount": 32124367000,
+          "count": 6448
+        }
+      }
+    },
+    {
+      "description": "Department of Foreign Affairs (DFA)",
+      "id": "12",
+      "slug": "department-of-foreign-affairs-dfa",
+      "years": {
+        "2020": {
+          "amount": 24366186000,
+          "count": 6246
+        },
+        "2021": {
+          "amount": 22618559000,
+          "count": 5578
+        },
+        "2022": {
+          "amount": 21922562000,
+          "count": 6663
+        },
+        "2023": {
+          "amount": 20855337000,
+          "count": 6730
+        },
+        "2024": {
+          "amount": 24828418000,
+          "count": 5786
+        },
+        "2025": {
+          "amount": 27852799000,
+          "count": 5586
+        },
+        "2026": {
+          "amount": 28907031000,
+          "count": 5833
+        }
+      }
+    },
+    {
+      "description": "Department of Environment and Natural Resources (DENR)",
+      "id": "10",
+      "slug": "department-of-environment-and-natural-resources-denr",
+      "years": {
+        "2020": {
+          "amount": 26442523000,
+          "count": 40375
+        },
+        "2021": {
+          "amount": 24584025000,
+          "count": 32233
+        },
+        "2022": {
+          "amount": 26466629000,
+          "count": 33724
+        },
+        "2023": {
+          "amount": 24333679000,
+          "count": 32604
+        },
+        "2024": {
+          "amount": 26394421000,
+          "count": 33782
+        },
+        "2025": {
+          "amount": 27292231000,
+          "count": 33461
+        },
+        "2026": {
+          "amount": 28268276000,
+          "count": 34795
+        }
+      }
+    },
+    {
+      "description": "Office of the President (OP)",
+      "id": "02",
+      "slug": "office-of-the-president-op",
+      "years": {
+        "2020": {
+          "amount": 8250182000,
+          "count": 573
+        },
+        "2021": {
+          "amount": 8238691000,
+          "count": 406
+        },
+        "2022": {
+          "amount": 8235511000,
+          "count": 486
+        },
+        "2023": {
+          "amount": 9091722000,
+          "count": 485
+        },
+        "2024": {
+          "amount": 10707927000,
+          "count": 446
+        },
+        "2025": {
+          "amount": 15906201000,
+          "count": 493
+        },
+        "2026": {
+          "amount": 28104653000,
+          "count": 536
+        }
+      }
+    },
+    {
+      "description": "Commission on Elections (COMELEC)",
+      "id": "32",
+      "slug": "commission-on-elections-comelec",
+      "years": {
+        "2020": {
+          "amount": 4043226000,
+          "count": 769
+        },
+        "2021": {
+          "amount": 14815258000,
+          "count": 759
+        },
+        "2022": {
+          "amount": 26928529000,
+          "count": 821
+        },
+        "2023": {
+          "amount": 5972914000,
+          "count": 769
+        },
+        "2024": {
+          "amount": 40340400000,
+          "count": 808
+        },
+        "2025": {
+          "amount": 35502671000,
+          "count": 720
+        },
+        "2026": {
+          "amount": 20196313000,
+          "count": 713
+        }
+      }
+    },
+    {
+      "description": "Department of Information and Communications Technology (DICT)",
+      "id": "37",
+      "slug": "department-of-information-and-communications-technology-dict",
+      "years": {
+        "2020": {
+          "amount": 11344458000,
+          "count": 1720
+        },
+        "2021": {
+          "amount": 12139062000,
+          "count": 1288
+        },
+        "2022": {
+          "amount": 10203868000,
+          "count": 1389
+        },
+        "2023": {
+          "amount": 10879889000,
+          "count": 1337
+        },
+        "2024": {
+          "amount": 9515115000,
+          "count": 1343
+        },
+        "2025": {
+          "amount": 15097761000,
+          "count": 1416
+        },
+        "2026": {
+          "amount": 18217677000,
+          "count": 1533
+        }
+      }
+    },
+    {
+      "description": "Commission on Audit (COA)",
+      "id": "31",
+      "slug": "commission-on-audit-coa",
+      "years": {
+        "2020": {
+          "amount": 13086106000,
+          "count": 1923
+        },
+        "2021": {
+          "amount": 14067536000,
+          "count": 1789
+        },
+        "2022": {
+          "amount": 14662266000,
+          "count": 1750
+        },
+        "2023": {
+          "amount": 13963272000,
+          "count": 1985
+        },
+        "2024": {
+          "amount": 14366236000,
+          "count": 1855
+        },
+        "2025": {
+          "amount": 13617340000,
+          "count": 1859
+        },
+        "2026": {
+          "amount": 15610903000,
+          "count": 1874
+        }
+      }
+    },
+    {
+      "description": "National Economic and Development Authority (NEDA)",
+      "id": "24",
+      "slug": "national-economic-and-development-authority-neda",
+      "years": {
+        "2020": {
+          "amount": 12132306000,
+          "count": 8461
+        },
+        "2021": {
+          "amount": 11410931000,
+          "count": 7303
+        },
+        "2022": {
+          "amount": 13867104000,
+          "count": 7545
+        },
+        "2023": {
+          "amount": 13238940000,
+          "count": 7487
+        },
+        "2024": {
+          "amount": 12234002000,
+          "count": 7244
+        },
+        "2025": {
+          "amount": 12634992000,
+          "count": 8294
+        },
+        "2026": {
+          "amount": 13951130000,
+          "count": 8219
+        }
+      }
+    },
+    {
+      "description": "Department of Migrant Workers (DMW)",
+      "id": "40",
+      "slug": "department-of-migrant-workers-dmw",
+      "years": {
+        "2020": {
+          "amount": 0,
+          "count": 0
+        },
+        "2021": {
+          "amount": 0,
+          "count": 0
+        },
+        "2022": {
+          "amount": 0,
+          "count": 0
+        },
+        "2023": {
+          "amount": 16125272000,
+          "count": 551
+        },
+        "2024": {
+          "amount": 10128938000,
+          "count": 537
+        },
+        "2025": {
+          "amount": 8749359000,
+          "count": 528
+        },
+        "2026": {
+          "amount": 11745227000,
+          "count": 2378
+        }
+      }
+    },
+    {
+      "description": "Department of Trade and Industry (DTI)",
+      "id": "22",
+      "slug": "department-of-trade-and-industry-dti",
+      "years": {
+        "2020": {
+          "amount": 21355387000,
+          "count": 13189
+        },
+        "2021": {
+          "amount": 21859317000,
+          "count": 11332
+        },
+        "2022": {
+          "amount": 22397725000,
+          "count": 11620
+        },
+        "2023": {
+          "amount": 6577491000,
+          "count": 8075
+        },
+        "2024": {
+          "amount": 8887406000,
+          "count": 7915
+        },
+        "2025": {
+          "amount": 9699094000,
+          "count": 7871
+        },
+        "2026": {
+          "amount": 10161910000,
+          "count": 7615
+        }
+      }
+    },
+    {
+      "description": "Allocations to Local Government Units (ALGU)",
+      "id": "36",
+      "slug": "allocations-to-local-government-units-algu",
+      "years": {
+        "2020": {
+          "amount": 4783236000,
+          "count": 590
+        },
+        "2021": {
+          "amount": 4838161000,
+          "count": 167
+        },
+        "2022": {
+          "amount": 5677486000,
+          "count": 744
+        },
+        "2023": {
+          "amount": 5288226000,
+          "count": 849
+        },
+        "2024": {
+          "amount": 5584841000,
+          "count": 1002
+        },
+        "2025": {
+          "amount": 8857537000,
+          "count": 1116
+        },
+        "2026": {
+          "amount": 6783744000,
+          "count": 1208
+        }
+      }
+    },
+    {
+      "description": "Office of the Ombudsman (OMB)",
+      "id": "33",
+      "slug": "office-of-the-ombudsman-omb",
+      "years": {
+        "2020": {
+          "amount": 4105784000,
+          "count": 509
+        },
+        "2021": {
+          "amount": 4621564000,
+          "count": 384
+        },
+        "2022": {
+          "amount": 4781159000,
+          "count": 435
+        },
+        "2023": {
+          "amount": 4787102000,
+          "count": 508
+        },
+        "2024": {
+          "amount": 5600153000,
+          "count": 512
+        },
+        "2025": {
+          "amount": 5872154000,
+          "count": 518
+        },
+        "2026": {
+          "amount": 6577491000,
+          "count": 521
+        }
+      }
+    },
+    {
+      "description": "Department of Energy (DOE)",
+      "id": "09",
+      "slug": "department-of-energy-doe",
+      "years": {
+        "2020": {
+          "amount": 2336639000,
+          "count": 1047
+        },
+        "2021": {
+          "amount": 2198072000,
+          "count": 737
+        },
+        "2022": {
+          "amount": 2190059000,
+          "count": 731
+        },
+        "2023": {
+          "amount": 2222544000,
+          "count": 721
+        },
+        "2024": {
+          "amount": 2615797000,
+          "count": 744
+        },
+        "2025": {
+          "amount": 3085204000,
+          "count": 793
+        },
+        "2026": {
+          "amount": 4434160000,
+          "count": 960
+        }
+      }
+    },
+    {
+      "description": "Department of Tourism (DOT)",
+      "id": "21",
+      "slug": "department-of-tourism-dot",
+      "years": {
+        "2020": {
+          "amount": 4057580000,
+          "count": 3021
+        },
+        "2021": {
+          "amount": 3131285000,
+          "count": 2477
+        },
+        "2022": {
+          "amount": 2794350000,
+          "count": 2525
+        },
+        "2023": {
+          "amount": 3786260000,
+          "count": 2804
+        },
+        "2024": {
+          "amount": 3492009000,
+          "count": 2448
+        },
+        "2025": {
+          "amount": 3897609000,
+          "count": 2445
+        },
+        "2026": {
+          "amount": 4225126000,
+          "count": 2349
+        }
+      }
+    },
+    {
+      "description": "Department of Budget and Management (DBM)",
+      "id": "06",
+      "slug": "department-of-budget-and-management-dbm",
+      "years": {
+        "2020": {
+          "amount": 2331352000,
+          "count": 1975
+        },
+        "2021": {
+          "amount": 1908137000,
+          "count": 1535
+        },
+        "2022": {
+          "amount": 2118512000,
+          "count": 1483
+        },
+        "2023": {
+          "amount": 1816877000,
+          "count": 1302
+        },
+        "2024": {
+          "amount": 2585673000,
+          "count": 1365
+        },
+        "2025": {
+          "amount": 3191835000,
+          "count": 1405
+        },
+        "2026": {
+          "amount": 3569134000,
+          "count": 1435
+        }
+      }
+    },
+    {
+      "description": "Civil Service Commission (CSC)",
+      "id": "30",
+      "slug": "civil-service-commission-csc",
+      "years": {
+        "2020": {
+          "amount": 1792069000,
+          "count": 2133
+        },
+        "2021": {
+          "amount": 1881434000,
+          "count": 2003
+        },
+        "2022": {
+          "amount": 1969425000,
+          "count": 1960
+        },
+        "2023": {
+          "amount": 2154485000,
+          "count": 1964
+        },
+        "2024": {
+          "amount": 2342621000,
+          "count": 2035
+        },
+        "2025": {
+          "amount": 2883229000,
+          "count": 2081
+        },
+        "2026": {
+          "amount": 3001212000,
+          "count": 2197
+        }
+      }
+    },
+    {
+      "description": "Presidential Communications Office (PCO)",
+      "id": "25",
+      "slug": "presidential-communications-office-pco",
+      "years": {
+        "2020": {
+          "amount": 1757722000,
+          "count": 1057
+        },
+        "2021": {
+          "amount": 1617825000,
+          "count": 810
+        },
+        "2022": {
+          "amount": 2019061000,
+          "count": 855
+        },
+        "2023": {
+          "amount": 1130587000,
+          "count": 815
+        },
+        "2024": {
+          "amount": 2356142000,
+          "count": 849
+        },
+        "2025": {
+          "amount": 2168934000,
+          "count": 830
+        },
+        "2026": {
+          "amount": 2549948000,
+          "count": 862
+        }
+      }
+    },
+    {
+      "description": "Department of Human Settlements and Urban Development (DHSUD)",
+      "id": "39",
+      "slug": "department-of-human-settlements-and-urban-development-dhsud",
+      "years": {
+        "2020": {
+          "amount": 893061000,
+          "count": 2519
+        },
+        "2021": {
+          "amount": 682601000,
+          "count": 3616
+        },
+        "2022": {
+          "amount": 986257000,
+          "count": 4465
+        },
+        "2023": {
+          "amount": 1578495000,
+          "count": 4115
+        },
+        "2024": {
+          "amount": 3393659000,
+          "count": 4457
+        },
+        "2025": {
+          "amount": 3749046000,
+          "count": 3821
+        },
+        "2026": {
+          "amount": 2015168000,
+          "count": 3683
+        }
+      }
+    },
+    {
+      "description": "Commission on Human Rights (CHR)",
+      "id": "34",
+      "slug": "commission-on-human-rights-chr",
+      "years": {
+        "2020": {
+          "amount": 963625000,
+          "count": 434
+        },
+        "2021": {
+          "amount": 965965000,
+          "count": 357
+        },
+        "2022": {
+          "amount": 1002087000,
+          "count": 375
+        },
+        "2023": {
+          "amount": 1038393000,
+          "count": 418
+        },
+        "2024": {
+          "amount": 1025553000,
+          "count": 373
+        },
+        "2025": {
+          "amount": 1196272000,
+          "count": 381
+        },
+        "2026": {
+          "amount": 1412244000,
+          "count": 387
+        }
+      }
+    },
+    {
+      "description": "Office of the Vice-President (OVP)",
+      "id": "03",
+      "slug": "office-of-the-vice-president-ovp",
+      "years": {
+        "2020": {
+          "amount": 708019000,
+          "count": 100
+        },
+        "2021": {
+          "amount": 908791000,
+          "count": 90
+        },
+        "2022": {
+          "amount": 713408000,
+          "count": 95
+        },
+        "2023": {
+          "amount": 2356614000,
+          "count": 100
+        },
+        "2024": {
+          "amount": 1885462000,
+          "count": 113
+        },
+        "2025": {
+          "amount": 744146000,
+          "count": 102
+        },
+        "2026": {
+          "amount": 902895000,
+          "count": 116
+        }
+      }
+    },
+    {
+      "description": "Joint Legislative-Executive Councils (JLEC)",
+      "id": "28",
+      "slug": "joint-legislative-executive-councils-jlec",
+      "years": {
+        "2020": {
+          "amount": 4643000,
+          "count": 58
+        },
+        "2021": {
+          "amount": 4160000,
+          "count": 27
+        },
+        "2022": {
+          "amount": 4290000,
+          "count": 32
+        },
+        "2023": {
+          "amount": 3088000,
+          "count": 31
+        },
+        "2024": {
+          "amount": 0,
+          "count": 0
+        },
+        "2025": {
+          "amount": 0,
+          "count": 0
+        },
+        "2026": {
+          "amount": 0,
+          "count": 0
+        }
+      }
+    }
+  ],
+  "meta": {
+    "currency": "PHP",
+    "dataset": "gaa",
+    "scale": "pesos",
+    "total_items": 38,
+    "years": [
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ]
+  }
+}

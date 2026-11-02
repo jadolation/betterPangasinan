@@ -1,0 +1,7 @@
+{
+  "url": "https://budget.bettergov.ph/api/v1/budget-cycle/departments/18",
+  "retrieved_at": "2026-11-01T13:18:49.951153+00:00",
+  "status": 404,
+  "error": "HTTP Error 404: Not Found",
+  "payload_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+}

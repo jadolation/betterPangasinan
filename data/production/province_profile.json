@@ -1,0 +1,24 @@
+{
+  "administrative_listing_as_of": "2025-07-31",
+  "availability": "available",
+  "barangay_count_note": "Reported provincial reference count; collected barangay coverage is reported independently by the geographic dataset.",
+  "barangays_reported": 1364,
+  "capital": "Lingayen",
+  "cities": 4,
+  "id": "province-pangasinan",
+  "is_mock": false,
+  "lgu_count": 48,
+  "municipalities": 44,
+  "name": "Pangasinan",
+  "population": 3188540,
+  "population_reference_date": "2024-07-01",
+  "psgc": "0105500000",
+  "publication_status": "approved",
+  "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+  "source_ids": [
+    "source-psa-psgc-20250731",
+    "source-pangasinan-province-reference"
+  ],
+  "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+  "verification_status": "reviewed"
+}

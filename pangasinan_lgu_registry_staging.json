@@ -1,0 +1,493 @@
+{
+  "metadata": {
+    "province_psgc": "0105500000",
+    "source": "Philippine Statistics Authority",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+    "population_reference_date": "2024-07-01",
+    "administrative_listing_as_of": "2025-07-31",
+    "review_status": "staging_not_for_publication",
+    "note": "Collection transcribed from official PSA registry; validate against current release and Better Pangasinan schemas before approving."
+  },
+  "lgus": [
+    {
+      "psgc": "0105503000",
+      "name": "City of Alaminos",
+      "classification": "city",
+      "population_2024": 100430,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105518000",
+      "name": "City of Dagupan",
+      "classification": "city",
+      "population_2024": 174777,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105532000",
+      "name": "City of San Carlos",
+      "classification": "city",
+      "population_2024": 208330,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105546000",
+      "name": "City of Urdaneta",
+      "classification": "city",
+      "population_2024": 145935,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105501000",
+      "name": "Agno",
+      "classification": "municipality",
+      "population_2024": 29270,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105502000",
+      "name": "Aguilar",
+      "classification": "municipality",
+      "population_2024": 45363,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105504000",
+      "name": "Alcala",
+      "classification": "municipality",
+      "population_2024": 49479,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105505000",
+      "name": "Anda",
+      "classification": "municipality",
+      "population_2024": 42688,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105506000",
+      "name": "Asingan",
+      "classification": "municipality",
+      "population_2024": 58349,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105507000",
+      "name": "Balungao",
+      "classification": "municipality",
+      "population_2024": 30678,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105508000",
+      "name": "Bani",
+      "classification": "municipality",
+      "population_2024": 52715,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105509000",
+      "name": "Basista",
+      "classification": "municipality",
+      "population_2024": 37840,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105510000",
+      "name": "Bautista",
+      "classification": "municipality",
+      "population_2024": 35728,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105511000",
+      "name": "Bayambang",
+      "classification": "municipality",
+      "population_2024": 129506,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105512000",
+      "name": "Binalonan",
+      "classification": "municipality",
+      "population_2024": 56560,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105513000",
+      "name": "Binmaley",
+      "classification": "municipality",
+      "population_2024": 88006,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105514000",
+      "name": "Bolinao",
+      "classification": "municipality",
+      "population_2024": 84658,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105515000",
+      "name": "Bugallon",
+      "classification": "municipality",
+      "population_2024": 76027,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105516000",
+      "name": "Burgos",
+      "classification": "municipality",
+      "population_2024": 23240,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105517000",
+      "name": "Calasiao",
+      "classification": "municipality",
+      "population_2024": 100686,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105519000",
+      "name": "Dasol",
+      "classification": "municipality",
+      "population_2024": 31842,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105520000",
+      "name": "Infanta",
+      "classification": "municipality",
+      "population_2024": 26837,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105521000",
+      "name": "Labrador",
+      "classification": "municipality",
+      "population_2024": 26995,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105522000",
+      "name": "Lingayen",
+      "classification": "municipality",
+      "population_2024": 108510,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105523000",
+      "name": "Mabini",
+      "classification": "municipality",
+      "population_2024": 26589,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105524000",
+      "name": "Malasiqui",
+      "classification": "municipality",
+      "population_2024": 144344,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105525000",
+      "name": "Manaoag",
+      "classification": "municipality",
+      "population_2024": 76606,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105526000",
+      "name": "Mangaldan",
+      "classification": "municipality",
+      "population_2024": 113302,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105527000",
+      "name": "Mangatarem",
+      "classification": "municipality",
+      "population_2024": 79648,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105528000",
+      "name": "Mapandan",
+      "classification": "municipality",
+      "population_2024": 38228,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105529000",
+      "name": "Natividad",
+      "classification": "municipality",
+      "population_2024": 26721,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105530000",
+      "name": "Pozorrubio",
+      "classification": "municipality",
+      "population_2024": 75143,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105531000",
+      "name": "Rosales",
+      "classification": "municipality",
+      "population_2024": 67510,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105533000",
+      "name": "San Fabian",
+      "classification": "municipality",
+      "population_2024": 87714,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105534000",
+      "name": "San Jacinto",
+      "classification": "municipality",
+      "population_2024": 44713,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105535000",
+      "name": "San Manuel",
+      "classification": "municipality",
+      "population_2024": 56876,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105536000",
+      "name": "San Nicolas",
+      "classification": "municipality",
+      "population_2024": 40144,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105537000",
+      "name": "San Quintin",
+      "classification": "municipality",
+      "population_2024": 34322,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105538000",
+      "name": "Santa Barbara",
+      "classification": "municipality",
+      "population_2024": 92420,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105539000",
+      "name": "Santa Maria",
+      "classification": "municipality",
+      "population_2024": 34452,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105540000",
+      "name": "Santo Tomas",
+      "classification": "municipality",
+      "population_2024": 14894,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105541000",
+      "name": "Sison",
+      "classification": "municipality",
+      "population_2024": 51439,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105542000",
+      "name": "Sual",
+      "classification": "municipality",
+      "population_2024": 38625,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105543000",
+      "name": "Tayug",
+      "classification": "municipality",
+      "population_2024": 45476,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105544000",
+      "name": "Umingan",
+      "classification": "municipality",
+      "population_2024": 78940,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105545000",
+      "name": "Urbiztondo",
+      "classification": "municipality",
+      "population_2024": 56349,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105547000",
+      "name": "Villasis",
+      "classification": "municipality",
+      "population_2024": 65086,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    },
+    {
+      "psgc": "0105548000",
+      "name": "Laoac",
+      "classification": "municipality",
+      "population_2024": 34550,
+      "population_reference_date": "2024-07-01",
+      "source_url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+      "psgc_release": "2025-07-31",
+      "review_status": "pending_integration_review"
+    }
+  ]
+}

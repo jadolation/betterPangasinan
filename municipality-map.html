@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Municipality Map | Better Pangasinan</title>
+<meta name="description" content="Attributed municipal boundaries with population, coverage limits and an equivalent text list." />
+<link rel="icon" type="image/svg+xml" href="logo.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
+<meta name="data-mode" content="production">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="logo.svg" alt="Better Pangasinan logo" width="48" height="48" />
+      <span class="brand-text">
+        <span class="top">Better Pangasinan</span>
+        <span class="bottom">Independent civic technology</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="sr-only">Menu</span>
+      </button>
+      <ul class="nav-links" id="primary-navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="transparency.html">Transparency</a></li>
+        <li><a href="lgus.html">Explore Pangasinan</a></li>
+        <li><a href="government.html">Government</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<main id="main-content" tabindex="-1">
+<link rel="stylesheet" href="assets/lgu-map.css">
+<section class="page-hero"><div class="wrap"><span class="eyebrow">Geography with evidence</span><h1>Pangasinan municipality map</h1><p class="lede">Explore sourced municipality boundaries. Simplified geography is not a legal boundary survey.</p></div></section>
+<section class="section lgu-geography"><div class="wrap" data-lgu-map>
+<h2>Municipality Coverage</h2>
+<p data-map-status role="status">Loading local geography and the attributed barangay snapshot.</p>
+<p>All 48 municipality shapes are uniquely matched by source name and an interior point contained in the licensed Pangasinan province boundary. Source shapes do not carry PSA identifiers; the matching method is documented in the manifest.</p>
+<p>Focus a boundary to select it and read its population and classification; activate it to open the profile. The text list provides the same links and values.</p>
+<svg viewBox="0 0 960 660" role="group" aria-label="Municipality boundaries with keyboard-accessible profile links"></svg>
+<p data-map-detail aria-live="polite">Select a municipality to inspect its data.</p>
+<h2>Text Alternative</h2><ul data-map-list></ul>
+<noscript><p>The interactive map and full text list require JavaScript. <a href="lgus.html">Browse all LGU profiles</a> or download the <a href="data/geography/municipalities.geojson">48 published boundary records and population attributes</a> and <a href="data/geography/barangays.json">barangay reference snapshot</a>.</p></noscript>
+<h2>Sources And Limits</h2><p data-map-credit>NAMRIA, PSA and OCHA Philippines via geoBoundaries. CC BY 3.0 IGO.</p>
+<p>Boundaries represent 2020, source updated January 2023, geoBoundaries build December 12, 2023. Population comes from the supplied PSA registry, reference July 1, 2024; administrative listing July 31, 2025. These dates are not interchangeable.</p>
+<p>Barangay names and codes: PSGC Cloud (John Joshua A. Lipio), an unofficial mirror, collected November 1, 2026. No PSA release date is supplied by this mirror; this is not a claim of official live currency. <a href="https://psgc.cloud/terms">PSGC Cloud reference-use terms, August 9, 2025</a>. All 48 parent code/name pairs were checked against the supplied registry; no old-code conversion was needed.</p>
+<p><a href="https://creativecommons.org/licenses/by/3.0/igo/">Boundary license</a> · <a href="data/geography/manifest.json">Release, source URLs, retrieval timestamps and hashes</a> · <a href="lgus.html">All LGU profiles</a></p>
+</div></section>
+<script src="assets/lgu-map.js" defer></script>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand-col">
+        <div class="footer-brand">
+          <img src="logo.svg" alt="Better Pangasinan logo" width="48" height="48" />
+          <div>
+            <div class="name">Better Pangasinan</div>
+            <p>An independent, volunteer-led civic technology initiative for Pangasinan. Not an official government website; no government endorsement or formal affiliation is claimed.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h5>Site</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="transparency.html">Transparency</a></li>
+          <li><a href="lgus.html">Explore Pangasinan</a></li>
+          <li><a href="government.html">Government</a></li>
+          <li><a href="municipality-map.html">Municipality map</a></li>
+          <li><a href="hospitals.html">Hospitals &amp; hotlines</a></li>
+          <li><a href="history.html">History &amp; culture</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects &amp; Tools</a></li>
+          <li><a href="volunteer.html">Get Involved</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Official Sources</h5>
+        <ul>
+          <li><a href="https://www.dilg.gov.ph/" target="_blank" rel="noopener">Department of the Interior and Local Government</a></li>
+          <li><a href="https://pangasinan.gov.ph/" target="_blank" rel="noopener">Province of Pangasinan</a></li>
+          <li><a href="https://www.coa.gov.ph/" target="_blank" rel="noopener">Commission on Audit</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Our Policies</h5>
+        <ul>
+          <li><a href="methodology.html">Methodology &amp; Sources</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="corrections.html">Corrections</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Public records need context. Check the cited source and reporting period before relying on a record.</p>
+    </div>
+  </div>
+</footer>
+
+
+<script src="assets/script.js"></script>
+</body>
+</html>

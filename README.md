@@ -101,6 +101,79 @@ loading, no-JavaScript content, unavailable data states, source links, and the
 deployment artifact. Automated checks alone do not establish accessibility
 conformance or source accuracy. No live deployment is implied by a local build.
 
+## Unified Local Prototype
+
+The user-reviewed starter now populates the existing production graph: 48 LGUs,
+four cities, 44 municipalities and 48 dated population observations. The total
+3,188,540 persons refers to July 1, 2024; the administrative listing is dated
+July 31, 2025. Original starter files and collection labels are retained.
+
+```sh
+python3 -m scripts.import_psa_lgus --input pangasinan_lgu_registry_staging.json --output data/staging/normalized_lgus.json --publish data/production
+python3 build.py
+```
+
+`scripts/site_data.py` validates supplemental adapters before replacing output
+and permits only their explicit public filenames. Production builds mirror these
+same resources to the repository root for Live Server; raw downloads, staging,
+private reviews and test fixtures are not copied. Existing production review and
+mock-rejection rules remain enforced.
+
+For real staging records that are not deployment-ready, use a separate preview:
+
+```sh
+python3 build.py --mode preview
+python3 -m http.server 8001 --directory preview-public
+```
+
+Preview mode rejects mocks, keeps graph/schema/provenance validation, labels
+every page as a development preview, and never rewrites root compatibility
+files. `--data-dir` can select a normalized staging graph. Production still
+rejects draft and unreviewed generic records. Deploy neither `preview-public/`
+nor the repository root.
+
+Available routes:
+
+- `index.html`, `lgus.html`, `lgu.html`: source-backed provincial KPIs, searchable
+  LGUs, population, PSGCs, dates and parent-linked barangay lists.
+- `municipality-map.html`: 48 source-matched polygons and an equivalent text
+  directory; profile selection supports `?psgc=`. These are simplified reference
+  boundaries, not a legal survey.
+- `historical-budget.html`: 3,821 collected GAA program families, 2020-2026 annual
+  amounts, department/query/year filters, chart/table and filtered CSV. All 38
+  province-name department queries completed; optional individual LGU query
+  batches remain available, not claimed as already collected.
+- `budget-context.html`, `budget-hearings.html`: distinct national/regional NEP
+  context, budget-cycle scope and three machine-transcript topic matches.
+- `government.html`, `hospitals.html`, `history.html`, `statistics.html`: original
+  research observations and official-page captures, preserving source periods,
+  unknown currentness, qualifications and source links. Finance, legislation and
+  projects pages also embed their reviewed reference observations separately
+  from generic ledgers and awarded-project records.
+
+The geography sources are geoBoundaries ADM3/ADM2 (2020 reference; CC BY 3.0 IGO)
+and an attributed, unversioned PSGC Cloud snapshot of 1,364 barangays. The mirror
+does not establish an official current PSA release. All 48 parent code/name
+pairs were checked against the supplied registry; source-provided 10-digit
+codes were preserved. Original URLs, licensing/terms, hashes, reference dates
+and matching limitations are in `data/geography/manifest.json`.
+
+Repeatable collection entry points are `scripts/geography_data.py`,
+`scripts/provincial_reference.py` and `scripts/historical_budget/collect.py`.
+Builds are offline. For a historical refresh, use a separate `--root` workspace
+first, inspect its coverage and exact annual values, and explicitly review it
+with `python3 -m scripts.historical_budget.publish --root <workspace> --review-prototype`
+before replacing the retained approved inputs. Collection must not be treated as
+automatic authorization for a new production snapshot.
+
+Known limits: geographic matching does not attribute national projects to LGUs;
+hospital heads are directory-listed with unknown as-of dates; hearing speakers
+and figures may be machine-transcription errors; the DPWH budget-cycle endpoint
+returned HTTP 404 and stays unavailable. Historical GAA/NEP responses provide
+checksums but no source commit. Name-query completeness is not geographic
+exhaustiveness. The FY2027 approved snapshot and its attribution states remain
+unchanged.
+
 ## Transparency Interface
 
 `transparency.html` is the public entry point for budget and local disclosure
@@ -129,7 +202,8 @@ geographic attribution or source data, and does not load live budget API results
 national proposals into the existing 12 production datasets or their totals.
 Python's standard library handles collection; `jsonschema` validates separate
 contracts under `schemas/national_budget/`. No database, backend, browser API crawl
-or React application is used. Historical GAA ingestion is deferred.
+or React application is used. Historical GAA is collected by its separate
+pipeline and is never combined with these FY2027 proposals.
 
 Collect a resumable internal batch and normalize it:
 

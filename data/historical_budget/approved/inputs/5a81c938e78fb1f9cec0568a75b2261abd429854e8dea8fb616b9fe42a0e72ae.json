@@ -1,0 +1,210 @@
+{
+  "url": "https://budget.bettergov.ph/api/v1/nep/2027/rollups/region",
+  "retrieved_at": "2026-11-01T13:18:49.533366+00:00",
+  "status": 200,
+  "data": {
+    "meta": {
+      "dataset": "nep",
+      "fiscal_year": 2027,
+      "baseline_year": 2026,
+      "currency": "PHP",
+      "scale": "pesos",
+      "dimension": "region",
+      "limit": 200
+    },
+    "data": [
+      {
+        "code": "13",
+        "description": "National Capital Region (NCR)",
+        "extra": null,
+        "count": 64219,
+        "amount": 2805457249000,
+        "base_amount": 2629336312000,
+        "delta": 176120937000,
+        "pct": 6.698303910237863
+      },
+      {
+        "code": "00",
+        "description": "Central Office (nationwide)",
+        "extra": null,
+        "count": 56,
+        "amount": 1838846850000,
+        "base_amount": 1524193104000,
+        "delta": 314653746000,
+        "pct": 20.643955491875783
+      },
+      {
+        "code": "04",
+        "description": "Region IVA - CALABARZON",
+        "extra": null,
+        "count": 41124,
+        "amount": 291712608000,
+        "base_amount": 306279736000,
+        "delta": -14567128000,
+        "pct": -4.756151415776328
+      },
+      {
+        "code": "03",
+        "description": "Region III - Central Luzon",
+        "extra": null,
+        "count": 41194,
+        "amount": 276622526000,
+        "base_amount": 279067450000,
+        "delta": -2444924000,
+        "pct": -0.8761050419889529
+      },
+      {
+        "code": "05",
+        "description": "Region V - Bicol",
+        "extra": null,
+        "count": 40532,
+        "amount": 182900075000,
+        "base_amount": 187859020000,
+        "delta": -4958945000,
+        "pct": -2.639716208463134
+      },
+      {
+        "code": "08",
+        "description": "Region VIII - Eastern Visayas",
+        "extra": null,
+        "count": 29014,
+        "amount": 163930163000,
+        "base_amount": 175309022000,
+        "delta": -11378859000,
+        "pct": -6.490743528305121
+      },
+      {
+        "code": "01",
+        "description": "Region I - Ilocos",
+        "extra": null,
+        "count": 32085,
+        "amount": 155461060000,
+        "base_amount": 157449746000,
+        "delta": -1988686000,
+        "pct": -1.2630607863921228
+      },
+      {
+        "code": "07",
+        "description": "Region VII - Central Visayas",
+        "extra": null,
+        "count": 28259,
+        "amount": 154205616000,
+        "base_amount": 162291288000,
+        "delta": -8085672000,
+        "pct": -4.982197195945601
+      },
+      {
+        "code": "10",
+        "description": "Region X - Northern Mindanao",
+        "extra": null,
+        "count": 29703,
+        "amount": 151008090000,
+        "base_amount": 158017824000,
+        "delta": -7009734000,
+        "pct": -4.4360400760866066
+      },
+      {
+        "code": "02",
+        "description": "Region II - Cagayan Valley",
+        "extra": null,
+        "count": 26046,
+        "amount": 145338088000,
+        "base_amount": 149114526000,
+        "delta": -3776438000,
+        "pct": -2.532575531910285
+      },
+      {
+        "code": "11",
+        "description": "Region XI - Davao",
+        "extra": null,
+        "count": 29811,
+        "amount": 141446728000,
+        "base_amount": 145779206000,
+        "delta": -4332478000,
+        "pct": -2.971945120897421
+      },
+      {
+        "code": "06",
+        "description": "Region VI - Western Visayas",
+        "extra": null,
+        "count": 26993,
+        "amount": 139483486000,
+        "base_amount": 150199262000,
+        "delta": -10715776000,
+        "pct": -7.134373270089703
+      },
+      {
+        "code": "09",
+        "description": "Region IX - Zamboanga Peninsula",
+        "extra": null,
+        "count": 22833,
+        "amount": 136119054000,
+        "base_amount": 139639415000,
+        "delta": -3520361000,
+        "pct": -2.521036771745284
+      },
+      {
+        "code": "18",
+        "description": "Negros Island Region (NIR)",
+        "extra": null,
+        "count": 22980,
+        "amount": 125626170000,
+        "base_amount": 129934149000,
+        "delta": -4307979000,
+        "pct": -3.315509458564276
+      },
+      {
+        "code": "12",
+        "description": "Region XII - SOCCSKSARGEN",
+        "extra": null,
+        "count": 27337,
+        "amount": 120039453000,
+        "base_amount": 124153670000,
+        "delta": -4114217000,
+        "pct": -3.313810216000864
+      },
+      {
+        "code": "17",
+        "description": "Region IVB - MIMAROPA",
+        "extra": null,
+        "count": 22522,
+        "amount": 113825075000,
+        "base_amount": 116109119000,
+        "delta": -2284044000,
+        "pct": -1.9671529847711615
+      },
+      {
+        "code": "16",
+        "description": "Region XIII - CARAGA",
+        "extra": null,
+        "count": 25720,
+        "amount": 104594290000,
+        "base_amount": 105857464000,
+        "delta": -1263174000,
+        "pct": -1.193278161282987
+      },
+      {
+        "code": "14",
+        "description": "Cordillera Administrative Region (CAR)",
+        "extra": null,
+        "count": 19974,
+        "amount": 88350121000,
+        "base_amount": 86928468000,
+        "delta": 1421653000,
+        "pct": 1.6354285686939747
+      },
+      {
+        "code": "19",
+        "description": "Bangsamoro Autonomous Region In Muslim Mindanao(BARMM)",
+        "extra": null,
+        "count": 1911,
+        "amount": 65219298000,
+        "base_amount": 65643219000,
+        "delta": -423921000,
+        "pct": -0.6457955695317136
+      }
+    ]
+  },
+  "raw_sha256": "aa8c5a512ede2f66573ca73fd652ac85862a496bf88e02daa0a8da087a8258ae",
+  "payload_sha256": "94a1328256c0f897777c5a0469daf844130e0b9870650685c50e3cee4cdc459e"
+}

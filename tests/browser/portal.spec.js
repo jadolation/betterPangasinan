@@ -45,9 +45,10 @@ test('mobile navigation opens with keyboard, exposes links, and closes on Escape
   await toggle.focus();
   await page.keyboard.press('Enter');
   await expect(toggle).toHaveAttribute('aria-expanded', 'true');
-  await expect(page.locator('#primary-navigation a')).toHaveText(['Home', 'Transparency', 'Government', 'About', 'Get Involved']);
+  await expect(page.locator('#primary-navigation a')).toHaveText(['Home', 'Transparency', 'Explore Pangasinan', 'Government', 'About']);
   await expect(page.locator('#primary-navigation a').nth(1)).toHaveAttribute('href', 'transparency.html');
   await expect(page.locator('#primary-navigation a').nth(2)).toHaveAttribute('href', 'lgus.html');
+  await expect(page.locator('#primary-navigation a').nth(3)).toHaveAttribute('href', 'government.html');
   await page.keyboard.press('Tab');
   await expect(page.locator('#primary-navigation a').first()).toBeFocused();
   await page.keyboard.press('Escape');
@@ -65,7 +66,7 @@ test('skip link moves keyboard focus to the main landmark', async ({ page }) => 
   await expect(page.locator('main')).toBeFocused();
 });
 
-test('homepage internal links resolve and search reaches the empty LGU directory', async ({ page, request }) => {
+test('homepage internal links resolve and search returns to the populated LGU directory', async ({ page, request }) => {
   await page.goto('/');
   const links = await page.locator('a[href]').evaluateAll(items => [...new Set(items.map(a => a.href))].filter(url => url.startsWith(location.origin)));
   for (const url of links) expect((await request.get(url)).status(), url).toBe(200);
@@ -79,10 +80,11 @@ test('homepage internal links resolve and search reaches the empty LGU directory
   await page.locator('#lgu-query').fill('');
   await page.getByRole('button', { name: 'Search LGUs' }).click();
   await expect(page).toHaveURL(/\/lgus\.html$/);
-  await expect(page.locator('#lgu-empty')).toBeVisible();
+  await expect(page.locator('#lgu-empty')).toBeHidden();
+  await expect(page.locator('#lgu-results article')).toHaveCount(48);
 });
 
-for (const name of ['finances', 'projects', 'procurement', 'legislation', 'services', 'statistics', 'map', 'project']) {
+for (const name of ['finances', 'projects', 'procurement', 'legislation', 'services', 'map', 'project']) {
   test(`${name} shows an honest empty state without fabricated records`, async ({ page }) => {
     const errors = [];
     page.on('pageerror', error => errors.push(error.message));

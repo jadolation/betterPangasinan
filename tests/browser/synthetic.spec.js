@@ -64,10 +64,10 @@ test('synthetic finance selects 2026 appropriation and totals exactly 300.75', a
   await intercept(page);
   await openData(page, '/finances.html');
   await expect(page.locator('tbody tr')).toHaveCount(2);
-  await expect(page.locator('[data-results]')).toContainText('No combined total');
+  await expect(page.locator('[data-module] [data-results]')).toContainText('No combined total');
   await page.locator('select[name="year"]').selectOption('2026');
   await page.locator('select[name="amount_type"]').selectOption('appropriation');
-  await expect(page.locator('[data-results]')).toContainText('Total for this selection: 300.75 PHP (PHP).');
+  await expect(page.locator('[data-module] [data-results]')).toContainText('Total for this selection: 300.75 PHP (PHP).');
   await expect(page.locator('tbody tr')).toHaveCount(2);
   await expect(page.locator('meter')).toHaveCount(2);
   await openData(page, '/finances.html?lgu=mock-lgu-a');
@@ -78,7 +78,7 @@ test('synthetic finance selects 2026 appropriation and totals exactly 300.75', a
 test('project registry links to detail, procurement and contract records', async ({ page }) => {
   await intercept(page);
   await openData(page, '/projects.html');
-  await page.locator('[data-results] h3 a').click();
+  await page.locator('[data-module] [data-results] h3 a').click();
   await page.waitForLoadState('networkidle');
   await expect(page).toHaveURL(/project\.html\?id=mock-project/);
   await expect(page.locator('[data-results]')).toContainText('Synthetic project');
@@ -95,16 +95,16 @@ test('project registry links to detail, procurement and contract records', async
 test('legislation searches both legislation and document collections', async ({ page }) => {
   await intercept(page);
   await openData(page, '/legislation.html');
-  await expect(page.locator('[data-results] article')).toHaveCount(2);
-  await page.locator('[name="q"]').fill('legislation index');
-  await expect(page.locator('[data-results] article')).toHaveCount(1);
-  await expect(page.locator('[data-results]')).toContainText('Synthetic legislation');
-  await page.locator('[name="q"]').fill('not an audit finding');
-  await expect(page.locator('[data-results] article')).toHaveCount(1);
-  await expect(page.locator('[data-results]')).toContainText('Synthetic document');
-  await page.locator('[name="q"]').fill('nonexistent-record');
-  await expect(page.locator('[data-status]')).toContainText('No published records match');
-  await expect(page.locator('[data-results] article')).toHaveCount(0);
+  await expect(page.locator('[data-module] [data-results] article')).toHaveCount(2);
+  await page.locator('[data-module] [name="q"]').fill('legislation index');
+  await expect(page.locator('[data-module] [data-results] article')).toHaveCount(1);
+  await expect(page.locator('[data-module] [data-results]')).toContainText('Synthetic legislation');
+  await page.locator('[data-module] [name="q"]').fill('not an audit finding');
+  await expect(page.locator('[data-module] [data-results] article')).toHaveCount(1);
+  await expect(page.locator('[data-module] [data-results]')).toContainText('Synthetic document');
+  await page.locator('[data-module] [name="q"]').fill('nonexistent-record');
+  await expect(page.locator('[data-module] [data-status]')).toContainText('No published records match');
+  await expect(page.locator('[data-module] [data-results] article')).toHaveCount(0);
 });
 
 test('malformed identifiers remain inert and show missing-record states', async ({ page }) => {
@@ -129,10 +129,10 @@ test('production mode rejects every private synthetic collection and profile', a
   await expect(page.locator('#lgu-results article')).toHaveCount(0);
   await openData(page, '/lgu.html?id=mock-lgu-a');
   await expect(page.locator('#profile-content')).toBeHidden();
-  for (const name of ['finances', 'projects', 'procurement', 'legislation', 'services', 'statistics', 'map', 'project']) {
+  for (const name of ['finances', 'projects', 'procurement', 'legislation', 'services', 'map', 'project']) {
     await openData(page, `/${name}.html?id=mock-project`);
-    await expect(page.locator('[data-results] article, [data-results] tbody tr, meter')).toHaveCount(0);
-    await expect(page.locator('[data-results]')).not.toContainText('Synthetic');
+    await expect(page.locator('[data-module] [data-results] article, [data-module] [data-results] tbody tr, [data-module] meter')).toHaveCount(0);
+    await expect(page.locator('[data-module] [data-results]')).not.toContainText('Synthetic');
   }
 });
 

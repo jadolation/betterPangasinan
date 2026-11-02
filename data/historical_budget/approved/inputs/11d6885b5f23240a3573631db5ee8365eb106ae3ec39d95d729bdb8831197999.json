@@ -1,0 +1,2238 @@
+{
+  "url": "https://budget.bettergov.ph/api/v1/nep/2027/departments/18",
+  "retrieved_at": "2026-11-01T13:18:49.201857+00:00",
+  "status": 200,
+  "data": {
+    "meta": {
+      "dataset": "nep",
+      "fiscal_year": 2027,
+      "baseline_year": 2026,
+      "currency": "PHP",
+      "scale": "pesos",
+      "department_id": "18"
+    },
+    "data": {
+      "department": {
+        "id": "18",
+        "slug": "department-of-public-works-and-highways-dpwh",
+        "description": "Department of Public Works and Highways (DPWH)",
+        "source_description": "Department of Public Works and Highways (DPWH)",
+        "source_department_code": "18",
+        "section": "1",
+        "line_items": 8993,
+        "amount": 643953276000,
+        "base_amount": 530898861000,
+        "agencies": 1,
+        "programs": 43,
+        "activities": 94,
+        "operating_units": 216,
+        "objects": 59,
+        "regions": 17,
+        "delta": 113054415000,
+        "pct": 21.29490630042998
+      },
+      "agencies": [
+        {
+          "code": "001",
+          "description": "Office of the Secretary",
+          "extra": null,
+          "count": 8993,
+          "amount": 643953276000,
+          "base_amount": 530898861000,
+          "delta": 113054415000,
+          "pct": 21.29490630042998
+        }
+      ],
+      "programs": [
+        {
+          "code": "310204000000000",
+          "description": "Construction of By   -   pass and Diversion Roads",
+          "extra": "Operations",
+          "count": 52,
+          "amount": 127342898000,
+          "base_amount": 42789968000,
+          "delta": 84552930000,
+          "pct": 197.59989070335365
+        },
+        {
+          "code": "300221000000000",
+          "description": "Basic Infrastructure Program ( BIP )   -   Access Roads and  /  or Bridges from the National Road  /  s leading to Major  /  Strategic Public Buildings  /  Facilities",
+          "extra": "Operations",
+          "count": 168,
+          "amount": 105725209000,
+          "base_amount": 33636646000,
+          "delta": 72088563000,
+          "pct": 214.31555036729878
+        },
+        {
+          "code": "320101000000000",
+          "description": "Construction  /  Maintenance of Flood Mitigation Structures and Drainage Systems",
+          "extra": "Operations",
+          "count": 106,
+          "amount": 62988802000,
+          "base_amount": 470381000,
+          "delta": 62518421000,
+          "pct": 13291.017494329066
+        },
+        {
+          "code": "200000000000000",
+          "description": "Support to Operations",
+          "extra": "Support to Operations",
+          "count": 1218,
+          "amount": 51714236000,
+          "base_amount": 29705871000,
+          "delta": 22008365000,
+          "pct": 74.08759366119916
+        },
+        {
+          "code": "300226000000000",
+          "description": "Basic Infrastructure Program ( BIP )   -   Multi  -  Purpose Buildings  /  Facilities to support Social Services",
+          "extra": "Operations",
+          "count": 163,
+          "amount": 40974839000,
+          "base_amount": 74663274000,
+          "delta": -33688435000,
+          "pct": -45.12048989440243
+        },
+        {
+          "code": "320102000000000",
+          "description": "Construction  /  Rehabilitation of Flood Mitigation Facilities within Major River Basins and Principal Rivers",
+          "extra": "Operations",
+          "count": 32,
+          "amount": 40461629000,
+          "base_amount": 4290489000,
+          "delta": 36171140000,
+          "pct": 843.054020182781
+        },
+        {
+          "code": "310205000000000",
+          "description": "Construction of Missing Links  /  New Roads",
+          "extra": "Operations",
+          "count": 14,
+          "amount": 27484664000,
+          "base_amount": 14351703000,
+          "delta": 13132961000,
+          "pct": 91.50803218266152
+        },
+        {
+          "code": "100000000000000",
+          "description": "General Administration and Support",
+          "extra": "General Administration and Support",
+          "count": 6427,
+          "amount": 19314966000,
+          "base_amount": 17815695000,
+          "delta": 1499271000,
+          "pct": 8.415450533925284
+        },
+        {
+          "code": "310101000000000",
+          "description": "Preventive Maintenance    -    Primary Roads",
+          "extra": "Operations",
+          "count": 42,
+          "amount": 18554929000,
+          "base_amount": 12272842000,
+          "delta": 6282087000,
+          "pct": 51.18689705285866
+        },
+        {
+          "code": "310104000000000",
+          "description": "Rehabilitation  /  Reconstruction  /  Upgrading of Damaged Paved Roads    -    Primary Roads",
+          "extra": "Operations",
+          "count": 22,
+          "amount": 18330366000,
+          "base_amount": 5412940000,
+          "delta": 12917426000,
+          "pct": 238.6397410649296
+        },
+        {
+          "code": "310305000000000",
+          "description": "Widening of Permanent Bridges",
+          "extra": "Operations",
+          "count": 48,
+          "amount": 15291066000,
+          "base_amount": 10622466000,
+          "delta": 4668600000,
+          "pct": 43.950246581161096
+        },
+        {
+          "code": "300105000000000",
+          "description": "Buildings And Other Structures    -    MULTIPURPOSE  /  FACILITIES    -    National Building Program",
+          "extra": "Operations",
+          "count": 48,
+          "amount": 13616645000,
+          "base_amount": 6800526000,
+          "delta": 6816119000,
+          "pct": 100.22929108718944
+        },
+        {
+          "code": "310302000000000",
+          "description": "Replacement of Permanent Weak Bridges",
+          "extra": "Operations",
+          "count": 39,
+          "amount": 12030210000,
+          "base_amount": 7351734000,
+          "delta": 4678476000,
+          "pct": 63.63772138654635
+        },
+        {
+          "code": "310102000000000",
+          "description": "Preventive Maintenance    -    Secondary Roads",
+          "extra": "Operations",
+          "count": 60,
+          "amount": 11678686000,
+          "base_amount": 15880415000,
+          "delta": -4201729000,
+          "pct": -26.4585591749334
+        },
+        {
+          "code": "310202000000000",
+          "description": "Road Widening    -    Secondary Roads",
+          "extra": "Operations",
+          "count": 42,
+          "amount": 10362723000,
+          "base_amount": 18920217000,
+          "delta": -8557494000,
+          "pct": -45.22936496975695
+        },
+        {
+          "code": "310304000000000",
+          "description": "Rehabilitation  /  Major Repair of Permanent Bridges",
+          "extra": "Operations",
+          "count": 71,
+          "amount": 7524359000,
+          "base_amount": 4636147000,
+          "delta": 2888212000,
+          "pct": 62.297679517064495
+        },
+        {
+          "code": "300205000000000",
+          "description": "Construction  /  Rehabilitation of Water Supply  /  Septage and Sewerage  /  Rain Water Collector Systems",
+          "extra": "Operations",
+          "count": 82,
+          "amount": 7298600000,
+          "base_amount": 1873600000,
+          "delta": 5425000000,
+          "pct": 289.54953031596926
+        },
+        {
+          "code": "310306000000000",
+          "description": "Construction of New Bridges",
+          "extra": "Operations",
+          "count": 13,
+          "amount": 6357359000,
+          "base_amount": 6561790000,
+          "delta": -204431000,
+          "pct": -3.1154761124632153
+        },
+        {
+          "code": "310103000000000",
+          "description": "Preventive Maintenance    -    Tertiary Roads",
+          "extra": "Operations",
+          "count": 45,
+          "amount": 5720057000,
+          "base_amount": 10640781000,
+          "delta": -4920724000,
+          "pct": -46.24401160027634
+        },
+        {
+          "code": "310106000000000",
+          "description": "Rehabilitation  /  Reconstruction  /  Upgrading of Damaged Paved Roads    -    Tertiary Roads",
+          "extra": "Operations",
+          "count": 44,
+          "amount": 4824511000,
+          "base_amount": 5680093000,
+          "delta": -855582000,
+          "pct": -15.0628167531764
+        },
+        {
+          "code": "310108000000000",
+          "description": "Rehabilitation  /  Reconstruction of Roads with Slips, Slope Collapse and Landslide    -    Secondary Roads",
+          "extra": "Operations",
+          "count": 26,
+          "amount": 4817064000,
+          "base_amount": 10526099000,
+          "delta": -5709035000,
+          "pct": -54.23694950997516
+        },
+        {
+          "code": "310105000000000",
+          "description": "Rehabilitation  /  Reconstruction  /  Upgrading of Damaged Paved Roads    -    Secondary Roads",
+          "extra": "Operations",
+          "count": 47,
+          "amount": 4733762000,
+          "base_amount": 8653641000,
+          "delta": -3919879000,
+          "pct": -45.29745340718433
+        },
+        {
+          "code": "310201000000000",
+          "description": "Road Widening    -    Primary Roads",
+          "extra": "Operations",
+          "count": 12,
+          "amount": 4475859000,
+          "base_amount": 10456790000,
+          "delta": -5980931000,
+          "pct": -57.19662535060951
+        },
+        {
+          "code": "310303000000000",
+          "description": "Retrofitting  /  Strengthening of Permanent Bridges",
+          "extra": "Operations",
+          "count": 29,
+          "amount": 3007128000,
+          "base_amount": 4819213000,
+          "delta": -1812085000,
+          "pct": -37.601263940813574
+        },
+        {
+          "code": "310109000000000",
+          "description": "Rehabilitation  /  Reconstruction of Roads with Slips, Slope Collapse and Landslide    -    Tertiary Roads",
+          "extra": "Operations",
+          "count": 16,
+          "amount": 2932241000,
+          "base_amount": 9277656000,
+          "delta": -6345415000,
+          "pct": -68.39459234099647
+        },
+        {
+          "code": "310208000000000",
+          "description": "Off   -   Carriageway Improvement    -    Secondary Roads",
+          "extra": "Operations",
+          "count": 14,
+          "amount": 1983747000,
+          "base_amount": 1422770000,
+          "delta": 560977000,
+          "pct": 39.42850917576277
+        },
+        {
+          "code": "310107000000000",
+          "description": "Rehabilitation  /  Reconstruction of Roads with Slips, Slope Collapse and Landslide    -    Primary Roads",
+          "extra": "Operations",
+          "count": 8,
+          "amount": 1693051000,
+          "base_amount": 4200428000,
+          "delta": -2507377000,
+          "pct": -59.69336934236226
+        },
+        {
+          "code": "310110000000000",
+          "description": "Construction  /  Upgrading  /  Rehabilitation of Drainage along National Roads    -    Primary Roads",
+          "extra": "Operations",
+          "count": 13,
+          "amount": 1651164000,
+          "base_amount": 6674197000,
+          "delta": -5023033000,
+          "pct": -75.26048451971076
+        },
+        {
+          "code": "310203000000000",
+          "description": "Road Widening    -    Tertiary Roads",
+          "extra": "Operations",
+          "count": 12,
+          "amount": 1630698000,
+          "base_amount": 4714971000,
+          "delta": -3084273000,
+          "pct": -65.41446384293775
+        },
+        {
+          "code": "300236000000000",
+          "description": "Basic Infrastructure Program  ( BIP )  - Coastal Roads to Augment Resiliency of Coastal Communities",
+          "extra": "Operations",
+          "count": 4,
+          "amount": 1381000000,
+          "base_amount": 323252000,
+          "delta": 1057748000,
+          "pct": 327.2208679296648
+        },
+        {
+          "code": "310111000000000",
+          "description": "Construction  /  Upgrading  /  Rehabilitation of Drainage along National Roads    -    Secondary Roads",
+          "extra": "Operations",
+          "count": 19,
+          "amount": 1379850000,
+          "base_amount": 5785905000,
+          "delta": -4406055000,
+          "pct": -76.15152685707768
+        },
+        {
+          "code": "310207000000000",
+          "description": "Off   -   Carriageway Improvement    -    Primary Roads",
+          "extra": "Operations",
+          "count": 14,
+          "amount": 1313665000,
+          "base_amount": 887953000,
+          "delta": 425712000,
+          "pct": 47.943078068321185
+        },
+        {
+          "code": "300110000000000",
+          "description": "National roads and bridges    -    National Roads    -    Public   -   Private Partnership Strategic Support Fund ( including ROW and Subsidy  )",
+          "extra": "Operations",
+          "count": 1,
+          "amount": 1000000000,
+          "base_amount": 1000000000,
+          "delta": 0,
+          "pct": 0
+        },
+        {
+          "code": "300200000000000",
+          "description": "CONVERGENCE AND SPECIAL SUPPORT PROGRAM",
+          "extra": "Operations",
+          "count": 1,
+          "amount": 1000000000,
+          "base_amount": 1200000000,
+          "delta": -200000000,
+          "pct": -16.666666666666664
+        },
+        {
+          "code": "310209000000000",
+          "description": "Off   -   Carriageway Improvement    -    Tertiary Roads",
+          "extra": "Operations",
+          "count": 13,
+          "amount": 741599000,
+          "base_amount": 730999000,
+          "delta": 10600000,
+          "pct": 1.4500703831332191
+        },
+        {
+          "code": "310206000000000",
+          "description": "Construction of Flyovers  /  Interchanges  /  Underpasses  /  Long Span Bridges",
+          "extra": "Operations",
+          "count": 1,
+          "amount": 734717000,
+          "base_amount": 1000999000,
+          "delta": -266282000,
+          "pct": -26.60162497664833
+        },
+        {
+          "code": "310212000000000",
+          "description": "Paving of Unpaved Roads    -    Tertiary Roads",
+          "extra": "Operations",
+          "count": 3,
+          "amount": 540082000,
+          "base_amount": 1069353000,
+          "delta": -529271000,
+          "pct": -49.4945074264532
+        },
+        {
+          "code": "300213000000000",
+          "description": "Construction  /  Rehabilitation  /  Improvement of Facilities for Persons with Disabilities ( PWD ) and Elderlies  /  Senior Citizens, including Gender  -  Responsive Facilities",
+          "extra": "Operations",
+          "count": 1,
+          "amount": 510000000,
+          "base_amount": 510000000,
+          "delta": 0,
+          "pct": 0
+        },
+        {
+          "code": "300241000000000",
+          "description": "Basic Infrastructure Program  ( BIP )  - Local Ports and Boat Landing",
+          "extra": "Operations",
+          "count": 10,
+          "amount": 419000000,
+          "base_amount": 460000000,
+          "delta": -41000000,
+          "pct": -8.91304347826087
+        },
+        {
+          "code": "310301000000000",
+          "description": "Replacement of Bridges ( Temporary to Permanent  )",
+          "extra": "Operations",
+          "count": 1,
+          "amount": 200000000,
+          "base_amount": 61244000,
+          "delta": 138756000,
+          "pct": 226.56260205081313
+        },
+        {
+          "code": "310112000000000",
+          "description": "Construction  /  Upgrading  /  Rehabilitation of Drainage along National Roads    -    Tertiary Roads",
+          "extra": "Operations",
+          "count": 8,
+          "amount": 184903000,
+          "base_amount": 4431877000,
+          "delta": -4246974000,
+          "pct": -95.82788511504268
+        },
+        {
+          "code": "310211000000000",
+          "description": "Paving of Unpaved Roads    -    Secondary Roads",
+          "extra": "Operations",
+          "count": 3,
+          "amount": 21992000,
+          "base_amount": 478498000,
+          "delta": -456506000,
+          "pct": -95.40395153166784
+        },
+        {
+          "code": "310210000000000",
+          "description": "Paving of Unpaved Roads    -    Primary Roads",
+          "extra": "Operations",
+          "count": 1,
+          "amount": 5000000,
+          "base_amount": 3293000,
+          "delta": 1707000,
+          "pct": 51.837230488915885
+        },
+        {
+          "code": "300201000000000",
+          "description": "Construction  /  Improvement of Access Roads leading to Airports",
+          "extra": "Operations",
+          "count": 0,
+          "amount": 0,
+          "base_amount": 687226000,
+          "delta": -687226000,
+          "pct": -100
+        },
+        {
+          "code": "300202000000000",
+          "description": "Construction  /  Improvement of Access Roads leading to Seaports",
+          "extra": "Operations",
+          "count": 0,
+          "amount": 0,
+          "base_amount": 1186036000,
+          "delta": -1186036000,
+          "pct": -100
+        },
+        {
+          "code": "300203000000000",
+          "description": "Construction  /  Improvement of Access Roads leading to Declared Tourism Destinations",
+          "extra": "Operations",
+          "count": 0,
+          "amount": 0,
+          "base_amount": 4005927000,
+          "delta": -4005927000,
+          "pct": -100
+        },
+        {
+          "code": "300204000000000",
+          "description": "Construction  /  Improvement of Access Roads leading to Trades, Industries and Economic Zones",
+          "extra": "Operations",
+          "count": 0,
+          "amount": 0,
+          "base_amount": 3750218000,
+          "delta": -3750218000,
+          "pct": -100
+        },
+        {
+          "code": "300209000000000",
+          "description": "Construction  /  Improvement of Access Roads leading to Railway Stations ( Kalsada Tungo sa Paliparan, Riles at Daungan Program   -   KATUPARAN  )",
+          "extra": "Operations",
+          "count": 0,
+          "amount": 0,
+          "base_amount": 401563000,
+          "delta": -401563000,
+          "pct": -100
+        },
+        {
+          "code": "300214000000000",
+          "description": "Special Road Fund   -   Motor Vehicle User's Charge ( MVUC ) as per R.A. 11239",
+          "extra": "Operations",
+          "count": 0,
+          "amount": 0,
+          "base_amount": 14833952000,
+          "delta": -14833952000,
+          "pct": -100
+        },
+        {
+          "code": "300215000000000",
+          "description": "Sustainable Infrastructure Projects Alleviating Gaps ( SIPAG )   -   Access Roads and  /  or Bridges from the National Road  /  s leading to Major  /  Strategic Public Buildings  /  Facilities",
+          "extra": "Operations",
+          "count": 0,
+          "amount": 0,
+          "base_amount": 72025030000,
+          "delta": -72025030000,
+          "pct": -100
+        },
+        {
+          "code": "300216000000000",
+          "description": "Sustainable Infrastructure Projects Alleviating Gaps ( SIPAG )   -   Access Roads and  /  or Bridges from the National Roads connecting to Indigenous People ( IP ) Communities",
+          "extra": "Operations",
+          "count": 0,
+          "amount": 0,
+          "base_amount": 3396732000,
+          "delta": -3396732000,
+          "pct": -100
+        },
+        {
+          "code": "300220000000000",
+          "description": "Sustainable Infrastructure Projects Alleviating Gaps ( SIPAG )   -   Multi  -  Purpose Buildings  /  Facilities to support Social Services",
+          "extra": "Operations",
+          "count": 0,
+          "amount": 0,
+          "base_amount": 5202400000,
+          "delta": -5202400000,
+          "pct": -100
+        },
+        {
+          "code": "300222000000000",
+          "description": "Basic Infrastructure Program ( BIP )   -   Access Roads and  /  or Bridges from the National Roads connecting to Indigenous People ( IP ) Communities",
+          "extra": "Operations",
+          "count": 0,
+          "amount": 0,
+          "base_amount": 652081000,
+          "delta": -652081000,
+          "pct": -100
+        },
+        {
+          "code": "300230000000000",
+          "description": "Basic Infrastructure Program  ( BIP )   -  Public Water Supply System",
+          "extra": "Operations",
+          "count": 0,
+          "amount": 0,
+          "base_amount": 2617216000,
+          "delta": -2617216000,
+          "pct": -100
+        },
+        {
+          "code": "300233000000000",
+          "description": "Sustainable Infrastructure Projects Alleviating Gaps  ( SIPAG )  - Coastal Roads to Augment Resiliency of Coastal Communities",
+          "extra": "Operations",
+          "count": 0,
+          "amount": 0,
+          "base_amount": 428050000,
+          "delta": -428050000,
+          "pct": -100
+        },
+        {
+          "code": "300235000000000",
+          "description": "Sustainable Infrastructure Projects Alleviating Gaps  ( SIPAG )  - Major / Strategic Public Buildings / Facilities",
+          "extra": "Operations",
+          "count": 0,
+          "amount": 0,
+          "base_amount": 5237132000,
+          "delta": -5237132000,
+          "pct": -100
+        },
+        {
+          "code": "300238000000000",
+          "description": "Basic Infrastructure Program  ( BIP )  - Major / Strategic Public Buildings / Facilities",
+          "extra": "Operations",
+          "count": 0,
+          "amount": 0,
+          "base_amount": 1178856000,
+          "delta": -1178856000,
+          "pct": -100
+        },
+        {
+          "code": "300239000000000",
+          "description": "Basic Infrastructure Program  ( BIP )  - Interjurisdictional Roads and / or Bridges  ( roads traversing multiple LGUs )",
+          "extra": "Operations",
+          "count": 0,
+          "amount": 0,
+          "base_amount": 655597000,
+          "delta": -655597000,
+          "pct": -100
+        },
+        {
+          "code": "300240000000000",
+          "description": "Basic Infrastructure Program  ( BIP )  - Evacuation Centers /  Public Health Facilities",
+          "extra": "Operations",
+          "count": 0,
+          "amount": 0,
+          "base_amount": 3440000000,
+          "delta": -3440000000,
+          "pct": -100
+        },
+        {
+          "code": "300243000000000",
+          "description": "Sustainable Infrastructure Projects Alleviating Gaps  ( SIPAG )  - Interjurisdictional Roads and / or Bridges  ( roads traversing multiple LGUs )",
+          "extra": "Operations",
+          "count": 0,
+          "amount": 0,
+          "base_amount": 5374970000,
+          "delta": -5374970000,
+          "pct": -100
+        },
+        {
+          "code": "300244000000000",
+          "description": "Sustainable Infrastructure Projects Alleviating Gaps  ( SIPAG )  - Evacuation Centers / Public Health Facilities",
+          "extra": "Operations",
+          "count": 0,
+          "amount": 0,
+          "base_amount": 2374930000,
+          "delta": -2374930000,
+          "pct": -100
+        },
+        {
+          "code": "300245000000000",
+          "description": "Sustainable Infrastructure Projects Alleviating Gaps  ( SIPAG )  - Public Water Supply System",
+          "extra": "Operations",
+          "count": 0,
+          "amount": 0,
+          "base_amount": 345229000,
+          "delta": -345229000,
+          "pct": -100
+        },
+        {
+          "code": "300247000000000",
+          "description": "Sustainable Infrastructure Projects Alleviating Gaps  ( SIPAG )  - Local Ports and Boat Landing",
+          "extra": "Operations",
+          "count": 0,
+          "amount": 0,
+          "base_amount": 39000000,
+          "delta": -39000000,
+          "pct": -100
+        }
+      ],
+      "expense_classes": [
+        {
+          "code": "6",
+          "description": "Capital Outlays",
+          "extra": null,
+          "count": 1352,
+          "amount": 603003972000,
+          "base_amount": 496927726000,
+          "delta": 106076246000,
+          "pct": 21.346413260909493
+        },
+        {
+          "code": "2",
+          "description": "Maintenance and Other Operating Expenses",
+          "extra": null,
+          "count": 4371,
+          "amount": 24713919000,
+          "base_amount": 18408677000,
+          "delta": 6305242000,
+          "pct": 34.25146739225203
+        },
+        {
+          "code": "1",
+          "description": "Personnel Services",
+          "extra": null,
+          "count": 3270,
+          "amount": 16235385000,
+          "base_amount": 15562458000,
+          "delta": 672927000,
+          "pct": 4.324040585362543
+        }
+      ],
+      "funds": [
+        {
+          "code": "10101101",
+          "description": "Specific Budgets of National Government Agencies",
+          "extra": null,
+          "count": 8686,
+          "amount": 524863004000,
+          "base_amount": 511898569000,
+          "delta": 12964435000,
+          "pct": 2.532617941348455
+        },
+        {
+          "code": "10102151",
+          "description": "GoP Counterpart Funds",
+          "extra": null,
+          "count": 27,
+          "amount": 44690650000,
+          "base_amount": 11284687000,
+          "delta": 33405963000,
+          "pct": 296.0291499445222
+        },
+        {
+          "code": "10102152",
+          "description": "Asian Development Bank",
+          "extra": null,
+          "count": 8,
+          "amount": 43018802000,
+          "base_amount": 2806689000,
+          "delta": 40212113000,
+          "pct": 1432.7242170400782
+        },
+        {
+          "code": "10102167",
+          "description": "Japan",
+          "extra": null,
+          "count": 10,
+          "amount": 25672152000,
+          "base_amount": 2435635000,
+          "delta": 23236517000,
+          "pct": 954.022954999415
+        },
+        {
+          "code": "10102163",
+          "description": "International Bank for Reconstruction and Development (IBRD)",
+          "extra": null,
+          "count": 3,
+          "amount": 2898743000,
+          "base_amount": 435187000,
+          "delta": 2463556000,
+          "pct": 566.0913584275265
+        },
+        {
+          "code": "10102168",
+          "description": "Korea",
+          "extra": null,
+          "count": 2,
+          "amount": 1468664000,
+          "base_amount": 167012000,
+          "delta": 1301652000,
+          "pct": 779.3763322395995
+        },
+        {
+          "code": "10401102",
+          "description": "Retirement and Life Insurance Premiums",
+          "extra": null,
+          "count": 245,
+          "amount": 1313088000,
+          "base_amount": 1266139000,
+          "delta": 46949000,
+          "pct": 3.708044693355153
+        },
+        {
+          "code": "10403389",
+          "description": "National Building Code Development Fund",
+          "extra": null,
+          "count": 11,
+          "amount": 28173000,
+          "base_amount": 37527000,
+          "delta": -9354000,
+          "pct": -24.926053241666
+        },
+        {
+          "code": "10102157",
+          "description": "China",
+          "extra": null,
+          "count": 1,
+          "amount": 0,
+          "base_amount": 332226000,
+          "delta": -332226000,
+          "pct": -100
+        },
+        {
+          "code": "10102160",
+          "description": "France",
+          "extra": null,
+          "count": 0,
+          "amount": 0,
+          "base_amount": 0,
+          "delta": 0,
+          "pct": null
+        },
+        {
+          "code": "10102181",
+          "description": "Asian Infrastructure Investment Bank (AIIB)",
+          "extra": null,
+          "count": 0,
+          "amount": 0,
+          "base_amount": 235190000,
+          "delta": -235190000,
+          "pct": -100
+        }
+      ],
+      "regions": [
+        {
+          "code": "13",
+          "description": "National Capital Region (NCR)",
+          "extra": null,
+          "count": 788,
+          "amount": 520804279000,
+          "base_amount": 340412984000,
+          "delta": 180391295000,
+          "pct": 52.99189616104655
+        },
+        {
+          "code": "03",
+          "description": "Region III - Central Luzon",
+          "extra": null,
+          "count": 655,
+          "amount": 17498918000,
+          "base_amount": 18820927000,
+          "delta": -1322009000,
+          "pct": -7.024143922347714
+        },
+        {
+          "code": "04",
+          "description": "Region IVA - CALABARZON",
+          "extra": null,
+          "count": 713,
+          "amount": 16160605000,
+          "base_amount": 26122759000,
+          "delta": -9962154000,
+          "pct": -38.13591818536472
+        },
+        {
+          "code": "02",
+          "description": "Region II - Cagayan Valley",
+          "extra": null,
+          "count": 494,
+          "amount": 9215880000,
+          "base_amount": 11517425000,
+          "delta": -2301545000,
+          "pct": -19.983155957169245
+        },
+        {
+          "code": "05",
+          "description": "Region V - Bicol",
+          "extra": null,
+          "count": 627,
+          "amount": 7516151000,
+          "base_amount": 14253068000,
+          "delta": -6736917000,
+          "pct": -47.266434145967736
+        },
+        {
+          "code": "10",
+          "description": "Region X - Northern Mindanao",
+          "extra": null,
+          "count": 583,
+          "amount": 7095062000,
+          "base_amount": 13911674000,
+          "delta": -6816612000,
+          "pct": -48.99922180465126
+        },
+        {
+          "code": "09",
+          "description": "Region IX - Zamboanga Peninsula",
+          "extra": null,
+          "count": 468,
+          "amount": 6941552000,
+          "base_amount": 8378407000,
+          "delta": -1436855000,
+          "pct": -17.149501092510782
+        },
+        {
+          "code": "08",
+          "description": "Region VIII - Eastern Visayas",
+          "extra": null,
+          "count": 606,
+          "amount": 6889500000,
+          "base_amount": 14425271000,
+          "delta": -7535771000,
+          "pct": -52.24006536861595
+        },
+        {
+          "code": "14",
+          "description": "Cordillera Administrative Region (CAR)",
+          "extra": null,
+          "count": 534,
+          "amount": 6659240000,
+          "base_amount": 8527190000,
+          "delta": -1867950000,
+          "pct": -21.90580953397309
+        },
+        {
+          "code": "07",
+          "description": "Region VII - Central Visayas",
+          "extra": null,
+          "count": 505,
+          "amount": 6587293000,
+          "base_amount": 12270313000,
+          "delta": -5683020000,
+          "pct": -46.31519994640724
+        },
+        {
+          "code": "18",
+          "description": "Negros Island Region (NIR)",
+          "extra": null,
+          "count": 378,
+          "amount": 6517829000,
+          "base_amount": 9118326000,
+          "delta": -2600497000,
+          "pct": -28.519456312485424
+        },
+        {
+          "code": "01",
+          "description": "Region I - Ilocos",
+          "extra": null,
+          "count": 439,
+          "amount": 6192621000,
+          "base_amount": 8904591000,
+          "delta": -2711970000,
+          "pct": -30.45586259941641
+        },
+        {
+          "code": "06",
+          "description": "Region VI - Western Visayas",
+          "extra": null,
+          "count": 500,
+          "amount": 6067783000,
+          "base_amount": 11717192000,
+          "delta": -5649409000,
+          "pct": -48.21470024558785
+        },
+        {
+          "code": "17",
+          "description": "Region IVB - MIMAROPA",
+          "extra": null,
+          "count": 404,
+          "amount": 5523582000,
+          "base_amount": 8118265000,
+          "delta": -2594683000,
+          "pct": -31.96105325460551
+        },
+        {
+          "code": "12",
+          "description": "Region XII - SOCCSKSARGEN",
+          "extra": null,
+          "count": 403,
+          "amount": 5266088000,
+          "base_amount": 7182585000,
+          "delta": -1916497000,
+          "pct": -26.68255231229425
+        },
+        {
+          "code": "11",
+          "description": "Region XI - Davao",
+          "extra": null,
+          "count": 473,
+          "amount": 4610878000,
+          "base_amount": 9615353000,
+          "delta": -5004475000,
+          "pct": -52.0467111295862
+        },
+        {
+          "code": "16",
+          "description": "Region XIII - CARAGA",
+          "extra": null,
+          "count": 423,
+          "amount": 4406015000,
+          "base_amount": 7602531000,
+          "delta": -3196516000,
+          "pct": -42.04541882170556
+        }
+      ],
+      "top_objects": [
+        {
+          "code": "5060403000",
+          "description": "Infrastructure Outlay",
+          "extra": null,
+          "count": 1140,
+          "amount": 545634943000,
+          "base_amount": 396824315000,
+          "delta": 148810628000,
+          "pct": 37.500380489537285
+        },
+        {
+          "code": "5060404000",
+          "description": "Building and Other Structures Outlay",
+          "extra": null,
+          "count": 211,
+          "amount": 54591484000,
+          "base_amount": 98702980000,
+          "delta": -44111496000,
+          "pct": -44.69114914260947
+        },
+        {
+          "code": "5021303000",
+          "description": "Repairs and Maintenance - Infrastructure Assets",
+          "extra": null,
+          "count": 7,
+          "amount": 19984363000,
+          "base_amount": 13914155000,
+          "delta": 6070208000,
+          "pct": 43.626134680834014
+        },
+        {
+          "code": "5010101000",
+          "description": "Salaries and Wages - Regular",
+          "extra": null,
+          "count": 245,
+          "amount": 10942397000,
+          "base_amount": 10551176000,
+          "delta": 391221000,
+          "pct": 3.7078426139418017
+        },
+        {
+          "code": "5060405000",
+          "description": "Machinery and Equipment Outlay",
+          "extra": null,
+          "count": 1,
+          "amount": 2777545000,
+          "base_amount": 1400431000,
+          "delta": 1377114000,
+          "pct": 98.33501257827054
+        },
+        {
+          "code": "5021304000",
+          "description": "Repairs and Maintenance - Buildings and Other Structures",
+          "extra": null,
+          "count": 7,
+          "amount": 1682914000,
+          "base_amount": 628996000,
+          "delta": 1053918000,
+          "pct": 167.5555965379748
+        },
+        {
+          "code": "5010301000",
+          "description": "Retirement and Life Insurance Premiums",
+          "extra": null,
+          "count": 245,
+          "amount": 1313088000,
+          "base_amount": 1266139000,
+          "delta": 46949000,
+          "pct": 3.708044693355153
+        },
+        {
+          "code": "5021306000",
+          "description": "Repairs and Maintenance - Transportation Equipment",
+          "extra": null,
+          "count": 57,
+          "amount": 1155598000,
+          "base_amount": 1364019000,
+          "delta": -208421000,
+          "pct": -15.279919121361212
+        },
+        {
+          "code": "5010214000",
+          "description": "Year End Bonus",
+          "extra": null,
+          "count": 245,
+          "amount": 911862000,
+          "base_amount": 879262000,
+          "delta": 32600000,
+          "pct": 3.7076548287086215
+        },
+        {
+          "code": "5010216000",
+          "description": "Mid-Year Bonus",
+          "extra": null,
+          "count": 245,
+          "amount": 911862000,
+          "base_amount": 879262000,
+          "delta": 32600000,
+          "pct": 3.7076548287086215
+        },
+        {
+          "code": "5010403000",
+          "description": "Terminal Leave Benefits",
+          "extra": null,
+          "count": 1,
+          "amount": 581691000,
+          "base_amount": 579387000,
+          "delta": 2304000,
+          "pct": 0.39766166655447915
+        },
+        {
+          "code": "5010201000",
+          "description": "Personal Economic Relief Allowance (PERA)",
+          "extra": null,
+          "count": 245,
+          "amount": 498792000,
+          "base_amount": 500976000,
+          "delta": -2184000,
+          "pct": -0.4359490274983233
+        },
+        {
+          "code": "5010303000",
+          "description": "PhilHealth Contributions",
+          "extra": null,
+          "count": 245,
+          "amount": 269520000,
+          "base_amount": 260067000,
+          "delta": 9453000,
+          "pct": 3.6348325623781563
+        },
+        {
+          "code": "5020402000",
+          "description": "Electricity Expenses",
+          "extra": null,
+          "count": 247,
+          "amount": 253466000,
+          "base_amount": 292254000,
+          "delta": -38788000,
+          "pct": -13.272016807297762
+        },
+        {
+          "code": "5010299000",
+          "description": "Other Bonuses and Allowances",
+          "extra": null,
+          "count": 245,
+          "amount": 249396000,
+          "base_amount": 104370000,
+          "delta": 145026000,
+          "pct": 138.95372233400403
+        },
+        {
+          "code": "5020309000",
+          "description": "Fuel, Oil and Lubricants Expenses",
+          "extra": null,
+          "count": 246,
+          "amount": 183334000,
+          "base_amount": 181496000,
+          "delta": 1838000,
+          "pct": 1.01269449464451
+        },
+        {
+          "code": "5020101000",
+          "description": "Traveling Expenses - Local",
+          "extra": null,
+          "count": 251,
+          "amount": 175138000,
+          "base_amount": 204180000,
+          "delta": -29042000,
+          "pct": -14.223724164952491
+        },
+        {
+          "code": "5029907000",
+          "description": "Subscription Expenses",
+          "extra": null,
+          "count": 249,
+          "amount": 169930000,
+          "base_amount": 518417000,
+          "delta": -348487000,
+          "pct": -67.22136812643103
+        },
+        {
+          "code": "5010204000",
+          "description": "Clothing/Uniform Allowance",
+          "extra": null,
+          "count": 245,
+          "amount": 145481000,
+          "base_amount": 146118000,
+          "delta": -637000,
+          "pct": -0.4359490274983233
+        },
+        {
+          "code": "5020301000",
+          "description": "Office Supplies Expenses",
+          "extra": null,
+          "count": 251,
+          "amount": 143967000,
+          "base_amount": 153839000,
+          "delta": -9872000,
+          "pct": -6.417098395075371
+        },
+        {
+          "code": "5021503000",
+          "description": "Insurance Expenses",
+          "extra": null,
+          "count": 251,
+          "amount": 125882000,
+          "base_amount": 136884000,
+          "delta": -11002000,
+          "pct": -8.03746237690307
+        },
+        {
+          "code": "5029999000",
+          "description": "Other Maintenance and Operating Expenses",
+          "extra": null,
+          "count": 253,
+          "amount": 121903000,
+          "base_amount": 101739000,
+          "delta": 20164000,
+          "pct": 19.81934164872861
+        },
+        {
+          "code": "5020201000",
+          "description": "Training Expenses",
+          "extra": null,
+          "count": 251,
+          "amount": 114183000,
+          "base_amount": 132675000,
+          "delta": -18492000,
+          "pct": -13.937817976257772
+        },
+        {
+          "code": "5010102000",
+          "description": "Salaries and Wages - Casual/Contractual",
+          "extra": null,
+          "count": 1,
+          "amount": 109833000,
+          "base_amount": 91854000,
+          "delta": 17979000,
+          "pct": 19.573453524070807
+        },
+        {
+          "code": "5010215000",
+          "description": "Cash Gift",
+          "extra": null,
+          "count": 245,
+          "amount": 103915000,
+          "base_amount": 104370000,
+          "delta": -455000,
+          "pct": -0.4359490274983233
+        },
+        {
+          "code": "5020503000",
+          "description": "Internet Subscription Expenses",
+          "extra": null,
+          "count": 17,
+          "amount": 95269000,
+          "base_amount": 91617000,
+          "delta": 3652000,
+          "pct": 3.986159773841099
+        },
+        {
+          "code": "5021203000",
+          "description": "Security Services",
+          "extra": null,
+          "count": 2,
+          "amount": 84930000,
+          "base_amount": 89715000,
+          "delta": -4785000,
+          "pct": -5.333556261494733
+        },
+        {
+          "code": "5021202000",
+          "description": "Janitorial Services",
+          "extra": null,
+          "count": 2,
+          "amount": 84685000,
+          "base_amount": 138350000,
+          "delta": -53665000,
+          "pct": -38.78930249367546
+        },
+        {
+          "code": "5020401000",
+          "description": "Water Expenses",
+          "extra": null,
+          "count": 247,
+          "amount": 53306000,
+          "base_amount": 69816000,
+          "delta": -16510000,
+          "pct": -23.647874412742066
+        },
+        {
+          "code": "5010302000",
+          "description": "Pag-IBIG Contributions",
+          "extra": null,
+          "count": 245,
+          "amount": 49873000,
+          "base_amount": 50098000,
+          "delta": -225000,
+          "pct": -0.4491197253383369
+        },
+        {
+          "code": "5010499000",
+          "description": "Other Personnel Benefits",
+          "extra": null,
+          "count": 245,
+          "amount": 46540000,
+          "base_amount": 39555000,
+          "delta": 6985000,
+          "pct": 17.658955884211856
+        },
+        {
+          "code": "5021305000",
+          "description": "Repairs and Maintenance - Machinery and Equipment",
+          "extra": null,
+          "count": 8,
+          "amount": 42281000,
+          "base_amount": 40572000,
+          "delta": 1709000,
+          "pct": 4.212264615991324
+        },
+        {
+          "code": "5020502000",
+          "description": "Telephone Expenses",
+          "extra": null,
+          "count": 249,
+          "amount": 42163000,
+          "base_amount": 44651000,
+          "delta": -2488000,
+          "pct": -5.572103648294551
+        },
+        {
+          "code": "5029905000",
+          "description": "Rent/Lease Expenses",
+          "extra": null,
+          "count": 53,
+          "amount": 41131000,
+          "base_amount": 110911000,
+          "delta": -69780000,
+          "pct": -62.91531047416397
+        },
+        {
+          "code": "5010202000",
+          "description": "Representation Allowance (RA)",
+          "extra": null,
+          "count": 41,
+          "amount": 39234000,
+          "base_amount": 43512000,
+          "delta": -4278000,
+          "pct": -9.83177054605626
+        },
+        {
+          "code": "5020399000",
+          "description": "Other Supplies and Materials Expenses",
+          "extra": null,
+          "count": 54,
+          "amount": 37213000,
+          "base_amount": 46412000,
+          "delta": -9199000,
+          "pct": -19.8203050935103
+        },
+        {
+          "code": "5010203000",
+          "description": "Transportation Allowance (TA)",
+          "extra": null,
+          "count": 41,
+          "amount": 36954000,
+          "base_amount": 41262000,
+          "delta": -4308000,
+          "pct": -10.440599098444089
+        },
+        {
+          "code": "5021199000",
+          "description": "Other Professional Services",
+          "extra": null,
+          "count": 19,
+          "amount": 26539000,
+          "base_amount": 27195000,
+          "delta": -656000,
+          "pct": -2.412208126493841
+        },
+        {
+          "code": "5010304000",
+          "description": "Employees Compensation Insurance Premiums (ECIP)",
+          "extra": null,
+          "count": 245,
+          "amount": 24947000,
+          "base_amount": 25050000,
+          "delta": -103000,
+          "pct": -0.4111776447105788
+        },
+        {
+          "code": "5029904000",
+          "description": "Transportation and Delivery Expenses",
+          "extra": null,
+          "count": 249,
+          "amount": 18940000,
+          "base_amount": 23806000,
+          "delta": -4866000,
+          "pct": -20.440225153322693
+        },
+        {
+          "code": "5021501000",
+          "description": "Taxes, Duties and Licenses",
+          "extra": null,
+          "count": 250,
+          "amount": 16139000,
+          "base_amount": 16643000,
+          "delta": -504000,
+          "pct": -3.0283001862644956
+        },
+        {
+          "code": "5020501000",
+          "description": "Postage and Courier Services",
+          "extra": null,
+          "count": 215,
+          "amount": 10814000,
+          "base_amount": 14102000,
+          "delta": -3288000,
+          "pct": -23.315841724578075
+        },
+        {
+          "code": "5029902000",
+          "description": "Printing and Publication Expenses",
+          "extra": null,
+          "count": 251,
+          "amount": 8315000,
+          "base_amount": 14105000,
+          "delta": -5790000,
+          "pct": -41.04927330733783
+        },
+        {
+          "code": "5021003000",
+          "description": "Extraordinary and Miscellaneous Expenses",
+          "extra": null,
+          "count": 22,
+          "amount": 7886000,
+          "base_amount": 9326000,
+          "delta": -1440000,
+          "pct": -15.440703409822005
+        },
+        {
+          "code": "5021299000",
+          "description": "Other General Services",
+          "extra": null,
+          "count": 37,
+          "amount": 6199000,
+          "base_amount": 6986000,
+          "delta": -787000,
+          "pct": -11.265387918694532
+        },
+        {
+          "code": "5021103000",
+          "description": "Consultancy Services",
+          "extra": null,
+          "count": 2,
+          "amount": 6000000,
+          "base_amount": 12115000,
+          "delta": -6115000,
+          "pct": -50.474618241848944
+        },
+        {
+          "code": "5021502000",
+          "description": "Fidelity Bond Premiums",
+          "extra": null,
+          "count": 250,
+          "amount": 4553000,
+          "base_amount": 4045000,
+          "delta": 508000,
+          "pct": 12.558714462299134
+        },
+        {
+          "code": "5029901000",
+          "description": "Advertising, Promotional and Marketing Expenses",
+          "extra": null,
+          "count": 249,
+          "amount": 4344000,
+          "base_amount": 4467000,
+          "delta": -123000,
+          "pct": -2.7535258562793823
+        },
+        {
+          "code": "5020102000",
+          "description": "Traveling Expenses - Foreign",
+          "extra": null,
+          "count": 22,
+          "amount": 3582000,
+          "base_amount": 3532000,
+          "delta": 50000,
+          "pct": 1.4156285390713477
+        },
+        {
+          "code": "5029903000",
+          "description": "Representation Expenses",
+          "extra": null,
+          "count": 53,
+          "amount": 2353000,
+          "base_amount": 3883000,
+          "delta": -1530000,
+          "pct": -39.40252382178728
+        },
+        {
+          "code": "__other__",
+          "description": "Other (9 more \u2014 use the rollups endpoint for the full list)",
+          "extra": null,
+          "count": 296,
+          "amount": 6599000,
+          "base_amount": 7774000,
+          "delta": -1175000,
+          "pct": -15.114484178029327
+        }
+      ],
+      "top_operating_units": [
+        {
+          "code": "0100000",
+          "description": "Central Office",
+          "extra": null,
+          "count": 367,
+          "amount": 510414711000,
+          "base_amount": 326997958000,
+          "delta": 183416753000,
+          "pct": 56.09110042210111
+        },
+        {
+          "code": "1800046",
+          "description": "Bulacan 2nd District Engineering Office",
+          "extra": null,
+          "count": 37,
+          "amount": 3451901000,
+          "base_amount": 1133306000,
+          "delta": 2318595000,
+          "pct": 204.5868459180486
+        },
+        {
+          "code": "1800005",
+          "description": "Metro Manila 3rd District Engineering Office",
+          "extra": null,
+          "count": 33,
+          "amount": 2896420000,
+          "base_amount": 3209677000,
+          "delta": -313257000,
+          "pct": -9.75976710429118
+        },
+        {
+          "code": "1800047",
+          "description": "Nueva Ecija 1st District Engineering Office",
+          "extra": null,
+          "count": 43,
+          "amount": 2838706000,
+          "base_amount": 2117205000,
+          "delta": 721501000,
+          "pct": 34.07799433687338
+        },
+        {
+          "code": "1800045",
+          "description": "Bulacan 1st District Engineering Office",
+          "extra": null,
+          "count": 35,
+          "amount": 2353251000,
+          "base_amount": 2335995000,
+          "delta": 17256000,
+          "pct": 0.7387002112590138
+        },
+        {
+          "code": "1800069",
+          "description": "Rizal 1st District Engineering Office",
+          "extra": null,
+          "count": 39,
+          "amount": 1795723000,
+          "base_amount": 1187216000,
+          "delta": 608507000,
+          "pct": 51.254952763439846
+        },
+        {
+          "code": "1800061",
+          "description": "Cavite District Engineering Office",
+          "extra": null,
+          "count": 38,
+          "amount": 1790064000,
+          "base_amount": 1305270000,
+          "delta": 484794000,
+          "pct": 37.14128111425222
+        },
+        {
+          "code": "1800057",
+          "description": "Batangas 2nd District Engineering Office",
+          "extra": null,
+          "count": 42,
+          "amount": 1752857000,
+          "base_amount": 1748440000,
+          "delta": 4417000,
+          "pct": 0.2526251973187527
+        },
+        {
+          "code": "1800038",
+          "description": "Isabela 4th District Engineering Office",
+          "extra": null,
+          "count": 35,
+          "amount": 1579818000,
+          "base_amount": 1971657000,
+          "delta": -391839000,
+          "pct": -19.873588560282037
+        },
+        {
+          "code": "1800055",
+          "description": "Zambales 2nd District Engineering Office",
+          "extra": null,
+          "count": 35,
+          "amount": 1544174000,
+          "base_amount": 621215000,
+          "delta": 922959000,
+          "pct": 148.57319929493008
+        },
+        {
+          "code": "1800037",
+          "description": "Isabela 3rd District Engineering Office",
+          "extra": null,
+          "count": 37,
+          "amount": 1530806000,
+          "base_amount": 1646104000,
+          "delta": -115298000,
+          "pct": -7.004296204857044
+        },
+        {
+          "code": "1800119",
+          "description": "Cebu 6th District Engineering Office",
+          "extra": null,
+          "count": 36,
+          "amount": 1521339000,
+          "base_amount": 1656726000,
+          "delta": -135387000,
+          "pct": -8.171960843253501
+        },
+        {
+          "code": "1800036",
+          "description": "Isabela 2nd District Engineering Office",
+          "extra": null,
+          "count": 32,
+          "amount": 1475743000,
+          "base_amount": 704954000,
+          "delta": 770789000,
+          "pct": 109.33890721947814
+        },
+        {
+          "code": "1800059",
+          "description": "Batangas 4th District Engineering Office",
+          "extra": null,
+          "count": 40,
+          "amount": 1468317000,
+          "base_amount": 3043515000,
+          "delta": -1575198000,
+          "pct": -51.755880946865716
+        },
+        {
+          "code": "1800060",
+          "description": "Cavite 2nd District Engineering Office",
+          "extra": null,
+          "count": 40,
+          "amount": 1425924000,
+          "base_amount": 656874000,
+          "delta": 769050000,
+          "pct": 117.07724769133807
+        },
+        {
+          "code": "1800064",
+          "description": "Laguna 2nd District Engineering Office",
+          "extra": null,
+          "count": 38,
+          "amount": 1402660000,
+          "base_amount": 1788703000,
+          "delta": -386043000,
+          "pct": -21.5822861593009
+        },
+        {
+          "code": "1800092",
+          "description": "Masbate 3rd District Engineering Office",
+          "extra": null,
+          "count": 39,
+          "amount": 1387925000,
+          "base_amount": 917655000,
+          "delta": 470270000,
+          "pct": 51.246928311838325
+        },
+        {
+          "code": "1800035",
+          "description": "Isabela 1st District Engineering Office",
+          "extra": null,
+          "count": 38,
+          "amount": 1338223000,
+          "base_amount": 1123181000,
+          "delta": 215042000,
+          "pct": 19.14580107747549
+        },
+        {
+          "code": "1800007",
+          "description": "Quezon City 1st District Engineering Office",
+          "extra": null,
+          "count": 35,
+          "amount": 1325764000,
+          "base_amount": 1826072000,
+          "delta": -500308000,
+          "pct": -27.398043450641595
+        },
+        {
+          "code": "1800194",
+          "description": "Zamboanga del Norte 4th District Engineering Office",
+          "extra": null,
+          "count": 34,
+          "amount": 1260239000,
+          "base_amount": 640445000,
+          "delta": 619794000,
+          "pct": 96.77552326897704
+        },
+        {
+          "code": "1800001",
+          "description": "Las Pi\u00f1as-Muntinlupa District Engineering Office",
+          "extra": null,
+          "count": 36,
+          "amount": 1172677000,
+          "base_amount": 912436000,
+          "delta": 260241000,
+          "pct": 28.521562060243127
+        },
+        {
+          "code": "1800152",
+          "description": "Camiguin District Engineering Office",
+          "extra": null,
+          "count": 34,
+          "amount": 1170430000,
+          "base_amount": 550565000,
+          "delta": 619865000,
+          "pct": 112.58706964663571
+        },
+        {
+          "code": "1800003",
+          "description": "Metro Manila 1st District Engineering Office",
+          "extra": null,
+          "count": 35,
+          "amount": 1124696000,
+          "base_amount": 3340472000,
+          "delta": -2215776000,
+          "pct": -66.33122504843627
+        },
+        {
+          "code": "1800154",
+          "description": "Lanao del Norte 2nd District Engineering Office",
+          "extra": null,
+          "count": 35,
+          "amount": 1118442000,
+          "base_amount": 647432000,
+          "delta": 471010000,
+          "pct": 72.7504973495286
+        },
+        {
+          "code": "1800062",
+          "description": "Laguna 3rd District Engineering Office",
+          "extra": null,
+          "count": 43,
+          "amount": 1082105000,
+          "base_amount": 1163632000,
+          "delta": -81527000,
+          "pct": -7.006252835948135
+        },
+        {
+          "code": "1800016",
+          "description": "La Union 2nd District Engineering Office",
+          "extra": null,
+          "count": 36,
+          "amount": 1056778000,
+          "base_amount": 817771000,
+          "delta": 239007000,
+          "pct": 29.226641688198775
+        },
+        {
+          "code": "1800163",
+          "description": "Davao del Sur District Engineering Office",
+          "extra": null,
+          "count": 35,
+          "amount": 1036507000,
+          "base_amount": 1116667000,
+          "delta": -80160000,
+          "pct": -7.178505319849158
+        },
+        {
+          "code": "1800006",
+          "description": "North Manila District Engineering Office",
+          "extra": null,
+          "count": 35,
+          "amount": 1028041000,
+          "base_amount": 750685000,
+          "delta": 277356000,
+          "pct": 36.947055023078924
+        },
+        {
+          "code": "1800095",
+          "description": "Aklan District Engineering Office",
+          "extra": null,
+          "count": 37,
+          "amount": 988224000,
+          "base_amount": 893487000,
+          "delta": 94737000,
+          "pct": 10.603064174408805
+        },
+        {
+          "code": "1800019",
+          "description": "Pangasinan 2nd District Engineering Office",
+          "extra": null,
+          "count": 34,
+          "amount": 983871000,
+          "base_amount": 945810000,
+          "delta": 38061000,
+          "pct": 4.024169759253972
+        },
+        {
+          "code": "1800072",
+          "description": "Mindoro Occidental District Engineering Office",
+          "extra": null,
+          "count": 39,
+          "amount": 976101000,
+          "base_amount": 722079000,
+          "delta": 254022000,
+          "pct": 35.17925323960397
+        },
+        {
+          "code": "1800020",
+          "description": "Pangasinan 3rd District Engineering Office",
+          "extra": null,
+          "count": 34,
+          "amount": 972320000,
+          "base_amount": 2013814000,
+          "delta": -1041494000,
+          "pct": -51.71748731511451
+        },
+        {
+          "code": "1800097",
+          "description": "Bacolod City District Engineering Office",
+          "extra": null,
+          "count": 37,
+          "amount": 966127000,
+          "base_amount": 837289000,
+          "delta": 128838000,
+          "pct": 15.387518527055772
+        },
+        {
+          "code": "1800004",
+          "description": "Metro Manila 2nd District Engineering Office",
+          "extra": null,
+          "count": 38,
+          "amount": 963273000,
+          "base_amount": 1193362000,
+          "delta": -230089000,
+          "pct": -19.28073794875319
+        },
+        {
+          "code": "1800178",
+          "description": "Butuan City District Engineering Office",
+          "extra": null,
+          "count": 36,
+          "amount": 961870000,
+          "base_amount": 1015252000,
+          "delta": -53382000,
+          "pct": -5.25800490912601
+        },
+        {
+          "code": "1800144",
+          "description": "Zamboanga del Sur 2nd District Engineering Office",
+          "extra": null,
+          "count": 37,
+          "amount": 961325000,
+          "base_amount": 990447000,
+          "delta": -29122000,
+          "pct": -2.9402885767739213
+        },
+        {
+          "code": "1800032",
+          "description": "Cagayan 1st District Engineering Office",
+          "extra": null,
+          "count": 35,
+          "amount": 943788000,
+          "base_amount": 1258084000,
+          "delta": -314296000,
+          "pct": -24.982115661593344
+        },
+        {
+          "code": "1800174",
+          "description": "Sultan Kudarat 2nd District Engineering Office",
+          "extra": null,
+          "count": 37,
+          "amount": 942620000,
+          "base_amount": 1016338000,
+          "delta": -73718000,
+          "pct": -7.253295655579148
+        },
+        {
+          "code": "1800053",
+          "description": "Tarlac District Engineering Office",
+          "extra": null,
+          "count": 38,
+          "amount": 933887000,
+          "base_amount": 1789553000,
+          "delta": -855666000,
+          "pct": -47.81451010391981
+        },
+        {
+          "code": "1800113",
+          "description": "Cebu City District Engineering Office",
+          "extra": null,
+          "count": 38,
+          "amount": 928543000,
+          "base_amount": 1433216000,
+          "delta": -504673000,
+          "pct": -35.2126267080468
+        },
+        {
+          "code": "1800108",
+          "description": "Negros Occidental 3rd District Engineering Office",
+          "extra": null,
+          "count": 41,
+          "amount": 920003000,
+          "base_amount": 1045784000,
+          "delta": -125781000,
+          "pct": -12.027435875859641
+        },
+        {
+          "code": "1800074",
+          "description": "Mindoro Oriental District Engineering Office",
+          "extra": null,
+          "count": 37,
+          "amount": 887874000,
+          "base_amount": 794496000,
+          "delta": 93378000,
+          "pct": 11.75311140647656
+        },
+        {
+          "code": "1800168",
+          "description": "Cotabato 2nd District Engineering Office",
+          "extra": null,
+          "count": 39,
+          "amount": 883554000,
+          "base_amount": 789230000,
+          "delta": 94324000,
+          "pct": 11.951395664128327
+        },
+        {
+          "code": "1800202",
+          "description": "Davao del Norte 2nd District Engineering Office",
+          "extra": null,
+          "count": 36,
+          "amount": 875164000,
+          "base_amount": 245478000,
+          "delta": 629686000,
+          "pct": 256.51422938104434
+        },
+        {
+          "code": "1800068",
+          "description": "Quezon 4th District Engineering Office",
+          "extra": null,
+          "count": 38,
+          "amount": 870373000,
+          "base_amount": 2219173000,
+          "delta": -1348800000,
+          "pct": -60.779398451585344
+        },
+        {
+          "code": "1800201",
+          "description": "Bataan 3rd District Engineering Office",
+          "extra": null,
+          "count": 36,
+          "amount": 861694000,
+          "base_amount": 1148577000,
+          "delta": -286883000,
+          "pct": -24.977254463566656
+        },
+        {
+          "code": "1800189",
+          "description": "Cavite Third District Engineering Office",
+          "extra": null,
+          "count": 40,
+          "amount": 844101000,
+          "base_amount": 1339927000,
+          "delta": -495826000,
+          "pct": -37.003956185672806
+        },
+        {
+          "code": "1800190",
+          "description": "Cotabato 3rd District Engineering Office",
+          "extra": null,
+          "count": 40,
+          "amount": 840688000,
+          "base_amount": 1106380000,
+          "delta": -265692000,
+          "pct": -24.014533885283537
+        },
+        {
+          "code": "1800191",
+          "description": "Cebu 7th District Engineering Office",
+          "extra": null,
+          "count": 35,
+          "amount": 831187000,
+          "base_amount": 584104000,
+          "delta": 247083000,
+          "pct": 42.30119978633942
+        },
+        {
+          "code": "1800023",
+          "description": "Apayao 2nd District Engineering Office",
+          "extra": null,
+          "count": 43,
+          "amount": 825654000,
+          "base_amount": 935021000,
+          "delta": -109367000,
+          "pct": -11.696742640004878
+        },
+        {
+          "code": "__other__",
+          "description": "Other (167 more \u2014 use the rollups endpoint for the full list)",
+          "extra": null,
+          "count": 6806,
+          "amount": 70446794000,
+          "base_amount": 140650132000,
+          "delta": -70203338000,
+          "pct": -49.9134533339791
+        }
+      ],
+      "top_divisions": [
+        {
+          "code": "__unassigned__",
+          "description": "(not attributed)",
+          "extra": null,
+          "count": 8993,
+          "amount": 643953276000,
+          "base_amount": 530898861000,
+          "delta": 113054415000,
+          "pct": 21.29490630042998
+        }
+      ],
+      "top_movers_up": [
+        {
+          "code": "310204000000000",
+          "description": "Construction of By   -   pass and Diversion Roads",
+          "extra": "Operations",
+          "count": 52,
+          "amount": 127342898000,
+          "base_amount": 42789968000,
+          "delta": 84552930000,
+          "pct": 197.59989070335365
+        },
+        {
+          "code": "300221000000000",
+          "description": "Basic Infrastructure Program ( BIP )   -   Access Roads and  /  or Bridges from the National Road  /  s leading to Major  /  Strategic Public Buildings  /  Facilities",
+          "extra": "Operations",
+          "count": 168,
+          "amount": 105725209000,
+          "base_amount": 33636646000,
+          "delta": 72088563000,
+          "pct": 214.31555036729878
+        },
+        {
+          "code": "320101000000000",
+          "description": "Construction  /  Maintenance of Flood Mitigation Structures and Drainage Systems",
+          "extra": "Operations",
+          "count": 106,
+          "amount": 62988802000,
+          "base_amount": 470381000,
+          "delta": 62518421000,
+          "pct": 13291.017494329066
+        },
+        {
+          "code": "320102000000000",
+          "description": "Construction  /  Rehabilitation of Flood Mitigation Facilities within Major River Basins and Principal Rivers",
+          "extra": "Operations",
+          "count": 32,
+          "amount": 40461629000,
+          "base_amount": 4290489000,
+          "delta": 36171140000,
+          "pct": 843.054020182781
+        },
+        {
+          "code": "200000000000000",
+          "description": "Support to Operations",
+          "extra": "Support to Operations",
+          "count": 1218,
+          "amount": 51714236000,
+          "base_amount": 29705871000,
+          "delta": 22008365000,
+          "pct": 74.08759366119916
+        },
+        {
+          "code": "310205000000000",
+          "description": "Construction of Missing Links  /  New Roads",
+          "extra": "Operations",
+          "count": 14,
+          "amount": 27484664000,
+          "base_amount": 14351703000,
+          "delta": 13132961000,
+          "pct": 91.50803218266152
+        },
+        {
+          "code": "310104000000000",
+          "description": "Rehabilitation  /  Reconstruction  /  Upgrading of Damaged Paved Roads    -    Primary Roads",
+          "extra": "Operations",
+          "count": 22,
+          "amount": 18330366000,
+          "base_amount": 5412940000,
+          "delta": 12917426000,
+          "pct": 238.6397410649296
+        },
+        {
+          "code": "300105000000000",
+          "description": "Buildings And Other Structures    -    MULTIPURPOSE  /  FACILITIES    -    National Building Program",
+          "extra": "Operations",
+          "count": 48,
+          "amount": 13616645000,
+          "base_amount": 6800526000,
+          "delta": 6816119000,
+          "pct": 100.22929108718944
+        },
+        {
+          "code": "310101000000000",
+          "description": "Preventive Maintenance    -    Primary Roads",
+          "extra": "Operations",
+          "count": 42,
+          "amount": 18554929000,
+          "base_amount": 12272842000,
+          "delta": 6282087000,
+          "pct": 51.18689705285866
+        },
+        {
+          "code": "300205000000000",
+          "description": "Construction  /  Rehabilitation of Water Supply  /  Septage and Sewerage  /  Rain Water Collector Systems",
+          "extra": "Operations",
+          "count": 82,
+          "amount": 7298600000,
+          "base_amount": 1873600000,
+          "delta": 5425000000,
+          "pct": 289.54953031596926
+        }
+      ],
+      "top_movers_down": [
+        {
+          "code": "300215000000000",
+          "description": "Sustainable Infrastructure Projects Alleviating Gaps ( SIPAG )   -   Access Roads and  /  or Bridges from the National Road  /  s leading to Major  /  Strategic Public Buildings  /  Facilities",
+          "extra": "Operations",
+          "count": 0,
+          "amount": 0,
+          "base_amount": 72025030000,
+          "delta": -72025030000,
+          "pct": -100
+        },
+        {
+          "code": "300226000000000",
+          "description": "Basic Infrastructure Program ( BIP )   -   Multi  -  Purpose Buildings  /  Facilities to support Social Services",
+          "extra": "Operations",
+          "count": 163,
+          "amount": 40974839000,
+          "base_amount": 74663274000,
+          "delta": -33688435000,
+          "pct": -45.12048989440243
+        },
+        {
+          "code": "300214000000000",
+          "description": "Special Road Fund   -   Motor Vehicle User's Charge ( MVUC ) as per R.A. 11239",
+          "extra": "Operations",
+          "count": 0,
+          "amount": 0,
+          "base_amount": 14833952000,
+          "delta": -14833952000,
+          "pct": -100
+        },
+        {
+          "code": "310202000000000",
+          "description": "Road Widening    -    Secondary Roads",
+          "extra": "Operations",
+          "count": 42,
+          "amount": 10362723000,
+          "base_amount": 18920217000,
+          "delta": -8557494000,
+          "pct": -45.22936496975695
+        },
+        {
+          "code": "310109000000000",
+          "description": "Rehabilitation  /  Reconstruction of Roads with Slips, Slope Collapse and Landslide    -    Tertiary Roads",
+          "extra": "Operations",
+          "count": 16,
+          "amount": 2932241000,
+          "base_amount": 9277656000,
+          "delta": -6345415000,
+          "pct": -68.39459234099647
+        },
+        {
+          "code": "310201000000000",
+          "description": "Road Widening    -    Primary Roads",
+          "extra": "Operations",
+          "count": 12,
+          "amount": 4475859000,
+          "base_amount": 10456790000,
+          "delta": -5980931000,
+          "pct": -57.19662535060951
+        },
+        {
+          "code": "310108000000000",
+          "description": "Rehabilitation  /  Reconstruction of Roads with Slips, Slope Collapse and Landslide    -    Secondary Roads",
+          "extra": "Operations",
+          "count": 26,
+          "amount": 4817064000,
+          "base_amount": 10526099000,
+          "delta": -5709035000,
+          "pct": -54.23694950997516
+        },
+        {
+          "code": "300243000000000",
+          "description": "Sustainable Infrastructure Projects Alleviating Gaps  ( SIPAG )  - Interjurisdictional Roads and / or Bridges  ( roads traversing multiple LGUs )",
+          "extra": "Operations",
+          "count": 0,
+          "amount": 0,
+          "base_amount": 5374970000,
+          "delta": -5374970000,
+          "pct": -100
+        },
+        {
+          "code": "300235000000000",
+          "description": "Sustainable Infrastructure Projects Alleviating Gaps  ( SIPAG )  - Major / Strategic Public Buildings / Facilities",
+          "extra": "Operations",
+          "count": 0,
+          "amount": 0,
+          "base_amount": 5237132000,
+          "delta": -5237132000,
+          "pct": -100
+        },
+        {
+          "code": "300220000000000",
+          "description": "Sustainable Infrastructure Projects Alleviating Gaps ( SIPAG )   -   Multi  -  Purpose Buildings  /  Facilities to support Social Services",
+          "extra": "Operations",
+          "count": 0,
+          "amount": 0,
+          "base_amount": 5202400000,
+          "delta": -5202400000,
+          "pct": -100
+        }
+      ]
+    }
+  },
+  "raw_sha256": "9e8a1a5d284d1a0231280b4aa9ec7206345dadba3288d3f4c4fb28adaae98ee5",
+  "payload_sha256": "09988aab10060fe6657ef069d06c19129c35aca9ea6f77baed8b29194d3ab696"
+}

@@ -19,7 +19,7 @@ def test_production_artifact_is_isolated_and_reproducible(tmp_path):
     assert first == snapshot(output)
     assert (output / "logo.svg").read_bytes() == (build.ROOT / "logo.svg").read_bytes()
     assert (output / "assets" / "style.css").exists()
-    assert json.loads((output / "data" / "public.json").read_text()) == {key: [] for key in build.DATASETS}
+    assert json.loads((output / "data" / "public.json").read_text()) == build.load_data(build.ROOT / "data" / "production")
     assert not any(part in {"tests", "fixtures", "src", "schemas", ".git", ".kilo"} for path in first for part in Path(path).parts)
     for page in build.SRC_PAGES.glob("*.html"):
         assert (output / page.name).exists()

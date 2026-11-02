@@ -1,0 +1,70 @@
+{
+  "url": "https://budget.bettergov.ph/api/v1/gaa/departments/14/programs?q=Pangasinan&limit=500",
+  "retrieved_at": "2026-11-01T13:18:43.793627+00:00",
+  "status": 200,
+  "data": {
+    "meta": {
+      "dataset": "gaa",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "currency": "PHP",
+      "scale": "pesos",
+      "department_id": "14",
+      "year": 2026,
+      "query": "Pangasinan",
+      "agency_id": null,
+      "limit": 500,
+      "matched": 1,
+      "matched_amount": 0
+    },
+    "data": [
+      {
+        "department_id": "14",
+        "agency_id": "14-003",
+        "fam_key": "14-003|construction of urdaneta district jail male dorm in urdaneta pangasinan",
+        "name": "Construction of Urdaneta District Jail Male Dorm in Urdaneta, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 5000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      }
+    ],
+    "next_cursor": null
+  },
+  "raw_sha256": "9e23b2fa0f0141033ef6b5c80f4bba653892dcfdf0b376add5ed247d35a01e61",
+  "payload_sha256": "5addb5590358b68cbb0e289bf0709510b57cc382fc624fdeb305ff4767edff07"
+}

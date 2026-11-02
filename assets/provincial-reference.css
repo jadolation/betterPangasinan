@@ -1,0 +1,18 @@
+.provincial-reference{font-family:inherit;color:var(--ink,#182c3a)}
+.pr-nav{display:flex;flex-wrap:wrap;gap:1rem;margin-block:1.5rem}
+.pr-note{border-left:4px solid var(--gold,#d3a544);padding:1rem 1.25rem;background:var(--cream,#f8f5ec);margin-block:1.5rem;line-height:1.7}
+.provincial-reference form{display:flex;align-items:end;flex-wrap:wrap;gap:1rem;margin-block:2rem}
+.provincial-reference label{display:grid;gap:.4rem;flex:1 1 15rem;font-weight:600;min-width:0}
+.provincial-reference input,.provincial-reference select{font:inherit;padding:.75rem;min-width:0;width:100%;border:1px solid #84949c;border-radius:4px;background:#fff;color:inherit}
+.pr-record{border-top:1px solid #c9d3d5;padding:1.25rem 0;break-inside:avoid;min-width:0;max-width:100%}
+.pr-record h3{margin-top:0;font-size:1.15rem}
+.pr-record dl{display:grid;grid-template-columns:minmax(9rem,1fr) minmax(0,3fr);gap:.5rem 1.5rem}
+.pr-record dt{text-transform:capitalize;font-weight:600;min-width:0;overflow-wrap:anywhere}
+.pr-record dd{margin:0;overflow-wrap:anywhere;white-space:pre-wrap}
+.provincial-reference table{width:100%;border-collapse:collapse;margin-block:1rem}
+.provincial-reference th,.provincial-reference td{text-align:left;padding:.6rem;border-bottom:1px solid #ccd5d7}
+.provincial-reference meter{width:100%;max-width:20rem}
+.provincial-reference [data-status]{font-weight:600}
+.pr-pagination{display:flex;align-items:center;flex-wrap:wrap;gap:1rem;margin:1.5rem auto;max-width:72rem;padding-inline:1rem}
+.pr-record dd a{display:inline-block;max-width:100%;overflow-wrap:anywhere;margin-block:.15rem}
+@media(max-width:600px){.pr-record dl{grid-template-columns:minmax(0,1fr);gap:.25rem}.pr-record dd{min-width:0;margin-bottom:.75rem}.provincial-reference th,.provincial-reference td{padding:.35rem;font-size:.85rem}}

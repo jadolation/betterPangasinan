@@ -1,0 +1,5472 @@
+{
+  "url": "https://budget.bettergov.ph/api/v1/gaa/departments/18/programs?q=Pangasinan&limit=500&cursor=eyJ2IjowLCJrIjoiMTgtMDAxfHJlaGFiaWxpdGF0aW9uIG9mIHJvYWQgYnJneSBnYXlhbWFuIGJpbm1hbGV5IHBhbmdhc2luYW4ifQ%3D%3D",
+  "retrieved_at": "2026-11-01T13:18:48.044346+00:00",
+  "status": 200,
+  "data": {
+    "meta": {
+      "dataset": "gaa",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "currency": "PHP",
+      "scale": "pesos",
+      "department_id": "18",
+      "year": 2026,
+      "query": "Pangasinan",
+      "agency_id": null,
+      "limit": 500,
+      "matched": 3647,
+      "matched_amount": 10244978000
+    },
+    "data": [
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitation of road brgy nalsian calasiao pangasinan",
+        "name": "Rehabilitation of  Road, Brgy. Nalsian, Calasiao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitation of road in brgy caloocan norte binmaley pangasinan",
+        "name": "Rehabilitation of Road in Brgy. Caloocan Norte, Binmaley, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 19105000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitation of road in brgy san isidro norte binmaley pangasinan",
+        "name": "Rehabilitation of Road in Brgy. San Isidro Norte, Binmaley, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 24660000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitation of road including drainage maluedguilig road dagupan city pangasinan",
+        "name": "Rehabilitation of Road including drainage, Malued-Guilig Road, Dagupan City, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 25000000
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitation of road phase 1 umingan pangasinan",
+        "name": "Rehabilitation of Road, Phase 1, Umingan, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 125000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitation of road phase 2 umingan pangasinan",
+        "name": "Rehabilitation of Road, Phase 2, Umingan, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 125000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitation of road sitio pogo  brgy nalsian calasiao pangasinan",
+        "name": "Rehabilitation of Road, Sitio Pogo - Brgy. Nalsian, Calasiao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitation of road with drainage structure barangay palamis alaminos city pangasinan",
+        "name": "Rehabilitation of Road with Drainage Structure, Barangay Palamis, Alaminos City, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitation of roads from barangay cabanbanan to sta ines road manaoag pangasinan",
+        "name": "Rehabilitation of roads from Barangay Cabanbanan to Sta. Ines Road, Manaoag, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 5000000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitation of roads infanta pangasinan",
+        "name": "Rehabilitation of Roads, Infanta, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 50000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitation of roads tangcarangbolaney road alaminos city pangasinan",
+        "name": "Rehabilitation of Roads, Tangcarang-Bolaney Road, Alaminos City, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 4000000
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitation of sabanganpandan road brgy sabanganpandan portion alaminos pangasinan",
+        "name": "Rehabilitation of Sabangan-Pandan Road (Brgy. Sabangan-Pandan Portion), Alaminos, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 50000000
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitation of school building agno central school barangay poblacion west agno pangasinan",
+        "name": "Rehabilitation of School Building, Agno Central School, Barangay Poblacion West, Agno, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 5000000
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitation of slope protection along ingalera river brgy mancup calasiao pangasinan",
+        "name": "Rehabilitation of Slope Protection along Ingalera River, Brgy. Mancup, Calasiao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 5000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitation of slope protection works along ingalera river brgy lasip calasiao pangasinan",
+        "name": "Rehabilitation of Slope Protection Works along Ingalera River, Brgy. Lasip, Calasiao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 20000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitation of slope protection works along ingalera river brgy longos calasiao pangasinan",
+        "name": "Rehabilitation of Slope Protection Works along Ingalera River, Brgy. Longos, Calasiao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 20000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitation of solar led street lights in binalonan pangasinan",
+        "name": "Rehabilitation of Solar LED Street Lights in Binalonan, Pangasinan ",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 25000000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitation of tebagnibaliw road brgy tebag mangaldan pangasinan",
+        "name": "Rehabilitation of Tebag-Nibaliw Road, Brgy. Tebag, Mangaldan, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 3790000
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitationasphalting of barangay road barangay balayang alaminos city pangasinan",
+        "name": "Rehabilitation/Asphalting of Barangay Road, Barangay Balayang, Alaminos City, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 9000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitationasphalting of barangay road barangay dulacac alaminos city pangasinan",
+        "name": "Rehabilitation/Asphalting of Barangay Road, Barangay Dulacac, Alaminos City, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 9000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitationasphalting of barangay road barangay sta maria alaminos city pangasinan",
+        "name": "Rehabilitation/Asphalting of Barangay Road, Barangay Sta. Maria, Alaminos City, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 9000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitationasphalting of brgy road brgy magsaysay alaminos city pangasinan",
+        "name": "Rehabilitation/Asphalting of Brgy. Road, Brgy. Magsaysay, Alaminos City, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2021": {
+            "count": 1,
+            "amount": 7700000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitationasphalting of brgy road brgy sabangan alaminos city pangasinan",
+        "name": "Rehabilitation/Asphalting of Brgy. Road, Brgy. Sabangan, Alaminos City, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2021": {
+            "count": 1,
+            "amount": 7700000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitationasphalting of brgy road brgy telbang alaminos city pangasinan",
+        "name": "Rehabilitation/Asphalting of Brgy. Road, Brgy. Telbang, Alaminos City, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2021": {
+            "count": 1,
+            "amount": 7700000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitationcompletion of aguilar multipurpose building municipal hall poblacion aguilar pangasinan",
+        "name": "Rehabilitation/Completion of Aguilar Multi-Purpose Building (Municipal Hall), Poblacion, Aguilar, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 3450000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitationconcreting of road at barangay laguit padilla bugallon pangasinan",
+        "name": "Rehabilitation/Concreting of Road at Barangay Laguit Padilla, Bugallon, Pangasinan ",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitationconcreting of road at barangay salomague sur bugallon pangasinan",
+        "name": "Rehabilitation/Concreting of Road at Barangay Salomague Sur, Bugallon, Pangasinan ",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitationconstruction of additional seawall in barangay luciente 1st bolinao pangasinan",
+        "name": "Rehabilitation/Construction of Additional Seawall in Barangay Luciente 1st, Bolinao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 25000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitationconstruction of protection works along sinucalan river brgy banaoang sta barbara pangasinan",
+        "name": "Rehabilitation/Construction of Protection Works along Sinucalan River, Brgy. Banaoang, Sta. Barbara, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 50000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitationconstruction of protection works along sinucalan river brgy maningding sta barbara pangasinan",
+        "name": "Rehabilitation/Construction of Protection Works along Sinucalan River, Brgy. Maningding, Sta. Barbara, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 50000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitationconstruction of protection works along sinucalan river brgy ventinilla sta barbara pangasinan",
+        "name": "Rehabilitation/Construction of Protection Works along Sinucalan River, Brgy. Ventinilla, Sta. Barbara, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 30000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitationconstruction of river bank protection brgy pantal dagupan city pangasinan",
+        "name": "Rehabilitation/Construction of River Bank Protection, Brgy. Pantal, Dagupan City, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 20000000
+          },
+          "2021": {
+            "count": 1,
+            "amount": 15400000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitationconstruction of riverbank protection at brgy oraan east manaoag pangasinan",
+        "name": "Rehabilitation/Construction of Riverbank Protection at Brgy. Oraan East, Manaoag, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 25000000
+          },
+          "2021": {
+            "count": 1,
+            "amount": 19250000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitationconstruction of riverbank protection at brgy pantal dagupan city pangasinan",
+        "name": "Rehabilitation/Construction of Riverbank Protection at Brgy. Pantal, Dagupan City, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 20000000
+          },
+          "2021": {
+            "count": 1,
+            "amount": 15400000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitationconstruction of roads city of alaminos pangasinan",
+        "name": "Rehabilitation/Construction of Roads, City of  Alaminos, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 100000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitationconstruction of roads municipality of mabini pangasinan",
+        "name": "Rehabilitation/Construction of Roads, Municipality of  Mabini, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 20000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitationimprovement of flood control structure phase 2 along river dagupan city pangasinan",
+        "name": "Rehabilitation/improvement of Flood Control Structure (Phase 2) along River, Dagupan City, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 5000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitationimprovement of roads along alcala pangasinan",
+        "name": "Rehabilitation/Improvement of Roads along Alcala, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 20000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitationimprovement of roads along binalonan  pangasinan",
+        "name": "Rehabilitation/Improvement of Roads along Binalonan , Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 20000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitationimprovement of roads along laoac pangasinan",
+        "name": "Rehabilitation/Improvement of Roads along Laoac, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 20000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitationimprovement of roads along pozorrubio pangasinan",
+        "name": "Rehabilitation/Improvement of Roads along Pozorrubio, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 20000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitationimprovement of roads along sison pangasinan",
+        "name": "Rehabilitation/Improvement of Roads along Sison, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 20000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitationimprovement of roads along uradaneta city pangasinan",
+        "name": "Rehabilitation/Improvement of Roads along Uradaneta City, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 30000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rehabilitationimprovement of roads along villasis pangasinan",
+        "name": "Rehabilitation/Improvement of Roads along Villasis, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 20000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|renovation of multi  purpose building  municipal hall  in barangay poblacion basista pangasinan",
+        "name": "Renovation of Multi - Purpose Building  ( Municipal Hall )  in Barangay Poblacion, Basista, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|repair rehabilitation of andulan river flood control brgy capitan tomas rosales pangasinan",
+        "name": "Repair/ Rehabilitation of Andulan River Flood Control, Brgy. Capitan Tomas, Rosales, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2021": {
+            "count": 1,
+            "amount": 1000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|repair rehabilitation of andulan river flood control brgy zone 4 rosales pangasinan",
+        "name": "Repair/ Rehabilitation of Andulan River Flood Control, Brgy. Zone 4, Rosales, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2021": {
+            "count": 1,
+            "amount": 1000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|repair rehabilitation of cabulandayan river flood control brgy san eugenio natividad pangasinan",
+        "name": "Repair/ Rehabilitation of Cabulandayan River Flood Control, Brgy. San Eugenio, Natividad, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2021": {
+            "count": 1,
+            "amount": 1000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|repair rehabilitation of mitura river flood control brgy sobolmacalong asingan pangasinan",
+        "name": "Repair/ Rehabilitation of Mitura River Flood Control, Brgy. Sobol-Macalong, Asingan, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2021": {
+            "count": 1,
+            "amount": 1000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|repairrehabilitaion of multipurpose building health centertalospatang malasiqui pangasinan",
+        "name": "Repair/Rehabilitaion of Multi-Purpose Building (Health Center),Talospatang, Malasiqui, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 1000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|replacement of bridge brgy amamperez villiasis pangasinan",
+        "name": "Replacement of Bridge, Brgy. Amamperez, Villiasis, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 25000000
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|replacement of lagasit bridge balungao pangasinan",
+        "name": "Replacement of Lagasit Bridge, Balungao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 25000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting ballag bani pangasinan",
+        "name": "Road Concreting, Ballag, Bani, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 2500000
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting barangay arnedo arnedo road bolinao pangasinan",
+        "name": "Road Concreting, Barangay Arnedo (Arnedo Road), Bolinao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting barangay balangobong alaminos city pangasinan",
+        "name": "Road Concreting, Barangay Balangobong, Alaminos City, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 2000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting barangay balingasay dalan salamague road bolinao pangasinan",
+        "name": "Road Concreting, Barangay Balingasay (Dalan Salamague Road), Bolinao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 20000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting barangay batiarao anda pangasinan",
+        "name": "Road Concreting, Barangay Batiarao, Anda, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 2000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting barangay binabalian binabalian loob to salud bolinao pangasinan",
+        "name": "Road Concreting, Barangay Binabalian (Binabalian Loob to Salud), Bolinao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 5000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting barangay binabalian binabalian ricor bolinao pangasinan",
+        "name": "Road Concreting, Barangay Binabalian (Binabalian Ricor), Bolinao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting barangay binday san fabian pangasinan",
+        "name": "Road Concreting, Barangay Binday, San Fabian, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting barangay catungi sicopet road bolinao pangasinan",
+        "name": "Road Concreting, Barangay Catungi (Sicopet Road), Bolinao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting barangay culang bolinao pangasinan",
+        "name": "Road Concreting, Barangay Culang, Bolinao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 4000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting barangay goyoden bolinao pangasinan",
+        "name": "Road Concreting, Barangay Goyoden, Bolinao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting barangay liwaliwa liwaliwa to arnedo road bolinao pangasinan",
+        "name": "Road Concreting, Barangay Liwa-Liwa (Liwa-Liwa to Arnedo Road), Bolinao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting barangay luciente i guiguiwanen fishport bolinao pangasinan",
+        "name": "Road Concreting, Barangay Luciente I (Guiguiwanen Fishport), Bolinao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting barangay luciente ii to liwa liwa bolinao pangasinan",
+        "name": "Road Concreting, Barangay Luciente II to Liwa Liwa, Bolinao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting barangay maawi alaminos city pangasinan",
+        "name": "Road Concreting, Barangay Maawi, Alaminos City, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 2000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting barangay macatiw alaminos city pangasinan",
+        "name": "Road Concreting, Barangay Macatiw, Alaminos City, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 2000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting barangay pilar pilar warf bolinao pangasinan",
+        "name": "Road Concreting, Barangay Pilar (Pilar Warf), Bolinao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting barangay pogo alaminos city pangasinan",
+        "name": "Road Concreting, Barangay Pogo, Alaminos City, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 2000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting barangay polo alaminos city pangasinan",
+        "name": "Road Concreting, Barangay Polo, Alaminos City, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 2000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting barangay san vicente oboy alaminos city pangasinan",
+        "name": "Road Concreting, Barangay San Vicente (Oboy), Alaminos City, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 2000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting barangay sioasio east sual pangasinan",
+        "name": "Road Concreting, Barangay Sioasio East, Sual, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 2000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting barangay sioasio west sual pangasinan",
+        "name": "Road Concreting, Barangay Sioasio West, Sual, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 2000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting barangay sta maria alaminos city pangasinan",
+        "name": "Road Concreting, Barangay Sta. Maria, Alaminos City, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 2000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting barangay victory bolinao pangasinan",
+        "name": "Road Concreting, Barangay Victory, Bolinao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 16000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting barangay victory to salud bolinao pangasinan",
+        "name": "Road Concreting, Barangay Victory to Salud, Bolinao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting barangay zaragoza bolinao pangasinan",
+        "name": "Road Concreting, Barangay Zaragoza, Bolinao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting brgy arnedoliwa liwa bolinao pangasinan",
+        "name": "Road Concreting, Brgy. Arnedo-Liwa Liwa, Bolinao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2021": {
+            "count": 1,
+            "amount": 11550000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting brgy baybay norte sual pangasinan",
+        "name": "Road Concreting, Brgy. Baybay Norte, Sual, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 5000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting brgy baybay sur sual pangasinan",
+        "name": "Road Concreting, Brgy. Baybay Sur, Sual, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 5000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting brgy bolaneybalayang alaminos city pangasinan",
+        "name": "Road Concreting, Brgy. Bolaney-Balayang, Alaminos City, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 20000000
+          },
+          "2021": {
+            "count": 1,
+            "amount": 15400000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting brgy capantolan sual pangasinan",
+        "name": "Road Concreting, Brgy. Capantolan, Sual, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 5000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting brgy estanzailog malino bolinao pangasinan",
+        "name": "Road Concreting, Brgy. Estanza-Ilog Malino, Bolinao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2021": {
+            "count": 1,
+            "amount": 11550000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting brgy macandocandong anda pangasinan",
+        "name": "Road Concreting, Brgy. Macandocandong, Anda, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 2000000
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting brgy paitan east sual pangasinan",
+        "name": "Road Concreting, Brgy. Paitan East, Sual, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 5000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting brgy sabilig anda pangasinan",
+        "name": "Road Concreting, Brgy Sabilig, Anda, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 3000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting brgy siaosio east sual pangasinan",
+        "name": "Road Concreting, Brgy. Siaosio East, Sual, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 5000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting brgy siaosio west sual pangasinan",
+        "name": "Road Concreting, Brgy. Siaosio West, Sual, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 5000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting catuday bolinao pangasinan",
+        "name": "Road Concreting, Catuday, Bolinao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 5000000
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting centro road phase 2 barangay masidem bani pangasinan",
+        "name": "Road Concreting (Centro Road) Phase 2, Barangay Masidem, Bani, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 2000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting goyoden bolinao pangasinan",
+        "name": "Road Concreting, Goyoden, Bolinao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 5000000
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting ilog malino bolinao pangasinan",
+        "name": "Road Concreting, Ilog Malino, Bolinao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 5000000
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting in barangay anapao burgos pangasinan",
+        "name": "Road Concreting in Barangay Anapao, Burgos, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 2000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting in barangay barangay victoria sual pangasinan",
+        "name": "Road Concreting in Barangay Barangay Victoria, Sual, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 2000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting in barangay binabalian bolinao pangasinan",
+        "name": "Road Concreting in Barangay Binabalian, Bolinao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 6000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting in barangay poblacion burgos pangasinan",
+        "name": "Road Concreting in Barangay Poblacion, Burgos, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 2000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting in barangay san miguel burgos pangasinan",
+        "name": "Road Concreting in Barangay San Miguel Burgos, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 2000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting in sitio paraging barangay catuday bolinao pangasinan",
+        "name": "Road Concreting in Sitio Paraging, Barangay Catuday, Bolinao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting landfill  liwaliwa bolinao pangasinan",
+        "name": "Road Concreting, Landfill - Liwa-Liwa, Bolinao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 5000000
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting madacay cabuyao bolinao pangasinan",
+        "name": "Road Concreting, Madacay, Cabuyao, Bolinao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 3000000
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting of sitio pating  calapnet brgy macaboboni agno pangasinan",
+        "name": "Road Concreting of Sitio Pating \u00f9 Calapnet, Brgy. Macaboboni, Agno, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 20000000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting ranom ilocotipor bani pangasinan",
+        "name": "Road Concreting, Ranom Iloco-Tipor, Bani, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2021": {
+            "count": 1,
+            "amount": 11550000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting telbang alaminos city pangasinan",
+        "name": "Road Concreting, Telbang, Alaminos City, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2021": {
+            "count": 1,
+            "amount": 11550000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting tinumrongbeach front bolinao pangasinan",
+        "name": "Road Concreting, Tinumrong-Beach Front, Bolinao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 4500000
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting verenciano st brgy palamis alaminos city pangasinan",
+        "name": "Road Concreting, Verenciano St., Brgy. Palamis, Alaminos City, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting with construction of box culvert nanbatagan laoac pangasinan",
+        "name": "Road Concreting with Construction of Box Culvert, Nanbatagan, Laoac, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concreting zaragosa to gagaban bolinao pangasinan",
+        "name": "Road Concreting, Zaragosa to Gagaban, Bolinao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 21000000
+          },
+          "2021": {
+            "count": 1,
+            "amount": 16170000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road concretingimprovement brgy baybay polong binmaley pangasinan",
+        "name": "Road Concreting/Improvement, Brgy. Baybay Polong, Binmaley, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2021": {
+            "count": 1,
+            "amount": 7700000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road connecting villasis  stotomas bypass road to urdaneta city bypass road pangasinan",
+        "name": "Road connecting Villasis - Sto.Tomas Bypass Road to Urdaneta City Bypass Road, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 60000000
+          },
+          "2023": {
+            "count": 1,
+            "amount": 95000000
+          },
+          "2024": {
+            "count": 2,
+            "amount": 80000000
+          },
+          "2025": {
+            "count": 2,
+            "amount": 0
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road connecting villasissto tomas bypass road to urdaneta city bypass road pangasinan",
+        "name": "Road connecting Villasis-Sto. Tomas Bypass Road to Urdaneta City Bypass Road, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 105000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road leading to maranum falls and skyplaza natividad pangasinan",
+        "name": "Road Leading to Maranum Falls and Skyplaza, Natividad, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 5000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road opening barangay salud bolinao pangasinan",
+        "name": "Road Opening, Barangay Salud, Bolinao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road openingconcreting beda road guiguiwanen bolinao pangasinan",
+        "name": "Road Opening/Concreting, Beda Road, Guiguiwanen, Bolinao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2021": {
+            "count": 1,
+            "amount": 7700000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road openingconcreting in brgy calombuyan sual pangasinan",
+        "name": "Road Opening/Concreting in Brgy. Calombuyan, Sual, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 5000000
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road openingconcreting luciente i bolinao pangasinan",
+        "name": "Road Opening/Concreting, Luciente I, Bolinao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2021": {
+            "count": 1,
+            "amount": 7700000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road rehabilitation and asphalting of barangay lucap road alaminos city pangasinan",
+        "name": "Road Rehabilitation and Asphalting of Barangay Lucap Road, Alaminos City, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|road rehabilitation barangay san jose to cabungan anda pangasinan",
+        "name": "Road Rehabilitation, Barangay San Jose to Cabungan, Anda, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|rodriguez br b00749lz along pangasinannueva ecija rd",
+        "name": "Rodriguez Br. (B00749LZ) along Pangasinan-Nueva Ecija Rd",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 62000000
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 2,
+            "amount": 41000000
+          },
+          "2024": {
+            "count": 2,
+            "amount": 0
+          },
+          "2025": {
+            "count": 2,
+            "amount": 0
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|san carlos city bypass road package a pangasinan",
+        "name": "San Carlos City Bypass Road, Package A, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 110000000
+          },
+          "2023": {
+            "count": 1,
+            "amount": 110000000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 105000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 180000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|san carlos city bypass road package b pangasinan",
+        "name": "San Carlos City Bypass Road, Package B, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 110000000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 70000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 125000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|san carlos city bypass road package c pangasinan",
+        "name": "San Carlos City Bypass Road, Package C, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 165000000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|san carlos city bypass road pangasinan",
+        "name": "San Carlos City By-Pass Road, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 80000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|san carlos city bypass road san carlos city pangasinan",
+        "name": "San Carlos City Bypass Road, San Carlos City, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 85000000
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|san manuel  pangasinan   itogon  benguet  road pangasinan",
+        "name": "San Manuel  ( Pangasinan )  - Itogon  ( Benguet )  Road, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 30000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|san manuel  pangasinan   itogon  benguet  road pangasinan  package 5",
+        "name": "San Manuel  ( Pangasinan )  - Itogon  ( Benguet )  Road, Pangasinan  ( Package 5 ) ",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 160000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|san manuel pangasinan  itogon benguet road pangasinan",
+        "name": "San Manuel (Pangasinan) - Itogon (Benguet) Road, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 50000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|san manuel pangasinan  itogon benguet road pangasinan package 3",
+        "name": "San Manuel (Pangasinan) - Itogon (Benguet) Road, Pangasinan (Package 3)",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 100000000
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|san manuel pangasinan  itogon benguet road pangasinan package 6",
+        "name": "San Manuel (Pangasinan) - Itogon (Benguet) Road, Pangasinan (Package 6)",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 100000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|san manuel pangasinanitogon benguet road pangasinan",
+        "name": "San Manuel (Pangasinan)-Itogon (Benguet) Road, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 60000000
+          },
+          "2023": {
+            "count": 1,
+            "amount": 50000000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|san manuel pangasinanitogon benguet road pangasinan package 7",
+        "name": "San Manuel (Pangasinan)-Itogon (Benguet) Road, Pangasinan (Package 7)",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 100000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|sn nicolas  natividad  sn quintin  umingan  guimba rd umingan section pangasinan",
+        "name": "Sn Nicolas - Natividad - Sn Quintin - Umingan - Guimba Rd, Umingan Section, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 100000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|sn nicolasnatividadsn quintinuminganguimba rd phase a pangasinan",
+        "name": "Sn Nicolas-Natividad-Sn Quintin-Umingan-Guimba Rd, Phase A, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 125000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|stone masonryslope protection gabion type along imbelleng to linmansangan creek pozzorubio pangasinan",
+        "name": "Stone Masonry/Slope Protection (Gabion Type) along Imbelleng to Linmansangan Creek, Pozzorubio, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2021": {
+            "count": 1,
+            "amount": 11550000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|tambacan br  b00702lz  along pangasinan  zambales rd",
+        "name": "Tambacan Br. ( B00702LZ ) along Pangasinan   -   Zambales Rd",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 2,
+            "amount": 20500000
+          },
+          "2025": {
+            "count": 2,
+            "amount": 0
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|tarlacpangasinanla union toll expressway tplex nlexslex connector road project cavitelaguna expressway calax project muntinlupacavite expressway daang harislex link road naia expressway quirino highway project dpwh central office building central luzon link expressway cllex phase ii north luzon expressway east nlee phase i and ii metro cebu expressway iloilocapizaklan expressway icax opolnaawan expressway project villanuevacagayan de oroopol expressway dingalancapasbotolan expressway project pangasinannueva ecija expressway panex cavitetagaytaybatangas expressway ctbex tarlacpangasinanla union expressway tplex extension project boracay bridge projects pacific eastern seaboard expressway mindorobatangas super bridge rehabilitationreconstructionimprovement operation  maintenance of kennon road project",
+        "name": "Tarlac-Pangasinan-La Union Toll Expressway (TPLEX); NLEX-SLEX Connector Road Project; Cavite-Laguna Expressway (CALAX) Project; Muntinlupa-Cavite Expressway (Daang Hari-SLEX Link Road); NAIA Expressway; Quirino Highway Project; DPWH Central Office Building; Central Luzon Link Expressway (CLLEX), Phase II; North Luzon Expressway East (NLEE) Phase I and II; Metro Cebu Expressway; Iloilo-Capiz-Aklan Expressway (ICAX); Opol-Naawan Expressway Project; Villanueva-Cagayan de Oro-Opol Expressway; Dingalan-Capas-Botolan Expressway Project; Pangasinan-Nueva Ecija Expressway (PaNEx); Cavite-Tagaytay-Batangas Expressway (CTBEx); Tarlac-Pangasinan-La Union Expressway (TPLEx) Extension Project; Boracay Bridge Projects; Pacific Eastern Seaboard Expressway; Mindoro-Batangas Super Bridge; Rehabilitation/Reconstruction/Improvement, Operation & Maintenance of Kennon Road Project",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 1393437000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|tayugsan quintin road pangasinan",
+        "name": "Tayug-San Quintin Road, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 48000000
+          },
+          "2021": {
+            "count": 1,
+            "amount": 25000000
+          },
+          "2022": {
+            "count": 2,
+            "amount": 15000000
+          },
+          "2023": {
+            "count": 2,
+            "amount": 0
+          },
+          "2024": {
+            "count": 2,
+            "amount": 0
+          },
+          "2025": {
+            "count": 2,
+            "amount": 0
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|tumana parallel br along pangasinannueva vizcaya rd",
+        "name": "Tumana Parallel Br. along Pangasinan-Nueva Vizcaya Rd",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 30500000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|udiao br  b00751lz  along pangasinan  nueva ecija rd",
+        "name": "Udiao Br.  ( B00751LZ )  along Pangasinan - Nueva Ecija Rd",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|umingan diversion road pangasinan",
+        "name": " Umingan Diversion Road, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 25000000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|upgrading of local access road brgy poblacion binalonan pangasinan",
+        "name": "Upgrading of Local Access Road, Brgy. Poblacion, Binalonan, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2021": {
+            "count": 1,
+            "amount": 7700000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|upgrading of road leading to diket eco  tourism and diket falls umingan pangasinan",
+        "name": "Upgrading of Road leading to Diket Eco - Tourism and Diket Falls, Umingan, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 20000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|urdaneta bypass road pangasinan",
+        "name": "Urdaneta Bypass Road, Pangasinan",
+        "ids_count": 3,
+        "years": {
+          "2020": {
+            "count": 2,
+            "amount": 150000000
+          },
+          "2021": {
+            "count": 1,
+            "amount": 105000000
+          },
+          "2022": {
+            "count": 3,
+            "amount": 75000000
+          },
+          "2023": {
+            "count": 3,
+            "amount": 40000000
+          },
+          "2024": {
+            "count": 3,
+            "amount": 0
+          },
+          "2025": {
+            "count": 3,
+            "amount": 0
+          },
+          "2026": {
+            "count": 3,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|villasis  sto tomas bypass road pangasinan",
+        "name": "Villasis - Sto. Tomas Bypass Road, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 85000000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 100000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|villasis bypass road pangasinan",
+        "name": "Villasis Bypass Road, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 70000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 70000000
+          },
+          "2023": {
+            "count": 1,
+            "amount": 85000000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 80000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 45000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|villasissto tomas bypass road pangasinan",
+        "name": "Villasis-Sto. Tomas Bypass Road, Pangasinan",
+        "ids_count": 3,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 120000000
+          },
+          "2021": {
+            "count": 1,
+            "amount": 105000000
+          },
+          "2022": {
+            "count": 2,
+            "amount": 60000000
+          },
+          "2023": {
+            "count": 2,
+            "amount": 0
+          },
+          "2024": {
+            "count": 2,
+            "amount": 0
+          },
+          "2025": {
+            "count": 3,
+            "amount": 100000000
+          },
+          "2026": {
+            "count": 3,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "18",
+        "agency_id": "18-001",
+        "fam_key": "18-001|widening of road brgy nancapian malasiqui pangasinan",
+        "name": "Widening of Road, Brgy. Nancapian, Malasiqui, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      }
+    ],
+    "next_cursor": null
+  },
+  "raw_sha256": "b1b2bc9d07be14906438ec7f9d0a680ee0c3b7424398762c0198a93a1f8e6f17",
+  "payload_sha256": "85db6a2ded99368f14bbc45312ac39b6a72901064cf15ab5b8da2588471e6dc9"
+}

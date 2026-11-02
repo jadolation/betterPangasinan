@@ -1,0 +1,370 @@
+{
+  "departments_url": "https://budget.bettergov.ph/api/v1/gaa/departments",
+  "queries": [
+    {
+      "department_id": "04",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/04/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "07",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/07/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "18",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/18/programs?q=Pangasinan&limit=500",
+        "https://budget.bettergov.ph/api/v1/gaa/departments/18/programs?q=Pangasinan&limit=500&cursor=eyJ2IjowLCJrIjoiMTgtMDAxfGFsYW1pbm9zIHJpdmVyIHBvZ28gc2VjdGlvbiBzdGEwMTE4MDIgIHN0YTAxMjEyNCBhbGFtaW5vcyBjaXR5IHBhbmdhc2luYW4ifQ%3D%3D",
+        "https://budget.bettergov.ph/api/v1/gaa/departments/18/programs?q=Pangasinan&limit=500&cursor=eyJ2IjowLCJrIjoiMTgtMDAxfGNvbnN0cnVjdGlvbiBvZiBjb25jcmV0ZSBsaW5lIGNhbmFscyB3aXRoIGNvdmVyIGFsYW1pbm9zIGNpdHkgcGFuZ2FzaW5hbiJ9",
+        "https://budget.bettergov.ph/api/v1/gaa/departments/18/programs?q=Pangasinan&limit=500&cursor=eyJ2IjowLCJrIjoiMTgtMDAxfGNvbnN0cnVjdGlvbiBvZiBtdWx0aSAgcHVycG9zZSBidWlsZGluZyBicmd5IHRhYnV5b2MgYmluYWxvbmFuIHBhbmdhc2luYW4ifQ%3D%3D",
+        "https://budget.bettergov.ph/api/v1/gaa/departments/18/programs?q=Pangasinan&limit=500&cursor=eyJ2IjowLCJrIjoiMTgtMDAxfGNvbnN0cnVjdGlvbiBvZiBtdWx0aXB1cnBvc2UgYnVpbGRpbmcgZ3ltbmFzaXVtIGF0IHBhbmdhc2luYW4gaXYgZGlzdHJpY3QgZW5naW5lZXJpbmcgb2ZmaWNlIHR1bGlhbyBzdGEgYmFyYmFyYSBwYW5nYXNpbmFuIn0%3D",
+        "https://budget.bettergov.ph/api/v1/gaa/departments/18/programs?q=Pangasinan&limit=500&cursor=eyJ2IjowLCJrIjoiMTgtMDAxfGNvbnN0cnVjdGlvbiBvZiByb2FkIGJhcmFuZ2F5IHNhbWFuZyBzdXIgc2l0aW8gY2FhYnV0YW4gYm9saW5hbyBwYW5nYXNpbmFuIn0%3D",
+        "https://budget.bettergov.ph/api/v1/gaa/departments/18/programs?q=Pangasinan&limit=500&cursor=eyJ2IjowLCJrIjoiMTgtMDAxfGNvbnN0cnVjdGlvbiBvZiBzb2xhciB3YXRlciBzeXN0ZW0gYmFyYW5nYXkgZ3Vlc2V0IGJ1Z2FsbG9uIHBhbmdhc2luYW4ifQ%3D%3D",
+        "https://budget.bettergov.ph/api/v1/gaa/departments/18/programs?q=Pangasinan&limit=500&cursor=eyJ2IjowLCJrIjoiMTgtMDAxfHJlaGFiaWxpdGF0aW9uIG9mIHJvYWQgYnJneSBnYXlhbWFuIGJpbm1hbGV5IHBhbmdhc2luYW4ifQ%3D%3D"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "01",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/01/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "14",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/14/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "17",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/17/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "13",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/13/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "35",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/35/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "20",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/20/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "05",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/05/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "08",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/08/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "38",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/38/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "26",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/26/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "29",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/29/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "16",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/16/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "15",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/15/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "11",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/11/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "19",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/19/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "12",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/12/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "10",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/10/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "02",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/02/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "32",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/32/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "37",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/37/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "31",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/31/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "24",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/24/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "40",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/40/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "22",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/22/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "36",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/36/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "33",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/33/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "09",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/09/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "21",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/21/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "06",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/06/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "30",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/30/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "25",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/25/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "39",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/39/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "34",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/34/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "03",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/03/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    },
+    {
+      "department_id": "28",
+      "query": "Pangasinan",
+      "pages": [
+        "https://budget.bettergov.ph/api/v1/gaa/departments/28/programs?q=Pangasinan&limit=500"
+      ],
+      "error": null,
+      "exhausted": true
+    }
+  ],
+  "contexts": {
+    "nep_overview": "https://budget.bettergov.ph/api/v1/nep/2027",
+    "nep_departments": "https://budget.bettergov.ph/api/v1/nep/2027/departments",
+    "nep_dpwh": "https://budget.bettergov.ph/api/v1/nep/2027/departments/18",
+    "nep_regions": "https://budget.bettergov.ph/api/v1/nep/2027/rollups/region",
+    "budget_cycle_overview": "https://budget.bettergov.ph/api/v1/budget-cycle",
+    "budget_cycle_dpwh": "https://budget.bettergov.ph/api/v1/budget-cycle/departments/18",
+    "openapi": "https://budget.bettergov.ph/api/v1/openapi.json",
+    "hearings": "https://budget.bettergov.ph/api/v1/hearings/search?q=Pangasinan&limit=100"
+  },
+  "limitations": [
+    "Name matches are not verified geography; shared and outside-province names remain.",
+    "Optional LGU queries not automatically run; province-name coverage is not all provincial funding.",
+    "Hearing search has a documented limit of 100 and no documented offset.",
+    "GAA source zero can mean no source row; it is not proof of a funded project."
+  ]
+}

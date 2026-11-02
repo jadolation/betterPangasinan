@@ -9,19 +9,37 @@ import argparse
 import html
 import json
 import math
+import os
 import re
 import shutil
 import sys
+import tempfile
 from decimal import Decimal
 from pathlib import Path
 
 from jsonschema import Draft202012Validator, FormatChecker
 
 from scripts.national_budget.pipeline import publication_payload
+from scripts.site_data import publication_payloads
 
 ROOT = Path(__file__).resolve().parent
 SRC_PAGES = ROOT / "src" / "pages"
 SRC_PARTIALS = ROOT / "src" / "partials"
+
+
+def atomic_write(destination, content):
+    """Root mirrors can also be adapter inputs or live-server resources."""
+    destination = Path(destination)
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    if destination.exists() and destination.read_bytes() == content:
+        return
+    descriptor, temporary = tempfile.mkstemp(prefix=f".{destination.name}.", suffix=".tmp", dir=destination.parent)
+    try:
+        with os.fdopen(descriptor, "wb") as output:
+            output.write(content)
+        os.replace(temporary, destination)
+    finally:
+        Path(temporary).unlink(missing_ok=True)
 
 # Single place to change the repo link that appears in every page's footer.
 SITE_CONFIG = {
@@ -38,7 +56,7 @@ RELATIONSHIPS = {"source_ids": "sources", "entity_id": "entities", "lgu_id": "lg
 
 def load_data(directory: Path, mode: str = "production") -> dict:
     """Validate the entire graph before any output is written."""
-    if mode not in ("production", "test"):
+    if mode not in ("production", "test", "preview"):
         raise ValueError("Unknown build mode")
     schema = json.loads((ROOT / "schemas" / "record.json").read_text())
     data = {}
@@ -72,6 +90,8 @@ def load_data(directory: Path, mode: str = "production") -> dict:
                 raise ValueError(f"Production rejects mock or unpublished record: {identifier}")
             if mode == "production" and record["verification_status"] == "unreviewed":
                 raise ValueError(f"Production rejects unreviewed record: {identifier}")
+            if mode == "preview" and record["is_mock"]:
+                raise ValueError(f"Preview mode requires real source records: {identifier}")
             if name != "sources" and not record.get("source_ids"):
                 raise ValueError(f"Missing provenance: {identifier}")
             if name == "sources" and not record.get("url"):
@@ -175,9 +195,10 @@ def fill(template: str, values: dict) -> str:
 
 def build(mode: str = "production", output: Path | None = None, data_dir: Path | None = None,
           root_compatibility: bool = True) -> None:
-    data = load_data(data_dir or ROOT / "data" / ("production" if mode == "production" else "fixtures"), mode)
+    data = load_data(data_dir or ROOT / "data" / ("fixtures" if mode == "test" else "production"), mode)
     national_budget = publication_payload(ROOT)
-    output = (output or ROOT / ("public" if mode == "production" else "test-public")).resolve()
+    supplemental = publication_payloads(ROOT, data, mode, data_dir)
+    output = (output or ROOT / {"production": "public", "test": "test-public", "preview": "preview-public"}[mode]).resolve()
     if output == ROOT or ROOT in output.parents and output.parts[len(ROOT.parts)] in ("src", "data", "schemas", "tests", "assets", ".git", ".github", ".kilo") or output in ROOT.parents:
         raise ValueError("Unsafe build output directory")
     base = (SRC_PARTIALS / "base.html").read_text()
@@ -215,6 +236,8 @@ def build(mode: str = "production", output: Path | None = None, data_dir: Path |
             },
         )
         localized = fill(rendered_html, strings(dictionary))
+        if mode == "preview":
+            localized = localized.replace('<main id="main-content" tabindex="-1">', '<aside class="preview-banner" role="note">Development preview: real collected records with their original source labels. Not a deployment-ready artifact.</aside>\n<main id="main-content" tabindex="-1">')
         if locale_path.exists() and re.search(r"\{\{t:[^}]+\}\}", localized):
             raise ValueError(f"Missing English translation in {page_path.name}")
         rendered[page_path.name] = localized.replace("</head>", f'<meta name="data-mode" content="{mode}">\n</head>')
@@ -227,7 +250,7 @@ def build(mode: str = "production", output: Path | None = None, data_dir: Path |
     for name, content in rendered.items():
         (output / name).write_text(content, encoding="utf-8")
         if root_compatibility and mode == "production":
-            (ROOT / name).write_text(content, encoding="utf-8")
+            atomic_write(ROOT / name, content.encode("utf-8"))
     if (ROOT / "assets").exists():
         for asset in sorted((ROOT / "assets").rglob("*")):
             relative = asset.relative_to(ROOT / "assets")
@@ -245,13 +268,21 @@ def build(mode: str = "production", output: Path | None = None, data_dir: Path |
     budget_output.mkdir(parents=True)
     for name, value in national_budget.items():
         (budget_output / f"{name}.json").write_text(json.dumps(value, ensure_ascii=True, sort_keys=True, indent=2, allow_nan=False) + "\n", encoding="utf-8")
+    for relative, value in supplemental.items():
+        destination = output / relative
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        destination.write_text(json.dumps(value, ensure_ascii=True, sort_keys=True, indent=2, allow_nan=False) + "\n", encoding="utf-8")
     if root_compatibility and mode == "production":
         for path in (output / "data").glob("*.json"):
-            shutil.copy2(path, ROOT / "data" / path.name)
+            atomic_write(ROOT / "data" / path.name, path.read_bytes())
         budget_root = ROOT / "data" / "national-budget" / "2027"
         budget_root.mkdir(parents=True, exist_ok=True)
         for name in ("manifest", "projects", "offices", "coverage", "sources"):
-            shutil.copy2(budget_output / f"{name}.json", budget_root / f"{name}.json")
+            atomic_write(budget_root / f"{name}.json", (budget_output / f"{name}.json").read_bytes())
+        for relative in supplemental:
+            destination = ROOT / relative
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            atomic_write(destination, (output / relative).read_bytes())
     if dictionary:
         (output / "locales").mkdir()
         (output / "locales" / "en.json").write_text(json.dumps(dictionary, ensure_ascii=True, sort_keys=True, indent=2) + "\n", encoding="utf-8")
@@ -260,7 +291,7 @@ def build(mode: str = "production", output: Path | None = None, data_dir: Path |
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Build the validated Better Pangasinan static site")
-    parser.add_argument("--mode", choices=("production", "test"), default="production")
+    parser.add_argument("--mode", choices=("production", "test", "preview"), default="production")
     parser.add_argument("--output", type=Path)
     parser.add_argument("--data-dir", type=Path)
     parser.add_argument("--no-root-compatibility", action="store_true")

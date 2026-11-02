@@ -1,0 +1,386 @@
+[
+  {
+    "lgu_id": "lgu-0105503000",
+    "psgc": "0105503000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105518000",
+    "psgc": "0105518000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105532000",
+    "psgc": "0105532000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105546000",
+    "psgc": "0105546000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105501000",
+    "psgc": "0105501000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105502000",
+    "psgc": "0105502000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105504000",
+    "psgc": "0105504000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105505000",
+    "psgc": "0105505000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105506000",
+    "psgc": "0105506000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105507000",
+    "psgc": "0105507000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105508000",
+    "psgc": "0105508000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105509000",
+    "psgc": "0105509000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105510000",
+    "psgc": "0105510000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105511000",
+    "psgc": "0105511000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105512000",
+    "psgc": "0105512000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105513000",
+    "psgc": "0105513000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105514000",
+    "psgc": "0105514000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105515000",
+    "psgc": "0105515000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105516000",
+    "psgc": "0105516000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105517000",
+    "psgc": "0105517000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105519000",
+    "psgc": "0105519000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105520000",
+    "psgc": "0105520000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105521000",
+    "psgc": "0105521000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105522000",
+    "psgc": "0105522000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105523000",
+    "psgc": "0105523000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105524000",
+    "psgc": "0105524000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105525000",
+    "psgc": "0105525000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105526000",
+    "psgc": "0105526000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105527000",
+    "psgc": "0105527000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105528000",
+    "psgc": "0105528000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105529000",
+    "psgc": "0105529000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105530000",
+    "psgc": "0105530000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105531000",
+    "psgc": "0105531000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105533000",
+    "psgc": "0105533000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105534000",
+    "psgc": "0105534000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105535000",
+    "psgc": "0105535000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105536000",
+    "psgc": "0105536000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105537000",
+    "psgc": "0105537000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105538000",
+    "psgc": "0105538000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105539000",
+    "psgc": "0105539000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105540000",
+    "psgc": "0105540000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105541000",
+    "psgc": "0105541000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105542000",
+    "psgc": "0105542000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105543000",
+    "psgc": "0105543000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105544000",
+    "psgc": "0105544000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105545000",
+    "psgc": "0105545000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105547000",
+    "psgc": "0105547000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  },
+  {
+    "lgu_id": "lgu-0105548000",
+    "psgc": "0105548000",
+    "release": "2025-07-31",
+    "review_note": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "reviewed": true,
+    "source_id": "source-psa-psgc-20250731"
+  }
+]

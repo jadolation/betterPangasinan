@@ -1,0 +1,1517 @@
+{
+  "coverage": {
+    "complete": true,
+    "limit": 100,
+    "pagination": "No documented cursor or offset; completeness only below documented cap",
+    "query": "Pangasinan",
+    "returned": 3
+  },
+  "error": null,
+  "notice": "Machine-transcript topic index, not approved funding. Speaker names and figures may be wrong. Verify timestamped video before quoting; a commitment is not an appropriation or evidence of approval.",
+  "response": {
+    "data": [
+      {
+        "hearing": {
+          "agency": null,
+          "fiscal_year": "2027",
+          "hearing_date": "2026-08-24",
+          "page_url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E",
+          "title": "COMMITTEE ON APPROPRIATIONS (AUGUST 24, 2026)",
+          "video_id": "yfmi3MQqy7E"
+        },
+        "matching_moments": [
+          {
+            "kind": "question",
+            "said": "He asked whether PAGCOR funded hospitals and whether it could help reduce the Department of Health's burden for a Pangasinan hospital project estimated at around the 1,000,000,000 mark.",
+            "seconds": 16481,
+            "side": "committee",
+            "speaker": "Representative Marco Wangkol",
+            "timestamp": "4:34:41",
+            "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=16481"
+          },
+          {
+            "kind": "answer",
+            "said": "He explained that PAGCOR generally did not fund hospital construction directly; foundations connected to licensees usually funded major projects. PAGCOR could provide equipment, and he cited more than MXN 1,000,000,000 spent by Bloomberry Foundation for the Clark hospital and 100,000,000 pesos previously given to Conrado Australia Hospital in Pangasinan.",
+            "seconds": 16493,
+            "side": "agency",
+            "speaker": "PAGCOR chairman Alejandro H. Tengco",
+            "timestamp": "4:34:53",
+            "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=16493"
+          },
+          {
+            "kind": "commitment",
+            "said": "He said PAGCOR could potentially work with the Pangasinan project on hospital equipment or other equipment needed to make a completed project operational. He requested a letter so the parties could arrange a further meeting.",
+            "seconds": 16866,
+            "side": "agency",
+            "speaker": "PAGCOR chairman Alejandro H. Tengco",
+            "timestamp": "4:41:06",
+            "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=16866"
+          }
+        ],
+        "topic": {
+          "actions": [
+            {
+              "action": "PAGCOR was to submit copies of its PSC remittances for all of 2025 and from the start of 2026.",
+              "kind": "document_request",
+              "seconds": 4040,
+              "timestamp": "1:07:20",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=4040",
+              "who": "Committee Chair Mika Suansing"
+            },
+            {
+              "action": "Vice Chair Brian Poe submitted a list of accessible illegal websites and requested PAGCOR follow-up.",
+              "kind": "document_request",
+              "seconds": 11151,
+              "timestamp": "3:05:51",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=11151",
+              "who": "Vice Chair Brian Poe"
+            },
+            {
+              "action": "PAGCOR undertook to submit its responsible-gaming programs, beneficiaries helped, and funding data.",
+              "kind": "commitment",
+              "seconds": 11626,
+              "timestamp": "3:13:46",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=11626",
+              "who": "PAGCOR chairman Al"
+            },
+            {
+              "action": "The committee was to share website screenshots with PAGCOR and raise enforcement and CICC equipment issues during the ICT budget hearing.",
+              "kind": "manifestation",
+              "seconds": 11930,
+              "timestamp": "3:18:50",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=11930",
+              "who": "Committee Chair"
+            },
+            {
+              "action": "PAGCOR undertook to consider support for equipment and programs for children with special needs.",
+              "kind": "commitment",
+              "seconds": 13385,
+              "timestamp": "3:43:05",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=13385",
+              "who": "PAGCOR chairman Alejandro Tengco"
+            },
+            {
+              "action": "Representative Ba\u00f1as-Nograles was to submit a written request for relief and classroom assistance.",
+              "kind": "document_request",
+              "seconds": 15363,
+              "timestamp": "4:16:03",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=15363",
+              "who": "PAGCOR chairman Alejandro H. Tengco"
+            },
+            {
+              "action": "PAGCOR undertook to review Representative Antonino Roman III's district school-building request and discuss it after the hearing.",
+              "kind": "commitment",
+              "seconds": 16170,
+              "timestamp": "4:29:30",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=16170",
+              "who": "PAGCOR chairman Alejandro H. Tengco"
+            },
+            {
+              "action": "Representative Wangkol was to write PAGCOR so a meeting could be arranged \u0628\u0634\u0623\u0646 possible hospital-equipment assistance.",
+              "kind": "document_request",
+              "seconds": 16896,
+              "timestamp": "4:41:36",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=16896",
+              "who": "PAGCOR chairman Alejandro H. Tengco"
+            }
+          ],
+          "agency_position": "PAGCOR stated that it continued to protect nation-building and social-civic commitments despite lower revenues, including school construction, relief operations, patient transport vehicles, hospital equipment, and universal-health-care support. It said responsible-gaming safeguards, licensing controls, enforcement coordination, and regular rule updates were being used, but acknowledged that illegal operators and rapidly changing technology remained difficult to control.",
+          "figures": [
+            {
+              "amount": null,
+              "amount_text": "106,030,000,000",
+              "seconds": 2107,
+              "speaker": "PAGCOR assistant vice president Cheryl DeGuilla",
+              "timestamp": "35:07",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=2107",
+              "what": "PAGCOR total income in 2025"
+            },
+            {
+              "amount": null,
+              "amount_text": "67,000,000,000",
+              "seconds": 2107,
+              "speaker": "PAGCOR assistant vice president Cheryl DeGuilla",
+              "timestamp": "35:07",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=2107",
+              "what": "Approximate 2025 total contributions to nation building"
+            },
+            {
+              "amount": null,
+              "amount_text": "50%",
+              "seconds": 2137,
+              "speaker": "PAGCOR assistant vice president Cheryl DeGuilla",
+              "timestamp": "35:37",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=2137",
+              "what": "Government share included in nation-building contributions"
+            },
+            {
+              "amount": null,
+              "amount_text": "5%",
+              "seconds": 2137,
+              "speaker": "PAGCOR assistant vice president Cheryl DeGuilla",
+              "timestamp": "35:37",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=2137",
+              "what": "Franchise tax rate"
+            },
+            {
+              "amount": null,
+              "amount_text": "7,000,000,000",
+              "seconds": 2167,
+              "speaker": "PAGCOR assistant vice president Cheryl DeGuilla",
+              "timestamp": "36:07",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=2167",
+              "what": "2026 estimated total revenues"
+            },
+            {
+              "amount": null,
+              "amount_text": "61,000,000,000",
+              "seconds": 2167,
+              "speaker": "PAGCOR assistant vice president Cheryl DeGuilla",
+              "timestamp": "36:07",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=2167",
+              "what": "2026 estimated nation-building contributions"
+            },
+            {
+              "amount": null,
+              "amount_text": "88,330,000,000",
+              "seconds": 2167,
+              "speaker": "PAGCOR assistant vice president Cheryl DeGuilla",
+              "timestamp": "36:07",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=2167",
+              "what": "2027 projected total revenues"
+            },
+            {
+              "amount": null,
+              "amount_text": "63,000,000,000",
+              "seconds": 2167,
+              "speaker": "PAGCOR assistant vice president Cheryl DeGuilla",
+              "timestamp": "36:07",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=2167",
+              "what": "2027 projected nation-building allocation"
+            },
+            {
+              "amount": null,
+              "amount_text": "95,140,000,000",
+              "seconds": 2347,
+              "speaker": "PAGCOR assistant vice president Cheryl DeGuilla",
+              "timestamp": "39:07",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=2347",
+              "what": "2025 gaming-operations income"
+            },
+            {
+              "amount": null,
+              "amount_text": "2,380,000,000",
+              "seconds": 2347,
+              "speaker": "PAGCOR assistant vice president Cheryl DeGuilla",
+              "timestamp": "39:07",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=2347",
+              "what": "Decline from 2024 gaming-operations income"
+            },
+            {
+              "amount": null,
+              "amount_text": "97,520,000,000",
+              "seconds": 2347,
+              "speaker": "PAGCOR assistant vice president Cheryl DeGuilla",
+              "timestamp": "39:07",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=2347",
+              "what": "2024 gaming-operations income"
+            },
+            {
+              "amount": null,
+              "amount_text": "106,030,000,000",
+              "seconds": 2394,
+              "speaker": "PAGCOR assistant vice president Cheryl DeGuilla",
+              "timestamp": "39:54",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=2394",
+              "what": "2025 total income"
+            },
+            {
+              "amount": null,
+              "amount_text": "5,680,000,000",
+              "seconds": 2394,
+              "speaker": "PAGCOR assistant vice president Cheryl DeGuilla",
+              "timestamp": "39:54",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=2394",
+              "what": "Decline from 2024 total income"
+            },
+            {
+              "amount": null,
+              "amount_text": "111,710,000,000",
+              "seconds": 2394,
+              "speaker": "PAGCOR assistant vice president Cheryl DeGuilla",
+              "timestamp": "39:54",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=2394",
+              "what": "2024 total income"
+            },
+            {
+              "amount": null,
+              "amount_text": "66,950,000,000",
+              "seconds": 2415,
+              "speaker": "PAGCOR assistant vice president Cheryl DeGuilla",
+              "timestamp": "40:15",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=2415",
+              "what": "2025 nation-building contribution"
+            },
+            {
+              "amount": null,
+              "amount_text": "1,250,000,000",
+              "seconds": 2415,
+              "speaker": "PAGCOR assistant vice president Cheryl DeGuilla",
+              "timestamp": "40:15",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=2415",
+              "what": "Decline from 2024 nation-building contribution"
+            },
+            {
+              "amount": null,
+              "amount_text": "68,200,000,000",
+              "seconds": 2415,
+              "speaker": "PAGCOR assistant vice president Cheryl DeGuilla",
+              "timestamp": "40:15",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=2415",
+              "what": "2024 nation-building contribution"
+            },
+            {
+              "amount": null,
+              "amount_text": "8,310,000,000",
+              "seconds": 2415,
+              "speaker": "PAGCOR assistant vice president Cheryl DeGuilla",
+              "timestamp": "40:15",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=2415",
+              "what": "2025 taxes remitted to BIR"
+            },
+            {
+              "amount": null,
+              "amount_text": "4,780,000,000",
+              "seconds": 2444,
+              "speaker": "PAGCOR assistant vice president Cheryl DeGuilla",
+              "timestamp": "40:44",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=2444",
+              "what": "2025 franchise tax"
+            },
+            {
+              "amount": null,
+              "amount_text": "2,630,000,000",
+              "seconds": 2444,
+              "speaker": "PAGCOR assistant vice president Cheryl DeGuilla",
+              "timestamp": "40:44",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=2444",
+              "what": "2025 withholding taxes"
+            },
+            {
+              "amount": null,
+              "amount_text": "900,000,000",
+              "seconds": 2444,
+              "speaker": "PAGCOR assistant vice president Cheryl DeGuilla",
+              "timestamp": "40:44",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=2444",
+              "what": "2025 corporate income tax"
+            },
+            {
+              "amount": null,
+              "amount_text": "5,670,000,000",
+              "seconds": 2457,
+              "speaker": "PAGCOR assistant vice president Cheryl DeGuilla",
+              "timestamp": "40:57",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=2457",
+              "what": "2025 dividends declared"
+            },
+            {
+              "amount": null,
+              "amount_text": "22,560,000,000",
+              "seconds": 2513,
+              "speaker": "PAGCOR assistant vice president Cheryl DeGuilla",
+              "timestamp": "41:53",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=2513",
+              "what": "2025 universal-health-care allocation"
+            },
+            {
+              "amount": null,
+              "amount_text": "43,320,000,000",
+              "seconds": 2539,
+              "speaker": "PAGCOR assistant vice president Cheryl DeGuilla",
+              "timestamp": "42:19",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=2539",
+              "what": "First-semester 2026 total income"
+            },
+            {
+              "amount": null,
+              "amount_text": "30,160,000,000",
+              "seconds": 2539,
+              "speaker": "PAGCOR assistant vice president Cheryl DeGuilla",
+              "timestamp": "42:19",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=2539",
+              "what": "First-semester 2026 nation-building programs"
+            },
+            {
+              "amount": 7500000000,
+              "amount_text": "PHP 7,500,000,000",
+              "seconds": 2589,
+              "speaker": "PAGCOR assistant vice president Eric Balcos",
+              "timestamp": "43:09",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=2589",
+              "what": "School-building program commitment"
+            },
+            {
+              "amount": null,
+              "amount_text": "one hundred and twenty five",
+              "seconds": 2589,
+              "speaker": "PAGCOR assistant vice president Eric Balcos",
+              "timestamp": "43:09",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=2589",
+              "what": "School buildings under the program"
+            },
+            {
+              "amount": null,
+              "amount_text": "1,500",
+              "seconds": 2589,
+              "speaker": "PAGCOR assistant vice president Eric Balcos",
+              "timestamp": "43:09",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=2589",
+              "what": "Approximate classrooms under the program"
+            },
+            {
+              "amount": null,
+              "amount_text": "two fifty",
+              "seconds": 2688,
+              "speaker": "PAGCOR assistant vice president Eric Balcos",
+              "timestamp": "44:48",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=2688",
+              "what": "Patient transport vehicles donated to date"
+            },
+            {
+              "amount": 300000000,
+              "amount_text": "PHP 300,000,000",
+              "seconds": 2702,
+              "speaker": "PAGCOR assistant vice president Eric Balcos",
+              "timestamp": "45:02",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=2702",
+              "what": "2025 and first-semester 2026 calamity-relief spending"
+            },
+            {
+              "amount": null,
+              "amount_text": "360,000,000",
+              "seconds": 2778,
+              "speaker": "PAGCOR assistant vice president Eric Balcos",
+              "timestamp": "46:18",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=2778",
+              "what": "Medical equipment contribution to Jose B. Lingad Children's Medical Center"
+            },
+            {
+              "amount": 1000000000,
+              "amount_text": "PHP 1,000,000,000",
+              "seconds": 2807,
+              "speaker": "PAGCOR assistant vice president Eric Balcos",
+              "timestamp": "46:47",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=2807",
+              "what": "Bloomberg Cultural Foundation construction contribution"
+            },
+            {
+              "amount": null,
+              "amount_text": "40%",
+              "seconds": 3003,
+              "speaker": "PAGCOR chairman Alejandro H. Tengco",
+              "timestamp": "50:03",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=3003",
+              "what": "Decline in gaming activity after e-wallet delinking"
+            },
+            {
+              "amount": null,
+              "amount_text": "10%",
+              "seconds": 3075,
+              "speaker": "PAGCOR chairman Alejandro H. Tengco",
+              "timestamp": "51:15",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=3075",
+              "what": "July increase in gaming activity"
+            },
+            {
+              "amount": 37000000000,
+              "amount_text": "37,000,000,000 pesos",
+              "seconds": 3413,
+              "speaker": "PAGCOR chairman Alejandro H. Tengco",
+              "timestamp": "56:53",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=3413",
+              "what": "Retroactive PSC obligation under the Supreme Court ruling"
+            },
+            {
+              "amount": 190000000,
+              "amount_text": "190,000,000 pesos a month",
+              "seconds": 3449,
+              "speaker": "PAGCOR chairman Alejandro H. Tengco",
+              "timestamp": "57:29",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=3449",
+              "what": "Previous average monthly PSC contribution"
+            },
+            {
+              "amount": null,
+              "amount_text": "3,700,000,000 per",
+              "seconds": 3622,
+              "speaker": "Committee participant",
+              "timestamp": "1:00:22",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=3622",
+              "what": "Annualized amount discussed for the PSC obligation; wording is incomplete"
+            },
+            {
+              "amount": null,
+              "amount_text": "3,300,000,000 every year for the next ten years",
+              "seconds": 3908,
+              "speaker": "A committee member",
+              "timestamp": "1:05:08",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=3908",
+              "what": "PSC payment amount discussed by the committee; transcript conflicts with other figures"
+            },
+            {
+              "amount": 12400000000,
+              "amount_text": "PHP12.4 billion",
+              "seconds": 3739,
+              "speaker": "Committee Chair Mika Suansing",
+              "timestamp": "1:02:19",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=3739",
+              "what": "2024 social-civic projects"
+            },
+            {
+              "amount": 12800000000,
+              "amount_text": "PHP12.8 billion",
+              "seconds": 3739,
+              "speaker": "Committee Chair Mika Suansing",
+              "timestamp": "1:02:19",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=3739",
+              "what": "2025 social-civic projects"
+            },
+            {
+              "amount": 13990000000,
+              "amount_text": "PHP13.99 billion",
+              "seconds": 3739,
+              "speaker": "Committee Chair Mika Suansing",
+              "timestamp": "1:02:19",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=3739",
+              "what": "2026 social-civic projects"
+            },
+            {
+              "amount": null,
+              "amount_text": "26.864%",
+              "seconds": 7279,
+              "speaker": "Representative Salvador Pleyto",
+              "timestamp": "2:01:19",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=7279",
+              "what": "Reported first-semester 2026 total-revenue decline"
+            },
+            {
+              "amount": null,
+              "amount_text": "85.59%",
+              "seconds": 7279,
+              "speaker": "Representative Salvador Pleyto",
+              "timestamp": "2:01:19",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=7279",
+              "what": "Reported first-semester 2026 net-income decline"
+            },
+            {
+              "amount": 35000,
+              "amount_text": "35,000 to 45,000 pesos",
+              "seconds": 7515,
+              "speaker": "PAGCOR chairman Al",
+              "timestamp": "2:05:15",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=7515",
+              "what": "Amount mentioned in PAGCOR's response; context is unclear"
+            },
+            {
+              "amount": null,
+              "amount_text": "44 out of the 52",
+              "seconds": 11151,
+              "speaker": "Vice Chair Brian Poe",
+              "timestamp": "3:05:51",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=11151",
+              "what": "Illegal websites initially taken down"
+            },
+            {
+              "amount": null,
+              "amount_text": "6.39%",
+              "seconds": 11181,
+              "speaker": "Vice Chair Brian Poe",
+              "timestamp": "3:06:21",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=11181",
+              "what": "Increase in 2025 GGR cited by the member"
+            },
+            {
+              "amount": null,
+              "amount_text": "372,000,000,000 in 2024",
+              "seconds": 11181,
+              "speaker": "Vice Chair Brian Poe",
+              "timestamp": "3:06:21",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=11181",
+              "what": "2024 GGR cited by the member"
+            },
+            {
+              "amount": 370000000000,
+              "amount_text": "370,000,000,000 pesos",
+              "seconds": 11228,
+              "speaker": "PAGCOR chairman Al",
+              "timestamp": "3:07:08",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=11228",
+              "what": "2026 projected GGR"
+            },
+            {
+              "amount": 3000000000000,
+              "amount_text": "3,000,000,000,000 pesos",
+              "seconds": 11268,
+              "speaker": "PAGCOR chairman Al",
+              "timestamp": "3:07:48",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=11268",
+              "what": "Estimated annual wagers"
+            },
+            {
+              "amount": null,
+              "amount_text": "50%",
+              "seconds": 15280,
+              "speaker": "PAGCOR chairman Alejandro H. Tengco",
+              "timestamp": "4:14:40",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=15280",
+              "what": "Share of total industry represented by legal operators, according to PAGCOR"
+            },
+            {
+              "amount": null,
+              "amount_text": "1 peso to 5 pesos",
+              "seconds": 15108,
+              "speaker": "Representative Shirlyn Ba\u00f1as-Nograles",
+              "timestamp": "4:11:48",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=15108",
+              "what": "Micro-bet range raised by the member"
+            },
+            {
+              "amount": null,
+              "amount_text": "more than a 100,000",
+              "seconds": 15363,
+              "speaker": "PAGCOR chairman Alejandro H. Tengco",
+              "timestamp": "4:16:03",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=15363",
+              "what": "Relief packs sent in the previous week and a half"
+            },
+            {
+              "amount": null,
+              "amount_text": "seven point eight",
+              "seconds": 15171,
+              "speaker": "Representative Shirlyn Ba\u00f1as-Nograles",
+              "timestamp": "4:12:51",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=15171",
+              "what": "Earthquake magnitude cited by the member"
+            },
+            {
+              "amount": null,
+              "amount_text": "125",
+              "seconds": 15522,
+              "speaker": "PAGCOR chairman Alejandro H. Tengco",
+              "timestamp": "4:18:42",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=15522",
+              "what": "School buildings in PAGCOR's program"
+            },
+            {
+              "amount": null,
+              "amount_text": "200,000 relief packs",
+              "seconds": 15699,
+              "speaker": "PAGCOR chairman Alejandro H. Tengco",
+              "timestamp": "4:21:39",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=15699",
+              "what": "Example of PAGCOR's annual relief budget planning"
+            },
+            {
+              "amount": null,
+              "amount_text": "1,000,000,000",
+              "seconds": 16614,
+              "speaker": "Representative Marco Wangkol",
+              "timestamp": "4:36:54",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=16614",
+              "what": "Hospital project estimate raised for Pangasinan"
+            },
+            {
+              "amount": null,
+              "amount_text": "more than MXN 1,000,000,000",
+              "seconds": 16524,
+              "speaker": "PAGCOR chairman Alejandro H. Tengco",
+              "timestamp": "4:35:24",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=16524",
+              "what": "Amount attributed to Bloomberry Foundation for the Clark hospital; currency appears as spoken"
+            },
+            {
+              "amount": 100000000,
+              "amount_text": "100,000,000 pesos",
+              "seconds": 16585,
+              "speaker": "PAGCOR chairman Alejandro H. Tengco",
+              "timestamp": "4:36:25",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=16585",
+              "what": "Earlier assistance to Conrado Australia Hospital in Pangasinan"
+            },
+            {
+              "amount": null,
+              "amount_text": "2,500,000,000",
+              "seconds": 16786,
+              "speaker": "Representative Marco Wangkol",
+              "timestamp": "4:39:46",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=16786",
+              "what": "Shortfall in assistance to the member's district since 2022, as stated"
+            }
+          ],
+          "first_seconds": 2107,
+          "index": 4,
+          "moment_count": 41,
+          "outcome": "The committee received PAGCOR's account of its nation-building and social-responsibility allocations and generally commended its continued spending despite revenue weakness. Several matters remained subject to submissions or follow-up, including PSC remittance records, responsible-gaming data, illegal-site enforcement equipment, classroom requests, and possible hospital-equipment assistance.",
+          "positions": [
+            {
+              "position": "Commended PAGCOR for keeping nation-building and social-civic contributions broadly intact despite declining income and said the committee would scrutinize PSC funding in light of the Supreme Court ruling.",
+              "who": "Committee Chair Mika Suansing"
+            },
+            {
+              "position": "Supported PAGCOR's disaster-relief and hospital contributions but pressed for stronger revenue recovery, regulation, digital monitoring, and action against illegal operators.",
+              "who": "Representative Salvador Pleyto"
+            },
+            {
+              "position": "Argued that illegal online gaming could be depriving the government of substantial revenue and sought stronger enforcement technology and funded gambling-addiction services.",
+              "who": "Vice Chair Brian Poe"
+            },
+            {
+              "position": "Supported PAGCOR's social programs and requested assistance for hospital equipment and children with special needs.",
+              "who": "Representative Jean Baronda"
+            },
+            {
+              "position": "Raised concern that online gaming was becoming the dominant revenue source while vulnerable groups remained exposed, and urged PAGCOR to strengthen its regulatory capacity before expanding online gaming.",
+              "who": "A minority member"
+            },
+            {
+              "position": "Sought stronger safeguards for vulnerable online gamblers and requested relief and classroom assistance for General Santos City.",
+              "who": "Representative Shirlyn Ba\u00f1as-Nograles"
+            },
+            {
+              "position": "Questioned whether social-civic spending was appropriately tied to income and pressed for transparency on pending school-building requests and district allocation.",
+              "who": "Representative Antonino Roman III"
+            },
+            {
+              "position": "Sought PAGCOR assistance for a Pangasinan hospital project, accepting equipment support as a possible alternative to direct construction funding.",
+              "who": "Representative Marco Wangkol"
+            }
+          ],
+          "question": "The committee sought to establish how PAGCOR's nation-building and social-responsibility contributions were being maintained despite lower revenues, including its relief, hospital, school-building, and social-civic programs. Members also examined whether PAGCOR had sufficient regulatory and responsible-gaming measures to address illegal online gambling and protect vulnerable gamblers.",
+          "status": "committed",
+          "summary": "PAGCOR reported that it had contributed about 67 billion to nation building in 2025 and projected about 61 billion in 2026 and 63 billion in 2027, while social-civic projects rose to about 13.99 billion in 2026. It also presented a PHP 7,500,000,000 school-building commitment, PHP 300,000,000 in recent calamity-relief spending, patient transport vehicle donations, and hospital-equipment support. The chair commended PAGCOR for preserving these commitments despite lower income, while the agency explained that the Supreme Court's retroactive PSC ruling created a 37,000,000,000 pesos obligation and could substantially affect its finances. Members pressed for stronger control of illegal online gambling, protection of vulnerable gamblers, and funding for responsible-gaming and mental-health programs; PAGCOR cited KYC requirements, a licensing moratorium, enforcement coordination, and a responsible-gaming partner. Members also sought relief and classroom assistance for General Santos and hospital support for Western Visayas and Pangasinan. The hearing ended with PAGCOR agreeing to provide documents, review requests, and explore equipment assistance, but several allocations and enforcement measures remained for follow-up.",
+          "timeline_sections": [
+            2,
+            3,
+            8,
+            13,
+            15,
+            16,
+            18,
+            19,
+            20
+          ],
+          "timestamp": "35:07",
+          "topic": "Nation-building contributions and PAGCOR social-responsibility spending",
+          "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=2107",
+          "video_id": "yfmi3MQqy7E"
+        }
+      },
+      {
+        "hearing": {
+          "agency": null,
+          "fiscal_year": "2027",
+          "hearing_date": "2026-08-24",
+          "page_url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E",
+          "title": "COMMITTEE ON APPROPRIATIONS (AUGUST 24, 2026)",
+          "video_id": "yfmi3MQqy7E"
+        },
+        "matching_moments": [
+          {
+            "kind": "figure",
+            "said": "He said PAGCOR had given 100,000,000 pesos during the predecessor's tenure to the Conrado Australia Hospital in Pangasinan and indicated that equipment assistance could also be involved.",
+            "seconds": 16554,
+            "side": "agency",
+            "speaker": "PAGCOR chairman and CEO Alejandro Tengco",
+            "timestamp": "4:35:54",
+            "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=16554"
+          },
+          {
+            "kind": "question",
+            "said": "He said the Pangasinan hospital project was being considered at around the 1,000,000,000 mark and asked whether PAGCOR could help reduce the amount DOH would have to fund.",
+            "seconds": 16614,
+            "side": "committee",
+            "speaker": "Rep. Marco Wangkol",
+            "timestamp": "4:36:54",
+            "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=16614"
+          },
+          {
+            "kind": "figure",
+            "said": "He said Pangasinan's Second District had received the least funding since 2022, by more than 2,500,000,000, and asked PAGCOR to help address the shortfall.",
+            "seconds": 16816,
+            "side": "committee",
+            "speaker": "Rep. Marco Wangkol",
+            "timestamp": "4:40:16",
+            "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=16816"
+          }
+        ],
+        "topic": {
+          "actions": [
+            {
+              "action": "Submit a listing of all PAGCOR remittances to the National Treasury since enactment, including the total.",
+              "kind": "document_request",
+              "seconds": 8224,
+              "timestamp": "2:17:04",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=8224",
+              "who": "Rep. Iris Marie Montes"
+            },
+            {
+              "action": "Provide the remittance report to the committee within a maximum of 48 hours.",
+              "kind": "commitment",
+              "seconds": 8247,
+              "timestamp": "2:17:27",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=8247",
+              "who": "PAGCOR chairman and CEO Alejandro Tengco"
+            },
+            {
+              "action": "Consider rebalancing infrastructure priorities to include other projects alongside school buildings.",
+              "kind": "manifestation",
+              "seconds": 8704,
+              "timestamp": "2:25:04",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=8704",
+              "who": "PAGCOR chairman and CEO Alejandro Tengco"
+            },
+            {
+              "action": "Include support for children with special needs in the agenda of PAGCOR's meeting with the relevant foundation representative.",
+              "kind": "commitment",
+              "seconds": 13385,
+              "timestamp": "3:43:05",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=13385",
+              "who": "PAGCOR chairman and CEO Alejandro Tengco"
+            },
+            {
+              "action": "Coordinate with Secretary Angara to provide a list of regions needing support for children with special needs.",
+              "kind": "other",
+              "seconds": 13405,
+              "timestamp": "3:43:25",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=13405",
+              "who": "Rep. Jean Baronda"
+            },
+            {
+              "action": "Seriously look into assistance for children with special needs.",
+              "kind": "commitment",
+              "seconds": 13546,
+              "timestamp": "3:45:46",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=13546",
+              "who": "PAGCOR chairman and CEO Alejandro Tengco"
+            },
+            {
+              "action": "Send PAGCOR a letter requesting assistance with damaged classrooms and other projects.",
+              "kind": "document_request",
+              "seconds": 15363,
+              "timestamp": "4:16:03",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=15363",
+              "who": "PAGCOR chairman and CEO Alejandro Tengco"
+            },
+            {
+              "action": "Write PAGCOR and arrange a meeting concerning possible hospital-equipment assistance for the Pangasinan project.",
+              "kind": "commitment",
+              "seconds": 16866,
+              "timestamp": "4:41:06",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=16866",
+              "who": "Rep. Marco Wangkol"
+            }
+          ],
+          "agency_position": "PAGCOR said it was current on its National Treasury remittances, while the national government\u2014not PAGCOR directly\u2014remitted the applicable share to PhilHealth. It said hospital construction was generally handled by licensee foundations, but PAGCOR could provide equipment or other targeted assistance on a case-by-case basis, subject to project completion and liquidation requirements; it also committed to consider cancer-center, special-needs-school, classroom, and Pangasinan hospital-equipment requests.",
+          "figures": [
+            {
+              "amount": null,
+              "amount_text": "50%",
+              "seconds": 8005,
+              "speaker": "Rep. Iris Marie Montes",
+              "timestamp": "2:13:25",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=8005",
+              "what": "Share of the national government share from PAGCOR income identified for PhilHealth under the UHC provision"
+            },
+            {
+              "amount": null,
+              "amount_text": "2020",
+              "seconds": 8034,
+              "speaker": "Rep. Iris Marie Montes",
+              "timestamp": "2:13:54",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=8034",
+              "what": "Year PAGCOR remittances were said to have been required to begin"
+            },
+            {
+              "amount": null,
+              "amount_text": "2023",
+              "seconds": 8137,
+              "speaker": "Rep. Iris Marie Montes",
+              "timestamp": "2:15:37",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=8137",
+              "what": "Year used in the remittance calculation"
+            },
+            {
+              "amount": null,
+              "amount_text": "34,600,000,000",
+              "seconds": 8137,
+              "speaker": "Rep. Iris Marie Montes",
+              "timestamp": "2:15:37",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=8137",
+              "what": "2023 government share cited from the presentation handout"
+            },
+            {
+              "amount": null,
+              "amount_text": "17.3",
+              "seconds": 8137,
+              "speaker": "Rep. Iris Marie Montes",
+              "timestamp": "2:15:37",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=8137",
+              "what": "Half of the cited 2023 government share, described as going to the National Treasury for PhilHealth"
+            },
+            {
+              "amount": null,
+              "amount_text": "2024",
+              "seconds": 8137,
+              "speaker": "Rep. Iris Marie Montes",
+              "timestamp": "2:15:37",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=8137",
+              "what": "Year used in the remittance calculation"
+            },
+            {
+              "amount": null,
+              "amount_text": "46",
+              "seconds": 8137,
+              "speaker": "Rep. Iris Marie Montes",
+              "timestamp": "2:15:37",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=8137",
+              "what": "2024 figure cited from the presentation handout; context was unclear"
+            },
+            {
+              "amount": null,
+              "amount_text": "23.1",
+              "seconds": 8137,
+              "speaker": "Rep. Iris Marie Montes",
+              "timestamp": "2:15:37",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=8137",
+              "what": "Half of the cited 2024 figure, described as the PhilHealth amount"
+            },
+            {
+              "amount": null,
+              "amount_text": "2025",
+              "seconds": 8137,
+              "speaker": "Rep. Iris Marie Montes",
+              "timestamp": "2:15:37",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=8137",
+              "what": "Year used in the remittance calculation"
+            },
+            {
+              "amount": null,
+              "amount_text": "45",
+              "seconds": 8137,
+              "speaker": "Rep. Iris Marie Montes",
+              "timestamp": "2:15:37",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=8137",
+              "what": "2025 figure cited from the presentation handout"
+            },
+            {
+              "amount": null,
+              "amount_text": "22.5",
+              "seconds": 8137,
+              "speaker": "Rep. Iris Marie Montes",
+              "timestamp": "2:15:37",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=8137",
+              "what": "Half of the cited 2025 figure, described as the PhilHealth amount"
+            },
+            {
+              "amount": null,
+              "amount_text": "48 hours",
+              "seconds": 8275,
+              "speaker": "PAGCOR chairman and CEO Alejandro Tengco",
+              "timestamp": "2:17:55",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=8275",
+              "what": "Maximum period stated for submitting the remittance report"
+            },
+            {
+              "amount": null,
+              "amount_text": "roughly 40 branches",
+              "seconds": 8296,
+              "speaker": "Rep. Iris Marie Montes",
+              "timestamp": "2:18:16",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=8296",
+              "what": "Approximate number of Casino Filipino branches discussed for privatization"
+            },
+            {
+              "amount": null,
+              "amount_text": "thirty to fifty billion",
+              "seconds": 8309,
+              "speaker": "Rep. Iris Marie Montes",
+              "timestamp": "2:18:29",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=8309",
+              "what": "Proceeds estimate cited by the member for possible privatization"
+            },
+            {
+              "amount": null,
+              "amount_text": "close to about 30",
+              "seconds": 8362,
+              "speaker": "PAGCOR chairman and CEO Alejandro Tengco",
+              "timestamp": "2:19:22",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=8362",
+              "what": "Number of Casino Filipino properties PAGCOR said could be privatized"
+            },
+            {
+              "amount": null,
+              "amount_text": "20,000,000,000 to 30,000,000,000",
+              "seconds": 8362,
+              "speaker": "PAGCOR chairman and CEO Alejandro Tengco",
+              "timestamp": "2:19:22",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=8362",
+              "what": "PAGCOR's current estimate of privatization proceeds"
+            },
+            {
+              "amount": null,
+              "amount_text": "50%",
+              "seconds": 8555,
+              "speaker": "Rep. Iris Marie Montes",
+              "timestamp": "2:22:35",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=8555",
+              "what": "PhilHealth share that the member said would continue"
+            },
+            {
+              "amount": null,
+              "amount_text": "8,000,000,000",
+              "seconds": 8672,
+              "speaker": "Rep. Iris Marie Montes",
+              "timestamp": "2:24:32",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=8672",
+              "what": "Amount cited for school-building construction"
+            },
+            {
+              "amount": null,
+              "amount_text": "125",
+              "seconds": 8717,
+              "speaker": "PAGCOR chairman and CEO Alejandro Tengco",
+              "timestamp": "2:25:17",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=8717",
+              "what": "School buildings in PAGCOR's construction program"
+            },
+            {
+              "amount": null,
+              "amount_text": "1,500 classrooms",
+              "seconds": 8684,
+              "speaker": "Rep. Iris Marie Montes",
+              "timestamp": "2:24:44",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=8684",
+              "what": "Classrooms cited in relation to the school-building program"
+            },
+            {
+              "amount": null,
+              "amount_text": "420",
+              "seconds": 13217,
+              "speaker": "Rep. Jean Baronda",
+              "timestamp": "3:40:17",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=13217",
+              "what": "Previous bed capacity of Western Visayas Medical Center"
+            },
+            {
+              "amount": null,
+              "amount_text": "700",
+              "seconds": 13217,
+              "speaker": "Rep. Jean Baronda",
+              "timestamp": "3:40:17",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=13217",
+              "what": "Expanded bed capacity of Western Visayas Medical Center"
+            },
+            {
+              "amount": null,
+              "amount_text": "more than 500",
+              "seconds": 13573,
+              "speaker": "Rep. Jean Baronda",
+              "timestamp": "3:46:13",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=13573",
+              "what": "Children in Iloilo City initially diagnosed with special needs"
+            },
+            {
+              "amount": null,
+              "amount_text": "1 peso to 5 pesos",
+              "seconds": 15108,
+              "speaker": "Rep. Shirlyn Ba\u00f1as-Nograles",
+              "timestamp": "4:11:48",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=15108",
+              "what": "Micro-bet range cited in the discussion of online gambling"
+            },
+            {
+              "amount": null,
+              "amount_text": "50%",
+              "seconds": 15280,
+              "speaker": "PAGCOR chairman and CEO Alejandro Tengco",
+              "timestamp": "4:14:40",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=15280",
+              "what": "Share of the total industry attributed in the answer to legal operators"
+            },
+            {
+              "amount": null,
+              "amount_text": "100,000",
+              "seconds": 15363,
+              "speaker": "PAGCOR chairman and CEO Alejandro Tengco",
+              "timestamp": "4:16:03",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=15363",
+              "what": "Relief packs PAGCOR said it had sent nationwide during the preceding week and a half"
+            },
+            {
+              "amount": null,
+              "amount_text": "125",
+              "seconds": 15413,
+              "speaker": "PAGCOR chairman and CEO Alejandro Tengco",
+              "timestamp": "4:16:53",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=15413",
+              "what": "New school buildings under construction"
+            },
+            {
+              "amount": null,
+              "amount_text": "about a 200 classrooms",
+              "seconds": 15413,
+              "speaker": "PAGCOR chairman and CEO Alejandro Tengco",
+              "timestamp": "4:16:53",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=15413",
+              "what": "Approximate classroom equivalent of the 125 new school buildings; wording as spoken"
+            },
+            {
+              "amount": null,
+              "amount_text": "more than MXN 1,000,000,000",
+              "seconds": 16524,
+              "speaker": "PAGCOR chairman and CEO Alejandro Tengco",
+              "timestamp": "4:35:24",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=16524",
+              "what": "Amount the Bloomberry Foundation was said to have spent on the Clark multispecialty hospital; currency label was spoken as MXN"
+            },
+            {
+              "amount": 100000000,
+              "amount_text": "100,000,000 pesos",
+              "seconds": 16585,
+              "speaker": "PAGCOR chairman and CEO Alejandro Tengco",
+              "timestamp": "4:36:25",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=16585",
+              "what": "Prior PAGCOR assistance cited for Conrado Australia Hospital in Pangasinan"
+            },
+            {
+              "amount": null,
+              "amount_text": "1,000,000,000 mark",
+              "seconds": 16614,
+              "speaker": "Rep. Marco Wangkol",
+              "timestamp": "4:36:54",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=16614",
+              "what": "Approximate amount being considered for the Pangasinan hospital project"
+            },
+            {
+              "amount": null,
+              "amount_text": "six districts",
+              "seconds": 16786,
+              "speaker": "Rep. Marco Wangkol",
+              "timestamp": "4:39:46",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=16786",
+              "what": "Number of districts in Pangasinan"
+            },
+            {
+              "amount": null,
+              "amount_text": "2022",
+              "seconds": 16786,
+              "speaker": "Rep. Marco Wangkol",
+              "timestamp": "4:39:46",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=16786",
+              "what": "Year from which the member measured district funding"
+            },
+            {
+              "amount": null,
+              "amount_text": "more than COP 2,500,000,000",
+              "seconds": 16816,
+              "speaker": "Rep. Marco Wangkol",
+              "timestamp": "4:40:16",
+              "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=16816",
+              "what": "Funding shortfall cited for Pangasinan's Second District; currency label was spoken as COP"
+            }
+          ],
+          "first_seconds": 8005,
+          "index": 13,
+          "moment_count": 41,
+          "outcome": "PAGCOR answered the principal questions and made several conditional commitments, but most project assistance remained subject to letters, coordination, project completion, and liquidation. The remittance report, cancer-center assistance, special-needs support, classroom support, and Pangasinan equipment assistance were not yet finally delivered or approved during the hearing.",
+          "positions": [
+            {
+              "position": "Supported verifying PAGCOR's UHC remittances and urged a possible rebalancing of PAGCOR infrastructure priorities to include wellness centers, evacuation centers, and other projects.",
+              "who": "Rep. Iris Marie Montes"
+            },
+            {
+              "position": "Supported continued PAGCOR assistance for Universal Health Care, cancer-center equipment at Western Visayas Medical Center, and schools and equipment for children with special needs.",
+              "who": "Rep. Jean Baronda"
+            },
+            {
+              "position": "Sought PAGCOR relief and classroom-construction assistance for General Santos City and its damaged classrooms.",
+              "who": "Rep. Shirlyn Ba\u00f1as-Nograles"
+            },
+            {
+              "position": "Sought PAGCOR assistance to reduce DOH's burden for a Pangasinan hospital project, ultimately accepting equipment assistance as a practical alternative.",
+              "who": "Rep. Marco Wangkol"
+            }
+          ],
+          "question": "The committee sought to establish whether PAGCOR was complying with its Universal Health Care remittance obligations and whether its social funds, infrastructure programs, and affiliated foundations could support hospitals, cancer-center equipment, damaged classrooms, and schools serving children with special needs. Members also sought to identify the process and conditions for obtaining such assistance, including for a Pangasinan hospital project.",
+          "status": "committed",
+          "summary": "Rep. Iris Marie Montes questioned PAGCOR's UHC remittances, privatization proceeds, and infrastructure priorities, and PAGCOR undertook to submit a remittance listing within 48 hours. PAGCOR said it was current with National Treasury remittances and estimated possible privatization proceeds at about 20 billion to 30 billion, while the detailed PhilHealth treatment of those proceeds remained partly unclear. Rep. Jean Baronda sought support for cancer-center equipment and schools serving children with special needs, and PAGCOR said it would seriously consider those requests. Rep. Shirlyn Ba\u00f1as-Nograles asked about General Santos relief and roughly 1,400 damaged classrooms; PAGCOR cited more than 100,000 relief packs and a program for 125 new school buildings. Rep. Marco Wangkol sought help for a Pangasinan hospital project estimated at about 1 billion, but PAGCOR advised that equipment for a completed building was more feasible than partial construction funding. The requests landed as conditional commitments requiring follow-up letters, coordination, and project completion.",
+          "timeline_sections": [
+            9,
+            15,
+            18,
+            20
+          ],
+          "timestamp": "2:13:25",
+          "topic": "Infrastructure, hospital, cancer-center, and special-needs-school assistance",
+          "url": "https://budget.bettergov.ph/hearings/yfmi3MQqy7E?t=8005",
+          "video_id": "yfmi3MQqy7E"
+        }
+      },
+      {
+        "hearing": {
+          "agency": null,
+          "fiscal_year": "2027",
+          "hearing_date": "2026-08-17",
+          "page_url": "https://budget.bettergov.ph/hearings/1s8_hW7pHbw",
+          "title": "COMMITTEE ON APPROPRIATIONS (AUGUST 17, 2026)",
+          "video_id": "1s8_hW7pHbw"
+        },
+        "matching_moments": [
+          {
+            "kind": "answer",
+            "said": "The official proposed focusing on areas with strong potential for rapid economic growth, naming Iloilo, Cebu, Bohol, Pangasinan, and Bataan. The official said completed connectivity infrastructure, including the Cavite-Bataan Bridge, could make Bataan an investment magnet, and noted that population growth had declined.",
+            "seconds": 6060,
+            "side": "agency",
+            "speaker": "DBM official",
+            "timestamp": "1:41:00",
+            "url": "https://budget.bettergov.ph/hearings/1s8_hW7pHbw?t=6060"
+          }
+        ],
+        "topic": {
+          "actions": [
+            {
+              "action": "Implement harmonized planning, investment-programming, budget, and submission-portal arrangements in the next budget cycle.",
+              "kind": "commitment",
+              "seconds": 4604,
+              "timestamp": "1:16:44",
+              "url": "https://budget.bettergov.ph/hearings/1s8_hW7pHbw?t=4604",
+              "who": "DBM official"
+            },
+            {
+              "action": "Strengthen the linkage among planning, investment programming, budgeting, and local calendars under the medium-term PFM reform roadmap.",
+              "kind": "commitment",
+              "seconds": 20155,
+              "timestamp": "5:35:55",
+              "url": "https://budget.bettergov.ph/hearings/1s8_hW7pHbw?t=20155",
+              "who": "Secretary Kim"
+            },
+            {
+              "action": "Coordinate with the EO 61 technical working group on a unified meritocracy system.",
+              "kind": "document_request",
+              "seconds": 20336,
+              "timestamp": "5:38:56",
+              "url": "https://budget.bettergov.ph/hearings/1s8_hW7pHbw?t=20336",
+              "who": "Senior Vice Chair Albert Garcia"
+            },
+            {
+              "action": "Submit comparative data on local PPP contracts before and after the PPP Code.",
+              "kind": "commitment",
+              "seconds": 20821,
+              "timestamp": "5:47:01",
+              "url": "https://budget.bettergov.ph/hearings/1s8_hW7pHbw?t=20821",
+              "who": "PPP Center official"
+            },
+            {
+              "action": "Provide the committee with cumulative information on project delays, penalties, and project costs.",
+              "kind": "document_request",
+              "seconds": 6346,
+              "timestamp": "1:45:46",
+              "url": "https://budget.bettergov.ph/hearings/1s8_hW7pHbw?t=6346",
+              "who": "Rep. Albert Garcia"
+            },
+            {
+              "action": "Require right-of-way to be secured before approval of new infrastructure projects.",
+              "kind": "commitment",
+              "seconds": 6308,
+              "timestamp": "1:45:08",
+              "url": "https://budget.bettergov.ph/hearings/1s8_hW7pHbw?t=6308",
+              "who": "DBM official"
+            },
+            {
+              "action": "Consider increasing Mindanao's budget share to 20% in response to the RDC resolution.",
+              "kind": "manifestation",
+              "seconds": 9238,
+              "timestamp": "2:33:58",
+              "url": "https://budget.bettergov.ph/hearings/1s8_hW7pHbw?t=9238",
+              "who": "Rep. Rufus"
+            }
+          ],
+          "agency_position": "DBM and DepDev said they were working to strengthen the connection among RDC investment programming, agency budget submissions, national planning, and the GAA, including through harmonized calendars, portals, and a budget code. They acknowledged that regional priorities were not consistently carried through to the GAA, while arguing that centrally managed items and recent increases, particularly in Mindanao, required more accurate attribution and further evaluation.",
+          "figures": [
+            {
+              "amount": null,
+              "amount_text": "about 30% to 35%",
+              "seconds": 4825,
+              "speaker": "DepDev official",
+              "timestamp": "1:20:25",
+              "url": "https://budget.bettergov.ph/hearings/1s8_hW7pHbw?t=4825",
+              "what": "Share of regional priorities reflected in the GAA"
+            },
+            {
+              "amount": null,
+              "amount_text": "66",
+              "seconds": 4851,
+              "speaker": "DepDev official",
+              "timestamp": "1:20:51",
+              "url": "https://budget.bettergov.ph/hearings/1s8_hW7pHbw?t=4851",
+              "what": "Proposed improved proportion of regional priorities reflected in the GAA"
+            },
+            {
+              "amount": 3500000000,
+              "amount_text": "3,500,000,000 pesos a day",
+              "seconds": 5575,
+              "speaker": "Rep. Albert Garcia",
+              "timestamp": "1:32:55",
+              "url": "https://budget.bettergov.ph/hearings/1s8_hW7pHbw?t=5575",
+              "what": "Traffic-related economic losses cited from a JICA study"
+            },
+            {
+              "amount": 400000000,
+              "amount_text": "400,000,000.05 pesos a day",
+              "seconds": 5599,
+              "speaker": "Rep. Albert Garcia",
+              "timestamp": "1:33:19",
+              "url": "https://budget.bettergov.ph/hearings/1s8_hW7pHbw?t=5599",
+              "what": "Projected traffic-related daily losses by 2030; wording and figure are unclear"
+            },
+            {
+              "amount": null,
+              "amount_text": "1,200,000,000,000",
+              "seconds": 5599,
+              "speaker": "Rep. Albert Garcia",
+              "timestamp": "1:33:19",
+              "url": "https://budget.bettergov.ph/hearings/1s8_hW7pHbw?t=5599",
+              "what": "Total figure cited in connection with traffic-related losses; context is unclear"
+            },
+            {
+              "amount": 13700000000000,
+              "amount_text": "13,700,000,000,000 pesos",
+              "seconds": 5644,
+              "speaker": "Rep. Albert Garcia",
+              "timestamp": "1:34:04",
+              "url": "https://budget.bettergov.ph/hearings/1s8_hW7pHbw?t=5644",
+              "what": "Economic output figure cited for context"
+            },
+            {
+              "amount": null,
+              "amount_text": "5,400,000,000 a day",
+              "seconds": 5671,
+              "speaker": "Rep. Albert Garcia",
+              "timestamp": "1:34:31",
+              "url": "https://budget.bettergov.ph/hearings/1s8_hW7pHbw?t=5671",
+              "what": "Daily loss figure cited in the question to the economic managers; context is unclear"
+            },
+            {
+              "amount": null,
+              "amount_text": "1.7",
+              "seconds": 6090,
+              "speaker": "DBM official",
+              "timestamp": "1:41:30",
+              "url": "https://budget.bettergov.ph/hearings/1s8_hW7pHbw?t=6090",
+              "what": "Fertility rate cited by the DBM official"
+            },
+            {
+              "amount": null,
+              "amount_text": "1.9",
+              "seconds": 6090,
+              "speaker": "DBM official",
+              "timestamp": "1:41:30",
+              "url": "https://budget.bettergov.ph/hearings/1s8_hW7pHbw?t=6090",
+              "what": "Alternative fertility-rate figure also spoken by the DBM official; wording is unclear"
+            },
+            {
+              "amount": null,
+              "amount_text": "10.6%",
+              "seconds": 9060,
+              "speaker": "DBM official",
+              "timestamp": "2:31:00",
+              "url": "https://budget.bettergov.ph/hearings/1s8_hW7pHbw?t=9060",
+              "what": "Increase in one Mindanao region's allocation from 2026 to 2027"
+            },
+            {
+              "amount": null,
+              "amount_text": "20%",
+              "seconds": 9238,
+              "speaker": "Rep. Rufus",
+              "timestamp": "2:33:58",
+              "url": "https://budget.bettergov.ph/hearings/1s8_hW7pHbw?t=9238",
+              "what": "Budget share requested for Mindanao in the RDC resolution"
+            },
+            {
+              "amount": null,
+              "amount_text": "2026 to 2027",
+              "seconds": 9060,
+              "speaker": "DBM official",
+              "timestamp": "2:31:00",
+              "url": "https://budget.bettergov.ph/hearings/1s8_hW7pHbw?t=9060",
+              "what": "Years compared in discussing regional budget increases"
+            },
+            {
+              "amount": null,
+              "amount_text": "50%",
+              "seconds": 9398,
+              "speaker": "DepDev official",
+              "timestamp": "2:36:38",
+              "url": "https://budget.bettergov.ph/hearings/1s8_hW7pHbw?t=9398",
+              "what": "Share of RDC priorities reflected in the NAP"
+            },
+            {
+              "amount": null,
+              "amount_text": "30 to 35%",
+              "seconds": 9398,
+              "speaker": "DepDev official",
+              "timestamp": "2:36:38",
+              "url": "https://budget.bettergov.ph/hearings/1s8_hW7pHbw?t=9398",
+              "what": "Share of original RDC priorities remaining consistent in the GAA"
+            },
+            {
+              "amount": 50000000000,
+              "amount_text": "50,000,000,000 pesos",
+              "seconds": 20482,
+              "speaker": "Executive official",
+              "timestamp": "5:41:22",
+              "url": "https://budget.bettergov.ph/hearings/1s8_hW7pHbw?t=20482",
+              "what": "Investment threshold for a customizable incentives package"
+            },
+            {
+              "amount": null,
+              "amount_text": "50,000,000,000",
+              "seconds": 20512,
+              "speaker": "Executive official",
+              "timestamp": "5:41:52",
+              "url": "https://budget.bettergov.ph/hearings/1s8_hW7pHbw?t=20512",
+              "what": "Value of Samsung's multilayer ceramic capacitor factory investment in Laguna"
+            },
+            {
+              "amount": null,
+              "amount_text": "5%",
+              "seconds": 20541,
+              "speaker": "Executive official",
+              "timestamp": "5:42:21",
+              "url": "https://budget.bettergov.ph/hearings/1s8_hW7pHbw?t=20541",
+              "what": "Approximate share of applications said to go to the FIRB"
+            },
+            {
+              "amount": null,
+              "amount_text": "90% to 95%",
+              "seconds": 20541,
+              "speaker": "Executive official",
+              "timestamp": "5:42:21",
+              "url": "https://budget.bettergov.ph/hearings/1s8_hW7pHbw?t=20541",
+              "what": "Approximate share of applications that investment promotion agencies could approve"
+            },
+            {
+              "amount": null,
+              "amount_text": "5% to 10%",
+              "seconds": 20541,
+              "speaker": "Executive official",
+              "timestamp": "5:42:21",
+              "url": "https://budget.bettergov.ph/hearings/1s8_hW7pHbw?t=20541",
+              "what": "Approximate share of applications that went up to the FIRB"
+            },
+            {
+              "amount": 1900000000000,
+              "amount_text": "PHP 1,900,000,000,000",
+              "seconds": 20572,
+              "speaker": "Executive official",
+              "timestamp": "5:42:52",
+              "url": "https://budget.bettergov.ph/hearings/1s8_hW7pHbw?t=20572",
+              "what": "Registered investments in all investment promotion agencies in 2024 and 2025"
+            },
+            {
+              "amount": null,
+              "amount_text": "1.01 1,100,000,000, 1,000,000,000",
+              "seconds": 20602,
+              "speaker": "Executive official",
+              "timestamp": "5:43:22",
+              "url": "https://budget.bettergov.ph/hearings/1s8_hW7pHbw?t=20602",
+              "what": "Prior registered-investment figures cited unclearly for comparison"
+            },
+            {
+              "amount": null,
+              "amount_text": "about 50",
+              "seconds": 20689,
+              "speaker": "PPP Center official",
+              "timestamp": "5:44:49",
+              "url": "https://budget.bettergov.ph/hearings/1s8_hW7pHbw?t=20689",
+              "what": "Unsolicited LGU PPP proposals received during the first six months of the year"
+            },
+            {
+              "amount": null,
+              "amount_text": "three",
+              "seconds": 20821,
+              "speaker": "PPP Center official",
+              "timestamp": "5:47:01",
+              "url": "https://budget.bettergov.ph/hearings/1s8_hW7pHbw?t=20821",
+              "what": "Local PPP contracts awarded in the first quarter of the year"
+            }
+          ],
+          "first_seconds": 4329,
+          "index": 9,
+          "moment_count": 43,
+          "outcome": "The agencies acknowledged that regional priorities were substantially diluted between the NAP and the GAA and committed to improve planning-budgeting integration, local calendars, and project attribution. Mindanao's requested 20% share, cumulative delay data, and pre-PPP Code comparisons remained open for further evaluation or submission.",
+          "positions": [
+            {
+              "position": "Regional and local priorities should be incorporated through a clear bottom-up process beginning with constituents and development councils, with the gap between RDC priorities and agency ceilings rectified.",
+              "who": "Rep. Jila"
+            },
+            {
+              "position": "Budgeting and investment programming should be more demand-driven and locally identified, while infrastructure planning should improve regional connectivity, manage internal migration, and reduce delays in foreign-assisted projects.",
+              "who": "Rep. Albert Garcia"
+            },
+            {
+              "position": "DBM should proactively obtain local and RDC documents, reduce reliance on lump-sum items, and provide Mindanao with affirmative regional support, including consideration of a 20% budget share.",
+              "who": "Rep. Rufus"
+            },
+            {
+              "position": "Bottom-up budgeting, meritocracy, and decentralization of economic and PPP authority should be strengthened to make government more responsive, competitive, and capable of regional growth.",
+              "who": "Senior Vice Chair Albert Garcia"
+            },
+            {
+              "position": "DBM recognized weaknesses in the current local-to-national budgeting connection and undertook reforms with DepDev, including integration of local planning and budgeting calendars.",
+              "who": "Secretary Kim"
+            },
+            {
+              "position": "LGU PPP review, negotiation, and approval remained decentralized; the PPP Center's centralized function was limited to completeness and competitive-process checks.",
+              "who": "PPP Center official"
+            }
+          ],
+          "question": "The committee sought to establish whether bottom-up and top-down budgeting processes adequately incorporated priorities identified by local and regional development councils into agency ceilings, the national investment program, and the General Appropriations Act. Members also examined whether regional connectivity, Mindanao's budget share, local government PPPs, and related planning and investment systems were sufficiently decentralized and demand-driven.",
+          "status": "committed",
+          "summary": "Rep. Jila raised the need for a genuine bottom-up process linking barangay, local, provincial, and regional priorities to agency ceilings and the national budget. DBM and DepDev said they were harmonizing planning and budgeting calendars and portals, but acknowledged that only about 30% to 35% of RDC priorities appeared in the GAA, compared with 50% in the NAP. Rep. Albert Garcia connected weak regional planning and connectivity to traffic losses, migration to Metro Manila, and delayed foreign-assisted projects; DBM answered that mass transit, regional connectivity, and right-of-way reforms were priorities. Rep. Rufus pressed for proactive DBM engagement with RDCs and a 20% Mindanao budget share, while DBM cited a 10.6% increase in one Mindanao region and said the allocation issue remained a work in progress. Senior Vice Chair Albert Garcia later questioned bottom-up budgeting, meritocracy, CREATE MORE, and local PPPs; officials described ongoing performance reforms, cited registered investments of about 1.9 trillion, and reported about 50 LGU PPP proposals and three awarded local PPP contracts. The hearing produced commitments on calendar and planning reforms, right-of-way sequencing, and submission of comparative PPP and delay data, but did not resolve the regional allocation gap.",
+          "timeline_sections": [
+            8,
+            10,
+            15,
+            31
+          ],
+          "timestamp": "1:12:09",
+          "topic": "Bottom-up budgeting and regional development council priorities",
+          "url": "https://budget.bettergov.ph/hearings/1s8_hW7pHbw?t=4329",
+          "video_id": "1s8_hW7pHbw"
+        }
+      }
+    ],
+    "meta": {
+      "currency": "PHP",
+      "dataset": "hearings",
+      "filters": {
+        "agency": null,
+        "fiscal_year": null,
+        "status": null
+      },
+      "limit": 100,
+      "note": "Matches deliberation topics whose record (topic, summary, question, outcome, or any spoken moment) contains every term. matching_moments are the timestamped lines that mention the terms.",
+      "q": "Pangasinan",
+      "returned": 3,
+      "scale": "pesos",
+      "terms": [
+        "pangasinan"
+      ]
+    }
+  },
+  "retrieved_at": "2026-11-01T13:18:50.256886+00:00",
+  "source": "https://budget.bettergov.ph/api/v1/hearings/search?q=Pangasinan&limit=100",
+  "status": 200
+}

@@ -1,0 +1,2010 @@
+{
+  "url": "https://budget.bettergov.ph/api/v1/budget-cycle",
+  "retrieved_at": "2026-11-01T13:18:49.724854+00:00",
+  "status": 200,
+  "data": {
+    "meta": {
+      "dataset": "budget-cycle",
+      "currency": "PHP",
+      "scale": "pesos",
+      "generated_at": "2026-08-08 18:51:46.823",
+      "source_filename": "Compiled_-_NEP-GAA-SAAODB-ByPAPLabelled.xlsx",
+      "source_sha256": "5a5832cb41c914532d31a32c95bc8196aa4fd2fa614adfccb712948b1fe63036",
+      "scope": "current_new_appropriations",
+      "units": "PHP",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "stages": [
+        "nep",
+        "gaa",
+        "authorized_appropriation",
+        "adjusted_appropriation",
+        "adjusted_allotment",
+        "obligations",
+        "disbursements"
+      ],
+      "expense_classes": [
+        "ps",
+        "mooe",
+        "finex",
+        "co",
+        "total"
+      ]
+    },
+    "data": {
+      "note": "Coverage is limited to the departments listed here, and to Current New Appropriations only \u2014 these figures are narrower in scope than the main GAA series and must not be compared 1:1 with it.",
+      "subjects": [
+        {
+          "subject_id": "da:office-of-the-secretary",
+          "source_sheet": "DA",
+          "display_name": "Office of the Secretary",
+          "is_primary_subject": 1,
+          "canonical_portal_department_id": "05",
+          "canonical_portal_agency_id": "05-001",
+          "source_pairs": [
+            "05-001"
+          ],
+          "coverage": {
+            "adjusted_allotment": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "adjusted_appropriation": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "authorized_appropriation": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "disbursements": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "gaa": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "obligations": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ]
+          }
+        },
+        {
+          "subject_id": "dar:office-of-the-secretary",
+          "source_sheet": "DAR",
+          "display_name": "Office of the Secretary",
+          "is_primary_subject": 1,
+          "canonical_portal_department_id": "04",
+          "canonical_portal_agency_id": "04-001",
+          "source_pairs": [
+            "04-001"
+          ],
+          "coverage": {
+            "adjusted_allotment": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "adjusted_appropriation": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "authorized_appropriation": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "disbursements": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "gaa": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "obligations": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ]
+          }
+        },
+        {
+          "subject_id": "denr:office-of-the-secretary",
+          "source_sheet": "DENR",
+          "display_name": "Office of the Secretary",
+          "is_primary_subject": 1,
+          "canonical_portal_department_id": "10",
+          "canonical_portal_agency_id": "10-001",
+          "source_pairs": [
+            "10-001"
+          ],
+          "coverage": {
+            "adjusted_allotment": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "adjusted_appropriation": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "authorized_appropriation": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "disbursements": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "gaa": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "obligations": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ]
+          }
+        },
+        {
+          "subject_id": "deped:office-of-the-secretary",
+          "source_sheet": "DepEd",
+          "display_name": "Office of the Secretary",
+          "is_primary_subject": 1,
+          "canonical_portal_department_id": "07",
+          "canonical_portal_agency_id": "07-001",
+          "source_pairs": [
+            "07-001"
+          ],
+          "coverage": {
+            "adjusted_allotment": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "adjusted_appropriation": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "authorized_appropriation": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "disbursements": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "gaa": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "obligations": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ]
+          }
+        },
+        {
+          "subject_id": "doe:office-of-the-secretary",
+          "source_sheet": "DOE",
+          "display_name": "Office of the Secretary",
+          "is_primary_subject": 1,
+          "canonical_portal_department_id": "09",
+          "canonical_portal_agency_id": "09-001",
+          "source_pairs": [
+            "09-001"
+          ],
+          "coverage": {
+            "adjusted_allotment": [
+              2018,
+              2019,
+              2020,
+              2024,
+              2025
+            ],
+            "adjusted_appropriation": [
+              2018,
+              2019,
+              2020,
+              2024,
+              2025
+            ],
+            "authorized_appropriation": [
+              2018,
+              2019,
+              2020,
+              2024,
+              2025
+            ],
+            "disbursements": [
+              2018,
+              2019,
+              2020,
+              2024,
+              2025
+            ],
+            "gaa": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "obligations": [
+              2018,
+              2019,
+              2020,
+              2024,
+              2025
+            ]
+          }
+        },
+        {
+          "subject_id": "doh:office-of-the-secretary",
+          "source_sheet": "DOH",
+          "display_name": "Office of the Secretary",
+          "is_primary_subject": 1,
+          "canonical_portal_department_id": "13",
+          "canonical_portal_agency_id": "13-001",
+          "source_pairs": [
+            "13-001"
+          ],
+          "coverage": {
+            "adjusted_allotment": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "adjusted_appropriation": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "authorized_appropriation": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "disbursements": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "gaa": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "obligations": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ]
+          }
+        },
+        {
+          "subject_id": "dswd:office-of-the-secretary",
+          "source_sheet": "DSWD",
+          "display_name": "Office of the Secretary",
+          "is_primary_subject": 1,
+          "canonical_portal_department_id": "20",
+          "canonical_portal_agency_id": "20-001",
+          "source_pairs": [
+            "20-001"
+          ],
+          "coverage": {
+            "adjusted_allotment": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "adjusted_appropriation": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "authorized_appropriation": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "disbursements": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "gaa": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "obligations": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ]
+          }
+        },
+        {
+          "subject_id": "pcw:philippine-commission-on-women-national-commission-on-the-role-of-filipino-women",
+          "source_sheet": "PCW",
+          "display_name": "Philippine Commission on Women (National Commission on the Role of Filipino Women)",
+          "is_primary_subject": 1,
+          "canonical_portal_department_id": "14",
+          "canonical_portal_agency_id": "14-010",
+          "source_pairs": [
+            "14-010",
+            "26-029"
+          ],
+          "coverage": {
+            "adjusted_allotment": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "adjusted_appropriation": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "authorized_appropriation": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "disbursements": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "gaa": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "obligations": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ]
+          }
+        },
+        {
+          "subject_id": "judiciary:supreme-court-of-the-philippines-and-the-lower-courts",
+          "source_sheet": "Judiciary",
+          "display_name": "Supreme Court of the Philippines and the Lower Courts",
+          "is_primary_subject": 1,
+          "canonical_portal_department_id": "29",
+          "canonical_portal_agency_id": "29-001",
+          "source_pairs": [
+            "29-001"
+          ],
+          "coverage": {
+            "gaa": [
+              2018,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2018,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "subject_id": "tesda:technical-education-and-skills-development-authority",
+          "source_sheet": "TESDA",
+          "display_name": "Technical Education and Skills Development Authority",
+          "is_primary_subject": 1,
+          "canonical_portal_department_id": "16",
+          "canonical_portal_agency_id": "16-009",
+          "source_pairs": [
+            "16-009",
+            "22-009",
+            "26-041"
+          ],
+          "coverage": {
+            "adjusted_allotment": [
+              2019,
+              2020,
+              2021,
+              2023,
+              2024
+            ],
+            "adjusted_appropriation": [
+              2019,
+              2020,
+              2021,
+              2023,
+              2024
+            ],
+            "authorized_appropriation": [
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024
+            ],
+            "disbursements": [
+              2019,
+              2020,
+              2021,
+              2023,
+              2024
+            ],
+            "gaa": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "obligations": [
+              2019,
+              2020,
+              2021,
+              2023,
+              2024
+            ]
+          }
+        },
+        {
+          "subject_id": "da:agricultural-credit-policy-council",
+          "source_sheet": "DA",
+          "display_name": "Agricultural Credit Policy Council",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "05",
+          "canonical_portal_agency_id": "05-002",
+          "source_pairs": [
+            "05-002"
+          ],
+          "coverage": {
+            "gaa": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "subject_id": "da:bureau-of-fisheries-and-aquatic-resources",
+          "source_sheet": "DA",
+          "display_name": "Bureau of Fisheries and Aquatic Resources",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "05",
+          "canonical_portal_agency_id": "05-003",
+          "source_pairs": [
+            "05-003"
+          ],
+          "coverage": {
+            "gaa": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "subject_id": "doh:commission-on-population",
+          "source_sheet": "DOH",
+          "display_name": "Commission on Population",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "13",
+          "canonical_portal_agency_id": "13-002",
+          "source_pairs": [
+            "13-002"
+          ],
+          "coverage": {
+            "gaa": [
+              2018,
+              2019
+            ],
+            "nep": [
+              2018,
+              2019
+            ]
+          }
+        },
+        {
+          "subject_id": "dswd:council-for-the-welfare-of-children",
+          "source_sheet": "DSWD",
+          "display_name": "Council for the Welfare of Children",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "20",
+          "canonical_portal_agency_id": "20-002",
+          "source_pairs": [
+            "20-002"
+          ],
+          "coverage": {
+            "gaa": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "subject_id": "judiciary:court-of-appeals",
+          "source_sheet": "Judiciary",
+          "display_name": "Court of Appeals",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "29",
+          "canonical_portal_agency_id": "29-004",
+          "source_pairs": [
+            "29-004"
+          ],
+          "coverage": {
+            "gaa": [
+              2018,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2018,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "subject_id": "judiciary:court-of-tax-appeals",
+          "source_sheet": "Judiciary",
+          "display_name": "Court of Tax Appeals",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "29",
+          "canonical_portal_agency_id": "29-005",
+          "source_pairs": [
+            "29-005"
+          ],
+          "coverage": {
+            "gaa": [
+              2018,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2018,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "subject_id": "deped:early-childhood-care-and-development-council",
+          "source_sheet": "DepEd",
+          "display_name": "Early Childhood Care and Development Council",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "07",
+          "canonical_portal_agency_id": "07-006",
+          "source_pairs": [
+            "07-006"
+          ],
+          "coverage": {
+            "gaa": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "nep": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ]
+          }
+        },
+        {
+          "subject_id": "denr:environmental-management-bureau",
+          "source_sheet": "DENR",
+          "display_name": "Environmental Management Bureau",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "10",
+          "canonical_portal_agency_id": "10-002",
+          "source_pairs": [
+            "10-002"
+          ],
+          "coverage": {
+            "gaa": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "subject_id": "da:fertilizer-and-pesticide-authority",
+          "source_sheet": "DA",
+          "display_name": "Fertilizer and Pesticide Authority",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "05",
+          "canonical_portal_agency_id": "05-005",
+          "source_pairs": [
+            "05-005"
+          ],
+          "coverage": {
+            "gaa": [
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "subject_id": "dswd:inter-country-adoption-board",
+          "source_sheet": "DSWD",
+          "display_name": "Inter-Country Adoption Board",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "20",
+          "canonical_portal_agency_id": "20-003",
+          "source_pairs": [
+            "20-003"
+          ],
+          "coverage": {
+            "gaa": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022
+            ],
+            "nep": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023
+            ]
+          }
+        },
+        {
+          "subject_id": "dswd:juvenile-justice-and-welfare-council",
+          "source_sheet": "DSWD",
+          "display_name": "Juvenile Justice and Welfare Council",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "20",
+          "canonical_portal_agency_id": "20-006",
+          "source_pairs": [
+            "20-006"
+          ],
+          "coverage": {
+            "gaa": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "subject_id": "denr:mines-and-geosciences-bureau",
+          "source_sheet": "DENR",
+          "display_name": "Mines and Geosciences Bureau",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "10",
+          "canonical_portal_agency_id": "10-003",
+          "source_pairs": [
+            "10-003"
+          ],
+          "coverage": {
+            "gaa": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "subject_id": "deped:national-academy-of-sports",
+          "source_sheet": "DepEd",
+          "display_name": "National Academy of Sports",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "07",
+          "canonical_portal_agency_id": "07-007",
+          "source_pairs": [
+            "07-007"
+          ],
+          "coverage": {
+            "gaa": [
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "subject_id": "dswd:national-anti-poverty-commission",
+          "source_sheet": "DSWD",
+          "display_name": "National Anti-Poverty Commission",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "20",
+          "canonical_portal_agency_id": "20-007",
+          "source_pairs": [
+            "20-007"
+          ],
+          "coverage": {
+            "gaa": [
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "subject_id": "dswd:national-authority-for-child-care",
+          "source_sheet": "DSWD",
+          "display_name": "National Authority for Child Care",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "20",
+          "canonical_portal_agency_id": "20-010",
+          "source_pairs": [
+            "20-010"
+          ],
+          "coverage": {
+            "gaa": [
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "subject_id": "deped:national-book-development-board",
+          "source_sheet": "DepEd",
+          "display_name": "National Book Development Board",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "07",
+          "canonical_portal_agency_id": "07-002",
+          "source_pairs": [
+            "07-002"
+          ],
+          "coverage": {
+            "gaa": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "subject_id": "dswd:national-commission-of-senior-citizens",
+          "source_sheet": "DSWD",
+          "display_name": "National Commission of Senior Citizens",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "20",
+          "canonical_portal_agency_id": "20-011",
+          "source_pairs": [
+            "20-011"
+          ],
+          "coverage": {
+            "gaa": [
+              2026
+            ],
+            "nep": [
+              2026
+            ]
+          }
+        },
+        {
+          "subject_id": "dswd:national-commission-on-indigenous-peoples",
+          "source_sheet": "DSWD",
+          "display_name": "National Commission on Indigenous Peoples",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "20",
+          "canonical_portal_agency_id": "20-008",
+          "source_pairs": [
+            "20-008"
+          ],
+          "coverage": {
+            "gaa": [
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "nep": [
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ]
+          }
+        },
+        {
+          "subject_id": "deped:national-council-for-children-s-television",
+          "source_sheet": "DepEd",
+          "display_name": "National Council for Children's Television",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "07",
+          "canonical_portal_agency_id": "07-003",
+          "source_pairs": [
+            "07-003"
+          ],
+          "coverage": {
+            "gaa": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "subject_id": "dswd:national-council-on-disability-affairs",
+          "source_sheet": "DSWD",
+          "display_name": "National Council on Disability Affairs",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "20",
+          "canonical_portal_agency_id": "20-004",
+          "source_pairs": [
+            "20-004"
+          ],
+          "coverage": {
+            "gaa": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "subject_id": "da:national-fisheries-research-and-development-institute",
+          "source_sheet": "DA",
+          "display_name": "National Fisheries Research and Development Institute",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "05",
+          "canonical_portal_agency_id": "05-014",
+          "source_pairs": [
+            "05-014"
+          ],
+          "coverage": {
+            "gaa": [
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "subject_id": "denr:national-mapping-and-resource-information-authority",
+          "source_sheet": "DENR",
+          "display_name": "National Mapping and Resource Information Authority",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "10",
+          "canonical_portal_agency_id": "10-004",
+          "source_pairs": [
+            "10-004"
+          ],
+          "coverage": {
+            "gaa": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "subject_id": "da:national-meat-inspection-service",
+          "source_sheet": "DA",
+          "display_name": "National Meat Inspection Service",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "05",
+          "canonical_portal_agency_id": "05-009",
+          "source_pairs": [
+            "05-009"
+          ],
+          "coverage": {
+            "gaa": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "subject_id": "deped:national-museum-of-the-philippines",
+          "source_sheet": "DepEd",
+          "display_name": "National Museum of the Philippines",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "07",
+          "canonical_portal_agency_id": "07-004",
+          "source_pairs": [
+            "07-004"
+          ],
+          "coverage": {
+            "gaa": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "subject_id": "doh:national-nutrition-council",
+          "source_sheet": "DOH",
+          "display_name": "National Nutrition Council",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "13",
+          "canonical_portal_agency_id": "13-003",
+          "source_pairs": [
+            "13-003"
+          ],
+          "coverage": {
+            "gaa": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "subject_id": "denr:national-water-resources-board",
+          "source_sheet": "DENR",
+          "display_name": "National Water Resources Board",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "10",
+          "canonical_portal_agency_id": "10-005",
+          "source_pairs": [
+            "10-005"
+          ],
+          "coverage": {
+            "gaa": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "subject_id": "denr:palawan-council-for-sustainable-development-staff",
+          "source_sheet": "DENR",
+          "display_name": "Palawan Council for Sustainable Development Staff",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "10",
+          "canonical_portal_agency_id": "10-006",
+          "source_pairs": [
+            "10-006"
+          ],
+          "coverage": {
+            "gaa": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "subject_id": "da:philippine-carabao-center",
+          "source_sheet": "DA",
+          "display_name": "Philippine Carabao Center",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "05",
+          "canonical_portal_agency_id": "05-010",
+          "source_pairs": [
+            "05-010"
+          ],
+          "coverage": {
+            "gaa": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "subject_id": "da:philippine-center-for-postharvest-development-and-mechanization",
+          "source_sheet": "DA",
+          "display_name": "Philippine Center For Postharvest Development and Mechanization",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "05",
+          "canonical_portal_agency_id": "05-011",
+          "source_pairs": [
+            "05-011"
+          ],
+          "coverage": {
+            "gaa": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "subject_id": "da:philippine-council-for-agriculture-and-fisheries",
+          "source_sheet": "DA",
+          "display_name": "Philippine Council for Agriculture and Fisheries",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "05",
+          "canonical_portal_agency_id": "05-013",
+          "source_pairs": [
+            "05-013"
+          ],
+          "coverage": {
+            "gaa": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "subject_id": "da:philippine-fiber-industry-development-authority",
+          "source_sheet": "DA",
+          "display_name": "Philippine Fiber Industry Development Authority",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "05",
+          "canonical_portal_agency_id": "05-012",
+          "source_pairs": [
+            "05-012"
+          ],
+          "coverage": {
+            "gaa": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "subject_id": "deped:philippine-high-school-for-the-arts",
+          "source_sheet": "DepEd",
+          "display_name": "Philippine High School for the Arts",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "07",
+          "canonical_portal_agency_id": "07-005",
+          "source_pairs": [
+            "07-005"
+          ],
+          "coverage": {
+            "gaa": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "subject_id": "doh:philippine-national-aids-council",
+          "source_sheet": "DOH",
+          "display_name": "Philippine National AIDS Council",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "13",
+          "canonical_portal_agency_id": "13-004",
+          "source_pairs": [
+            "13-004"
+          ],
+          "coverage": {
+            "gaa": [
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "subject_id": "dswd:presidential-commission-for-the-urban-poor",
+          "source_sheet": "DSWD",
+          "display_name": "Presidential Commission for the Urban Poor",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "20",
+          "canonical_portal_agency_id": "20-009",
+          "source_pairs": [
+            "20-009"
+          ],
+          "coverage": {
+            "gaa": [
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "subject_id": "judiciary:presidential-electoral-tribunal",
+          "source_sheet": "Judiciary",
+          "display_name": "Presidential Electoral Tribunal",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "29",
+          "canonical_portal_agency_id": "29-002",
+          "source_pairs": [
+            "29-002"
+          ],
+          "coverage": {
+            "gaa": [
+              2018,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2018,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "subject_id": "judiciary:sandiganbayan",
+          "source_sheet": "Judiciary",
+          "display_name": "Sandiganbayan",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "29",
+          "canonical_portal_agency_id": "29-003",
+          "source_pairs": [
+            "29-003"
+          ],
+          "coverage": {
+            "gaa": [
+              2018,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "nep": [
+              2018,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "subject_id": "deped:teacher-education-council",
+          "source_sheet": "DepEd",
+          "display_name": "Teacher Education Council",
+          "is_primary_subject": 0,
+          "canonical_portal_department_id": "07",
+          "canonical_portal_agency_id": "07-008",
+          "source_pairs": [
+            "07-008"
+          ],
+          "coverage": {
+            "gaa": [
+              2026
+            ],
+            "nep": [
+              2026
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "raw_sha256": "41d37815b431767d1e7064125acb064d989e806a7acaf47505f0479253ad2db9",
+  "payload_sha256": "5f04273e1b574aed8ebad8179f8e0919441707adc99e145ec57af2f8c9e3189a"
+}

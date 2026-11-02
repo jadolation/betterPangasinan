@@ -35,7 +35,7 @@ test('landing derives budget availability and distinguishes empty local coverage
   }
   await expect(page.locator('.site-footer a[href="projects.html"]')).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Historical national budgets 2020-2026' })).toBeVisible();
-  await expect(page.getByText(/Awaiting reviewed data\. Historical collection is not enabled/)).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Historical national budgets 2020-2026' })).toHaveAttribute('href', 'historical-budget.html');
 });
 
 for (const width of [320, 375, 430, 768, 1024, 1440]) {
@@ -143,7 +143,7 @@ for (const [url, label, current] of [
   ['/transparency.html', 'Transparency', 'page'],
   ['/projects.html', 'Transparency', 'location'],
   ['/national-budget.html', 'Transparency', 'location'],
-  ['/lgu.html', 'Government', 'location'],
+  ['/lgu.html', 'Explore Pangasinan', 'location'],
 ]) {
   test(`primary navigation identifies ${url}`, async ({ page }) => {
     await mock(page);

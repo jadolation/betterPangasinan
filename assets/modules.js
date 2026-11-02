@@ -198,7 +198,8 @@
       } catch { status.textContent = t('load_error', 'Published data could not be loaded. Availability is unknown; this does not mean there are no public records. Please try again later.'); return; }
     }
     const testMode = document.querySelector('meta[name="data-mode"]')?.content === 'test';
-    for (const name of datasets) data[name] = Array.isArray(data[name]) ? data[name].filter(record => testMode || (record.is_mock === false && record.publication_status === 'approved')) : [];
+    const previewMode = document.querySelector('meta[name="data-mode"]')?.content === 'preview';
+    for (const name of datasets) data[name] = Array.isArray(data[name]) ? data[name].filter(record => testMode || (record.is_mock === false && (previewMode || record.publication_status === 'approved'))) : [];
     // The registry uses reporting_period for years and PHP as the monetary unit.
     for (const name of datasets) data[name] = data[name].map(record => ({
       ...record,

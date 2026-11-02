@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "accessed_date": "2026-11-01",
+    "availability": "available",
+    "description": "Population reference 2024-07-01; administrative listing 2025-07-31. Original starter review label: staging_not_for_publication. User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "source-psa-psgc-20250731",
+    "is_mock": false,
+    "name": "PSA Pangasinan PSGC listing and supplied 2024 population transcription",
+    "publication_status": "approved",
+    "publisher": "Philippine Statistics Authority",
+    "reporting_period": "2024",
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "source_type": "user-reviewed official-source transcription",
+    "url": "https://psa.gov.ph/classification/psgc/citimuni/0105500000",
+    "verification_status": "reviewed"
+  },
+  {
+    "accessed_date": "2026-11-01",
+    "availability": "available",
+    "description": "Capital and reported barangay count supplied in the reviewed integration specification; not a live directory retrieval. User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "source-pangasinan-province-reference",
+    "is_mock": false,
+    "name": "Provincial Government of Pangasinan reference information",
+    "publication_status": "approved",
+    "publisher": "Provincial Government of Pangasinan",
+    "source_type": "official provincial reference supplied with integration specification",
+    "url": "https://www.pangasinan.gov.ph/",
+    "verification_status": "reviewed"
+  }
+]

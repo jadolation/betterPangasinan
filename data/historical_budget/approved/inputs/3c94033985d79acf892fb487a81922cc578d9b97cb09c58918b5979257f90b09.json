@@ -1,0 +1,181 @@
+{
+  "url": "https://budget.bettergov.ph/api/v1/gaa/departments/35/programs?q=Pangasinan&limit=500",
+  "retrieved_at": "2026-11-01T13:18:44.115557+00:00",
+  "status": 200,
+  "data": {
+    "meta": {
+      "dataset": "gaa",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "currency": "PHP",
+      "scale": "pesos",
+      "department_id": "35",
+      "year": 2026,
+      "query": "Pangasinan",
+      "agency_id": null,
+      "limit": 500,
+      "matched": 4,
+      "matched_amount": 100000000
+    },
+    "data": [
+      {
+        "department_id": "35",
+        "agency_id": "35-005",
+        "fam_key": "35-005|bayaoas small reservoir irrigation project srip pangasinan",
+        "name": "Bayaoas Small Reservoir Irrigation Project (SRIP), Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 20000000
+          },
+          "2021": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 100000000
+          },
+          "2023": {
+            "count": 1,
+            "amount": 100000000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 100000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 50000000
+          }
+        }
+      },
+      {
+        "department_id": "35",
+        "agency_id": "35-005",
+        "fam_key": "35-005|dumuloc small reservoir irrigation project srip pangasinan",
+        "name": "Dumuloc Small Reservoir Irrigation Project (SRIP), Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 150000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 445000000
+          },
+          "2023": {
+            "count": 1,
+            "amount": 200000000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 100000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 50000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 50000000
+          }
+        }
+      },
+      {
+        "department_id": "35",
+        "agency_id": "35-005",
+        "fam_key": "35-005|lower agno river irrigation system improvement project pangasinan",
+        "name": "Lower Agno River Irrigation System Improvement Project, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 800000000
+          },
+          "2021": {
+            "count": 1,
+            "amount": 800000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 960000000
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "35",
+        "agency_id": "35-005",
+        "fam_key": "35-005|pangasinan irrigation project bayambang pangasinan",
+        "name": "Pangasinan Irrigation Project, Bayambang, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 20000000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      }
+    ],
+    "next_cursor": null
+  },
+  "raw_sha256": "aa1604b05b12cc791e8ffd6fc0c187812b161edf847f4cdd93688e90ecd6abd4",
+  "payload_sha256": "1fae8507bde9626ebc35201358bb4dbd43cc6d6dc5e28e456b58b5d172b52188"
+}

@@ -61,7 +61,8 @@ test('Projects and Tools links to the budget module under shared Transparency na
   await page.goto('/projects.html');
   await expect(page.locator('.nav-links a[href="national-budget.html"]')).toHaveCount(0);
   await expect(page.locator('.nav-links a[href="transparency.html"]')).toHaveText('Transparency');
-  await expect(page.locator('.nav-links a[href="lgus.html"]')).toHaveText('Government');
+  await expect(page.locator('.nav-links a[href="lgus.html"]')).toHaveText('Explore Pangasinan');
+  await expect(page.locator('.nav-links a[href="government.html"]')).toHaveText('Government');
   await page.getByRole('link', { name: /National budget proposals/ }).click();
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('FY2027 National Budget Explorer');
 });

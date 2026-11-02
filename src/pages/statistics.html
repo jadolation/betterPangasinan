@@ -1,7 +1,15 @@
 ---
 title: Statistics | Better Pangasinan
-description: Explore sourced indicators with reporting periods, units and methodology.
+description: Thirty provincial statistics and 48 LGU population comparisons with original units, census dates and sources.
 ---
-<section class="page-hero"><div class="wrap"><span class="eyebrow">Context before comparison</span><h1>Statistics</h1><p class="lede">Read indicators alongside their units, reporting periods and methodology. Missing observations are not zero and do not support rankings.</p></div></section>
-<section class="section"><div class="wrap" data-module="statistics"><h2>Indicator collection</h2><form data-filters role="search"><label>Search indicators <input name="q" type="search" placeholder="Indicator, unit or metadata"></label> <label>Year <select name="year"><option value="">All years</option></select></label> <label>Category <select name="category"><option value="">All categories</option></select></label> <button class="btn" type="submit">Search</button> <button class="btn btn-outline" type="reset">Clear filters</button></form><p data-status role="status" aria-live="polite">No reviewed statistical observations have been published. No population figures, trends or rankings are inferred.</p><div data-results class="grid grid-3"></div><noscript><p>Search requires JavaScript. Read <a href="data/public.json">the public dataset</a> for published observations.</p></noscript><a href="methodology.html">Sources, units and methodology</a></div></section>
-<script src="assets/modules.js" defer></script>
+<link rel="stylesheet" href="assets/provincial-reference.css">
+<section class="page-hero"><div class="wrap"><span class="eyebrow">Read the period, not just the number</span><h1>Statistics</h1><p class="lede">Population, economy, agriculture and fisheries with original units, reporting periods and sources.</p></div></section>
+<section class="section provincial-reference" data-reference="statistics"><div class="wrap">
+<nav class="pr-nav" aria-label="Provincial reference"><a href="government.html">Government</a><a href="hospitals.html">Hospitals and emergency</a><a href="history.html">History and culture</a></nav>
+<aside class="pr-note">Supplied research collected 2026-10-31, reviewed for publication by the user. Publication review is not independent verification of every underlying source. Census dates and original notes are retained. GDP is not government revenue; missing values are not zero.</aside>
+<div data-trend></div>
+<div data-lgu-scope role="status"></div>
+<form role="search"><label>Search statistics<input type="search" name="q" placeholder="Indicator, unit, period or source"></label><label>Collection<select name="collection"><option value="">All collections</option></select></label><button class="btn" type="submit">Search</button><button class="btn btn-outline" type="reset">Clear</button></form>
+<p data-status role="status" aria-live="polite">Loading source-backed statistics.</p><div data-results></div>
+<noscript><p>Interactive search requires JavaScript. <a href="data/provincial-reference.json">Read all observations and source notes as JSON.</a></p></noscript>
+</div></section><script src="assets/provincial-reference.js" defer></script>

@@ -1,0 +1,525 @@
+{
+  "complete": true,
+  "currency": "PHP",
+  "dataset": "gaa",
+  "departments": 38,
+  "limitations": [
+    "Name matches are not verified geography; shared and outside-province names remain.",
+    "Optional LGU queries not automatically run; province-name coverage is not all provincial funding.",
+    "Hearing search has a documented limit of 100 and no documented offset.",
+    "GAA source zero can mean no source row; it is not proof of a funded project."
+  ],
+  "programs": 3821,
+  "review": {
+    "authorization": "user-requested real-data prototype",
+    "geography_verified": false,
+    "input_hashes": {
+      "collection.json": "7641b1747ab2b25a24d199cd72504e88f5d6196724c2479734f853f4fa1b2fc6",
+      "inputs/034917eeb24d0aa2a0f09e9ba711efbb538b980642688ea3f3dcc77d75e6e791.json": "57f16f5b31e083f75244c8fdd79013dc45c00f04db272d5a203a1de7a3686428",
+      "inputs/05d1b5a899145b31af609e6769e82dda6c78922bb7d9c26c3df6790507f7634d.json": "498b4ddbcb1f8ef3d9ebd34df898267d7233803cb666fd5d948d4135ef9837a3",
+      "inputs/100628787c9c860be7af475eacf0c2532b71558ce434a7dce1f4473c9a26e5d4.json": "40dc166f4499a36b3d60ddced7777550df7c882345e89f9ce19b9ef693873988",
+      "inputs/11d6885b5f23240a3573631db5ee8365eb106ae3ec39d95d729bdb8831197999.json": "9bd7ed9312ad834f9d38834e0d8ff17fec5be5db1753aaa4e1ad9e47dae88951",
+      "inputs/1753667d86038580a558b9922c6874a5e367569959d2b4e3c3758e8a88683131.json": "f94b7f2d14dc13bd2fa84246d5c2b2d277f548f58f2a8083328311030476fa63",
+      "inputs/17ad8bd8b099c02c15b165031356876287f2635af84daf66bd122cd306d8e176.json": "2e5d9fb58060220eb22f27e5b9f373083db06cbef2ac248403db3535af5e1afb",
+      "inputs/26972247a432488f38b17123ff79f270ca16516d166277e3b271f779b4130ae1.json": "2947e88d8cc8ea3bc05e2a9f6af092aa1c22262a4d68f398814fd3624998b7ba",
+      "inputs/29c586345be0b8b479179f157f3d73c3c6618af30a719b9437c2dfddb70c24bd.json": "d360d9991cc1d073dcc9550f601e6dd770b6faeda2ca1cf61797c4a559bf5e20",
+      "inputs/328171f2b160ef5047909e1531adfa8825c0e32f14d5b7b8bb07e4084503b795.json": "aa9e65df4faeea3aef6212a95fec427fca9e1f2b1671e42c5e49ef684ae51b95",
+      "inputs/366d4018835164cf0c2c4d7a5fe597ad729534b2f65423ef32a38ba824cbc888.json": "eb21b762fc5a1ece9c4a57aeded6ad5f7733bd0731cbd7feed73347734b0c62e",
+      "inputs/3c94033985d79acf892fb487a81922cc578d9b97cb09c58918b5979257f90b09.json": "3cc1468cd993f3c3f2523e671092136037cdb41896aa764579e84377b78a8b55",
+      "inputs/3f4df02e15239f333d9863d5d82d80c1402887b29f0302ae2b385bd155daae2e.json": "a7b06148f59f5fcf135b93bed7e3e1d736b23cea35396802ddffa7406bcbf3f9",
+      "inputs/4160af582b5cf1baa8117dc9a7de61fc4494f9963c98cd5f5f191d9d448285d1.json": "e21fd7d7dee5349922e0310ce1ff969f0c67ef1327cb9e551329c04c8b43344e",
+      "inputs/42ca8882fefc4694cc23c4183a180c75f2f6ef6335988d9caf89ab66fb96d974.json": "4d38a47375a594f86369fd6fca72694dae3e6d1c56ef376760128f74cf4d4b13",
+      "inputs/4346e4b28fab6a1938b6a78e45f21a39d570b725329937dcdaa52ec7ea1250a4.json": "6769bcf777954eee54db9c91b335646e2b9525dfef4ecdef543d91da39190221",
+      "inputs/4430d26cc6d7ba80a601680a04e686b522f2378c9214e0e86dccc572a4be30b7.json": "a4891ea2fc010184effc4a8836f635beb1ebc8c4c24fae35a7ad081cdf3779bf",
+      "inputs/45d717749cc009ef53dfb8d9363374d3ef0a69b320af65429009637dc0606aed.json": "71b33f5231959d106aa10e681624cddba445b4d06d72d7132f1c8817688cac7d",
+      "inputs/4d35f2ec248341c90e479f7225e71768d46e91efa9f964819aaa32fd5fb502f5.json": "6a8b31843d25872b62db65ce90527804d31b9718b08f0e28136659fbf456dff2",
+      "inputs/4eb27b3b7564d19148be936b6ff41c1f7c29bc3832aab827b60020cd12cfac65.json": "d2226ea31dd2e5d915d453a26847f5f3d3eb846a11e9f8ca6daf16ade99ae37c",
+      "inputs/5329d4d0115b27abd294980808bfc8eb34273f0e1e794059494ded5cf1aad3fe.json": "c9ed54b1b67d13c1572ca17220378081f02741f8d46dfb6a71892819d42e9b6b",
+      "inputs/5a81c938e78fb1f9cec0568a75b2261abd429854e8dea8fb616b9fe42a0e72ae.json": "a16dac6768ab6449f0189fc931f48b6a63cf24ca05fdb1160d096e53291be8ae",
+      "inputs/68bfcecadd6839910c37d5d6d49dc6a869c01b8616739cae058f4f93e87a7923.json": "93390a489682e500baa24198fee82452000985f064912a121160a0b9da628b6d",
+      "inputs/68c6833a236d4e93928da549485c6483e9943b1e5741830b402251c888473876.json": "a9565e7e4ab259d5177ef115edf20aa02b3bec6559eda3daae4fe29912d3239d",
+      "inputs/7ab60d99f152d4f8d6916e78f30053d9816deea0f8f9d0fe388be94ede2251f1.json": "a1ed9955e141c4e52fae48ceb2093c7efa8920c3268581f6b3297217788750ce",
+      "inputs/805fe71a91ae813c3c6ba314e9dcafd84dc28f3863ed26fab328016efcafa1b1.json": "8bb8b44d02005ec54c85b3a04e73b541cf7def1b2714ac690d6cdf18407e233d",
+      "inputs/88749c8e8600690dfa13efc48727ca60e558d71364ff02344a52f686e9737523.json": "8db2230f2b788ffc91f9b7addbf85d2d7d950a094da679b19499fc2dbe39d93d",
+      "inputs/8b0d2b3729695a1f576af1d37f2d3222f5c2da32e227f16b7dbb8e350c032a34.json": "311c9b434b5b77d807829f7a6e5f24a38f30f9ab5f8acd5e80ac3512a6fcdcf7",
+      "inputs/8c9e1c0541372c33bd370d62219d94a864216762a8213f819f157399ac46aeaa.json": "8a2492a69208efa26471f5defaa2203d042e770972782dd86d5e29c233e86238",
+      "inputs/921095882d304b771b6b83efffdd0295c620fc5938db280f5c6475195bd03a5e.json": "e6177b641718a669ca4df023203ec086f8ccf7bf0859f34e51b51101addb831f",
+      "inputs/97f596cd4eaf81d472f549a7dffadb7f3ec4c470977d202c8e2435ead9dab20e.json": "b344ddc815f3dc4dc8db722b7f449d5d9a75b1b9b08b7a2bf89a18f4619178c6",
+      "inputs/9bb442af62718e0059d8648c2102faa98544243280eb1b6e85df772329b8a464.json": "6c6d83a3f3996312948c643e10376e085712c2c2d253d44a1ab869b8dcbedadd",
+      "inputs/9dc27df8e82a26b434bcd5d89bcc20a242d3e0114f3066df47a963ffd4a2aa10.json": "e209cab5a071652bd42792ae9ea4d7433eae28b3041d2ed7cf087ffa01fcdc63",
+      "inputs/a002b24809e1dafde2b179edebdfc955689d7ebfee8eaba03ae1e7ba3837f516.json": "ccc5118d6a182074b7ae2e32a7ecea7e45fbe9fdd9b1814f2b55c6e70408c468",
+      "inputs/a57929710a9c1cf2f8b1fd9d2676222431d9fbc8f6fcedadc9267cad89d47828.json": "4d86e87b768094c1c47ba9a6fd1a08101bfb85c9466c892b6e13f8b4f16a7271",
+      "inputs/a6aeab0b3982eda9cb7e5df6d2df87da56ed07f4844470b5435d275df002b8d4.json": "bfd661411fb8ec5b4597eeffa2702099b2247e8228b746a7ef80c37a49229662",
+      "inputs/a6f0fc170254d6cbfca3e4c3d45a9d21800cd9c08847f84d90291ea17e6a4137.json": "8436c2eab6529512c96def6c052ea6dc28913c22c764be7f68395fe7daae563c",
+      "inputs/a88844a2e0e0cb85997ee16c60de7980de08e7631e0b90cf79bd45fd324860d1.json": "b9d20e435adb25b30932547fe9a5bf2dd488aa31f476dce60209a185d488fc82",
+      "inputs/b990d4d92675b0475cf53c5c64377319d64328ec652f6ce2cb84c2462ce96335.json": "3feeb0e4d3cd8e59d64d76921f2cb405b26e3647a6f08bf182aa914965f3d3c5",
+      "inputs/bc198071593ec621032a9ee9c9b76b968ab3648f7f029b24366cbfa97364d257.json": "e2d8056a6245caa605ed4b92d4688e7a168922ca67096d9897aba4bddc464d9a",
+      "inputs/bed601e1a5b1e42a8a7784668ba6724d40fc74fa5a6ff4b2c272460e8c99af7c.json": "071c239fc4cbaaaa88ea55814b8daa705ba570dca5cca1aef7e95b2e3d77ccf9",
+      "inputs/c0fe3ad82e9b865b58c99ef72c2e0c3b49e7ae82dbd9b610f60ca6329cf7b4a4.json": "4aee3a0f3ff033bd328e989dd4b368ea12cb58c8ec1be7bf2966ea69f3ebf527",
+      "inputs/c1b5da599552cb136e434f2200dedb1dc2f0a77b78009a5563c5404a4130afcd.json": "fbde61811e1cdb63d43726b4a9b8acb642ca478487badc2f30d341caed69e406",
+      "inputs/c2092b5183d88b1237e80fb660b201affee083985a3a848fb9aefae9174443b7.json": "f5b7b9bc666ac8ef7e2a94ff4bf855729349088b39ad026025da40acc80a58ce",
+      "inputs/c91e706ca8be0b3f9d66f6bf803e3aeb6b5960f4d47d8e0467d536989fc73b8e.json": "949d8ad9ef4d1b68ef8d606f9065f927f010258874ff038f21f40d813d0c796a",
+      "inputs/cbcaba9f80e70948f4e97905a246ed50091b99a7f41ce1423f142531dba52faa.json": "ef21ec38f2d83d797446c0b1623ea0348fc6c1389abe54e4d2f7458840d6ce5d",
+      "inputs/d809c358f29ef0550d7c383b908731448effa11acdff091ad872d04083412a3b.json": "b9f45b1bae043994a87c153886f856c473292d02d34143bb11e32fbf6d856437",
+      "inputs/d97beadc878b4869f8f39e6ba5cdee39531366d280a02b3dd16ac7dbcd5430dc.json": "03e5094e08ec7f22cb4effcc84b5970f2518d9ab4d4863bcb65417fd078090a4",
+      "inputs/dc4aa3ecb9012b791a9cd45a3f83e89c775382446b460adf31a1a9788ba7bf04.json": "c985ebc572162f51f486cfc56a48fa94069a433091914507412eb23e49d43c52",
+      "inputs/e348684c9ea76935016c0575c051141c3b208c6ee9170f2791008374a3ae376f.json": "dea10d11126790f1736e4a9203de8ee6b5af81d45bdf911cfcc6f34a08ab1df1",
+      "inputs/e71aa47f5b01d3da63883e3283033a5363b8d9eece94828d708f7cc177894bb2.json": "2bf9f888270bc933d80375b2e34edf8baef3c27d4bbf725e35817032e38008b5",
+      "inputs/f6b1a0136fb18835d545d97459726cfb6e15cb9faa46a41f96dd59f9e889c129.json": "397c7d1123a3687bc08d2951063c14c6cf9773febe9e48da5b6fc7a0ff08186d",
+      "inputs/fa12c2da559190b21fdb6f983b3287deb1a42d344c9638d9749ecb8a1f6996e3.json": "afbcc7e85644839c8117339f61c9a892117071334c34d6bde00924ae75d9c780",
+      "inputs/fb952aa36a4459061683268b487cfdb23f25b4252960fa8426b21e9e561b7a56.json": "4c943c212903a045fdc8d03d5d716ba09bc8c91b2a7ee43b9274910d3daa21a8",
+      "inputs/fcdb303944fae33f6eeea98d22f6f21a0a724b8f5c51b5ed2833896b194e0925.json": "832ec0b0571c0ce858ba298fd4152c209f1f6576fc0853ba7dca0ae8fad82c1f"
+    },
+    "reviewed_at": "2026-11-01T13:22:37.370142+00:00",
+    "scope": "Source-backed name matches and explicitly distinct context; not a location or hearing-approval verification",
+    "status": "approved"
+  },
+  "scale": "pesos",
+  "schema_version": 1,
+  "source_commit": null,
+  "source_commit_note": "GAA/NEP APIs do not expose a source commit; response checksums retained instead.",
+  "sources": [
+    {
+      "error": null,
+      "payload_sha256": "b545644b730fa92a87f38b579a09255b3e2d2add3f63f1b55c3240ef8e010fc6",
+      "raw_sha256": "9434413e28a1d2d3fdd2c73d9b1c339c16b940c39356324f9a9afdab971bacad",
+      "retrieved_at": "2026-11-01T13:18:47.177785+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/28/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "0aff202322a3d78711a6a0a2c3b92de12b0108bd654cc791799c36b43a4db834",
+      "raw_sha256": "893ae5898b2ee08146c13fca42f4589716a286981266b445b1759afb50fa1cce",
+      "retrieved_at": "2026-11-01T13:18:44.883344+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/18/programs?q=Pangasinan&limit=500&cursor=eyJ2IjowLCJrIjoiMTgtMDAxfGNvbnN0cnVjdGlvbiBvZiBjb25jcmV0ZSBsaW5lIGNhbmFscyB3aXRoIGNvdmVyIGFsYW1pbm9zIGNpdHkgcGFuZ2FzaW5hbiJ9"
+    },
+    {
+      "error": null,
+      "payload_sha256": "d479cd73d6cab73090fbf668aecb470fc3fed4f597b4f6872eb154536d4ade53",
+      "raw_sha256": "2fdf4dab4818ed31b033958053d1353a86f2dcc96a063264f5477cd93f144fdd",
+      "retrieved_at": "2026-11-01T13:18:44.944873+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/11/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "09988aab10060fe6657ef069d06c19129c35aca9ea6f77baed8b29194d3ab696",
+      "raw_sha256": "9e8a1a5d284d1a0231280b4aa9ec7206345dadba3288d3f4c4fb28adaae98ee5",
+      "retrieved_at": "2026-11-01T13:18:49.201857+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/nep/2027/departments/18"
+    },
+    {
+      "error": null,
+      "payload_sha256": "bf34e561282605a2a3554ceeb61cd8daa9ecbac007390e789a6d2be06167f21d",
+      "raw_sha256": "5bc7c7d5fb9a6566f2b4824284e8f7186d2ffbd12568ee15147a9c83f312c721",
+      "retrieved_at": "2026-11-01T13:18:44.685649+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/29/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "980d0d4b01bb040b6c59eef5f459229737b9c6a9b671ea9daff89499fd58b378",
+      "raw_sha256": "36df67c8871e4a7c4bc74b1bafe2277ae7f6c4c6f7727253af84706b244b1b2f",
+      "retrieved_at": "2026-11-01T13:18:46.808830+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/18/programs?q=Pangasinan&limit=500&cursor=eyJ2IjowLCJrIjoiMTgtMDAxfGNvbnN0cnVjdGlvbiBvZiByb2FkIGJhcmFuZ2F5IHNhbWFuZyBzdXIgc2l0aW8gY2FhYnV0YW4gYm9saW5hbyBwYW5nYXNpbmFuIn0%3D"
+    },
+    {
+      "error": null,
+      "payload_sha256": "0fba2a7b574a753ec8f403aae43c28c27be8eb1cfe1fe57690b6cd6acd70c896",
+      "raw_sha256": "e085ecf1f6633b719a0e1c5f60d8fab12e37c01d28f3558a4de3b2d7a8a8dd75",
+      "retrieved_at": "2026-11-01T13:18:45.596494+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/31/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "24c0be1940b011070d4fd60a87f43c41e785873ff0debc7c0e2e1019626bb3f6",
+      "raw_sha256": "10757b30cc1d0f63351bb734d77d8ca42b392ecdfd82108066fb7ba760f8ef1c",
+      "retrieved_at": "2026-11-01T13:18:50.256886+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/hearings/search?q=Pangasinan&limit=100"
+    },
+    {
+      "error": null,
+      "payload_sha256": "22e5d766bcb22308b6181c106beab9a41fba009e93778c315e7a818ef6c3b02c",
+      "raw_sha256": "9f30cb1d13a044e7fa27dab4d8ed68f8d558a8243a1c66e116d48678227739f6",
+      "retrieved_at": "2026-11-01T13:18:47.174601+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/03/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "c49e96854df354520d289e27ad3c6c7036e4c353c4176f88ab8436b29412dfa6",
+      "raw_sha256": "152d8b260072518637d064f8224d94b0c60c63d05a34d7817889311c41ddffa5",
+      "retrieved_at": "2026-11-01T13:18:44.115193+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/20/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "1fae8507bde9626ebc35201358bb4dbd43cc6d6dc5e28e456b58b5d172b52188",
+      "raw_sha256": "aa1604b05b12cc791e8ffd6fc0c187812b161edf847f4cdd93688e90ecd6abd4",
+      "retrieved_at": "2026-11-01T13:18:44.115557+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/35/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "9dd03384bbb82b7dcd7e84cfcfae39164e72729289929ad948a424a923be8328",
+      "raw_sha256": "11f8fd9dc4cb5962eb282c198eb1641124b4d1b7343158eeb8293c6455d16f19",
+      "retrieved_at": "2026-11-01T13:18:48.999716+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/nep/2027/departments"
+    },
+    {
+      "error": null,
+      "payload_sha256": "3dbb34b7db9c66a296eae99572b39f6ccfb7c8d8277d6528e512c01c2165c9da",
+      "raw_sha256": "b74438eefc36fc8463837fd8c9f5bdf2606fad71846ca4cd2ccc4263d2558465",
+      "retrieved_at": "2026-11-01T13:18:44.893014+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/15/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "d3ab9a51e7ca38113b363db68a132a0af57e7467e0278d073ad493639d73ccae",
+      "raw_sha256": "7d5fba0ce47395d4be6302811b6fca7a55cf2788e8157f68bb0218896adc92c5",
+      "retrieved_at": "2026-11-01T13:18:50.140558+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/openapi.json"
+    },
+    {
+      "error": null,
+      "payload_sha256": "f47de7de591b09ef7a8acef305a0b219c9f26e2441a3d0ded7b4643035edb1ab",
+      "raw_sha256": "c98629c5a25db88f5bfa045592467e08d5edf0b5a6451772628e5d27616160c5",
+      "retrieved_at": "2026-11-01T13:18:46.301708+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/09/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "cd522388f5a2f1c4ef9b99ffca0f6b413adc533d1055eaf532a5e0d6ea39ba14",
+      "raw_sha256": "69829dec4c4d4c377b3bf8a8078e74a31b43264acad30000084f31ff2681cd6a",
+      "retrieved_at": "2026-11-01T13:18:46.278511+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/36/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "dcc906c64552d223103fe588e3213d18433eccda29942409dca98bb32ce7d818",
+      "raw_sha256": "587d134f5fb219a8e175cd294a178a40c023abf578342475ddd0eeda43a9cc94",
+      "retrieved_at": "2026-11-01T13:18:45.953460+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/22/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "85db6a2ded99368f14bbc45312ac39b6a72901064cf15ab5b8da2588471e6dc9",
+      "raw_sha256": "b1b2bc9d07be14906438ec7f9d0a680ee0c3b7424398762c0198a93a1f8e6f17",
+      "retrieved_at": "2026-11-01T13:18:48.044346+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/18/programs?q=Pangasinan&limit=500&cursor=eyJ2IjowLCJrIjoiMTgtMDAxfHJlaGFiaWxpdGF0aW9uIG9mIHJvYWQgYnJneSBnYXlhbWFuIGJpbm1hbGV5IHBhbmdhc2luYW4ifQ%3D%3D"
+    },
+    {
+      "error": null,
+      "payload_sha256": "5236168854ad02bc04b46ba8f652f08cdbfca22b0e8cc3add99873cb9d3582ff",
+      "raw_sha256": "89564e95f5d54f3f7ee0c4fbf471aedf0989d9ea17dafa92dde4bd1c7a11071b",
+      "retrieved_at": "2026-11-01T13:18:46.919630+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/34/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "201888df7ae197a7510c6289f5e71fbbb08f7eb254c1d2b35ae03e1661c73dc5",
+      "raw_sha256": "3603a61741cf9631ef066688b1fb69b932d669e2b21e56e6b0a3d5884fe4fdd2",
+      "retrieved_at": "2026-11-01T13:18:48.511543+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/nep/2027"
+    },
+    {
+      "error": null,
+      "payload_sha256": "94a1328256c0f897777c5a0469daf844130e0b9870650685c50e3cee4cdc459e",
+      "raw_sha256": "aa8c5a512ede2f66573ca73fd652ac85862a496bf88e02daa0a8da087a8258ae",
+      "retrieved_at": "2026-11-01T13:18:49.533366+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/nep/2027/rollups/region"
+    },
+    {
+      "error": null,
+      "payload_sha256": "1bb32b40e47f2fdf33ca15d007c165e03ae5a29a823084e640e798127442950e",
+      "raw_sha256": "2f38a060081cd21626c4272938ec9f60cb47bd069e9d4bca540c8ad813656913",
+      "retrieved_at": "2026-11-01T13:18:43.259254+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments"
+    },
+    {
+      "error": null,
+      "payload_sha256": "e118b836e23b6fcb01dd663d7603e2c70ba47e73529732e7837bb3cfa41f98be",
+      "raw_sha256": "a7693db5d224ed1c015940edaef2b34f567b47deffc8127a7e7c93b1f58567c3",
+      "retrieved_at": "2026-11-01T13:18:45.583445+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/18/programs?q=Pangasinan&limit=500&cursor=eyJ2IjowLCJrIjoiMTgtMDAxfGNvbnN0cnVjdGlvbiBvZiBtdWx0aSAgcHVycG9zZSBidWlsZGluZyBicmd5IHRhYnV5b2MgYmluYWxvbmFuIHBhbmdhc2luYW4ifQ%3D%3D"
+    },
+    {
+      "error": null,
+      "payload_sha256": "ffede8737e0c5b5bbecb67445bbd36e79aa581dc464775953ad6a69b4cbb8f89",
+      "raw_sha256": "e9543f79a16c2b4c054bcf355db709745e54820ffeacc9ecc33d870348995379",
+      "retrieved_at": "2026-11-01T13:18:43.517250+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/01/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "786adb5e7f7e7e554e8ccf79aaa0e0f5b88b41760544d7e9044782a7dfd7605f",
+      "raw_sha256": "0ee2a10c4472ce6b3637efd2d38d0345b632177cd7d308086866092701354cf2",
+      "retrieved_at": "2026-11-01T13:18:45.265083+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/10/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "17c4ec1e15dcc76a60731a600d0e3bd87d2b2020c33e904642824d46beb5408c",
+      "raw_sha256": "8941ed7ad10e45dd224b061e1d25b7af087b62f7ab1314effd63db3fd2444978",
+      "retrieved_at": "2026-11-01T13:18:45.946673+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/24/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "59a0368951f9f7ea67e2eaa1995302a95bb7b90e7c735cb85bc8b54a877df399",
+      "raw_sha256": "bb54cef1751896d343e6936d0387aa2209fb0cb9659f239791741280a32f8a69",
+      "retrieved_at": "2026-11-01T13:18:46.648803+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/06/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "54df7207aefa52440ba4c7eb2a8d356a78ae5d01a3fd519bc905d6db041fc79a",
+      "raw_sha256": "28e6deabc33b082e234f2e7f0276eceebfaed139fb7bfa64e6adda43a334e6d0",
+      "retrieved_at": "2026-11-01T13:18:46.572973+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/21/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "1765d0b20fa1149920d00f684ff595b12969a81f2ae257615f46c985f1168642",
+      "raw_sha256": "972c1b49d85b4160ef9c10df9fba669334a1a7f37f188093a25e51e5eb06a3e1",
+      "retrieved_at": "2026-11-01T13:18:44.546256+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/26/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "c915fac2110a716780b31083ccda46f894d8c9ac9c09bf612f92feeb41d88f2b",
+      "raw_sha256": "d9956c71d221533825bc460f9d4bb46619a36cbd958b89188d5cfd3e3bce9ea0",
+      "retrieved_at": "2026-11-01T13:18:44.405828+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/38/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "ff1f82db07914ac71b4f861a4f7cbf879b659609ebc3ab75bf078f6bbe574450",
+      "raw_sha256": "014085ed7436d01a0ed26409f4e89a96dd59f3635fed8c980aa75d1c1a9b8428",
+      "retrieved_at": "2026-11-01T13:18:46.908966+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/39/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "290096441c98385acbb18e6b2f236319c8c02f30fd632a408fc50833ef65ad97",
+      "raw_sha256": "fa331adcb1b85da6f78f93e488b11eac006c3f91421ad0352ec9139a5b95bdee",
+      "retrieved_at": "2026-11-01T13:18:43.517859+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/07/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "009a38cc3622750857586ffc8ef865961883a8f20212bb89af4e6847eb8717b4",
+      "raw_sha256": "ca1e3be5613bfb611c4b68b7c9090c956c33bc2c6dfaaafe31c9162a8b287292",
+      "retrieved_at": "2026-11-01T13:18:46.287041+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/33/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": "HTTP Error 404: Not Found",
+      "payload_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "raw_sha256": null,
+      "retrieved_at": "2026-11-01T13:18:49.951153+00:00",
+      "status": 404,
+      "url": "https://budget.bettergov.ph/api/v1/budget-cycle/departments/18"
+    },
+    {
+      "error": null,
+      "payload_sha256": "5f04273e1b574aed8ebad8179f8e0919441707adc99e145ec57af2f8c9e3189a",
+      "raw_sha256": "41d37815b431767d1e7064125acb064d989e806a7acaf47505f0479253ad2db9",
+      "retrieved_at": "2026-11-01T13:18:49.724854+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/budget-cycle"
+    },
+    {
+      "error": null,
+      "payload_sha256": "9ca5c35305ab43eeff0978b3d479d4986a0e8932a99c8763321d1952417fac6c",
+      "raw_sha256": "889994db09414c648b0b7a710f2c4207af102c024ab35ab7bd232d0f18fe6fe7",
+      "retrieved_at": "2026-11-01T13:18:43.833538+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/13/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "7229d6ea1a5414274fdbed86229d0aa96147356e1eb8d45018cf9f1f8acb03cd",
+      "raw_sha256": "bd692ae6ead039bff7acfe6c77d644ad2c64bea4a0e2cece68dbee299f86636b",
+      "retrieved_at": "2026-11-01T13:18:45.584355+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/32/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "85443d38168b73f259147e09fb475bea5bc79054deb68fa1ecf21d3685e1889a",
+      "raw_sha256": "45503a92d21379a2cec5d43222dc70fc4948d0c22cda29425c20ba6170386c2d",
+      "retrieved_at": "2026-11-01T13:18:45.273584+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/02/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "ed5dcb5de1c287eb344b29e87b99e58da11548996c1e4100a3f5d7f4f3050628",
+      "raw_sha256": "4e8be71c5f05cb8a3874ff7103064204bbf8138ae263b1622fad858246ca5c06",
+      "retrieved_at": "2026-11-01T13:18:46.656279+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/30/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "4060a47d2040e7838f90f7bd18807b29f415988e66a6bd5be4c4bd8d201b3410",
+      "raw_sha256": "e68eb16342fb2927e63531f9a5c43e85348dc261f6dcc1ce4818b7bb4179eb20",
+      "retrieved_at": "2026-11-01T13:18:45.588645+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/37/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "a857ec913beed039c67de411d794c7419f93fe04c01ecb3e71dff301ef463b80",
+      "raw_sha256": "f5bdac02cb39f1b8d38d26db8af1d5c1b97a8e35dc685fbd5d439becaf562ce1",
+      "retrieved_at": "2026-11-01T13:18:44.696306+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/16/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "3ba40811a9845e304ddc52c9bf0d74f2955f8a5e3ad9d010e690fa5dcd54ad94",
+      "raw_sha256": "f084c8e9537272d1fccae52f50415e1ddecc46fa85ec37b2ac13a00367b91b66",
+      "retrieved_at": "2026-11-01T13:18:43.517062+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/18/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "bc8755ed9d5410095f23a52614e622cddae549a2c1f5ab2f8ac0228a2fb14877",
+      "raw_sha256": "330b05ab15a15f0c89de988c131f225e1b54dd08530611d0540a4b55cc3c1cad",
+      "retrieved_at": "2026-11-01T13:18:44.239564+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/18/programs?q=Pangasinan&limit=500&cursor=eyJ2IjowLCJrIjoiMTgtMDAxfGFsYW1pbm9zIHJpdmVyIHBvZ28gc2VjdGlvbiBzdGEwMTE4MDIgIHN0YTAxMjEyNCBhbGFtaW5vcyBjaXR5IHBhbmdhc2luYW4ifQ%3D%3D"
+    },
+    {
+      "error": null,
+      "payload_sha256": "5addb5590358b68cbb0e289bf0709510b57cc382fc624fdeb305ff4767edff07",
+      "raw_sha256": "9e23b2fa0f0141033ef6b5c80f4bba653892dcfdf0b376add5ed247d35a01e61",
+      "retrieved_at": "2026-11-01T13:18:43.793627+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/14/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "c19f68d3079a627bd54386e91477cdc161c76593b1bd25859111cc477932d9f8",
+      "raw_sha256": "f3af2734c7b1b6511bd5a8c9d2e02a31d840abd12e6ab517f18b821a4d019292",
+      "retrieved_at": "2026-11-01T13:18:44.132603+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/05/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "19e87f5038c9e20e28f5995f54389e439422866a835839169e3ccc3020904877",
+      "raw_sha256": "3f83e05c978270c2f8d53b85bcf11ea3d004d98914548baea0337ff76d9bae38",
+      "retrieved_at": "2026-11-01T13:18:45.264749+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/12/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "4553098e404172732c60ae09dfa33b91c0228819fc93ac1e8e4aac6b889aae59",
+      "raw_sha256": "f7cdbbf4f5a55fd468c98d74be445d093b81f0e118541e026dea6894ddbaaf5e",
+      "retrieved_at": "2026-11-01T13:18:44.403722+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/08/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "95f5e05eb2e12fe595cea403a9a9f3c3abb05f825fabdceb24c3e0b0dfaac68f",
+      "raw_sha256": "22e5995260f5bea665db4832e13850f9820894226ec9345a4a91f51eba4b9416",
+      "retrieved_at": "2026-11-01T13:18:44.951252+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/19/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "01d5893200f5159441125627385df48a828f3737c3a7ea5dbeb6234a7493b595",
+      "raw_sha256": "e48ca34ed1bc84be2b50f282d55878c3018d7383e3e089ca965520cb4d198b52",
+      "retrieved_at": "2026-11-01T13:18:45.947086+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/40/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "3cca4a2157e75f751a070cc29c3d6f88e43662718f02a049e28850c0a5db6ad3",
+      "raw_sha256": "e17d072863636ee6d5e4c882cc169f84eba47bd6f1fe291863203d0b7ed95f34",
+      "retrieved_at": "2026-11-01T13:18:46.859492+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/25/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "83f745fffe28663fb208bc3dae14dd3ffc6552f261ff44b814e6d5d925b5e047",
+      "raw_sha256": "587a132b05086843de10b5f09958be5abe2c790ebdfcf9df952029b8b81757b2",
+      "retrieved_at": "2026-11-01T13:18:47.482334+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/18/programs?q=Pangasinan&limit=500&cursor=eyJ2IjowLCJrIjoiMTgtMDAxfGNvbnN0cnVjdGlvbiBvZiBzb2xhciB3YXRlciBzeXN0ZW0gYmFyYW5nYXkgZ3Vlc2V0IGJ1Z2FsbG9uIHBhbmdhc2luYW4ifQ%3D%3D"
+    },
+    {
+      "error": null,
+      "payload_sha256": "a112f77ec72a85f21819974b6978c85cbb95095a01b381e285e8afbf6af96bfb",
+      "raw_sha256": "1ba9245ea9e6e0626f3da99ba57a3e0e47eff634cf018b8d6da6c650ca7b3726",
+      "retrieved_at": "2026-11-01T13:18:46.276850+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/18/programs?q=Pangasinan&limit=500&cursor=eyJ2IjowLCJrIjoiMTgtMDAxfGNvbnN0cnVjdGlvbiBvZiBtdWx0aXB1cnBvc2UgYnVpbGRpbmcgZ3ltbmFzaXVtIGF0IHBhbmdhc2luYW4gaXYgZGlzdHJpY3QgZW5naW5lZXJpbmcgb2ZmaWNlIHR1bGlhbyBzdGEgYmFyYmFyYSBwYW5nYXNpbmFuIn0%3D"
+    },
+    {
+      "error": null,
+      "payload_sha256": "52590cb1a08b6e68579346a0483d0bda4ca8167f930ea9eb9aa80adf4c632d08",
+      "raw_sha256": "95b358c93147bebb37045851d57abd59227aadccc254223c912d03446f801539",
+      "retrieved_at": "2026-11-01T13:18:43.516726+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/04/programs?q=Pangasinan&limit=500"
+    },
+    {
+      "error": null,
+      "payload_sha256": "e21287d71f742cfe7b41e89324672fd765e5da3e876fe7f24a3df74b1b748d6a",
+      "raw_sha256": "c3060df0d05df28651a36cda082b8672e64de50cee7ecd0044c611471bc26df8",
+      "retrieved_at": "2026-11-01T13:18:43.814010+00:00",
+      "status": 200,
+      "url": "https://budget.bettergov.ph/api/v1/gaa/departments/17/programs?q=Pangasinan&limit=500"
+    }
+  ],
+  "stage": "enacted_appropriations",
+  "years": [
+    "2020",
+    "2021",
+    "2022",
+    "2023",
+    "2024",
+    "2025",
+    "2026"
+  ]
+}

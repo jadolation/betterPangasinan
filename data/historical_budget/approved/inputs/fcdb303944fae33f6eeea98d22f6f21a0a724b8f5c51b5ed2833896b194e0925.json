@@ -1,0 +1,107 @@
+{
+  "url": "https://budget.bettergov.ph/api/v1/gaa/departments/17/programs?q=Pangasinan&limit=500",
+  "retrieved_at": "2026-11-01T13:18:43.814010+00:00",
+  "status": 200,
+  "data": {
+    "meta": {
+      "dataset": "gaa",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "currency": "PHP",
+      "scale": "pesos",
+      "department_id": "17",
+      "year": 2026,
+      "query": "Pangasinan",
+      "agency_id": null,
+      "limit": 500,
+      "matched": 2,
+      "matched_amount": 30000000
+    },
+    "data": [
+      {
+        "department_id": "17",
+        "agency_id": "17-007",
+        "fam_key": "17-007|construction of perimeter fence 7th infantry kaugnay division philippine army camp lt tito b abat barangay calaocan manaoag pangasinan",
+        "name": "Construction of Perimeter Fence, 7th Infantry (Kaugnay) Division, Philippine Army, Camp Lt. Tito B. Abat, Barangay Calaocan, Manaoag, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 0,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 20000000
+          }
+        }
+      },
+      {
+        "department_id": "17",
+        "agency_id": "17-007",
+        "fam_key": "17-007|construction of multipurpose building 2 units barracksbilleting facility 71st infantry kabigan battalion 7th infantry kaugnay division philippine army barangay cabaluyan 2nd mangatarem pangasinan",
+        "name": "Construction of Multi-Purpose Building (2 Units Barracks/Billeting Facility, 71st Infantry (Kabigan) Battalion, 7th Infantry (Kaugnay) Division, Philippine Army, Barangay Cabaluyan 2nd, Mangatarem, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 0,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 10000000
+          }
+        }
+      }
+    ],
+    "next_cursor": null
+  },
+  "raw_sha256": "c3060df0d05df28651a36cda082b8672e64de50cee7ecd0044c611471bc26df8",
+  "payload_sha256": "e21287d71f742cfe7b41e89324672fd765e5da3e876fe7f24a3df74b1b748d6a"
+}

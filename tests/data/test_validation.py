@@ -22,8 +22,11 @@ def change(directory, dataset, key, value):
     path.write_text(json.dumps(records))
 
 
-def test_empty_production_and_private_fixture_graph():
-    assert all(not records for records in build.load_data(build.ROOT / "data" / "production").values())
+def test_reviewed_production_and_private_fixture_graph():
+    production = build.load_data(build.ROOT / "data" / "production")
+    assert len(production["lgus"]) == 48
+    assert all(record["publication_status"] == "approved" and record["is_mock"] is False for records in production.values() for record in records)
+    assert sum(record["population"] for record in production["lgus"]) == 3188540
     records = build.load_data(build.ROOT / "data" / "fixtures", "test")
     assert len(records["lgus"]) == 4
     assert records["projects"][0]["status"] == "ongoing"

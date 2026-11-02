@@ -1,1 +1,962 @@
-[]
+[
+  {
+    "availability": "available",
+    "classification": "city",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105503000",
+    "is_mock": false,
+    "name": "City of Alaminos",
+    "population": 100430,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105503000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "city",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105518000",
+    "is_mock": false,
+    "name": "City of Dagupan",
+    "population": 174777,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105518000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "city",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105532000",
+    "is_mock": false,
+    "name": "City of San Carlos",
+    "population": 208330,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105532000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "city",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105546000",
+    "is_mock": false,
+    "name": "City of Urdaneta",
+    "population": 145935,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105546000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105501000",
+    "is_mock": false,
+    "name": "Agno",
+    "population": 29270,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105501000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105502000",
+    "is_mock": false,
+    "name": "Aguilar",
+    "population": 45363,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105502000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105504000",
+    "is_mock": false,
+    "name": "Alcala",
+    "population": 49479,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105504000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105505000",
+    "is_mock": false,
+    "name": "Anda",
+    "population": 42688,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105505000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105506000",
+    "is_mock": false,
+    "name": "Asingan",
+    "population": 58349,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105506000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105507000",
+    "is_mock": false,
+    "name": "Balungao",
+    "population": 30678,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105507000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105508000",
+    "is_mock": false,
+    "name": "Bani",
+    "population": 52715,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105508000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105509000",
+    "is_mock": false,
+    "name": "Basista",
+    "population": 37840,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105509000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105510000",
+    "is_mock": false,
+    "name": "Bautista",
+    "population": 35728,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105510000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105511000",
+    "is_mock": false,
+    "name": "Bayambang",
+    "population": 129506,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105511000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105512000",
+    "is_mock": false,
+    "name": "Binalonan",
+    "population": 56560,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105512000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105513000",
+    "is_mock": false,
+    "name": "Binmaley",
+    "population": 88006,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105513000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105514000",
+    "is_mock": false,
+    "name": "Bolinao",
+    "population": 84658,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105514000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105515000",
+    "is_mock": false,
+    "name": "Bugallon",
+    "population": 76027,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105515000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105516000",
+    "is_mock": false,
+    "name": "Burgos",
+    "population": 23240,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105516000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105517000",
+    "is_mock": false,
+    "name": "Calasiao",
+    "population": 100686,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105517000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105519000",
+    "is_mock": false,
+    "name": "Dasol",
+    "population": 31842,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105519000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105520000",
+    "is_mock": false,
+    "name": "Infanta",
+    "population": 26837,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105520000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105521000",
+    "is_mock": false,
+    "name": "Labrador",
+    "population": 26995,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105521000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105522000",
+    "is_mock": false,
+    "name": "Lingayen",
+    "population": 108510,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105522000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105523000",
+    "is_mock": false,
+    "name": "Mabini",
+    "population": 26589,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105523000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105524000",
+    "is_mock": false,
+    "name": "Malasiqui",
+    "population": 144344,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105524000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105525000",
+    "is_mock": false,
+    "name": "Manaoag",
+    "population": 76606,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105525000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105526000",
+    "is_mock": false,
+    "name": "Mangaldan",
+    "population": 113302,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105526000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105527000",
+    "is_mock": false,
+    "name": "Mangatarem",
+    "population": 79648,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105527000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105528000",
+    "is_mock": false,
+    "name": "Mapandan",
+    "population": 38228,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105528000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105529000",
+    "is_mock": false,
+    "name": "Natividad",
+    "population": 26721,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105529000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105530000",
+    "is_mock": false,
+    "name": "Pozorrubio",
+    "population": 75143,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105530000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105531000",
+    "is_mock": false,
+    "name": "Rosales",
+    "population": 67510,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105531000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105533000",
+    "is_mock": false,
+    "name": "San Fabian",
+    "population": 87714,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105533000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105534000",
+    "is_mock": false,
+    "name": "San Jacinto",
+    "population": 44713,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105534000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105535000",
+    "is_mock": false,
+    "name": "San Manuel",
+    "population": 56876,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105535000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105536000",
+    "is_mock": false,
+    "name": "San Nicolas",
+    "population": 40144,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105536000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105537000",
+    "is_mock": false,
+    "name": "San Quintin",
+    "population": 34322,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105537000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105538000",
+    "is_mock": false,
+    "name": "Santa Barbara",
+    "population": 92420,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105538000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105539000",
+    "is_mock": false,
+    "name": "Santa Maria",
+    "population": 34452,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105539000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105540000",
+    "is_mock": false,
+    "name": "Santo Tomas",
+    "population": 14894,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105540000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105541000",
+    "is_mock": false,
+    "name": "Sison",
+    "population": 51439,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105541000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105542000",
+    "is_mock": false,
+    "name": "Sual",
+    "population": 38625,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105542000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105543000",
+    "is_mock": false,
+    "name": "Tayug",
+    "population": 45476,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105543000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105544000",
+    "is_mock": false,
+    "name": "Umingan",
+    "population": 78940,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105544000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105545000",
+    "is_mock": false,
+    "name": "Urbiztondo",
+    "population": 56349,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105545000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105547000",
+    "is_mock": false,
+    "name": "Villasis",
+    "population": 65086,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105547000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  },
+  {
+    "availability": "available",
+    "classification": "municipality",
+    "collection_status": "pending_integration_review",
+    "description": "User reviewed the supplied data and authorized its display on 2026-11-01. Original collection labels are retained; no independent live-source verification is inferred.",
+    "id": "lgu-0105548000",
+    "is_mock": false,
+    "name": "Laoac",
+    "population": 34550,
+    "population_reference_date": "2024-07-01",
+    "psgc": "0105548000",
+    "psgc_release": "2025-07-31",
+    "publication_status": "approved",
+    "reporting_period": "2024",
+    "source_ids": [
+      "source-psa-psgc-20250731"
+    ],
+    "source_sha256": "91dbd5a2c6e52d8d5ed5c3e165f29b89d07a547a1ac22211729e522c6386c8f6",
+    "verification_status": "reviewed"
+  }
+]

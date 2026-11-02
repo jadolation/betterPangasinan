@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["metadata", "sources", "official_pages", "statistics", "hospital_directory_observations", "budget_observations", "legislation_index", "project_leads", "lgu_registry_2024", "collection_gaps"],
+  "properties": {
+    "metadata": {"type": "object", "required": ["publication_review"], "properties": {"publication_review": {"const": "publication_reviewed"}}},
+    "sources": {"type": "array", "items": {"type": "object", "required": ["source_id", "url", "review_status"], "properties": {"source_id": {"type": "string", "minLength": 1}, "url": {"type": "string", "pattern": "^https://"}}}},
+    "official_pages": {"type": "array", "items": {"type": "object", "required": ["id", "source_id", "source_url", "collection_status", "as_of_date"], "properties": {"source_url": {"type": "string", "pattern": "^https://"}, "collection_status": {"const": "official_html_collected"}, "as_of_date": {"type": "null"}}}}
+  },
+  "patternProperties": {
+    "^(statistics|hospital_directory_observations|budget_observations|legislation_index|project_leads|lgu_registry_2024|collection_gaps)$": {"type": "array", "items": {"type": "object", "required": ["id", "publication_review", "collected_date", "reference_collection_status"], "properties": {"id": {"type": "string", "minLength": 1}, "publication_review": {"const": "publication_reviewed"}, "collected_date": {"const": "2026-10-31"}, "reference_collection_status": {"const": "supplied_research"}}}}
+  },
+  "additionalProperties": false
+}

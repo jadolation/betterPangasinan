@@ -66,7 +66,7 @@
         const count = names.reduce((total, name) => total + data[name].filter(row => row.is_mock === false && row.publication_status === 'approved').length, 0);
         status(target, count ? 'available' : 'empty', count
           ? `${count.toLocaleString('en-PH')} approved local ${count === 1 ? 'record' : 'records'} published.`
-          : 'No approved local records are currently published in this collection. This is a portal coverage gap.');
+          : 'No records in this structured ledger. Separately linked source-observation views may contain additional reference information; this is not evidence of no funding.');
       }
     } catch {
       for (const target of targets) status(target, 'unavailable', 'Local data availability could not be verified. No record count is assumed.');
@@ -74,4 +74,22 @@
   }
   budget();
   local();
+  async function supplementary(id, path, describe) {
+    try { const data = await json(path); describe(data, document.getElementById(id)); }
+    catch { document.getElementById(id).textContent = 'The collected resource is unavailable. No values or zero results are inferred.'; }
+  }
+  supplementary('tp-historical-status', 'data/historical-budget/manifest.json', (data, target) => {
+    if (!Number.isSafeInteger(data.programs) || !Number.isSafeInteger(data.departments)) throw new Error('Invalid historical manifest');
+    target.textContent = `${data.programs.toLocaleString('en-PH')} collected program families across ${data.departments} departments. ${data.complete === true ? 'Configured department queries are complete.' : 'Collection is partial.'} Name matching does not verify location.`;
+  });
+  supplementary('tp-context-status', 'data/budget-context.json', (data, target) => {
+    if (!data.datasets || typeof data.datasets !== 'object') throw new Error('Invalid context');
+    const records = Object.values(data.datasets);
+    const available = records.filter(item => item && item.status === 200 && !item.error).length;
+    target.textContent = `${available} source responses available; ${records.length - available} unavailable responses remain explicitly labeled. No national or regional amount is assigned to Pangasinan.`;
+  });
+  supplementary('tp-hearings-status', 'data/budget-hearings.json', (data, target) => {
+    if (data.error || !Array.isArray(data.response?.data)) throw new Error('Invalid hearing response');
+    target.textContent = `${data.response.data.length} topic matches for the collected query. ${data.coverage?.complete ? 'Below the documented search cap.' : 'Coverage is limited.'} This is not evidence of funding approval.`;
+  });
 })();

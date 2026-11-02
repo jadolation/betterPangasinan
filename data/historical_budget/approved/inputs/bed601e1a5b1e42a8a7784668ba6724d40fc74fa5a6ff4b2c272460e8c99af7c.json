@@ -1,0 +1,32 @@
+{
+  "url": "https://budget.bettergov.ph/api/v1/gaa/departments/37/programs?q=Pangasinan&limit=500",
+  "retrieved_at": "2026-11-01T13:18:45.588645+00:00",
+  "status": 200,
+  "data": {
+    "meta": {
+      "dataset": "gaa",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "currency": "PHP",
+      "scale": "pesos",
+      "department_id": "37",
+      "year": 2026,
+      "query": "Pangasinan",
+      "agency_id": null,
+      "limit": 500,
+      "matched": 0,
+      "matched_amount": 0
+    },
+    "data": [],
+    "next_cursor": null
+  },
+  "raw_sha256": "e68eb16342fb2927e63531f9a5c43e85348dc261f6dcc1ce4818b7bb4179eb20",
+  "payload_sha256": "4060a47d2040e7838f90f7bd18807b29f415988e66a6bd5be4c4bd8d201b3410"
+}

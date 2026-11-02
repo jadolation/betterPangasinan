@@ -4,5 +4,7 @@ __pycache__/
 node_modules/
 public/
 test-public/
+preview-public/
+data/staging/
 data/national_budget/raw/
 data/national_budget/review/

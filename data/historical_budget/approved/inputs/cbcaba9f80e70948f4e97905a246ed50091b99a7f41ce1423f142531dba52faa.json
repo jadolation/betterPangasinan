@@ -1,0 +1,6175 @@
+{
+  "url": "https://budget.bettergov.ph/api/v1/gaa/departments/05/programs?q=Pangasinan&limit=500",
+  "retrieved_at": "2026-11-01T13:18:44.132603+00:00",
+  "status": 200,
+  "data": {
+    "meta": {
+      "dataset": "gaa",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "currency": "PHP",
+      "scale": "pesos",
+      "department_id": "05",
+      "year": 2026,
+      "query": "Pangasinan",
+      "agency_id": null,
+      "limit": 500,
+      "matched": 166,
+      "matched_amount": 0
+    },
+    "data": [
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of alternate rd brgy catuday fmr brgy catuday bolinao pangasinan",
+        "name": "Concreting of Alternate Rd., Brgy. Catuday FMR, Brgy. Catuday, Bolinao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of balincanaway  kitakita roadline fmr brgy balincanaway and brgy kitakita roadline balungao pangasinan",
+        "name": "Concreting of Balincanaway - Kita-Kita Roadline FMR, Brgy. Balincanaway and Brgy. Kita-Kita Roadline, Balungao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 21000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of barangay maasin fmr barangay maasin mangaldan pangasinan",
+        "name": "Concreting of Barangay Maasin FMR, Barangay Maasin, Mangaldan, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 14000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of bolaoen fmr brgy balaoen san fabian pangasinan",
+        "name": "Concreting of Bolaoen FMR, Brgy. Balaoen, San Fabian, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 12500000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of bolaoen fmr brgy bolaoen san fabian pangasinan",
+        "name": "Concreting of Bolaoen FMR, Brgy. Bolaoen, San Fabian, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy alibeng  brgy barangga  brgy calunetan fmr brgy alibeng brgy barangga and brgy calunetan sison pangasinan",
+        "name": "Concreting of Brgy. Alibeng - Brgy. Barangga - Brgy. Calunetan FMR, Brgy. Alibeng, Brgy. Barangga, and Brgy. Calunetan, Sison, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy alitaya fmr brgy alitaya mangaldan pangasinan",
+        "name": "Concreting of Brgy. Alitaya FMR, Brgy. Alitaya, Mangaldan, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy ambalangan dalin fmr brgy ambalangan dalin san fabian pangasinan",
+        "name": "Concreting of Brgy. Ambalangan Dalin FMR, Brgy. Ambalangan Dalin, San Fabian, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 2,
+            "amount": 10000000
+          },
+          "2025": {
+            "count": 2,
+            "amount": 0
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy ambayat 2nd fmr brgy ambayat 2nd bayambang pangasinan",
+        "name": "Concreting of Brgy. Ambayat 2nd FMR, Brgy. Ambayat 2nd, Bayambang, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy ambonao fmr brgy ambonao calasiao pangasinan",
+        "name": "Concreting of Brgy. Ambonao FMR, Brgy. Ambonao, Calasiao, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 2,
+            "amount": 12500000
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 2,
+            "amount": 0
+          },
+          "2023": {
+            "count": 2,
+            "amount": 0
+          },
+          "2024": {
+            "count": 2,
+            "amount": 0
+          },
+          "2025": {
+            "count": 2,
+            "amount": 0
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy ambuetel fmr brgy ambuetel calasiao pangasinan",
+        "name": "Concreting of Brgy. Ambuetel FMR, Brgy. Ambuetel, Calasiao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 12000000
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy angarian fmr brgy angarian bugallon pangasinan",
+        "name": "Concreting of Brgy. Angarian FMR, Brgy. Angarian, Bugallon, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 12000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy angayan norte san joaquin fmr brgy angayan norte and brgy san joaquin balungao pangasinan",
+        "name": "Concreting of Brgy. Angayan Norte- San Joaquin FMR, Brgy. Angayan Norte and Brgy. San Joaquin, Balungao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 12000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy anolid fmr brgy anolid mangaldan pangasinan",
+        "name": "Concreting of Brgy. Anolid FMR, Brgy. Anolid, Mangaldan, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 2,
+            "amount": 10000000
+          },
+          "2025": {
+            "count": 2,
+            "amount": 0
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy anonang fmr brgy anonang san fabian pangasinan",
+        "name": "Concreting of Brgy. Anonang FMR, Brgy. Anonang, San Fabian, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy aramal fmr brgy aramal san fabian pangasinan",
+        "name": "Concreting of Brgy. Aramal FMR, Brgy. Aramal, San Fabian, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 12500000
+          },
+          "2022": {
+            "count": 2,
+            "amount": 0
+          },
+          "2023": {
+            "count": 2,
+            "amount": 0
+          },
+          "2024": {
+            "count": 2,
+            "amount": 0
+          },
+          "2025": {
+            "count": 2,
+            "amount": 0
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy bacundao este fmr phase ii brgy bacundao este malasiqui pangasinan",
+        "name": "Concreting of Brgy. Bacundao Este FMR Phase II, Brgy. Bacundao Este, Malasiqui, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy balayang fmr brgy balayang alaminos city pangasinan",
+        "name": "Concreting of Brgy. Balayang FMR, Brgy. Balayang Alaminos City, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 2,
+            "amount": 12000000
+          },
+          "2023": {
+            "count": 2,
+            "amount": 0
+          },
+          "2024": {
+            "count": 2,
+            "amount": 0
+          },
+          "2025": {
+            "count": 2,
+            "amount": 0
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy baliligi to brgy botigue fmr brgy baliligi and brgy botigue laoac pangasinan",
+        "name": "Concreting of Brgy. Baliligi to Brgy. Botigue FMR, Brgy. Baliligi and Brgy. Botigue, Laoac, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 12500000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy balite fmr brgy balite malasiqui pangasinan",
+        "name": "Concreting of Brgy. Balite FMR, Brgy. Balite, Malasiqui, Pangasinan",
+        "ids_count": 3,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 2,
+            "amount": 15000000
+          },
+          "2024": {
+            "count": 2,
+            "amount": 0
+          },
+          "2025": {
+            "count": 3,
+            "amount": 15000000
+          },
+          "2026": {
+            "count": 3,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy balligi to brgy poblacion fmr brgy balligi and brgy poblacion laoac pangasinan",
+        "name": "Concreting of Brgy. Balligi to Brgy. Poblacion FMR, Brgy. Balligi and Brgy. Poblacion, Laoac, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 12500000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy banaoang to brgy bani fmr brgy banaoang and brgy bani mangaldan pangasinan",
+        "name": "Concreting of Brgy. Banaoang to Brgy. Bani FMR, Brgy. Banaoang and Brgy. Bani, Mangaldan, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy bani fmr brgy bani san carlos city pangasinan",
+        "name": "Concreting of Brgy. Bani FMR, Brgy. Bani, San Carlos City, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 16500000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy banog sur to brgy dacap surcalabeng fmr brgy banog sur bani pangasinan",
+        "name": "Concreting of Brgy. Banog Sur to Brgy. Dacap Sur-Calabeng FMR, Brgy. Banog Sur, Bani, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 5000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy bantayan to brgy talogtog fmr brgy bantayan and brgy talogtog mangaldan pangasinan",
+        "name": "Concreting of Brgy. Bantayan to Brgy. Talogtog FMR, Brgy. Bantayan and Brgy. Talogtog, Mangaldan, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy banuarbrgy casanestebanan fmr brgy banuar laoac pangasinan",
+        "name": "Concreting of Brgy. Banuar-Brgy. Casanestebanan FMR, Brgy. Banuar, Laoac, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy baracbac fmr brgy baracbac mangatarem pangasinan",
+        "name": "Concreting of Brgy. Baracbac FMR, Brgy. Baracbac, Mangatarem, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 2,
+            "amount": 12000000
+          },
+          "2023": {
+            "count": 2,
+            "amount": 0
+          },
+          "2024": {
+            "count": 2,
+            "amount": 0
+          },
+          "2025": {
+            "count": 2,
+            "amount": 0
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy binday fmr brgy binday san fabian pangasinan",
+        "name": "Concreting of Brgy. Binday FMR, Brgy. Binday, San Fabian, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 12500000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy bocacliw fmr brgy bocacliw aguilar pangasinan",
+        "name": "Concreting of Brgy. Bocacliw FMR, Brgy. Bocacliw, Aguilar, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 12500000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy bocboc west fmr brgy bocboc west aguilar pangasinan",
+        "name": "Concreting of Brgy. Bocboc West FMR, Brgy. Bocboc West, Aguilar, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 2,
+            "amount": 13000000
+          },
+          "2024": {
+            "count": 2,
+            "amount": 0
+          },
+          "2025": {
+            "count": 2,
+            "amount": 0
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy bongalon fmr brgy bongalon labrador pangasinan",
+        "name": "Concreting of Brgy. Bongalon FMR, Brgy. Bongalon, Labrador, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 2,
+            "amount": 12500000
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 2,
+            "amount": 0
+          },
+          "2023": {
+            "count": 2,
+            "amount": 0
+          },
+          "2024": {
+            "count": 2,
+            "amount": 0
+          },
+          "2025": {
+            "count": 2,
+            "amount": 0
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy buenlag to brgy alitaya fmr brgy buenlag and brgy alitaya mangaldan pangasinan",
+        "name": "Concreting of Brgy. Buenlag to Brgy. Alitaya FMR, Brgy. Buenlag and Brgy. Alitaya,  Mangaldan, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 13000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy caaringayan fmr brgy caaringayan laoac pangasinan",
+        "name": "Concreting of Brgy. Caaringayan FMR, Brgy. Caaringayan, Laoac, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy cabanbanan fmr brgy cabanbanan manaoag pangasinan",
+        "name": "Concreting of Brgy. Cabanbanan FMR, Brgy. Cabanbanan, Manaoag, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy cabatuanabotmolina fmr umingan pangasinan",
+        "name": "Concreting of Brgy. Cabatuan-Abot-Molina FMR, Umingan, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 12500000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy cabilaoan to brgy d alarcio fmr brgy cabilaoan and brgy d alarcio laoac pangasinan",
+        "name": "Concreting of Brgy. Cabilaoan to Brgy. D. Alarcio FMR,  Brgy. Cabilaoan and Brgy. D. Alarcio, Laoac, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 12000000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy cabungan fmr brgy cabungan anda pangasinan",
+        "name": "Concreting of Brgy. Cabungan FMR, Brgy. Cabungan, Anda, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 12500000
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy calmay fmr brgy calmay laoac pangasinan",
+        "name": "Concreting of Brgy. Calmay FMR, Brgy. Calmay, Laoac, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 12000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy calsib fmr brgy calsib aguilar pangasinan",
+        "name": "Concreting of Brgy. Calsib FMR, Brgy. Calsib, Aguilar, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 5000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy camangaan to brgy pangaoan fmr brgy camangaan and brgy pangaoan rosales pangasinan",
+        "name": "Concreting of Brgy. Camangaan to Brgy. Pangaoan FMR, Brgy. Camangaan and   Brgy. Pangaoan, Rosales, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 20000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy carayacan to brgy buenavista fmr brgy carayacan san quintin and brgy buenavista umingan pangasinan",
+        "name": "Concreting of Brgy. Carayacan to Brgy. Buenavista FMR, Brgy. Carayacan, San Quintin and Brgy. Buenavista, Umingan, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 12000000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy carosucan norte  brgy carosucan sur fmr brgy carosucan norte and brgy carosucan sur asingan pangasinan",
+        "name": "Concreting of Brgy. Carosucan Norte - Brgy. Carosucan Sur FMR, Brgy. Carosucan Norte and Brgy. Carosucan Sur, Asingan, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy carriedo to brgy trenchera fmr brgy carriedo and brgy trenchera tayug pangasinan",
+        "name": "Concreting of Brgy. Carriedo to Brgy. Trenchera FMR, Brgy. Carriedo and Brgy. Trenchera, Tayug, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 2,
+            "amount": 15000000
+          },
+          "2023": {
+            "count": 2,
+            "amount": 0
+          },
+          "2024": {
+            "count": 2,
+            "amount": 0
+          },
+          "2025": {
+            "count": 2,
+            "amount": 0
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy catuday fmr brgy catuday bolinao pangasinan",
+        "name": "Concreting of Brgy. Catuday FMR, Brgy. Catuday, Bolinao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy catudaysan roque fmr brgy catuday and brgy san roque bolinao pangasinan",
+        "name": "Concreting of Brgy. Catuday-San Roque FMR, Brgy. Catuday and Brgy. San Roque,   Bolinao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy caviemesan fmr brgy caviemesan mangatarem pangasinan",
+        "name": "Concreting of Brgy. Caviemesan FMR, Brgy. Caviemesan, Mangatarem, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 4000000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy dalongue fmr brgy santa barbara pangasinan",
+        "name": "Concreting of Brgy. Dalongue FMR, Brgy. Santa Barbara, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy dalumpinas brgy lungao brgy malilion fmr brgys dalumpinas lungao dalumpinas san nicolas pangasinan",
+        "name": "Concreting of Brgy. Dalumpinas- Brgy. Lungao- Brgy. Malilion FMR, Brgys. Dalumpinas, Lungao, Dalumpinas, San Nicolas, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy darawey fmr brgy darawey bayambang pangasinan",
+        "name": "Concreting of Brgy. Darawey FMR, Brgy. Darawey, Bayambang, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy dolaoan fmr brgy dolaoan anda pangasinan",
+        "name": "Concreting of Brgy. Dolaoan FMR, Brgy. Dolaoan, Anda, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 12500000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy domanpot fmr brgy domanpot asingan pangasinan",
+        "name": "Concreting of Brgy. Domanpot FMR, Brgy. Domanpot, Asingan, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 12000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy dorongan ketaket fmr brgy dorongan ketaket mangatarem pangasinan",
+        "name": "Concreting of Brgy. Dorongan Ketaket FMR, Brgy. Dorongan Ketaket, Mangatarem, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 5500000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy dulag fmr brgy dulag binmaley pangasinan",
+        "name": "Concreting of Brgy. Dulag FMR, Brgy. Dulag, Binmaley, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 3000000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy dulig fmr brgy dulig labrador pangasinan",
+        "name": "Concreting of Brgy. Dulig FMR, Brgy. Dulig, Labrador, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 5000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy estanza fmr brgy estanza bolinao pangasinan",
+        "name": "Concreting of Brgy. Estanza FMR, Brgy. Estanza, Bolinao, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 2,
+            "amount": 15000000
+          },
+          "2025": {
+            "count": 2,
+            "amount": 0
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy galarin fmr brgy galarin urbiztondo pangasinan",
+        "name": "Concreting of Brgy. Galarin FMR, Brgy. Galarin, Urbiztondo, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 5000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy gonzalo  brgy carayacan fmr brgy gonzalo and brgy carayacan san quintin pangasinan",
+        "name": "Concreting of Brgy. Gonzalo - Brgy. Carayacan FMR, Brgy. Gonzalo and Brgy. Carayacan, San Quintin, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy gonzalo to brgy carayacan fmr brgy gonzalo and brgy carayacan san quintin san manuel pangasinan",
+        "name": "Concreting of Brgy. Gonzalo to Brgy. Carayacan FMR, Brgy. Gonzalo and Brgy. Carayacan, San Quintin, San Manuel, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 12500000
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy gueset fmr brgy gueset bugallon pangasinan",
+        "name": "Concreting of Brgy. Gueset FMR, Brgy. Gueset, Bugallon, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 12000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy hose  brgy calabeng fmr brgy hose and brgy calabeng bani pangasinan",
+        "name": "Concreting of Brgy. Hose - Brgy. Calabeng FMR, Brgy. Hose and Brgy. Calabeng,   Bani, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy inmalog fmr brgy inmalog sison pangasinan",
+        "name": "Concreting of Brgy. Inmalog FMR, Brgy. Inmalog, Sison, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 2,
+            "amount": 12500000
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 2,
+            "amount": 0
+          },
+          "2023": {
+            "count": 2,
+            "amount": 0
+          },
+          "2024": {
+            "count": 2,
+            "amount": 0
+          },
+          "2025": {
+            "count": 2,
+            "amount": 0
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy jimenez fmr brgy jimenez mapandan pangasinan",
+        "name": "Concreting of Brgy. Jimenez FMR, Brgy. Jimenez, Mapandan, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 2,
+            "amount": 12000000
+          },
+          "2024": {
+            "count": 2,
+            "amount": 0
+          },
+          "2025": {
+            "count": 2,
+            "amount": 0
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy la paz fmr brgy la paz villasis pangasinan",
+        "name": "Concreting of Brgy. La Paz FMR, Brgy. La Paz, Villasis, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 30000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy labit fmr brgy labit villasis pangasinan",
+        "name": "Concreting of Brgy. Labit FMR, Brgy. Labit, Villasis, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 30000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy labney fmr brgy labney san jacinto pangasinan",
+        "name": "Concreting of Brgy. Labney FMR, Brgy. Labney, San Jacinto, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 2,
+            "amount": 12000000
+          },
+          "2023": {
+            "count": 2,
+            "amount": 0
+          },
+          "2024": {
+            "count": 2,
+            "amount": 0
+          },
+          "2025": {
+            "count": 2,
+            "amount": 0
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy lagasit to brgy zamora fmr brgy lagasit san quintin pangasinan",
+        "name": "Concreting of Brgy. Lagasit to Brgy. Zamora FMR, Brgy. Lagasit, San Quintin, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy lanas to brgy salay farmtomarket road mangaldan pangasinan",
+        "name": "Concreting of Brgy. Lanas to Brgy. Salay Farm-to-Market Road, Mangaldan, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy laois fmr brgy laois labrador pangasinan",
+        "name": "Concreting of Brgy. Laois FMR, Brgy. Laois, Labrador, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 2,
+            "amount": 5000000
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy legaspi tayug to brgy san roque san nicolas fmr pangasinan",
+        "name": "Concreting of Brgy. Legaspi Tayug to Brgy. San Roque, San Nicolas FMR, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 12000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy lelemaan fmr brgy lelemaan manaoag pangasinan",
+        "name": "Concreting of Brgy. Lelemaan FMR, Brgy. Lelemaan, Manaoag, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy licsibrgy tebuel fmr brgy licsi and brgy tebuel manaoag pangasinan",
+        "name": "Concreting of Brgy. Licsi-Brgy. Tebuel FMR, Brgy. Licsi and Brgy. Tebuel, Manaoag, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 12500000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy linoc fmr brgy linoc binmaley pangasinan",
+        "name": "Concreting of Brgy. Linoc FMR, Brgy. Linoc, Binmaley, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy lomboy fmr brgy lomboy binmaley pangasinan",
+        "name": "Concreting of Brgy. Lomboy FMR, Brgy. Lomboy, Binmaley, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 5000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy longos to brgy yagit fmr brgy longos to brgy yagit calasiao pangasinan",
+        "name": "Concreting of Brgy. Longos to Brgy. Yagit FMR, Brgy. Longos to Brgy. Yagit, Calasiao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 12500000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy lunec fmr brgy lunec malasiqui pangasinan",
+        "name": "Concreting of Brgy. Lunec FMR, Brgy. Lunec, Malasiqui, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 2,
+            "amount": 12500000
+          },
+          "2024": {
+            "count": 2,
+            "amount": 0
+          },
+          "2025": {
+            "count": 2,
+            "amount": 0
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy maambal to brgy haway fmr brgy maambal and brgy haway pozorrubio pangasinan",
+        "name": "Concreting of Brgy. Maambal to Brgy. Haway FMR, Brgy. Maambal and Brgy. Haway, Pozorrubio, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 12500000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy maasin fmr brgy maasin mangaldan pangasinan",
+        "name": "Concreting of Brgy. Maasin FMR, Brgy. Maasin, Mangaldan, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy macayo fmr brgy macayo alcala pangasinan",
+        "name": "Concreting of Brgy. Macayo FMR, Brgy. Macayo, Alcala, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy malabagobrgy alitaya service road fmr brgy malabago mangaldan pangasinan",
+        "name": "Concreting of Brgy. Malabago-Brgy. Alitaya Service Road FMR, Brgy. Malabago,   Mangaldan, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy malabobo to brgy lawak langka fmr brgy malabobo and brgy lawak langka mangatarem pangasinan",
+        "name": "Concreting of Brgy. Malabobo to Brgy. Lawak Langka FMR, Brgy. Malabobo and Brgy. Lawak Langka, Mangatarem, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 12500000
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy managos fmr brgy managos bayambang pangasinan",
+        "name": "Concreting of Brgy. Managos FMR, Brgy. Managos, Bayambang, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 12000000
+          },
+          "2021": {
+            "count": 1,
+            "amount": 13000000
+          },
+          "2022": {
+            "count": 2,
+            "amount": 0
+          },
+          "2023": {
+            "count": 2,
+            "amount": 0
+          },
+          "2024": {
+            "count": 2,
+            "amount": 0
+          },
+          "2025": {
+            "count": 2,
+            "amount": 0
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy maningding fmr brgy maningding sta barbara pangasinan",
+        "name": "Concreting of Brgy. Maningding FMR, Brgy. Maningding, Sta. Barbara, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 5000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy manloboc to brgy poblacion fmr brgy manloboc and brgy poblacion aguilar pangasinan",
+        "name": "Concreting of Brgy. Manloboc to Brgy. Poblacion FMR, Brgy. Manloboc and Brgy. Poblacion, Aguilar, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 50000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy matagdem fmr brgy matagdem san carlos city pangasinan",
+        "name": "Concreting of Brgy. Matagdem FMR, Brgy. Matagdem, San Carlos City, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 2,
+            "amount": 15000000
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy nibaliw narvarte fmr brgy nibaliw narvarte san fabian pangasinan",
+        "name": "Concreting of Brgy. Nibaliw Narvarte FMR, Brgy. Nibaliw Narvarte, San Fabian, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 5000000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy ninoy fmr brgy ninoy aguilar pangasinan",
+        "name": "Concreting of Brgy. Ninoy FMR, Brgy. Ninoy, Aguilar, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 12500000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy oltama fmr brgy oltama urdaneta city pangasinan",
+        "name": "Concreting of Brgy. Oltama FMR, Brgy. Oltama, Urdaneta City, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 5000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy oraan east fmr brgy oraan east manaoag pangasinan",
+        "name": "Concreting of Brgy. Oraan East FMR, Brgy. Oraan East, Manaoag, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 2,
+            "amount": 12500000
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 2,
+            "amount": 0
+          },
+          "2023": {
+            "count": 2,
+            "amount": 0
+          },
+          "2024": {
+            "count": 2,
+            "amount": 0
+          },
+          "2025": {
+            "count": 2,
+            "amount": 0
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy palaming fmr brgy palaming san carlos city pangasinan",
+        "name": "Concreting of Brgy. Palaming FMR, Brgy. Palaming, San Carlos City, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 12000000
+          },
+          "2022": {
+            "count": 2,
+            "amount": 0
+          },
+          "2023": {
+            "count": 2,
+            "amount": 0
+          },
+          "2024": {
+            "count": 2,
+            "amount": 0
+          },
+          "2025": {
+            "count": 2,
+            "amount": 0
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy palarisbobonan fmr asingan pangasinan",
+        "name": "Concreting of Brgy. Palaris-Bobonan FMR, Asingan, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 12000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy palina east fmr brgy palina east urdaneta city pangasinan",
+        "name": "Concreting of Brgy. Palina East FMR, Brgy. Palina East, Urdaneta City, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 5000000
+          },
+          "2025": {
+            "count": 2,
+            "amount": 15000000
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy pangpang fmr brgy pangpang san carlos city pangasinan",
+        "name": "Concreting of Brgy. Pangpang FMR, Brgy. Pangpang, San Carlos City, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 2,
+            "amount": 12000000
+          },
+          "2023": {
+            "count": 2,
+            "amount": 0
+          },
+          "2024": {
+            "count": 2,
+            "amount": 0
+          },
+          "2025": {
+            "count": 2,
+            "amount": 0
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy pataquid to brgy c lichauco fmr brgy pataquid santa maria and brgy c lichauco tayug pangasinan",
+        "name": "Concreting of Brgy. Pataquid to Brgy. C. Lichauco FMR, Brgy. Pataquid, Santa Maria and Brgy. C. Lichauco, Tayug, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 20000000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy patar fmr brgy patar agno pangasinan",
+        "name": "Concreting of Brgy. Patar FMR, Brgy. Patar, Agno, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 2,
+            "amount": 12500000
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 2,
+            "amount": 0
+          },
+          "2023": {
+            "count": 2,
+            "amount": 0
+          },
+          "2024": {
+            "count": 2,
+            "amount": 0
+          },
+          "2025": {
+            "count": 2,
+            "amount": 0
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy payapa fmr brgy payapa san carlos city pangasinan",
+        "name": "Concreting of Brgy. Payapa FMR, Brgy. Payapa, San Carlos City, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy payas fmr brgy payas sta barbara pangasinan",
+        "name": "Concreting of Brgy. Payas FMR, Brgy. Payas, Sta. Barbara, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 5000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy pita fmr brgy pita infanta pangasinan",
+        "name": "Concreting of Brgy. Pita FMR, Brgy. Pita, Infanta, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 2,
+            "amount": 13500000
+          },
+          "2024": {
+            "count": 2,
+            "amount": 0
+          },
+          "2025": {
+            "count": 2,
+            "amount": 0
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy poblacion fmr brgy poblacion labrador pangasinan",
+        "name": "Concreting of Brgy. Poblacion FMR, Brgy. Poblacion, Labrador, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 6000000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy poblacion to brgy san gonzalo fmr brgy poblacion and brgy san gonzalo labrador pangasinan",
+        "name": "Concreting of Brgy. Poblacion to Brgy. San Gonzalo FMR, Brgy. Poblacion and Brgy. San Gonzalo, Labrador, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 5000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy polong fmr brgy polong bugallon pangasinan",
+        "name": "Concreting of Brgy. Polong FMR, Brgy. Polong, Bugallon, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy pototan fmr brgy pototan binmaley pangasinan",
+        "name": "Concreting of Brgy. Pototan FMR, Brgy. Pototan, Binmaley, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 5000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy salaan fmr brgy salaan mangaldan pangasinan",
+        "name": "Concreting of Brgy. Salaan FMR, Brgy. Salaan, Mangaldan, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy samang norte fmr brgy samang norte bolinao pangasinan",
+        "name": "Concreting of Brgy. Samang Norte FMR, Brgy. Samang Norte, Bolinao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy san antonio sto nino to brgy san jose sto tomas fmr brgy san antonio sto nino and brgy san jose sto tomas pangasinan",
+        "name": "Concreting of Brgy. San Antonio, Sto. Nino to Brgy. San Jose, Sto. Tomas FMR, Brgy. San Antonio, Sto. Nino and Brgy. San Jose, Sto. Tomas, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 5000000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy san aurelio 3rd brgy angayan norte fmr brgy san aurelio 3rd and brgy angayan norte balungao pangasinan",
+        "name": "Concreting of Brgy San Aurelio 3rd -Brgy Angayan Norte FMR, Brgy San Aurelio 3rd and Brgy Angayan Norte, Balungao, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 2,
+            "amount": 12500000
+          },
+          "2024": {
+            "count": 2,
+            "amount": 0
+          },
+          "2025": {
+            "count": 2,
+            "amount": 0
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy san felipe fmr brgy san felipe san nicolas pangasinan",
+        "name": "Concreting of Brgy. San Felipe FMR, Brgy. San Felipe, San Nicolas, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 12000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy san isidro fmr brgy san isidro rosales pangasinan",
+        "name": "Concreting of Brgy. San Isidro FMR, Brgy. San Isidro, Rosales, Pangasinan",
+        "ids_count": 3,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 2,
+            "amount": 15000000
+          },
+          "2025": {
+            "count": 3,
+            "amount": 10000000
+          },
+          "2026": {
+            "count": 3,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy san juan fmr brgy san juan san jacinto pangasinan",
+        "name": "Concreting of Brgy. San Juan FMR, Brgy. San Juan, San Jacinto, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 2,
+            "amount": 12500000
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 2,
+            "amount": 0
+          },
+          "2023": {
+            "count": 2,
+            "amount": 0
+          },
+          "2024": {
+            "count": 2,
+            "amount": 0
+          },
+          "2025": {
+            "count": 2,
+            "amount": 0
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy san pedro apartado fmr brgy san pedro apartado alcala pangasinan",
+        "name": "Concreting of Brgy. San Pedro Apartado FMR, Brgy. San Pedro Apartado, Alcala, Pangasinan",
+        "ids_count": 3,
+        "years": {
+          "2020": {
+            "count": 2,
+            "amount": 12500000
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 2,
+            "amount": 0
+          },
+          "2023": {
+            "count": 2,
+            "amount": 0
+          },
+          "2024": {
+            "count": 2,
+            "amount": 0
+          },
+          "2025": {
+            "count": 3,
+            "amount": 10000000
+          },
+          "2026": {
+            "count": 3,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy san roque san nicolas to brgy barangobong natividad fmr brgy san roque san nicolas and brgy barangobong natividad pangasinan",
+        "name": "Concreting of Brgy. San Roque, San Nicolas to Brgy. Barangobong, Natividad FMR, Brgy. San Roque, San Nicolas and Brgy. Barangobong, Natividad, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy san roque to brgy barangobong fmr brgy san roque san nicolas and brgy barangobong natividad pangasinan",
+        "name": "Concreting of Brgy. San Roque to Brgy. Barangobong FMR, Brgy. San Roque (San Nicolas) and Brgy. Barangobong (Natividad), Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 12500000
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy sobol to brgy calepaan fmr brgy sobol and brgy calepaan asingan pangasinan",
+        "name": "Concreting of Brgy. Sobol to Brgy. Calepaan FMR, Brgy. Sobol and Brgy. Calepaan, Asingan, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 12000000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy sta ines fmr brgy sta ines manaoag pangasinan",
+        "name": "Concreting of Brgy. Sta. Ines FMR, Brgy. Sta. Ines, Manaoag, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy sta maria fmr brgy sta maria alaminos city pangasinan",
+        "name": "Concreting of Brgy. Sta. Maria FMR, Brgy. Sta. Maria, Alaminos City, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy tampac fmr brgy tampac aguilar pangasinan",
+        "name": "Concreting of Brgy. Tampac FMR, Brgy. Tampac, Aguilar, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 12500000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy tebag fmr brgy tebag san carlos city pangasinan",
+        "name": "Concreting of Brgy. Tebag FMR, Brgy. Tebag, San Carlos City, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 13875000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy tiep fmr phase ii brgy tiep bani pangasinan",
+        "name": "Concreting of Brgy. Tiep FMR Phase II, Brgy. Tiep, Bani, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy tobor fmr brgy tobor malasiqui pangasinan",
+        "name": "Concreting of Brgy. Tobor FMR, Brgy. Tobor, Malasiqui, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 2,
+            "amount": 15000000
+          },
+          "2024": {
+            "count": 2,
+            "amount": 0
+          },
+          "2025": {
+            "count": 2,
+            "amount": 0
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy tuliao fmr brgy tuliao sta barbara pangasinan",
+        "name": "Concreting of Brgy. Tuliao FMR, Brgy. Tuliao, Sta. Barbara, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 2,
+            "amount": 12500000
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 2,
+            "amount": 0
+          },
+          "2023": {
+            "count": 2,
+            "amount": 0
+          },
+          "2024": {
+            "count": 2,
+            "amount": 0
+          },
+          "2025": {
+            "count": 2,
+            "amount": 0
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy tumana west fmr brgy tumana west rosales pangasinan",
+        "name": "Concreting of Brgy. Tumana West FMR, Brgy. Tumana West, Rosales, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 50000000
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy tupa fmr brgy tupa bolinao pangasinan",
+        "name": "Concreting of Brgy. Tupa FMR, Brgy. Tupa, Bolinao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy uyong kulangit fmr brgy uyong labrador pangasinan",
+        "name": "Concreting of Brgy. Uyong Kulangit FMR, Brgy. Uyong, Labrador, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 6000000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy villanueva fmr brgy villanueva bautista pangasinan",
+        "name": "Concreting of Brgy. Villanueva FMR, Brgy. Villanueva, Bautista, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 2,
+            "amount": 12500000
+          },
+          "2024": {
+            "count": 2,
+            "amount": 0
+          },
+          "2025": {
+            "count": 2,
+            "amount": 0
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of brgy zaragoza fmr brgy zaragoza bolinao pangasinan",
+        "name": "Concreting of Brgy. Zaragoza FMR, Brgy. Zaragoza, Bolinao, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 2,
+            "amount": 12000000
+          },
+          "2024": {
+            "count": 2,
+            "amount": 0
+          },
+          "2025": {
+            "count": 2,
+            "amount": 0
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of cabalaoangan surcabalaoangan norte fmr brgys cabalaoangan sur  cabalaoangan norte rosales pangasinan",
+        "name": "Concreting of Cabalaoangan Sur-Cabalaoangan Norte FMR, Brgys. Cabalaoangan Sur & Cabalaoangan Norte, Rosales, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 30000000
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of congo road brgy awile fmr brgy awile anda pangasinan",
+        "name": "Concreting of Congo Road, Brgy. Awile FMR, Brgy. Awile, Anda, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 2,
+            "amount": 12500000
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 2,
+            "amount": 0
+          },
+          "2023": {
+            "count": 2,
+            "amount": 0
+          },
+          "2024": {
+            "count": 2,
+            "amount": 0
+          },
+          "2025": {
+            "count": 2,
+            "amount": 0
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of fmr at brgy camanang urdaneta city pangasinan",
+        "name": "Concreting of FMR at Brgy. Camanang, Urdaneta City, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of fmr at brgy inirangan bayambang pangasinan",
+        "name": "Concreting of FMR at Brgy. Inirangan, Bayambang, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of fmr at brgy malioer bayambang pangasinan",
+        "name": "Concreting of FMR at Brgy. Malioer, Bayambang, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of fmr at brgy mangayao bayambang pangasinan",
+        "name": "Concreting of FMR at Brgy. Mangayao, Bayambang,  Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of lekep butao fmr brgy lekep butao san fabian pangasinan",
+        "name": "Concreting of Lekep Butao FMR, Brgy. Lekep Butao, San Fabian, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of paitan west fmr brgy paitan west sual pangasinan",
+        "name": "Concreting of Paitan West FMR, Brgy. Paitan West, Sual, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 12500000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of pangasinan research and experiment center prec station brgy tibag east fmr brgy tibag east sual pangasinan",
+        "name": "Concreting of Pangasinan Research and Experiment Center (PREC) Station, Brgy. Tibag East FMR, Brgy. Tibag East, Sual, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 24000000
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of pantal road to brgy awag fmr brgy awag anda pangasinan",
+        "name": "Concreting of Pantal Road to Brgy. Awag FMR, Brgy Awag, Anda, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 12500000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of prec station brgy poblacion fmr brgy poblacion sual pangasinan",
+        "name": "Concreting of PREC Station, Brgy. Poblacion FMR, Brgy. Poblacion, Sual, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 24000000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of purok 5  6 brgy san pedro apartado fmr brgy san pedro apartado alcala pangasinan",
+        "name": "Concreting of Purok 5 & 6 Brgy. San Pedro Apartado FMR, Brgy. San Pedro Apartado, Alcala, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of purok agnanayon brgy aloleng fmr brgy aloleng agno pangasinan",
+        "name": "Concreting of Purok Agnanayon, Brgy. Aloleng FMR, Brgy. Aloleng, Agno, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of purok bayanihan brgy sto nio to purok camia brgy new pangasinan fmr brgy sto nio and brgy new pangasinan koronadal city south cotabato",
+        "name": "Concreting of Purok Bayanihan, Brgy. Sto. Ni\u00f1o to Purok Camia, Brgy. New Pangasinan FMR, Brgy. Sto. Ni\u00f1o and Brgy. New Pangasinan, Koronadal City, South Cotabato",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 16000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of purok iii brgy cobol fmr brgy cobol san carlos city pangasinan",
+        "name": "Concreting of Purok III, Brgy. Cobol FMR, Brgy. Cobol, San Carlos City, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 13000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of san felipesalpad fmr brgy san felipe and brgy salpad san nicolas pangasinan",
+        "name": "Concreting of San Felipe-Salpad FMR, Brgy. San Felipe and Brgy. Salpad, San Nicolas, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of san roque san nicolas  barangobong natividad fmr brgy san roque san nicolas and brgy barangobong natividad pangasinan",
+        "name": "Concreting of San Roque, San Nicolas - Barangobong, Natividad FMR, Brgy. San Roque, San Nicolas and Brgy. Barangobong, Natividad, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of sitio bangol brgy inmalog fmr brgy inmalog sison pangasinan",
+        "name": "Concreting of Sitio Bangol, Brgy. Inmalog FMR, Brgy. Inmalog, Sison, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 2,
+            "amount": 12000000
+          },
+          "2023": {
+            "count": 2,
+            "amount": 0
+          },
+          "2024": {
+            "count": 2,
+            "amount": 0
+          },
+          "2025": {
+            "count": 2,
+            "amount": 0
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of sitio binmunton brgy sta catalina fmr brgy sta catalina binalonan pangasinan",
+        "name": "Concreting of Sitio Binmunton, Brgy. Sta. Catalina FMR, Brgy. Sta. Catalina, Binalonan, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 35000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of sitio bolaoen brgy binday fmr brgy binday san fabian pangasinan",
+        "name": "Concreting of Sitio Bolaoen, Brgy. Binday FMR, Brgy. Binday, San Fabian, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 12000000
+          },
+          "2022": {
+            "count": 2,
+            "amount": 0
+          },
+          "2023": {
+            "count": 2,
+            "amount": 0
+          },
+          "2024": {
+            "count": 2,
+            "amount": 0
+          },
+          "2025": {
+            "count": 2,
+            "amount": 0
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of sitio callepan brgy bolaoen fmr brgy bolaoen bugallon pangasinan",
+        "name": "Concreting of Sitio Callepan, Brgy. Bolaoen FMR, Brgy. Bolaoen, Bugallon, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of sitio gualao  sitio belidan brgy bersamin fmr brgy bersamin alcala pangasinan",
+        "name": "Concreting of Sitio Gualao - Sitio Belidan, Brgy. Bersamin FMR, Brgy. Bersamin, Alcala, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of sitio malaguena brgy macayo fmr brgy macayo alcala pangasinan",
+        "name": "Concreting of Sitio Malaguena, Brgy. Macayo FMR, Brgy. Macayo, Alcala, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 12500000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of sitio matalakitik brgy caoayan fmr brgy caoayan sual pangasinan",
+        "name": "Concreting of Sitio Matalakitik, Brgy. Caoayan FMR, Brgy. Caoayan, Sual, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 30000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of sitio navarro to pangaskasan kawayan bugtong brgy ambuetel fmr brgy ambuetel calasiao pangasinan",
+        "name": "Concreting of Sitio Navarro to Pangaskasan Kawayan Bugtong, Brgy. Ambuetel FMR, Brgy. Ambuetel, Calasiao Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of sitio pantal brgy cabayaoasan fmr brgy cabayaoasan bugallon pangasinan",
+        "name": "Concreting of Sitio Pantal, Brgy. Cabayaoasan FMR, Brgy. Cabayaoasan, Bugallon, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 12000000
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of sitio paturo brgy warey fmr brgy warey malasiqui pangasinan",
+        "name": "Concreting of Sitio Paturo, Brgy. Warey FMR, Brgy. Warey, Malasiqui, Pangasinan",
+        "ids_count": 2,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 0
+          },
+          "2021": {
+            "count": 1,
+            "amount": 12000000
+          },
+          "2022": {
+            "count": 2,
+            "amount": 0
+          },
+          "2023": {
+            "count": 2,
+            "amount": 0
+          },
+          "2024": {
+            "count": 2,
+            "amount": 0
+          },
+          "2025": {
+            "count": 2,
+            "amount": 0
+          },
+          "2026": {
+            "count": 2,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of sitio sipitan brgy bocoboc east fmr brgy bocoboc east aguilar pangasinan",
+        "name": "Concreting of Sitio Sipitan, Brgy. Bocoboc East FMR, Brgy. Bocoboc East, Aguilar, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 1,
+            "amount": 12500000
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of sta maria west  sta maria east fmr brgy sta maria west and brgy sta maria east san nicolas pangasinan",
+        "name": "Concreting of Sta. Maria West - Sta. Maria East FMR, Brgy. Sta. Maria West and Brgy. Sta. Maria East, San Nicolas, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 12500000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of tangcarang to quibuar fmr brgy tangcarang and brgy quibuar alaminos city pangasinan",
+        "name": "Concreting of Tangcarang to Quibuar FMR, Brgy. Tangcarang and Brgy. Quibuar, Alaminos City, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of zone 1 with 20 barrel box culvert and zone vib dulacacbalayang road fmr brgy dulacac and brgy balayang alaminos city pangasinan",
+        "name": "Concreting of Zone 1 (with 20 barrel box culvert) and Zone VI-B Dulacac-Balayang Road FMR, Brgy. Dulacac and Brgy. Balayang, Alaminos City, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of zone 5 brgy moreno fmr brgy moreno binalonan pangasinan",
+        "name": "Concreting of Zone 5, Brgy. Moreno FMR, Brgy. Moreno, Binalonan, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 12500000
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting of zone iii brgy pindangan east fmr brgy pinadangan east alcala pangasinan",
+        "name": "Concreting of Zone III, Brgy. Pindangan East FMR, Brgy. Pinadangan East, Alcala, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 12500000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting rehabilitation of concepcion  san vicente fmr brgy concepcion and brgy san vicente umingan pangasinan",
+        "name": "Concreting/ Rehabilitation of Concepcion - San Vicente FMR, Brgy. Concepcion and   Brgy. San Vicente, Umingan, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 0,
+            "amount": 0
+          },
+          "2024": {
+            "count": 0,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|concreting rehabilitation of domanpotmacalong fmr brgy domanpot and brgy macalong asingan pangasinan",
+        "name": "Concreting/ Rehabilitation of Domanpot-Macalong FMR, Brgy. Domanpot and Brgy. Macalong, Asingan, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 0,
+            "amount": 0
+          },
+          "2023": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|construction of brgy binday fmr brgy binday san fabian pangasinan",
+        "name": "Construction of Brgy. Binday FMR, Brgy. Binday, San Fabian, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|construction of brgy palapad fmr brgy palapad san fabian pangasinan",
+        "name": "Construction of Brgy. Palapad FMR, Brgy. Palapad, San Fabian, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|construction of farmtomarket road at brgy ambuetel calasiao pangasinan",
+        "name": "Construction of Farm-to-Market Road at Brgy. Ambuetel, Calasiao, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|construction of farmtomarket road at brgy batangcaoa bayambang pangasinan",
+        "name": "Construction of Farm-to-Market Road at Brgy. Batangcaoa, Bayambang, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 15000000
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|construction rehabilitation of baligayansta cruz fmr brgy baligayan san quintin and brgy sta cruz sta maria pangasinan",
+        "name": "Construction/ Rehabilitation of Baligayan-Sta. Cruz FMR, Brgy. Baligayan, San Quintin and Brgy. Sta. Cruz, Sta. Maria, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|construction rehabilitation of saludbatchelor east fmr brgys salud and batchelor east natividad pangasinan",
+        "name": "Construction/ Rehabilitation of Salud-Batchelor East FMR, Brgys. Salud and Batchelor East, Natividad, Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 10000000
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      },
+      {
+        "department_id": "05",
+        "agency_id": "05-001",
+        "fam_key": "05-001|implementation of a livestock development project in the province of pangasinan",
+        "name": "Implementation of a Livestock Development Project in  the Province of Pangasinan",
+        "ids_count": 1,
+        "years": {
+          "2020": {
+            "count": 0,
+            "amount": 0
+          },
+          "2021": {
+            "count": 0,
+            "amount": 0
+          },
+          "2022": {
+            "count": 1,
+            "amount": 20000000
+          },
+          "2023": {
+            "count": 1,
+            "amount": 0
+          },
+          "2024": {
+            "count": 1,
+            "amount": 0
+          },
+          "2025": {
+            "count": 1,
+            "amount": 0
+          },
+          "2026": {
+            "count": 1,
+            "amount": 0
+          }
+        }
+      }
+    ],
+    "next_cursor": null
+  },
+  "raw_sha256": "f3af2734c7b1b6511bd5a8c9d2e02a31d840abd12e6ab517f18b821a4d019292",
+  "payload_sha256": "c19f68d3079a627bd54386e91477cdc161c76593b1bd25859111cc477932d9f8"
+}

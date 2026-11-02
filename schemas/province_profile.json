@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object", "additionalProperties": false,
+  "required": ["id", "name", "psgc", "capital", "population", "population_reference_date", "administrative_listing_as_of", "cities", "municipalities", "lgu_count", "barangays_reported", "barangay_count_note", "source_ids", "source_sha256", "review_note", "is_mock", "publication_status", "verification_status", "availability"],
+  "properties": {
+    "id": {"const": "province-pangasinan"}, "name": {"const": "Pangasinan"}, "psgc": {"const": "0105500000"}, "capital": {"type": "string", "minLength": 1},
+    "population": {"type": "integer", "minimum": 0}, "population_reference_date": {"type": "string", "format": "date"}, "administrative_listing_as_of": {"type": "string", "format": "date"},
+    "cities": {"type": "integer", "minimum": 0}, "municipalities": {"type": "integer", "minimum": 0}, "lgu_count": {"type": "integer", "minimum": 0},
+    "barangays_reported": {"type": "integer", "minimum": 0}, "barangay_count_note": {"type": "string"},
+    "source_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}}, "source_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "review_note": {"type": "string", "minLength": 1}, "is_mock": {"const": false}, "publication_status": {"const": "approved"}, "verification_status": {"enum": ["reviewed", "verified"]}, "availability": {"const": "available"}
+  }
+}

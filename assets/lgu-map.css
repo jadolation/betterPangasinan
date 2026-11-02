@@ -1,0 +1,8 @@
+.lgu-geography svg{display:block;width:100%;height:auto;max-height:42rem;background:#edf5f4;border:1px solid #a5bdb6;border-radius:.4rem}
+.lgu-geography path{fill:#267566;stroke:#fff;stroke-width:1;vector-effect:non-scaling-stroke}
+.lgu-geography a:hover path,.lgu-geography a:focus path,.lgu-geography [data-selected] path{fill:#c56a18;stroke:#142e29;stroke-width:2}
+.lgu-geography a:focus{outline:3px solid #142e29}
+.lgu-geography [data-map-detail]{min-height:3rem;font-weight:600}
+.lgu-geography ul{columns:2;column-gap:2rem;padding-left:1.4rem}
+.lgu-geography li{break-inside:avoid;margin-bottom:.8rem}
+@media(max-width:600px){.lgu-geography ul{columns:1}}
