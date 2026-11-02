@@ -44,8 +44,20 @@
 
 <main id="main-content" tabindex="-1">
 <link rel="stylesheet" href="assets/provincial-reference.css">
-<section class="page-hero"><div class="wrap"><span class="eyebrow">Public reference, explicit limits</span><h1>Government reference</h1><p class="lede">Find source-listed provincial offices and public contacts, then explore budget observations, legislation and planning leads. Use the collection filters to focus your search and open original evidence before relying on a listing.</p></div></section>
-<section class="section provincial-reference" data-reference="government"><div class="wrap">
+<link rel="stylesheet" href="assets/government-directory.css">
+<section class="page-hero"><div class="wrap"><span class="eyebrow">Provincial government</span><h1>Know your representatives.</h1><p class="lede">Find provincial leaders, board members and congressional representatives. Government offices and public contacts are listed below.</p></div></section>
+<section class="section government-directory" id="provincial-leadership" data-government-directory><div class="wrap">
+<span class="eyebrow">People and representation</span><h2>Provincial leadership and districts</h2>
+<p>Browse officials by name, community or legislative district, with their original sources.</p>
+<form class="gd-filters" role="search" aria-label="Government directory"><label for="gd-search">Search officials or communities<input id="gd-search" name="official_search" type="search" placeholder="Name, office or municipality"></label><label for="gd-district">Legislative district<select id="gd-district" name="district"><option value="">All six districts</option></select></label><button type="reset" class="btn btn-outline">Clear</button></form>
+<p data-gd-status role="status" aria-live="polite">Loading government directory.</p>
+<p class="gd-note">House names use user-reviewed references. Only sourced office contacts are displayed.</p>
+<details class="gd-verification"><summary>Source verification and contact limits</summary><p>Official House directory requests returned HTTP 403; its six names use the supplied reviewed research. Unknown contacts remain unpublished. The Governor's telephone is not a Vice Governor contact, and no Vice Governor mobile is confirmed. See each official's source date; term dates are not inferred.</p></details>
+<div data-gd-results></div>
+<noscript><p><a href="data/government-leadership.json">Read the structured leadership and district directory.</a> <a href="https://www.pangasinan.gov.ph/positions/board-member/">Official board listing</a></p></noscript>
+</div></section><script src="assets/government-directory.js" defer></script>
+<section class="section provincial-reference" id="government-offices" data-reference="government" data-reference-default="Directory-listed offices"><div class="wrap">
+<h2>Government offices</h2>
 <nav class="pr-nav" aria-label="Provincial reference"><a href="statistics.html">Statistics</a><a href="hospitals.html">Hospitals and emergency</a><a href="history.html">History and culture</a></nav>
 <aside class="pr-note">Directory listings do not verify current terms, budget observations are not actual spending, and planning leads are not contracts.</aside>
 <details class="pr-details"><summary>Reference scope and source qualifications</summary><p>Office functions and locations are shown only when established by the source. Research collected 2026-10-31 is user-reviewed for publication, not independently verified. The 2027 proposal, reported 2026 approval and Sual operative-in-PART qualification remain separate. Legislation summaries are discovery paraphrases, not authoritative legal texts. Planning leads do not establish completed projects.</p></details>

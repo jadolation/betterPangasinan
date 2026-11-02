@@ -35,6 +35,20 @@ test('Mapandan shows local population and discovery without invented allocations
   await expect(page.locator('#profile-barangay-list')).toContainText(source.barangays[0].name);
 });
 
+test('LGU representatives come from the shared six-district dataset', async ({ page }) => {
+  await open(page, dagupan, '#government');
+  await expect(page.locator('#profile-government')).toContainText('Pangasinan 4th Legislative District');
+  await expect(page.locator('#profile-government')).toContainText('Ma. Georgina P. de Venecia');
+  await expect(page.locator('#profile-government')).toContainText('Jerry Agerico B. Rosario');
+  await expect(page.locator('#profile-government')).toContainText('Marinor B. De Guzman');
+  await expect(page.locator('#profile-government a[href^="municipality-map.html?view=districts"]')).toHaveAttribute('href', 'municipality-map.html?view=districts&district=leg%3Apangasinan%3A4th');
+  await expect(page.locator('#profile-government')).toContainText('does not show who requested or controlled a project');
+  await open(page, mapandan, '#government');
+  await expect(page.locator('#profile-government')).toContainText('Pangasinan 3rd Legislative District');
+  await expect(page.locator('#profile-government')).toContainText('Maria Rachel J. Arenas');
+  await expect(page.locator('#profile-government')).not.toContainText('Ma. Georgina P. de Venecia');
+});
+
 test('local finance keeps decimal pesos and partial legal qualifications', async ({ page, request }) => {
   const lgus = await (await request.get('/data/lgus.json')).json();
   await open(page, lgus.find(row => row.name === 'Sual').id, '#finances');

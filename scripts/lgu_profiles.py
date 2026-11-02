@@ -40,6 +40,8 @@ def publication_payloads(data, supplemental, national_budget):
     barangays = supplemental.get("data/geography/barangays.json", [])
     geo = supplemental.get("data/geography/manifest.json", {})
     historical = supplemental.get("data/historical-budget/programs.json", {}).get("data", [])
+    government = supplemental.get("data/government-leadership.json", {})
+    officials = {row["id"]: row for row in government.get("officials", [])}
     profiles = {}
     registry = data["lgus"]
     alias_owners = {}
@@ -51,6 +53,17 @@ def publication_payloads(data, supplemental, national_budget):
             raise ValueError("Unsafe LGU profile filename")
         names = {name for name in aliases(lgu) if len(alias_owners[name]) == 1}
         can_join_reference = bool(lgu.get("psgc") and not lgu.get("is_mock"))
+        district = next((row for row in government.get("districts", []) if lgu.get("psgc") in row["lgu_psgcs"]), None) if can_join_reference else None
+        legislative = None
+        if district:
+            people = [officials[district["representative_id"]], *[officials[key] for key in district["board_member_ids"]]]
+            source_ids = set(district["source_ids"]) | {key for person in people for key in person["source_ids"]}
+            legislative = {
+                "district": {key: district[key] for key in ("id", "number", "name", "source_ids")},
+                "representative": people[0], "board_members": people[1:],
+                "sources": [row for row in government.get("sources", []) if row["id"] in source_ids],
+                "metadata": government.get("metadata", {}),
+            }
         local_barangays = [row for row in barangays if row.get("parent_psgc") == lgu.get("psgc")] if can_join_reference else []
         local_statistics = [row for row in reference.get("statistics", []) if named(row, names, ("geography", "lgu"))] if can_join_reference else []
         local_budgets = [row for row in reference.get("budget_observations", []) if named(row, names, ("lgu",))] if can_join_reference else []
@@ -87,6 +100,7 @@ def publication_payloads(data, supplemental, national_budget):
         sources = [row for row in reference.get("sources", []) if row.get("source_id") in source_ids or row.get("url") in source_urls]
         profiles["data/lgu-profiles/" + lgu["id"] + ".json"] = {
             "schema_version": 1, "lgu_id": lgu["id"], "psgc": lgu.get("psgc"),
+            "legislative": legislative,
             "statistics": unique(local_statistics), "budget_observations": unique(local_budgets),
             "planning_records": unique(local_projects), "government": unique(local_government), "hospitals": unique(local_hospitals),
             "barangays": local_barangays, "barangay_count": len(local_barangays) if local_barangays else None,

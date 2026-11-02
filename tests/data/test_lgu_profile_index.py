@@ -38,6 +38,21 @@ def test_province_budgets_do_not_become_capital_or_other_lgu_budgets(profiles):
     assert report["provincial_review_disposition"] == "operative in PART"
 
 
+def test_legislative_profiles_share_canonical_district_membership(profiles):
+    graph, payload = profiles
+    canonical = json.loads((build.ROOT / "data/production/government_directory.json").read_text())
+    for lgu in graph["lgus"]:
+        row = payload[f"data/lgu-profiles/{lgu['id']}.json"]["legislative"]
+        expected = next(district for district in canonical["districts"] if lgu["psgc"] in district["lgu_psgcs"])
+        assert row["district"]["id"] == expected["id"]
+        assert row["representative"]["id"] == expected["representative_id"]
+        assert {person["id"] for person in row["board_members"]} == set(expected["board_member_ids"])
+        assert all("raw_path" not in source for source in row["sources"])
+    dagupan = payload["data/lgu-profiles/lgu-0105518000.json"]["legislative"]
+    assert dagupan["district"]["number"] == 4
+    assert dagupan["representative"]["display_name"] == "Ma. Georgina P. de Venecia"
+
+
 def test_budget_title_matches_are_small_discovery_only_not_local_finances(profiles):
     _, payload = profiles
     row = payload["data/lgu-profiles/lgu-0105528000.json"]

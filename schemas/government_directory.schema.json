@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "metadata", "sources", "officials", "districts", "pending_positions"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "metadata": {"type": "object", "required": ["collected_at"], "properties": {"collected_at": {"type": "string", "format": "date-time"}}},
+    "sources": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["id", "url", "publisher", "retrieved_at"], "properties": {"id": {"type": "string"}, "url": {"type": "string", "pattern": "^https://[^\\s]+$"}, "publisher": {"type": "string"}, "retrieved_at": {"type": "string", "format": "date-time"}, "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}}},
+    "officials": {"type": "array", "items": {"type": "object", "required": ["id", "display_name", "full_name", "position", "role_type", "district_id", "district_number", "source_ids", "verification_status", "contacts", "office_location", "field_evidence"], "properties": {
+      "id": {"type": "string"}, "display_name": {"type": "string"}, "full_name": {"type": "string"}, "position": {"type": "string"},
+      "role_type": {"enum": ["governor", "vice_governor", "board_member", "house_representative", "ex_officio"]},
+      "district_id": {"type": ["string", "null"], "pattern": "^leg:pangasinan:[1-6](st|nd|rd|th)$"}, "district_number": {"type": ["integer", "null"], "minimum": 1, "maximum": 6},
+      "source_ids": {"$ref": "#/$defs/source_ids"}, "verification_status": {"enum": ["source_listed", "user_reviewed"]},
+      "contacts": {"type": "object", "additionalProperties": false, "required": ["telephone", "mobile", "facebook"], "properties": {"telephone": {"type": ["string", "null"], "pattern": "^\\+[0-9]+$"}, "mobile": {"type": ["string", "null"], "pattern": "^\\+[0-9]+$"}, "facebook": {"type": ["string", "null"], "pattern": "^https://www\\.facebook\\.com/[^/?#]+/?$"}}},
+      "office_location": {"type": ["string", "null"]}, "field_evidence": {"type": "object", "additionalProperties": {"type": "object", "required": ["source_ids", "collected_at", "note"], "properties": {"source_ids": {"$ref": "#/$defs/source_ids"}, "collected_at": {"type": "string", "format": "date-time"}, "note": {"type": "string"}}}}
+    }}},
+    "districts": {"type": "array", "minItems": 6, "maxItems": 6, "items": {"type": "object", "required": ["id", "number", "name", "lgu_psgcs", "representative_id", "board_member_ids", "source_ids"], "properties": {"id": {"type": "string"}, "number": {"type": "integer", "minimum": 1, "maximum": 6}, "name": {"type": "string"}, "lgu_psgcs": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^[0-9]{10}$"}}, "representative_id": {"type": "string"}, "board_member_ids": {"type": "array", "minItems": 2, "maxItems": 2, "uniqueItems": true, "items": {"type": "string"}}, "source_ids": {"$ref": "#/$defs/source_ids"}}}},
+    "pending_positions": {"type": "array", "items": {"type": "object", "required": ["id", "position", "verification_status", "source_ids", "note"], "properties": {"verification_status": {"const": "pending"}, "source_ids": {"$ref": "#/$defs/source_ids"}}}}
+  },
+  "$defs": {"source_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}}}
+}

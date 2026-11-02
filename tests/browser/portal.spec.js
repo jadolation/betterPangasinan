@@ -66,12 +66,13 @@ test('skip link moves keyboard focus to the main landmark', async ({ page }) => 
   await expect(page.locator('main')).toBeFocused();
 });
 
-test('homepage internal links resolve and search returns to the populated LGU directory', async ({ page, request }) => {
+test('homepage links resolve and LGU discovery continues through the directory', async ({ page, request }) => {
   await page.goto('/');
   const links = await page.locator('a[href]').evaluateAll(items => [...new Set(items.map(a => new URL(a.getAttribute('href'), location.href).href))].filter(url => url.startsWith(location.origin)));
   for (const url of links) expect((await request.get(url)).status(), url).toBe(200);
-  await page.locator('#home-search').fill('NoSuchMunicipality');
-  await page.locator('#home-search').press('Enter');
+  await expect(page.locator('#home-search')).toHaveCount(0);
+  await page.locator('#government-snapshot a[href="lgus.html"]').click();
+  await page.locator('#lgu-query').fill('NoSuchMunicipality');
   await expect(page).toHaveURL(/lgus\.html\?q=NoSuchMunicipality/);
   await expect(page.locator('#lgu-query')).toHaveValue('NoSuchMunicipality');
   await expect(page.locator('#lgu-result-count')).toHaveText('0 published profiles found. Showing 0.');

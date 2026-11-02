@@ -88,6 +88,8 @@
       }
       const select = form.elements.collection;
       sections.forEach(([title])=>{ const o=node('option',title,select); o.value=title; });
+      const preferred = [...select.options].find(option => option.value === root.dataset.referenceDefault);
+      if (preferred) preferred.defaultSelected = true;
       const collectionLabel = select.closest('label');
       if (sections.length === 1 && collectionLabel) collectionLabel.hidden = true;
       const budgetFilters = sections.some(([title]) => title === 'Budget observations') ? node('div', undefined, form) : null;
@@ -113,14 +115,14 @@
         const params = new URLSearchParams(location.search);
         form.elements.q.value=params.get('q') || '';
         selectedLGU=mode==='statistics' ? params.get('lgu') || '' : '';
-        const value=params.get('collection') || (selectedLGU ? lguCollection : '') || aliases[location.hash.slice(1)] || '';
+        const value=params.get('collection') || (selectedLGU ? lguCollection : '') || aliases[location.hash.slice(1)] || root.dataset.referenceDefault || '';
         select.value=sections.some(([title])=>title===value) ? value : aliases[value] || '';
         if (budgetFilters) ['year','type'].forEach(key => { form.elements[key].value = params.get(key) || ''; });
         currentPage=Math.max(1,Number.parseInt(params.get('page'),10) || 1);
       };
       const writeURL = () => {
         const url=new URL(location.href);
-        [['q',form.elements.q.value.trim()],['collection',select.value],['page',currentPage>1 ? String(currentPage) : '']].forEach(([key,value])=>{ if(value) url.searchParams.set(key,value); else url.searchParams.delete(key); });
+        [['q',form.elements.q.value.trim()],['collection',select.value || (root.dataset.referenceDefault ? 'all' : '')],['page',currentPage>1 ? String(currentPage) : '']].forEach(([key,value])=>{ if(value) url.searchParams.set(key,value); else url.searchParams.delete(key); });
         if (budgetFilters) ['year','type'].forEach(key => { const value = form.elements[key].value; if (value) url.searchParams.set(key, value); else url.searchParams.delete(key); });
         // A collection fragment is a one-time deep-link; filters own subsequent state.
         if(aliases[url.hash.slice(1)]) url.hash='';

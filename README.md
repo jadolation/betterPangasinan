@@ -207,6 +207,56 @@ geographic attribution or source data, and does not load live budget API results
 
 ## Maps And Unified LGU Profiles
 
+The homepage follows six content sections: hero, provincial overview,
+municipality map, Transparency Snapshot, Government Snapshot, then Public
+Knowledge. Volunteer access is retained within Government and the footer, not
+as another campaign section after Public Knowledge. The former homepage LGU
+search, three-card feature grid and sources/methodology columns are removed;
+the map and LGU Explorer remain the discovery tools.
+
+`scripts/home_snapshot.py` derives `data/home-snapshot.json` from already
+validated publication resources. The homepage requests this small summary, not
+the full project or historical program datasets. Counts stay distinct, unknown
+values stay hidden, and reported budget observations are labeled separately
+from the structured local financial ledger.
+
+### Districts And Representatives
+
+`data/production/government_directory.json` is the canonical structured source
+for provincial leadership, regular board members, congressional representatives,
+ex-officio positions and six legislative districts. Its adapter and schema verify
+all 48 PSGCs occur once, with district sizes 10/8/6/5/9/10 and correct official
+role links. No proposed eight-district arrangement is applied. Public output is
+`data/government-leadership.json`; raw page captures stay private under ignored
+`data/government_sources/raw/`. Capture and normalization are explicit:
+
+```sh
+python3 -m scripts.government_directory --collect
+python3 -m scripts.government_directory --initialize
+```
+
+These commands normalize the reviewed November 2026 reference names and must
+not be treated as an automatic future-term roster update. Recheck source names,
+effective district arrangements and individual fields before a later refresh.
+
+The province's official board, Governor, Vice Governor and municipality listing
+were retrieved successfully. House directory requests returned HTTP 403, so the
+six House names retain the user's reviewed 20th Congress reference, not a false
+claim of live House verification. PCL remains a pending position because the
+reported references differ. No confirmed PCL officeholder is selected. The
+Governor's +63 75 632-3138 telephone is Governor-office-only; Vice Governor
+telephone/mobile and exact office-location fields remain unknown unless their
+specific evidence is confirmed. Social links are included only when the
+official profile supplies them. Portraits are not used.
+
+The shared map supports `municipality-map.html?view=districts&district=leg%3Apangasinan%3A4th`.
+It highlights groups of the existing municipality paths, with no additional or
+invented geometry. Municipality View remains the default; selections and
+hover/focus previews remain separate. Missing optional leadership data leaves
+the municipality explorer functional. Government filtering and the generated
+LGU profile representative panels use the same canonical record IDs. A district
+relationship does not imply that an official requested or controlled a project.
+
 The homepage places its municipality explorer immediately after the provincial
 statistics. `assets/lgu-map.js` shares one data/projection promise and one
 implementation across `home`, `explorer` and `profile` modes. Blue polygons turn

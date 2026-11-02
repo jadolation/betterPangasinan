@@ -1,0 +1,821 @@
+{
+  "schema_version": 1,
+  "metadata": {
+    "collected_at": "2026-11-02T13:44:08.294750Z",
+    "scope": "Six legislative districts, 48 LGUs; source-listed roles, not independently certified terms.",
+    "house_verification": "User-reviewed names; both official House directory fetches returned HTTP 403.",
+    "missing_contacts": "Unknown values are null; no Vice Governor telephone verified."
+  },
+  "sources": [
+    {
+      "id": "governor",
+      "url": "https://www.pangasinan.gov.ph/officials/hon-ramon-v-guico-iii/",
+      "publisher": "Province of Pangasinan",
+      "retrieved_at": "2026-11-02T13:44:08.294750Z",
+      "http_status": 200,
+      "sha256": "f80aa5ac494362605f2d887b4e754e9121b595fe455d3f634151caec5384fca5",
+      "raw_path": "data/government_sources/raw/governor-f80aa5ac494362605f2d887b4e754e9121b595fe455d3f634151caec5384fca5.html"
+    },
+    {
+      "id": "vice-governor",
+      "url": "https://www.pangasinan.gov.ph/officials/hon-mark-ronald-dg-lambino/",
+      "publisher": "Province of Pangasinan",
+      "retrieved_at": "2026-11-02T13:44:08.936234Z",
+      "http_status": 200,
+      "sha256": "be6c545dfed607cb7cb269bf50f84c670f0dd6fc6f386a088182d518c772d02c",
+      "raw_path": "data/government_sources/raw/vice-governor-be6c545dfed607cb7cb269bf50f84c670f0dd6fc6f386a088182d518c772d02c.html"
+    },
+    {
+      "id": "board",
+      "url": "https://www.pangasinan.gov.ph/positions/board-member/",
+      "publisher": "Province of Pangasinan",
+      "retrieved_at": "2026-11-02T13:44:09.349485Z",
+      "http_status": 200,
+      "sha256": "76f6eacfee316a5084cec23653f9664df6313dc6ad0d39bf805e9797c4cfee2a",
+      "raw_path": "data/government_sources/raw/board-76f6eacfee316a5084cec23653f9664df6313dc6ad0d39bf805e9797c4cfee2a.html"
+    },
+    {
+      "id": "districts",
+      "url": "https://www.pangasinan.gov.ph/city-municipalities/",
+      "publisher": "Province of Pangasinan",
+      "retrieved_at": "2026-11-02T13:44:09.760589Z",
+      "http_status": 200,
+      "sha256": "4761fb955d591dabcbfcb97c48bb9c1edad253fe41b4620692ceb3b03a2a1c47",
+      "raw_path": "data/government_sources/raw/districts-4761fb955d591dabcbfcb97c48bb9c1edad253fe41b4620692ceb3b03a2a1c47.html"
+    },
+    {
+      "id": "house",
+      "url": "https://www.congress.gov.ph/house-members",
+      "publisher": "House of Representatives",
+      "retrieved_at": "2026-11-02T13:44:10.195499Z",
+      "http_status": 403,
+      "sha256": "69a6667d71605ab2c4c25343d1bde6cccb2eb546aa4d302e7f7edf8f5eafb414",
+      "raw_path": "data/government_sources/raw/house-69a6667d71605ab2c4c25343d1bde6cccb2eb546aa4d302e7f7edf8f5eafb414.html"
+    },
+    {
+      "id": "house-directory",
+      "url": "https://www.congress.gov.ph/members/",
+      "publisher": "House of Representatives",
+      "retrieved_at": "2026-11-02T13:44:10.248106Z",
+      "http_status": 403,
+      "sha256": "9be82be2828e3487b8df34ebcc827aefd8f225c925b29aeaec7b9a5122bf52ad",
+      "raw_path": "data/government_sources/raw/house-directory-9be82be2828e3487b8df34ebcc827aefd8f225c925b29aeaec7b9a5122bf52ad.html"
+    },
+    {
+      "id": "user-review",
+      "url": "https://www.congress.gov.ph/house-members",
+      "publisher": "User-provided reviewed House directory references",
+      "retrieved_at": "2026-11-02T13:40:44Z",
+      "verification_note": "Six House names supplied and reviewed by the user; live House retrieval blocked. Not a live House verification."
+    },
+    {
+      "id": "user-provincial-context",
+      "url": "https://www.pangasinan.gov.ph/positions/board-member/",
+      "publisher": "User-provided provincial context",
+      "retrieved_at": "2026-11-02T13:40:44Z",
+      "verification_note": "Presiding-officer role and reported PCL discrepancy supplied by the user. The cited board listing does not independently establish the unprovided 2025 resolution reference."
+    }
+  ],
+  "officials": [
+    {
+      "id": "governor-ramon-guico-iii",
+      "display_name": "Ramon V. Guico III",
+      "full_name": "Ramon Velicaria Guico III",
+      "position": "Governor of Pangasinan",
+      "role_type": "governor",
+      "district_id": null,
+      "district_number": null,
+      "source_ids": [
+        "governor"
+      ],
+      "verification_status": "source_listed",
+      "contacts": {
+        "telephone": "+63756323138",
+        "mobile": null,
+        "facebook": "https://www.facebook.com/MonMonGuicoIII/"
+      },
+      "office_location": "2F Capitol Compound, Lingayen, Pangasinan",
+      "field_evidence": {
+        "contacts.telephone": {
+          "source_ids": [
+            "governor"
+          ],
+          "collected_at": "2026-11-02T13:44:08.294750Z",
+          "note": "Official profile footer explicitly labels Office of the Governor; not a Vice Governor contact."
+        },
+        "contacts.facebook": {
+          "source_ids": [
+            "governor"
+          ],
+          "collected_at": "2026-11-02T13:44:08.294750Z",
+          "note": "Facebook button on official Governor profile, not the provincial footer account."
+        },
+        "office_location": {
+          "source_ids": [
+            "governor"
+          ],
+          "collected_at": "2026-11-02T13:44:08.294750Z",
+          "note": "Official footer explicitly labels Office of the Governor."
+        },
+        "full_name": {
+          "source_ids": [
+            "governor"
+          ],
+          "collected_at": "2026-11-02T13:44:08.294750Z",
+          "note": "Biography gives Ramon Velicaria Guico III; role current as listed, no term inferred."
+        }
+      },
+      "term": null
+    },
+    {
+      "id": "vice-governor-mark-ronald-lambino",
+      "display_name": "Hon. Mark Ronald DG. Lambino",
+      "full_name": "Mark Ronald De Guzman Lambino",
+      "position": "Vice Governor of Pangasinan",
+      "role_type": "vice_governor",
+      "district_id": null,
+      "district_number": null,
+      "source_ids": [
+        "vice-governor"
+      ],
+      "verification_status": "source_listed",
+      "contacts": {
+        "telephone": null,
+        "mobile": null,
+        "facebook": "https://www.facebook.com/markronaldlambino"
+      },
+      "office_location": null,
+      "field_evidence": {
+        "contacts.facebook": {
+          "source_ids": [
+            "vice-governor"
+          ],
+          "collected_at": "2026-11-02T13:44:08.936234Z",
+          "note": "Facebook button on official profile."
+        },
+        "full_name": {
+          "source_ids": [
+            "vice-governor"
+          ],
+          "collected_at": "2026-11-02T13:44:08.936234Z",
+          "note": "Official biography spells out De Guzman."
+        },
+        "additional_roles": {
+          "source_ids": [
+            "user-provincial-context"
+          ],
+          "collected_at": "2026-11-02T13:40:44Z",
+          "note": "Presiding-officer role supplied by user, separately labeled from profile verification."
+        }
+      },
+      "term": null,
+      "additional_roles": [
+        "Presiding Officer, Sangguniang Panlalawigan"
+      ]
+    },
+    {
+      "id": "board-1-1",
+      "display_name": "Apolonia DG. Bacay",
+      "full_name": "Apolonia DG. Bacay",
+      "position": "Board Member, 1st District",
+      "role_type": "board_member",
+      "district_id": "leg:pangasinan:1st",
+      "district_number": 1,
+      "source_ids": [
+        "board"
+      ],
+      "verification_status": "source_listed",
+      "contacts": {
+        "telephone": null,
+        "mobile": null,
+        "facebook": null
+      },
+      "office_location": null,
+      "field_evidence": {},
+      "term": null
+    },
+    {
+      "id": "board-1-2",
+      "display_name": "Napoleon C. Fontelera Jr.",
+      "full_name": "Napoleon C. Fontelera Jr.",
+      "position": "Board Member, 1st District",
+      "role_type": "board_member",
+      "district_id": "leg:pangasinan:1st",
+      "district_number": 1,
+      "source_ids": [
+        "board"
+      ],
+      "verification_status": "source_listed",
+      "contacts": {
+        "telephone": null,
+        "mobile": null,
+        "facebook": null
+      },
+      "office_location": null,
+      "field_evidence": {},
+      "term": null
+    },
+    {
+      "id": "house-1",
+      "display_name": "Arthur F. Celeste",
+      "full_name": "Arthur F. Celeste",
+      "position": "House Representative, 1st District",
+      "role_type": "house_representative",
+      "district_id": "leg:pangasinan:1st",
+      "district_number": 1,
+      "source_ids": [
+        "user-review",
+        "house",
+        "house-directory"
+      ],
+      "verification_status": "user_reviewed",
+      "contacts": {
+        "telephone": null,
+        "mobile": null,
+        "facebook": null
+      },
+      "office_location": null,
+      "field_evidence": {},
+      "term": null
+    },
+    {
+      "id": "board-2-1",
+      "display_name": "Haidee S. Pacheco",
+      "full_name": "Haidee S. Pacheco",
+      "position": "Board Member, 2nd District",
+      "role_type": "board_member",
+      "district_id": "leg:pangasinan:2nd",
+      "district_number": 2,
+      "source_ids": [
+        "board"
+      ],
+      "verification_status": "source_listed",
+      "contacts": {
+        "telephone": null,
+        "mobile": null,
+        "facebook": null
+      },
+      "office_location": null,
+      "field_evidence": {},
+      "term": null
+    },
+    {
+      "id": "board-2-2",
+      "display_name": "Philip Theodore E. Cruz",
+      "full_name": "Philip Theodore E. Cruz",
+      "position": "Board Member, 2nd District",
+      "role_type": "board_member",
+      "district_id": "leg:pangasinan:2nd",
+      "district_number": 2,
+      "source_ids": [
+        "board"
+      ],
+      "verification_status": "source_listed",
+      "contacts": {
+        "telephone": null,
+        "mobile": null,
+        "facebook": null
+      },
+      "office_location": null,
+      "field_evidence": {},
+      "term": null
+    },
+    {
+      "id": "house-2",
+      "display_name": "Mark O. Cojuangco",
+      "full_name": "Mark O. Cojuangco",
+      "position": "House Representative, 2nd District",
+      "role_type": "house_representative",
+      "district_id": "leg:pangasinan:2nd",
+      "district_number": 2,
+      "source_ids": [
+        "user-review",
+        "house",
+        "house-directory"
+      ],
+      "verification_status": "user_reviewed",
+      "contacts": {
+        "telephone": null,
+        "mobile": null,
+        "facebook": null
+      },
+      "office_location": null,
+      "field_evidence": {},
+      "term": null
+    },
+    {
+      "id": "board-3-1",
+      "display_name": "Shiela F. Baniqued",
+      "full_name": "Shiela F. Baniqued",
+      "position": "Board Member, 3rd District",
+      "role_type": "board_member",
+      "district_id": "leg:pangasinan:3rd",
+      "district_number": 3,
+      "source_ids": [
+        "board"
+      ],
+      "verification_status": "source_listed",
+      "contacts": {
+        "telephone": null,
+        "mobile": null,
+        "facebook": null
+      },
+      "office_location": null,
+      "field_evidence": {},
+      "term": null
+    },
+    {
+      "id": "board-3-2",
+      "display_name": "Vici C. Ventanilla",
+      "full_name": "Vici C. Ventanilla",
+      "position": "Board Member, 3rd District",
+      "role_type": "board_member",
+      "district_id": "leg:pangasinan:3rd",
+      "district_number": 3,
+      "source_ids": [
+        "board"
+      ],
+      "verification_status": "source_listed",
+      "contacts": {
+        "telephone": null,
+        "mobile": null,
+        "facebook": null
+      },
+      "office_location": null,
+      "field_evidence": {},
+      "term": null
+    },
+    {
+      "id": "house-3",
+      "display_name": "Maria Rachel J. Arenas",
+      "full_name": "Maria Rachel J. Arenas",
+      "position": "House Representative, 3rd District",
+      "role_type": "house_representative",
+      "district_id": "leg:pangasinan:3rd",
+      "district_number": 3,
+      "source_ids": [
+        "user-review",
+        "house",
+        "house-directory"
+      ],
+      "verification_status": "user_reviewed",
+      "contacts": {
+        "telephone": null,
+        "mobile": null,
+        "facebook": null
+      },
+      "office_location": null,
+      "field_evidence": {},
+      "term": null
+    },
+    {
+      "id": "board-4-1",
+      "display_name": "Jerry Agerico B. Rosario",
+      "full_name": "Jerry Agerico B. Rosario",
+      "position": "Board Member, 4th District",
+      "role_type": "board_member",
+      "district_id": "leg:pangasinan:4th",
+      "district_number": 4,
+      "source_ids": [
+        "board"
+      ],
+      "verification_status": "source_listed",
+      "contacts": {
+        "telephone": null,
+        "mobile": null,
+        "facebook": null
+      },
+      "office_location": null,
+      "field_evidence": {},
+      "term": null
+    },
+    {
+      "id": "board-4-2",
+      "display_name": "Marinor B. De Guzman",
+      "full_name": "Marinor B. De Guzman",
+      "position": "Board Member, 4th District",
+      "role_type": "board_member",
+      "district_id": "leg:pangasinan:4th",
+      "district_number": 4,
+      "source_ids": [
+        "board"
+      ],
+      "verification_status": "source_listed",
+      "contacts": {
+        "telephone": null,
+        "mobile": null,
+        "facebook": null
+      },
+      "office_location": null,
+      "field_evidence": {},
+      "term": null
+    },
+    {
+      "id": "house-4",
+      "display_name": "Ma. Georgina P. de Venecia",
+      "full_name": "Ma. Georgina P. de Venecia",
+      "position": "House Representative, 4th District",
+      "role_type": "house_representative",
+      "district_id": "leg:pangasinan:4th",
+      "district_number": 4,
+      "source_ids": [
+        "user-review",
+        "house",
+        "house-directory"
+      ],
+      "verification_status": "user_reviewed",
+      "contacts": {
+        "telephone": null,
+        "mobile": null,
+        "facebook": null
+      },
+      "office_location": null,
+      "field_evidence": {},
+      "term": null
+    },
+    {
+      "id": "board-5-1",
+      "display_name": "Nicholi Jan Louie Q. Sison",
+      "full_name": "Nicholi Jan Louie Q. Sison",
+      "position": "Board Member, 5th District",
+      "role_type": "board_member",
+      "district_id": "leg:pangasinan:5th",
+      "district_number": 5,
+      "source_ids": [
+        "board"
+      ],
+      "verification_status": "source_listed",
+      "contacts": {
+        "telephone": null,
+        "mobile": null,
+        "facebook": null
+      },
+      "office_location": null,
+      "field_evidence": {},
+      "term": null
+    },
+    {
+      "id": "board-5-2",
+      "display_name": "Rosalina C. Apaga",
+      "full_name": "Rosalina C. Apaga",
+      "position": "Board Member, 5th District",
+      "role_type": "board_member",
+      "district_id": "leg:pangasinan:5th",
+      "district_number": 5,
+      "source_ids": [
+        "board"
+      ],
+      "verification_status": "source_listed",
+      "contacts": {
+        "telephone": null,
+        "mobile": null,
+        "facebook": null
+      },
+      "office_location": null,
+      "field_evidence": {},
+      "term": null
+    },
+    {
+      "id": "house-5",
+      "display_name": "Ramon N. Guico Jr.",
+      "full_name": "Ramon N. Guico Jr.",
+      "position": "House Representative, 5th District",
+      "role_type": "house_representative",
+      "district_id": "leg:pangasinan:5th",
+      "district_number": 5,
+      "source_ids": [
+        "user-review",
+        "house",
+        "house-directory"
+      ],
+      "verification_status": "user_reviewed",
+      "contacts": {
+        "telephone": null,
+        "mobile": null,
+        "facebook": null
+      },
+      "office_location": null,
+      "field_evidence": {},
+      "term": null
+    },
+    {
+      "id": "board-6-1",
+      "display_name": "Ranjit R. Shahani",
+      "full_name": "Ranjit R. Shahani",
+      "position": "Board Member, 6th District",
+      "role_type": "board_member",
+      "district_id": "leg:pangasinan:6th",
+      "district_number": 6,
+      "source_ids": [
+        "board"
+      ],
+      "verification_status": "source_listed",
+      "contacts": {
+        "telephone": null,
+        "mobile": null,
+        "facebook": null
+      },
+      "office_location": null,
+      "field_evidence": {},
+      "term": null
+    },
+    {
+      "id": "board-6-2",
+      "display_name": "Noel Fernando R. Bince Jr.",
+      "full_name": "Noel Fernando R. Bince Jr.",
+      "position": "Board Member, 6th District",
+      "role_type": "board_member",
+      "district_id": "leg:pangasinan:6th",
+      "district_number": 6,
+      "source_ids": [
+        "board"
+      ],
+      "verification_status": "source_listed",
+      "contacts": {
+        "telephone": null,
+        "mobile": null,
+        "facebook": null
+      },
+      "office_location": null,
+      "field_evidence": {},
+      "term": null
+    },
+    {
+      "id": "house-6",
+      "display_name": "Marlyn L. Primicias-Agabas",
+      "full_name": "Marlyn L. Primicias-Agabas",
+      "position": "House Representative, 6th District",
+      "role_type": "house_representative",
+      "district_id": "leg:pangasinan:6th",
+      "district_number": 6,
+      "source_ids": [
+        "user-review",
+        "house",
+        "house-directory"
+      ],
+      "verification_status": "user_reviewed",
+      "contacts": {
+        "telephone": null,
+        "mobile": null,
+        "facebook": null
+      },
+      "office_location": null,
+      "field_evidence": {},
+      "term": null
+    },
+    {
+      "id": "ex-officio-abc",
+      "display_name": "Raul Ramirez Sabangan",
+      "full_name": "Raul Ramirez Sabangan",
+      "position": "ABC President / Ex Officio Board Member",
+      "role_type": "ex_officio",
+      "district_id": null,
+      "district_number": null,
+      "source_ids": [
+        "board"
+      ],
+      "verification_status": "source_listed",
+      "contacts": {
+        "telephone": null,
+        "mobile": null,
+        "facebook": null
+      },
+      "office_location": null,
+      "field_evidence": {},
+      "term": null
+    },
+    {
+      "id": "ex-officio-sk",
+      "display_name": "Joyce Fernandez",
+      "full_name": "Joyce Fernandez",
+      "position": "SK Federation President / Ex Officio Board Member",
+      "role_type": "ex_officio",
+      "district_id": null,
+      "district_number": null,
+      "source_ids": [
+        "board"
+      ],
+      "verification_status": "source_listed",
+      "contacts": {
+        "telephone": null,
+        "mobile": null,
+        "facebook": null
+      },
+      "office_location": null,
+      "field_evidence": {},
+      "term": null
+    }
+  ],
+  "districts": [
+    {
+      "id": "leg:pangasinan:1st",
+      "number": 1,
+      "name": "Pangasinan 1st Legislative District",
+      "lgu_psgcs": [
+        "0105501000",
+        "0105503000",
+        "0105505000",
+        "0105508000",
+        "0105514000",
+        "0105516000",
+        "0105519000",
+        "0105520000",
+        "0105523000",
+        "0105542000"
+      ],
+      "representative_id": "house-1",
+      "board_member_ids": [
+        "board-1-1",
+        "board-1-2"
+      ],
+      "source_ids": [
+        "districts"
+      ],
+      "lgu_names": [
+        "Agno",
+        "City of Alaminos",
+        "Anda",
+        "Bani",
+        "Bolinao",
+        "Burgos",
+        "Dasol",
+        "Infanta",
+        "Mabini",
+        "Sual"
+      ]
+    },
+    {
+      "id": "leg:pangasinan:2nd",
+      "number": 2,
+      "name": "Pangasinan 2nd Legislative District",
+      "lgu_psgcs": [
+        "0105502000",
+        "0105509000",
+        "0105513000",
+        "0105515000",
+        "0105521000",
+        "0105522000",
+        "0105527000",
+        "0105545000"
+      ],
+      "representative_id": "house-2",
+      "board_member_ids": [
+        "board-2-1",
+        "board-2-2"
+      ],
+      "source_ids": [
+        "districts"
+      ],
+      "lgu_names": [
+        "Aguilar",
+        "Basista",
+        "Binmaley",
+        "Bugallon",
+        "Labrador",
+        "Lingayen",
+        "Mangatarem",
+        "Urbiztondo"
+      ]
+    },
+    {
+      "id": "leg:pangasinan:3rd",
+      "number": 3,
+      "name": "Pangasinan 3rd Legislative District",
+      "lgu_psgcs": [
+        "0105511000",
+        "0105517000",
+        "0105524000",
+        "0105528000",
+        "0105532000",
+        "0105538000"
+      ],
+      "representative_id": "house-3",
+      "board_member_ids": [
+        "board-3-1",
+        "board-3-2"
+      ],
+      "source_ids": [
+        "districts"
+      ],
+      "lgu_names": [
+        "Bayambang",
+        "Calasiao",
+        "Malasiqui",
+        "Mapandan",
+        "City of San Carlos",
+        "Santa Barbara"
+      ]
+    },
+    {
+      "id": "leg:pangasinan:4th",
+      "number": 4,
+      "name": "Pangasinan 4th Legislative District",
+      "lgu_psgcs": [
+        "0105518000",
+        "0105525000",
+        "0105526000",
+        "0105533000",
+        "0105534000"
+      ],
+      "representative_id": "house-4",
+      "board_member_ids": [
+        "board-4-1",
+        "board-4-2"
+      ],
+      "source_ids": [
+        "districts"
+      ],
+      "lgu_names": [
+        "City of Dagupan",
+        "Manaoag",
+        "Mangaldan",
+        "San Fabian",
+        "San Jacinto"
+      ]
+    },
+    {
+      "id": "leg:pangasinan:5th",
+      "number": 5,
+      "name": "Pangasinan 5th Legislative District",
+      "lgu_psgcs": [
+        "0105504000",
+        "0105510000",
+        "0105512000",
+        "0105548000",
+        "0105530000",
+        "0105540000",
+        "0105541000",
+        "0105546000",
+        "0105547000"
+      ],
+      "representative_id": "house-5",
+      "board_member_ids": [
+        "board-5-1",
+        "board-5-2"
+      ],
+      "source_ids": [
+        "districts"
+      ],
+      "lgu_names": [
+        "Alcala",
+        "Bautista",
+        "Binalonan",
+        "Laoac",
+        "Pozorrubio",
+        "Santo Tomas",
+        "Sison",
+        "City of Urdaneta",
+        "Villasis"
+      ]
+    },
+    {
+      "id": "leg:pangasinan:6th",
+      "number": 6,
+      "name": "Pangasinan 6th Legislative District",
+      "lgu_psgcs": [
+        "0105506000",
+        "0105507000",
+        "0105529000",
+        "0105531000",
+        "0105535000",
+        "0105536000",
+        "0105537000",
+        "0105539000",
+        "0105543000",
+        "0105544000"
+      ],
+      "representative_id": "house-6",
+      "board_member_ids": [
+        "board-6-1",
+        "board-6-2"
+      ],
+      "source_ids": [
+        "districts"
+      ],
+      "lgu_names": [
+        "Asingan",
+        "Balungao",
+        "Natividad",
+        "Rosales",
+        "San Manuel",
+        "San Nicolas",
+        "San Quintin",
+        "Santa Maria",
+        "Tayug",
+        "Umingan"
+      ]
+    }
+  ],
+  "pending_positions": [
+    {
+      "id": "pcl-president",
+      "position": "PCL President / Ex Officio Board Member",
+      "verification_status": "pending",
+      "source_ids": [
+        "board",
+        "user-provincial-context"
+      ],
+      "note": "Conflicting evidence: official board listing names Martin Raul S. Sision II; supplied research names Kimberly G. Bandarlipe. No current person confirmed."
+    }
+  ]
+}

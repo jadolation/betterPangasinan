@@ -22,6 +22,7 @@ from jsonschema import Draft202012Validator, FormatChecker
 from scripts.national_budget.pipeline import publication_payload
 from scripts.site_data import publication_payloads
 from scripts.lgu_profiles import publication_payloads as profile_payloads
+from scripts.home_snapshot import publication_payload as home_payload
 
 ROOT = Path(__file__).resolve().parent
 SRC_PAGES = ROOT / "src" / "pages"
@@ -227,6 +228,7 @@ def build(mode: str = "production", output: Path | None = None, data_dir: Path |
     data = load_data(data_dir or ROOT / "data" / ("fixtures" if mode == "test" else "production"), mode)
     national_budget = publication_payload(ROOT)
     supplemental = publication_payloads(ROOT, data, mode, data_dir)
+    supplemental["data/home-snapshot.json"] = home_payload(data, supplemental, national_budget)
     supplemental.update(profile_payloads(data, supplemental, national_budget))
     output = (output or ROOT / {"production": "public", "test": "test-public", "preview": "preview-public"}[mode]).resolve()
     if output == ROOT or ROOT in output.parents and output.parts[len(ROOT.parts)] in ("src", "data", "schemas", "tests", "assets", ".git", ".github", ".kilo") or output in ROOT.parents:

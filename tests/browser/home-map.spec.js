@@ -19,7 +19,9 @@ test('home map follows summary and searchable selector selects without navigatin
 
 test('dynamic profile instances share sources and preserve callback records', async ({ page }) => {
   const requests = [];
+  const leadershipRequests = [];
   page.on('request', request => { if (request.url().endsWith('/municipalities.geojson')) requests.push(request.url()); });
+  page.on('request', request => { if (request.url().endsWith('/government-leadership.json')) leadershipRequests.push(request.url()); });
   await page.goto('/');
   await expect(page.locator('#community-map [data-map-status]')).toContainText('48/48');
   const result = await page.evaluate(async () => {
@@ -39,4 +41,5 @@ test('dynamic profile instances share sources and preserve callback records', as
   expect(result.population).toBeGreaterThan(0);
   expect(result.geoHash).not.toBe(result.censusHash);
   expect(requests).toHaveLength(1);
+  expect(leadershipRequests).toHaveLength(1);
 });

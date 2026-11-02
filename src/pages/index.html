@@ -19,7 +19,7 @@ description: Explore local government information, public spending, and projects
   </div>
 </section>
 
-<section class="section section-alt" id="province-summary"><div class="wrap"><div class="section-head"><div class="section-eyebrow">Pangasinan, by the source</div><h2>One province. Every community.</h2></div><p data-province-status role="status">Loading the provincial overview.</p><div class="province-kpis" data-province-kpis></div><details class="province-source-details"><summary>Sources and reference dates</summary><p class="source-line" data-province-sources></p><a href="data/province-profile.json">Download the provincial reference data</a></details><div class="hero-actions"><a class="btn btn-primary" href="lgus.html">Explore LGU profiles</a><a class="btn btn-outline" href="municipality-map.html">Open the full map</a><a class="btn btn-outline" href="transparency.html">Follow the budget</a></div><noscript><p>Read the <a href="data/province-profile.json">provincial reference dataset</a> and <a href="data/lgus.json">LGU registry</a>.</p></noscript></div></section>
+<section class="section section-alt" id="province-summary"><div class="wrap"><div class="section-head"><div class="section-eyebrow">Pangasinan, by the source</div><h2>One province. Every community.</h2></div><p data-province-status role="status">Loading the provincial overview.</p><div class="province-kpis" data-province-kpis></div><details class="province-source-details"><summary>Sources and reference dates</summary><p class="source-line" data-province-sources></p><a href="data/province-profile.json">Download the provincial reference data</a></details><noscript><p>Read the <a href="data/province-profile.json">provincial reference dataset</a> and <a href="data/lgus.json">LGU registry</a>.</p></noscript></div></section>
 
 <section class="section home-municipality-map" id="community-map"><div class="wrap">
   <div class="section-head"><div class="section-eyebrow">Explore Pangasinan</div><h2>Find your city or municipality.</h2><p>Select a community to see its population, barangays and local information.</p></div>
@@ -29,72 +29,30 @@ description: Explore local government information, public spending, and projects
   <script src="assets/lgu-map.js" defer></script>
 </div></section>
 
-<section class="section">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="section-eyebrow">Start with your community</div>
-      <h2>A better-informed Pangasinan starts here.</h2>
-      <p>From our coastal communities to our agricultural heartland, public information should belong to everyone. Find your local government and explore the records behind the decisions.</p>
-    </div>
-    <form class="search-panel" action="lgus.html" role="search">
-      <label for="home-search">{{t:search.label}}</label>
-      <div class="search-row"><input id="home-search" name="q" type="search" placeholder="{{t:search.placeholder}}" autocomplete="off"><button class="btn btn-primary" type="submit">{{t:search.submit}} &rarr;</button></div>
-      <p>Looking at the bigger picture? <a href="lgus.html">Browse the LGU explorer</a></p>
-    </form>
+<section class="section home-snapshot home-transparency" id="transparency-snapshot"><div class="wrap">
+  <div class="home-snapshot-heading"><span class="section-eyebrow">Public records, with context</span><h2>Follow the public budget.</h2><p>Explore budget proposals, historical appropriations, and the records behind them.</p></div>
+  <div class="home-transparency-grid">
+    <a class="home-feature" href="national-budget.html"><span class="home-feature-index" aria-hidden="true">01</span><h3>2027 Budget Proposals</h3><p>Compare published national budget proposals.</p><span class="home-feature-metric" data-home-metric="budget" hidden></span></a>
+    <a class="home-feature" href="historical-budget.html"><span class="home-feature-index" aria-hidden="true">02</span><h3>Historical Budgets</h3><p>Explore national appropriations from 2020-2026.</p><span class="home-feature-metric" data-home-metric="historical" hidden></span></a>
+    <a class="home-feature" href="budget-hearings.html"><span class="home-feature-index" aria-hidden="true">03</span><h3>Budget Hearings</h3><p>Explore documented discussions and source videos.</p><span class="home-feature-metric" data-home-metric="hearings" hidden></span></a>
+    <a class="home-feature" href="finances.html"><span class="home-feature-index" aria-hidden="true">04</span><h3>Local Public Finances</h3><p>Find available local financial records.</p><span class="home-feature-metric" data-home-metric="finances" hidden></span></a>
   </div>
-</section>
+  <div class="home-snapshot-actions"><a class="btn btn-primary" href="transparency.html">Explore Transparency</a><a href="national-budget.html">View 2027 Budget</a></div>
+  <p class="home-snapshot-note">Budget proposals and appropriations are not actual spending. <a href="methodology.html#national-budget-methodology">About the sources</a>.</p>
+</div></section>
 
-<section class="section section-alt">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="section-eyebrow">Follow the information</div>
-      <h2>Your province, in perspective.</h2>
-    </div>
-    <div class="grid grid-3">
-      <div class="card">
-        <div class="medallion" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M2.5 12S6 6 12 6s9.5 6 9.5 6-3.5 6-9.5 6S2.5 12 2.5 12z"/>
-            <circle cx="12" cy="12" r="3"/>
-          </svg>
-        </div>
-        <span class="feature-number">01 / YOUR COMMUNITY</span>
-        <h3>Explore My LGU</h3>
-        <p>A single place for local government profiles, source documents, services, and public information.</p>
-        <a class="card-link" href="lgus.html">Find a local government &rarr;</a>
-      </div>
-      <div class="card card--gold">
-        <div class="medallion" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="9 7 4 12 9 17"/>
-            <polyline points="15 7 20 12 15 17"/>
-          </svg>
-        </div>
-        <span class="feature-number">02 / PUBLIC SPENDING</span>
-        <h3>Where Does Public Money Go?</h3>
-        <p>Compare national budget proposals and reported local budget observations. Proposed amounts are not actual spending.</p>
-        <a class="card-link" href="transparency.html">Explore transparency data &rarr;</a>
-      </div>
-      <div class="card card--brown">
-        <div class="medallion" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="8" cy="10" r="3.4"/>
-            <circle cx="16" cy="10" r="3.4"/>
-            <path d="M3.5 19c.8-3 3-4.6 4.5-4.6s3.7 1.6 4.5 4.6"/>
-            <path d="M11.5 19c.8-3 3-4.6 4.5-4.6s3.7 1.6 4.5 4.6"/>
-          </svg>
-        </div>
-        <span class="feature-number">03 / PLACES &amp; PROJECTS</span>
-        <h3>Pangasinan Municipality Map</h3>
-        <p>Select a municipality, inspect source-linked population data, and check geographic coverage and boundary dates.</p>
-        <a class="card-link" href="municipality-map.html">Open the municipality map &rarr;</a>
-      </div>
-    </div>
+<section class="section home-snapshot home-government" id="government-snapshot"><div class="wrap home-government-layout">
+  <div class="home-snapshot-heading"><span class="section-eyebrow">Your government, closer</span><h2>Find the public information you need.</h2><p>Explore government offices, public services, and contacts across Pangasinan.</p><div class="home-snapshot-actions"><a class="btn btn-primary" href="government.html">Explore Government</a><a href="hospitals.html">Hospitals &amp; Emergency</a></div><p class="home-snapshot-note"><a href="https://www.pangasinan.gov.ph/" rel="noopener noreferrer">Official provincial website</a> / <a href="volunteer.html">Get involved</a></p></div>
+  <div class="home-government-grid">
+    <a class="home-government-feature" href="government.html"><svg class="home-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 9l9-6 9 6H3zm2 2v8m7-8v8m7-8v8M3 21h18"/></svg><div><h3>Government Offices</h3><p>Find provincial offices and public contact information.</p></div></a>
+    <a class="home-government-feature" href="hospitals.html"><svg class="home-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 21V4h14v17M3 21h18M12 7v6m-3-3h6m-5 11v-5h4v5"/></svg><div><h3>Hospitals &amp; Emergency</h3><p>Find hospitals, emergency contacts, and public assistance.</p></div></a>
+    <a class="home-government-feature" href="services.html"><svg class="home-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h14v17H5zM9 2h6v4H9zm-1 9h8m-8 4h8"/></svg><div><h3>Public Services</h3><p>Explore available services and where to request them.</p><span class="home-feature-metric" data-home-metric="services" hidden></span><small data-home-services-status></small></div></a>
+    <a class="home-government-feature" href="lgus.html"><svg class="home-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 10l9-7 9 7M5 9v12h14V9m-10 12v-7h6v7"/></svg><div><h3>Your Local Government</h3><p>Explore information about your city or municipality.</p><span class="home-feature-metric" data-home-metric="lgus" hidden></span></div></a>
   </div>
-</section>
+</div></section>
 
-<section class="section"><div class="wrap editorial-grid">
-  <div><div class="section-eyebrow">Public knowledge, open to all</div><h2>Useful information.<br>Without the runaround.</h2><p>For residents asking questions, students doing research, and communities working toward better governance.</p><a class="btn btn-outline" href="projects.html">All transparency tools &rarr;</a></div>
+<section class="section home-public-knowledge" id="public-knowledge"><div class="wrap editorial-grid">
+  <div><div class="section-eyebrow">Public knowledge, open to all</div><h2>Useful information.<br>Without the runaround.</h2><p>For residents asking questions, students doing research, and communities working toward better governance.</p><a class="btn btn-outline" href="projects.html">Explore all public resources &rarr;</a></div>
   <div class="resource-list">
     <a href="legislation.html"><span><strong>Legislation &amp; governance</strong><small>Policies, ordinances, and public documents</small></span><span aria-hidden="true">&rarr;</span></a>
     <a href="hospitals.html"><span><strong>Hospitals and emergency services</strong><small>Directory-listed contacts and original public sources</small></span><span aria-hidden="true">&rarr;</span></a>
@@ -102,9 +60,5 @@ description: Explore local government information, public spending, and projects
     <a href="procurement.html"><span><strong>Procurement &amp; contracts</strong><small>Follow the links from procurement to projects</small></span><span aria-hidden="true">&rarr;</span></a>
   </div>
 </div></section>
-<section class="section section-alt"><div class="wrap grid grid-2">
-  <div><div class="section-eyebrow">Published collections</div><h2>Sources before headlines.</h2><div class="resource-list"><a href="lgus.html">PSA city and municipality registry</a><a href="national-budget.html">FY2027 national budget comparisons</a><a href="government.html">Government offices and provincial reference observations</a><a href="history.html">History and cultural information</a></div></div>
-  <div><div class="section-eyebrow">Coverage &amp; methodology</div><h2>Know what you are looking at.</h2><p>Coverage grows as records are collected and checked. Information not yet in this portal does not mean a local government has failed to publish it.</p><a class="card-link" href="methodology.html">How we handle public information &rarr;</a><a class="card-link" href="https://www.pangasinan.gov.ph/" target="_blank" rel="noopener noreferrer">Visit the official provincial website &nearr;</a></div>
-</div></section>
-<section class="community-band"><div class="wrap"><div><span class="section-eyebrow">Built in the public interest</span><h2>A better province is a shared effort.</h2><p>Bring your curiosity, local knowledge, or technical skills.</p></div><a class="btn btn-primary" href="volunteer.html">Join the Movement &rarr;</a></div></section>
 <script src="assets/province.js" defer></script>
+<script src="assets/home-snapshot.js" defer></script>

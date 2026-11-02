@@ -6,6 +6,7 @@ test('map separates preview and selection and provides explicit profile links', 
   await expect(page.locator('svg a')).toHaveCount(48);
   await expect(page.locator('[data-map-list] a')).toHaveCount(48);
   await expect(page.locator('svg [data-selected]')).toHaveCount(0);
+  await expect(page.getByRole('button', { name: 'Municipalities', exact: true })).toHaveAttribute('aria-pressed', 'true');
   const boundary = page.locator('svg a[data-psgc="0105516000"]');
   await boundary.focus();
   await expect(page.locator('[data-map-detail]')).toContainText('Burgos');

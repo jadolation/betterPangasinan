@@ -1,5 +1,8 @@
 .municipality-map{--map-blue:var(--blue-deep,#01407F);--map-gold:var(--gold,#FBC711);min-width:0;font-family:var(--font-display)}
 .municipality-map *{box-sizing:border-box}
+.municipality-map-toggle{display:flex;gap:.35rem;min-height:44px;flex-wrap:wrap}.municipality-map-toggle[hidden]{display:none}
+.municipality-map-toggle button{min-height:44px;padding:.5rem .6rem;border:1px solid var(--map-blue);border-radius:.3rem;background:#fff;color:var(--map-blue);font:inherit;font-size:14px;font-weight:700;cursor:pointer}
+.municipality-map-toggle button[aria-pressed=true]{background:var(--map-blue);color:#fff}.municipality-map-toggle button:focus-visible{outline:3px solid var(--map-gold);outline-offset:2px}
 .municipality-map-controls{display:grid;grid-template-columns:1fr 1fr;gap:.5rem 1rem;margin:1.5rem 0}
 .municipality-map-controls label{font-weight:700;color:var(--map-blue)}
 .municipality-map-controls label:first-child{grid-column:1;grid-row:1}

@@ -18,11 +18,21 @@
   function unique(rows) { const seen = new Set(); return rows.filter(row => { const key = row.id || JSON.stringify(row); if (seen.has(key)) return false; seen.add(key); return true; }); }
   function aggregate(lgu, graph, extra) {
     const arrays = ['statistics', 'budget_observations', 'planning_records', 'government', 'hospitals', 'barangays', 'sources'];
-    const valid = extra && extra.schema_version === 1 && extra.lgu_id === lgu.id && extra.psgc === (lgu.psgc ?? null) &&
+    let valid = extra && extra.schema_version === 1 && extra.lgu_id === lgu.id && extra.psgc === (lgu.psgc ?? null) &&
       arrays.every(key => Array.isArray(extra[key]) && extra[key].every(row => row && typeof row === 'object' && !Array.isArray(row))) &&
       extra.barangays.every(row => row.parent_psgc === lgu.psgc && typeof row.name === 'string') &&
       (extra.barangay_count === null || (Number.isSafeInteger(extra.barangay_count) && extra.barangay_count === extra.barangays.length)) &&
       Array.isArray(extra.national?.verified) && Array.isArray(extra.national?.discovery) && Array.isArray(extra.historical?.discovery) ? extra : null;
+    if (valid?.legislative) {
+      const district = valid.legislative.district;
+      const representative = valid.legislative.representative;
+      const board = valid.legislative.board_members;
+      if (!district || typeof district.id !== 'string' || typeof district.name !== 'string' || !Number.isInteger(district.number) || district.number < 1 || district.number > 6 ||
+          !representative || representative.role_type !== 'house_representative' || representative.district_id !== district.id ||
+          !Array.isArray(board) || board.length !== 2 || board.some(person => !person || person.role_type !== 'board_member' || person.district_id !== district.id) || new Set(board.map(person => person.id)).size !== 2 ||
+          [representative, ...(Array.isArray(board) ? board : [])].some(person => typeof person.id !== 'string' || typeof person.display_name !== 'string') ||
+          !Array.isArray(valid.legislative.sources)) valid = { ...valid, legislative: null };
+    }
     const local = key => unique((graph[key] || []).filter(row => published(row) && linked(row, lgu)));
     const entities = local('entities');
     const localEntityIds = new Set(entities.map(row => row.id));
@@ -148,8 +158,27 @@
   }
   function renderGovernment(model) {
     const target = byId('government'); target.replaceChildren();
+    const legislative = model.extra?.legislative;
+    if (legislative) {
+      target.append(el('h3', legislative.district.name));
+      const map = el('a', 'Explore this legislative district'); map.href = `municipality-map.html?view=districts&district=${encodeURIComponent(legislative.district.id)}`;
+      const action = el('p'); action.append(map); target.append(action);
+      const grid = el('div', undefined, 'lgu-representatives');
+      for (const official of [legislative.representative, ...legislative.board_members]) {
+        const card = el('article', undefined, 'lgu-record');
+        card.append(el('p', official.role_type === 'house_representative' ? 'Congressional representative' : 'Provincial board member', 'lgu-caption'), el('h4', official.display_name));
+        const link = el('a', 'Profile and official sources'); link.href = `government.html?official=${encodeURIComponent(official.id)}#provincial-leadership`; card.append(link); grid.append(card);
+      }
+      target.append(grid, el('p', 'District membership does not show who requested or controlled a project.', 'lgu-caption'));
+      const source = el('details'); source.append(el('summary', 'District sources and reference dates'));
+      for (const item of legislative.sources) {
+        if (!item || typeof item.url !== 'string') continue;
+        const p = el('p', `${item.publisher} / ${typeof item.retrieved_at === 'string' ? item.retrieved_at.slice(0, 10) : 'Date not supplied'}`); const link = sourceLink(item.url); if (link) p.append(document.createTextNode(' / '), link); source.append(p);
+      }
+      source.append(el('p', legislative.metadata?.house_verification || 'See each official source for its reference date.')); target.append(source);
+    }
     const rows = [...model.government, ...model.services, ...model.hospitals];
-    if (!rows.length) return empty(target, 'No offices, services or facilities are explicitly linked to this LGU in this collection.', 'government.html', 'Browse the provincial government directory');
+    if (!rows.length) return empty(target, legislative ? 'No additional local office or service records are linked in this collection.' : 'No offices, services or facilities are explicitly linked to this LGU in this collection.', 'government.html', 'Browse the provincial government directory');
     target.append(el('p', 'Officeholders and contacts are source-listed; current terms and availability are not inferred.', 'lgu-caption'));
     for (const row of rows) {
       const card = el('article', undefined, 'lgu-record');
@@ -217,7 +246,7 @@
       if (lgu.psgc) { const a = el('a', 'Open the full municipality map'); a.href = `municipality-map.html?psgc=${encodeURIComponent(lgu.psgc)}`; const p = el('p'); p.append(a); byId('overview').append(p); }
       let mapReady = Promise.resolve();
       if (lgu.psgc && window.createMunicipalityMap) mapReady = window.createMunicipalityMap({ container: byId('map'), mode: 'profile', selectedPsgc: lgu.psgc,
-        onSelect: row => { if (row && row.psgc !== lgu.psgc) location.href = `lgu.html?id=${encodeURIComponent(row.id)}`; } }).ready;
+        onSelect: row => { if (row?.psgc && row.psgc !== lgu.psgc) location.href = `lgu.html?id=${encodeURIComponent(row.id)}`; } }).ready;
       else byId('map').textContent = 'A linked municipality geometry is not available.';
       renderStatistics(model); renderBarangays(model); renderFinances(model); renderProjects(model); renderGovernment(model); renderSources(model);
       function activeSection() {

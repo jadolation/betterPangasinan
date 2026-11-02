@@ -1,0 +1,18 @@
+{
+  "government": {
+    "local_governments": 48,
+    "service_records": 0
+  },
+  "reference_dates": {
+    "fy2027_retrieved_at": "2026-11-01T08:27:05.020579Z",
+    "historical_collected_at": null
+  },
+  "schema_version": 1,
+  "transparency": {
+    "budget_2027_records": 732,
+    "hearing_topics": 3,
+    "historical_programs": 3821,
+    "local_budget_observations": 15,
+    "local_finance_records": 0
+  }
+}

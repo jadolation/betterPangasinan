@@ -50,9 +50,11 @@ html { scroll-behavior: auto; }
 .lgu-record { padding: 14px 0; border-bottom: 1px solid var(--line); }
 .lgu-record h4 { font-size: 16px; margin-bottom: 6px; }
 .lgu-record > p { margin-block: 6px; }
+.lgu-representatives { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; }
 .lgu-profile pre { white-space: pre-wrap; overflow-wrap: anywhere; background: var(--bg); padding: 14px; max-height: 24rem; overflow: auto; font: 12px/1.6 ui-monospace, Consolas, monospace; }
 .lgu-profile :is(a, button, input, select, summary):focus-visible { outline: 3px solid var(--gold-ink); outline-offset: 3px; }
 .lgu-profile-shortcut { padding: 14px 20px; border-left: 3px solid var(--blue-deep); margin-block: 16px; background: var(--paper); font: 15px/1.5 var(--font-display); }
 @media (max-width: 760px) { .lgu-profile-header { display: block; } .lgu-profile-header label { display: block; margin-top: 20px; min-width: 0; } .lgu-kpis { grid-template-columns: repeat(2, minmax(0,1fr)); } .lgu-overview-grid { grid-template-columns: 1fr; } .lgu-barangays { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (max-width: 760px) { .lgu-representatives { grid-template-columns: 1fr; } }
 @media (max-width: 380px) { .lgu-kpi { padding: 12px; } .lgu-kpi strong { font-size: 24px; } }
 @media (max-width: 1000px) { .lgu-kpis { grid-template-columns: repeat(2, minmax(0,1fr)); } }

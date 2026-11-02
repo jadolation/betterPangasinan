@@ -19,7 +19,7 @@ test('statistics publishes all research and accessible census chart', async ({ p
   await page.locator('input[name=q]').fill('Total population');
   await expect(page.locator('[data-status]')).toContainText(`${expectedMatches.length} source-backed`);
   await expect(page.locator('[data-results] .pr-record')).toHaveCount(expectedMatches.length);
-  await page.getByRole('button', { name: 'Clear', exact: true }).click();
+  await page.locator('[data-reference]').getByRole('button', { name: 'Clear', exact: true }).click();
   await expect(page.locator('[data-status]')).toContainText('78 source-backed');
 });
 
@@ -164,7 +164,7 @@ test('budget evidence filters retain proposal and partial-operative qualificatio
   await expect(page).toHaveURL(/year=2027/);
   await page.reload();
   await expect(page.getByLabel('Budget year', { exact: true })).toHaveValue('2027');
-  await page.getByRole('button', { name: 'Clear', exact: true }).click();
+  await page.locator('[data-reference]').getByRole('button', { name: 'Clear', exact: true }).click();
   await page.locator('select[name=collection]').selectOption('Budget observations');
   await page.getByLabel('Budget type', { exact: true }).selectOption('annual');
   await page.locator('input[name=q]').fill('Sual');
