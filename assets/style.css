@@ -353,6 +353,25 @@ p {
   position: relative;
 }
 
+/* Interior and dashboard heroes share the homepage's decorative wave. */
+.page-hero::after,
+.wave-hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 70px;
+  background: url("hero-wave.svg") center bottom / 100% 100% no-repeat;
+  pointer-events: none;
+}
+.page-hero > .hero-divider { display: none; }
+.wave-hero { position: relative; background: var(--blue-deep); color: #fff; padding: 32px 0 80px; }
+.wave-hero h1 { color: #fff; font-size: clamp(27px, 3.6vw, 38px); margin-bottom: 12px; }
+.wave-hero p { color: #e3ecf8; max-width: 76ch; margin-bottom: 0; }
+.wave-hero a { color: var(--gold); }
+.wave-hero :focus-visible { outline-color: var(--gold); }
+
 .page-hero .wrap {
   padding: 52px 24px 86px;
   position: relative;

@@ -1,11 +1,11 @@
 /* Dashboard presentation; shared brand tokens are defined in style.css. */
 html { scroll-behavior: auto; }
-.national-budget { padding: 28px 0 56px; }
-.nb-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.national-budget { padding: 0 0 56px; }
+.nb-header-content { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .nb-header h1 { font-size: clamp(28px, 3.2vw, 42px); max-width: 23ch; margin: 10px 0; }
 .national-budget .nb-header h1 { font-size: clamp(28px, 2.5vw, 40px); max-width: none; }
 .nb-header p { margin-bottom: 0; }
-.nb-asof { max-width: 230px; color: var(--ink-soft); font-size: 13px; }
+.nb-asof { max-width: 230px; color: #e3ecf8; font-size: 13px; }
 #nb-status { font-size: 13px; color: var(--ink-soft); margin: 14px 0; }
 .nb-essential { font-size: 14px; margin-bottom: 24px; }
 .national-budget .tp-kpis { grid-template-columns: repeat(4, minmax(0, 1fr)); }
@@ -93,8 +93,8 @@ html { scroll-behavior: auto; }
 .nb-definition-list dd { margin: 0; overflow-wrap: anywhere; }
 @media (max-width: 900px) { .nb-primary-filters { grid-template-columns: repeat(3, minmax(0, 1fr)); } .nb-primary-filters > label:first-child { grid-column: 1 / -1; } }
 @media (max-width: 767px) {
-  .national-budget { padding-top: 20px; }
-  .nb-header { display: block; }
+  .national-budget { padding-top: 0; }
+  .nb-header-content { display: block; }
   .nb-asof { max-width: none; margin-top: 12px !important; }
   .national-budget .tp-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .nb-comparisons, .nb-office-grid { grid-template-columns: 1fr; }

@@ -56,8 +56,9 @@
 
 <main id="main-content" tabindex="-1">
 <link rel="stylesheet" href="assets/historical-budget.css">
-<section class="hb" id="historical-budget">
-  <header><p class="hb-kicker">Budget evidence / GAA FY2020-2026</p><h1>Historical appropriations</h1><p>Seven enacted budgets, viewed one fiscal year at a time. Appropriations are authority to spend, <strong>not actual spending</strong>.</p></header>
+<section class="hb hb-with-hero" id="historical-budget">
+  <header class="wave-hero"><div class="wrap"><p class="hb-kicker">Budget evidence / GAA FY2020-2026</p><h1>Historical appropriations</h1><p>Seven enacted budgets, viewed one fiscal year at a time. Appropriations are authority to spend, <strong>not actual spending</strong>.</p></div></header>
+  <div class="wrap hb-body">
   <p class="hb-note">Program-name matches, not verified locations or a provincial total. No match does not mean no funding.</p>
   <details><summary>How to read these matches</summary><p>These are program-name search matches, not verified Pangasinan locations or a provincial budget total. Shared allocations and similarly named places outside the province may appear. No match does not mean no funding. FY2027 proposals are never added to this series.</p></details>
   <p id="hb-status" role="status" aria-live="polite">Loading locally reviewed snapshot. Missing data is not zero.</p>
@@ -75,6 +76,7 @@
     <section><h2>Coverage and sources</h2><p id="hb-coverage-summary"></p><details><summary>Collection coverage and source qualifications</summary><p>Amounts retain the source's integer pesos, without multiplying by thousands. The API zero-fills absent source years; source counts can also carry a family forward at zero. Renamed programs remain separate families. Family identifiers are namespaced by department, with overlapping queries reconciled once.</p><div class="hb-scroll"><table><caption>Every attempted department and query, including no matches and errors</caption><thead><tr><th>Department</th><th>Query</th><th>Matched</th><th>Fetched</th><th>Coverage</th></tr></thead><tbody id="hb-coverage"></tbody></table></div></details><details><summary>Retrieval dates, checksums and review metadata</summary><pre id="hb-sources"></pre></details></section>
   </div>
   <noscript><p>JavaScript is needed for filtering. Download the <a href="data/historical-budget/programs.json">programs JSON</a>, <a href="data/historical-budget/coverage.json">coverage</a> and <a href="data/historical-budget/manifest.json">source manifest</a>.</p></noscript>
+  </div>
 </section>
 <script src="assets/historical-budget.js" defer></script>
 </main>

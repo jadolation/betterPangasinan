@@ -1,4 +1,6 @@
 .hb{max-width:1200px;margin:2rem auto;padding:0 1rem;color:var(--ink,#13202c);font-family:var(--font-display,sans-serif)}
+.hb.hb-with-hero{max-width:none;margin:0;padding:0}.hb-with-hero>.hb-body{padding-top:24px;padding-bottom:40px}
+.hb .wave-hero h1{color:#fff;font-size:clamp(27px,3.6vw,38px)}.hb .wave-hero .hb-kicker{color:var(--gold,#FBC711)}.hb .wave-hero a{color:var(--gold,#FBC711)}
 .hb h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.1}.hb h2{font-size:1.45rem;color:var(--blue-deep,#01407f)}
 .hb .hb-kicker{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-deep,#01407f)}
 .hb nav{display:flex;flex-wrap:wrap;gap:1.3rem;margin:1.5rem 0}.hb a{color:var(--blue-deep,#01407f);text-decoration:underline}

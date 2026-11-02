@@ -52,15 +52,15 @@ html:not(.js) :is(.section-nav, [data-local-section-nav]) { position: static; }
   padding-bottom: 48px;
 }
 .transparency .tp-header {
-  background: var(--paper);
-  color: var(--blue-deep);
-  border-bottom: 1px solid var(--line);
-  padding: 28px 0 22px;
+  background: var(--blue-deep);
+  color: #fff;
+  border-bottom: 0;
+  padding: 32px 0 80px;
 }
 .transparency .tp-header h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 12px; }
 .transparency .tp-header p { max-width: 76ch; }
 .transparency .tp-eyebrow {
-  color: var(--ink-soft);
+  color: var(--gold);
   font-size: .78rem;
   font-weight: 700;
   letter-spacing: .08em;

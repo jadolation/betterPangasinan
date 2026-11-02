@@ -56,12 +56,14 @@
 
 <main id="main-content" tabindex="-1">
 <link rel="stylesheet" href="assets/historical-budget.css">
-<section class="hb" id="budget-context" data-context="hearings">
-  <header><p class="hb-kicker">Budget evidence / Deliberations</p><h1>Pangasinan in budget hearings</h1><p>A source index into what was said, with timestamped moments for verification.</p></header>
+<section class="hb hb-with-hero" id="budget-context" data-context="hearings">
+  <header class="wave-hero"><div class="wrap"><p class="hb-kicker">Budget evidence / Deliberations</p><h1>Pangasinan in budget hearings</h1><p>A source index into what was said, with timestamped moments for verification.</p></div></header>
+  <div class="wrap hb-body">
   <p class="hb-note">Verify machine transcripts against the linked video. Hearing statements do <strong>not</strong> establish approved funding.</p>
   <details><summary>Transcript and funding limitations</summary><p>Machine transcripts can misidentify speakers, places and figures. Verify the linked video before quoting. A request, commitment, topic status or hearing statement does <strong>not</strong> establish budget approval, an appropriation or spending. Search matches are not verified geography.</p></details>
   <p id="bc-status" role="status">Loading reviewed local hearing index.</p><div id="bc-content"></div>
   <noscript><a href="data/budget-hearings.json">Download hearing topics, source dates and timestamp links</a></noscript>
+  </div>
 </section>
 <script src="assets/budget-context.js" defer></script>
 </main>
