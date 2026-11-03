@@ -1,0 +1,16 @@
+# Collector + existing read-only P0 adapters and verification tools.
+pydantic==2.12.3
+PyYAML==6.0.3
+openpyxl==3.1.5
+SQLAlchemy==2.0.44
+greenlet==3.2.4
+httpx==0.28.1
+alembic==1.17.1
+psycopg[binary]==3.2.12
+jsonschema==4.26.0
+Shapely==2.2.0
+pyproj==3.7.2
+pytest==9.2.0
+ruff==0.14.3
+mypy==1.18.2
+types-PyYAML==6.0.12.20250915

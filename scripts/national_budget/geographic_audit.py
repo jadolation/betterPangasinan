@@ -214,7 +214,7 @@ def publication_payload(root, projects, manifest):
                 flags.append("invalid_or_missing_coordinate_pair")
             distance = None
             if start is not None and end is not None:
-                distance = GEOD.inv(*start, *end)[2] / 1000
+                distance = 0.0 if start == end else GEOD.inv(*start, *end)[2] / 1000
                 if start == end:
                     flags.append("identical_endpoints")
                 if distance > 200:

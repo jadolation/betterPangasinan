@@ -10,3 +10,6 @@ data/lgu-profiles/
 data/project-locations/
 data/national_budget/raw/
 data/national_budget/review/
+.mypy_cache/
+.ruff_cache/
+data/raw/

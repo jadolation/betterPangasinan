@@ -1,0 +1,24 @@
+source_id: psa_psgc
+agency: Philippine Statistics Authority
+enabled: false
+access_review: pending
+redistribution_review: pending
+start_url: null
+allowed_hosts:
+  - psa.gov.ph
+  - www.psa.gov.ph
+allowed_paths: []
+format: xlsx
+mapping_version: synthetic_psgc_v1
+source_title: PSGC source pending endpoint and release review
+source_published_at: null
+reference_period: null
+release: null
+last_reviewed_at: null
+license_evidence: null
+timeout_seconds: 30
+retries: 3
+download_delay_seconds: 2
+max_download_bytes: 25000000
+auto_publish: false
+requires_human_review: true

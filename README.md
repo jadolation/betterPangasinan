@@ -482,3 +482,12 @@ Never sum repeated pagination aggregates, office and geographic views, different
 House readings or overlapping municipal views. The initial Mapandan capture is
 a regression fixture only: PHP 49 million NEP, PHP 49 million House, zero change,
 with the Amanoaoac source warning preserved, never a PHP 98 million budget.
+
+## Offline P0 Collector And Review
+
+The new collector stages synthetic PSGC fixtures with original evidence, immutable
+versions, validation and review-only JSON/CSV exports. `review-p0` reuses existing
+LGU, barangay and approved FY2027 evidence without changing publication inputs.
+Live source collection stays disabled; official release, population evidence and
+license gaps remain explicit. Setup, commands, output locations and PostgreSQL
+instructions: [P0 collector guide](docs/collector.md).

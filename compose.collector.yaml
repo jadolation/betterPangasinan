@@ -1,0 +1,49 @@
+# Isolated development database. Never supply production website credentials.
+services:
+  staging-db:
+    image: postgis/postgis:16-3.5
+    platform: linux/amd64
+    environment:
+      POSTGRES_DB: collector
+      POSTGRES_USER: collector
+      POSTGRES_PASSWORD: collector_local_only
+    ports:
+      - "127.0.0.1:55432:5432"
+    volumes:
+      - collector-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U collector -d collector"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  collector:
+    build:
+      context: .
+      dockerfile: Dockerfile.collector
+    network_mode: none
+    read_only: true
+    tmpfs:
+      - /tmp
+    volumes:
+      - ./data/staging:/app/data/staging
+    profiles: ["offline"]
+  practice:
+    build:
+      context: .
+      dockerfile: Dockerfile.collector
+    entrypoint: ["python", "-m", "collector.practice"]
+    command: ["--help"]
+    profiles: ["practice"]
+    read_only: true
+    cap_drop: ["ALL"]
+    security_opt: ["no-new-privileges:true"]
+    tmpfs:
+      - /tmp
+    volumes:
+      - ./data/staging:/app/data/staging
+    networks: ["practice"]
+networks:
+  practice:
+    driver: bridge
+volumes:
+  collector-db:
