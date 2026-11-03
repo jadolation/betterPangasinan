@@ -333,16 +333,36 @@ does not claim that a point is offshore solely because it is outside Pangasinan.
 Required dependencies are declared in `requirements.txt`.
 
 The Leaflet 1.9.4 map is self-hosted under `assets/leaflet/`, with its BSD 2-Clause
-license retained in the JavaScript header and source license file. EPSG:4326
-avoids silently clamping valid polar latitudes. Local boundaries and geographic
-grid labels provide a basemap-free view; there are no tile or routing requests.
-Exact-coordinate OpenStreetMap links contact that provider only when clicked.
-Existing site webfonts retain their separate external-font behavior.
+license retained in the JavaScript header and source license file. The default
+Web Mercator (EPSG:3857) view uses standard OpenStreetMap background tiles. Provider
+URL, attribution and viewport-only loading options are centralized in
+`assets/project-map-config.js`. Normal browser caching and referring-origin
+information are retained; no offline download, tile proxy, bulk cache, route
+lookup or road snapping is implemented. Evaluate an explicitly licensed hosted
+provider before substantial traffic; OSM's community servers have no availability
+guarantee. Read `privacy.html#map-privacy` and the OSM tile-usage policy.
+
+Choose No basemap to stop new tile requests. Basemap and boundary failures do not
+remove valid source markers or connections. A missing boundary overlay uses an
+approximate overview viewport, not invented project locations or a claim of
+administrative consistency. An actually mismatched supplied boundary hash still
+fails integrity validation. Thin, nearly transparent municipal overlays preserve
+roads and labels beneath them. Program and suspicious-layer controls change only
+visibility, not records or classifications.
+
+Latitudes beyond Web Mercator's supported range remain in source evidence and
+are not drawn at a clamped latitude. The explicit global-coordinate inspection
+switch rebuilds a tile-free EPSG:4326 view for those exceptional coordinates.
+The normal OSM view has no artificial coordinate grid. Source values, hashes and
+the geographic audit are identical in either projection.
 
 The initial viewport fits Pangasinan only. All matching usable source locations,
 including distant suspicious points, remain in their original layers. Selecting
-a record fits its actual endpoints; Go to published location and Pangasinan
-overview never snap or replace coordinates. Dashed lines are endpoint
+a record opens its first usable source point; View Start, View End and View Both
+navigate the active segment without changing source values. Suspicious-location
+search expands to all programs and clears incompatible search/municipality/
+comparison filters, without fitting the viewport to outliers. Pangasinan Overview
+preserves selection and filters; Reset View explicitly clears them. Dashed lines are endpoint
 connections, not road centerlines, driving routes or construction evidence.
 Outside-province namesakes are distinguished from inconsistent Pangasinan claims.
 No source coordinate is moved or omitted merely to make it look plausible.
@@ -352,6 +372,16 @@ bytes and municipality boundary bytes. The browser checks those bindings, the
 coordinate-file checksum and complete feature/segment consistency. Stale or
 altered evidence fails closed. The list remains available if Leaflet or the
 boundary reference cannot load; errors are never substituted with zero funding.
+
+The committed Bolinao bridge (`dpwh:house-reading:6548`) has one structured API
+point at longitude 119.92525, latitude 6.38299. Its second coordinate-like pair
+appears only in title text; no second endpoint or bridge connection is invented.
+The source audit found 142 DPWH point records, no explicitly structured DPWH
+endpoint pairs/alignments, and 70 records with chainages that are not geographic
+coordinates. All 32 source FMR connections remain. The existing output retains
+206 Points and 32 LineStrings across 174 projects; source records total 732.
+Automated browser tests route OSM tiles to controlled PNG fixtures, including
+manually created contexts, so regression runs never crawl public tile servers.
 
 `national-budget.html` is a separate FY2027 proposal explorer. It does not insert
 national proposals into the existing 12 production datasets or their totals.

@@ -1,4 +1,4 @@
-const { test, expect } = require('@playwright/test');
+const { test, expect } = require('./tile-fixture');
 const dagupan = 'lgu-0105518000';
 const mapandan = 'lgu-0105528000';
 

@@ -1,4 +1,4 @@
-const { test, expect } = require('@playwright/test');
+const { test, expect } = require('./tile-fixture');
 
 test('homepage derives provincial KPIs and preserves the original hero', async ({ page }) => {
   await page.goto('/');

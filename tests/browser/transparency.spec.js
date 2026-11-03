@@ -1,4 +1,4 @@
-const { test, expect } = require('@playwright/test');
+const { test, expect } = require('./tile-fixture');
 const { createHash } = require('node:crypto');
 
 const localData = () => Object.fromEntries(['finances', 'projects', 'procurements', 'contracts', 'geography', 'legislation', 'documents', 'services', 'statistics'].map(name => [name, []]));

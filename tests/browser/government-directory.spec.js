@@ -1,4 +1,4 @@
-const { test, expect } = require('@playwright/test');
+const { test, expect } = require('./tile-fixture');
 
 test('government directory separates leadership, board, House and pending evidence', async ({ page }) => {
   await page.goto('/government.html');

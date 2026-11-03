@@ -1,4 +1,4 @@
-const { test, expect } = require('@playwright/test');
+const { test, expect } = require('./tile-fixture');
 
 test('fourth district selects exactly five existing polygons and preserves independent selections', async ({ page, request }) => {
   const response = await request.get('/data/government-leadership.json');

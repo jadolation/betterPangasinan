@@ -1,4 +1,4 @@
-const { test, expect } = require('@playwright/test');
+const { test, expect } = require('./tile-fixture');
 
 const labels = ['Overview', '2027 Projects', 'Project Locations', 'Historical Budgets', 'Offices & Districts', 'Context', 'Hearings', 'Local Finances', 'About'];
 

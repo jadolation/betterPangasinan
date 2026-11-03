@@ -1,4 +1,4 @@
-const { test, expect } = require('@playwright/test');
+const { test, expect } = require('./tile-fixture');
 const { readdirSync } = require('node:fs');
 const { join } = require('node:path');
 
@@ -72,6 +72,7 @@ test('homepage links resolve and LGU discovery continues through the directory',
   for (const url of links) expect((await request.get(url)).status(), url).toBe(200);
   await expect(page.locator('#home-search')).toHaveCount(0);
   await page.locator('#government-snapshot a[href="lgus.html"]').click();
+  await expect(page.locator('#lgu-results article')).toHaveCount(12);
   await page.locator('#lgu-query').fill('NoSuchMunicipality');
   await expect(page).toHaveURL(/lgus\.html\?q=NoSuchMunicipality/);
   await expect(page.locator('#lgu-query')).toHaveValue('NoSuchMunicipality');

@@ -1,4 +1,4 @@
-const { test, expect } = require('@playwright/test');
+const { test, expect } = require('./tile-fixture');
 
 test('homepage has the exact six-section journey and no obsolete blocks', async ({ page }) => {
   await page.goto('/');

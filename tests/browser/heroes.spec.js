@@ -1,4 +1,4 @@
-const { test, expect } = require('@playwright/test');
+const { test, expect } = require('./tile-fixture');
 const { readdirSync, readFileSync } = require('node:fs');
 const path = require('node:path');
 
