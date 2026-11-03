@@ -1,6 +1,7 @@
 """Recompute a source-coordinate review, never a correction or LGU attribution.
 
-Only explicitly named latitude/longitude fields determine coordinate order. FMR
+Named latitude/longitude fields determine coordinate order, including the single
+reviewed title comparison whose first pair must match those fields. FMR
 GeoJSON and OCR text are retained as evidence, not used to guess missing values.
 Simplified boundaries have a 200 m review tolerance (UTM 51N); this is not a
 survey-precision verification. No land dataset is available to infer offshore.
@@ -25,6 +26,53 @@ GEOJSON_PATH = "data/project-locations/projects.geojson"
 SUMMARY_PATH = "data/project-locations/review-summary.json"
 GEOD = Geod(ellps="WGS84")
 PROJECT = Transformer.from_crs(4326, 32651, always_xy=True).transform
+REVIEWED_TITLE = ("Construction (Completion) of Bridge connecting Bolinao to Santiago Island, "
+                  "Bolinao, Pangasinan, 6.38299, 119.92525 + 16.38329, 119.92648")
+REVIEWED_SNAPSHOT = "2027:a0caa778442cdae5583f5a006ea7401dab00e5ac:2026-10-26T08:46:14.383Z"
+REVIEWED_RECORD = "01d49430f47ba3fd87ead176b4e7f5afff1c20cab508ffa45006a8d0442299bf"
+
+
+def _reviewed_title_comparison(project):
+    """Interpret only the user-reviewed title, never discover coordinates in titles."""
+    upstream = project.get("upstream") or {}
+    copies = [("title", project.get("title"), "retained", None),
+              ("upstream.title", upstream.get("title"), "api", None)]
+    for index, detail in enumerate(project.get("detail_evidence", [])):
+        data = detail.get("envelope", {}).get("data", {})
+        prefix = f"detail_evidence[{index}].envelope.data"
+        copies.append((prefix + ".title", data.get("title"), "api", detail.get("response_id")))
+        record = data.get("record") or {}
+        copies.append((prefix + ".record.title", record.get("title"), "record", detail.get("response_id")))
+        for version in ("second", "third"):
+            copies.append((prefix + f".record.{version}.title", (record.get(version) or {}).get("title"),
+                           version, detail.get("response_id")))
+        if (data.get("id") != "house-reading:6548" or data.get("lat") != 6.38299
+                or data.get("lon") != 119.92525):
+            return None
+    if (project.get("dataset") != "dpwh" or project.get("upstream_id") != "house-reading:6548"
+            or project.get("snapshot_id") != REVIEWED_SNAPSHOT
+            or project.get("record_sha256") != REVIEWED_RECORD
+            or upstream.get("lat") != 6.38299 or upstream.get("lon") != 119.92525
+            or not project.get("detail_evidence") or any(text != REVIEWED_TITLE for _, text, _, _ in copies)):
+        return None
+    match = re.search(r"(6\.38299), (119\.92525) \+ (16\.38329), (119\.92648)$", project["title"])
+    values = [float(token) for token in match.groups()]
+    if (_pair(*values[:2]) != _pair(upstream.get("lat"), upstream.get("lon"))
+            or _pair(*values[2:]) is None):
+        return None
+    evidence = {"interpretation_version": 1, "project_id": project["id"],
+        "snapshot_id": project["snapshot_id"], "record_sha256": project["record_sha256"],
+        "coordinate_convention": "latitude,longitude; first pair matches named upstream.lat/lon",
+        "review_basis": "User-reviewed title-coordinate comparison only; published in source title - unverified",
+        "endpoint_roles_verified": False, "source_endpoint_roles": "unknown",
+        "source_path": "title", "source_text": project["title"],
+        "raw_tokens": list(match.groups()), "token_spans": [list(match.span(i)) for i in range(1, 5)],
+        "original_values": values, "api_source_paths": ["upstream.lat", "upstream.lon"],
+        "title_copies": [{"source_path": path, "source_text": text, "source_version": version,
+                          "response_id": response} for path, text, version, response in copies]}
+    return {"start_latitude": values[0], "start_longitude": values[1],
+            "end_latitude": values[2], "end_longitude": values[3],
+            "geometry_kind": "title_coordinate_comparison"}, evidence
 
 
 def _project(coordinates):
@@ -189,7 +237,15 @@ def publication_payload(root, projects, manifest):
                                 "role": point.get("role", "point")}, {"source_path": f"detail_evidence[{detail_index}].envelope.data.record.{version}.points",
                                 "point": _safe(point), "source_record": _safe(source)}))
         else:
-            if upstream.get("lat") is not None or upstream.get("lon") is not None:
+            reviewed = None
+            if project["id"] == "dpwh:house-reading:6548":
+                reviewed = _reviewed_title_comparison(project)
+                if reviewed is None:
+                    row["location_flags"].append("stale_or_ambiguous_title_interpretation")
+                else:
+                    candidates.append(("reviewed_title", *reviewed))
+                    row["coordinate_basis"] = "api_point_and_reviewed_title_coordinate"
+            if reviewed is None and (upstream.get("lat") is not None or upstream.get("lon") is not None):
                 candidates.append(("api", {"start_latitude": upstream.get("lat"),
                     "start_longitude": upstream.get("lon"), "standalone": True,
                     "role": "api_published_point"}, {"source_path": "upstream", "lat": _safe(upstream.get("lat")), "lon": _safe(upstream.get("lon"))}))
@@ -221,7 +277,11 @@ def publication_payload(root, projects, manifest):
                     flags.append("endpoint_distance_over_200km_review")
             entry = {"index": len(row["segments"]), "source_versions": [version], "start": start,
                      "end": end, "start_raw": start_raw, "end_raw": end_raw,
-                     "distance_km": distance, "flags": flags, "evidence": [evidence]}
+                      "distance_km": distance, "flags": flags, "evidence": [evidence]}
+            comparison = segment.get("geometry_kind") == "title_coordinate_comparison"
+            if comparison:
+                entry.update(geometry_kind="title_coordinate_comparison", endpoint_roles_verified=False,
+                             start_role="titleCoordinateFirst", end_role="titleCoordinateSecond")
             seen[key] = entry
             row["segments"].append(entry)
             for endpoint, pair in (("point" if standalone else "start", start), ("end", end)):
@@ -247,10 +307,17 @@ def publication_payload(root, projects, manifest):
                 features.append({"type": "Feature", "geometry": {"type": "Point", "coordinates": pair},
                     "properties": {"project_id": project["id"], "segment_index": entry["index"],
                         "endpoint": endpoint, "status": status, "role": segment.get("role", endpoint)}})
+                if comparison:
+                    features[-1]["properties"].update(geometry_kind="title_coordinate_comparison",
+                        role="titleCoordinateFirst" if endpoint == "start" else "titleCoordinateSecond",
+                        evidence_status="published_in_source_title_unverified")
             if start is not None and end is not None:
                 features.append({"type": "Feature", "geometry": {"type": "LineString", "coordinates": [start, end]},
                     "properties": {"project_id": project["id"], "segment_index": entry["index"],
-                        "endpoint": None, "status": "source_segment", "role": "road_endpoints"}})
+                         "endpoint": None, "status": "source_segment", "role": "road_endpoints"}})
+                if comparison:
+                    features[-1]["properties"].update(geometry_kind="title_coordinate_comparison",
+                        role="title_coordinate_comparison", evidence_status="published_in_source_title_unverified")
         for segment in row["segments"]:
             if any(pair is not None and point_counts[tuple(pair)] > 1 for pair in (segment["start"], segment["end"])):
                 segment["flags"].append("repeated_point")
@@ -289,6 +356,7 @@ def publication_payload(root, projects, manifest):
             "namesakes": "New Pangasinan with Koronadal/South Cotabato or Isulan/Sultan Kudarat in project/source title; source region and office are not physical-location evidence",
             "nonfinite_numbers": "Numeric validator rejects nonfinite pairs; publication rejects non-JSON source snapshots rather than inventing an emitted-byte hash",
             "api_points": "API-published point, not precise verification", "offshore": "Not assessed: no reliable land source",
+            "title_coordinates": "Only dpwh:house-reading:6548 reviewed title/snapshot/API binding; title comparison, not verified bridge endpoints or alignment",
             "default_dataset": "fmr"},
         "counts": {"projects": len(reviews), "by_program": dict(Counter(r["dataset"] for r in reviews)),
             "by_status": dict(Counter(r["display_status"] for r in reviews)),

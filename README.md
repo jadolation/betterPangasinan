@@ -304,7 +304,7 @@ reported local-budget observations or national proposals.
 ### Published Project Locations
 
 `map.html` is the FY2027 Project Locations explorer, separate from the SVG
-municipality/district map. It defaults to farm-to-market roads and also supports
+municipality/district map. It defaults to All Programs and also supports
 API-published points from other programs. `?project=<dataset:upstream-id>` opens
 the matching program and source location. Budget records with usable coordinates
 offer a map link; records without them say Location unavailable. LGU profile
@@ -366,6 +366,18 @@ preserves selection and filters; Reset View explicitly clears them. Dashed lines
 connections, not road centerlines, driving routes or construction evidence.
 Outside-province namesakes are distinguished from inconsistent Pangasinan claims.
 No source coordinate is moved or omitted merely to make it look plausible.
+Explicit `name_match_elsewhere` records are hidden by default, with a dynamically
+reported excluded count and an Include outside-province search matches option.
+Outside coordinates and suspicious status alone never exclude a record: the
+Bolinao outlier remains in the default view. A namesake project deep link or
+explicit namesake-status filter enables inclusion. Reset returns to focused
+All Programs. URL parameters preserve filters and inclusion on reload/history;
+all source records and their geometry remain in the downloadable dataset.
+The specific Koronadal FMR `fmr:house_only:ib:p722:r4` is additionally excluded
+from Project Locations at the user's request, including its markers, connection,
+list entry and old map deep link. The inclusion checkbox cannot restore that
+record to this map. Approved source and derived audit downloads remain intact;
+integrity checks run on the complete files before the visual exclusion is applied.
 
 Hashes bind the derived output to the current publication snapshot, project-file
 bytes and municipality boundary bytes. The browser checks those bindings, the
@@ -374,12 +386,25 @@ altered evidence fails closed. The list remains available if Leaflet or the
 boundary reference cannot load; errors are never substituted with zero funding.
 
 The committed Bolinao bridge (`dpwh:house-reading:6548`) has one structured API
-point at longitude 119.92525, latitude 6.38299. Its second coordinate-like pair
-appears only in title text; no second endpoint or bridge connection is invented.
-The source audit found 142 DPWH point records, no explicitly structured DPWH
-endpoint pairs/alignments, and 70 records with chainages that are not geographic
-coordinates. All 32 source FMR connections remain. The existing output retains
-206 Points and 32 LineStrings across 174 projects; source records total 732.
+point at longitude 119.92525, latitude 6.38299. Its title explicitly also publishes
+latitude 16.38329, longitude 119.92648. Following the user's November 3 approval,
+the audit displays this second pair as **source-title evidence, unverified**.
+This is a narrowly reviewed interpretation for that exact record, title, API
+pair, snapshot and record hash, not a general title-coordinate scraper.
+The order is explicitly latitude/longitude and the first pair agrees with named
+API fields; geography does not determine order. Source paths, exact tokens/text,
+offsets, title copies and reading versions are retained. Changed or stale bindings
+suppress the extra point and add a review flag while keeping any usable API point.
+
+First Point and Second Point identify these evidence types. Their approximately
+1,106 km dashed connection is a `title_coordinate_comparison`, **not verified
+bridge endpoints or an alignment**. The first marker is not duplicated. No title
+coordinate is corrected, and no original budget value or geographic review state
+is changed. The updated derived output contains 207 Points and 33 LineStrings
+across the same 174 mapped projects and 732 records. All 32 structured FMR
+connections remain; the extra line is the separately labeled title comparison.
+Other DPWH records still have no newly inferred endpoints. Their 70 records with
+chainages are not interpreted as geographic alignments.
 Automated browser tests route OSM tiles to controlled PNG fixtures, including
 manually created contexts, so regression runs never crawl public tile servers.
 

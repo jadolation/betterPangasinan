@@ -309,3 +309,91 @@ def test_all_approved_data_money_stages_and_original_provenance():
     assert projects == before and path.read_bytes() == raw
     assert all(r["segments"] for r in summary["projects"] if r["dataset"] == "fmr")
     json.dumps(payload, allow_nan=False)
+
+
+@pytest.fixture
+def reviewed_project():
+    return next(p for p in json.loads((ROOT / "data/national-budget/2027/projects.json").read_text())
+                if p["id"] == "dpwh:house-reading:6548")
+
+
+def reviewed_result(p):
+    return publication_payload(ROOT, [p], {"snapshot_id": p["snapshot_id"]})
+
+
+def test_reviewed_title_comparison_provenance_and_no_duplicate_point(reviewed_project):
+    p = reviewed_project
+    before = deepcopy(p)
+    payload = reviewed_result(p)
+    row = payload[SUMMARY_PATH]["projects"][0]
+    features = payload[GEOJSON_PATH]["features"]
+    assert len(row["segments"]) == 1 and len(features) == 3
+    segment = row["segments"][0]
+    assert segment["start"] == [119.92525, 6.38299]
+    assert segment["end"] == [119.92648, 16.38329]
+    assert 1105 < segment["distance_km"] < 1107
+    assert "endpoint_distance_over_200km_review" in segment["flags"]
+    assert row["display_status"] == "suspicious"
+    assert segment["geometry_kind"] == "title_coordinate_comparison"
+    assert segment["endpoint_roles_verified"] is False
+    assert [f["properties"]["role"] for f in features] == [
+        "titleCoordinateFirst", "titleCoordinateSecond", "title_coordinate_comparison"]
+    assert all(f["properties"]["geometry_kind"] == "title_coordinate_comparison" for f in features)
+    evidence = segment["evidence"][0]
+    assert evidence["record_sha256"] == p["record_sha256"]
+    assert evidence["snapshot_id"] == p["snapshot_id"]
+    assert evidence["raw_tokens"] == ["6.38299", "119.92525", "16.38329", "119.92648"]
+    assert [p["title"][start:end] for start, end in evidence["token_spans"]] == evidence["raw_tokens"]
+    assert {copy["source_version"] for copy in evidence["title_copies"]} >= {"second", "third"}
+    assert row["house_stage"] == "hgab3" and row["house_php"] == 350000000
+    assert row["nep_php"] is None and row["geographic_review_status"] == "pending"
+    assert p == before
+    json.dumps(payload, allow_nan=False)
+
+
+@pytest.mark.parametrize("change", ["title", "ambiguous", "malformed", "unrelated", "api", "snapshot",
+                                    "record", "reading", "detail_api", "unsupported"])
+def test_reviewed_interpretation_fails_closed_preserving_api(reviewed_project, change):
+    p = reviewed_project
+    if change == "title":
+        p["title"] += " revised"
+    elif change == "ambiguous":
+        p["title"] = p["title"].replace("6.38299, 119.92525", "119.92525, 6.38299")
+    elif change == "malformed":
+        p["title"] = p["title"].replace("16.38329", "NaN")
+    elif change == "unrelated":
+        p["title"] = "Bridge K6+38299 to K16+38329, 119.92525 + 119.92648"
+    elif change == "api":
+        p["upstream"]["lat"] = 16.38299
+    elif change == "snapshot":
+        p["snapshot_id"] += ":changed"
+    elif change == "record":
+        p["record_sha256"] = "changed"
+    elif change == "reading":
+        p["detail_evidence"][0]["envelope"]["data"]["record"]["third"]["title"] += " revised"
+    elif change == "detail_api":
+        p["detail_evidence"][0]["envelope"]["data"]["lat"] = 16.38299
+    else:
+        p["id"] = "dpwh:house-reading:other"
+    payload = reviewed_result(p)
+    row = payload[SUMMARY_PATH]["projects"][0]
+    features = payload[GEOJSON_PATH]["features"]
+    assert len(features) == len(row["segments"]) == 1
+    assert features[0]["geometry"]["coordinates"] == [p["upstream"]["lon"], p["upstream"]["lat"]]
+    assert features[0]["properties"]["role"] == "api_published_point"
+    assert ("stale_or_ambiguous_title_interpretation" in row["location_flags"]) == (change != "unsupported")
+
+
+def test_derived_counts_hash_and_all_source_files_immutable():
+    folder = ROOT / "data/national-budget/2027"
+    before = {path: path.read_bytes() for path in folder.glob("*.json")}
+    projects = json.loads((folder / "projects.json").read_text())
+    manifest = json.loads((folder / "manifest.json").read_text())
+    payload = publication_payload(ROOT, projects, manifest)
+    features = payload[GEOJSON_PATH]["features"]
+    assert sum(f["geometry"]["type"] == "Point" for f in features) == 207
+    assert sum(f["geometry"]["type"] == "LineString" for f in features) == 33
+    assert len({f["properties"]["project_id"] for f in features}) == 174
+    assert payload[SUMMARY_PATH]["counts"]["projects"] == 732
+    assert payload[SUMMARY_PATH]["files"]["projects.geojson"] == public_file_hash(payload[GEOJSON_PATH])
+    assert all(path.read_bytes() == raw for path, raw in before.items())

@@ -21,6 +21,25 @@ async function setup(page, data = fixture()) {
   await page.route('**/data/project-locations/projects.geojson', route => route.fulfill({ json: data.geo }));
   await page.route('**/data/national-budget/2027/manifest.json', route => route.fulfill({ json: { snapshot_id: 'fixture-2027', files: { 'projects.json': hashes.projects } } }));
 }
+
+test('requested Koronadal record cannot reappear through inclusion or its old deep link', async ({ page }) => {
+  const data = fixture(), excludedId = 'fmr:house_only:ib:p722:r4';
+  const project = structuredClone(data.summary.projects[0]);
+  project.id = excludedId; project.title = 'Concreting of Purok Makiangayon, Brgy. New Pangasinan, Koronadal City, South Cotabato';
+  project.display_status = 'name_match_elsewhere';
+  data.summary.projects.push(project);
+  data.geo.features.push(...data.geo.features.filter(feature => feature.properties.project_id === 'fmr-0').map(feature => ({ ...structuredClone(feature), properties: { ...feature.properties, project_id: excludedId } })));
+  await setup(page, data);
+  await page.goto(`/map.html?include_elsewhere=1&project=${encodeURIComponent(excludedId)}`);
+  await expect(page.locator('#project-locations')).toHaveAttribute('data-ready', 'true');
+  await expect(page.locator('#pl-detail')).toContainText('excluded from Project Locations');
+  await expect(page.locator('#pl-status')).toContainText('1 source result excluded from this map');
+  const plotted = await page.evaluate(() => Object.values(window.testLocationMap._layers).filter(layer => layer.options?.className === 'pl-map-endpoint').map(layer => layer.getElement()?.dataset.projectId));
+  expect(plotted).not.toContain(excludedId);
+  await page.locator('[name=query]').fill('Makiangayon');
+  await expect(page.locator('#pl-list article')).toHaveCount(0);
+  await expect(page.locator('[name=include_elsewhere]')).toBeChecked();
+});
 test('local Leaflet renders every supplied endpoint and line, defaults to province, paginates unique projects', async ({ page }) => {
   await setup(page);
   const external = []; page.on('request', r => { if (!new URL(r.url()).hostname.match(/^(localhost|127\.0\.0\.1)$/)) external.push(r.url()); });
@@ -69,7 +88,7 @@ test('map endpoint selection jumps list page without changing filters', async ({
   await page.evaluate(() => window.testLocationMap.eachLayer(l => { if (l.options.className === 'pl-map-endpoint' && l.getLatLng().lat === -65.25) l.fire('click'); }));
   await expect(page.locator('#pl-page')).toHaveText('2 / 2');
   await expect(page.locator('#pl-list article[aria-current=true]')).toHaveAttribute('data-project-id', 'fmr-30');
-  await expect(page.locator('[name=dataset]')).toHaveValue('fmr');
+  await expect(page.locator('[name=dataset]')).toHaveValue('');
 });
 
 test('changing filters does not leave a hidden selection with an invisible map target', async ({ page }) => {
@@ -164,7 +183,10 @@ test('no JavaScript retains downloads and explains no inferred locations', async
 test('published snapshot FMR smoke', async ({ page }) => {
   await page.goto('/map.html');
   await expect(page.locator('#project-locations')).toHaveAttribute('data-ready', 'true');
-  await expect(page.locator('#pl-status')).toContainText('32 unique projects');
+  await page.locator('[name=dataset]').selectOption('fmr');
+  await expect(page.locator('#pl-status')).toContainText('31 unique projects');
+  await page.locator('[name=include_elsewhere]').check();
+  await expect(page.locator('#pl-status')).toContainText('31 unique projects');
   await expect(page.locator('#pl-list article')).toHaveCount(25);
   await page.locator('#pl-list article button').first().click();
   await page.locator('#pl-detail').getByText('Original coordinates and segments (1)', { exact: true }).click();
@@ -273,7 +295,110 @@ test('V2 multi-segment navigation identifies its segment', async ({ page }) => {
   expect(center.lat).toBeCloseTo(17.1, 2); expect(center.lng).toBeCloseTo(121.01, 2);
 });
 
-test('real 6548 deep link maps its verified upstream point, not its title', async ({ page }) => {
+test('default All Programs excludes only explicit namesakes and inclusion preserves original endpoints', async ({ page }) => {
+  const data = fixture(), namesake = data.summary.projects[2], bridge = data.summary.projects[30];
+  namesake.title = 'New Pangasinan, Koronadal, South Cotabato';
+  namesake.display_status = 'name_match_elsewhere'; namesake.location_flags = ['outside_province', 'name_match_elsewhere'];
+  bridge.dataset = 'dpwh'; bridge.title = 'Published distant bridge';
+  await setup(page, data); await page.goto('/map.html');
+  await expect(page.locator('#project-locations')).toHaveAttribute('data-ready', 'true');
+  await expect(page.locator('[name=dataset]')).toHaveValue('');
+  await expect(page.locator('[name=include_elsewhere]')).not.toBeChecked();
+  await expect(page.locator('#pl-status')).toContainText('31 unique projects');
+  await expect(page.locator('#pl-status')).toContainText('1 outside-province namesake results excluded');
+  const endpoints = () => page.evaluate(() => { const points = []; window.testLocationMap.eachLayer(l => { if (l.options.className === 'pl-map-endpoint') points.push([l.getLatLng().lng, l.getLatLng().lat]); }); return points; });
+  const focused = await endpoints();
+  expect(focused).toHaveLength(60);
+  expect(focused).toContainEqual(bridge.segments[0].start);
+  expect(focused).not.toContainEqual(namesake.segments[0].start);
+  await page.locator('[name=query]').fill(namesake.title);
+  await expect(page.locator('#pl-list article')).toHaveCount(0);
+  await page.locator('[name=include_elsewhere]').check();
+  await expect(page.locator('#pl-list article')).toHaveCount(1);
+  expect(await endpoints()).toEqual([namesake.segments[0].start, namesake.segments[0].end]);
+  await page.getByRole('button', { name: namesake.title, exact: true }).click();
+  await expect(page.locator('#pl-detail')).toContainText(`longitude ${namesake.segments[0].start[0]}, latitude ${namesake.segments[0].start[1]}`);
+  await page.locator('#pl-reset').click();
+  await expect(page.locator('[name=dataset]')).toHaveValue('');
+  await expect(page.locator('[name=query]')).toHaveValue('');
+  await expect(page.locator('[name=include_elsewhere]')).not.toBeChecked();
+  await expect(page.locator('#pl-status')).toContainText('31 unique projects');
+  expect(await endpoints()).toEqual(focused);
+});
+
+test('namesake deep links and explicit status enable inclusion and history restores filters and data', async ({ page }) => {
+  const data = fixture();
+  data.summary.projects[2].display_status = 'name_match_elsewhere';
+  data.summary.projects[2].location_flags = ['name_match_elsewhere'];
+  await setup(page, data); await page.goto('/map.html?project=fmr-2');
+  await expect(page.locator('#pl-detail h2')).toHaveText('Published road 2');
+  await expect(page.locator('[name=include_elsewhere]')).toBeChecked();
+  await page.locator('#pl-reset').click();
+  await page.locator('[name=status]').selectOption('name_match_elsewhere');
+  await expect(page.locator('[name=include_elsewhere]')).toBeChecked();
+  await expect(page.locator('#pl-list article')).toHaveCount(1);
+  await expect(page).toHaveURL(/include_elsewhere=1/);
+  const namesakeURL = page.url();
+  // Filters replace the current entry; supply a second entry to exercise popstate.
+  await page.evaluate(() => history.pushState(null, '', location.href));
+  await page.locator('#pl-reset').click();
+  await expect(page.locator('#pl-status')).toContainText('31 unique projects');
+  await page.goBack();
+  await expect(page).toHaveURL(namesakeURL);
+  await expect(page.locator('[name=status]')).toHaveValue('name_match_elsewhere');
+  await expect(page.locator('[name=include_elsewhere]')).toBeChecked();
+  await expect(page.locator('#pl-list article')).toHaveCount(1);
+  await page.goForward();
+  await expect(page.locator('[name=status]')).toHaveValue('');
+  await expect(page.locator('[name=dataset]')).toHaveValue('');
+  await expect(page.locator('[name=include_elsewhere]')).not.toBeChecked();
+  await expect(page.locator('#pl-status')).toContainText('31 unique projects');
+});
+
+test('URL filters hydrate and survive Back and Forward without losing all-program scope', async ({ page }) => {
+  await setup(page);
+  await page.goto('/map.html?query=Published+road+30&dataset=all&status=suspicious&municipality=0105501000&comparison=increased&suspicious=1&include_elsewhere=1');
+  await expect(page.locator('#project-locations')).toHaveAttribute('data-ready', 'true');
+  for (const [name, value] of Object.entries({ query: 'Published road 30', dataset: '', status: 'suspicious', municipality: '0105501000', comparison: 'increased' })) await expect(page.locator(`[name=${name}]`)).toHaveValue(value);
+  for (const name of ['suspicious', 'include_elsewhere']) await expect(page.locator(`[name=${name}]`)).toBeChecked();
+  await expect(page.locator('#pl-list article')).toHaveCount(1);
+  await page.evaluate(() => history.pushState(null, '', location.href));
+  await page.locator('#pl-reset').click();
+  await page.goBack();
+  await expect(page.locator('[name=query]')).toHaveValue('Published road 30');
+  await expect(page.locator('[name=include_elsewhere]')).toBeChecked();
+  await expect(page.locator('#pl-list article')).toHaveCount(1);
+  await page.goForward();
+  await expect(page.locator('[name=query]')).toHaveValue('');
+  await expect(page.locator('[name=include_elsewhere]')).not.toBeChecked();
+  await expect(page.locator('#pl-status')).toContainText('32 unique projects');
+});
+
+test('real default all-program search finds 6548 by exact title and both IDs', async ({ page }) => {
+  const published = JSON.parse(fs.readFileSync(path.join(root, 'data/national-budget/2027/projects.json'), 'utf8'));
+  const source = published.find(p => p.id === 'dpwh:house-reading:6548');
+  await page.goto('/map.html');
+  await expect(page.locator('#project-locations')).toHaveAttribute('data-ready', 'true');
+  await expect(page.locator('[name=dataset]')).toHaveValue('');
+  await expect(page.locator('[name=include_elsewhere]')).not.toBeChecked();
+  for (const query of [source.title, source.id, '6548']) {
+    await page.locator('[name=query]').fill(query);
+    await expect(page.locator('#pl-list article')).toHaveCount(1);
+    await expect(page.locator('#pl-list article')).toHaveAttribute('data-project-id', source.id);
+  }
+  const summary = await (await page.request.get('/data/project-locations/review-summary.json')).json();
+  const namesake = summary.projects.find(p => p.dataset === 'fmr' && p.display_status === 'name_match_elsewhere');
+  expect(namesake.title).toContain('Koronadal');
+  await page.locator('[name=query]').fill(namesake.title);
+  await expect(page.locator('#pl-list article')).toHaveCount(0);
+  await page.locator('[name=include_elsewhere]').check();
+  await expect(page.locator('#pl-list article')).toHaveCount(0);
+  expect(namesake.id).toBe('fmr:house_only:ib:p722:r4');
+  expect(namesake.segments[0].start).toEqual([124.908989, 6.486838]);
+  expect(namesake.segments[0].end).toEqual([124.916314, 6.481725]);
+});
+
+test('real 6548 retains its single API point and compares the reviewed title coordinates as unverified', async ({ page }) => {
   const published = JSON.parse(fs.readFileSync(path.join(root, 'data/national-budget/2027/projects.json'), 'utf8'));
   expect(published).toHaveLength(732);
   const source = published.find(p => p.id === 'dpwh:house-reading:6548');
@@ -282,6 +407,9 @@ test('real 6548 deep link maps its verified upstream point, not its title', asyn
   expect(original).toEqual([119.92525, 6.38299]);
   const detailSource = source.detail_evidence[0].envelope.data;
   expect([detailSource.lon, detailSource.lat]).toEqual(original);
+  expect(source.title).toContain('16.38329, 119.92648');
+  expect(source.upstream.nep_php).toBeNull();
+  expect(source.upstream.house_php).toBe(350000000);
   await page.route('**/assets/leaflet/leaflet.js', route => route.fulfill({ contentType: 'text/javascript', body: `${leaflet}\nconst originalMap = L.map; L.map = (...args) => { const map = originalMap(...args); window.testLocationMap = map; return map; };` }));
   await page.goto(`/map.html?project=${encodeURIComponent(source.id)}`);
   await expect(page.locator('#project-locations')).toHaveAttribute('data-ready', 'true');
@@ -289,14 +417,46 @@ test('real 6548 deep link maps its verified upstream point, not its title', asyn
   const derived = summary.projects.find(p => p.id === source.id);
   expect(derived.segments).toHaveLength(1);
   expect(derived.segments[0].start).toEqual(original);
-  expect(derived.segments[0].end).toBeNull();
+  const second = [119.92648, 16.38329];
+  expect(derived.segments[0].end).toEqual(second);
+  expect(derived.segments[0].geometry_kind).toBe('title_coordinate_comparison');
+  expect(derived.segments[0].start_role).toBe('titleCoordinateFirst');
+  expect(derived.segments[0].end_role).toBe('titleCoordinateSecond');
+  expect(derived.segments[0].endpoint_roles_verified).toBe(false);
+  expect(derived.segments[0].flags).toContain('endpoint_distance_over_200km_review');
+  expect(derived.nep_php).toBeNull(); expect(derived.house_php).toBe(350000000);
   const geo = await (await page.request.get('/data/project-locations/projects.geojson')).json();
   const features = geo.features.filter(f => f.properties.project_id === source.id);
-  expect(features).toHaveLength(1); expect(features[0].geometry).toEqual({ type: 'Point', coordinates: original });
+  expect(features).toHaveLength(3);
+  expect(features.filter(f => f.geometry.type === 'Point').map(f => f.geometry.coordinates)).toEqual([original, second]);
+  expect(features.every(f => f.properties.geometry_kind === 'title_coordinate_comparison')).toBe(true);
+  expect(features.find(f => f.geometry.type === 'LineString').geometry.coordinates).toEqual([original, second]);
+  expect(geo.features.filter(f => f.geometry.type === 'Point')).toHaveLength(207);
+  expect(geo.features.filter(f => f.geometry.type === 'LineString')).toHaveLength(33);
+  expect(summary.projects.filter(p => p.segments.some(s => s.start || s.end))).toHaveLength(174);
   await expect(page.locator('[name=dataset]')).toHaveValue('dpwh');
   await expect(page.locator('#pl-detail h2')).toHaveText(source.title);
   await expect(page.locator('#pl-detail')).toContainText('longitude 119.92525, latitude 6.38299');
-  await expect(page.locator('#pl-detail').getByRole('button', { name: 'View End', exact: true })).toBeDisabled();
+  await expect(page.locator('#pl-detail')).toContainText('Second point (source title - unverified)');
+  await expect(page.locator('#pl-detail')).toContainText('not a confirmed bridge alignment');
+  const mapped = await page.evaluate(title => {
+    const points = [], lines = [];
+    window.testLocationMap.eachLayer(layer => {
+      const tooltip = layer.getTooltip?.()?.getContent()?.textContent || '';
+      if (!tooltip.includes(title)) return;
+      if (layer.options.className === 'pl-map-endpoint') points.push([layer.getLatLng().lng, layer.getLatLng().lat]);
+      else if (layer.options.dashArray === '6 6') lines.push({ dash: layer.options.dashArray, tooltip });
+    });
+    return { points, lines };
+  }, source.title);
+  expect(mapped.points).toEqual([original, second]);
+  expect(mapped.lines).toHaveLength(1);
+  expect(mapped.lines[0].dash).toBe('6 6');
+  expect(mapped.lines[0].tooltip).toContain('unverified source-title coordinate comparison, not a bridge alignment');
+  for (const label of ['View First Point', 'View Second Point', 'View Both']) await expect(page.locator('#pl-detail').getByRole('button', { name: label, exact: true })).toBeEnabled();
+  await page.locator('#pl-detail').getByRole('button', { name: 'View Second Point', exact: true }).click();
+  expect((await page.evaluate(() => window.testLocationMap.getCenter())).lat).toBeCloseTo(second[1], 3);
+  await page.locator('#pl-detail').getByRole('button', { name: 'View First Point', exact: true }).click();
   const center = await page.evaluate(() => window.testLocationMap.getCenter());
   expect(center.lat).toBeCloseTo(original[1], 3); expect(center.lng).toBeCloseTo(original[0], 3);
 });

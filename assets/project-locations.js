@@ -18,6 +18,12 @@
   const mercatorLimit = 85.0511287798;
   const programNames = { fmr: 'Farm-to-market roads', dpwh: 'Public works and infrastructure', hfep: 'Health facilities', nia: 'Irrigation' };
   const programKey = p => ['fmr', 'dpwh'].includes(p.dataset) ? p.dataset : 'other';
+  const titleComparison = segment => segment?.geometry_kind === 'title_coordinate_comparison';
+  const endpointLabel = (segment, endpoint) => titleComparison(segment) ? (endpoint === 'start' ? 'First point' : 'Second point (source title - unverified)') : endpoint === 'start' ? 'Start' : 'End';
+  const filterKeys = ['query', 'dataset', 'status', 'municipality', 'comparison', 'suspicious', 'include_elsewhere'];
+  // Explicit user-requested exclusion from this map, not from source evidence.
+  const excludedMapProjects = new Set(['fmr:house_only:ib:p722:r4']);
+  let sourceProjectCount = 0;
   let projects = [], filtered = [], selected = null, page = 0, map, overview, layers = new Map();
   let sourceCollection, boundaryCollection, activeSegment = 0, globalInspection = false, osmLayer = null, boundaryLayer = null;
   let programLayers = {}, previousBasemap = 'osm', tileFailed = false, boundaryAvailable = false;
@@ -37,7 +43,7 @@
     if (needsReview(p)) $('pl-layer-warnings').checked = true;
     applyVisibility();
     const index = filtered.findIndex(p => p.id === id); if (index >= 0) page = Math.floor(index / 25);
-    const url = new URL(location.href); url.searchParams.set('project', id); history.replaceState(null, '', url);
+    syncFilterUrl(); const url = new URL(location.href); url.searchParams.set('project', id); history.replaceState(null, '', url);
     renderList(); renderDetail(p);
     const segment = p.segments.find(s => s.index === activeSegment);
     if (fit && segment) navigate([point(segment.start) ? segment.start : segment.end]);
@@ -57,21 +63,22 @@
     for (const [label, value] of [['NEP proposal', p.nep_php], [`House proposal (${reading})`, p.house_php]]) { node('dt', label, amounts); node('dd', money(value), amounts); }
     const segment = p.segments.find(s => s.index === activeSegment);
     const coordinates = node('div', undefined, box); coordinates.className = 'pl-primary-coordinates';
-    for (const endpoint of ['start', 'end']) if (segment) node('p', `${endpoint === 'start' ? 'Start' : 'End'}: ${point(segment[endpoint]) ? `longitude ${segment[endpoint][0]}, latitude ${segment[endpoint][1]}` : 'No valid coordinate'}`, coordinates);
+    for (const endpoint of ['start', 'end']) if (segment) node('p', `${endpointLabel(segment, endpoint)}: ${point(segment[endpoint]) ? `longitude ${segment[endpoint][0]}, latitude ${segment[endpoint][1]}` : 'No valid coordinate'}`, coordinates);
+    if (titleComparison(segment)) node('p', 'The API supplies the first point. The second is published in the source title and remains unverified. The dashed line compares title-coordinate pairs; it is not a confirmed bridge alignment.', box).className = 'pl-warning';
     const actions = node('div', undefined, box); actions.className = 'pl-endpoint-actions';
-    for (const [label, pairs] of [['View Start', [segment?.start]], ['View End', [segment?.end]], ['View Both', [segment?.start, segment?.end]], ['Go to published location', [point(segment?.start) ? segment.start : segment?.end]]]) {
+    for (const [label, pairs] of [[titleComparison(segment) ? 'View First Point' : 'View Start', [segment?.start]], [titleComparison(segment) ? 'View Second Point' : 'View End', [segment?.end]], ['View Both', [segment?.start, segment?.end]], ['Go to published location', [point(segment?.start) ? segment.start : segment?.end]]]) {
       const button = node('button', label, actions); button.type = 'button';
       button.disabled = !map || !pairs.every(canPlot); button.addEventListener('click', () => navigate(pairs));
     }
-    if (segment?.distance_km > 200) node('p', 'The source endpoints span an unusually large distance. The dashed connection is not a verified route.', box).className = 'pl-warning';
+    if (segment?.distance_km > 200) node('p', titleComparison(segment) ? `About ${segment.distance_km.toLocaleString('en-PH', { maximumFractionDigits: 0 })} km separates the published title-coordinate pairs. This is not a confirmed bridge span or alignment.` : 'The source endpoints span an unusually large distance. The dashed connection is not a verified route.', box).className = 'pl-warning';
     if (p.segments.some(s => [s.start, s.end].some(pair => point(pair) && !canPlot(pair)))) node('p', 'Some valid source latitudes are outside the Web Mercator basemap range. They are retained in evidence and are not clamped or drawn at a false latitude. Use global-coordinate inspection below the map.', box).className = 'pl-warning';
     const originalLink = node('p', undefined, box); link(p.source_fields?.upstream?.url, 'Open original project', originalLink);
     const coordinateEvidence = node('details', undefined, box); node('summary', `Original coordinates and segments (${p.segments.length})`, coordinateEvidence);
     for (const s of p.segments) {
-      node('h3', `Published segment ${s.index + 1}`, coordinateEvidence);
+      node('h3', titleComparison(s) ? 'Source-title coordinate comparison (unverified endpoints)' : `Published segment ${s.index + 1}`, coordinateEvidence);
       node('p', `Straight endpoint distance: ${s.distance_km == null ? 'Unavailable' : `${s.distance_km} km`}; not road length.`, coordinateEvidence);
       for (const endpoint of ['start', 'end']) {
-         const coord = s[endpoint], line = node('p', `${endpoint === 'start' ? 'Start' : 'End'}: ${point(coord) ? `longitude ${coord[0]}, latitude ${coord[1]}` : 'No valid coordinate'}`, coordinateEvidence); line.className = 'pl-coordinate';
+         const coord = s[endpoint], line = node('p', `${endpointLabel(s, endpoint)}: ${point(coord) ? `longitude ${coord[0]}, latitude ${coord[1]}` : 'No valid coordinate'}`, coordinateEvidence); line.className = 'pl-coordinate';
          if (point(coord)) { node('span', ' | ', line); link(`https://www.openstreetmap.org/?mlat=${coord[1]}&mlon=${coord[0]}#map=13/${coord[1]}/${coord[0]}`, 'Open exact coordinate in OpenStreetMap', line); }
          const raw = node('details', undefined, coordinateEvidence); node('summary', `Original ${endpoint} values`, raw); node('pre', JSON.stringify(s[`${endpoint}_raw`] ?? null, null, 2), raw);
       }
@@ -114,7 +121,9 @@
     if (!filtered.length) node('p', 'No projects match these filters. No coordinates are inferred.', list);
     $('pl-page').textContent = `${filtered.length ? page + 1 : 0} / ${Math.ceil(filtered.length / 25)}`;
     $('pl-prev').disabled = page === 0; $('pl-next').disabled = (page + 1) * 25 >= filtered.length;
-    $('pl-status').textContent = `${filtered.length} unique projects match; ${projects.length} published projects across all programs. ${filtered.filter(p => p.segments.some(s => point(s.start) || point(s.end))).length} matching projects have valid coordinates. Offscreen source locations remain mapped. Page size: 25.`;
+    const excluded = form.elements.include_elsewhere.checked ? 0 : projects.filter(p => p.display_status === 'name_match_elsewhere').length;
+    const removed = sourceProjectCount - projects.length;
+    $('pl-status').textContent = `${filtered.length} unique projects match; ${sourceProjectCount} published projects across all programs. ${removed} source result${removed === 1 ? '' : 's'} excluded from this map. ${filtered.filter(p => p.segments.some(s => point(s.start) || point(s.end))).length} matching projects have valid coordinates. ${excluded} outside-province namesake results excluded by the scope setting. Offscreen source locations remain mapped. Page size: 25.`;
   }
   function applyVisibility() {
     if (!map) return;
@@ -196,7 +205,9 @@
       if (geometry.type === 'Point' ? !canPlot(geometry.coordinates) : geometry.coordinates.some(pair => !canPlot(pair))) { unsupported++; continue; }
       const warning = needsReview(p);
       const layer = geometry.type === 'Point' ? L.circleMarker([geometry.coordinates[1], geometry.coordinates[0]], { radius: prop.endpoint === 'end' ? 5 : 7, color: warning ? '#976300' : '#01407F', fillColor: prop.endpoint === 'end' ? '#FBC711' : '#01407F', fillOpacity: .85, weight: warning ? 3 : 2, className: 'pl-map-endpoint' }) : L.polyline(geometry.coordinates.map(pair => [pair[1], pair[0]]), { color: warning ? '#976300' : '#01407F', dashArray: '6 6', weight: 2 });
-      const text = node('span', `${warning ? '[!] ' : ''}${statusLabel(p.display_status)}: ${p.title}: ${geometry.type === 'Point' ? prop.endpoint : 'published endpoint connection'}`);
+      const segment = p.segments.find(value => value.index === prop.segment_index);
+      const description = geometry.type === 'Point' ? endpointLabel(segment, prop.endpoint === 'end' ? 'end' : 'start') : titleComparison(segment) ? 'unverified source-title coordinate comparison, not a bridge alignment' : 'published endpoint connection';
+      const text = node('span', `${warning ? '[!] ' : ''}${statusLabel(p.display_status)}: ${p.title}: ${description}`);
       layer.bindTooltip(text); layer.on('click', () => select(p.id, true, prop.segment_index));
       if (geometry.type === 'Point') layer.on('add', () => {
         const element = layer.getElement(); element.setAttribute('tabindex', '0'); element.setAttribute('role', 'button'); element.setAttribute('aria-label', text.textContent); element.dataset.projectId = p.id;
@@ -211,21 +222,39 @@
     $('pl-basemap').disabled = globalInspection;
     setBasemap(); applyVisibility(); root.dataset.mapReady = 'true';
   }
-  function filter() {
+  function syncFilterUrl() {
+    const url = new URL(location.href);
+    for (const key of filterKeys) {
+      const field = form.elements[key], value = field.type === 'checkbox' ? (field.checked ? '1' : '') : field.value;
+      if (key === 'dataset') url.searchParams.set(key, value || 'all');
+      else if (value) url.searchParams.set(key, value); else url.searchParams.delete(key);
+    }
+    history.replaceState(null, '', url);
+  }
+  function hydrateFilters() {
+    const params = new URLSearchParams(location.search);
+    for (const key of filterKeys) {
+      const field = form.elements[key], value = params.get(key) || '';
+      if (field.type === 'checkbox') field.checked = value === '1';
+      else field.value = field.tagName === 'SELECT' && ![...field.options].some(option => option.value === value) ? '' : value;
+    }
+  }
+  function filter(syncUrl = true) {
     const f = Object.fromEntries(new FormData(form)), q = (f.query || '').trim().toLowerCase(); page = 0;
-    filtered = projects.filter(p => (!f.dataset || p.dataset === f.dataset) && (!f.status || p.display_status === f.status || (f.status === 'outside_pangasinan' && (p.location_flags || []).includes('outside_province'))) && (!f.comparison || p.comparison_status === f.comparison) && (!f.municipality || p.stated_municipalities.some(m => (m.psgc || m.name) === f.municipality)) && (!f.suspicious || needsReview(p)) && (!q || `${p.title} ${p.id}`.toLowerCase().includes(q)));
+    filtered = projects.filter(p => (f.include_elsewhere || p.display_status !== 'name_match_elsewhere') && (!f.dataset || p.dataset === f.dataset) && (!f.status || p.display_status === f.status || (f.status === 'outside_pangasinan' && (p.location_flags || []).includes('outside_province'))) && (!f.comparison || p.comparison_status === f.comparison) && (!f.municipality || p.stated_municipalities.some(m => (m.psgc || m.name) === f.municipality)) && (!f.suspicious || needsReview(p)) && (!q || `${p.title} ${p.id}`.toLowerCase().includes(q)));
     const ids = new Set(filtered.map(p => p.id));
     if (selected && !ids.has(selected)) {
       selected = null;
       $('pl-detail').replaceChildren(); node('h2', 'Project evidence', $('pl-detail'));
       node('p', 'The selected project is outside these filters. Choose a matching project to inspect its published location.', $('pl-detail'));
-      const url = new URL(location.href); url.searchParams.delete('project'); history.replaceState(null, '', url);
+      if (syncUrl) { const url = new URL(location.href); url.searchParams.delete('project'); history.replaceState(null, '', url); }
     }
     const totals = [['Geographically plausible', filtered.filter(p => p.display_status === 'plausible').length], ['Suspicious location', filtered.filter(p => p.display_status === 'suspicious').length], ['No usable coordinates', filtered.filter(p => !p.segments.some(s => point(s.start) || point(s.end))).length]];
     $('pl-summary').replaceChildren();
     for (const [label, value] of totals) { const card = node('div', undefined, $('pl-summary')); node('strong', String(value), card); node('span', label, card); }
     applyVisibility();
     renderList();
+    if (syncUrl) syncFilterUrl();
   }
   function addOptions(name, values) { const select = form.elements.namedItem(name); for (const [value, label] of values) { if (![...select.options].some(o => o.value === value)) { const option = node('option', label, select); option.value = value; } } }
   async function init() {
@@ -253,6 +282,7 @@
     for (const f of collection.features) {
       const g = f.geometry, props = f.properties || {}, p = ids.get(props.project_id), s = p?.segments.find(s => s.index === props.segment_index);
       if (!s || !g || !['Point', 'LineString'].includes(g.type)) throw Error('Unmatched source coordinate.');
+      if ((titleComparison(s) || props.geometry_kind === 'title_coordinate_comparison') && props.geometry_kind !== s.geometry_kind) throw Error('Coordinate evidence kind mismatch.');
       let endpoint = props.endpoint;
       if (g.type === 'Point' && endpoint === 'point') endpoint = same(g.coordinates, s.start) ? 'start' : 'end';
       const k = key(p.id, s.index, g.type, g.type === 'Point' ? endpoint : undefined);
@@ -260,7 +290,9 @@
       seen.add(k);
     }
     if (seen.size !== expected.size) throw Error('Published coordinate features are incomplete.');
-    projects = summary.projects;
+    sourceProjectCount = summary.projects.length;
+    projects = summary.projects.filter(project => !excludedMapProjects.has(project.id));
+    for (const id of excludedMapProjects) ids.delete(id);
     addOptions('dataset', [...new Set(projects.map(p => p.dataset))].sort().map(s => [s, programNames[s] || 'Other published program']));
     addOptions('status', ['plausible', 'suspicious', 'outside_pangasinan', 'name_match_elsewhere', 'unavailable', 'needs_review'].map(value => [value, statusLabel(value)]));
     addOptions('comparison', [...new Set(projects.map(p => p.comparison_status).filter(Boolean))].sort().map(value => [value, words(value)]));
@@ -273,11 +305,13 @@
       if (typeof notice === 'string') node('p', notice, $('pl-sources'));
       else if (typeof notice?.body === 'string') node('p', notice.body, $('pl-sources'));
     }
-    sourceCollection = collection;
+    // Integrity was checked against the complete source above. Apply the visual
+    // exclusion afterward so it cannot weaken completeness/hash validation.
+    sourceCollection = { ...collection, features: collection.features.filter(feature => !excludedMapProjects.has(feature.properties.project_id)) };
     try { boundaryCollection = boundaryText === null ? null : JSON.parse(boundaryText); } catch { boundaryCollection = null; }
     createMap();
     form.addEventListener('input', event => { if (event.target.tagName !== 'SELECT') filter(); });
-    form.addEventListener('change', event => { if (event.target.tagName === 'SELECT') filter(); });
+    form.addEventListener('change', event => { if (event.target.tagName === 'SELECT') { if (event.target.name === 'status' && event.target.value === 'name_match_elsewhere') form.elements.include_elsewhere.checked = true; filter(); } });
     form.addEventListener('submit', event => event.preventDefault());
     $('pl-prev').addEventListener('click', () => { page--; renderList(); }); $('pl-next').addEventListener('click', () => { page++; renderList(); });
     $('pl-overview').addEventListener('click', () => { if (map) map.fitBounds(overview, { padding: [15, 15], animate: false }); });
@@ -292,9 +326,9 @@
     $('pl-reset').addEventListener('click', () => {
       form.reset(); selected = null; page = 0;
       for (const id of ['boundaries', 'fmr', 'dpwh', 'other', 'warnings']) $(`pl-layer-${id}`).checked = true;
-      const url = new URL(location.href); url.searchParams.delete('project'); history.replaceState(null, '', url);
+      const url = new URL(location.href); for (const key of [...filterKeys, 'project']) url.searchParams.delete(key); history.replaceState(null, '', url);
       $('pl-detail').replaceChildren(); node('h2', 'Project evidence', $('pl-detail')); node('p', 'Select a project to inspect its published location.', $('pl-detail'));
-      filter(); if (map) map.fitBounds(overview, { padding: [15, 15], animate: false });
+      filter(false); if (map) map.fitBounds(overview, { padding: [15, 15], animate: false });
     });
     $('pl-global-inspect').addEventListener('click', () => {
       if (!globalInspection) previousBasemap = $('pl-basemap').value;
@@ -302,9 +336,26 @@
       $('pl-basemap').value = globalInspection ? 'none' : previousBasemap;
       createMap(); if (selected) select(selected, true, activeSegment);
     });
-    filter();
-    const requested = new URLSearchParams(location.search).get('project');
-    if (requested && ids.has(requested)) { const p = ids.get(requested); form.elements.dataset.value = p.dataset; filter(); select(requested); }
+    function restoreView() {
+      const params = new URLSearchParams(location.search), requested = params.get('project'), p = ids.get(requested);
+      hydrateFilters(); selected = null;
+      if (form.elements.status.value === 'name_match_elsewhere' || p?.display_status === 'name_match_elsewhere') form.elements.include_elsewhere.checked = true;
+      if (p && !params.has('dataset')) form.elements.dataset.value = p.dataset;
+      filter(false);
+      if (p) {
+        if (!filtered.some(row => row.id === p.id)) {
+          form.elements.dataset.value = p.dataset; for (const key of ['query', 'status', 'municipality', 'comparison']) form.elements[key].value = '';
+          form.elements.suspicious.checked = false; filter(false);
+        }
+        select(requested);
+      } else {
+        $('pl-detail').replaceChildren(); node('h2', 'Project evidence', $('pl-detail'));
+        node('p', excludedMapProjects.has(requested) ? 'This outside-province source result is excluded from Project Locations. The original budget source record is preserved.' : 'Select a project or mapped endpoint to inspect its original coordinates.', $('pl-detail'));
+        if (excludedMapProjects.has(requested)) { const url = new URL(location.href); url.searchParams.delete('project'); history.replaceState(null, '', url); }
+      }
+    }
+    window.addEventListener('popstate', restoreView);
+    restoreView();
     root.dataset.ready = 'true';
   }
   init().catch(error => { $('pl-status').textContent = `Published location evidence could not be loaded or verified. ${error.message} No project coordinates are drawn.`; $('pl-map').hidden = true; $('pl-list').replaceChildren(); for (const button of root.querySelectorAll('button')) button.disabled = true; $('pl-map-status').textContent = 'Map unavailable. Use the downloadable source files or project registry; locations have not been inferred.'; });

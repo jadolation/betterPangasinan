@@ -13,14 +13,16 @@ description: Inspect original published FY2027 project endpoints, location warni
 <details id="pl-filter-panel" open><summary>Search and filter projects</summary>
 <form id="pl-filters" class="pl-filters" aria-label="Project location filters">
 <label>Title or project ID<input name="query" type="search" placeholder="Search projects"></label>
-<label>Program<select name="dataset"><option value="fmr">Farm-to-market roads</option><option value="">All Projects / All Programs</option></select></label>
+<label>Program<select name="dataset"><option value="">All Projects / All Programs</option><option value="fmr">Farm-to-market roads</option></select></label>
 <label>Location status<select name="status"><option value="">All location statuses</option></select></label>
 <label>Stated municipality<select name="municipality"><option value="">All municipalities</option></select></label>
 <label>Budget comparison<select name="comparison"><option value="">All comparisons</option></select></label>
 <label class="pl-check"><input name="suspicious" type="checkbox"> Only locations needing review</label>
+<label class="pl-check"><input name="include_elsewhere" type="checkbox"> Include outside-province search matches</label>
 </form>
 </details>
 <p id="pl-status" role="status" aria-live="polite">Loading published location evidence.</p>
+<p class="pl-scope-note">The default view excludes explicit outside-province namesakes, not suspicious Pangasinan claims. All collected records remain available.</p>
 <div class="pl-actions"><button type="button" id="pl-overview">Pangasinan Overview</button><button type="button" id="pl-suspicious">Show Suspicious Locations</button><button type="button" id="pl-reset">Reset View</button></div>
 <div class="pl-layer-toolbar"><label for="pl-basemap">Background map<select id="pl-basemap"><option value="osm">OpenStreetMap</option><option value="none">No basemap / local reference</option></select></label><details><summary>Visible layers</summary><div class="pl-layer-options"><label><input id="pl-layer-boundaries" type="checkbox" checked>Municipality boundaries</label><label><input id="pl-layer-fmr" type="checkbox" checked>Farm-to-market roads</label><label><input id="pl-layer-dpwh" type="checkbox" checked>DPWH projects</label><label><input id="pl-layer-other" type="checkbox" checked>Other programs</label><label><input id="pl-layer-warnings" type="checkbox" checked>Suspicious locations</label></div></details></div>
 <p class="pl-legend"><span class="pl-start">Blue: start or published point</span> <span class="pl-end">Gold: end</span> <span class="pl-warning">Amber outline: location warning</span> <span>Dashed lines: endpoint connections, not roads</span></p>
