@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-const labels = ['Overview', '2027 Projects', 'Historical Budgets', 'Offices & Districts', 'Context', 'Hearings', 'Local Finances', 'About'];
+const labels = ['Overview', '2027 Projects', 'Project Locations', 'Historical Budgets', 'Offices & Districts', 'Context', 'Hearings', 'Local Finances', 'About'];
 
 test('canonical section navigation is outside main on designated pages only', async ({ page }) => {
   for (const path of ['transparency', 'national-budget', 'historical-budget', 'budget-context', 'budget-hearings', 'finances', 'methodology', 'projects', 'procurement', 'legislation', 'map']) {
@@ -120,7 +120,7 @@ test('no-JavaScript navigation keeps real links and a current page', async ({ br
   const context = await browser.newContext({ javaScriptEnabled: false });
   const page = await context.newPage();
   await page.goto('http://127.0.0.1:8765/historical-budget.html');
-  await expect(page.locator('[data-section-nav] a')).toHaveCount(8);
+  await expect(page.locator('[data-section-nav] a')).toHaveCount(labels.length);
   await expect(page.locator('[data-section-nav] [aria-current="page"]')).toHaveText('Historical Budgets');
   await expect(page.locator('#hb-coverage-summary')).toBeAttached();
   expect(await page.locator('[data-section-nav]').evaluate(node => getComputedStyle(node).position)).toBe('static');

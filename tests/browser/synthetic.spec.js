@@ -25,6 +25,7 @@ async function openData(page, url) {
   await (await fetched).finished();
   // Include dictionary fetches and rendering continuations before negative assertions.
   await page.waitForLoadState('networkidle');
+  if (url.includes('/map.html')) await page.locator('details').filter({ has: page.locator('[data-module]') }).locator('summary').first().click();
 }
 
 test('synthetic directory renders four profiles and filters query and classification', async ({ page }) => {

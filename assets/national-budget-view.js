@@ -9,6 +9,20 @@
 
   window.BudgetViews = function (context) {
     const { element, money, amount, office, versions, comparable, comparison, link, sourceLinks } = context;
+    let locationIndex = null;
+    try { locationIndex = JSON.parse(document.getElementById('nb-location-index')?.textContent || 'null'); } catch { /* No stale map claims without a valid build index. */ }
+    function locationInfo(row) {
+      const info = locationIndex?.snapshot_id === row.snapshot_id && Object.hasOwn(locationIndex.projects || {}, row.id) ? locationIndex.projects[row.id] : null;
+      return info?.record_sha256 === row.record_sha256 ? info : null;
+    }
+    function locationAction(row) {
+      const info = locationInfo(row);
+      if (!info) return element('small', 'Map availability not checked');
+      if (!info.has_coordinates) return element('small', 'Location unavailable');
+      const anchor = element('a', info.status === 'suspicious' ? 'View suspicious location on map' : 'View on map', 'nb-map-link');
+      anchor.href = `map.html?project=${encodeURIComponent(row.id)}`;
+      return anchor;
+    }
     function list(pairs) {
       const dl = element('dl', undefined, 'nb-definition-list');
       for (const [label, value] of pairs) dl.append(element('dt', label), element('dd', value));
@@ -41,6 +55,7 @@
       button.append(element('span', row.title, 'nb-record-name'), element('span', 'View details', 'nb-detail-hint'));
       button.addEventListener('click', () => openDetails(row, button));
       title.append(button, element('span', scopeLabels[row.scope], 'nb-scope-label'));
+      title.append(locationAction(row));
       const agency = cell('Office / Program');
       agency.append(element('span', office(row) || 'Office not supplied'), element('small', programLabels[row.dataset] || row.dataset));
       const status = cell('Comparison');
@@ -82,6 +97,7 @@
       if (row.scope === 'shared') location.append(element('p', 'Shared umbrella allocation: no Pangasinan share is inferred.', 'nb-warning'));
       if (row.scope === 'office') location.append(element('p', 'An office association does not prove location in any city, municipality or legislative district.', 'nb-warning'));
       content.append(location);
+      const mapAction = element('p'); mapAction.append(locationAction(row)); content.append(mapAction);
       const sources = section('Source evidence');
       sources.append(element('p', `${human(row.source_review_status)}. Publication approval does not clear upstream evidence flags.`, 'nb-warning'));
       if ((row.upstream.flags || []).includes('nep_evidence_review')) sources.append(element('p', 'NEP evidence needs review: the source has flagged the proposal-side evidence for checking. The displayed comparison is not independently verified.', 'nb-warning'));

@@ -137,6 +137,7 @@
       target.append(el('p', 'A reviewed relationship does not assign an entire shared allocation to this LGU.', 'lgu-caption'));
       for (const row of national.verified) {
         const link = el('a', row.title); link.href = `national-budget.html?q=${encodeURIComponent(row.id)}#projects`; const p = el('p'); p.append(link); target.append(p);
+        if (row.has_published_coordinates) { const map = el('a', 'Inspect published coordinates'); map.href = `map.html?project=${encodeURIComponent(row.id)}`; target.append(map); }
       }
     }
     target.append(el('h3', 'Names to explore in national budgets'));
@@ -145,7 +146,9 @@
     if (discovery.length) {
       target.append(el('p', `${national.discovery_count} FY2027 title matches; a preview of ${discovery.length} is shown.`));
       for (const row of discovery) {
-        const card = el('article', undefined, 'lgu-record'); const a = el('a', row.title); a.href = `national-budget.html?q=${encodeURIComponent(row.id)}#projects`; card.append(a, el('p', `${row.dataset.toUpperCase()} / ${row.house_stage === 'hgab3' ? 'House third reading' : 'House second reading'} / location not verified`, 'lgu-caption')); target.append(card);
+        const card = el('article', undefined, 'lgu-record'); const a = el('a', row.title); a.href = `national-budget.html?q=${encodeURIComponent(row.id)}#projects`; card.append(a, el('p', `${row.dataset.toUpperCase()} / ${row.house_stage === 'hgab3' ? 'House third reading' : 'House second reading'} / location not verified`, 'lgu-caption'));
+        if (row.has_published_coordinates) { const map = el('a', row.location_audit_status === 'suspicious' ? 'Inspect suspicious published location' : 'Inspect published coordinates'); map.href = `map.html?project=${encodeURIComponent(row.id)}`; card.append(map); }
+        target.append(card);
       }
     } else target.append(el('p', 'No title matches are supplied in this profile bundle. This does not establish absence of projects.'));
     const query = model.lgu.name.replace(/^City of /i, '');

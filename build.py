@@ -23,6 +23,7 @@ from scripts.national_budget.pipeline import publication_payload
 from scripts.site_data import publication_payloads
 from scripts.lgu_profiles import publication_payloads as profile_payloads
 from scripts.home_snapshot import publication_payload as home_payload
+from scripts.national_budget.geographic_audit import publication_payload as location_payload
 
 ROOT = Path(__file__).resolve().parent
 SRC_PAGES = ROOT / "src" / "pages"
@@ -177,6 +178,7 @@ def financial_summary(records: list) -> dict:
 SECTION_NAV_ITEMS = (
     ("overview", "Overview", "transparency.html"),
     ("projects", "2027 Projects", "national-budget.html"),
+    ("locations", "Project Locations", "map.html"),
     ("historical", "Historical Budgets", "historical-budget.html"),
     ("offices", "Offices & Districts", "national-budget.html#offices"),
     ("context", "Context", "budget-context.html"),
@@ -228,6 +230,15 @@ def build(mode: str = "production", output: Path | None = None, data_dir: Path |
     data = load_data(data_dir or ROOT / "data" / ("fixtures" if mode == "test" else "production"), mode)
     national_budget = publication_payload(ROOT)
     supplemental = publication_payloads(ROOT, data, mode, data_dir)
+    locations = location_payload(ROOT, national_budget["projects"], national_budget["manifest"])
+    if set(locations) != {"data/project-locations/projects.geojson", "data/project-locations/review-summary.json"}:
+        raise ValueError("Unexpected project-location publication files")
+    supplemental.update(locations)
+    mapped_ids = {feature["properties"]["project_id"] for feature in locations["data/project-locations/projects.geojson"]["features"]}
+    audit_rows = {row["id"]: row for row in locations["data/project-locations/review-summary.json"]["projects"]}
+    location_index = {"snapshot_id": national_budget["manifest"].get("snapshot_id"), "projects": {
+        row["id"]: {"has_coordinates": row["id"] in mapped_ids, "status": audit_rows.get(row["id"], {}).get("display_status", "unavailable"), "record_sha256": row["record_sha256"]}
+        for row in national_budget["projects"]}}
     supplemental["data/home-snapshot.json"] = home_payload(data, supplemental, national_budget)
     supplemental.update(profile_payloads(data, supplemental, national_budget))
     output = (output or ROOT / {"production": "public", "test": "test-public", "preview": "preview-public"}[mode]).resolve()
@@ -264,6 +275,7 @@ def build(mode: str = "production", output: Path | None = None, data_dir: Path |
                 "DESCRIPTION": html.escape(meta["description"], quote=True),
                 "HEADER": header,
                 "SECTION_NAV": render_section_nav(meta),
+                "PROJECT_LOCATION_INDEX": json.dumps(location_index, ensure_ascii=True, sort_keys=True).replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026"),
                 "BODY": body,
                 "FOOTER": footer,
             },

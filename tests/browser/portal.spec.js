@@ -93,6 +93,7 @@ for (const name of ['finances', 'projects', 'procurement', 'legislation', 'servi
     const loaded = page.waitForResponse(response => response.url().endsWith('/data/public.json') && response.ok());
     await page.goto(`/${name}.html`);
     const root = page.locator('[data-module]');
+    if (name === 'map') await page.locator('details').filter({ has: root }).locator('summary').first().click();
     if (name === 'finances') await page.locator('[data-ledger-disclosure] > summary').click();
     await expect(root).toBeVisible();
     await (await loaded).finished();

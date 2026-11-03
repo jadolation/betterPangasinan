@@ -40,6 +40,8 @@ def publication_payloads(data, supplemental, national_budget):
     barangays = supplemental.get("data/geography/barangays.json", [])
     geo = supplemental.get("data/geography/manifest.json", {})
     historical = supplemental.get("data/historical-budget/programs.json", {}).get("data", [])
+    location_audit = {row["id"]: row for row in supplemental.get("data/project-locations/review-summary.json", {}).get("projects", [])}
+    mapped_ids = {row["properties"]["project_id"] for row in supplemental.get("data/project-locations/projects.geojson", {}).get("features", [])}
     government = supplemental.get("data/government-leadership.json", {})
     officials = {row["id"]: row for row in government.get("officials", [])}
     profiles = {}
@@ -92,7 +94,9 @@ def publication_payloads(data, supplemental, national_budget):
         # Only a few identifiers/titles are included. Complete evidence remains in
         # the specialist explorer, not a duplicated budget ledger for every LGU.
         def budget_preview(row):
-            return {key: row.get(key) for key in ("id", "title", "dataset", "house_stage", "scope", "geographic_review_status", "source_review_status")}
+            preview = {key: row.get(key) for key in ("id", "title", "dataset", "house_stage", "scope", "geographic_review_status", "source_review_status")}
+            preview.update(has_published_coordinates=row["id"] in mapped_ids, location_audit_status=location_audit.get(row["id"], {}).get("display_status"))
+            return preview
         historical_preview = [{key: row.get(key) for key in ("key", "fam_key", "name", "department_id")} for row in historical_matches[:3]]
         selected = local_statistics + local_budgets + local_projects + local_government + local_hospitals
         source_ids = {row.get("source_id") for row in selected if row.get("source_id")}

@@ -301,6 +301,58 @@ reported local-budget observations or national proposals.
 
 ## National Budget Pipeline
 
+### Published Project Locations
+
+`map.html` is the FY2027 Project Locations explorer, separate from the SVG
+municipality/district map. It defaults to farm-to-market roads and also supports
+API-published points from other programs. `?project=<dataset:upstream-id>` opens
+the matching program and source location. Budget records with usable coordinates
+offer a map link; records without them say Location unavailable. LGU profile
+name matches remain discovery leads, never confirmed local allocations.
+
+`scripts/national_budget/geographic_audit.py` recomputes two allowlisted derived
+outputs during every build: `data/project-locations/projects.geojson` and
+`review-summary.json`. Do not edit these generated root/public mirrors by hand.
+The approved FY2027 records, amounts, House stages and original geographic review
+states are unchanged. Source-record metadata and original OCR/normalization
+annotations remain accessible as evidence.
+
+Coordinate order follows explicitly named longitude/latitude fields, never
+whichever order lands in Pangasinan. FMR start/end segments retain both source
+versions and deduplicate identical pairs with evidence. A valid endpoint remains
+plotted when its partner is invalid; missing or uninterpretable coordinates
+produce no invented marker. API-published standalone points are identified as
+such and are not assumed to be surveyed infrastructure locations.
+
+Shapely handles Polygon/MultiPolygon coverage, holes and the provincial union.
+`pyproj` supplies WGS84 geodesic distances and a local UTM51N 200-metre boundary
+tolerance for the simplified reference geometry. Endpoints over 200 km apart,
+identical endpoints and municipality mismatches are review indicators, not proof
+of error or misconduct. No reliable land/coastline dataset is used, so the audit
+does not claim that a point is offshore solely because it is outside Pangasinan.
+Required dependencies are declared in `requirements.txt`.
+
+The Leaflet 1.9.4 map is self-hosted under `assets/leaflet/`, with its BSD 2-Clause
+license retained in the JavaScript header and source license file. EPSG:4326
+avoids silently clamping valid polar latitudes. Local boundaries and geographic
+grid labels provide a basemap-free view; there are no tile or routing requests.
+Exact-coordinate OpenStreetMap links contact that provider only when clicked.
+Existing site webfonts retain their separate external-font behavior.
+
+The initial viewport fits Pangasinan only. All matching usable source locations,
+including distant suspicious points, remain in their original layers. Selecting
+a record fits its actual endpoints; Go to published location and Pangasinan
+overview never snap or replace coordinates. Dashed lines are endpoint
+connections, not road centerlines, driving routes or construction evidence.
+Outside-province namesakes are distinguished from inconsistent Pangasinan claims.
+No source coordinate is moved or omitted merely to make it look plausible.
+
+Hashes bind the derived output to the current publication snapshot, project-file
+bytes and municipality boundary bytes. The browser checks those bindings, the
+coordinate-file checksum and complete feature/segment consistency. Stale or
+altered evidence fails closed. The list remains available if Leaflet or the
+boundary reference cannot load; errors are never substituted with zero funding.
+
 `national-budget.html` is a separate FY2027 proposal explorer. It does not insert
 national proposals into the existing 12 production datasets or their totals.
 Python's standard library handles collection; `jsonschema` validates separate

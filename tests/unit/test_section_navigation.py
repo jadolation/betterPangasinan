@@ -9,7 +9,7 @@ PAGES = {
     "transparency": "overview", "national-budget": "projects",
     "historical-budget": "historical", "budget-context": "context",
     "budget-hearings": "hearings", "finances": "finances", "methodology": "about",
-    "projects": "", "procurement": "", "legislation": "", "map": "",
+    "projects": "", "procurement": "", "legislation": "", "map": "locations",
 }
 
 
@@ -28,6 +28,7 @@ def test_canonical_sections_and_order():
     assert build.SECTION_NAV_ITEMS == (
         ("overview", "Overview", "transparency.html"),
         ("projects", "2027 Projects", "national-budget.html"),
+        ("locations", "Project Locations", "map.html"),
         ("historical", "Historical Budgets", "historical-budget.html"),
         ("offices", "Offices & Districts", "national-budget.html#offices"),
         ("context", "Context", "budget-context.html"),
@@ -44,7 +45,7 @@ def test_section_metadata_and_current_item(name, selected):
     assert meta.get("section_item", "") == selected
     parser = Links()
     parser.feed(build.render_section_nav(meta))
-    assert len(parser.links) == 8
+    assert len(parser.links) == 9
     assert [a["data-section-item"] for a in parser.links if "aria-current" in a] == ([selected] if selected else [])
     assert 'class="tp-nav"' not in body
     assert 'aria-label="Budget evidence"' not in body

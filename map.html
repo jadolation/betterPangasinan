@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Project Map | Better Pangasinan</title>
-<meta name="description" content="A geographic view of reviewed project data with an equivalent text list and clear coverage limits." />
+<meta name="description" content="Inspect original published FY2027 project endpoints, location warnings and budget evidence without changing source coordinates." />
 <link rel="icon" type="image/svg+xml" href="logo.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -44,6 +44,7 @@
   <div class="wrap section-nav-links">
 <a href="transparency.html" data-section-item="overview">Overview</a>
 <a href="national-budget.html" data-section-item="projects">2027 Projects</a>
+<a href="map.html" data-section-item="locations" aria-current="page">Project Locations</a>
 <a href="historical-budget.html" data-section-item="historical">Historical Budgets</a>
 <a href="national-budget.html#offices" data-section-item="offices">Offices &amp; Districts</a>
 <a href="budget-context.html" data-section-item="context">Context</a>
@@ -55,9 +56,38 @@
 
 
 <main id="main-content" tabindex="-1">
-<section class="page-hero"><div class="wrap"><span class="eyebrow">Place, with provenance</span><h1>Pangasinan project map</h1><p class="lede">Only reviewed, licensed geometry belongs on this map. A project name or municipality is not a precise location.</p></div></section>
+<link rel="stylesheet" href="assets/leaflet/leaflet.css">
+<link rel="stylesheet" href="assets/project-locations.css">
+<section class="page-hero"><div class="wrap"><span class="eyebrow">FY2027 budget proposals</span><h1>Project Locations</h1><p class="lede">Inspect published endpoints and their source evidence. Unusual coordinates stay at their original location.</p></div></section>
+<section class="section"><div class="wrap" id="project-locations">
+<p class="pl-notice">Dashed lines connect published endpoints, not verified road routes. Location warnings are not findings of fraud.</p>
+<div id="pl-summary" class="pl-summary" aria-label="Location assessment counts"></div>
+<details id="pl-filter-panel" open><summary>Search and filter projects</summary>
+<form id="pl-filters" class="pl-filters" aria-label="Project location filters">
+<label>Title or project ID<input name="query" type="search" placeholder="Search projects"></label>
+<label>Program<select name="dataset"><option value="fmr">Farm-to-market roads (FMR)</option><option value="">All programs</option></select></label>
+<label>Location status<select name="status"><option value="">All location statuses</option></select></label>
+<label>Stated municipality<select name="municipality"><option value="">All municipalities</option></select></label>
+<label>Budget comparison<select name="comparison"><option value="">All comparisons</option></select></label>
+<label class="pl-check"><input name="suspicious" type="checkbox"> Only locations needing review</label>
+</form>
+</details>
+<p id="pl-status" role="status" aria-live="polite">Loading published location evidence.</p>
+<div class="pl-actions"><button type="button" id="pl-overview">Pangasinan overview</button><button type="button" id="pl-suspicious">Show suspicious locations</button></div>
+<p class="pl-legend"><span class="pl-start">Blue: start or published point</span> <span class="pl-end">Gold: end</span> <span class="pl-warning">Amber outline: location warning</span> <span>Dashed lines: endpoint connections, not roads</span></p>
+<div class="pl-map-layout"><div>
+<div id="pl-map" role="region" aria-label="Published source coordinates, with Pangasinan reference boundaries"></div>
+<p id="pl-map-status">Local reference map. No external tiles or routing services are requested.</p>
+<p class="pl-boundary-credit">Boundary reference: NAMRIA, PSA and OCHA Philippines via <a href="https://www.geoboundaries.org/">geoBoundaries</a>, <a href="https://creativecommons.org/licenses/by/3.0/igo/">CC BY 3.0 IGO</a>. Simplified for reference, not a legal boundary survey.</p>
+</div><aside id="pl-detail" aria-label="Selected project" aria-live="polite"><h2>Project evidence</h2><p>Select a project or mapped endpoint to inspect its original coordinates.</p></aside></div>
+<section class="pl-project-list" aria-label="Filtered project list"><h2>Projects</h2><div id="pl-list"></div><nav class="pl-pagination" aria-label="Project pages"><button type="button" id="pl-prev">Previous</button><span id="pl-page"></span><button type="button" id="pl-next">Next</button></nav></section>
+<details><summary>Source details and map limitations</summary><div id="pl-sources"></div><p>Self-hosted <a href="https://leafletjs.com/">Leaflet 1.9.4</a>, Copyright 2010-2023 Volodymyr Agafonkin and 2010-2011 CloudMade, distributed under the <a href="https://unpkg.com/leaflet@1.9.4/LICENSE">BSD 2-Clause license</a>. The full license is also retained in the <a href="assets/leaflet/leaflet.js">published JavaScript header</a>. No basemap imagery is loaded. External OpenStreetMap views are opened only when you choose a coordinate link.</p><p><a href="data/project-locations/review-summary.json">Download location review summary</a> · <a href="data/project-locations/projects.geojson">Download source-coordinate GeoJSON</a> · <a href="data/geography/manifest.json">Boundary provenance</a></p></details>
+<noscript><p>The interactive map requires JavaScript. The <a href="data/project-locations/review-summary.json">location summary</a>, <a href="data/project-locations/projects.geojson">coordinate file</a> and <a href="projects.html">project registry</a> remain available. No locations are inferred from project names.</p></noscript>
+</div></section>
 <section class="section"><div class="wrap"><h2>Looking for municipality boundaries?</h2><p>The <a href="municipality-map.html">municipality explorer</a> displays the sourced city and municipal polygons, population and barangay reference data. Those administrative boundaries are separate from precise project-location evidence.</p></div></section>
-<section class="section"><div class="wrap" data-module="geography"><h2>Geographic coverage</h2><form data-filters><fieldset><legend>Map layers</legend><label><input type="checkbox" name="projects" disabled> Reviewed project locations</label> <label><input type="checkbox" name="boundaries" disabled> Reviewed boundaries</label></fieldset></form><p data-status role="status" aria-live="polite">No reviewed geometry is available. No boundaries or project pins are drawn.</p><div id="project-map" aria-label="Reviewed geographic records" hidden style="height: 24rem; max-width: 100%"></div><h2>Text alternative</h2><div data-results><p>The text list will show the same reviewed records as the map, including sources. No location records have been published.</p></div><noscript><p>The map requires JavaScript. No reviewed geometry is currently published; the <a href="projects.html">project registry</a> remains available.</p></noscript><p>Map library: Leaflet 1.9.4. Background tiles, if loaded, are credited to OpenStreetMap contributors. Loading the map may contact external providers. <a href="privacy.html">Privacy information</a>.</p></div></section>
+<section class="section"><div class="wrap"><details><summary>Legacy geographic records</summary><div data-module="geography"><h2>Geographic coverage</h2><form data-filters><fieldset><legend>Map layers</legend><label><input type="checkbox" name="projects" disabled> Reviewed project locations</label> <label><input type="checkbox" name="boundaries" disabled> Reviewed boundaries</label></fieldset></form><p data-status role="status" aria-live="polite">No reviewed geometry is available. No boundaries or project pins are drawn.</p><div id="project-map" aria-label="Reviewed geographic records" hidden style="height: 24rem; max-width: 100%"></div><h2>Text alternative</h2><div data-results><p>The text list will show the same reviewed records as the map, including sources. No legacy location records have been published.</p></div><p>Legacy fixtures may load external map providers. <a href="privacy.html">Privacy information</a>.</p></div></details></div></section>
+<script src="assets/leaflet/leaflet.js" defer></script>
+<script src="assets/project-locations.js" defer></script>
 <script src="assets/modules.js" defer></script>
 </main>
 
