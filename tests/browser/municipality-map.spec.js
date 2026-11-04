@@ -1,4 +1,4 @@
-const { test, expect } = require('@playwright/test');
+const { test, expect } = require('./tile-fixture');
 
 test('map separates preview and selection and provides explicit profile links', async ({ page }) => {
   await page.goto('/municipality-map.html');

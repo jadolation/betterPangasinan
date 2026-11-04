@@ -1,4 +1,4 @@
-const { test, expect } = require('@playwright/test');
+const { test, expect } = require('./tile-fixture');
 
 test('home map follows summary and searchable selector selects without navigating', async ({ page }) => {
   await page.goto('/');

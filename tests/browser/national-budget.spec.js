@@ -1,4 +1,4 @@
-const { test, expect } = require('@playwright/test');
+const { test, expect } = require('./tile-fixture');
 const { readFile } = require('node:fs/promises');
 const { createHash } = require('node:crypto');
 

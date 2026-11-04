@@ -309,7 +309,7 @@ reported local-budget observations or national proposals.
 ### Published Project Locations
 
 `map.html` is the FY2027 Project Locations explorer, separate from the SVG
-municipality/district map. It defaults to farm-to-market roads and also supports
+municipality/district map. It defaults to All Programs and also supports
 API-published points from other programs. `?project=<dataset:upstream-id>` opens
 the matching program and source location. Budget records with usable coordinates
 offer a map link; records without them say Location unavailable. LGU profile
@@ -338,25 +338,80 @@ does not claim that a point is offshore solely because it is outside Pangasinan.
 Required dependencies are declared in `requirements.txt`.
 
 The Leaflet 1.9.4 map is self-hosted under `assets/leaflet/`, with its BSD 2-Clause
-license retained in the JavaScript header and source license file. EPSG:4326
-avoids silently clamping valid polar latitudes. Local boundaries and geographic
-grid labels provide a basemap-free view; there are no tile or routing requests.
-Exact-coordinate OpenStreetMap links contact that provider only when clicked.
-Existing site webfonts retain their separate external-font behavior.
+license retained in the JavaScript header and source license file. The default
+Web Mercator (EPSG:3857) view uses standard OpenStreetMap background tiles. Provider
+URL, attribution and viewport-only loading options are centralized in
+`assets/project-map-config.js`. Normal browser caching and referring-origin
+information are retained; no offline download, tile proxy, bulk cache, route
+lookup or road snapping is implemented. Evaluate an explicitly licensed hosted
+provider before substantial traffic; OSM's community servers have no availability
+guarantee. Read `privacy.html#map-privacy` and the OSM tile-usage policy.
+
+Choose No basemap to stop new tile requests. Basemap and boundary failures do not
+remove valid source markers or connections. A missing boundary overlay uses an
+approximate overview viewport, not invented project locations or a claim of
+administrative consistency. An actually mismatched supplied boundary hash still
+fails integrity validation. Thin, nearly transparent municipal overlays preserve
+roads and labels beneath them. Program and suspicious-layer controls change only
+visibility, not records or classifications.
+
+Latitudes beyond Web Mercator's supported range remain in source evidence and
+are not drawn at a clamped latitude. The explicit global-coordinate inspection
+switch rebuilds a tile-free EPSG:4326 view for those exceptional coordinates.
+The normal OSM view has no artificial coordinate grid. Source values, hashes and
+the geographic audit are identical in either projection.
 
 The initial viewport fits Pangasinan only. All matching usable source locations,
 including distant suspicious points, remain in their original layers. Selecting
-a record fits its actual endpoints; Go to published location and Pangasinan
-overview never snap or replace coordinates. Dashed lines are endpoint
+a record opens its first usable source point; View Start, View End and View Both
+navigate the active segment without changing source values. Suspicious-location
+search expands to all programs and clears incompatible search/municipality/
+comparison filters, without fitting the viewport to outliers. Pangasinan Overview
+preserves selection and filters; Reset View explicitly clears them. Dashed lines are endpoint
 connections, not road centerlines, driving routes or construction evidence.
 Outside-province namesakes are distinguished from inconsistent Pangasinan claims.
 No source coordinate is moved or omitted merely to make it look plausible.
+Explicit `name_match_elsewhere` records are hidden by default, with a dynamically
+reported excluded count and an Include outside-province search matches option.
+Outside coordinates and suspicious status alone never exclude a record: the
+Bolinao outlier remains in the default view. A namesake project deep link or
+explicit namesake-status filter enables inclusion. Reset returns to focused
+All Programs. URL parameters preserve filters and inclusion on reload/history;
+all source records and their geometry remain in the downloadable dataset.
+The specific Koronadal FMR `fmr:house_only:ib:p722:r4` is additionally excluded
+from Project Locations at the user's request, including its markers, connection,
+list entry and old map deep link. The inclusion checkbox cannot restore that
+record to this map. Approved source and derived audit downloads remain intact;
+integrity checks run on the complete files before the visual exclusion is applied.
 
 Hashes bind the derived output to the current publication snapshot, project-file
 bytes and municipality boundary bytes. The browser checks those bindings, the
 coordinate-file checksum and complete feature/segment consistency. Stale or
 altered evidence fails closed. The list remains available if Leaflet or the
 boundary reference cannot load; errors are never substituted with zero funding.
+
+The committed Bolinao bridge (`dpwh:house-reading:6548`) has one structured API
+point at longitude 119.92525, latitude 6.38299. Its title explicitly also publishes
+latitude 16.38329, longitude 119.92648. Following the user's November 3 approval,
+the audit displays this second pair as **source-title evidence, unverified**.
+This is a narrowly reviewed interpretation for that exact record, title, API
+pair, snapshot and record hash, not a general title-coordinate scraper.
+The order is explicitly latitude/longitude and the first pair agrees with named
+API fields; geography does not determine order. Source paths, exact tokens/text,
+offsets, title copies and reading versions are retained. Changed or stale bindings
+suppress the extra point and add a review flag while keeping any usable API point.
+
+First Point and Second Point identify these evidence types. Their approximately
+1,106 km dashed connection is a `title_coordinate_comparison`, **not verified
+bridge endpoints or an alignment**. The first marker is not duplicated. No title
+coordinate is corrected, and no original budget value or geographic review state
+is changed. The updated derived output contains 207 Points and 33 LineStrings
+across the same 174 mapped projects and 732 records. All 32 structured FMR
+connections remain; the extra line is the separately labeled title comparison.
+Other DPWH records still have no newly inferred endpoints. Their 70 records with
+chainages are not interpreted as geographic alignments.
+Automated browser tests route OSM tiles to controlled PNG fixtures, including
+manually created contexts, so regression runs never crawl public tile servers.
 
 `national-budget.html` is a separate FY2027 proposal explorer. It does not insert
 national proposals into the existing 12 production datasets or their totals.
