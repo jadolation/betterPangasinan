@@ -4,7 +4,7 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[2]
-FIXTURE = ROOT / "tests/fixtures/collector/psgc_sample.xlsx"
+INPUT = ROOT / "pangasinan_lgu_registry_staging.json"
 
 
 def invoke(*args):
@@ -22,10 +22,8 @@ def test_cli_collect_validate_export_report(tmp_path):
         "collect",
         "--source",
         "psa_psgc",
-        "--fixture",
-        FIXTURE,
-        "--environment",
-        "test",
+        "--input",
+        INPUT,
         *base,
     )
     assert result.returncode == 0, result.stderr
@@ -57,10 +55,8 @@ def test_cli_invalid_fixture_nonzero_and_still_audited(tmp_path):
         "collect",
         "--source",
         "psa_psgc",
-        "--fixture",
+        "--input",
         broken,
-        "--environment",
-        "test",
         "--state-dir",
         tmp_path / "state",
     )
@@ -70,7 +66,7 @@ def test_cli_invalid_fixture_nonzero_and_still_audited(tmp_path):
     assert report["run_id"]
 
 
-def test_cli_has_no_publication_or_live_mode(tmp_path):
+def test_cli_has_no_publication_or_synthetic_mode(tmp_path):
     for args in [
         ("publish",),
         ("collect", "--source", "psa_psgc", "--environment", "production"),
@@ -79,7 +75,7 @@ def test_cli_has_no_publication_or_live_mode(tmp_path):
             "--source",
             "psa_psgc",
             "--fixture",
-            FIXTURE,
+            INPUT,
             "--environment",
             "test",
             "--state-dir",
@@ -92,10 +88,14 @@ def test_cli_has_no_publication_or_live_mode(tmp_path):
 
 def test_mock_cannot_enter_existing_publication_gate(tmp_path):
     import build
-    from collector.pipeline import collect
+    from tests.support.synthetic_collector import collect
     from collector.persistence import Store
 
-    run = collect(FIXTURE, tmp_path / "raw", Store(tmp_path / "staging.sqlite"))
+    run = collect(
+        ROOT / "tests/fixtures/collector/psgc_sample.xlsx",
+        tmp_path / "raw",
+        Store(tmp_path / "staging.sqlite"),
+    )
     directory = tmp_path / "dataset"
     directory.mkdir()
     assert all(row["is_mock"] for row in run["records"])

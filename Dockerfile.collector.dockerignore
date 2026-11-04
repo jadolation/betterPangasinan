@@ -15,10 +15,8 @@
 !migrations/
 !migrations/**
 !tests/
-!tests/fixtures/
-!tests/fixtures/collector/
-!tests/fixtures/collector/**
 !tests/integration/
 !tests/integration/test_collector_storage.py
 **/__pycache__/
 **/*.pyc
+!pangasinan_lgu_registry_staging.json

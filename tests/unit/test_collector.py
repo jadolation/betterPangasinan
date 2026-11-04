@@ -5,7 +5,7 @@ from pathlib import Path
 
 import pytest
 
-from collector.pipeline import collect, extract_psgc
+from tests.support.synthetic_collector import collect, extract_psgc
 from collector.exporters import export_run, safe_target
 from collector.persistence import Store
 
@@ -89,7 +89,7 @@ def test_bad_workbooks_are_audited(tmp_path, case):
 
 
 def test_unknown_values_preserved():
-    rows = extract_psgc(FIXTURE.read_bytes())
+    rows = extract_psgc(FIXTURE.read_bytes())["rows"]
     assert rows[0]["raw_values"]["Notes"] == "is_mock: true; synthetic only"
 
 
@@ -150,7 +150,7 @@ def test_change_report_marks_only_changed_values(tmp_path):
     path = tmp_path / "changed.xlsx"
     book.save(path)
     run = collect(path, tmp_path / "raw", store)
-    assert run["changes"]["changed"] == ["geographic_unit:psgc:TEST_CITY"]
+    assert run["changes"]["changed"] == ["geographic_unit:psgc:9900001000"]
 
 
 def test_revalidation_checks_typed_values(tmp_path):

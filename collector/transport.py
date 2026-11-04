@@ -1,4 +1,4 @@
-"""Deny-by-default source registry, bounded fixture parsing and HTTP test harness.
+"""Deny-by-default source registry, bounded workbook inspection and HTTP contract checks.
 
 Live sockets remain disabled until deployment-level destination enforcement exists.
 Injected HTTPX transports are for isolated contract tests, never a live-mode escape.
@@ -38,7 +38,9 @@ class SourceConfig(BaseModel):
     allowed_hosts: list[str] = Field(default_factory=list)
     allowed_paths: list[str] = Field(default_factory=list)
     format: Literal["xlsx"] = "xlsx"
-    mapping_version: Literal["synthetic_psgc_v1"] = "synthetic_psgc_v1"
+    mapping_version: Literal["reviewed_psa_transcription_v1", "unverified"] = (
+        "unverified"
+    )
     timeout_seconds: int = Field(default=30, ge=1, le=120)
     retries: int = Field(default=3, ge=0, le=3)
     download_delay_seconds: int = Field(default=2, ge=1, le=60)

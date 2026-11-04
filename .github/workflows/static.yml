@@ -23,8 +23,8 @@ jobs:
           python-version: '3.12'
       - run: python -m pip install --require-hashes -r requirements-collector.lock
       - run: python -m pytest
-      - run: ruff check collector tests/unit/test_collector*.py tests/data/test_p0_review.py tests/security tests/integration
-      - run: ruff format --check collector tests/unit/test_collector*.py tests/data/test_p0_review.py tests/security tests/integration
+      - run: ruff check collector tests/unit/test_collector*.py tests/unit/test_real_psa.py tests/support tests/data/test_p0_review.py tests/security tests/integration
+      - run: ruff format --check collector tests/unit/test_collector*.py tests/unit/test_real_psa.py tests/support tests/data/test_p0_review.py tests/security tests/integration
       - run: mypy collector --ignore-missing-imports
       - run: python build.py
       - uses: actions/setup-node@v4
@@ -32,7 +32,8 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci
-      - run: npx playwright install --with-deps chromium
+      - run: node --test tests/security/*.test.cjs
+      - run: npx playwright install --with-deps chrome
       - run: npm run test:browser
       - uses: actions/upload-pages-artifact@v3
         with:

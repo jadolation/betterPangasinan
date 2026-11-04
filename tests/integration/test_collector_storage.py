@@ -116,16 +116,16 @@ def test_disposable_postgres_migration_and_idempotency(tmp_path):
     from collector.pipeline import collect
     from collector.exporters import export_run
 
-    fixture = (
-        Path(__file__).resolve().parents[1] / "fixtures/collector/psgc_sample.xlsx"
+    source_path = (
+        Path(__file__).resolve().parents[2] / "pangasinan_lgu_registry_staging.json"
     )
-    first = collect(fixture, tmp_path / "raw", store)
-    second = collect(fixture, tmp_path / "raw", store)
-    assert first["stage"]["new_versions"] == 5
+    first = collect(source_path, tmp_path / "raw", store)
+    second = collect(source_path, tmp_path / "raw", store)
+    assert first["stage"]["new_versions"] == 49
     assert second["stage"]["new_versions"] == 0
-    assert count(store, record_versions) == 5
+    assert count(store, record_versions) == 49
     manifest = export_run(second, tmp_path / "review")
-    assert manifest["is_mock"] is True
+    assert manifest["is_mock"] is False
     assert manifest["coverage_status"] == "partial"
     with store.engine.connect() as connection:
         assert connection.exec_driver_sql("SELECT PostGIS_Version()").scalar()

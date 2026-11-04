@@ -75,9 +75,9 @@ def export_run(run, target):
     records = run["records"]
     metadata = {
         "run_id": run["run_id"],
-        "is_mock": True,
+        "is_mock": run["artifact"]["is_mock"],
         "review_status": "pending",
-        "coverage_status": "partial",
+        "coverage_status": run["quality"]["coverage_status"],
         "quality": run["quality"],
         "artifact": run["artifact"],
     }

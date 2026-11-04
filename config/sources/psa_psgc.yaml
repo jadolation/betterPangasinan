@@ -3,22 +3,29 @@ agency: Philippine Statistics Authority
 enabled: false
 access_review: pending
 redistribution_review: pending
-start_url: null
+start_url: https://psa.gov.ph/system/files/scd/PSGC-3Q-2026-Publication-Datafile.xlsx
 allowed_hosts:
   - psa.gov.ph
   - www.psa.gov.ph
-allowed_paths: []
+allowed_paths:
+  - /system/files/scd/
 format: xlsx
-mapping_version: synthetic_psgc_v1
-source_title: PSGC source pending endpoint and release review
-source_published_at: null
+mapping_version: unverified
+source_title: PSGC 3Q 2026 Publication Datafile; direct download challenged
+source_published_at: "2026-10-12"
 reference_period: null
-release: null
-last_reviewed_at: null
-license_evidence: null
+release: "2026-09-30"
+last_reviewed_at: "2026-11-03T08:56:04Z"
+license_evidence: https://psa.gov.ph/terms-of-use
 timeout_seconds: 30
 retries: 3
 download_delay_seconds: 2
 max_download_bytes: 25000000
 auto_publish: false
 requires_human_review: true
+# Exact link discovered on https://psa.gov.ph/classification/psgc.
+# Normal direct request returned HTTP 403 and cf-mitigated: challenge.
+# Keep disabled; do not retry through alternate origins, disguises or challenge bypass.
+# Official API: https://psa.gov.ph/classifications-api/psgc (PSA-issued token required).
+# Workbook mapping remains unverified until original bytes are supplied legitimately.
+# Reviewed local transcription import is separate and retains its 2025-07-31 vintage.

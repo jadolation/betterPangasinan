@@ -1,7 +1,8 @@
 const { defineConfig } = require('@playwright/test');
-const { existsSync } = require('node:fs');
+const { launchOptions } = require('./scripts/browser-security.cjs');
 
 module.exports = defineConfig({
+  globalSetup: './scripts/browser-check.cjs',
   testDir: './tests/browser',
   outputDir: './tests/browser/artifacts',
   fullyParallel: true,
@@ -11,10 +12,7 @@ module.exports = defineConfig({
   use: {
     baseURL: 'http://127.0.0.1:8765',
     browserName: 'chromium',
-    launchOptions: {
-      executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE ||
-        (existsSync('/usr/bin/google-chrome') ? '/usr/bin/google-chrome' : undefined),
-    },
+    launchOptions,
     screenshot: 'only-on-failure',
     trace: 'retain-on-failure',
   },

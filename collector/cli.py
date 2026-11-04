@@ -1,4 +1,4 @@
-"""Offline collector and read-only P0 review commands. No approval/publication API."""
+"""Real-source artifact collection and read-only P0 review commands. No approval/publication API."""
 
 import argparse
 import json
@@ -22,8 +22,12 @@ def main(argv=None):
             "--state-dir", type=Path, default=ROOT / "data/staging/collector"
         )
         if name == "collect":
-            command.add_argument("--fixture", type=Path, required=True)
-            command.add_argument("--environment", choices=["test"], required=True)
+            command.add_argument(
+                "--input",
+                type=Path,
+                required=True,
+                help="Saved attributable source artifact; reviewed PSA transcription JSON is currently supported",
+            )
         else:
             command.add_argument("--run-id", required=True)
         if name == "export":
@@ -43,7 +47,7 @@ def main(argv=None):
             state = safe_target(args.state_dir)
             store = Store(state / "staging.sqlite")
             if args.command == "collect":
-                result = collect(args.fixture, state / "raw", store)
+                result = collect(args.input, state / "raw", store)
                 export_run(result, state / "runs" / result["run_id"])
             else:
                 result = store.report(args.run_id)

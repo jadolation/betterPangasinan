@@ -8,7 +8,7 @@ RUN pip install --no-cache-dir --require-hashes -r requirements-collector.lock \
     && useradd --uid 10001 --create-home collector
 COPY collector ./collector
 COPY config/sources ./config/sources
-COPY tests/fixtures ./tests/fixtures
+COPY pangasinan_lgu_registry_staging.json ./pangasinan_lgu_registry_staging.json
 COPY tests/integration ./tests/integration
 COPY scripts ./scripts
 COPY data/national_budget/config.json ./data/national_budget/config.json

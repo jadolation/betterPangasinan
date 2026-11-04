@@ -30,6 +30,8 @@ def test_image_contains_live_and_database_test_runtime():
     assert "COPY migrations ./migrations" in dockerfile
     assert "COPY data/national_budget/config.json" in dockerfile
     assert "USER 10001" in dockerfile
+    assert "COPY tests/fixtures" not in dockerfile
+    assert "COPY pangasinan_lgu_registry_staging.json" in dockerfile
     ignore = (ROOT / "Dockerfile.collector.dockerignore").read_text().splitlines()
     assert ignore[0] == "**"
     assert "!data/national_budget/config.json" in ignore

@@ -34,12 +34,17 @@ Run the browser regression suite with Node.js 22 or later:
 
 ```sh
 npm ci
-npx playwright install chromium
+npx playwright install chrome
 npm run test:browser
 ```
 
-The runner builds and serves `public/` automatically. It uses system Chrome if
-available, otherwise Playwright Chromium. Set `PLAYWRIGHT_CHROMIUM_EXECUTABLE`
+The runner builds and serves `public/` automatically. It uses stable Chrome with
+sandboxing enabled and never falls back to pinned Chromium. Keep Chrome updated.
+Both tests and the PSA downloader reject versions below 156.0.8078.73 before
+opening pages. This is the floor for the four October 2026 CVEs, not a guarantee
+against later vulnerabilities. The local setup also discovers stable Chrome at
+`/Volumes/DevSSD/Google Chrome.app`; other machines use the standard Chrome channel.
+Set `PLAYWRIGHT_CHROMIUM_EXECUTABLE` only to an updated stable Chrome executable
 to override the browser path. Reports and screenshots are under
 `tests/browser/report/` and `tests/browser/artifacts/`.
 
@@ -485,8 +490,9 @@ with the Amanoaoac source warning preserved, never a PHP 98 million budget.
 
 ## Offline P0 Collector And Review
 
-The new collector stages synthetic PSGC fixtures with original evidence, immutable
-versions, validation and review-only JSON/CSV exports. `review-p0` reuses existing
+The collector stages real, attributable source artifacts with original evidence,
+immutable versions, validation and review-only JSON/CSV exports. Synthetic inputs
+are retained only in tests. `review-p0` reuses existing
 LGU, barangay and approved FY2027 evidence without changing publication inputs.
 Live source collection stays disabled; official release, population evidence and
 license gaps remain explicit. Setup, commands, output locations and PostgreSQL

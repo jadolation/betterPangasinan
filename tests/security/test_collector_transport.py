@@ -38,7 +38,10 @@ def workbook():
 
 def test_registry_is_disabled_and_rejects_unknown_settings():
     source = load_source("psa_psgc")
-    assert source.enabled is False and source.start_url is None
+    assert source.enabled is False and source.start_url.endswith(
+        "PSGC-3Q-2026-Publication-Datafile.xlsx"
+    )
+    assert source.mapping_version == "unverified" and source.access_review == "pending"
     with pytest.raises(ValueError):
         SourceConfig(source_id="x", agency="x", arbitrary_command="evil")
     with pytest.raises(ValueError):
