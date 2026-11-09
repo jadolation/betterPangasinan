@@ -1,0 +1,5522 @@
+openapi: 3.0.3
+info:
+  title: Classification API Documentation
+  version: 1.0.0
+  description: The Classification API Documentation serves as the official reference
+    for the Statistical Classification System API. It provides detailed information
+    on all available endpoints, including their parameters, request and response schemas,
+    and sample responses for each classification system. Users with a valid API access
+    token may also execute live API requests through the integrated "Try it out" feature
+    to validate responses and support application development.
+paths:
+  /api/schema/:
+    get:
+      operationId: api_schema_retrieve
+      description: |-
+        OpenApi3 schema for this API. Format can be selected via content negotiation.
+
+        - YAML: application/vnd.oai.openapi
+        - JSON: application/vnd.oai.openapi+json
+      parameters:
+      - in: query
+        name: format
+        schema:
+          type: string
+          enum:
+          - json
+          - yaml
+      - in: query
+        name: lang
+        schema:
+          type: string
+          enum:
+          - af
+          - ar
+          - ar-dz
+          - ast
+          - az
+          - be
+          - bg
+          - bn
+          - br
+          - bs
+          - ca
+          - ckb
+          - cs
+          - cy
+          - da
+          - de
+          - dsb
+          - el
+          - en
+          - en-au
+          - en-gb
+          - eo
+          - es
+          - es-ar
+          - es-co
+          - es-mx
+          - es-ni
+          - es-ve
+          - et
+          - eu
+          - fa
+          - fi
+          - fr
+          - fy
+          - ga
+          - gd
+          - gl
+          - he
+          - hi
+          - hr
+          - hsb
+          - hu
+          - hy
+          - ia
+          - id
+          - ig
+          - io
+          - is
+          - it
+          - ja
+          - ka
+          - kab
+          - kk
+          - km
+          - kn
+          - ko
+          - ky
+          - lb
+          - lt
+          - lv
+          - mk
+          - ml
+          - mn
+          - mr
+          - ms
+          - my
+          - nb
+          - ne
+          - nl
+          - nn
+          - os
+          - pa
+          - pl
+          - pt
+          - pt-br
+          - ro
+          - ru
+          - sk
+          - sl
+          - sq
+          - sr
+          - sr-latn
+          - sv
+          - sw
+          - ta
+          - te
+          - tg
+          - th
+          - tk
+          - tr
+          - tt
+          - udm
+          - ug
+          - uk
+          - ur
+          - uz
+          - vi
+          - zh-hans
+          - zh-hant
+      tags:
+      - api
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/vnd.oai.openapi:
+              schema:
+                type: object
+                additionalProperties: {}
+            application/yaml:
+              schema:
+                type: object
+                additionalProperties: {}
+            application/vnd.oai.openapi+json:
+              schema:
+                type: object
+                additionalProperties: {}
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+          description: ''
+  /pcoicop/{version}/:
+    get:
+      operationId: pcoicop_retrieve
+      parameters:
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - pcoicop
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /pcoicop/{version}/all:
+    get:
+      operationId: listPCOICOP
+      summary: Retrieve ALL PCOICOP
+      parameters:
+      - in: query
+        name: class_code
+        schema:
+          type: string
+        description: Filter by class code
+      - in: query
+        name: division
+        schema:
+          type: string
+        description: Filter by division code
+      - in: query
+        name: group
+        schema:
+          type: string
+        description: Filter by group code
+      - in: query
+        name: item
+        schema:
+          type: string
+        description: Filter by item code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: subclass
+        schema:
+          type: string
+        description: Filter by subclass code
+      - in: query
+        name: subitem
+        schema:
+          type: string
+        description: Filter by subitem code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PCOICOP
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedPCOICOPList'
+          description: ''
+  /pcoicop/{version}/class:
+    get:
+      operationId: pcoicop_class_list
+      summary: Retrieve Class
+      parameters:
+      - in: query
+        name: class_code
+        schema:
+          type: string
+        description: Filter by class code
+      - in: query
+        name: division
+        schema:
+          type: string
+        description: Filter by division code
+      - in: query
+        name: group
+        schema:
+          type: string
+        description: Filter by group code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PCOICOP
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedClassList'
+          description: ''
+  /pcoicop/{version}/divisions:
+    get:
+      operationId: pcoicop_divisions_list
+      summary: Retrieve Division
+      parameters:
+      - in: query
+        name: division
+        schema:
+          type: string
+        description: Filter by division code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PCOICOP
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedDivisionList'
+          description: ''
+  /pcoicop/{version}/groups:
+    get:
+      operationId: pcoicop_groups_list
+      summary: Retrieve Group
+      parameters:
+      - in: query
+        name: division
+        schema:
+          type: string
+        description: Filter by division code
+      - in: query
+        name: group
+        schema:
+          type: string
+        description: Filter by group code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PCOICOP
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedGroupList'
+          description: ''
+  /pcoicop/{version}/item:
+    get:
+      operationId: pcoicop_item_list
+      summary: Retrieve Item
+      parameters:
+      - in: query
+        name: class_code
+        schema:
+          type: string
+        description: Filter by class code
+      - in: query
+        name: division
+        schema:
+          type: string
+        description: Filter by division code
+      - in: query
+        name: group
+        schema:
+          type: string
+        description: Filter by group code
+      - in: query
+        name: item
+        schema:
+          type: string
+        description: Filter by item code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: subclass
+        schema:
+          type: string
+        description: Filter by subclass code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PCOICOP
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedItemList'
+          description: ''
+  /pcoicop/{version}/sub-class:
+    get:
+      operationId: pcoicop_sub_class_list
+      summary: Retrieve Sub-class
+      parameters:
+      - in: query
+        name: class_code
+        schema:
+          type: string
+        description: Filter by class code
+      - in: query
+        name: division
+        schema:
+          type: string
+        description: Filter by division code
+      - in: query
+        name: group
+        schema:
+          type: string
+        description: Filter by group code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: subclass
+        schema:
+          type: string
+        description: Filter by subclass code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PCOICOP
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedSubClassList'
+          description: ''
+  /pcoicop/{version}/subitem:
+    get:
+      operationId: pcoicop_subitem_list
+      summary: Retrieve Sub-item
+      parameters:
+      - in: query
+        name: class_code
+        schema:
+          type: string
+        description: Filter by class code
+      - in: query
+        name: division
+        schema:
+          type: string
+        description: Filter by division code
+      - in: query
+        name: group
+        schema:
+          type: string
+        description: Filter by group code
+      - in: query
+        name: item
+        schema:
+          type: string
+        description: Filter by item code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: subclass
+        schema:
+          type: string
+        description: Filter by subclass code
+      - in: query
+        name: subitem
+        schema:
+          type: string
+        description: Filter by subitem code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PCOICOP
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedSubItemList'
+          description: ''
+  /pcpc/{version}/:
+    get:
+      operationId: pcpc_retrieve
+      parameters:
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - pcpc
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /pcpc/{version}/all:
+    get:
+      operationId: pcpc_all_list
+      summary: Retrieve ALL PCPC
+      parameters:
+      - in: query
+        name: classcode
+        schema:
+          type: string
+        description: Filter by class code
+      - in: query
+        name: divisioncode
+        schema:
+          type: string
+        description: Filter by division code
+      - in: query
+        name: groupcode
+        schema:
+          type: string
+        description: Filter by group code
+      - in: query
+        name: itemcode
+        schema:
+          type: string
+        description: Filter by item code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: section
+        schema:
+          type: string
+        description: Filter by section code
+      - in: query
+        name: subclasscode
+        schema:
+          type: string
+        description: Filter by subclass code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PCPC
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedPCPCList'
+          description: ''
+  /pcpc/{version}/classes:
+    get:
+      operationId: pcpc_classes_list
+      summary: Retrieve Class
+      parameters:
+      - in: query
+        name: classcode
+        schema:
+          type: string
+        description: Filter by class code
+      - in: query
+        name: divisioncode
+        schema:
+          type: string
+        description: Filter by division code
+      - in: query
+        name: groupcode
+        schema:
+          type: string
+        description: Filter by group code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: section
+        schema:
+          type: string
+        description: Filter by section code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PCPC
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedClassList'
+          description: ''
+  /pcpc/{version}/divisions:
+    get:
+      operationId: pcpc_divisions_list
+      summary: Retrieve Divisions
+      parameters:
+      - in: query
+        name: divisioncode
+        schema:
+          type: string
+        description: Filter by division code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: section
+        schema:
+          type: string
+        description: Filter by section code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PCPC
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedDivisionList'
+          description: ''
+  /pcpc/{version}/groups:
+    get:
+      operationId: pcpc_groups_list
+      summary: Retrieve Groups
+      parameters:
+      - in: query
+        name: divisioncode
+        schema:
+          type: string
+        description: Filter by division code
+      - in: query
+        name: groupcode
+        schema:
+          type: string
+        description: Filter by group code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: section
+        schema:
+          type: string
+        description: Filter by section code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PCPC
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedGroupList'
+          description: ''
+  /pcpc/{version}/item:
+    get:
+      operationId: pcpc_item_list
+      summary: Retrieve Item
+      parameters:
+      - in: query
+        name: classcode
+        schema:
+          type: string
+        description: Filter by class code
+      - in: query
+        name: divisioncode
+        schema:
+          type: string
+        description: Filter by division code
+      - in: query
+        name: groupcode
+        schema:
+          type: string
+        description: Filter by group code
+      - in: query
+        name: itemcode
+        schema:
+          type: string
+        description: Filter by item code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: section
+        schema:
+          type: string
+        description: Filter by section code
+      - in: query
+        name: subclasscode
+        schema:
+          type: string
+        description: Filter by subclass code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PCPC
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedItemList'
+          description: ''
+  /pcpc/{version}/sections:
+    get:
+      operationId: pcpc_sections_list
+      summary: Retrieve Sections
+      parameters:
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: section
+        schema:
+          type: string
+        description: Filter by section code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PCPC
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedSectionList'
+          description: ''
+  /pcpc/{version}/sub-classes:
+    get:
+      operationId: pcpc_sub_classes_list
+      summary: Retrieve Subclass
+      parameters:
+      - in: query
+        name: classcode
+        schema:
+          type: string
+        description: Filter by class code
+      - in: query
+        name: divisioncode
+        schema:
+          type: string
+        description: Filter by division code
+      - in: query
+        name: groupcode
+        schema:
+          type: string
+        description: Filter by group code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: section
+        schema:
+          type: string
+        description: Filter by section code
+      - in: query
+        name: subclasscode
+        schema:
+          type: string
+        description: Filter by subclass code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PCPC
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedSubClassList'
+          description: ''
+  /pscc/{version}/:
+    get:
+      operationId: pscc_retrieve
+      parameters:
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - pscc
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /pscc/{version}/chapters:
+    get:
+      operationId: listPSCCChapters
+      summary: Retrieve Chapters
+      parameters:
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of records per page
+      - in: query
+        name: section
+        schema:
+          type: string
+        description: Filter by section code
+      - in: query
+        name: strChapter
+        schema:
+          type: string
+        description: Filter by chapter code
+      - in: query
+        name: strchapternum
+        schema:
+          type: string
+        description: Filter by chapter number
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PSCC
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedChapterList'
+          description: ''
+  /pscc/{version}/commodity:
+    get:
+      operationId: listPSCCCommodities
+      summary: Retrieve Commodities
+      parameters:
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of records per page
+      - in: query
+        name: strcode
+        schema:
+          type: string
+        description: Filter by commodity code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PSCC
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedCommodityList'
+          description: ''
+  /pscc/{version}/headings:
+    get:
+      operationId: listPSCCHeadings
+      summary: Retrieve Headings
+      parameters:
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of records per page
+      - in: query
+        name: strcode
+        schema:
+          type: string
+        description: Filter by heading code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PSCC
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedHeadingList'
+          description: ''
+  /pscc/{version}/sections:
+    get:
+      operationId: listPSCCSections
+      summary: Retrieve Sections
+      parameters:
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of records per page
+      - in: query
+        name: section
+        schema:
+          type: string
+        description: Filter by section code
+      - in: query
+        name: sectionnum
+        schema:
+          type: string
+        description: Filter by section number
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PSCC
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedSectionList'
+          description: ''
+  /psccs/{version}/:
+    get:
+      operationId: psccs_retrieve
+      parameters:
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - psccs
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /psccs/{version}/all:
+    get:
+      operationId: psccs_all_list
+      summary: Retrieve ALL PSCCS
+      parameters:
+      - in: query
+        name: classcode
+        schema:
+          type: string
+        description: Filter by class code
+      - in: query
+        name: divisioncode
+        schema:
+          type: string
+        description: Filter by division code
+      - in: query
+        name: groupcode
+        schema:
+          type: string
+        description: Filter by group code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: sectioncode
+        schema:
+          type: string
+        description: Filter by section code
+      - in: query
+        name: subclasscode
+        schema:
+          type: string
+        description: Filter by subclass code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PSCCS
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedPSCCSList'
+          description: ''
+  /psccs/{version}/classes:
+    get:
+      operationId: psccs_classes_list
+      summary: Retrieve Classes
+      parameters:
+      - in: query
+        name: classcode
+        schema:
+          type: string
+        description: Filter by class code
+      - in: query
+        name: divisioncode
+        schema:
+          type: string
+        description: Filter by division code
+      - in: query
+        name: groupcode
+        schema:
+          type: string
+        description: Filter by group code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: sectioncode
+        schema:
+          type: string
+        description: Filter by section code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PSCCS
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedClassList'
+          description: ''
+  /psccs/{version}/divisions:
+    get:
+      operationId: psccs_divisions_list
+      summary: Retrieve Divisions
+      parameters:
+      - in: query
+        name: divisioncode
+        schema:
+          type: string
+        description: Filter by division code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: sectioncode
+        schema:
+          type: string
+        description: Filter by section code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PSCCS
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedDivisionList'
+          description: ''
+  /psccs/{version}/groups:
+    get:
+      operationId: psccs_groups_list
+      summary: Retrieve Groups
+      parameters:
+      - in: query
+        name: divisioncode
+        schema:
+          type: string
+        description: Filter by division code
+      - in: query
+        name: groupcode
+        schema:
+          type: string
+        description: Filter by group code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: sectioncode
+        schema:
+          type: string
+        description: Filter by section code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PSCCS
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedGroupList'
+          description: ''
+  /psccs/{version}/section:
+    get:
+      operationId: psccs_section_list
+      summary: Retrieve Sections
+      parameters:
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: sectioncode
+        schema:
+          type: string
+        description: Filter by section code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PSCCS
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedSectionList'
+          description: ''
+  /psccs/{version}/sub-classes:
+    get:
+      operationId: psccs_sub_classes_list
+      summary: Retrieve Subclasses
+      parameters:
+      - in: query
+        name: classcode
+        schema:
+          type: string
+        description: Filter by class code
+      - in: query
+        name: divisioncode
+        schema:
+          type: string
+        description: Filter by division code
+      - in: query
+        name: groupcode
+        schema:
+          type: string
+        description: Filter by group code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: sectioncode
+        schema:
+          type: string
+        description: Filter by section code
+      - in: query
+        name: subclasscode
+        schema:
+          type: string
+        description: Filter by subclass code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PSCCS
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedSubClassList'
+          description: ''
+  /psced/{version}/:
+    get:
+      operationId: psced_retrieve
+      parameters:
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - psced
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /psced/2008/all:
+    get:
+      operationId: psced_2008_all_list
+      summary: Retrieve ALL PSCED 2008
+      parameters:
+      - in: query
+        name: broadgroup
+        schema:
+          type: string
+        description: Filter by broadgroup code
+      - in: query
+        name: course
+        schema:
+          type: string
+        description: Filter by course code
+      - in: query
+        name: field
+        schema:
+          type: string
+        description: Filter by field code
+      - in: query
+        name: level
+        schema:
+          type: string
+        description: Filter by level code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: program
+        schema:
+          type: string
+        description: Filter by program code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      tags:
+      - PSCED 2008
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedPSCED2008List'
+          description: ''
+  /psced/2008/broadgroup:
+    get:
+      operationId: psced_2008_broadgroup_list
+      summary: Retrieve Broad Groups (2008)
+      parameters:
+      - in: query
+        name: broadgroup
+        schema:
+          type: string
+        description: Filter by broad group code
+      - in: query
+        name: level
+        schema:
+          type: string
+        description: Filter by level code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      tags:
+      - PSCED 2008
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedBroadGroup2008List'
+          description: ''
+  /psced/2008/course:
+    get:
+      operationId: psced_2008_course_list
+      summary: Retrieve Course
+      parameters:
+      - in: query
+        name: broadgroup
+        schema:
+          type: string
+        description: Filter by broadgroup code
+      - in: query
+        name: course
+        schema:
+          type: string
+        description: Filter by course code
+      - in: query
+        name: field
+        schema:
+          type: string
+        description: Filter by field code
+      - in: query
+        name: level
+        schema:
+          type: string
+        description: Filter by level code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: program
+        schema:
+          type: string
+        description: Filter by program code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      tags:
+      - PSCED 2008
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedCourse2008List'
+          description: ''
+  /psced/2008/field:
+    get:
+      operationId: psced_2008_field_list
+      summary: Retrieve Fields (2008)
+      parameters:
+      - in: query
+        name: broadgroup
+        schema:
+          type: string
+        description: Filter by broad group code
+      - in: query
+        name: field
+        schema:
+          type: string
+        description: Filter by field code
+      - in: query
+        name: level
+        schema:
+          type: string
+        description: Filter by level code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      tags:
+      - PSCED 2008
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedField2008List'
+          description: ''
+  /psced/2008/levels:
+    get:
+      operationId: psced_2008_levels_list
+      summary: Retrieve Levels (2008)
+      parameters:
+      - in: query
+        name: level
+        schema:
+          type: string
+        description: Filter by level code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      tags:
+      - PSCED 2008
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedLevel2008List'
+          description: ''
+  /psced/2008/program:
+    get:
+      operationId: psced_2008_program_list
+      parameters:
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      tags:
+      - psced
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedProgram2008List'
+          description: ''
+  /psced/2017/all:
+    get:
+      operationId: psced_2017_all_list
+      summary: Retrieve ALL PSCED
+      parameters:
+      - in: query
+        name: broadgroup
+        schema:
+          type: string
+        description: Filter by broadgroup code
+      - in: query
+        name: detailedfield
+        schema:
+          type: string
+        description: Filter by detailedfield code
+      - in: query
+        name: field
+        schema:
+          type: string
+        description: Filter by field code
+      - in: query
+        name: level
+        schema:
+          type: string
+        description: Filter by level code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      tags:
+      - PSCED
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedPSCEDList'
+          description: ''
+  /psced/2017/broadfield:
+    get:
+      operationId: psced_2017_broadfield_list
+      summary: Retrieve Broadfields
+      parameters:
+      - in: query
+        name: broadfield
+        schema:
+          type: string
+        description: Filter by broadfield code
+      - in: query
+        name: level
+        schema:
+          type: string
+        description: Filter by level code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      tags:
+      - PSCED
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedBroadFieldList'
+          description: ''
+  /psced/2017/detailedfield:
+    get:
+      operationId: psced_2017_detailedfield_list
+      summary: Retrieve Detailed Fields
+      parameters:
+      - in: query
+        name: broadfield
+        schema:
+          type: string
+        description: Filter by broadfield code
+      - in: query
+        name: detailedfield
+        schema:
+          type: string
+        description: Filter by detailedfield code
+      - in: query
+        name: level
+        schema:
+          type: string
+        description: Filter by level code
+      - in: query
+        name: narrowfield
+        schema:
+          type: string
+        description: Filter by narrowfield code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      tags:
+      - PSCED
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedDetailedFieldList'
+          description: ''
+  /psced/2017/levels:
+    get:
+      operationId: psced_2017_levels_list
+      summary: Retrieve Levels
+      parameters:
+      - in: query
+        name: level
+        schema:
+          type: string
+        description: Filter by level code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      tags:
+      - PSCED
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedLevelList'
+          description: ''
+  /psced/2017/narrowfield:
+    get:
+      operationId: psced_2017_narrowfield_list
+      summary: Retrieve Narrow Fields
+      parameters:
+      - in: query
+        name: broadfield
+        schema:
+          type: string
+        description: Filter by broadfield code
+      - in: query
+        name: field
+        schema:
+          type: string
+        description: Filter by narrowfield code
+      - in: query
+        name: level
+        schema:
+          type: string
+        description: Filter by level code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      tags:
+      - PSCED
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedNarrowFieldList'
+          description: ''
+  /pscrcs/:
+    get:
+      operationId: pscrcs_retrieve
+      tags:
+      - pscrcs
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /pscrcs/goods_services:
+    get:
+      operationId: listPSCRCSGoodsServices
+      summary: Retrieve Goods and Services
+      parameters:
+      - in: query
+        name: page
+        schema:
+          type: integer
+        description: Page number
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of records per page
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      tags:
+      - PSCRCS
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedGoodsServicesList'
+          description: ''
+  /pscrcs/industries:
+    get:
+      operationId: listPSCRCSIndustries
+      summary: Retrieve Industries
+      parameters:
+      - in: query
+        name: page
+        schema:
+          type: integer
+        description: Page number
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of records per page
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      tags:
+      - PSCRCS
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedIndustryList'
+          description: ''
+  /pscrcs/occupations:
+    get:
+      operationId: listPSCRCSOccupations
+      summary: Retrieve Occupations
+      parameters:
+      - in: query
+        name: page
+        schema:
+          type: integer
+        description: Page number
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of records per page
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      tags:
+      - PSCRCS
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedOccupationsList'
+          description: ''
+  /psgc/{version}/:
+    get:
+      operationId: psgc_retrieve
+      description: Return all available PSGC endpoints for the given version.
+      parameters:
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - psgc
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /psgc/{version}/all:
+    get:
+      operationId: listPSGC
+      summary: Retrieve All PSGC
+      parameters:
+      - in: query
+        name: bgy
+        schema:
+          type: string
+        description: Filter by barangay code
+      - in: query
+        name: mun
+        schema:
+          type: string
+        description: Filter by municipality/city code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of records per page
+      - in: query
+        name: prv
+        schema:
+          type: string
+        description: Filter by province code
+      - in: query
+        name: reg
+        schema:
+          type: string
+        description: Filter by region code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PSGC
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedPSGCList'
+          description: ''
+  /psgc/{version}/barangays:
+    get:
+      operationId: listBarangays
+      summary: Retrieve Barangays
+      parameters:
+      - in: query
+        name: bgy
+        schema:
+          type: string
+        description: Filter by barangay code
+      - in: query
+        name: mun
+        schema:
+          type: string
+        description: Filter by municipality/city code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of records per page
+      - in: query
+        name: prv
+        schema:
+          type: string
+        description: Filter by province code
+      - in: query
+        name: reg
+        schema:
+          type: string
+        description: Filter by region code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PSGC
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedPSGCList'
+          description: ''
+  /psgc/{version}/city_class:
+    get:
+      operationId: listCityClassifications
+      summary: Retrieve City Classifications
+      parameters:
+      - in: query
+        name: city_class
+        schema:
+          type: string
+        description: Filter by city classification
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of records per page
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PSGC
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedPSGCList'
+          description: ''
+  /psgc/{version}/income_classification:
+    get:
+      operationId: listIncomeClassifications
+      summary: Retrieve Income Classifications
+      parameters:
+      - in: query
+        name: income_classification
+        schema:
+          type: string
+        description: Filter by income classification
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of records per page
+      - in: query
+        name: prv
+        schema:
+          type: string
+        description: Filter by province code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PSGC
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedPSGCList'
+          description: ''
+  /psgc/{version}/municipalities:
+    get:
+      operationId: listMunicipalitiesCities
+      summary: Retrieve Municipalities/Cities
+      parameters:
+      - in: query
+        name: geographic_level
+        schema:
+          type: string
+        description: Filter by geographic level
+      - in: query
+        name: mun
+        schema:
+          type: string
+        description: Filter by municipality/city code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of records per page
+      - in: query
+        name: prv
+        schema:
+          type: string
+        description: Filter by province code
+      - in: query
+        name: reg
+        schema:
+          type: string
+        description: Filter by region code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PSGC
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedPSGCList'
+          description: ''
+  /psgc/{version}/provinces:
+    get:
+      operationId: listProvinces
+      summary: Retrieve Provinces
+      parameters:
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PSGC
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedPSGCList'
+          description: ''
+  /psgc/{version}/regions:
+    get:
+      operationId: listRegions
+      summary: Retrieve Regions
+      parameters:
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PSGC
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedPSGCList'
+          description: ''
+  /psgc/{version}/urban_rural:
+    get:
+      operationId: listUrbanRural
+      summary: Retrieve Urban/Rural Classifications
+      parameters:
+      - in: query
+        name: mun
+        schema:
+          type: string
+        description: Filter by municipality/city code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of records per page
+      - in: query
+        name: prv
+        schema:
+          type: string
+        description: Filter by province code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: query
+        name: urban_rural
+        schema:
+          type: string
+        description: Filter by urban/rural classification
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PSGC
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedPSGCList'
+          description: ''
+  /psic/{version}/:
+    get:
+      operationId: psic_retrieve
+      parameters:
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - psic
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /psic/{version}/all:
+    get:
+      operationId: psic_all_list
+      summary: Retrieve ALL PSIC
+      parameters:
+      - in: query
+        name: class_code
+        schema:
+          type: string
+        description: Filter by class code
+      - in: query
+        name: division
+        schema:
+          type: string
+        description: Filter by division code
+      - in: query
+        name: groupcode
+        schema:
+          type: string
+        description: Filter by group code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: section
+        schema:
+          type: string
+        description: Filter by section code
+      - in: query
+        name: subclasscode
+        schema:
+          type: string
+        description: Filter by subclass code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PSIC
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedPsicList'
+          description: ''
+  /psic/{version}/classes:
+    get:
+      operationId: psic_classes_list
+      summary: Retrieve Classes
+      parameters:
+      - in: query
+        name: class_code
+        schema:
+          type: string
+        description: Filter by class code
+      - in: query
+        name: division
+        schema:
+          type: string
+        description: Filter by division code
+      - in: query
+        name: groupcode
+        schema:
+          type: string
+        description: Filter by group code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: section
+        schema:
+          type: string
+        description: Filter by section code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PSIC
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedClassList'
+          description: ''
+  /psic/{version}/divisions:
+    get:
+      operationId: psic_divisions_list
+      summary: Retrieve Divisions
+      parameters:
+      - in: query
+        name: division
+        schema:
+          type: string
+        description: Filter by division code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: section
+        schema:
+          type: string
+        description: Filter by section code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PSIC
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedDivisionList'
+          description: ''
+  /psic/{version}/groups:
+    get:
+      operationId: psic_groups_list
+      summary: Retrieve Groups
+      parameters:
+      - in: query
+        name: division
+        schema:
+          type: string
+        description: Filter by division code
+      - in: query
+        name: groupcode
+        schema:
+          type: string
+        description: Filter by group code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: section
+        schema:
+          type: string
+        description: Filter by section code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PSIC
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedGroupList'
+          description: ''
+  /psic/{version}/sections:
+    get:
+      operationId: psic_sections_list
+      summary: Retrieve Sections
+      parameters:
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: section
+        schema:
+          type: string
+        description: Filter by section code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PSIC
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedSectionList'
+          description: ''
+  /psic/{version}/sub-classes:
+    get:
+      operationId: psic_sub_classes_list
+      summary: Retrieve Subclasses
+      parameters:
+      - in: query
+        name: class_code
+        schema:
+          type: string
+        description: Filter by class code
+      - in: query
+        name: division
+        schema:
+          type: string
+        description: Filter by division code
+      - in: query
+        name: groupcode
+        schema:
+          type: string
+        description: Filter by group code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: section
+        schema:
+          type: string
+        description: Filter by section code
+      - in: query
+        name: subclasscode
+        schema:
+          type: string
+        description: Filter by subclass code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PSIC
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedSubClassList'
+          description: ''
+  /psoc/{version}/:
+    get:
+      operationId: psoc_retrieve
+      parameters:
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - psoc
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /psoc/{version}/all:
+    get:
+      operationId: psoc_all_list
+      summary: Retrieve ALL PSOC
+      parameters:
+      - in: query
+        name: majorcode
+        schema:
+          type: string
+        description: Filter by major code
+      - in: query
+        name: minorcode
+        schema:
+          type: string
+        description: Filter by minor code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: submajorcode
+        schema:
+          type: string
+        description: Filter by submajor code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: query
+        name: unitcode
+        schema:
+          type: string
+        description: Filter by unit code
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PSOC
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedPSOCList'
+          description: ''
+  /psoc/{version}/major:
+    get:
+      operationId: psoc_major_list
+      summary: Retrieve Major
+      parameters:
+      - in: query
+        name: majorcode
+        schema:
+          type: string
+        description: Filter by major code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PSOC
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedMajorList'
+          description: ''
+  /psoc/{version}/minor:
+    get:
+      operationId: psoc_minor_list
+      summary: Retrieve Minor
+      parameters:
+      - in: query
+        name: majorcode
+        schema:
+          type: string
+        description: Filter by major code
+      - in: query
+        name: minorcode
+        schema:
+          type: string
+        description: Filter by minor code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: submajorcode
+        schema:
+          type: string
+        description: Filter by submajor code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PSOC
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedMinorList'
+          description: ''
+  /psoc/{version}/sub-major:
+    get:
+      operationId: psoc_sub_major_list
+      summary: Retrieve Sub-Major
+      parameters:
+      - in: query
+        name: majorcode
+        schema:
+          type: string
+        description: Filter by major code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: submajorcode
+        schema:
+          type: string
+        description: Filter by submajor code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PSOC
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedSubMajorList'
+          description: ''
+  /psoc/{version}/unit:
+    get:
+      operationId: psoc_unit_list
+      summary: Retrieve Unit
+      parameters:
+      - in: query
+        name: majorcode
+        schema:
+          type: string
+        description: Filter by major code
+      - in: query
+        name: minorcode
+        schema:
+          type: string
+        description: Filter by minor code
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of items per page
+      - in: query
+        name: submajorcode
+        schema:
+          type: string
+        description: Filter by submajor code
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      - in: query
+        name: unitcode
+        schema:
+          type: string
+        description: Filter by unit code
+      - in: path
+        name: version
+        schema:
+          type: string
+        required: true
+      tags:
+      - PSOC
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedUnitList'
+          description: ''
+  /ptscs/:
+    get:
+      operationId: ptscs_retrieve
+      tags:
+      - ptscs
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /ptscs/industry:
+    get:
+      operationId: listPTSCSIndustries
+      summary: Retrieve Industries
+      parameters:
+      - in: query
+        name: page
+        schema:
+          type: integer
+        description: Page number
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of records per page
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      tags:
+      - PTSCS
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedIndustryList'
+          description: ''
+  /ptscs/products:
+    get:
+      operationId: listPTSCSProducts
+      summary: Retrieve Products
+      parameters:
+      - in: query
+        name: page
+        schema:
+          type: integer
+        description: Page number
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+        description: Number of records per page
+      - in: query
+        name: token
+        schema:
+          type: string
+        description: API Token
+        required: true
+      tags:
+      - PTSCS
+      security:
+      - jwtAuth: []
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedProductList'
+          description: ''
+components:
+  schemas:
+    BroadField:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        level:
+          type: string
+          maxLength: 100
+        broadfield:
+          type: string
+          maxLength: 100
+        broadfield_title:
+          type: string
+          maxLength: 255
+        broadfielddesc:
+          type: string
+          maxLength: 255
+        version:
+          type: string
+          maxLength: 255
+      required:
+      - broadfield
+      - broadfield_title
+      - broadfielddesc
+      - id
+      - level
+      - version
+    BroadGroup2008:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        level:
+          type: string
+          maxLength: 100
+        broadgroup:
+          type: string
+          maxLength: 100
+        broadgroup_title:
+          type: string
+          maxLength: 255
+        version:
+          type: string
+          maxLength: 255
+      required:
+      - broadgroup
+      - broadgroup_title
+      - id
+      - level
+      - version
+    Chapter:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        section:
+          type: string
+          maxLength: 100
+        chapter:
+          type: string
+          maxLength: 100
+        chapternum:
+          type: string
+          maxLength: 100
+        chapterdesc:
+          type: string
+          maxLength: 255
+        version:
+          type: string
+          maxLength: 255
+      required:
+      - chapter
+      - chapterdesc
+      - chapternum
+      - id
+      - section
+      - version
+    Class:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        division:
+          type: string
+          maxLength: 100
+        group:
+          type: string
+          maxLength: 100
+        class_code:
+          type: string
+          maxLength: 100
+        title:
+          type: string
+          maxLength: 255
+        description:
+          type: string
+          maxLength: 255
+        version:
+          type: string
+          maxLength: 255
+      required:
+      - class_code
+      - description
+      - division
+      - group
+      - id
+      - title
+      - version
+    Commodity:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        section:
+          type: string
+          maxLength: 100
+        chapter:
+          type: string
+          maxLength: 100
+        heading:
+          type: string
+          maxLength: 100
+        parent_heading_desc:
+          type: string
+          maxLength: 255
+        commodity_heading_desc:
+          type: string
+          maxLength: 255
+        commodity:
+          type: string
+          maxLength: 100
+        commoditydesc:
+          type: string
+          maxLength: 255
+        version:
+          type: string
+          maxLength: 255
+      required:
+      - chapter
+      - commodity
+      - commodity_heading_desc
+      - commoditydesc
+      - heading
+      - id
+      - parent_heading_desc
+      - section
+      - version
+    Course2008:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        level:
+          type: string
+          maxLength: 100
+        broadgroup:
+          type: string
+          maxLength: 100
+        field:
+          type: string
+          maxLength: 100
+        program:
+          type: string
+          maxLength: 100
+        course:
+          type: string
+          maxLength: 100
+        course_title:
+          type: string
+          maxLength: 255
+        version:
+          type: string
+          maxLength: 255
+      required:
+      - broadgroup
+      - course
+      - course_title
+      - field
+      - id
+      - level
+      - program
+      - version
+    DetailedField:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        level:
+          type: string
+          maxLength: 100
+        broadfield:
+          type: string
+          maxLength: 100
+        narrowfield:
+          type: string
+          maxLength: 100
+        detailedfield:
+          type: string
+          maxLength: 100
+        detailedfield_title:
+          type: string
+          maxLength: 255
+        detailedfielddesc:
+          type: string
+          maxLength: 255
+        version:
+          type: string
+          maxLength: 255
+      required:
+      - broadfield
+      - detailedfield
+      - detailedfield_title
+      - detailedfielddesc
+      - id
+      - level
+      - narrowfield
+      - version
+    Division:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        division:
+          type: string
+          maxLength: 100
+        title:
+          type: string
+          maxLength: 255
+        description:
+          type: string
+          maxLength: 255
+        version:
+          type: string
+          maxLength: 255
+      required:
+      - description
+      - division
+      - id
+      - title
+      - version
+    Field2008:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        level:
+          type: string
+          maxLength: 100
+        broadgroup:
+          type: string
+          maxLength: 100
+        field:
+          type: string
+          maxLength: 100
+        field_title:
+          type: string
+          maxLength: 255
+        version:
+          type: string
+          maxLength: 255
+      required:
+      - broadgroup
+      - field
+      - field_title
+      - id
+      - level
+      - version
+    GoodsServices:
+      type: object
+      properties:
+        id:
+          type: string
+          maxLength: 4
+        cpc2_1:
+          type: string
+          maxLength: 255
+        description:
+          type: string
+          maxLength: 255
+      required:
+      - cpc2_1
+      - description
+      - id
+    Group:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        division:
+          type: string
+          maxLength: 100
+        group:
+          type: string
+          maxLength: 100
+        title:
+          type: string
+          maxLength: 255
+        description:
+          type: string
+          maxLength: 255
+        version:
+          type: string
+          maxLength: 255
+      required:
+      - description
+      - division
+      - group
+      - id
+      - title
+      - version
+    Heading:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        section:
+          type: string
+          maxLength: 100
+        chapter:
+          type: string
+          maxLength: 100
+        heading:
+          type: string
+          maxLength: 100
+        headingdesc:
+          type: string
+          maxLength: 255
+        version:
+          type: string
+          maxLength: 255
+      required:
+      - chapter
+      - heading
+      - headingdesc
+      - id
+      - section
+      - version
+    Industry:
+      type: object
+      properties:
+        id:
+          type: string
+          maxLength: 4
+        m2019updates_2009psic:
+          type: string
+          maxLength: 255
+        description:
+          type: string
+          maxLength: 255
+      required:
+      - description
+      - id
+      - m2019updates_2009psic
+    Item:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        division:
+          type: string
+          maxLength: 100
+        group:
+          type: string
+          maxLength: 100
+        class_code:
+          type: string
+          maxLength: 100
+        subclass:
+          type: string
+          maxLength: 100
+        item:
+          type: string
+          maxLength: 100
+        title:
+          type: string
+          maxLength: 255
+        description:
+          type: string
+          maxLength: 255
+        version:
+          type: string
+          maxLength: 255
+      required:
+      - class_code
+      - description
+      - division
+      - group
+      - id
+      - item
+      - subclass
+      - title
+      - version
+    Level:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        level:
+          type: string
+          maxLength: 100
+        level_title:
+          type: string
+          maxLength: 255
+        version:
+          type: string
+          maxLength: 255
+      required:
+      - id
+      - level
+      - level_title
+      - version
+    Level2008:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        level:
+          type: string
+          maxLength: 100
+        level_title:
+          type: string
+          maxLength: 255
+        version:
+          type: string
+          maxLength: 255
+      required:
+      - id
+      - level
+      - level_title
+      - version
+    Major:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        majorcode:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        title:
+          type: string
+          maxLength: 100
+        description:
+          type: string
+          maxLength: 255
+        version:
+          type: string
+          maxLength: 255
+      required:
+      - description
+      - id
+      - majorcode
+      - title
+      - version
+    Minor:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        majorcode:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        submajorcode:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        minorcode:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        title:
+          type: string
+          maxLength: 100
+        description:
+          type: string
+          maxLength: 255
+        version:
+          type: string
+          maxLength: 255
+      required:
+      - description
+      - id
+      - majorcode
+      - minorcode
+      - submajorcode
+      - title
+      - version
+    NarrowField:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        level:
+          type: string
+          maxLength: 100
+        broadfield:
+          type: string
+          maxLength: 100
+        narrowfield:
+          type: string
+          maxLength: 100
+        narrowfield_title:
+          type: string
+          maxLength: 255
+        narrowfielddesc:
+          type: string
+          maxLength: 255
+        version:
+          type: string
+          maxLength: 255
+      required:
+      - broadfield
+      - id
+      - level
+      - narrowfield
+      - narrowfield_title
+      - narrowfielddesc
+      - version
+    Occupations:
+      type: object
+      properties:
+        id:
+          type: string
+          maxLength: 4
+        m2022updates_2012psoc:
+          type: string
+          maxLength: 255
+        description:
+          type: string
+          maxLength: 255
+      required:
+      - description
+      - id
+      - m2022updates_2012psoc
+    PCOICOP:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        division:
+          type: string
+          maxLength: 100
+        division_title:
+          type: string
+          maxLength: 255
+        divisiondesc:
+          type: string
+          maxLength: 255
+        group:
+          type: string
+          maxLength: 100
+        group_title:
+          type: string
+          maxLength: 255
+        groupdesc:
+          type: string
+          maxLength: 255
+        class_code:
+          type: string
+          maxLength: 100
+        class_title:
+          type: string
+          maxLength: 255
+        classdesc:
+          type: string
+          maxLength: 255
+        subclass:
+          type: string
+          maxLength: 100
+        subclass_title:
+          type: string
+          maxLength: 255
+        subclassdesc:
+          type: string
+          maxLength: 255
+        item:
+          type: string
+          maxLength: 100
+        item_title:
+          type: string
+          maxLength: 255
+        itemdesc:
+          type: string
+          maxLength: 255
+        subitem:
+          type: string
+          maxLength: 100
+        subitemdesc:
+          type: string
+          maxLength: 255
+        version:
+          type: string
+          maxLength: 255
+      required:
+      - class_code
+      - class_title
+      - classdesc
+      - division
+      - division_title
+      - divisiondesc
+      - group
+      - group_title
+      - groupdesc
+      - id
+      - item
+      - item_title
+      - itemdesc
+      - subclass
+      - subclass_title
+      - subclassdesc
+      - subitem
+      - subitemdesc
+      - version
+    PCPC:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        section:
+          type: string
+          maxLength: 100
+        section_title:
+          type: string
+          maxLength: 255
+        divisioncode:
+          type: string
+          maxLength: 100
+        division_title:
+          type: string
+          maxLength: 255
+        division_desc:
+          type: string
+          maxLength: 255
+        groupcode:
+          type: string
+          maxLength: 100
+        group_title:
+          type: string
+          maxLength: 255
+        groupdesc:
+          type: string
+          maxLength: 255
+        classcode:
+          type: string
+          maxLength: 100
+        class_title:
+          type: string
+          maxLength: 255
+        classdesc:
+          type: string
+          maxLength: 255
+        subclasscode:
+          type: string
+          maxLength: 100
+        subclass_title:
+          type: string
+          maxLength: 255
+        subclassdesc:
+          type: string
+          maxLength: 255
+        itemcode:
+          type: string
+          maxLength: 100
+        item_title:
+          type: string
+          maxLength: 255
+        itemdesc:
+          type: string
+          maxLength: 255
+        version:
+          type: string
+          maxLength: 255
+      required:
+      - class_title
+      - classcode
+      - classdesc
+      - division_desc
+      - division_title
+      - divisioncode
+      - group_title
+      - groupcode
+      - groupdesc
+      - id
+      - item_title
+      - itemcode
+      - itemdesc
+      - section
+      - section_title
+      - subclass_title
+      - subclasscode
+      - subclassdesc
+      - version
+    PSCCS:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        sectioncode:
+          type: string
+          maxLength: 100
+        section_title:
+          type: string
+          maxLength: 255
+        sectiondesc:
+          type: string
+          maxLength: 255
+        divisioncode:
+          type: string
+          maxLength: 100
+        division_title:
+          type: string
+          maxLength: 255
+        divisiondesc:
+          type: string
+          maxLength: 255
+        groupcode:
+          type: string
+          maxLength: 100
+        group_title:
+          type: string
+          maxLength: 255
+        groupdesc:
+          type: string
+          maxLength: 255
+        classcode:
+          type: string
+          maxLength: 100
+        class_title:
+          type: string
+          maxLength: 255
+        classdesc:
+          type: string
+          maxLength: 255
+        subclasscode:
+          type: string
+          maxLength: 100
+        subclass_title:
+          type: string
+          maxLength: 255
+        subclassdesc:
+          type: string
+          maxLength: 255
+        version:
+          type: string
+          maxLength: 255
+      required:
+      - class_title
+      - classcode
+      - classdesc
+      - division_title
+      - divisioncode
+      - divisiondesc
+      - group_title
+      - groupcode
+      - groupdesc
+      - id
+      - section_title
+      - sectioncode
+      - sectiondesc
+      - subclass_title
+      - subclasscode
+      - subclassdesc
+      - version
+    PSCED:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        level:
+          type: string
+          maxLength: 100
+        level_title:
+          type: string
+          maxLength: 255
+        broadfield:
+          type: string
+          maxLength: 100
+        broadfield_title:
+          type: string
+          maxLength: 255
+        broadfielddesc:
+          type: string
+          maxLength: 255
+        narrowfield:
+          type: string
+          maxLength: 100
+        narrowfield_title:
+          type: string
+          maxLength: 255
+        narrowfielddesc:
+          type: string
+          maxLength: 255
+        detailedfield:
+          type: string
+          maxLength: 100
+        detailedfield_title:
+          type: string
+          maxLength: 255
+        detailedfielddesc:
+          type: string
+          maxLength: 255
+        version:
+          type: string
+          maxLength: 255
+      required:
+      - broadfield
+      - broadfield_title
+      - broadfielddesc
+      - detailedfield
+      - detailedfield_title
+      - detailedfielddesc
+      - id
+      - level
+      - level_title
+      - narrowfield
+      - narrowfield_title
+      - narrowfielddesc
+      - version
+    PSCED2008:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        level:
+          type: string
+          maxLength: 100
+        level_title:
+          type: string
+          maxLength: 255
+        broadgroup:
+          type: string
+          maxLength: 100
+        broadgroup_title:
+          type: string
+          maxLength: 255
+        field:
+          type: string
+          maxLength: 100
+        field_title:
+          type: string
+          maxLength: 255
+        program:
+          type: string
+          maxLength: 100
+        program_title:
+          type: string
+          maxLength: 255
+        course:
+          type: string
+          maxLength: 100
+        course_title:
+          type: string
+          maxLength: 255
+        version:
+          type: string
+          maxLength: 255
+      required:
+      - broadgroup
+      - broadgroup_title
+      - course
+      - course_title
+      - field
+      - field_title
+      - id
+      - level
+      - level_title
+      - program
+      - program_title
+      - version
+    PSGC:
+      type: object
+      properties:
+        code:
+          type: string
+          maxLength: 50
+        area_name:
+          type: string
+          maxLength: 100
+        correspondence_code:
+          type: string
+          nullable: true
+          maxLength: 50
+        geographic_level:
+          type: string
+          nullable: true
+          maxLength: 50
+        reg:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+          nullable: true
+        prv:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+          nullable: true
+        mun:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+          nullable: true
+        bgy:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+          nullable: true
+        old_name:
+          type: string
+          maxLength: 100
+        city_class:
+          type: string
+          maxLength: 100
+        income_classification:
+          type: string
+          maxLength: 100
+        urban_rural:
+          type: string
+          maxLength: 100
+        island_region:
+          type: string
+          maxLength: 100
+        status:
+          type: string
+          maxLength: 100
+        version:
+          type: string
+          maxLength: 100
+        populations:
+          type: array
+          items:
+            $ref: '#/components/schemas/PSGCPopulation'
+          readOnly: true
+      required:
+      - area_name
+      - code
+      - populations
+    PSGCPopulation:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        population:
+          type: string
+          maxLength: 100
+        year:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        psgc:
+          type: string
+      required:
+      - id
+      - population
+      - psgc
+      - year
+    PSOC:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        majorcode:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        major_title:
+          type: string
+          maxLength: 100
+        majordesc:
+          type: string
+          maxLength: 255
+        submajorcode:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        submajor_title:
+          type: string
+          maxLength: 100
+        submajordesc:
+          type: string
+          maxLength: 255
+        minorcode:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        minor_title:
+          type: string
+          maxLength: 100
+        minor_desc:
+          type: string
+          maxLength: 255
+        unitcode:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        unit_title:
+          type: string
+          maxLength: 100
+        unitdesc:
+          type: string
+          maxLength: 255
+        version:
+          type: string
+          maxLength: 255
+      required:
+      - id
+      - major_title
+      - majorcode
+      - majordesc
+      - minor_desc
+      - minor_title
+      - minorcode
+      - submajor_title
+      - submajorcode
+      - submajordesc
+      - unit_title
+      - unitcode
+      - unitdesc
+      - version
+    PaginatedBroadFieldList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/BroadField'
+    PaginatedBroadGroup2008List:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/BroadGroup2008'
+    PaginatedChapterList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Chapter'
+    PaginatedClassList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Class'
+    PaginatedCommodityList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Commodity'
+    PaginatedCourse2008List:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Course2008'
+    PaginatedDetailedFieldList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/DetailedField'
+    PaginatedDivisionList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Division'
+    PaginatedField2008List:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Field2008'
+    PaginatedGoodsServicesList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/GoodsServices'
+    PaginatedGroupList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Group'
+    PaginatedHeadingList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Heading'
+    PaginatedIndustryList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Industry'
+    PaginatedItemList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Item'
+    PaginatedLevel2008List:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Level2008'
+    PaginatedLevelList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Level'
+    PaginatedMajorList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Major'
+    PaginatedMinorList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Minor'
+    PaginatedNarrowFieldList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/NarrowField'
+    PaginatedOccupationsList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Occupations'
+    PaginatedPCOICOPList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/PCOICOP'
+    PaginatedPCPCList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/PCPC'
+    PaginatedPSCCSList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/PSCCS'
+    PaginatedPSCED2008List:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/PSCED2008'
+    PaginatedPSCEDList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/PSCED'
+    PaginatedPSGCList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/PSGC'
+    PaginatedPSOCList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/PSOC'
+    PaginatedProductList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Product'
+    PaginatedProgram2008List:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Program2008'
+    PaginatedPsicList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Psic'
+    PaginatedSectionList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Section'
+    PaginatedSubClassList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/SubClass'
+    PaginatedSubItemList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/SubItem'
+    PaginatedSubMajorList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/SubMajor'
+    PaginatedUnitList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Unit'
+    Product:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        majorproducts:
+          type: string
+          maxLength: 255
+        cpc2_1:
+          type: string
+          maxLength: 255
+        description:
+          type: string
+          maxLength: 255
+      required:
+      - cpc2_1
+      - description
+      - id
+      - majorproducts
+    Program2008:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        level:
+          type: string
+          maxLength: 100
+        broadgroup:
+          type: string
+          maxLength: 100
+        field:
+          type: string
+          maxLength: 100
+        program:
+          type: string
+          maxLength: 100
+        program_title:
+          type: string
+          maxLength: 255
+        version:
+          type: string
+          maxLength: 255
+      required:
+      - broadgroup
+      - field
+      - id
+      - level
+      - program
+      - program_title
+      - version
+    Psic:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        section:
+          type: string
+          maxLength: 100
+        section_title:
+          type: string
+          maxLength: 255
+        sectiondesc:
+          type: string
+          maxLength: 255
+        division:
+          type: string
+          maxLength: 100
+        division_title:
+          type: string
+          maxLength: 255
+        division_desc:
+          type: string
+          maxLength: 255
+        groupcode:
+          type: string
+          maxLength: 100
+        group_title:
+          type: string
+          maxLength: 255
+        groupdesc:
+          type: string
+          maxLength: 255
+        classcode:
+          type: string
+          maxLength: 100
+        class_title:
+          type: string
+          maxLength: 255
+        classdesc:
+          type: string
+          maxLength: 255
+        subclasscode:
+          type: string
+          maxLength: 100
+        subclass_title:
+          type: string
+          maxLength: 255
+        subclassdesc:
+          type: string
+          maxLength: 255
+        version:
+          type: string
+          maxLength: 255
+      required:
+      - class_title
+      - classcode
+      - classdesc
+      - division
+      - division_desc
+      - division_title
+      - group_title
+      - groupcode
+      - groupdesc
+      - id
+      - section
+      - section_title
+      - sectiondesc
+      - subclass_title
+      - subclasscode
+      - subclassdesc
+      - version
+    Section:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        section:
+          type: string
+          maxLength: 100
+        title:
+          type: string
+          maxLength: 255
+        version:
+          type: string
+          maxLength: 255
+      required:
+      - id
+      - section
+      - title
+      - version
+    SubClass:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        division:
+          type: string
+          maxLength: 100
+        group:
+          type: string
+          maxLength: 100
+        class_code:
+          type: string
+          maxLength: 100
+        subclass:
+          type: string
+          maxLength: 100
+        title:
+          type: string
+          maxLength: 255
+        description:
+          type: string
+          maxLength: 255
+        version:
+          type: string
+          maxLength: 255
+      required:
+      - class_code
+      - description
+      - division
+      - group
+      - id
+      - subclass
+      - title
+      - version
+    SubItem:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        division:
+          type: string
+          maxLength: 100
+        group:
+          type: string
+          maxLength: 100
+        class_code:
+          type: string
+          maxLength: 100
+        subclass:
+          type: string
+          maxLength: 100
+        item:
+          type: string
+          maxLength: 100
+        subitem:
+          type: string
+          maxLength: 100
+        description:
+          type: string
+          maxLength: 255
+        version:
+          type: string
+          maxLength: 255
+      required:
+      - class_code
+      - description
+      - division
+      - group
+      - id
+      - item
+      - subclass
+      - subitem
+      - version
+    SubMajor:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        majorcode:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        submajorcode:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        title:
+          type: string
+          maxLength: 100
+        description:
+          type: string
+          maxLength: 255
+        version:
+          type: string
+          maxLength: 255
+      required:
+      - description
+      - id
+      - majorcode
+      - submajorcode
+      - title
+      - version
+    Unit:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        majorcode:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        submajorcode:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        minorcode:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        unitcode:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        title:
+          type: string
+          maxLength: 100
+        description:
+          type: string
+          maxLength: 255
+        version:
+          type: string
+          maxLength: 255
+      required:
+      - description
+      - id
+      - majorcode
+      - minorcode
+      - submajorcode
+      - title
+      - unitcode
+      - version
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: sessionid
+    jwtAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+tags:
+- name: PSGC
+- name: PSOC
+- name: PCOICOP
+- name: PSIC
+- name: PCPC
+- name: PSCC
+- name: PSCED
+- name: PSCCS
+- name: PTSCS
+- name: PSCRCS

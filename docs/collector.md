@@ -1,183 +1,204 @@
-# P0 collection and review prototype
+# Real-data collector prototype
 
-The collector writes review staging only. It has no publication or approval
-command. The existing website, approved FY2027 snapshot and reviewed directory
-remain the application sources. See [the source brief](../doc/BETTER%20PANGASINAN%20WEB%20CRAWLER.md)
-and [AGENTS.md](../AGENTS.md) for scope and mandatory controls.
+The operational workflow imports real, attributable source artifacts into review
+staging. It has no synthetic collection mode, publication command or approval API.
+See [PSA access research](psa-access-research.md) for current official endpoints,
+licensing, API requirements and observed access blockers.
 
-## Setup and reproducibility
-
-Use Python 3.12 and install the hash-locked environment:
+## Setup
 
 ```sh
 python3.12 -m venv .venv
 .venv/bin/python -m pip install --require-hashes -r requirements-collector.lock
 ```
 
-The lock includes the existing JSON/GIS adapters and test/type/lint tools.
-Shapely 2.2 is pinned because the existing projection adapter returns coordinate
-lists; clean Python 3.12 testing exposed its incompatibility with Shapely 2.1. It does
-not change the website's requirements.txt. Regenerate with `uv pip compile
-requirements-collector.in --python-version 3.12 --generate-hashes --output-file
-requirements-collector.lock` after reviewing updates. Never assume pinned versions
-are permanently secure; scan before deployment.
+The lock includes existing JSON/GIS adapters and verification tools. Shapely 2.2
+is required by the existing projection adapter's coordinate-list interface.
 
-Run the synthetic vertical slice entirely offline, including staging exports:
+## Import real source data
+
+The current verified mapping supports the existing reviewed PSA transcription:
 
 ```sh
 .venv/bin/python -m collector.cli collect --source psa_psgc \
-  --fixture tests/fixtures/collector/psgc_sample.xlsx --environment test
+  --input pangasinan_lgu_registry_staging.json \
+  --state-dir data/staging/psa-prototype
 ```
 
-The JSON response identifies `run_id`. Evidence bytes are under
-`data/staging/collector/raw/<sha256>`, SQL staging is
-`data/staging/collector/staging.sqlite`, and the complete run export is under
-`data/staging/collector/runs/<run_id>/`. Rerun the same command: audit run IDs differ,
-but identical input creates no additional entity versions. Use the returned ID:
+This produces **49 pending, non-mock records**: one province, four cities and
+44 municipalities. It retains original JSON rows, source links, string PSGCs,
+parent links, administrative release and population reference dates. Provincial
+population is an explicitly evidenced sum of the supplied LGU populations.
+It does not import invented barangays, capital or land area. The source remains
+labeled `user_reviewed_transcription`, with independent verification false and
+unknown original retrieval/publication metadata explicit. This is not a fresh
+current PSA workbook, despite being real rather than synthetic data.
+
+The JSON response identifies `run_id`. Original bytes are retained at
+`<state-dir>/raw/<sha256>`, SQLite at `<state-dir>/staging.sqlite`, and review
+outputs at `<state-dir>/runs/<run_id>/`. Repeating the same source creates a new
+audit run but zero new entity versions. Invalid inputs retain failure evidence
+and exit nonzero without creating entity versions.
 
 ```sh
-.venv/bin/python -m collector.cli validate --source psa_psgc --run-id RUN_ID
-.venv/bin/python -m collector.cli report --run-id RUN_ID
-.venv/bin/python -m collector.cli export --source psa_psgc --run-id RUN_ID \
-  --format json,csv --target data/staging/fixture-review
+.venv/bin/python -m collector.cli report --run-id RUN_ID --state-dir data/staging/psa-prototype
+.venv/bin/python -m collector.cli validate --run-id RUN_ID --state-dir data/staging/psa-prototype
+.venv/bin/python -m collector.cli export --run-id RUN_ID --state-dir data/staging/psa-prototype \
+  --format json,csv --target data/staging/psa-review
 ```
 
-Invalid acquisitions/layouts/hierarchies are audited and exit nonzero; they create
-no staged entity versions. Their review exports remain explicitly invalid. Missing
-population remains null with `not_collected`. `validate` is a read-only recheck,
-not an approval or mutation of the original audit. `--state-dir` changes the local
-test storage location. Repository destinations must be under `data/staging`;
-publication, input and symlink escapes are rejected. Fixtures cannot enable HTTP.
+Repository output destinations are restricted to staging; symlink escapes and
+production/input destinations are rejected. CSV formulas are escaped. Validation
+and collection never grant approval. Missing values remain null with reasons.
+JSON/CSV manifests include source hashes and quality/change/gap reports.
 
-## P0 work in order
+## P0 review package
 
 ```sh
 .venv/bin/python -m collector.cli review-p0
 ```
 
-This reads and validates preserved repository inputs, with zero outbound requests,
-and produces `data/staging/Better_Pangasinan_Research/`:
+`data/staging/Better_Pangasinan_Research/` contains:
 
-1. `01_provincial_overview/pangasinan_overview.json`: field-specific source and
-   reference metadata, approximate land area and general location from the saved
-   official about page. Coordinates, administrative region, seal and rights remain
-   null. Original about-page HTML is absent; its evidence hash explicitly covers
-   the preserved extracted page rather than claiming a raw HTML hash.
-2. `02_lgu_directory/`: `pangasinan_lgus.json`, `pangasinan_barangays.json`,
-   `lgu_directory.csv`. Reuses the existing reviewed 48-LGU/population transcription
-   and 1,364-record unofficial barangay snapshot, plus existing validated six-district
-   assignments. Retains their differing source
-   vintages, original values and explicit parent links. This is not independent
-   official-source or current-release verification.
-3. `05_national_budget_2027/`: `national_budget_2027_review.csv`,
-   `project_geographic_candidates.json`, `budget_source_inventory.csv`. Recompiles
-   the existing approved 732-record snapshot through its current validation gates.
-   Keeps NEP, second reading and third reading separate, with exact original integer
-   PHP amounts and nulls. It carries existing discovery evidence forward; it makes
-   no new geographic assignments and does not treat proposals as spending.
+- `01_provincial_overview/pangasinan_overview.json`: field evidence, approximate
+  land area and general location from saved official-page extraction, explicit gaps.
+- `02_lgu_directory/`: 48 reviewed LGUs, existing six-district assignments and
+  1,364 explicitly unofficial/unversioned barangay records, with JSON/CSV outputs.
+- `05_national_budget_2027/`: all 732 approved comparison records carried into
+  read-only review CSV, existing geographic candidates and source inventory.
+- Source inventory, collection log, gaps, quality report and input/output hashes.
 
-The root includes `source_inventory.csv`, `collection_log.csv`,
-`collection_gaps.csv`, `quality_report.json` and a SHA-256 `manifest.json` binding
-inputs and outputs. Outputs are marked pending and partial; passing validation
-never clears license restrictions. Historical retrieval times are preserved where
-known. A date-only source is not relabeled as a UTC retrieval timestamp. The P0
-review run ID is deterministic from inputs, so reruns produce identical outputs.
-Use `--target /tmp/p0-review` for an isolated export.
+These exports reuse existing reviewed evidence. They do not refresh the approved
+application data or imply that unofficial barangays are a current PSA release.
+The budget compiler preserves separate NEP/House reading amounts and uncertainty;
+proposal amounts are never represented as spending or wholly local allocations.
 
-## Source mapping and permissions checklist
+## Live practice and browser downloads
 
-`config/sources/psa_psgc.yaml` is typed and disabled: endpoint, approved paths,
-release, access and redistribution review are unresolved. The only implemented
-XLSX mapping is [synthetic_psgc_v1](../tests/fixtures/collector/README.md), with exact
-worksheet/column contracts. No inferred PSA header mapping is used.
-
-Before live collection, record the exact official download, identity, dated
-release, reference period, terms/robots/license evidence and permitted paths.
-Obtain source-access authorization; separately review redistribution. Configure
-container egress restrictions and verify the actual connection destination to
-prevent DNS rebinding. The HTTPX adapter deliberately accepts only an isolated
-MockTransport test harness; there is no live-mode escape flag. Its tests cover
-public-DNS checks, host/path allowlists, redirect rejection, bounded retries,
-Retry-After, timeout/HTTP errors, size/type and XML/ZIP safety. These are contract
-tests, not proof of an operational live integration.
-
-Run workers with only staging INSERT/SELECT permissions and private raw storage;
-no website, approval or production credentials/mounts. Local SQLite is only an
-isolated prototype backend. For PostgreSQL/PostGIS, migrations, least-privilege
-roles and the disposable integration test, follow [migrations/README.md](../migrations/README.md).
-The local container has no network. Docker Desktop and the seven PostGIS integration tests have now been verified
-locally; see the Docker verification section in the migration guide. Do not publish source files with unresolved
-redistribution rights. Raw bytes remain under ignored staging, not Git.
-
-## Tests
-
-```sh
-.venv/bin/python -m pytest
-.venv/bin/ruff check collector tests/unit/test_collector*.py tests/data/test_p0_review.py tests/security tests/integration
-.venv/bin/ruff format --check collector tests/unit/test_collector*.py tests/data/test_p0_review.py tests/security tests/integration
-.venv/bin/mypy collector --ignore-missing-imports
-.venv/bin/alembic -c migrations/alembic.ini upgrade head --sql
-```
-
-Tests begin with failing assertions before implementations: fixture ingestion,
-hierarchy/schema failure, malformed workbooks, HTTP policy, versioning, no-op
-reruns, acquisition errors, mock approval rejection, destination protections,
-formula-safe CSV, manifest checksums and exact P0 input preservation. PostgreSQL
-is skipped locally unless an explicitly disposable test URL is provided. The
-`collector-postgis` CI job provisions an isolated PostGIS database and runs the
-fixture through acquisition, staging, rerun and export after applying migrations. No test requires
-government network access. Browser checks are separate from collector validation.
-
-## Known gaps
-
-Official current PSGC download/layout and 2024 POPCEN evidence/linkage remain
-unverified. Existing population comes from a previously user-reviewed
-transcription, not a newly acquired census artifact. Barangays are explicitly an
-unofficial unversioned snapshot. Some overview/directory fields and original
-source timestamps/licenses remain unavailable. No production live PSGC downloader, S3 integration,
-review UI, production adapter, Pandera tabular rules, Airflow or generic spider is
-introduced. Single-source serial runs are the supported prototype workflow;
-concurrent imports can roll back on uniqueness conflicts and require retry.
-PostgreSQL runs require an external migration/connection setup; the fixture CLI
-intentionally uses the isolated SQLite backend. These gaps block a claim that
-all P0 datasets are freshly collected, authoritative and ready for publication.
-
-## Authorized live P0 practice run
-
-A separate bounded smoke check now exercises the existing provincial URL and
-budget API base without enabling the synthetic-only PSA importer:
+The existing bounded practice runner still works:
 
 ```sh
 .venv/bin/python -m collector.practice --authorize-live-practice \
   --target data/staging/practice-NEW-UNIQUE-NAME
 ```
 
-This command needs outbound HTTPS and system `curl`. It checks three robots files,
-then fetches one public page from each enabled legacy source. It does not invoke
-a broad scrape or change source configuration. It pins each TLS connection to a
-DNS-validated public IP, verifies the actual remote IP, bypasses environment proxy
-settings, limits each response to 2 MB/25 seconds, and refuses automatic redirects.
-Only the specific same-host provincial About-page canonical redirect is accepted,
-with robots evaluation and a new pinned connection. Cookies are discarded, raw
-bodies and allowlisted HTTP metadata retained, and no protective challenge is
-bypassed. Unknown rights remain pending; these private snapshots cannot be taken
-as redistribution approval. Main PSA HTTPX transport remains disabled.
+It checks robots before the provincial page and budget API overview, verifies
+public-IP HTTPS destinations, bounds downloads and preserves failed responses.
+The separate PSA source remains disabled after its official workbook returned a
+403 challenge. No live secret or source approval is inferred. The optional host-side browser helper is also available:
 
-The November 3 run is retained under `data/staging/practice-2026-11-03-02/`:
-6 HTTP requests, 8 hashed files plus manifest, successful provincial HTML and
-FY2027 budget overview (4 datasets). PSA collection was skipped: current config
-is disabled, and robots response included `cf-mitigated: challenge`. The provincial
-page redirected from `/about-pangasinan/` to `/the-province/about-pangasinan/`.
-Its population paragraph explicitly references 2020; it is not 2024 POPCEN evidence.
-The budget overview is an independent, unofficial proposal comparison; document
-and project-level verification were outside this smoke check.
+```sh
+npm ci
+npx playwright install chrome
+npm run collect:psa -- --headed --target data/staging/psa-browser-NEW-BATCH --authorize-live-practice
+```
 
-An earlier trial is retained under `practice-2026-11-03-01/`: it recorded the
-provincial 301 and a 404 from the practice runner's mistaken `/overview` suffix.
-A regression test now requires exactly the existing collector's configured API
-base, and the corrected run uses that endpoint. No budget configuration or
-approved snapshot was changed. Practice tests were added red-first; final local
-suite: 350 passed, 1 skipped; Ruff and mypy passed. PostgreSQL remains the skipped
-local integration test. Other P1/P2 websites have not yet been exercised.
+The November 4 headed run passed robots, then stopped at an HTTP 403 HTML challenge on the PSGC landing page; no workbook was acquired.
+See the access research guide for evidence and legitimate fallback options.
 
-Docker verification is now complete: see [runtime results and commands](../migrations/README.md#docker-verification-november-3-2026). The earlier skipped Docker/PostGIS notes above describe the initial prototype validation, before Docker Desktop was started.
+## Docker and PostgreSQL
+
+See [migrations/README.md](../migrations/README.md) for tested commands. The runtime
+image includes the reviewed real transcription instead of synthetic workbooks.
+The offline worker retains `network_mode: none`, a read-only root and UID 10001.
+The live-practice service is opt-in and has staging-only mounts. A bridge is not
+an outbound firewall; production collection still needs infrastructure egress
+controls. PostgreSQL/PostGIS requires separate migrations and least-privilege
+credentials. Local SQLite remains an isolated prototype backend.
+
+## Tests and boundaries
+
+```sh
+.venv/bin/python -m pytest
+.venv/bin/ruff check collector tests/unit/test_collector*.py tests/unit/test_real_psa.py tests/support tests/security tests/integration
+.venv/bin/ruff format --check collector tests/unit/test_collector*.py tests/unit/test_real_psa.py tests/support tests/security tests/integration
+.venv/bin/mypy collector --ignore-missing-imports
+```
+
+Synthetic extraction is test-only, in `tests/support/synthetic_collector.py`; it
+injects deterministic rows through the same validation/staging boundaries. It is
+not included in the runtime image. Mock approval/publication rejection remains
+covered. Real-input unit/CLI tests use the preserved reviewed transcription, and
+the PostGIS test now ingests those same 49 real-shaped non-mock source records.
+Use a fresh disposable database for each PostGIS run; historical evidence remains
+append-only. Tests are not proof of live PSA workbook access.
+
+Current gaps: original current official workbook and observed mapping, API token
+and intended-use approval, current barangay/population source linkage, full S3
+integration, orchestrator and authorized publication integration. Source access
+failures cannot be resolved by weakening safeguards or removing regression tests.
+
+## Scrape-only MVP boundary
+
+The current MVP acquisition workspace is `data/staging/web-crawler/`, separate
+from `Better_Pangasinan_Research/` and local-transcription imports. Only fresh
+crawler responses and outputs derived from those responses belong here. Do not
+populate it using `review-p0`: that command deliberately reviews existing
+repository evidence and does not satisfy this scrape-only boundary.
+
+Each run must retain exact source URLs, UTC retrieval times, original response
+bytes, SHA-256 hashes, extraction status and pending review restrictions. Denied
+or failed responses are diagnostic evidence, not datasets. Missing coverage is
+reported rather than filled from production data, PSA transcriptions or approved
+budget candidates. PSA acquisition is deferred. The existing bounded practice
+runner can acquire the provincial about page and budget API overview; it does
+not collect a complete LGU directory, barangays or budget project records.
+
+Use a new run directory for each attempt:
+
+```sh
+.venv/bin/python -m collector.practice --authorize-live-practice \
+  --target data/staging/web-crawler/p0-NEW-RUN
+```
+
+The practice runner also observes PSA robots while leaving PSA content collection
+disabled. The directory stays beneath staging for existing permission and Docker
+mount isolation. No output is automatically published.
+
+## File-based project candidates
+
+No database or Docker service is required for the API capture-to-candidate path.
+With a completed crawler batch, run the offline adapter:
+
+```sh
+.venv/bin/python -m collector.candidates \
+  --run data/staging/web-crawler/psa-geography-20261109-01 \
+  --target data/staging/web-crawler/project-candidates-NEW-RUN
+```
+
+The adapter verifies capture checksums and API pagination totals, reconstructs
+records from captured responses, validates geographic identifiers/parents, and
+checks `lgus.json`, `sources.json` and `statistics.json` against the repository
+schemas. Outputs are drafts. `provenance.json` retains source rows, response
+locations, hashes and timestamps. No existing production data or transcription
+is read. Repeating the adapter into a fresh destination produces identical files.
+
+`province_profile.candidate.json` and `barangays.candidate.json` are review
+candidates, not drop-in approved geographic bundles. The province production
+schema requires human approval, capital and exact reference dates, which this
+capture does not establish. Population observations retain the API year; exact
+dates remain null rather than being inferred. Captured API release is Q2_2024,
+not a claim of latest administrative coverage. Response artifacts may be redacted
+to remove echoed authentication tokens; their stored hashes identify those bytes.
+
+The November 9 capture generated 48 LGUs, 1,364 barangays and 144 LGU population
+observations (2015, 2020 and 2024). Integration/publication remains an explicit
+review step. This adapter does not modify the approved national-budget snapshot.
+
+## Render the provincial directory
+
+The official directory displays email addresses through its own page scripts.
+Use visible sandboxed stable Chrome to capture rendered table cells, including
+plain-text emails and two-column hospital contact rows:
+
+```sh
+node scripts/province-directory.cjs \
+  data/staging/web-crawler/directory-rendered-NEW-RUN --authorize-live
+```
+
+The bounded host-side run preserves robots, original HTML, rendered HTML and
+extracted directory JSON with hashes. It restricts network origins, pins public
+DNS destinations and verifies connection peers. It does not verify mailbox or
+telephone activity. The collector has no publication action. External resources
+are blocked, so this is a targeted directory capture rather than visual-fidelity
+verification of the full website.

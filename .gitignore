@@ -13,3 +13,4 @@ data/national_budget/review/
 .mypy_cache/
 .ruff_cache/
 data/raw/
+.env
