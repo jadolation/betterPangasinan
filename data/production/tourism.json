@@ -1,0 +1,1297 @@
+{
+  "schema_version": 1,
+  "metadata": {
+    "collected_at": "2026-11-11T14:00:00Z",
+    "note": "Compiled from the cited sources on 2026-11-11. Not field-verified; fares, schedules and fees change."
+  },
+  "sources": [
+    {
+      "id": "sp-hundred-islands",
+      "url": "https://seepangasinan.com/places/hundred-islands-national-park/",
+      "publisher": "Pangasinan Provincial Tourism and Cultural Affairs Office (See Pangasinan)",
+      "title": "Hundred Islands National Park",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    },
+    {
+      "id": "sp-lucap-wharf",
+      "url": "https://seepangasinan.com/places/lucap-wharf/",
+      "publisher": "Pangasinan Provincial Tourism and Cultural Affairs Office (See Pangasinan)",
+      "title": "Lucap Wharf",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    },
+    {
+      "id": "sp-patar-beach",
+      "url": "https://seepangasinan.com/places/patar-beach/",
+      "publisher": "Pangasinan Provincial Tourism and Cultural Affairs Office (See Pangasinan)",
+      "title": "Patar Beach",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    },
+    {
+      "id": "sp-cape-bolinao-lighthouse",
+      "url": "https://seepangasinan.com/places/cape-bolinao-lighthouse/",
+      "publisher": "Pangasinan Provincial Tourism and Cultural Affairs Office (See Pangasinan)",
+      "title": "Cape Bolinao Lighthouse",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    },
+    {
+      "id": "sp-bolinao-falls",
+      "url": "https://seepangasinan.com/places/bolinao-falls/",
+      "publisher": "Pangasinan Provincial Tourism and Cultural Affairs Office (See Pangasinan)",
+      "title": "Bolinao Falls",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    },
+    {
+      "id": "sp-enchanted-cave",
+      "url": "https://seepangasinan.com/places/enchanted-cave/",
+      "publisher": "Pangasinan Provincial Tourism and Cultural Affairs Office (See Pangasinan)",
+      "title": "Enchanted Cave",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    },
+    {
+      "id": "sp-tondol-beach",
+      "url": "https://seepangasinan.com/places/tondol-beach/",
+      "publisher": "Pangasinan Provincial Tourism and Cultural Affairs Office (See Pangasinan)",
+      "title": "Tondol Beach",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    },
+    {
+      "id": "sp-umbrella-rocks",
+      "url": "https://seepangasinan.com/places/umbrella-rock-formation/",
+      "publisher": "Pangasinan Provincial Tourism and Cultural Affairs Office (See Pangasinan)",
+      "title": "Umbrella Rock Formation",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    },
+    {
+      "id": "sp-lingayen-gulf-beach",
+      "url": "https://seepangasinan.com/places/lingayen-gulf-beach/",
+      "publisher": "Pangasinan Provincial Tourism and Cultural Affairs Office (See Pangasinan)",
+      "title": "Lingayen Gulf Beach",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    },
+    {
+      "id": "sp-manaoag-basilica",
+      "url": "https://seepangasinan.com/places/minor-basilica-of-our-lady-of-the-rosary-of-manaoag/",
+      "publisher": "Pangasinan Provincial Tourism and Cultural Affairs Office (See Pangasinan)",
+      "title": "Minor Basilica of Our Lady of the Rosary of Manaoag",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    },
+    {
+      "id": "sp-manleluag",
+      "url": "https://seepangasinan.com/places/manleluag-spring-protected-landscape/",
+      "publisher": "Pangasinan Provincial Tourism and Cultural Affairs Office (See Pangasinan)",
+      "title": "Manleluag Spring Protected Landscape",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    },
+    {
+      "id": "sp-balungao",
+      "url": "https://seepangasinan.com/places/balungao-hot-and-cold-springs-and-hilltop-adventure/",
+      "publisher": "Pangasinan Provincial Tourism and Cultural Affairs Office (See Pangasinan)",
+      "title": "Balungao Hot and Cold Springs and Hilltop Adventure",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    },
+    {
+      "id": "sp-sual-dried-fish",
+      "url": "https://seepangasinan.com/places/sual-dried-fish-market/",
+      "publisher": "Pangasinan Provincial Tourism and Cultural Affairs Office (See Pangasinan)",
+      "title": "Sual Dried Fish Market",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    },
+    {
+      "id": "sp-going-here",
+      "url": "https://seepangasinan.com/going-here/",
+      "publisher": "Pangasinan Provincial Tourism and Cultural Affairs Office (See Pangasinan)",
+      "title": "Going Here",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    },
+    {
+      "id": "pg-getting-here",
+      "url": "https://www.pangasinan.gov.ph/the-province/getting-here/",
+      "publisher": "Province of Pangasinan",
+      "title": "Getting Here",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    },
+    {
+      "id": "pg-alaminos",
+      "url": "https://www.pangasinan.gov.ph/city-municipalities/alaminos-city/",
+      "publisher": "Province of Pangasinan",
+      "title": "Alaminos City",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    },
+    {
+      "id": "pg-bolinao",
+      "url": "https://www.pangasinan.gov.ph/city-municipalities/bolinao/",
+      "publisher": "Province of Pangasinan",
+      "title": "Bolinao",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    },
+    {
+      "id": "pg-anda",
+      "url": "https://www.pangasinan.gov.ph/city-municipalities/anda/",
+      "publisher": "Province of Pangasinan",
+      "title": "Anda",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    },
+    {
+      "id": "pg-agno",
+      "url": "https://www.pangasinan.gov.ph/city-municipalities/agno/",
+      "publisher": "Province of Pangasinan",
+      "title": "Agno",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    },
+    {
+      "id": "pg-lingayen",
+      "url": "https://www.pangasinan.gov.ph/city-municipalities/lingayen/",
+      "publisher": "Province of Pangasinan",
+      "title": "Lingayen",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    },
+    {
+      "id": "pg-manaoag",
+      "url": "https://www.pangasinan.gov.ph/city-municipalities/manaoag/",
+      "publisher": "Province of Pangasinan",
+      "title": "Manaoag",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    },
+    {
+      "id": "pg-balungao",
+      "url": "https://www.pangasinan.gov.ph/city-municipalities/balungao/",
+      "publisher": "Province of Pangasinan",
+      "title": "Balungao",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    },
+    {
+      "id": "pg-calasiao",
+      "url": "https://www.pangasinan.gov.ph/city-municipalities/calasiao/",
+      "publisher": "Province of Pangasinan",
+      "title": "Calasiao",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    },
+    {
+      "id": "pg-dagupan",
+      "url": "https://www.pangasinan.gov.ph/city-municipalities/dagupan-city/",
+      "publisher": "Province of Pangasinan",
+      "title": "Dagupan City",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    },
+    {
+      "id": "pg-sual",
+      "url": "https://www.pangasinan.gov.ph/city-municipalities/sual/",
+      "publisher": "Province of Pangasinan",
+      "title": "Sual",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    },
+    {
+      "id": "pg-mangaldan",
+      "url": "https://www.pangasinan.gov.ph/city-municipalities/mangaldan/",
+      "publisher": "Province of Pangasinan",
+      "title": "Mangaldan",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    },
+    {
+      "id": "alaminos-getting-here",
+      "url": "https://alaminoscity.gov.ph/discover-alaminos/getting-here.html",
+      "publisher": "City Government of Alaminos",
+      "title": "Getting Here",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    },
+    {
+      "id": "wv-bolinao",
+      "url": "https://en.wikivoyage.org/w/index.php?title=Bolinao&oldid=5419952",
+      "publisher": "Wikivoyage contributors (CC BY-SA)",
+      "title": "Bolinao (revision 5419952)",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    },
+    {
+      "id": "wv-manaoag",
+      "url": "https://en.wikivoyage.org/w/index.php?title=Manaoag&oldid=5413028",
+      "publisher": "Wikivoyage contributors (CC BY-SA)",
+      "title": "Manaoag (revision 5413028)",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    },
+    {
+      "id": "wv-lingayen",
+      "url": "https://en.wikivoyage.org/w/index.php?title=Lingayen&oldid=5420110",
+      "publisher": "Wikivoyage contributors (CC BY-SA)",
+      "title": "Lingayen (revision 5420110)",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    },
+    {
+      "id": "wv-mangatarem",
+      "url": "https://en.wikivoyage.org/w/index.php?title=Mangatarem&oldid=5415225",
+      "publisher": "Wikivoyage contributors (CC BY-SA)",
+      "title": "Mangatarem (revision 5415225)",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    },
+    {
+      "id": "wd-hundred-islands",
+      "url": "https://www.wikidata.org/wiki/Q1155369",
+      "publisher": "Wikidata (CC0)",
+      "title": "Hundred Islands National Park coordinates",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    },
+    {
+      "id": "wd-manleluag",
+      "url": "https://www.wikidata.org/wiki/Q18352329",
+      "publisher": "Wikidata (CC0)",
+      "title": "Manleluag Spring Protected Landscape coordinates",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    },
+    {
+      "id": "wd-mount-balungao",
+      "url": "https://www.wikidata.org/wiki/Q15256693",
+      "publisher": "Wikidata (CC0)",
+      "title": "Mount Balungao coordinates",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    },
+    {
+      "id": "osm-umbrella-rocks",
+      "url": "https://www.openstreetmap.org/node/6553036087",
+      "publisher": "OpenStreetMap contributors (ODbL)",
+      "title": "Umbrella Rocks map node",
+      "retrieved_at": "2026-11-11T14:00:00Z"
+    }
+  ],
+  "attractions": [
+    {
+      "id": "hundred-islands-national-park",
+      "name": "Hundred Islands National Park",
+      "lgu_id": "lgu-0105503000",
+      "barangay": "Lucap (jump-off point)",
+      "categories": [
+        "island",
+        "nature",
+        "beach"
+      ],
+      "is_hidden_spot": false,
+      "summary": "A spectacle of 123 islands, plus one more at low tide, and the first national park of the Philippines, declared on January 14, 1940. Governor's Island has a view deck and a zip line to Virgin Island.",
+      "coordinates": {
+        "lat": 16.2,
+        "lon": 120.03333
+      },
+      "coordinate_source_id": "wd-hundred-islands",
+      "tips": [
+        "Boat tours are arranged at the City Tourism Office – Welcome Center at Lucap Wharf.",
+        "Governor's Island and Virgin Island are linked by a zip line and a 120-metre pontoon bridge.",
+        "Restaurants and places to stay line the streets around Lucap Wharf."
+      ],
+      "responsible_visit": "Take your trash home, follow posted rules and ask the municipal tourism office before visiting restricted areas.",
+      "nearby_ids": [
+        "umbrella-rocks",
+        "patar-beach"
+      ],
+      "food_ids": [
+        "alaminos-longganisa",
+        "sual-dried-fish"
+      ],
+      "photo": {
+        "file": "assets/tourism/hundred-islands.jpg",
+        "file_small": "assets/tourism/hundred-islands-small.jpg",
+        "alt": "Forested islands of the Hundred Islands rising from a calm green lagoon",
+        "author": "Manuel C. Zacarias",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:HUNDRED_ISLANDS_IN_ALAMINOS_CITY.jpg"
+      },
+      "routes": [
+        {
+          "origin": "From Metro Manila",
+          "source_ids": [
+            "alaminos-getting-here"
+          ],
+          "legs": [
+            {
+              "mode": "bus",
+              "from": "Metro Manila (Pasay, Cubao or Avenida terminal)",
+              "to": "Alaminos City",
+              "operator": "Five Star (Pasay, Cubao, Trinoma), Victory Liner (Cubao), Dagupan Bus (Cubao), Philippine Rabbit (Avenida)",
+              "duration_text": "approx. 5 hours by land",
+              "notes": "Fares follow the prescribed transportation tariffs; ask the operator for the current fare."
+            },
+            {
+              "mode": "tricycle",
+              "from": "Alaminos City proper",
+              "to": "Don Gonzalo Montemayor Wharf, Brgy. Lucap"
+            },
+            {
+              "mode": "boat",
+              "from": "Lucap Wharf",
+              "to": "Hundred Islands National Park",
+              "notes": "Outrigger boats are arranged with the City Tourism Office – Welcome Center at the wharf."
+            }
+          ]
+        },
+        {
+          "origin": "From Dagupan City",
+          "source_ids": [
+            "alaminos-getting-here"
+          ],
+          "legs": [
+            {
+              "mode": "van",
+              "from": "Dagupan City",
+              "to": "Alaminos City",
+              "operator": "Vans or buses, including Victory Liner and MhelBhen Transport",
+              "duration_text": "approx. 1.5 hours"
+            },
+            {
+              "mode": "tricycle",
+              "from": "Alaminos City proper",
+              "to": "Lucap Wharf"
+            },
+            {
+              "mode": "boat",
+              "from": "Lucap Wharf",
+              "to": "Hundred Islands National Park"
+            }
+          ]
+        },
+        {
+          "origin": "From Baguio City",
+          "source_ids": [
+            "alaminos-getting-here"
+          ],
+          "legs": [
+            {
+              "mode": "bus",
+              "from": "Baguio City",
+              "to": "Alaminos City",
+              "operator": "PUV vans or buses, including Victory Liner and MhelBhen Transport",
+              "duration_text": "approx. 3 hours"
+            },
+            {
+              "mode": "tricycle",
+              "from": "Alaminos City proper",
+              "to": "Lucap Wharf"
+            },
+            {
+              "mode": "boat",
+              "from": "Lucap Wharf",
+              "to": "Hundred Islands National Park"
+            }
+          ]
+        }
+      ],
+      "private_vehicle_note": "From Manila, take NLEX–SCTEX, exit at Luisita (Tarlac), then follow the Camiling route.",
+      "checked_on": "2026-11-11",
+      "source_ids": [
+        "sp-hundred-islands",
+        "sp-lucap-wharf",
+        "pg-alaminos"
+      ],
+      "is_mock": false,
+      "publication_status": "approved",
+      "verification_status": "reviewed"
+    },
+    {
+      "id": "patar-beach",
+      "name": "Patar Beach",
+      "lgu_id": "lgu-0105514000",
+      "barangay": "Patar",
+      "categories": [
+        "beach"
+      ],
+      "is_hidden_spot": false,
+      "summary": "One of the most visited beaches in Pangasinan: clear blue water along a long stretch of fine white sand. Bolinao is dubbed the Boracay of Pangasinan for these beaches.",
+      "coordinates": {
+        "lat": 16.30357,
+        "lon": 119.78109
+      },
+      "coordinate_source_id": "wv-bolinao",
+      "entrance_fee_text": "Free entrance",
+      "fee_as_of": "2022-08-10",
+      "tips": [
+        "Camping is allowed along the beach.",
+        "Cottages are available for rent."
+      ],
+      "responsible_visit": "Take your trash home, follow posted rules and ask the municipal tourism office before visiting restricted areas.",
+      "nearby_ids": [
+        "cape-bolinao-lighthouse",
+        "enchanted-cave",
+        "bolinao-falls"
+      ],
+      "food_ids": [
+        "binungey"
+      ],
+      "photo": {
+        "file": "assets/tourism/patar-beach.jpg",
+        "file_small": "assets/tourism/patar-beach-small.jpg",
+        "alt": "Calm water lapping a curving stretch of Patar's white sand beach",
+        "author": "Beltugade",
+        "license": "Public domain",
+        "license_url": "https://commons.wikimedia.org/wiki/Commons:Copyright_tags",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Patar_white_beach.jpg"
+      },
+      "routes": [
+        {
+          "origin": "From Metro Manila",
+          "legs": [
+            {
+              "mode": "bus",
+              "from": "Metro Manila",
+              "to": "Bolinao town proper",
+              "operator": "Victory Liner",
+              "duration_text": "approx. 5 to 6 hours"
+            },
+            {
+              "mode": "tricycle",
+              "from": "Bolinao town proper",
+              "to": "Brgy. Patar",
+              "notes": "Local travel in Bolinao is usually by jeepney or tricycle; arrange your return ride before dark."
+            }
+          ],
+          "source_ids": [
+            "wv-bolinao"
+          ]
+        },
+        {
+          "origin": "From Dagupan City",
+          "legs": [
+            {
+              "mode": "van",
+              "from": "Dagupan City",
+              "to": "Bolinao town proper",
+              "notes": "Vans run between Dagupan and Bolinao in both directions."
+            },
+            {
+              "mode": "tricycle",
+              "from": "Bolinao town proper",
+              "to": "Brgy. Patar",
+              "notes": "Local travel in Bolinao is usually by jeepney or tricycle; arrange your return ride before dark."
+            }
+          ],
+          "source_ids": [
+            "wv-bolinao"
+          ]
+        }
+      ],
+      "checked_on": "2026-11-11",
+      "source_ids": [
+        "sp-patar-beach",
+        "pg-bolinao"
+      ],
+      "is_mock": false,
+      "publication_status": "approved",
+      "verification_status": "reviewed"
+    },
+    {
+      "id": "cape-bolinao-lighthouse",
+      "name": "Cape Bolinao Lighthouse",
+      "lgu_id": "lgu-0105514000",
+      "barangay": "Patar",
+      "categories": [
+        "heritage"
+      ],
+      "is_hidden_spot": false,
+      "summary": "Built in 1905 by British and Filipino engineers on Punta Piedra Point, 351 feet above sea level, with a view of the West Philippine Sea. It is one of the tallest lighthouses in the country.",
+      "coordinates": {
+        "lat": 16.30716,
+        "lon": 119.78561
+      },
+      "coordinate_source_id": "wv-bolinao",
+      "tips": [
+        "The tower is no longer open to the public; visitors can admire it from outside.",
+        "Walk to the edge of Punta Piedra Point for the sea view."
+      ],
+      "responsible_visit": "Take your trash home, follow posted rules and ask the municipal tourism office before visiting restricted areas.",
+      "nearby_ids": [
+        "patar-beach",
+        "enchanted-cave"
+      ],
+      "food_ids": [
+        "binungey"
+      ],
+      "photo": {
+        "file": "assets/tourism/cape-bolinao-lighthouse.jpg",
+        "file_small": "assets/tourism/cape-bolinao-lighthouse-small.jpg",
+        "alt": "White lighthouse tower of Cape Bolinao against a blue sky with visitors at its base",
+        "author": "KisekiLacroix",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Bolinao_Lighthouse_002.JPG"
+      },
+      "routes": [
+        {
+          "origin": "From Metro Manila",
+          "legs": [
+            {
+              "mode": "bus",
+              "from": "Metro Manila",
+              "to": "Bolinao town proper",
+              "operator": "Victory Liner",
+              "duration_text": "approx. 5 to 6 hours"
+            },
+            {
+              "mode": "tricycle",
+              "from": "Bolinao town proper",
+              "to": "Cape Bolinao Lighthouse, Brgy. Patar",
+              "notes": "Local travel in Bolinao is usually by jeepney or tricycle; arrange your return ride before dark."
+            }
+          ],
+          "source_ids": [
+            "wv-bolinao"
+          ]
+        },
+        {
+          "origin": "From Dagupan City",
+          "legs": [
+            {
+              "mode": "van",
+              "from": "Dagupan City",
+              "to": "Bolinao town proper",
+              "notes": "Vans run between Dagupan and Bolinao in both directions."
+            },
+            {
+              "mode": "tricycle",
+              "from": "Bolinao town proper",
+              "to": "Cape Bolinao Lighthouse, Brgy. Patar",
+              "notes": "Local travel in Bolinao is usually by jeepney or tricycle; arrange your return ride before dark."
+            }
+          ],
+          "source_ids": [
+            "wv-bolinao"
+          ]
+        }
+      ],
+      "checked_on": "2026-11-11",
+      "source_ids": [
+        "sp-cape-bolinao-lighthouse"
+      ],
+      "is_mock": false,
+      "publication_status": "approved",
+      "verification_status": "reviewed"
+    },
+    {
+      "id": "bolinao-falls",
+      "name": "Bolinao Falls",
+      "lgu_id": "lgu-0105514000",
+      "categories": [
+        "falls",
+        "nature"
+      ],
+      "is_hidden_spot": false,
+      "summary": "An interconnected waterfall system with three levels — Bolinao Falls 1, 2 and 3 — each with a pool for swimming, kayaking and snorkeling.",
+      "coordinates": {
+        "lat": 16.30572,
+        "lon": 119.86039
+      },
+      "coordinate_source_id": "wv-bolinao",
+      "tips": [
+        "Equipment is available on site; rental fees vary."
+      ],
+      "responsible_visit": "Take your trash home, follow posted rules and ask the municipal tourism office before visiting restricted areas.",
+      "nearby_ids": [
+        "enchanted-cave",
+        "patar-beach"
+      ],
+      "food_ids": [
+        "binungey"
+      ],
+      "photo": {
+        "file": "assets/tourism/bolinao-falls.jpg",
+        "file_small": "assets/tourism/bolinao-falls-small.jpg",
+        "alt": "Twin curtains of water falling into the turquoise pool of Bolinao Falls 1",
+        "author": "Kleervyu",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Bolinao_Falls,_Pangasinan.jpg"
+      },
+      "routes": [
+        {
+          "origin": "From Metro Manila",
+          "legs": [
+            {
+              "mode": "bus",
+              "from": "Metro Manila",
+              "to": "Bolinao town proper",
+              "operator": "Victory Liner",
+              "duration_text": "approx. 5 to 6 hours"
+            },
+            {
+              "mode": "tricycle",
+              "from": "Bolinao town proper",
+              "to": "Bolinao Falls",
+              "notes": "Local travel in Bolinao is usually by jeepney or tricycle; arrange your return ride before dark."
+            }
+          ],
+          "source_ids": [
+            "wv-bolinao"
+          ]
+        },
+        {
+          "origin": "From Dagupan City",
+          "legs": [
+            {
+              "mode": "van",
+              "from": "Dagupan City",
+              "to": "Bolinao town proper",
+              "notes": "Vans run between Dagupan and Bolinao in both directions."
+            },
+            {
+              "mode": "tricycle",
+              "from": "Bolinao town proper",
+              "to": "Bolinao Falls",
+              "notes": "Local travel in Bolinao is usually by jeepney or tricycle; arrange your return ride before dark."
+            }
+          ],
+          "source_ids": [
+            "wv-bolinao"
+          ]
+        }
+      ],
+      "checked_on": "2026-11-11",
+      "source_ids": [
+        "sp-bolinao-falls"
+      ],
+      "is_mock": false,
+      "publication_status": "approved",
+      "verification_status": "reviewed"
+    },
+    {
+      "id": "enchanted-cave",
+      "name": "Enchanted Cave",
+      "lgu_id": "lgu-0105514000",
+      "categories": [
+        "cave",
+        "nature"
+      ],
+      "is_hidden_spot": false,
+      "summary": "The highlight of an eco park in Bolinao: a cave with clear water and stalactites. The park also has a swimming pool, shower rooms and a Stations of the Cross area.",
+      "coordinates": {
+        "lat": 16.342,
+        "lon": 119.8043
+      },
+      "coordinate_source_id": "wv-bolinao",
+      "tips": [
+        "Water inside the cave is usually 7 to 10 feet deep; safety gear is provided before you descend."
+      ],
+      "responsible_visit": "Take your trash home, follow posted rules and ask the municipal tourism office before visiting restricted areas.",
+      "nearby_ids": [
+        "patar-beach",
+        "cape-bolinao-lighthouse",
+        "bolinao-falls"
+      ],
+      "food_ids": [
+        "binungey"
+      ],
+      "photo": {
+        "file": "assets/tourism/illustration-cave.svg",
+        "alt": "Illustration of a limestone cave with a clear pool",
+        "author": "Better Pangasinan contributors (illustration)",
+        "license": "CC0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source_url": "https://github.com/bettergovph"
+      },
+      "routes": [
+        {
+          "origin": "From Metro Manila",
+          "legs": [
+            {
+              "mode": "bus",
+              "from": "Metro Manila",
+              "to": "Bolinao town proper",
+              "operator": "Victory Liner",
+              "duration_text": "approx. 5 to 6 hours"
+            },
+            {
+              "mode": "tricycle",
+              "from": "Bolinao town proper",
+              "to": "Enchanted Cave, off Patar Road",
+              "notes": "Local travel in Bolinao is usually by jeepney or tricycle; arrange your return ride before dark."
+            }
+          ],
+          "source_ids": [
+            "wv-bolinao"
+          ]
+        },
+        {
+          "origin": "From Dagupan City",
+          "legs": [
+            {
+              "mode": "van",
+              "from": "Dagupan City",
+              "to": "Bolinao town proper",
+              "notes": "Vans run between Dagupan and Bolinao in both directions."
+            },
+            {
+              "mode": "tricycle",
+              "from": "Bolinao town proper",
+              "to": "Enchanted Cave, off Patar Road",
+              "notes": "Local travel in Bolinao is usually by jeepney or tricycle; arrange your return ride before dark."
+            }
+          ],
+          "source_ids": [
+            "wv-bolinao"
+          ]
+        }
+      ],
+      "checked_on": "2026-11-11",
+      "source_ids": [
+        "sp-enchanted-cave"
+      ],
+      "is_mock": false,
+      "publication_status": "approved",
+      "verification_status": "reviewed"
+    },
+    {
+      "id": "tondol-beach",
+      "name": "Tondol White Sand Beach",
+      "lgu_id": "lgu-0105505000",
+      "categories": [
+        "beach"
+      ],
+      "is_hidden_spot": false,
+      "summary": "One of the best-known beaches in the province, with white sand and clear water. Anda was reached mainly by boat until a bridge connected it to the mainland in the 1990s.",
+      "coordinates": {
+        "lat": 16.31407,
+        "lon": 120.01704
+      },
+      "coordinate_source_id": "wv-bolinao",
+      "entrance_fee_text": "Completely open to the public",
+      "fee_as_of": "2023-10-02",
+      "tips": [
+        "An inflatable water park floats nearby."
+      ],
+      "responsible_visit": "Take your trash home, follow posted rules and ask the municipal tourism office before visiting restricted areas.",
+      "nearby_ids": [
+        "patar-beach",
+        "bolinao-falls"
+      ],
+      "food_ids": [
+        "binungey"
+      ],
+      "photo": {
+        "file": "assets/tourism/tondol-beach.jpg",
+        "file_small": "assets/tourism/tondol-beach-small.jpg",
+        "alt": "Golden sunset over the calm sea at Tondol Beach with boats on the horizon",
+        "author": "GRMondala",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Tondol_Beach_Sunset_by_Gerald_Mondala.jpg"
+      },
+      "routes": [
+        {
+          "origin": "From Metro Manila",
+          "source_ids": [
+            "wv-bolinao"
+          ],
+          "legs": [
+            {
+              "mode": "bus",
+              "from": "Metro Manila",
+              "to": "Bolinao town proper",
+              "operator": "Victory Liner",
+              "duration_text": "approx. 5 to 6 hours"
+            },
+            {
+              "mode": "jeepney",
+              "from": "Bolinao town proper",
+              "to": "Tondol Beach, Anda",
+              "notes": "Anda is linked to Bolinao by a short causeway; local travel is usually by jeepney or tricycle."
+            }
+          ]
+        }
+      ],
+      "checked_on": "2026-11-11",
+      "source_ids": [
+        "sp-tondol-beach",
+        "pg-anda"
+      ],
+      "is_mock": false,
+      "publication_status": "approved",
+      "verification_status": "reviewed"
+    },
+    {
+      "id": "umbrella-rocks",
+      "name": "Umbrella Rocks of Sabangan",
+      "lgu_id": "lgu-0105501000",
+      "barangay": "Sabangan Norte",
+      "categories": [
+        "nature",
+        "beach"
+      ],
+      "is_hidden_spot": true,
+      "summary": "Large boulders shaped like umbrellas and mushrooms along the coast of Agno. The town holds an annual Umbrella Rocks Festival.",
+      "coordinates": {
+        "lat": 16.133931,
+        "lon": 119.7763774
+      },
+      "coordinate_source_id": "osm-umbrella-rocks",
+      "tips": [
+        "Agno also produces mangoes and duhat during the summer season."
+      ],
+      "responsible_visit": "Do not climb on or carve the rock formations. Take your trash home, follow posted rules and ask the municipal tourism office before visiting restricted areas.",
+      "nearby_ids": [
+        "hundred-islands-national-park"
+      ],
+      "food_ids": [],
+      "photo": {
+        "file": "assets/tourism/illustration-rocks.svg",
+        "alt": "Illustration of mushroom-shaped rocks on a sunset coast",
+        "author": "Better Pangasinan contributors (illustration)",
+        "license": "CC0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source_url": "https://github.com/bettergovph"
+      },
+      "routes": [
+        {
+          "origin": "From Metro Manila",
+          "source_ids": [
+            "alaminos-getting-here"
+          ],
+          "legs": [
+            {
+              "mode": "bus",
+              "from": "Metro Manila (Pasay, Cubao or Avenida terminal)",
+              "to": "Alaminos City",
+              "operator": "Five Star (Pasay, Cubao, Trinoma), Victory Liner (Cubao), Dagupan Bus (Cubao), Philippine Rabbit (Avenida)",
+              "duration_text": "approx. 5 hours by land",
+              "notes": "Fares follow the prescribed transportation tariffs; ask the operator for the current fare."
+            }
+          ],
+          "gap_note": "We have not found an official source for the Alaminos–Agno leg yet. Ask the Agno municipal tourism office for current local transport."
+        }
+      ],
+      "checked_on": "2026-11-11",
+      "source_ids": [
+        "sp-umbrella-rocks",
+        "pg-agno"
+      ],
+      "is_mock": false,
+      "publication_status": "approved",
+      "verification_status": "reviewed"
+    },
+    {
+      "id": "lingayen-gulf-beach",
+      "name": "Lingayen Gulf Beach and Baywalk",
+      "lgu_id": "lgu-0105522000",
+      "categories": [
+        "beach",
+        "festival"
+      ],
+      "is_hidden_spot": false,
+      "summary": "A wide beach a stone's throw from the Capitol Complex. Its baywalk draws runners and cyclists, and it hosts Pistay Dayat, the province's \"Mother of All Festivals\" — and the famous Pangasinan sunset.",
+      "coordinates": {
+        "lat": 16.0362,
+        "lon": 120.2267
+      },
+      "coordinate_source_id": "wv-lingayen",
+      "tips": [
+        "Stay for the sunset over Lingayen Gulf.",
+        "The Capitol Complex is a stone's throw away."
+      ],
+      "responsible_visit": "Take your trash home, follow posted rules and ask the municipal tourism office before visiting restricted areas.",
+      "nearby_ids": [
+        "manaoag-basilica"
+      ],
+      "food_ids": [
+        "lingayen-bagoong",
+        "dagupan-bangus",
+        "calasiao-puto"
+      ],
+      "photo": {
+        "file": "assets/tourism/lingayen-beach.jpg",
+        "file_small": "assets/tourism/lingayen-beach-small.jpg",
+        "alt": "Wide grey-sand beach at Lingayen under a cloudy sky with a small shade hut",
+        "author": "Markryan08",
+        "license": "CC0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Capitol_Lingayen_Beach.jpg"
+      },
+      "routes": [
+        {
+          "origin": "From Metro Manila",
+          "source_ids": [
+            "wv-lingayen"
+          ],
+          "legs": [
+            {
+              "mode": "bus",
+              "from": "Metro Manila (Pasay or Cubao terminal)",
+              "to": "Lingayen",
+              "operator": "Victory Liner"
+            },
+            {
+              "mode": "tricycle",
+              "from": "Lingayen town proper",
+              "to": "Capitol Complex and beach",
+              "notes": "Tricycles are the main form of public transportation around town."
+            }
+          ]
+        }
+      ],
+      "checked_on": "2026-11-11",
+      "source_ids": [
+        "sp-lingayen-gulf-beach",
+        "pg-lingayen"
+      ],
+      "is_mock": false,
+      "publication_status": "approved",
+      "verification_status": "reviewed"
+    },
+    {
+      "id": "manaoag-basilica",
+      "name": "Minor Basilica of Our Lady of the Rosary of Manaoag",
+      "lgu_id": "lgu-0105525000",
+      "barangay": "Poblacion",
+      "categories": [
+        "pilgrimage",
+        "heritage"
+      ],
+      "is_hidden_spot": false,
+      "summary": "The most popular pilgrimage site in the province, granted the title Minor Basilica in 2015. It houses a museum of religious memorabilia, including dresses worn by the image of the Virgin.",
+      "coordinates": {
+        "lat": 16.044023,
+        "lon": 120.485869
+      },
+      "coordinate_source_id": "wv-manaoag",
+      "tips": [
+        "The primary feast is on the third Wednesday of Easter; the Holy Rosary month is October.",
+        "The church front is for pick-up and drop-off only; park via the Milo Street entrance.",
+        "Much of the town proper is walkable."
+      ],
+      "responsible_visit": "Dress modestly and keep quiet during Mass. Take your trash home, follow posted rules and ask the municipal tourism office before visiting restricted areas.",
+      "nearby_ids": [
+        "lingayen-gulf-beach"
+      ],
+      "food_ids": [
+        "mangaldan-tapa",
+        "dagupan-bangus"
+      ],
+      "photo": {
+        "file": "assets/tourism/manaoag-basilica.jpg",
+        "file_small": "assets/tourism/manaoag-basilica-small.jpg",
+        "alt": "Cream facade and bell tower of Manaoag Basilica under a blue sky",
+        "author": "EyeTrick",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Exterior_of_Manaoag_Church_-_June_2023.jpg"
+      },
+      "routes": [
+        {
+          "origin": "From Metro Manila",
+          "source_ids": [
+            "wv-manaoag"
+          ],
+          "legs": [
+            {
+              "mode": "bus",
+              "from": "Cubao, Metro Manila",
+              "to": "Manaoag",
+              "notes": "Direct buses use makeshift terminals in front of the basilica."
+            },
+            {
+              "mode": "walk",
+              "from": "Bus stop",
+              "to": "Basilica"
+            }
+          ]
+        },
+        {
+          "origin": "From Dagupan City",
+          "source_ids": [
+            "alaminos-getting-here",
+            "wv-manaoag"
+          ],
+          "legs": [
+            {
+              "mode": "van",
+              "from": "Dagupan City",
+              "to": "Manaoag",
+              "duration_text": "approx. 30 minutes"
+            },
+            {
+              "mode": "walk",
+              "from": "Van stop",
+              "to": "Basilica"
+            }
+          ]
+        }
+      ],
+      "private_vehicle_note": "From Manila, take TPLEX to the Binalonan exit and turn left towards Laoac and Manaoag.",
+      "checked_on": "2026-11-11",
+      "source_ids": [
+        "sp-manaoag-basilica",
+        "pg-manaoag"
+      ],
+      "is_mock": false,
+      "publication_status": "approved",
+      "verification_status": "reviewed"
+    },
+    {
+      "id": "manleluag-spring",
+      "name": "Manleluag Spring Protected Landscape",
+      "lgu_id": "lgu-0105527000",
+      "categories": [
+        "nature"
+      ],
+      "is_hidden_spot": true,
+      "summary": "One of only two known hot spring sites in Pangasinan, fed by underground water that originates from Mt. Zambales. It has a view deck tower and hiking trails through the forest.",
+      "coordinates": {
+        "lat": 15.7031,
+        "lon": 120.283
+      },
+      "coordinate_source_id": "wd-manleluag",
+      "tips": [
+        "Over 90 bird species call this place home."
+      ],
+      "responsible_visit": "Stay on marked trails in this protected area. Take your trash home, follow posted rules and ask the municipal tourism office before visiting restricted areas.",
+      "nearby_ids": [
+        "lingayen-gulf-beach"
+      ],
+      "food_ids": [],
+      "photo": {
+        "file": "assets/tourism/illustration-spring.svg",
+        "alt": "Illustration of a forest hot spring pool below green hills",
+        "author": "Better Pangasinan contributors (illustration)",
+        "license": "CC0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source_url": "https://github.com/bettergovph"
+      },
+      "routes": [
+        {
+          "origin": "From Metro Manila",
+          "source_ids": [
+            "pg-getting-here",
+            "wv-mangatarem"
+          ],
+          "legs": [
+            {
+              "mode": "bus",
+              "from": "Metro Manila",
+              "to": "Mangatarem town proper",
+              "notes": "Mangatarem is an entry point from Manila via the Romulo Highway; there is a bus stop downtown."
+            },
+            {
+              "mode": "tricycle",
+              "from": "Mangatarem town proper",
+              "to": "Manleluag Spring"
+            }
+          ],
+          "gap_note": "Confirm the tricycle ride to the spring with the Mangatarem tourism office before you go."
+        }
+      ],
+      "checked_on": "2026-11-11",
+      "source_ids": [
+        "sp-manleluag"
+      ],
+      "is_mock": false,
+      "publication_status": "approved",
+      "verification_status": "reviewed"
+    },
+    {
+      "id": "mount-balungao",
+      "name": "Mt. Balungao and Hilltop Adventure",
+      "lgu_id": "lgu-0105507000",
+      "barangay": "San Andres",
+      "categories": [
+        "nature"
+      ],
+      "is_hidden_spot": true,
+      "summary": "A mountain five kilometres from the town proper with hot and cold springs and the longest zipline in northern Luzon. ATV rides, paintball, wall climbing and treks to the summit are offered.",
+      "coordinates": {
+        "lat": 15.862472,
+        "lon": 120.682694
+      },
+      "coordinate_source_id": "wd-mount-balungao",
+      "tips": [
+        "A hotel on site is available for longer stays.",
+        "Balungao celebrates a Goat Festival, held since 2006."
+      ],
+      "responsible_visit": "Take your trash home, follow posted rules and ask the municipal tourism office before visiting restricted areas.",
+      "nearby_ids": [],
+      "food_ids": [
+        "balungao-chevon"
+      ],
+      "photo": {
+        "file": "assets/tourism/mount-balungao.jpg",
+        "file_small": "assets/tourism/mount-balungao-small.jpg",
+        "alt": "Green cone of Mount Balungao rising above flat rice fields",
+        "author": "Ramon FVelasquez",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Balunaojf6134_01.JPG"
+      },
+      "routes": [
+        {
+          "origin": "From Metro Manila",
+          "source_ids": [
+            "pg-getting-here"
+          ],
+          "legs": [
+            {
+              "mode": "bus",
+              "from": "Metro Manila",
+              "to": "Rosales (eastern entry point via TPLEX)",
+              "notes": "National carriers serving Pangasinan include Five Star, Victory Liner, Solid North and Viron Transit."
+            }
+          ],
+          "gap_note": "We have not found an official source for the Rosales–Balungao leg yet. Ask the Balungao tourism office."
+        }
+      ],
+      "checked_on": "2026-11-11",
+      "source_ids": [
+        "sp-balungao",
+        "pg-balungao"
+      ],
+      "is_mock": false,
+      "publication_status": "approved",
+      "verification_status": "reviewed"
+    }
+  ],
+  "foods": [
+    {
+      "id": "dagupan-bangus",
+      "name": "Dagupan bangus (milkfish)",
+      "lgu_id": "lgu-0105518000",
+      "description": "Dagupan is considered the Bangus Capital of the Philippines, and bangus farming is the city's main industry. The city celebrates a Bangus Festival every year.",
+      "attraction_ids": [
+        "lingayen-gulf-beach",
+        "manaoag-basilica"
+      ],
+      "photo": {
+        "file": "assets/tourism/dagupan-bangus.jpg",
+        "file_small": "assets/tourism/dagupan-bangus-small.jpg",
+        "alt": "Grilled bangus on a plate in Bonuan, Dagupan City",
+        "author": "Elmer Centeno Guevarra",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:GRILLED_BANGUS_MILKFISH_IN_BONUAN_DAGUPAN_CITY,PANGASINAN.jpg"
+      },
+      "source_ids": [
+        "pg-dagupan"
+      ],
+      "is_mock": false,
+      "publication_status": "approved",
+      "verification_status": "reviewed"
+    },
+    {
+      "id": "calasiao-puto",
+      "name": "Calasiao puto",
+      "lgu_id": "lgu-0105517000",
+      "description": "Calasiao is synonymous with its puto, a sweet rice cake, and celebrates a Puto Festival every year in its honor.",
+      "where_to_try": "Puto stores along Mamaradlo Street, Calasiao Poblacion",
+      "attraction_ids": [
+        "lingayen-gulf-beach"
+      ],
+      "photo": {
+        "file": "assets/tourism/calasiao-puto.jpg",
+        "file_small": "assets/tourism/calasiao-puto-small.jpg",
+        "alt": "Row of puto stores along Mamaradlo Street in Calasiao",
+        "author": "Patrickroque01",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Calasiao_Poblacion,_puto_stores_along_Mamaradlo_Street_(Calasiao,_Pangasinan;_02-24-2023).jpg"
+      },
+      "source_ids": [
+        "pg-calasiao"
+      ],
+      "is_mock": false,
+      "publication_status": "approved",
+      "verification_status": "reviewed"
+    },
+    {
+      "id": "alaminos-longganisa",
+      "name": "Alaminos longganisa",
+      "lgu_id": "lgu-0105503000",
+      "description": "The provincial government credits Alaminos City's savory longganisa, alongside the Hundred Islands, for drawing visitors to the city.",
+      "attraction_ids": [
+        "hundred-islands-national-park"
+      ],
+      "source_ids": [
+        "pg-alaminos"
+      ],
+      "is_mock": false,
+      "publication_status": "approved",
+      "verification_status": "reviewed"
+    },
+    {
+      "id": "binungey",
+      "name": "Binungey",
+      "lgu_id": "lgu-0105505000",
+      "description": "Sweet sticky rice soaked in coconut milk inside bamboo and cooked slowly over charcoal or wood fire. Anda holds a Binungey Festival every April; it is also a Bolinao delicacy.",
+      "attraction_ids": [
+        "tondol-beach",
+        "patar-beach",
+        "bolinao-falls"
+      ],
+      "source_ids": [
+        "pg-anda",
+        "pg-bolinao"
+      ],
+      "is_mock": false,
+      "publication_status": "approved",
+      "verification_status": "reviewed"
+    },
+    {
+      "id": "lingayen-bagoong",
+      "name": "Lingayen bagoong",
+      "lgu_id": "lgu-0105522000",
+      "description": "Fermented fish or shrimp paste and Lingayen's One Town One Product. The town had 60 small to medium bagoong processors in 2019 and has held a Bagoong Festival since 2011.",
+      "attraction_ids": [
+        "lingayen-gulf-beach"
+      ],
+      "photo": {
+        "file": "assets/tourism/lingayen-bagoong.jpg",
+        "file_small": "assets/tourism/lingayen-bagoong-small.jpg",
+        "alt": "Jars of Lingayen bagoong on display",
+        "author": "Ralff Nestor Nacor",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:World's_Best_Lingayen_Bagoong,_Pangasinan,_Jun_2024.jpg"
+      },
+      "source_ids": [
+        "pg-lingayen"
+      ],
+      "is_mock": false,
+      "publication_status": "approved",
+      "verification_status": "reviewed"
+    },
+    {
+      "id": "sual-dried-fish",
+      "name": "Sual dried fish",
+      "lgu_id": "lgu-0105542000",
+      "description": "At Sual's Dried Fish Market, vendors offer free tastes of dried octopus and squid and fish such as espada, daing and tuyo. Sual borders Alaminos City and is also a major bangus producer.",
+      "where_to_try": "Sual Dried Fish Market",
+      "attraction_ids": [
+        "hundred-islands-national-park"
+      ],
+      "source_ids": [
+        "sp-sual-dried-fish",
+        "pg-sual"
+      ],
+      "is_mock": false,
+      "publication_status": "approved",
+      "verification_status": "reviewed"
+    },
+    {
+      "id": "mangaldan-tapa",
+      "name": "Mangaldan pindang (tapa)",
+      "lgu_id": "lgu-0105526000",
+      "description": "Thin slices of dried, cured carabao meat. Mangaldan is known for the best-tasting pindang and honours its meat vendors with a festival launched in 2012.",
+      "attraction_ids": [
+        "manaoag-basilica"
+      ],
+      "source_ids": [
+        "pg-mangaldan"
+      ],
+      "is_mock": false,
+      "publication_status": "approved",
+      "verification_status": "reviewed"
+    },
+    {
+      "id": "balungao-chevon",
+      "name": "Balungao chevon (goat meat)",
+      "lgu_id": "lgu-0105507000",
+      "description": "Balungao is renowned for its chevon and goat-raising industry and has celebrated a Goat Festival since 2006.",
+      "attraction_ids": [
+        "mount-balungao"
+      ],
+      "source_ids": [
+        "pg-balungao"
+      ],
+      "is_mock": false,
+      "publication_status": "approved",
+      "verification_status": "reviewed"
+    }
+  ]
+}

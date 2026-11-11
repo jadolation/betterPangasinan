@@ -57,6 +57,7 @@ python3 -m http.server 8000 --directory public
 - `logo.svg`: provincial brand artwork; preserve its aspect ratio.
 - `build.py`: validation and static compilation entry point.
 - `data/` and `schemas/`: structured records, source references, and validation rules.
+- `data/production/tourism.json`: curated tourism guide (attractions, commute routes, local food), validated by `scripts/tourism.py` against `schemas/tourism.schema.json`; self-hosted licensed photos live in `assets/tourism/`.
 - `tests/`: automated validation and synthetic test inputs.
 - `src/locales/`: English interface strings and additional-language foundations.
 - `public/`: generated deployment artifact.

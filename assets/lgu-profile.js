@@ -247,6 +247,12 @@
       ]) { const card = el('div', undefined, 'lgu-kpi'); card.append(el('span', label), el('strong', value), el('small', note)); byId('kpis').append(card); }
       byId('overview').append(el('p', `${lgu.name} / ${lgu.classification || 'classification not supplied'}.`), el('p', lgu.population_reference_date ? `Population reference: ${lgu.population_reference_date}. Administrative listing: ${lgu.psgc_release || 'not supplied'}.` : 'Reference dates are not yet collected.', 'lgu-caption'));
       if (lgu.psgc) { const a = el('a', 'Open the full municipality map'); a.href = `municipality-map.html?psgc=${encodeURIComponent(lgu.psgc)}`; const p = el('p'); p.append(a); byId('overview').append(p); }
+      json('data/tourism.json', true).then(tourism => {
+        const count = Array.isArray(tourism?.attractions) ? tourism.attractions.filter(row => row.lgu_id === lgu.id).length : 0;
+        if (!count) return;
+        const a = el('a', `Places to visit in ${lgu.name} (${count})`); a.href = `tourism.html?municipality=${encodeURIComponent(lgu.id)}`;
+        const p = el('p'); p.append(a); byId('overview').append(p);
+      });
       let mapReady = Promise.resolve();
       if (lgu.psgc && window.createMunicipalityMap) mapReady = window.createMunicipalityMap({ container: byId('map'), mode: 'profile', selectedPsgc: lgu.psgc,
         onSelect: row => { if (row?.psgc && row.psgc !== lgu.psgc) location.href = `lgu.html?id=${encodeURIComponent(row.id)}`; } }).ready;

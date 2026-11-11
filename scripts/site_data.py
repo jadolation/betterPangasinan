@@ -12,6 +12,7 @@ ADAPTERS = {
     "scripts.geography_data": {"data/geography/manifest.json", "data/geography/barangays.json", "data/geography/municipalities.geojson"},
     "scripts.historical_budget.publish": {"data/historical-budget/manifest.json", "data/historical-budget/departments.json", "data/historical-budget/programs.json", "data/historical-budget/coverage.json", "data/budget-context.json", "data/budget-hearings.json"},
     "scripts.provincial_reference": {"data/provincial-reference.json"},
+    "scripts.tourism": {"data/tourism.json"},
 }
 
 

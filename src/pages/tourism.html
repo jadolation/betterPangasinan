@@ -1,0 +1,47 @@
+---
+title: Tourism | Better Pangasinan
+description: Discover Pangasinan's islands, beaches, falls, pilgrimage sites and local food, with commute directions and cited sources.
+---
+<link rel="stylesheet" href="assets/leaflet/leaflet.css">
+<link rel="stylesheet" href="assets/tourism.css">
+<section class="page-hero tr-hero"><div class="wrap">
+  <span class="eyebrow">Sea, salt and sunsets</span>
+  <h1>Discover Pangasinan</h1>
+  <p class="lede">From the Hundred Islands to the falls of Bolinao and the basilica of Manaoag: where each place is, how to get there by commute, what locals eat nearby, and a few hidden spots. Every detail links to its source.</p>
+  <div class="hero-actions"><a class="btn btn-primary" href="#tr-places">Find a place</a><a class="btn btn-ghost" href="#local-food">Taste of Pangasinan</a></div>
+  <p class="tr-hero-credit">Photo: Hundred Islands by Manuel C. Zacarias, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:HUNDRED_ISLANDS_IN_ALAMINOS_CITY.jpg">Wikimedia Commons</a></p>
+</div></section>
+
+<section class="section tr-section" data-tourism><div class="wrap">
+  <nav class="explore-links" aria-label="Explore Pangasinan"><a href="lgus.html">LGU directory</a><a href="municipality-map.html">Municipality map</a><a href="statistics.html">Population and statistics</a><a href="history.html">History and culture</a><a href="tourism.html" aria-current="page">Tourism</a></nav>
+  <div class="section-head"><div class="section-eyebrow">Where to go</div><h2 id="tr-places">Places to visit</h2><p>A focused first set of places across the province, chosen from the provincial tourism office's own listings.</p></div>
+  <form class="tr-filters" role="search" aria-label="Filter places to visit">
+    <label class="tr-field">Search<input type="search" id="tr-search" name="q" placeholder="Beach, falls, Bolinao…" autocomplete="off"></label>
+    <label class="tr-field">Type of place<select id="tr-category" name="category"><option value="">All types</option></select></label>
+    <label class="tr-field">City or municipality<select id="tr-municipality" name="municipality"><option value="">All cities and municipalities</option></select></label>
+    <label class="tr-check"><input type="checkbox" id="tr-hidden" name="hidden" value="1"> Hidden spots only</label>
+    <button class="btn btn-outline" type="reset">Clear</button>
+  </form>
+  <p class="tr-status" data-tourism-status role="status" aria-live="polite">Loading the tourism guide.</p>
+  <div class="tr-detail-host" data-tourism-detail hidden></div>
+  <div class="tr-grid" data-tourism-results></div>
+  <div class="empty-state" data-tourism-empty hidden><h3>No places match</h3><p>Try another word or clear the filters.</p></div>
+  <noscript><p>This guide needs JavaScript for search and maps. You can still <a href="data/tourism.json">read the full tourism dataset with its sources</a>.</p></noscript>
+</div></section>
+
+<div class="tr-island-divider" aria-hidden="true"><svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path d="M0 90V62c90-4 140-30 210-30s110 26 170 26 90-40 170-40 120 44 190 44 80-22 140-22 100 30 170 30 90-48 180-48 110 38 210 38v80z"/></svg></div>
+
+<section class="section tr-food-section" id="local-food"><div class="wrap">
+  <div class="section-head"><div class="section-eyebrow">Taste of Pangasinan</div><h2>What locals eat</h2><p>Signature food of the towns and cities, as described by the provincial government. Try them near the places above.</p></div>
+  <div class="tr-food-grid" data-tourism-food></div>
+</div></section>
+
+<section class="section tr-about"><div class="wrap">
+  <details class="province-source-details"><summary>About this guide and its sources</summary>
+    <p>Descriptions come from the provincial tourism office (<a href="https://seepangasinan.com/">See Pangasinan</a>) and the <a href="https://www.pangasinan.gov.ph/">provincial government</a>. Commute steps come from official LGU pages where available, otherwise from Wikivoyage. When we could not find a source for a step, the route says so instead of guessing. Fares and schedules change; the guide does not publish a fare without an as-of date.</p>
+    <p>Photos are copied from Wikimedia Commons under their stated licenses and served from this site. Map tiles come from OpenStreetMap; see the <a href="privacy.html#map-privacy">map privacy notice</a>. <a href="methodology.html#tourism-guide">Methodology</a> · <a href="data/tourism.json">Download the dataset</a> · <a href="corrections.html">Send a correction</a></p>
+  </details>
+</div></section>
+<script src="assets/leaflet/leaflet.js" defer></script>
+<script src="assets/project-map-config.js" defer></script>
+<script src="assets/tourism.js" defer></script>

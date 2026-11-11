@@ -1,0 +1,142 @@
+/* ==========================================================================
+   Tourism guide — Pangasinan-inspired palette, scoped to tourism pages.
+   Extends (never replaces) the global blue/gold tokens in style.css.
+     sea-deep    #0B4F6C  Lingayen Gulf deep water
+     sea-teal    #138A8A  Hundred Islands shallows (fills only)
+     sea-ink     #0E5F5F  teal darkened for text (AA on sand/salt)
+     sand        #F6EBD9  Patar and Tondol white sand
+     salt        #FBFAF7  asin — "Pangasinan" means "where salt is made"
+     sunset      #E8743B  Lingayen Gulf sunset (accents, map pin)
+     sunset-ink  #A6431A  sunset darkened for text (AA)
+     bamboo      brown-earth — binungey bamboo
+   ========================================================================== */
+:root {
+  --tr-sea-deep: #0b4f6c;
+  --tr-sea-teal: #138a8a;
+  --tr-sea-ink: #0e5f5f;
+  --tr-sea-mist: #e3f1ef;
+  --tr-sand: #f6ebd9;
+  --tr-salt: #fbfaf7;
+  --tr-sunset: #e8743b;
+  --tr-sunset-ink: #a6431a;
+  --tr-bamboo: var(--brown-earth);
+}
+
+/* Hero: Hundred Islands photo under a deep-sea gradient; base colour stays blue-deep for the shared hero contract. */
+.tr-hero {
+  background-image: linear-gradient(180deg, rgba(1, 64, 127, 0.88) 0%, rgba(11, 79, 108, 0.8) 55%, rgba(1, 64, 127, 0.92) 100%), url("tourism/hundred-islands.jpg");
+  background-size: cover;
+  background-position: center 40%;
+  background-color: var(--blue-deep);
+}
+.tr-hero .wrap { padding-bottom: 104px; }
+.tr-hero .eyebrow { color: var(--gold); }
+.tr-hero .lede { color: #f1f6fb; max-width: 66ch; }
+.tr-hero .hero-actions { margin-top: 22px; }
+.tr-hero-credit { margin: 20px 0 0; font: 12px/1.5 var(--font-display); color: #d6e4f2; }
+.tr-hero-credit a { color: #fff; }
+
+.tr-section { background: var(--bg); }
+.tr-section .section-head h2 { color: var(--tr-sea-deep); }
+
+/* Filters */
+.tr-filters { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr)) auto auto; gap: 12px 16px; align-items: end; margin: 8px 0 18px; padding: 18px; background: var(--paper); border: 1px solid var(--line); border-top: 4px solid var(--tr-sea-teal); border-radius: var(--radius); font-family: var(--font-display); }
+.tr-field { display: grid; gap: 6px; font-size: 13px; font-weight: 600; color: var(--ink); min-width: 0; }
+.tr-field input, .tr-field select { width: 100%; min-height: 44px; padding: 8px 10px; border: 1px solid #b8c6d4; border-radius: var(--radius); font: 15px var(--font-display); background: #fff; color: var(--ink); }
+.tr-check { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.tr-check input { width: 20px; height: 20px; accent-color: var(--tr-sea-ink); }
+.tr-filters .btn { min-height: 44px; }
+.tr-status { font: 14px/1.5 var(--font-display); color: var(--ink-soft); margin: 0 0 16px; }
+
+/* Cards */
+.tr-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 20px; }
+.tr-card { display: flex; flex-direction: column; min-width: 0; background: var(--paper); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; transition: box-shadow .2s ease, transform .2s ease; }
+.tr-card:hover, .tr-card:focus-within { box-shadow: 0 10px 24px rgba(11, 79, 108, 0.14); transform: translateY(-2px); }
+.tr-card-media { aspect-ratio: 4 / 3; background: var(--tr-sea-mist); overflow: hidden; }
+.tr-card-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.tr-card-body { display: flex; flex-direction: column; gap: 8px; padding: 16px 18px 20px; border-top: 4px solid var(--tr-sunset); }
+.tr-card h3 { margin: 0; font-size: 19px; line-height: 1.3; color: var(--tr-sea-deep); }
+.tr-card-link { color: var(--tr-sea-deep); text-decoration: none; }
+.tr-card-link::after { content: ""; position: absolute; inset: 0; }
+.tr-card { position: relative; }
+.tr-card-link:hover { text-decoration: underline; }
+.tr-card-place { position: relative; z-index: 1; margin: 0; font: 14px/1.5 var(--font-display); color: var(--ink-soft); }
+.tr-card-summary { margin: 0; font-size: 14px; line-height: 1.6; color: var(--ink); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.tr-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.tr-chip, .tr-badge-hidden { display: inline-block; padding: 3px 9px; border-radius: 999px; font: 600 12px/1.5 var(--font-display); letter-spacing: .02em; }
+.tr-chip { background: var(--tr-sea-mist); color: var(--tr-sea-ink); }
+.tr-badge-hidden { background: var(--gold); color: var(--ink); }
+
+/* Detail */
+.tr-detail-host { margin-bottom: 32px; scroll-margin-top: 96px; }
+.tr-detail { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 20px; }
+.tr-back { margin-bottom: 16px; min-height: 44px; }
+.tr-detail-figure { margin: 0 0 18px; }
+.tr-detail-figure img { width: 100%; max-height: 440px; object-fit: cover; border-radius: 6px; display: block; background: var(--tr-sea-mist); }
+.tr-detail-figure figcaption, .tr-food-figure figcaption { margin-top: 6px; font: 12px/1.5 var(--font-display); color: var(--ink-soft); }
+.tr-detail-head h2 { margin: 10px 0 8px; color: var(--tr-sea-deep); font-size: clamp(26px, 3.4vw, 36px); }
+.tr-detail-head h2:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+.tr-detail-head h2:focus:not(:focus-visible) { outline: none; }
+.tr-detail-summary { max-width: 72ch; font-size: 17px; line-height: 1.65; }
+.tr-detail-layout { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 28px; margin-top: 12px; }
+.tr-detail-section { padding-top: 16px; margin-top: 16px; border-top: 1px solid var(--line); min-width: 0; }
+.tr-detail-section h3 { font-size: 18px; color: var(--tr-sea-deep); margin-bottom: 10px; }
+.tr-detail-section p, .tr-detail-section li { font-size: 15px; line-height: 1.6; overflow-wrap: anywhere; }
+.tr-map { height: 280px; border-radius: 6px; border: 1px solid var(--line); background: var(--tr-sea-mist); }
+.tr-map-links, .tr-route-source, .tr-checked, .tr-tariff-note { font: 13px/1.5 var(--font-display); color: var(--ink-soft); }
+.tr-marker { background: var(--tr-sunset); border: 3px solid #fff; border-radius: 50%; box-shadow: 0 0 0 2px var(--tr-sea-deep); }
+
+.tr-route { margin: 14px 0; padding: 14px 16px; background: var(--tr-salt); border-left: 4px solid var(--tr-sea-teal); border-radius: 0 6px 6px 0; }
+.tr-route h4 { margin: 0 0 10px; font-size: 15px; color: var(--ink); }
+.tr-route ol { list-style: none; margin: 0; padding: 0; counter-reset: leg; }
+.tr-route ol > li { display: grid; grid-template-columns: 84px minmax(0, 1fr); gap: 10px; padding: 8px 0; border-bottom: 1px dashed var(--line); }
+.tr-route ol > li:last-child { border-bottom: 0; }
+.tr-leg-mode { align-self: start; text-align: center; padding: 3px 6px; border-radius: 4px; font: 700 12px/1.6 var(--font-display); text-transform: uppercase; letter-spacing: .04em; background: var(--tr-sea-deep); color: #fff; }
+.tr-mode-boat { background: var(--tr-sea-ink); }
+.tr-mode-tricycle, .tr-mode-jeepney { background: var(--tr-sunset-ink); }
+.tr-mode-walk { background: var(--ink-soft); }
+.tr-leg-text { display: grid; gap: 2px; font-family: var(--font-display); font-size: 14px; }
+.tr-leg-meta { color: var(--ink-soft); font-size: 13px; }
+.tr-leg-notes { font-size: 13px; color: var(--ink); }
+.tr-gap { margin: 10px 0 0; padding: 8px 10px; background: var(--gold-soft); border-left: 3px solid var(--gold-ink); font: 13px/1.5 var(--font-display); }
+.tr-private { font-size: 14px; }
+.tr-link-list { margin: 0; padding-left: 18px; }
+.tr-also { margin: 12px 0 4px; font: 600 13px var(--font-display); color: var(--ink-soft); }
+.tr-respect { padding: 10px 12px; background: var(--tr-sea-mist); border-radius: 4px; }
+.tr-verify-note { padding: 10px 12px; border: 1px solid var(--tr-sunset); border-radius: 4px; background: #fdf0e8; color: var(--ink); font: 14px/1.55 var(--font-display); }
+.tr-source-list { padding-left: 18px; font: 13px/1.5 var(--font-display); }
+
+/* Island silhouette divider and food section */
+.tr-island-divider { line-height: 0; background: var(--bg); }
+.tr-island-divider svg { display: block; width: 100%; height: 60px; }
+.tr-island-divider path { fill: var(--tr-sand); }
+.tr-food-section { background-color: var(--tr-sand); background-image: radial-gradient(rgba(255, 255, 255, 0.7) 1.2px, transparent 1.4px); background-size: 18px 18px; }
+.tr-food-section .section-head h2 { color: var(--tr-bamboo); }
+.tr-food-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); gap: 20px; }
+.tr-food { display: flex; flex-direction: column; background: var(--paper); border: 1px solid #e6d6bd; border-radius: 8px; overflow: hidden; min-width: 0; scroll-margin-top: 24px; }
+.tr-food:target { outline: 3px solid var(--gold); }
+.tr-food-figure { margin: 0; }
+.tr-food-figure img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+.tr-food-figure figcaption { padding: 0 14px; }
+.tr-food-motif { aspect-ratio: 4 / 3; background: linear-gradient(135deg, var(--tr-bamboo) 0 12%, #8f4f2c 12% 14%, var(--tr-bamboo) 14% 40%, #8f4f2c 40% 42%, var(--tr-bamboo) 42% 70%, #8f4f2c 70% 72%, var(--tr-bamboo) 72%); opacity: .9; }
+.tr-food-body { padding: 14px 16px 18px; border-top: 4px solid var(--tr-bamboo); }
+.tr-food h3 { font-size: 18px; color: var(--tr-bamboo); margin-bottom: 4px; }
+.tr-food p { font-size: 14px; line-height: 1.6; margin: 0 0 8px; overflow-wrap: anywhere; }
+.tr-food-place, .tr-food-where, .tr-food-near { font-family: var(--font-display); }
+.tr-about { background: var(--bg); padding-top: 8px; }
+
+@media (max-width: 900px) {
+  .tr-filters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tr-filters .tr-field:first-child { grid-column: 1 / -1; }
+  .tr-detail-layout { grid-template-columns: minmax(0, 1fr); gap: 0; }
+}
+@media (max-width: 520px) {
+  .tr-filters { grid-template-columns: minmax(0, 1fr); }
+  .tr-detail { padding: 14px; }
+  .tr-route ol > li { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .tr-leg-mode { justify-self: start; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tr-card { transition: none; }
+  .tr-card:hover, .tr-card:focus-within { transform: none; }
+}
