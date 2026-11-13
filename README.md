@@ -543,12 +543,11 @@ House readings or overlapping municipal views. The initial Mapandan capture is
 a regression fixture only: PHP 49 million NEP, PHP 49 million House, zero change,
 with the Amanoaoac source warning preserved, never a PHP 98 million budget.
 
-## Offline P0 Collector And Review
+## P0 Web Crawler
 
-The collector stages real, attributable source artifacts with original evidence,
-immutable versions, validation and review-only JSON/CSV exports. Synthetic inputs
-are retained only in tests. `review-p0` reuses existing
-LGU, barangay and approved FY2027 evidence without changing publication inputs.
-Live source collection stays disabled; official release, population evidence and
-license gaps remain explicit. Setup, commands, output locations and PostgreSQL
-instructions: [P0 collector guide](docs/collector.md).
+`web-crawler/` collects the brief's P0 provincial overview, LGU directory and
+barangay datasets from the PSA Classification API and the provincial website
+(visible stable Chrome), with field-level evidence, explicit gaps, an
+inconsistency report and an independent verifier. Outputs stay review-only under
+ignored `data/staging/web-crawler/`. Commands and rules: [web-crawler/README.md](web-crawler/README.md);
+current status: [doc/P0-VERIFICATION.md](doc/P0-VERIFICATION.md).
