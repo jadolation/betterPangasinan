@@ -122,3 +122,55 @@ def test_site_field_requires_exact_quote():
                              'Part of the 6th District. A total land area of 4,447.10 hectares.'}})
     assert other['legislative_district']['value'] == 6
     assert other['land_area_ha']['value'] == 4447.10
+
+
+def test_lgu_contacts_keep_quotes_and_drop_placeholders():
+    from crawler.build import lgu_page_contacts
+    page = {'evidence': {}, 'body': {'text': '\n'.join([
+        'Address', 'Binalonan Municipal Hall,', 'McKinley Street,', 'Binalonan, Pangasinan',
+        'Trunk line: (075) 633-9438', 'Fake (075) 123-4567', 'Email: mayor@binalonan.gov.ph',
+        'Write to test@example.com'])}}
+    addresses, phones, emails, placeholders = lgu_page_contacts(page)
+    assert addresses == [{'value': 'Binalonan Municipal Hall, McKinley Street, Binalonan, Pangasinan',
+                          'quotes': ['Binalonan Municipal Hall,', 'McKinley Street,', 'Binalonan, Pangasinan']}]
+    assert [(p['label'], p['number']) for p in phones] == [('Trunk line', '(075) 633-9438')]
+    assert [e['email'] for e in emails] == ['mayor@binalonan.gov.ph']
+    assert {p.get('number') or p.get('email') for p in placeholders} == {'(075) 123-4567', 'test@example.com'}
+
+
+def osm_run(tmp_path, places):
+    """Synthetic run: unit-square province with the given place nodes."""
+    from conftest import sha256, write_json
+    run = synthetic_run(tmp_path, valid_rows())
+    body = json.dumps({'province': {'members': [{'type': 'n', 'ref': 1, 'role': 'admin_centre'}]},
+                       'boundary_ways': [{'id': 1, 'role': 'outer', 'coords': [[0, 0], [1, 0], [1, 1], [0, 1], [0, 0]]}],
+                       'subareas': [], 'places': places}).encode()
+    (run / 'evidence' / 'osm-geofabrik').mkdir()
+    (run / 'evidence' / 'osm-geofabrik' / 'x.json').write_bytes(body)
+    manifest = json.loads((run / 'manifest.json').read_text())
+    manifest['evidence'].append({'source': 'osm-geofabrik', 'artifact': 'evidence/osm-geofabrik/x.json',
+                                 'artifact_sha256': sha256(body), 'role': 'extract',
+                                 'source_url': 'https://example.invalid/osm', 'retrieved_at': '2026-01-01T00:00:00Z'})
+    write_json(run / 'manifest.json', manifest)
+    build(run)
+    return {r['psgc']: r['coordinates'] for r in
+            json.loads((run / 'output' / 'pangasinan_lgus.json').read_text())['records']}
+
+
+def test_osm_coordinates_only_inside_province_and_unambiguous(tmp_path):
+    place = lambda i, lat, lon, **tags: {'id': i, 'lat': lat, 'lon': lon, 'tags': {'place': 'town', **tags}}  # noqa: E731
+    coords = osm_run(tmp_path, [
+        place(1, 0.5, 0.5, name='Synthetic'),                    # two same-named nodes inside: ambiguous
+        place(4, 0.6, 0.6, name='Synthetic'),
+        place(2, 0.2, 0.2, name='Other', ref='0105502000'),      # ref wins over name
+        place(3, 5.0, 5.0, name='Synthetic', ref='0105501000'),  # outside the province: ignored
+    ])
+    assert coords['0105501000']['missing_reason'] == 'osm_place_ambiguous'
+    assert coords['0105502000']['value'] == {'lat': 0.2, 'lon': 0.2}
+    assert coords['0105502000']['basis'] == 'osm_ref_equals_psgc'
+    assert coords['0105502000']['official_source'] is False
+
+
+def test_osm_node_never_assigned_to_two_lgus(tmp_path):
+    coords = osm_run(tmp_path, [{'id': 1, 'lat': 0.5, 'lon': 0.5, 'tags': {'place': 'town', 'name': 'Synthetic'}}])
+    assert {c['missing_reason'] for c in coords.values()} == {'osm_place_shared_by_several_lgus'}

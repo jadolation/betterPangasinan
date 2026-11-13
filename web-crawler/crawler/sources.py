@@ -10,10 +10,11 @@ import tempfile
 import time
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import urlsplit
 from urllib.robotparser import RobotFileParser
 
 from . import net
-from .runs import ROOT, sha256
+from .runs import ROOT, STAGING, sha256
 
 PSA_HOST = 'classification.psa.gov.ph'
 PSA_SCOPE = {'reg': '1', 'prv': '55'}
@@ -107,21 +108,23 @@ def _robots_policy(run, source):
     return parser
 
 
-def _browser_capture(run, source, ip, paths, delay):
-    """Run the Playwright worker for fixed same-origin paths and record its evidence."""
+def _browser_capture(run, source, ip, paths, delay, origin=PROVINCE_ORIGIN,
+                     agency='Provincial Government of Pangasinan', record_failures=True):
+    """Run the Playwright worker for fixed same-origin paths and record its evidence.
+    Returns {key: extracted page} for captured pages and {key: error} for failed ones."""
     scratch = Path(tempfile.mkdtemp(dir=run.path))
     try:
-        job = {'origin': PROVINCE_ORIGIN, 'ip': ip, 'out_dir': str(scratch), 'delay_ms': int(delay * 1000),
+        job = {'origin': origin, 'ip': ip, 'out_dir': str(scratch), 'delay_ms': int(delay * 1000),
                'paths': [{'key': k, 'path': p} for k, p in paths]}
         proc = subprocess.run(['node', str(Path(__file__).with_name('browser.cjs'))], input=json.dumps(job),
                               capture_output=True, text=True, timeout=60 + len(paths) * (delay + 30), cwd=ROOT)
         report = json.loads(proc.stdout or '{}')
         run.manifest.setdefault('browser', {}).setdefault(source, []).append({
             'browser_version': report.get('browser_version'), 'requests': report.get('requests'),
-            'pinned_ip': ip, 'pages': len(paths), 'error': report.get('error')})
-        captured = []
+            'origin': origin, 'pinned_ip': ip, 'pages': len(paths), 'error': report.get('error')})
+        captured, failed = [], {}
         for page in report.get('pages', []):
-            meta = {'agency': 'Provincial Government of Pangasinan', 'source_url': page['url'],
+            meta = {'agency': agency, 'source_url': page['url'],
                     'final_url': page.get('final_url'), 'retrieved_at': page['retrieved_at'],
                     'http_status': page.get('http_status'), 'content_type': page.get('content_type'),
                     'peer_ip': page.get('peer_ip'), 'page': page['key'], 'collection_method': 'visible_chrome'}
@@ -134,10 +137,12 @@ def _browser_capture(run, source, ip, paths, delay):
                     if kind == 'extracted' and page['status'] == 'captured':
                         captured.append((page['key'], json.loads(data)))
             if page['status'] != 'captured':
-                run.record_error(source, 'browser', page.get('error', 'failed'), page=page['key'])
+                failed[page['key']] = page.get('error', 'failed')
+                if record_failures:
+                    run.record_error(source, 'browser', failed[page['key']], page=page['key'])
         if report.get('error') or proc.returncode:
             raise net.FetchError((report.get('error') or f'browser_exit_{proc.returncode}')[:120])
-        return dict(captured)
+        return dict(captured), failed
     finally:
         shutil.rmtree(scratch, ignore_errors=True)
 
@@ -162,7 +167,7 @@ def collect_province_site(run, options):
     if not paths:
         raise net.FetchError('robots_denied_all')
     ip = next(a for a in net.public_addresses('www.pangasinan.gov.ph') if ':' not in a)
-    pages = _browser_capture(run, source, ip, paths, delay)
+    pages, _ = _browser_capture(run, source, ip, paths, delay)
     limit = options.get('lgu_limit')
     if 'lgus' not in pages or limit == 0:
         return
@@ -175,9 +180,178 @@ def collect_province_site(run, options):
         _browser_capture(run, source, ip, detail, delay)
 
 
+LGU_SITE = re.compile(r'^https?://((?:[a-z0-9-]+\.)+gov\.ph)/?$')
+LGU_SITE_DELAY = 3
+
+
+def lgu_websites(run):
+    """{slug: url} for WEBSITE links on captured provincial LGU pages (same run)."""
+    sites = {}
+    for entry in run.evidence('pangasinan-gov', role='extracted'):
+        if entry['page'].startswith('lgu-'):
+            links = {a['href'] for a in json.loads(run.read(entry))['links'] if a['text'].strip().upper() == 'WEBSITE'}
+            if len(links) == 1:
+                sites[entry['page'][4:]] = links.pop()
+    return sites
+
+
+def collect_lgu_sites(run, options):
+    """For each .gov.ph site linked from the provincial LGU pages: robots.txt, homepage,
+    then the same-site Contact page, all in visible Chrome. One site failing does not
+    stop the others; every skip and failure is recorded."""
+    source = 'lgu-sites'
+    sites = lgu_websites(run)
+    if not sites:
+        raise net.FetchError('requires_pangasinan_gov_lgu_pages_in_same_run')
+    for slug, url in sorted(sites.items())[:options.get('lgu_limit')]:
+        match = LGU_SITE.match(url)
+        if not match:
+            run.record_error(source, 'scope', 'not_a_gov_ph_root_url', page=slug, url=url)
+            continue
+        host = match[1]
+        variants = [host, host[4:] if host.startswith('www.') else 'www.' + host]
+        try:
+            statuses = []
+            for suffix, host in zip(('', '-alt'), variants):  # sites often serve only www or only bare host
+                origin, key = f'https://{host}', f'{slug}-robots{suffix}'
+                try:
+                    ip = next(a for a in net.public_addresses(host) if ':' not in a)
+                except (OSError, StopIteration) as error:
+                    statuses.append(f'{host}:dns_{type(error).__name__}')
+                    continue
+                robots_pages, robots_failed = _browser_capture(
+                    run, source, ip, [(key, '/robots.txt')], LGU_SITE_DELAY, origin,
+                    agency=f'LGU website ({host})', record_failures=False)
+                status = robots_failed.get(key)
+                statuses.append(f'{host}:{status}')
+                if status in (None, 'http_404'):
+                    break
+            else:
+                run.record_error(source, 'robots', 'robots_unavailable', page=slug, attempts=statuses)
+                continue
+            robots = RobotFileParser()
+            robots.parse((robots_pages.get(key, {}).get('text') or '').splitlines() if status is None else [])
+            if not robots.can_fetch(net.USER_AGENT, origin + '/'):
+                run.record_error(source, 'robots', 'robots_disallowed', page=slug)
+                continue
+            pages, _ = _browser_capture(run, source, ip, [(f'{slug}-home', '/')], LGU_SITE_DELAY, origin,
+                                        agency=f'LGU website ({host})')
+            home = pages.get(f'{slug}-home')
+            contact = sorted({urlsplit(a['href']).path for a in (home or {}).get('links', [])
+                              if a['href'] and urlsplit(a['href']).netloc == host
+                              and urlsplit(a['href']).path not in ('', '/')  # in-page anchors: home covers them
+                              and 'contact' in (a['href'] + ' ' + a['text']).lower()})
+            if not contact:
+                run.record_error(source, 'discover', 'no_contact_link', page=slug)
+                continue
+            path = contact[0]
+            if not robots.can_fetch(net.USER_AGENT, origin + path):
+                run.record_error(source, 'robots', 'robots_disallowed', page=f'{slug}-contact')
+                continue
+            run.manifest.setdefault('discovered', {}).setdefault('lgu_contact_pages', {})[slug] = origin + path
+            _browser_capture(run, source, ip, [(f'{slug}-contact', path)], LGU_SITE_DELAY, origin,
+                             agency=f'LGU website ({host})')
+        except (net.FetchError, StopIteration, OSError) as error:
+            run.record_error(source, 'site', str(error) or type(error).__name__, page=slug)
+
+
+OSM_HOST = 'download.geofabrik.de'
+OSM_LATEST = '/asia/philippines-latest.osm.pbf'
+OSM_DATED = re.compile(r'^https://download\.geofabrik\.de/asia/(philippines-[0-9]{6}\.osm\.pbf)$')
+OSM_MAX_BYTES = 1_500_000_000
+
+
+def osm_extract_file(run, options):
+    """Resolve and cache the dated Geofabrik extract; returns its local path."""
+    source = 'osm-geofabrik'
+    _, redirect = net.get(OSM_HOST, OSM_LATEST, accept='*/*', max_bytes=10_000)
+    match = OSM_DATED.match(redirect.get('location') or '')
+    if redirect['http_status'] not in (301, 302, 303, 307, 308) or not match:
+        raise net.FetchError('geofabrik_latest_not_resolved')
+    name = match[1]
+    md5_body, md5_meta = net.get(OSM_HOST, f'/asia/{name}.md5', accept='text/plain', max_bytes=1000)
+    run.add_evidence(source, f'{name}.md5', md5_body, role='checksum', agency='Geofabrik (OpenStreetMap data)',
+                     license='ODbL 1.0, (c) OpenStreetMap contributors', resolved_from=OSM_HOST + OSM_LATEST,
+                     **md5_meta)
+    expected_md5 = md5_body.decode().split()[0]
+    cache = STAGING / 'cache'
+    cache.mkdir(parents=True, exist_ok=True)
+    path = cache / name
+    if not path.exists():
+        meta = net.download(OSM_HOST, f'/asia/{name}', path, OSM_MAX_BYTES)
+        (cache / f'{name}.json').write_text(json.dumps(meta, indent=2))
+    import hashlib
+    md5 = hashlib.md5()
+    with open(path, 'rb') as stream:
+        while chunk := stream.read(1 << 20):
+            md5.update(chunk)
+    if md5.hexdigest() != expected_md5:
+        path.rename(path.with_suffix('.pbf.rejected'))
+        raise net.FetchError('osm_md5_mismatch')
+    return path
+
+
+OSM_PROVINCE_RELATION = 1504701  # Pangasinan; checked against its ref tag below
+OSM_PLACES = ('city', 'town')
+
+
+def collect_osm(run, options):
+    """Extract from the cached Geofabrik file: the Pangasinan province relation with its
+    boundary way geometry, its subarea relations, and every city/town place node in the
+    province bounding box. Matching to PSGC happens offline in build.py."""
+    import osmium
+    path = osm_extract_file(run, options)
+    province, subareas = None, {}
+    for rel in osmium.FileProcessor(str(path), osmium.osm.RELATION):
+        if rel.id == OSM_PROVINCE_RELATION:
+            province = {'id': rel.id, 'tags': dict(rel.tags),
+                        'members': [{'type': m.type, 'ref': m.ref, 'role': m.role} for m in rel.members]}
+    if not province or province['tags'].get('ref') != '0105500000':
+        raise net.FetchError('osm_province_relation_changed')
+    sub_ids = {m['ref'] for m in province['members'] if m['role'] == 'subarea' and m['type'] == 'r'}
+    for rel in osmium.FileProcessor(str(path), osmium.osm.RELATION):
+        if rel.id in sub_ids:
+            subareas[rel.id] = {'id': rel.id, 'tags': dict(rel.tags)}
+    way_ids = {m['ref'] for m in province['members'] if m['type'] == 'w' and m['role'] in ('outer', 'inner', '')}
+    ways = {}
+    for way in osmium.FileProcessor(str(path), osmium.osm.WAY):
+        if way.id in way_ids:
+            ways[way.id] = [n.ref for n in way.nodes]
+    needed = {n for refs in ways.values() for n in refs}
+    coords, places = {}, []
+    for node in osmium.FileProcessor(str(path), osmium.osm.NODE):
+        if node.id in needed:
+            coords[node.id] = (node.location.lon, node.location.lat)
+        if node.tags.get('place') in OSM_PLACES:
+            places.append({'id': node.id, 'lat': node.location.lat, 'lon': node.location.lon,
+                           'tags': {k: v for k, v in node.tags
+                                    if k in ('name', 'place', 'ref', 'old_ref', 'wikidata') or k.startswith('is_in')}})
+    if missing := sorted(n for n in needed if n not in coords):
+        raise net.FetchError(f'osm_boundary_nodes_missing:{len(missing)}')
+    lons = [c[0] for c in coords.values()]
+    lats = [c[1] for c in coords.values()]
+    places = [p for p in places if min(lats) <= p['lat'] <= max(lats) and min(lons) <= p['lon'] <= max(lons)]
+    body = json.dumps({
+        'extract': path.name, 'province': province,
+        'boundary_ways': [{'id': w, 'role': next(m['role'] for m in province['members'] if m['ref'] == w),
+                           'coords': [coords[n] for n in ways[w]]} for w in sorted(ways)],
+        'subareas': [subareas[r] for r in sorted(subareas)],
+        'places': sorted(places, key=lambda p: p['id']),
+    }, ensure_ascii=False).encode()
+    cache_meta = json.loads((path.parent / f'{path.name}.json').read_text())
+    run.add_evidence('osm-geofabrik', 'pangasinan-osm.json', body, role='extract',
+                     agency='Geofabrik (OpenStreetMap data)', license='ODbL 1.0, (c) OpenStreetMap contributors',
+                     official_source=False, title=f'Pangasinan boundary and places from {path.name}',
+                     **{k: cache_meta[k] for k in ('source_url', 'retrieved_at', 'http_status', 'response_sha256',
+                                                   'last_modified')})
+
 SOURCES = {
     'psa-psgc': {'collect': collect_psa, 'agency': 'Philippine Statistics Authority',
                  'description': 'PSGC Classification API: geography, hierarchy, income class, population'},
     'pangasinan-gov': {'collect': collect_province_site, 'agency': 'Provincial Government of Pangasinan',
                        'description': 'pangasinan.gov.ph about, geography, LGU list and 48 LGU pages (visible Chrome)'},
+    'lgu-sites': {'collect': collect_lgu_sites, 'agency': 'City and municipal governments',
+                  'description': 'Contact pages of .gov.ph LGU sites linked from pangasinan.gov.ph (visible Chrome)'},
+    'osm-geofabrik': {'collect': collect_osm, 'agency': 'OpenStreetMap contributors via Geofabrik (not official)',
+                      'description': 'Dated Philippines extract (cached, md5-checked): LGU seat/label coordinates'},
 }

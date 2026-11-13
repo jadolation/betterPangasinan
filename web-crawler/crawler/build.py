@@ -140,9 +140,9 @@ def parse_populations(run, version, issues):
 
 # ---------------------------------------------------------------- provincial site
 
-def site_pages(run):
+def site_pages(run, source=SITE):
     pages = {}
-    for entry in run.evidence(SITE, role='extracted'):
+    for entry in run.evidence(source, role='extracted'):
         body = json.loads(run.read(entry))
         pages[entry['page']] = {'body': body, 'evidence': {
             'artifact': entry['artifact'], 'artifact_sha256': entry['artifact_sha256'],
@@ -180,6 +180,131 @@ def lgu_site_fields(page):
                                             lambda m: to_int(m[1])),
     }
     return {**text_fields, 'website': link_field(page, 'WEBSITE'), 'facebook': link_field(page, 'FACEBOOK')}
+
+
+# ---------------------------------------------------------------- LGU websites
+
+PHONE = re.compile(r'\(?\+?\s?63[\s.)-]*\d{2}[\s.)-]*\d{3}[\s.-]?\d{4}|\(0\d{2}\)\s?\d{3}[\s-]?\d{4}'
+                   r'|\b0\d{2}[\s-]\d{3}[\s-]?\d{4}\b|\b09\d{2}[\s-]?\d{3}[\s-]?\d{4}\b')
+EMAIL = re.compile(r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}\b')
+PLACEHOLDER = re.compile(r'123[\s-]?4567|@example\.|xxx', re.I)  # template values seen on LGU sites
+
+
+def lgu_page_contacts(page):
+    """Address candidates and labelled phones/emails from one captured LGU page.
+    Each item keeps the exact page lines it came from."""
+    lines = [line.strip() for line in page['body']['text'].split('\n') if line.strip()]
+    addresses, phones, emails, placeholders = [], [], [], []
+    for i, line in enumerate(lines):
+        if len(line) > 200:
+            continue
+        if line.rstrip(':').lower() == 'address' and i + 1 < len(lines):
+            parts = [lines[i + 1]]
+            while parts[-1].endswith(',') and i + 1 + len(parts) < len(lines) and len(parts) < 4:
+                parts.append(lines[i + 1 + len(parts)])
+            addresses.append({'value': ' '.join(parts), 'quotes': parts})
+        elif m := re.match(r'^Address:\s*(.+)$', line, re.I):
+            addresses.append({'value': m[1], 'quotes': [line]})
+        elif re.search(r'\S, Pangasinan,? 2[0-9]{3}$', line) and not PHONE.search(line):
+            addresses.append({'value': line, 'quotes': [line]})
+        numbers = [n.strip() for n in PHONE.findall(line)]
+        if numbers:
+            label = PHONE.split(line)[0].strip(' :\t-|') or (lines[i - 1] if i and not PHONE.search(lines[i - 1]) else '')
+            for number in numbers:
+                (placeholders if PLACEHOLDER.search(number) else phones).append(
+                    {'label': label, 'number': number, 'quotes': [line]})
+        for email in EMAIL.findall(line):
+            (placeholders if PLACEHOLDER.search(email) else emails).append({'email': email, 'quotes': [line]})
+    return addresses, phones, emails, placeholders
+
+
+def lgu_contact_fields(pages, slug, issues, psgc):
+    """address and contact fields for one LGU from its contact page, else its home page."""
+    page = pages.get(f'{slug}-contact') or pages.get(f'{slug}-home')
+    if not page:
+        return missing('lgu_site_not_captured'), missing('lgu_site_not_captured')
+    addresses, phones, emails, placeholders = lgu_page_contacts(page)
+    if placeholders:
+        issues.append({'type': 'placeholder_contact_on_lgu_site', 'psgc': psgc,
+                       'values': [p.get('number') or p.get('email') for p in placeholders], 'evidence': page['evidence']})
+    distinct = list({a['value']: a for a in addresses if not PLACEHOLDER.search(a['value'])}.values())
+    ev = lambda quotes: {**page['evidence'], 'quotes': quotes}  # noqa: E731
+    flags = {'requires_review': True, **({'page_has_placeholder_values': True} if placeholders else {})}
+    if len(distinct) == 1:
+        address = found(distinct[0]['value'], ev(distinct[0]['quotes']), **flags)
+    elif distinct:
+        address = missing('multiple_addresses_on_lgu_site', candidates=[
+            found(a['value'], ev(a['quotes'])) for a in distinct])
+    else:
+        address = missing('no_address_on_lgu_site_page')
+    phones = list({(p['label'], p['number']): p for p in phones}.values())
+    emails = list({e['email']: e for e in emails}.values())
+    if phones or emails:
+        contact = found({'phones': [{'label': p['label'], 'number': p['number']} for p in phones],
+                         'emails': [e['email'] for e in emails]},
+                        ev(list(dict.fromkeys(q for item in phones + emails for q in item['quotes']))), **flags,
+                        note='as published; may include office-level and emergency numbers')
+    else:
+        contact = missing('no_contact_details_on_lgu_site_page' if not placeholders
+                          else 'only_placeholder_contacts_on_lgu_site')
+    return address, contact
+
+
+# ---------------------------------------------------------------- OpenStreetMap (not official)
+
+OSM_NOTE = {'official_source': False, 'license': 'ODbL 1.0, (c) OpenStreetMap contributors',
+            'basis_note': 'OSM place node (town/city centre), not the hall location; requires review'}
+
+
+def province_polygon(extract):
+    from shapely.geometry import LineString
+    from shapely.ops import polygonize, unary_union
+    lines = [LineString(w['coords']) for w in extract['boundary_ways'] if w['role'] == 'outer']
+    return unary_union(list(polygonize(unary_union(lines))))
+
+
+def osm_coordinates(run, lgus, issues):
+    """{psgc: field} for LGUs with exactly one OSM city/town node inside the province
+    polygon, matched by ref == PSGC, else by exact normalized name."""
+    from shapely.geometry import Point
+    entries = run.evidence('osm-geofabrik', role='extract')
+    if not entries:
+        return {}, None
+    entry = entries[0]
+    extract = json.loads(run.read(entry))
+    polygon = province_polygon(extract)
+    inside = [(i, p) for i, p in enumerate(extract['places']) if polygon.contains(Point(p['lon'], p['lat']))]
+
+    def field(i, p, basis):
+        return found({'lat': p['lat'], 'lon': p['lon']}, {
+            'artifact': entry['artifact'], 'artifact_sha256': entry['artifact_sha256'],
+            'source_url': entry['source_url'], 'retrieved_at': entry['retrieved_at'],
+            'json_pointer': f'/places/{i}', 'osm_node': p['id']}, basis=basis, **OSM_NOTE)
+
+    result = {}
+    for r in lgus:
+        psgc, name = r['psgc'], r['original']['area_name']
+        by_ref = [(i, p) for i, p in inside if p['tags'].get('ref') == psgc]
+        by_name = [(i, p) for i, p in inside if name_key(p['tags'].get('name', '')) == name_key(name)]
+        matches, basis = (by_ref, 'osm_ref_equals_psgc') if by_ref else (by_name, 'osm_name_within_province')
+        if len(matches) == 1:
+            result[psgc] = field(*matches[0], basis)
+            ref = matches[0][1]['tags'].get('ref')
+            if ref and ref != psgc:
+                issues.append({'type': 'osm_ref_differs', 'psgc': psgc, 'values': {'osm_ref': ref}})
+        else:
+            result[psgc] = missing('osm_place_ambiguous' if matches else 'osm_place_not_found_in_province',
+                                   candidates=[p['id'] for _, p in matches])
+            issues.append({'type': 'osm_place_unmatched', 'psgc': psgc, 'name': name,
+                           'candidates': [p['id'] for _, p in matches]})
+    used = [f['evidence']['osm_node'] for f in result.values() if f.get('value')]
+    for psgc, f in list(result.items()):
+        if f.get('value') and used.count(f['evidence']['osm_node']) > 1:
+            result[psgc] = missing('osm_place_shared_by_several_lgus', candidates=[f['evidence']['osm_node']])
+            issues.append({'type': 'osm_place_unmatched', 'psgc': psgc, 'candidates': [f['evidence']['osm_node']]})
+    seat = next((m['ref'] for m in extract['province']['members'] if m['role'] == 'admin_centre'), None)
+    seat = next(((i, p) for i, p in inside if p['id'] == seat), None)
+    return result, field(*seat, 'osm_province_admin_centre') | {'osm_name': seat[1]['tags'].get('name')} if seat else None
 
 
 # ---------------------------------------------------------------- outputs
@@ -271,6 +396,12 @@ def build(run_path, out=None):
         children.setdefault(r['parent'], []).append(r)
     province = geo['0105500000']
     lgus = sorted(children[province['psgc']], key=lambda r: r['psgc'])
+    coordinates, province_seat = osm_coordinates(run, lgus, issues)
+    lgu_pages = site_pages(run, 'lgu-sites')
+    site_errors = {}
+    for e in run.manifest['errors']:
+        if e['source'] == 'lgu-sites' and e.get('page'):
+            site_errors.setdefault(e['page'].split('-home')[0].split('-contact')[0], []).append(e['code'])
 
     # Match provincial LGU pages to PSGC by exact normalized name; ambiguity is reported, never guessed.
     lgu_by_key = {}
@@ -305,8 +436,14 @@ def build(run_path, out=None):
             rec[key] = site.get(key) or missing(reason)
         if value(rec['facebook']):
             rec['facebook']['verification'] = 'listed_on_official_provincial_site; not independently verified'
-        for key in ('address', 'contact', 'coordinates'):
-            rec[key] = missing('no_official_source_collected')
+        slug = page['evidence']['source_url'].rstrip('/').rsplit('/', 1)[1] if page else None
+        if not slug or not value(rec['website']):
+            rec['address'] = rec['contact'] = missing('no_lgu_website_linked_on_provincial_page')
+        elif not (f'{slug}-contact' in lgu_pages or f'{slug}-home' in lgu_pages):
+            rec['address'] = rec['contact'] = missing('lgu_site_not_collected', errors=site_errors[slug])
+        else:
+            rec['address'], rec['contact'] = lgu_contact_fields(lgu_pages, slug, issues, r['psgc'])
+        rec['coordinates'] = coordinates.get(r['psgc']) or missing('osm_extract_not_collected')
         rec['provincial_page'] = page['evidence']['source_url'] if page else None
         rec['site_cross_checks'] = {k: site.get(k) for k in ('income_class', 'barangay_count', 'population_2020_site')}
         income = re.match(r'\d+', value(rec['income_classification']) or '')
@@ -372,7 +509,10 @@ def build(run_path, out=None):
     site_any = next(iter(pages.values()), None)
     ov['official_website'] = (found('https://www.pangasinan.gov.ph/', site_any['evidence'])
                               if site_any else missing('provincial_site_not_captured'))
-    ov['coordinates'] = missing('no_official_source_collected')
+    ov['coordinates'] = province_seat or missing('osm_province_admin_centre_not_found')
+    if province_seat and value(ov['capital']) and name_key(province_seat['osm_name']) != name_key(value(ov['capital'])):
+        issues.append({'type': 'osm_admin_centre_differs_from_capital',
+                       'values': {'osm': province_seat['osm_name'], 'capital': value(ov['capital'])}})
     ov['seal_logo'] = missing('not_collected; usage permission requires human review')
     footer = quote_field(site_any, r'All content is in the public domain unless otherwise stated\.', lambda m: m[0]) if site_any else None
     ov['site_license_statement'] = footer or missing('not_found')
@@ -408,10 +548,12 @@ def build(run_path, out=None):
         'population_2024': value(r['population_2024']), 'land_area_ha': value(r['land_area_ha']),
         'barangay_count': value(r['barangay_count']), 'website': value(r['website']),
         'facebook': value(r['facebook']), 'provincial_page': r['provincial_page'],
+        'lat': (value(r['coordinates']) or {}).get('lat'), 'lon': (value(r['coordinates']) or {}).get('lon'),
+        'coordinate_basis': r['coordinates'].get('basis'),
         'psgc_release': geography_release, 'population_release': population_release, 'review_status': 'pending',
     } for r in lgu_records], ['psgc', 'name', 'classification', 'income_classification', 'legislative_district',
                               'population_2024', 'land_area_ha', 'barangay_count', 'website', 'facebook',
-                              'provincial_page', 'psgc_release', 'population_release', 'review_status'])
+                              'provincial_page', 'lat', 'lon', 'coordinate_basis', 'psgc_release', 'population_release', 'review_status'])
     write_csv(out / 'collection_gaps.csv', gaps, ['record_id', 'level', 'field', 'reason'])
     write_csv(out / 'source_inventory.csv', [{
         'source_id': e['artifact_sha256'][:12], **e} for e in run.manifest['evidence']],

@@ -58,6 +58,15 @@ def resolve_pointer(document, pointer):
     return document
 
 
+def osm_inside(extract, node):
+    """Point-in-province test assembled here, independently of build.py."""
+    from shapely.geometry import MultiLineString, Point
+    from shapely.ops import polygonize
+    rings = MultiLineString([w['coords'] for w in extract['boundary_ways'] if w['role'] == 'outer']).union(
+        MultiLineString([]))
+    return any(poly.contains(Point(node['lon'], node['lat'])) for poly in polygonize(rings))
+
+
 def verify(run_path, update_checklist=True):
     run = Run(run_path)
     c = Checks()
@@ -164,6 +173,22 @@ def verify(run_path, update_checklist=True):
                       and (str(field['value']) if isinstance(field['value'], int) else f'{field["value"]:g}')
                       not in ev['quote'].replace(',', '')):
                     mismatches.append(f'{rec["psgc"]}:{key}:value_not_in_quote')
+            elif 'quotes' in ev:
+                text = page_text.setdefault(ev['artifact'], json.loads(path.read_bytes())['text'])
+                joined = ' '.join(ev['quotes'])
+                v = field['value']
+                parts = ([p['number'] for p in v['phones']] + v['emails']) if isinstance(v, dict) else [v]
+                if any(q not in text for q in ev['quotes']):
+                    mismatches.append(f'{rec["psgc"]}:{key}:quote_not_in_page')
+                elif any(part not in joined for part in parts):
+                    mismatches.append(f'{rec["psgc"]}:{key}:value_not_in_quotes')
+            elif ev['artifact'].startswith('evidence/osm-geofabrik/'):
+                extract = page_text.setdefault(ev['artifact'], json.loads(path.read_bytes()))
+                node = resolve_pointer(extract, ev['json_pointer'])
+                if node['id'] != ev.get('osm_node') or {'lat': node['lat'], 'lon': node['lon']} != field['value']:
+                    mismatches.append(f'{rec["psgc"]}:{key}:osm_node_mismatch')
+                elif not osm_inside(extract, node):
+                    mismatches.append(f'{rec["psgc"]}:{key}:osm_node_outside_province')
             elif 'link_text' in ev:
                 links = json.loads(path.read_bytes())['links']
                 if not any(a['href'] == field['value'] and a['text'].strip().upper() == ev['link_text'] for a in links):

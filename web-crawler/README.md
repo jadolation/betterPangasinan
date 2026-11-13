@@ -22,6 +22,7 @@ Bounded first capture of a new or changed source:
 - `.venv` with `requirements.txt`; Node with the pinned `@playwright/test` (`npm ci`).
 - Current stable Google Chrome. The shared preflight `scripts/browser-security.cjs`
   enforces the sandbox and a minimum version; it opens a visible window.
+- `osmium` (pyosmium, in `requirements.txt`) for the OSM extract; the first run downloads ~600 MB.
 - `PSA-TOKEN` in the environment or `.env`. It is sent only as the documented
   `token` query parameter, redacted from saved artifacts, and never written to URLs
   in the manifest. The verifier scans evidence for it.
@@ -32,6 +33,8 @@ Bounded first capture of a new or changed source:
 | --- | --- | --- |
 | `psa-psgc` | PSA Classification API (`Classification API Documentation.yaml`) | Release discovery, PSGC hierarchy, income/urban-rural class, populations by year |
 | `pangasinan-gov` | Visible Chrome, robots.txt-checked | About/Geography statements, the 48 LGU pages (district, land area, barangay count, links) |
+| `lgu-sites` | Visible Chrome, robots.txt-checked per site | Hall address and labelled phones/emails from the Contact page (else homepage) of each `.gov.ph` site linked from the provincial LGU pages. Needs `pangasinan-gov` in the same run |
+| `osm-geofabrik` | Dated Geofabrik Philippines extract, MD5-checked, cached in `data/staging/web-crawler/cache/` | LGU coordinates (OSM city/town node inside the OSM province boundary, matched by `ref` = PSGC, else unique exact name). **Not an official source**; ODbL attribution required |
 
 PSA release discovery probes `/psgc/{version}/provinces?reg=1&prv=55` for quarterly
 version names from the current quarter backwards and records every probe. A version
@@ -56,8 +59,11 @@ and inspect a bounded live response before writing the mapping.
 | `output/build.json` | output hashes and counts |
 | `verification.json` | verifier result bound to manifest and output hashes |
 
-Field evidence is one of: a JSON pointer into a PSA artifact, an exact quote from a
-captured page's text, or an exact link (`WEBSITE`/`FACEBOOK`) on a captured page.
+Field evidence is one of: a JSON pointer into a PSA or OSM artifact, an exact quote (or
+`quotes`, a list of exact lines) from a captured page's text, or an exact link
+(`WEBSITE`/`FACEBOOK`) on a captured page. Address, contact and coordinates carry
+`requires_review: true`; OSM values also carry `official_source: false` and the license.
+Template values on LGU sites (e.g. `123-4567`) are excluded and reported.
 
 ## Rules the code enforces
 
