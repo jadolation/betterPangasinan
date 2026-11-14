@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-labelledby="t"><title id="t">Illustration of a limestone cave with a clear pool</title>
+<rect width="600" height="400" fill="#0B4F6C"/>
+<path d="M0 400V150Q80 40 220 60Q300 20 380 60Q520 40 600 150V400Z" fill="#0E5F5F"/>
+<path d="M90 400V220Q150 120 300 110Q450 120 510 220V400Z" fill="#06303F"/>
+<g fill="#F6EBD9" opacity=".85"><path d="M180 128l10 42 10-44z"/><path d="M240 112l8 52 8-54z"/><path d="M330 110l9 38 9-38z"/><path d="M400 124l7 46 8-44z"/></g>
+<ellipse cx="300" cy="330" rx="190" ry="44" fill="#138A8A"/><ellipse cx="300" cy="322" rx="140" ry="22" fill="#5FC1BE" opacity=".6"/>
+<path d="M0 400v-24h600v24z" fill="#F6EBD9"/>
+</svg>

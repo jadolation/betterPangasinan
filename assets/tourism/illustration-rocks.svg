@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-labelledby="t"><title id="t">Illustration of mushroom-shaped rocks on a sunset coast</title>
+<rect width="600" height="400" fill="#F6EBD9"/>
+<rect width="600" height="230" fill="#E8743B" opacity=".35"/>
+<circle cx="470" cy="150" r="46" fill="#E8743B"/>
+<path d="M0 250h600v150H0z" fill="#138A8A"/><path d="M0 268q150-14 300 0t300 0v132H0z" fill="#0B4F6C"/>
+<g fill="#74381C"><path d="M110 300h40l-6-70h-28z"/><ellipse cx="130" cy="226" rx="70" ry="28"/><path d="M260 312h30l-5-52h-20z"/><ellipse cx="275" cy="258" rx="52" ry="20"/><path d="M380 318h22l-4-36h-14z"/><ellipse cx="391" cy="282" rx="36" ry="14"/></g>
+<path d="M0 360q300-30 600 0v40H0z" fill="#F6EBD9"/>
+</svg>

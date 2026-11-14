@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-labelledby="t"><title id="t">Illustration of a forest hot spring pool below green hills</title>
+<rect width="600" height="400" fill="#E9F3F1"/>
+<path d="M0 250Q120 90 250 180Q360 70 480 160Q550 120 600 150V400H0z" fill="#138A8A"/>
+<path d="M0 290Q150 200 300 260Q450 190 600 250V400H0z" fill="#0E5F5F"/>
+<ellipse cx="300" cy="335" rx="200" ry="40" fill="#5FC1BE"/>
+<g fill="none" stroke="#FBFAF7" stroke-width="6" stroke-linecap="round" opacity=".9"><path d="M240 310q-14-20 0-40t0-40"/><path d="M300 305q-14-20 0-40t0-40"/><path d="M360 310q-14-20 0-40t0-40"/></g>
+</svg>
